@@ -8,10 +8,10 @@ const MainRoutes = (props) =>{
     return(
         <BrowserRouter>
     	<Routes>
-    <Route path="/" element={<UserPanel/>} />
+    <Route path="/userpanel" element={<UserPanel/>} />
 	</Routes>
     <Routes>
-    <Route path="/login" element={<Login/>} />
+    <Route path="/" element={<Login/>} />
 	</Routes>
     </BrowserRouter>
     )
