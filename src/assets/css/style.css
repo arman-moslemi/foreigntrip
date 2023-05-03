@@ -1,1 +1,6 @@
 @import url(customFonts.css);
+
+
+body{
+    direction: rtl;
+}
