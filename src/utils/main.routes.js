@@ -6,26 +6,34 @@ import SignUp from "../pages/Login/SignUp";
 import ChangePassStep1 from "../pages/Login/ChangePassStep1";
 import ChangePassStep2 from "../pages/Login/ChangePassStep2";
 import NewPassword from "../pages/Login/NewPassword";
+import RequestRegistered from "../pages/UserPanel/RequestRegistered";
+import RequestHistory from "../pages/UserPanel/RequestHistory";
 const MainRoutes = (props) =>{
     return(
             <BrowserRouter>
                 <Routes>
                     <Route path="/newRequest" element={<NewRequest/>} />
-                    </Routes>
-                    <Routes>
+                </Routes>
+                <Routes>
                     <Route path="/" element={<Login/>} />
-                    </Routes>
-                    <Routes>
+                </Routes>
+                <Routes>
                     <Route path="/signup" element={<SignUp/>} />
-                    </Routes>
-                    <Routes>
+                </Routes>
+                <Routes>
                     <Route path="/changePassStep1" element={<ChangePassStep1/>} />
-                    </Routes>
-                    <Routes>
+                </Routes>
+                <Routes>
                     <Route path="/changePassStep2" element={<ChangePassStep2/>} />
-                    </Routes>
-                    <Routes>
+                </Routes>
+                <Routes>
                     <Route path="/newPassword" element={<NewPassword/>} />
+                </Routes>
+                <Routes>
+                    <Route path="/requestRegistered" element={<RequestRegistered/>} />
+                </Routes>
+                <Routes>
+                    <Route path="/requestHistory" element={<RequestHistory/>} />
                 </Routes>
             </BrowserRouter>
     )

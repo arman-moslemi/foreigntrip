@@ -1,6 +1,14 @@
 @import url(customFonts.css);
 
+@font-face {
+	font-family: IRANSans;
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/IRANSans\(FaNum\).ttf') format('ttf'),  /* FF39+,Chrome36+, Opera24+*/
+		 /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
 
 body{
     direction: rtl;
+    font-family: IRANSans !important;
 }
