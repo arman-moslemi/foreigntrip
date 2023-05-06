@@ -9,7 +9,7 @@ import DocImg from "../assets/img/doc.png"
 const AgentRightMenu = () => {
     return(
         
-                <div className="bg-mainColor p-9 rounded-2xl w-[20%]">
+                <div className="bg-mainColor p-9 rounded-2xl w-[20%] min-w-[300px]">
                     <img src={WhiteLogo} alt="logo" className="w-[140px] mx-auto"/>
                     <p className="text-white font-IRsans font-bold text-lg text-center mt-4">
                         علی اطهری خوش آمدید !
