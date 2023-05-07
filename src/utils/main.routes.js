@@ -8,6 +8,7 @@ import ChangePassStep2 from "../pages/Login/ChangePassStep2";
 import NewPassword from "../pages/Login/NewPassword";
 import RequestRegistered from "../pages/UserPanel/RequestRegistered";
 import RequestHistory from "../pages/UserPanel/RequestHistory";
+import Profile from "../pages/UserPanel/Profile";
 const MainRoutes = (props) =>{
     return(
             <BrowserRouter>
@@ -34,6 +35,9 @@ const MainRoutes = (props) =>{
                 </Routes>
                 <Routes>
                     <Route path="/requestHistory" element={<RequestHistory/>} />
+                </Routes>
+                <Routes>
+                    <Route path="/profile" element={<Profile/>} />
                 </Routes>
             </BrowserRouter>
     )
