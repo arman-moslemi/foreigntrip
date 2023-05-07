@@ -1,6 +1,6 @@
 import React from "react";
 import AgentRightMenu from "../../components/AgentRightMenu";
-import CheckImg from "../../assets/img/check.png";
+
 import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
 import UserHistoryRequest from "../../components/UserHistoryRequest";
 
@@ -12,7 +12,7 @@ const RequestHistory = () => {
                 <div className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl p-12 my-10 w-[80%]">
                 <div className="flex items-center">
                     <Doc/>
-                <span className="font-IRANSans text-mainColor mr-3 ">
+                <span className="font-IRsans text-mainColor mr-3 font-bold">
                         تاریخچه درخواست ها
                 </span>
                 </div>

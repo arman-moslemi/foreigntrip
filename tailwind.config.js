@@ -15,7 +15,8 @@ module.exports = {
       borderGray:'#EDF3FA'
     },
     fontFamily:{
-    IRsans:'IRANSans'
+    IRsans:'IRANSans',
+    FaNums:'FaNum'
     },
     boxShadow:{
       blueShadow:'0px 4px 20px rgba(8, 137, 165, 0.68)',

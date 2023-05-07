@@ -13,17 +13,17 @@ const RequestRegistered = () => {
                 <div className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl p-12 my-10 w-[80%]">
                 <div className="flex items-center">
                     <Add/>
-                <span className="font-IRANSans text-mainColor mr-3 ">
+                <span className="font-IRsans text-mainColor mr-3 font-bold">
                         ثبت درخواست جدید
                 </span>
                 </div>
                     <img src={CheckImg} alt="check" className="w-[120px] mx-auto block mt-10"/>
-                    <p className="text-black font-IRANS font-bold text-sm text-center w-[400px] mx-auto mt-10 mb-4">
+                    <p className="text-black font-IRsans font-bold text-sm text-center w-[400px] mx-auto mt-10 mb-4">
                     درخواست شما با موفقیت ثبت شد.
                     پس از بررسی اطلاعات توسط اداره امور بین الملل ،
                     نتیجه ی آن در قسمت مشاهده ی تاریخچه درخواست ها قابل رویت است.
                     </p>
-                    <p className="text-mainColor font-IRANS font-bold text-sm text-center w-[400px] mx-auto  mb-4">
+                    <p className="text-mainColor font-IRsans font-bold text-sm text-center w-[400px] mx-auto  mb-4">
                     کد رهگیری  : 1256457896
                     </p>
                     <Link to={`/requestHistory`}>

@@ -11,7 +11,7 @@ const AgentRightMenu = () => {
         
                 <div className="bg-mainColor p-9 rounded-2xl w-[20%] min-w-[300px]">
                     <img src={WhiteLogo} alt="logo" className="w-[140px] mx-auto"/>
-                    <p className="text-white  font-bold text-lg text-center mt-4">
+                    <p className="text-white  font-bold text-lg text-center mt-4 font-IRsans">
                         علی اطهری خوش آمدید !
                     </p>
                     <hr className="border-t-lightGray my-5 border-opacity-50"/>

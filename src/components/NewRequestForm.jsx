@@ -17,7 +17,7 @@ const NewRequestForm = () =>{
     <div>
         <div className="flex items-center">
             <Add/>
-            <span className="font-IRANSans text-mainColor mr-3 ">
+            <span className="font-IRsans text-mainColor mr-3 font-bold">
                 ثبت درخواست جدید
             </span>
         </div>
