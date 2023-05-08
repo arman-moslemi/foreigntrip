@@ -9,6 +9,7 @@ import NewPassword from "../pages/Login/NewPassword";
 import RequestRegistered from "../pages/UserPanel/RequestRegistered";
 import RequestHistory from "../pages/UserPanel/RequestHistory";
 import Profile from "../pages/UserPanel/Profile";
+import SubmitReport from "../pages/UserPanel/SubmitReport";
 const MainRoutes = (props) =>{
     return(
             <BrowserRouter>
@@ -38,6 +39,9 @@ const MainRoutes = (props) =>{
                 </Routes>
                 <Routes>
                     <Route path="/profile" element={<Profile/>} />
+                </Routes>
+                <Routes>
+                    <Route path="/submitReport" element={<SubmitReport/>} />
                 </Routes>
             </BrowserRouter>
     )
