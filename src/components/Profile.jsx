@@ -86,14 +86,14 @@ const ProfileInfo = () =>{
                 </div>
                 
                 <div className="relative p-6 flex-auto">
-                  <p className="my-4 text-black text-sm leading-relaxed">
+                  <p className="my-4 text-black text-sm font-IRsans leading-relaxed">
                  ویرایش اطلاعات با موفقیت انجام شد !
                   </p>
                 </div>
                
                 <div className="flex items-center justify-endborder-t justify-end border-solid border-slate-200 rounded-b">
                   <button
-                    className="text-mainColor float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="text-mainColor font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowSuccessModal(false)}
                   >

@@ -82,7 +82,7 @@ const SignUpForm = () =>{
                     <p className="font-IRsans text-black text-xs">
                         حساب کاربری دارید؟
                     </p>
-                    <Link to={'/login'} className="font-IRsans text-mainColor text-xs mr-1 font-bold hover:text-lightBlue">
+                    <Link to={'/'} className="font-IRsans text-mainColor text-xs mr-1 font-bold hover:text-lightBlue">
                         وارد شوید
                     </Link>
                 </div>

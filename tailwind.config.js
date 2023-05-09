@@ -21,6 +21,15 @@ module.exports = {
     boxShadow:{
       blueShadow:'0px 4px 20px rgba(8, 137, 165, 0.68)',
       blackShadow:'0px 4px 50px rgba(146, 146, 146, 0.25)',
+    },
+    screens:{
+      '2xl':{'max':'1536px'},
+      'xl': {'max': '1280px'},
+      'lg': {'max': '1024px'},
+      'md':{'max' : '768px'},
+      'sm':{'max':'640px'},
+      'xs':{'max':'400px'}
+  
     }
   },
   plugins: [],
