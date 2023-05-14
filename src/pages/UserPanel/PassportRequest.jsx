@@ -1,7 +1,7 @@
 import React from "react";
 import AgentRightMenu from "../../components/AgentRightMenu";
 import ProfileInfo from "../../components/Profile";
-const Profile = () => {
+const PassportRequest = () => {
     return(
         <div className="w-full h-screen bg-lightGray py-10 px-32 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>
             <div className="flex md:block">
@@ -13,6 +13,6 @@ const Profile = () => {
         </div>
     )
 }
-export default Profile;
+export default PassportRequest;
 
 /*responsive -- done */

@@ -21,76 +21,76 @@ const NewRequestForm = () =>{
                 ثبت درخواست جدید
             </span>
         </div>
-      <div className="flex w-[80%] mx-auto flex-wrap justify-between mt-10">
-        <div class="relative my-2 w-[45%]">
+      <div className="flex w-[80%] mx-auto flex-wrap justify-between mt-10 xl:w-[100%]">
+        <div class="relative my-2 w-[45%] lg:w-[48%] xs:w-[100%] xs:my-1">
             <div class="absolute top-5 right-2 flex items-center pl-3 pointer-events-none">
                 <User/>
             </div>
             <input type="text" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="نام و نام خانوادگی"/>
         </div>
-        <div class="relative my-2 w-[45%]">
+        <div class="relative my-2 w-[45%] lg:w-[48%] xs:w-[100%] xs:my-1">
             <div class="absolute top-5 right-2 flex items-center pl-3 pointer-events-none">
                 <Doc/>
             </div>
             <input type="text" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="شناسه ملی"/>
         </div>
-        <div class="relative my-2 w-[45%]">
+        <div class="relative my-2 w-[45%] lg:w-[48%] xs:w-[100%] xs:my-1">
             <div class="absolute top-5 right-2 flex items-center pl-3 pointer-events-none">
                 <User/>
             </div>
             <input type="text" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="سمت"/>
         </div>
               
-        <div class="relative my-2 w-[45%]">
+        <div class="relative my-2 w-[45%] lg:w-[48%] xs:w-[100%] xs:my-1">
             <div class="absolute top-5 right-2 flex items-center pl-3 pointer-events-none">
                 <Location/>
             </div>
             <input type="text" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="محل خدمت"/>
         </div>
-        <div class="relative my-2 w-[45%]">
+        <div class="relative my-2 w-[45%] lg:w-[48%] xs:w-[100%] xs:my-1" >
             <div class="absolute top-5 right-2 flex items-center pl-3 pointer-events-none">
                 <Doc/>
             </div>
             <input type="text" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="نوع استخدام"/>
         </div>
-        <div class="relative my-2 w-[45%]">
+        <div class="relative my-2 w-[45%] lg:w-[48%] xs:w-[100%] xs:my-1">
             <div class="absolute top-5 right-2 flex items-center pl-3 pointer-events-none">
                 <Calendar/>
             </div>
             <input type="text" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="تاریخ سفر"/>
         </div>
-        <div class="relative my-2 w-[45%]">
+        <div class="relative my-2 w-[45%] lg:w-[48%] xs:w-[100%] xs:my-1">
             <div class="absolute top-5 right-2 flex items-center pl-3 pointer-events-none">
                 <Clock/>
             </div>
             <input type="text" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="مدت سفر"/>
         </div>
-        <div class="relative my-2 w-[45%]">
+        <div class="relative my-2 w-[45%] lg:w-[48%] xs:w-[100%] xs:my-1">
             <div class="absolute top-5 right-2 flex items-center pl-3 pointer-events-none">
                 <Doc/>
             </div>
             <input type="text" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="موضوع سفر"/>
         </div>
-        <div class="relative my-2 w-[45%]">
+        <div class="relative my-2 w-[45%] lg:w-[48%] xs:w-[100%] xs:my-1">
             <div class="absolute top-5 right-2 flex items-center pl-3 pointer-events-none">
                 <Website/>
             </div>
             <input type="text" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="کشور مقصد"/>
         </div>
-        <div class="relative my-2 w-[45%]">
+        <div class="relative my-2 w-[45%] lg:w-[48%] xs:w-[100%] xs:my-1">
             <div class="absolute top-5 right-2 flex items-center pl-3 pointer-events-none">
                 <Card/>
             </div>
             <input type="text" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="پرداخت کننده"/>
         </div>
-        <div class="relative my-2 w-[45%]">
+        <div class="relative my-2 w-[45%] lg:w-[48%] xs:w-[100%] xs:my-1">
             <div class="absolute top-5 right-2 flex items-center pl-3 pointer-events-none">
                 <Dollar/>
             </div>
             <input type="text" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="هزینه سفر"/>
         </div>
-        <Link to={`/requestRegistered`}>
-        <button className="w-[140px] h-10 bg-mainColor shadow-blueShadow mt-5 font-IRsans text-white text-lg rounded-lg hover:bg-lightBlue hover:text-mainColor">
+        <Link to={`/requestRegistered`} className="w-full">
+        <button className="w-[140px] h-10 bg-mainColor shadow-blueShadow mt-5 font-IRsans xs:mr-auto xs:float-left text-white text-lg rounded-lg hover:bg-lightBlue hover:text-mainColor">
                         ثبت درخواست
             </button>
         </Link>

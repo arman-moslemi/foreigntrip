@@ -20,44 +20,44 @@ const ProfileInfo = () =>{
             </span>
         </div>
       <div className="flex w-[80%] mx-auto flex-wrap justify-between mt-10 xl:w-[100%]">
-        <div class="relative my-2 w-[45%] lg:w-[48%]">
+        <div class="relative my-2 w-[45%] lg:w-[48%] xs:w-[100%] xs:my-1">
             <div class="absolute top-5 right-2 flex items-center pl-3 pointer-events-none">
                 <User/>
             </div>
             <input type="text" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="نام و نام خانوادگی"/>
         </div>
-        <div class="relative my-2 w-[45%] lg:w-[48%]">
+        <div class="relative my-2 w-[45%] lg:w-[48%] xs:w-[100%] xs:my-1">
             <div class="absolute top-5 right-2 flex items-center pl-3 pointer-events-none">
                 <Doc/>
             </div>
             <input type="text" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="شناسه ملی"/>
         </div>
-        <div class="relative my-2 w-[45%] lg:w-[48%]">
+        <div class="relative my-2 w-[45%] lg:w-[48%] xs:w-[100%] xs:my-1">
             <div class="absolute top-5 right-2 flex items-center pl-3 pointer-events-none">
                 <User/>
             </div>
             <input type="text" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="سمت"/>
         </div>
               
-        <div class="relative my-2 w-[45%] lg:w-[48%]">
+        <div class="relative my-2 w-[45%] lg:w-[48%] xs:w-[100%] xs:my-1">
             <div class="absolute top-5 right-2 flex items-center pl-3 pointer-events-none">
                 <Doc/>
             </div>
             <input type="text" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="کد ملی"/>
         </div>
-        <div class="relative my-2 w-[45%] lg:w-[48%]">
+        <div class="relative my-2 w-[45%] lg:w-[48%] xs:w-[100%] xs:my-1">
             <div class="absolute top-5 right-2 flex items-center pl-3 pointer-events-none">
                 <Phone/>
             </div>
             <input type="text" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="شماره تلفن همراه"/>
         </div>
-        <div class="relative my-2 w-[45%] lg:w-[48%]">
+        <div class="relative my-2 w-[45%] lg:w-[48%] xs:w-[100%] xs:my-1">
             <div class="absolute top-5 right-2 flex items-center pl-3 pointer-events-none">
                 <Lock/>
             </div>
             <input type="text" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="رمز عبور"/>
         </div>
-        <div class="relative my-2 w-[45%] lg:w-[48%]">
+        <div class="relative my-2 w-[45%] lg:w-[48%] xs:w-[100%] xs:my-1">
             <div class="absolute top-5 right-2 flex items-center pl-3 pointer-events-none">
                 <Lock/>
             </div>
@@ -66,7 +66,7 @@ const ProfileInfo = () =>{
        
        
         <button onClick={() => setShowSuccessModal(true)}
- className="w-[140px] h-10 bg-mainColor shadow-blueShadow mt-5 lg:text-base font-IRsans text-white text-lg rounded-lg hover:bg-lightBlue hover:text-mainColor">
+ className="w-[140px] h-10 bg-mainColor shadow-blueShadow mt-5 lg:text-base font-IRsans text-white text-lg rounded-lg hover:bg-lightBlue xs:float-left xs:mr-auto hover:text-mainColor">
                         ویرایش اطلاعات
             </button>
             {showSuccessModal ?

@@ -7,10 +7,10 @@ import { Link } from "react-router-dom";
 
 const RequestRegistered = () => {
     return(
-        <div className="w-full h-screen bg-lightGray py-10 px-32 " style={{direction:'rtl'}}>
-            <div className="flex">
+        <div className="w-full h-screen bg-lightGray py-10 px-32 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>
+        <div className="flex md:block">
                 <AgentRightMenu/>
-                <div className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl p-12 my-10 w-[80%]">
+                <div className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl p-12 my-10 w-[80%] xl:p-5 md:w-[95%] md:rounded-xl md:mx-auto">
                 <div className="flex items-center">
                     <Add/>
                 <span className="font-IRsans text-mainColor mr-3 font-bold">
@@ -18,16 +18,16 @@ const RequestRegistered = () => {
                 </span>
                 </div>
                     <img src={CheckImg} alt="check" className="w-[120px] mx-auto block mt-10"/>
-                    <p className="text-black font-IRsans font-bold text-sm text-center w-[400px] mx-auto mt-10 mb-4">
+                    <p className="text-black font-IRsans font-bold text-sm text-center w-[400px] mx-auto mt-10 mb-4 xs:w-[90%] xs:mx-auto">
                     درخواست شما با موفقیت ثبت شد.
                     پس از بررسی اطلاعات توسط اداره امور بین الملل ،
                     نتیجه ی آن در قسمت مشاهده ی تاریخچه درخواست ها قابل رویت است.
                     </p>
-                    <p className="text-mainColor font-IRsans font-bold text-sm text-center w-[400px] mx-auto  mb-4">
+                    <p className="text-mainColor font-IRsans font-bold text-sm text-center w-[400px] mx-auto  mb-4 xs:w-[90%] xs:mx-auto">
                     کد رهگیری  : 1256457896
                     </p>
                     <Link to={`/requestHistory`}>
-                        <button className="mx-auto block w-[240px] h-10 bg-mainColor shadow-blueShadow mt-7 font-IRsans text-white text-lg rounded-lg hover:bg-lightBlue hover:text-mainColor">
+                        <button className="mx-auto block w-[240px] h-10 xs:w-[80%] xs:mx-auto xs:text-xs bg-mainColor shadow-blueShadow mt-7 font-IRsans text-white text-lg rounded-lg hover:bg-lightBlue hover:text-mainColor">
                          مشاهده تاریخچه درخواست ها
                         </button>
                     </Link>
@@ -38,3 +38,5 @@ const RequestRegistered = () => {
     )
 }
 export default RequestRegistered;
+
+/*responsive--done */

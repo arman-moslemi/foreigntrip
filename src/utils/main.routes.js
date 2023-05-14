@@ -10,6 +10,7 @@ import RequestRegistered from "../pages/UserPanel/RequestRegistered";
 import RequestHistory from "../pages/UserPanel/RequestHistory";
 import Profile from "../pages/UserPanel/Profile";
 import SubmitReport from "../pages/UserPanel/SubmitReport";
+import PassportRequest from "../pages/UserPanel/PassportRequest";
 const MainRoutes = (props) =>{
     return(
             <BrowserRouter>
@@ -42,6 +43,9 @@ const MainRoutes = (props) =>{
                 </Routes>
                 <Routes>
                     <Route path="/submitReport" element={<SubmitReport/>} />
+                </Routes>
+                <Routes>
+                    <Route path="/passportRequest" element={<PassportRequest/>} />
                 </Routes>
             </BrowserRouter>
     )
