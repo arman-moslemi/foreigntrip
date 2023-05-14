@@ -57,7 +57,7 @@ const LoginForm = () =>{
                 <button className="w-full h-12 bg-mainColor shadow-blueShadow mt-6 font-IRsans text-white text-lg rounded-lg hover:bg-lightBlue hover:text-mainColor">
                     ورود
                 </button>
-                <div className="flex items-center justify-start mt-2">
+                <div className="flex items-center justify-start mt-2 xs:flex-wrap">
                     <p className="font-IRsans text-black text-xs">
                        حساب کاربری ندارید ؟ 
                     </p>
