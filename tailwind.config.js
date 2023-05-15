@@ -12,7 +12,8 @@ module.exports = {
       red:'#E50000',
       green:'#0F9B0C',
       lightBlue:'#BBF3FF',
-      borderGray:'#EDF3FA'
+      borderGray:'#EDF3FA',
+      darkBlue:'#0D296E'
     },
     fontFamily:{
     IRsans:'IRANSans',
@@ -21,6 +22,8 @@ module.exports = {
     boxShadow:{
       blueShadow:'0px 4px 20px rgba(8, 137, 165, 0.68)',
       blackShadow:'0px 4px 50px rgba(146, 146, 146, 0.25)',
+      redShadow:'0px 4px 20px rgba(255, 0, 0, 0.43)',
+      greenShadow:'0px 4px 20px rgba(58, 181, 14, 0.49)',
     },
     screens:{
       '2xl':{'max':'1536px'},

@@ -3,7 +3,6 @@ import AgentRightMenu from "../../components/AgentRightMenu";
 
 import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
 import UserHistoryRequest from "../../components/UserHistoryRequest";
-
 const RequestHistory = () => {
     return(
         <div className="w-full h-screen bg-lightGray py-10 px-32 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>

@@ -11,6 +11,11 @@ import RequestHistory from "../pages/UserPanel/RequestHistory";
 import Profile from "../pages/UserPanel/Profile";
 import SubmitReport from "../pages/UserPanel/SubmitReport";
 import PassportRequest from "../pages/UserPanel/PassportRequest";
+import Request from "../pages/MainPanel/Requests";
+import NewIncomeRequest from "../pages/MainPanel/NewIncomeRequest";
+import NewIncomeRequestAccepted from "../pages/MainPanel/NewIncomeRequestAccepted";
+
+import RequestRejected from "../components/RequestRejected";
 const MainRoutes = (props) =>{
     return(
             <BrowserRouter>
@@ -46,6 +51,18 @@ const MainRoutes = (props) =>{
                 </Routes>
                 <Routes>
                     <Route path="/passportRequest" element={<PassportRequest/>} />
+                </Routes>
+                <Routes>
+                    <Route path="/requests" element={<Request/>} />
+                </Routes>
+                <Routes>
+                    <Route path="/newIncomeRequest" element={<NewIncomeRequest/>} />
+                </Routes>
+                <Routes>
+                    <Route path="/newIncomeAccepted" element={<NewIncomeRequestAccepted/>} />
+                </Routes>
+                <Routes>
+                    <Route path="/requestRejected" element={<RequestRejected/>} />
                 </Routes>
             </BrowserRouter>
     )

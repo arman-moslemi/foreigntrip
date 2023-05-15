@@ -2,7 +2,7 @@ import React from "react";
 
 import {ReactComponent as Info} from "../assets/icon/black/info.svg"
 import {ReactComponent as Send} from "../assets/icon/blue/Send.svg"
-
+import { Link } from "react-router-dom";
 const SubmitForm = () =>{
     
 
@@ -46,7 +46,12 @@ const SubmitForm = () =>{
             </div>
             <input id="dropzone-file" type="file" class=" md:hidden" />
         </label>
-        </div>        
+        </div>  
+        <Link to={`/`}>
+              <button className="mt-12 min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
+               ارسال
+              </button>
+            </Link>      
       </div>
          
     )
