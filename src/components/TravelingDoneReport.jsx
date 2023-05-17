@@ -33,10 +33,10 @@ const TravelingDoneReport = () =>{
                 <button className=" bg-[#ff0000] w-[162px] rounded-md h-[40px] flex justify-center items-center text-white  font-IRsans font-medium text-base shadow-redShadow hover:bg-white hover:text-[#ff0000] hover:border-2 hover:border-[#ff0000]" 
                 onClick={()=>setShow(true)
                 }>
-                        رد کردن درخواست
+                       رد کردن گزارش
                     </button>
                     <button className="mr-5 bg-[#3AB50E] hover:bg-white hover:text-[#3AB50E] hover:border-2 hover:border-[#3AB50E] w-[162px] rounded-md h-[40px] flex justify-center items-center text-white  font-IRsans font-medium text-base shadow-greenShadow">
-                       تایید درخواست
+                       تایید گزارش
                     </button>
                    
                 </div>

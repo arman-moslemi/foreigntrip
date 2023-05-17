@@ -21,3 +21,5 @@ const RequestRejectedPage = () =>{
     )
 }
 export default RequestRejectedPage;
+
+/*responsive--done*/

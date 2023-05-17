@@ -29,3 +29,6 @@ const TravelDone = () =>{
     )
 }
 export default TravelDone;
+
+
+/*responsive--done*/

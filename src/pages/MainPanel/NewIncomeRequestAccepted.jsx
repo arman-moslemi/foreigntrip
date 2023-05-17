@@ -21,3 +21,5 @@ const NewIncomeRequestAccepted = () =>{
     )
 }
 export default NewIncomeRequestAccepted;
+
+/*responsive--done*/

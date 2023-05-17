@@ -26,3 +26,6 @@ const Traveling = () =>{
     )
 }
 export default Traveling;
+
+
+/* responsive--done*/

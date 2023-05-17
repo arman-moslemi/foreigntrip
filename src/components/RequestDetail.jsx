@@ -14,7 +14,7 @@ const RequestDetail = () =>{
                         </span>
                     </p>
                 </div>
-                <div className="w-[50%] my-3">
+                <div className="w-[50%] my-3 md:w-full">
                     <p className="font-IRsans text-base font-bold text-[#0D296E]">
                        شناسه ملی : 
                         <span>   </span> 
@@ -23,7 +23,7 @@ const RequestDetail = () =>{
                         </span>
                     </p>
                 </div>
-                <div className="w-[50%] my-3">
+                <div className="w-[50%] my-3 md:w-full">
                     <p className="font-IRsans text-base font-bold text-[#0D296E]">
                         تاریخ سفر :  
                         <span>   </span> 
@@ -32,7 +32,7 @@ const RequestDetail = () =>{
                         </span>
                     </p>
                 </div>
-                <div className="w-[50%] my-3">
+                <div className="w-[50%] my-3 md:w-full">
                     <p className="font-IRsans text-base font-bold text-[#0D296E]">
                         سمت :  
                         <span>   </span> 
@@ -41,7 +41,7 @@ const RequestDetail = () =>{
                         </span>
                     </p>
                 </div>
-                <div className="w-[50%] my-3">
+                <div className="w-[50%] my-3 md:w-full">
                     <p className="font-IRsans text-base font-bold text-[#0D296E]">
                         مدت سفر :   
                         <span>   </span> 
@@ -50,7 +50,7 @@ const RequestDetail = () =>{
                         </span>
                     </p>
                 </div>
-                <div className="w-[50%] my-3">
+                <div className="w-[50%] my-3 md:w-full">
                     <p className="font-IRsans text-base font-bold text-[#0D296E]">
                         محل خدمت : 
                         <span>   </span> 
@@ -59,7 +59,7 @@ const RequestDetail = () =>{
                         </span>
                     </p>
                 </div>
-                <div className="w-[50%] my-3">
+                <div className="w-[50%] my-3 md:w-full">
                     <p className="font-IRsans text-base font-bold text-[#0D296E]">
                         موضوع سفر :  
                         <span>   </span> 
@@ -68,7 +68,7 @@ const RequestDetail = () =>{
                         </span>
                     </p>
                 </div>
-                <div className="w-[50%] my-3">
+                <div className="w-[50%] my-3 md:w-full">
                     <p className="font-IRsans text-base font-bold text-[#0D296E]">
                         نوع استخدام :   
                         <span>   </span> 
@@ -77,7 +77,7 @@ const RequestDetail = () =>{
                         </span>
                     </p>
                 </div>
-                <div className="w-[50%] my-3">
+                <div className="w-[50%] my-3 md:w-full">
                     <p className="font-IRsans text-base font-bold text-[#0D296E]">
                        کشور مقصد :  
                         <span>   </span> 
@@ -86,7 +86,7 @@ const RequestDetail = () =>{
                         </span>
                     </p>
                 </div>
-                <div className="w-[50%] my-3">
+                <div className="w-[50%] my-3 md:w-full">
                     <p className="font-IRsans text-base font-bold text-[#0D296E]">
                         نام شخص حقوقی بالا دست :  
                         <span>   </span> 
@@ -95,7 +95,7 @@ const RequestDetail = () =>{
                         </span>
                     </p>
                 </div>
-                <div className="w-[50%] my-3">
+                <div className="w-[50%] my-3 md:w-full">
                     <p className="font-IRsans text-base font-bold text-[#0D296E]">
                        پرداخت کننده هزینه سفر : 
                         <span>   </span> 
