@@ -1,8 +1,10 @@
-import React from "react";
+import React  from "react";
 import MainRightMenu from "../../components/MainRightMenu";
 import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
-import TravelingReport from "../../components/TravelingReport";
-const Traveling = () =>{
+import TravelingDoneReport from "../../components/TravelingDoneReport";
+
+const TravelDone = () =>{
+
     return(
         <div className="w-full h-full bg-lightGray py-10 px-32 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>
         <div className="flex md:block">
@@ -15,14 +17,15 @@ const Traveling = () =>{
                 </span>
                 </div>
                 <div className="w-full flex justify-end">
-            <div className="px-10 w-max h-[40px] rounded-3xl text-white font-IRsans bg-mainColor flex justify-center items-center font-bold">
-                در حال سفر
+            <div className="px-10 w-max h-[40px] rounded-3xl text-white font-IRsans bg-tripDone flex justify-center items-center font-bold">
+                اتمام سفر
             </div>
             </div>
-                <TravelingReport/>
+                <TravelingDoneReport/>
             </div>
+            
         </div>
     </div>
     )
 }
-export default Traveling;
+export default TravelDone;

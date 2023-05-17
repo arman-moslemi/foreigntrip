@@ -17,6 +17,7 @@ import NewIncomeRequestAccepted from "../pages/MainPanel/NewIncomeRequestAccepte
 import RequestRejectedPage from "../pages/MainPanel/RequestRejected";
 import ReportHistory from "../pages/MainPanel/ReportHistory";
 import Traveling from "../pages/MainPanel/Traveling";
+import TravelDone from "../pages/MainPanel/TravelDone";
 
 const MainRoutes = (props) =>{
     return(
@@ -71,6 +72,9 @@ const MainRoutes = (props) =>{
                 </Routes>
                 <Routes>
                     <Route path="/traveling" element={<Traveling/>} />
+                </Routes>
+                <Routes>
+                    <Route path="/travelDone" element={<TravelDone/>} />
                 </Routes>
             </BrowserRouter>
     )
