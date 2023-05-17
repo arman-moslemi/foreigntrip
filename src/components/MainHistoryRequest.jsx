@@ -2,15 +2,25 @@ import React,{useState} from "react";
 import './components.css';
 import { Link } from "react-router-dom";
 import {ReactComponent as Eye} from "../assets/icon/black/eye.svg";
-
+export const truncate = (str, len) => {
+  // console.log("truncate", str, str.length, len);
+  if (str.length > len && str.length > 0) {
+    let new_str = str + " ";
+    new_str = str.substr(0, len);
+    new_str = str.substr(0, new_str.lastIndexOf(" "));
+    new_str = new_str.length > 0 ? new_str : str.substr(0, len);
+    return new_str + "...";
+  }
+  return str;
+};
 const MainHistoryRequest = () =>{
   const [showSuccessModal, setShowSuccessModal] = React.useState(false);
 const tableRow =[
   {
     id:'1',
    num:'1',
-   date:'علی اطهری',
-   subject:'لغو قرارداد 142 وزارت خانه',
+   name:'علی اطهری',
+   subject:truncate("انجام لغو قرارداد 142 وزارت خانه",30),
    location:'اداره بازرگانی شماره ۲',
    status:<span className="text-sm text-red font-bold font-IRsans">درخواست جدید</span >,
    function: 
@@ -23,8 +33,8 @@ const tableRow =[
   {
     id:'2',
    num:'2',
-   date:'علی اطهری',
-   subject:'لغو قرارداد 142 وزارت خانه',
+   name:'علی اطهری',
+   subject:truncate("لغو قرارداد 142 وزارت خانه",30),
    location:'اداره بازرگانی شماره ۲',
    status:<span className="text-sm text-red font-bold font-IRsans">درخواست جدید</span >,
    function: 
@@ -35,8 +45,8 @@ const tableRow =[
   {
     id:'3',
    num:'3',
-   date:'علی اطهری',
-   subject:'لغو قرارداد 142 وزارت خانه',
+   name:'علی اطهری',
+   subject:truncate("لغو قرارداد 142 وزارت خانه",30),
    location:'اداره بازرگانی شماره ۲',
    status:<span className="text-sm text-green font-medium font-IRsans">تایید شده</span >,
    function: 
@@ -47,8 +57,8 @@ const tableRow =[
   {
     id:'4',
    num:'4',
-   date:'علی اطهری',
-   subject:'لغو قرارداد 142 وزارت خانه',
+   name:'علی اطهری',
+   subject:truncate("لغو قرارداد 142 وزارت خانه",30),
    location:'اداره بازرگانی شماره ۲',
    status:<span className="text-sm text-green font-medium font-IRsans">تایید شده</span >,
    function: 
@@ -59,8 +69,8 @@ const tableRow =[
   {
     id:'5',
    num:'5',
-   date:'علی اطهری',
-   subject:'لغو قرارداد 142 وزارت خانه',
+   name:'علی اطهری',
+   subject:truncate("لغو قرارداد 142 وزارت خانه",30),
    location:'اداره بازرگانی شماره ۲',
    status:<span className="text-sm text-green font-medium font-IRsans">تایید شده</span >,
    function: 
@@ -72,15 +82,17 @@ const tableRow =[
   const tableBody = tableRow.map((tableRow) =>
   <tr key={tableRow.id} className="border-b border-b-borderGray">
     <td className="py-4 text-sm text-right pr-4 font-IRsans">{tableRow.num}</td>
-    <td className="py-4 text-sm text-right font-IRsans">{tableRow.date}</td>
-    <td className="py-4 text-sm text-right font-IRsans">{tableRow.subject}</td>
+    <td className="py-4 text-sm text-right font-IRsans">{tableRow.name}</td>
+    <td className="py-4 text-sm text-right font-IRsans">
+      {tableRow.subject}
+      </td>
     <td className="py-4 text-sm text-center font-IRsans" >{tableRow.location}</td>
     <td className="py-4 text-sm text-center font-IRsans"  >{tableRow.status}</td>
     <td className="py-4 text-sm text-center font-IRsans">{tableRow.function}</td>
     </tr> 
   )
     return(
-        <div className=" mt-10 border-borderGray border border-solid w-full overflow-x-scroll whitespace-nowrap ">
+        <div className=" mt-10 border-borderGray border border-solid w-full overflow-x-auto whitespace-nowrap ">
           <table class="table-auto w-full font-IRsans">
   <thead className="bg-darkGray h-11 rounded-t-2xl w-full whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}> 
     <tr className="text-white  p-6 whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}>

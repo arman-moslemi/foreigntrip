@@ -1,8 +1,8 @@
 import React from "react";
 import MainRightMenu from "../../components/MainRightMenu";
 import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
-import IncomeRequest from "../../components/IncomeRequest";
-const NewIncomeRequest = () =>{
+import TravelingReport from "../../components/TravelingReport";
+const Traveling = () =>{
     return(
         <div className="w-full h-full bg-lightGray py-10 px-32 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>
         <div className="flex md:block">
@@ -11,13 +11,13 @@ const NewIncomeRequest = () =>{
             <div className="flex items-center">
                     <Doc/>
                 <span className="font-IRsans text-mainColor mr-3 font-bold">
-                      مشاهده درخواست
+                      گزارش سفر
                 </span>
                 </div>
-                <IncomeRequest/>
+                <TravelingReport/>
             </div>
         </div>
     </div>
     )
 }
-export default NewIncomeRequest;
+export default Traveling;

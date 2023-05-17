@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
+import RequestDetail from "./RequestDetail";
 const RequestRejected = () =>{
 
 
@@ -10,108 +11,16 @@ const RequestRejected = () =>{
                 رد شده
             </div>
             </div>
-            <div className="flex justify-between flex-wrap">
-                <div className="w-full my-3">
-                    <p className="font-IRsans text-base font-bold text-[#0D296E]">
-                        نام و نام خانوادگی مامور :  
-                        <span>   </span> 
-                        <span className="text-darkGray">
-                              علی اطهری  
-                        </span>
-                    </p>
-                </div>
-                <div className="w-[50%] my-3">
-                    <p className="font-IRsans text-base font-bold text-[#0D296E]">
-                       شناسه ملی : 
-                        <span>   </span> 
-                        <span className="text-darkGray">
-                              ۲۱۳۴۸۶۹۷۵۹۵۹۰ 
-                        </span>
-                    </p>
-                </div>
-                <div className="w-[50%] my-3">
-                    <p className="font-IRsans text-base font-bold text-[#0D296E]">
-                        تاریخ سفر :  
-                        <span>   </span> 
-                        <span className="text-darkGray">
-                              ۰۲ / ۰۳ / ۱۲ 
-                        </span>
-                    </p>
-                </div>
-                <div className="w-[50%] my-3">
-                    <p className="font-IRsans text-base font-bold text-[#0D296E]">
-                        سمت :  
-                        <span>   </span> 
-                        <span className="text-darkGray">
-                              مدیر بخش بازرگانی اداره الف
-                        </span>
-                    </p>
-                </div>
-                <div className="w-[50%] my-3">
-                    <p className="font-IRsans text-base font-bold text-[#0D296E]">
-                        مدت سفر :   
-                        <span>   </span> 
-                        <span className="text-darkGray">
-                              ۲ ماه
-                        </span>
-                    </p>
-                </div>
-                <div className="w-[50%] my-3">
-                    <p className="font-IRsans text-base font-bold text-[#0D296E]">
-                        محل خدمت : 
-                        <span>   </span> 
-                        <span className="text-darkGray">
-                              اداره الف 
-                        </span>
-                    </p>
-                </div>
-                <div className="w-[50%] my-3">
-                    <p className="font-IRsans text-base font-bold text-[#0D296E]">
-                        موضوع سفر :  
-                        <span>   </span> 
-                        <span className="text-darkGray">
-                              لغو قرارداد بارگیری کالا 
-                        </span>
-                    </p>
-                </div>
-                <div className="w-[50%] my-3">
-                    <p className="font-IRsans text-base font-bold text-[#0D296E]">
-                        نوع استخدام :   
-                        <span>   </span> 
-                        <span className="text-darkGray">
-                             قراردادی
-                        </span>
-                    </p>
-                </div>
-                <div className="w-[50%] my-3">
-                    <p className="font-IRsans text-base font-bold text-[#0D296E]">
-                       کشور مقصد :  
-                        <span>   </span> 
-                        <span className="text-darkGray">
-                              اندونزی
-                        </span>
-                    </p>
-                </div>
-                <div className="w-[50%] my-3">
-                    <p className="font-IRsans text-base font-bold text-[#0D296E]">
-                        نام شخص حقوقی بالا دست :  
-                        <span>   </span> 
-                        <span className="text-darkGray">
-                             علی طاهایی 
-                        </span>
-                    </p>
-                </div>
-                <div className="w-[50%] my-3">
-                    <p className="font-IRsans text-base font-bold text-[#0D296E]">
-                       پرداخت کننده هزینه سفر : 
-                        <span>   </span> 
-                        <span className="text-darkGray">
-                              اداره بازرگانی ۱۲۵۳ 
-                        </span>
-                    </p>
-                </div>
+         <RequestDetail/>
+            <div className="mt-20">
+                <p className="font-IRsans text-base font-bold text-[#0D296E]">
+                    علت رد درخواست مامور اعزامی را اینجا بنویسید
+                </p>
+                <p className="font-IRsans text-sm font-medium text-darkGray mt-4 leading-7">
+                    درخواست شما به علت عدم توضیح کافی راجع به موضوع سفر  و مشخص نبودن تاریخ دقیق سفر پذیرفته نشد.
+                    لطفا موارد ذکر شده را اصلاح کنید و سپس مجدد درخواست خود را ثبت کنید.
+                </p>
             </div>
-
            
         </div>
     )

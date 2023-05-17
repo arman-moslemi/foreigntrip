@@ -13,7 +13,9 @@ module.exports = {
       green:'#0F9B0C',
       lightBlue:'#BBF3FF',
       borderGray:'#EDF3FA',
-      darkBlue:'#0D296E'
+      darkBlue:'#0D296E',
+      tripDone:'#FFBD14',
+      
     },
     fontFamily:{
     IRsans:'IRANSans',

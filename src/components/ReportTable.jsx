@@ -1,7 +1,7 @@
-import React from "react";
+import React,{useState} from "react";
 import './components.css';
 import { Link } from "react-router-dom";
-
+import {ReactComponent as Eye} from "../assets/icon/black/eye.svg";
 export const truncate = (str, len) => {
   // console.log("truncate", str, str.length, len);
   if (str.length > len && str.length > 0) {
@@ -14,19 +14,19 @@ export const truncate = (str, len) => {
   return str;
 };
 
-const UserHistoryRequest = () =>{
+const ReportTable = () =>{
   const [showSuccessModal, setShowSuccessModal] = React.useState(false);
 const tableRow =[
   {
     id:'1',
    num:'1',
-   date:'1402/05/12',
+   name:'علی اطهری',
    subject:truncate("لغو قرارداد 142 وزارت خانه",30),
-   location:'برلین',
-   status:<span className="text-sm text-red font-bold font-IRsans">رد شده</span >,
+   location:'اداره بازرگانی شماره ۲',
+   status:<span className="text-sm text-tripDone font-bold font-IRsans">اتمام ماموریت</span >,
    function: 
-                <button onClick={() => setShowSuccessModal(true)} className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
-                  مشاهده علت
+                <button onClick={() => setShowSuccessModal(true)} className="">
+                  <Eye/>
                 </button>
              
                
@@ -34,57 +34,66 @@ const tableRow =[
   {
     id:'2',
    num:'2',
-   date:'1402/06/12',
+   name:'علیرضا بیاتی',
    subject:truncate("لغو قرارداد 142 وزارت خانه",30),
-   location:'مالزی',
-   status:<span className="text-sm text-green font-bold font-IRsans">تایید شده</span >,
-   function:<Link to={`/`}>
-              <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
-                درخواست صدور گذرنامه
-              </button>
-            </Link>
+   location:'اداره بازرگانی شماره ۲',
+   status:<span className="text-sm text-mainColor font-bold font-IRsans">درحال انجام ماموریت</span >,
+   function: 
+                <button onClick={() => setShowSuccessModal(true)} className="">
+                  <Eye/>
+                </button>
   },
   {
     id:'3',
    num:'3',
-   date:'1402/03/28',
-   subject:truncate("لغو قرارداد 142 وزارت خانه",30),
-   location:'لندن',
-   status:<span className="text-sm text-mainColor font-bold font-IRsans">اعزام</span >,
-   function:<Link to={`/`}>
-              <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
-                رهگیری مرحله ای
-              </button>
-            </Link>
+   name:'دارا دورانی',
+   subject: truncate("ارسال کالا به کشور ترکیه برای انجام فعالیت سیاسی",30),
+   location:'اداره بازرگانی شماره ۲',
+   status:<span className="text-sm text-green font-medium font-IRsans">تایید گزارش نهایی</span >,
+   function: 
+                <button onClick={() => setShowSuccessModal(true)} className="">
+                  <Eye/>
+                </button>
   },
   {
     id:'4',
    num:'4',
-   date:'1402/11/22',
+   name:'احمدرضا قلی زاده',
    subject:truncate("لغو قرارداد 142 وزارت خانه",30),
-   location:'پاریس',
-   status:<span className="text-sm text-mainColor font-bold font-IRsans">اتمام سفر</span >,
-   function:<Link to={`/`}>
-              <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
-               ثبت گزارش دستاورد
-              </button>
-            </Link>
+   location:'اداره بازرگانی شماره ۲',
+   status:<span className="text-sm text-red font-medium font-IRsans">رد گزارش نهایی</span >,
+   function: 
+                <button onClick={() => setShowSuccessModal(true)} className="">
+                  <Eye/>
+                </button>
   },
   {
     id:'5',
    num:'5',
-   date:'1402/02/23',
+   name:'علی اطهری',
    subject:truncate("لغو قرارداد 142 وزارت خانه",30),
-   location:'پاریس',
-   status:<span className="text-sm text-green font-bold font-IRsans">تایید گزارش</span >,
-   function:''
+   location:'اداره بازرگانی شماره ۲',
+   status:<span className="text-sm text-green font-medium font-IRsans">تایید شده</span >,
+   function: 
+                <button onClick={() => setShowSuccessModal(true)} className="">
+                  <Eye/>
+                </button>
   }
 ]
   const tableBody = tableRow.map((tableRow) =>
   <tr key={tableRow.id} className="border-b border-b-borderGray">
     <td className="py-4 text-sm text-right pr-4 font-IRsans">{tableRow.num}</td>
-    <td className="py-4 text-sm text-right font-IRsans">{tableRow.date}</td>
-    <td className="py-4 text-sm text-right font-IRsans truncate">{tableRow.subject}</td>
+    <td className="py-4 text-sm text-right font-IRsans">
+      <div className="flex items-center">
+        <div>
+        {tableRow.name}
+        </div>
+        <div className="w-[20px] h-[20px] rounded-full bg-[#FFBD14] flex items-center justify-center mr-2">
+          <span className="text-white font-IRsans text-sm font-bold">2</span>
+        </div>
+      </div>
+    </td>
+    <td className="py-4 text-sm text-right font-IRsans">{tableRow.subject}</td>
     <td className="py-4 text-sm text-center font-IRsans" >{tableRow.location}</td>
     <td className="py-4 text-sm text-center font-IRsans"  >{tableRow.status}</td>
     <td className="py-4 text-sm text-center font-IRsans">{tableRow.function}</td>
@@ -96,11 +105,11 @@ const tableRow =[
   <thead className="bg-darkGray h-11 rounded-t-2xl w-full whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}> 
     <tr className="text-white  p-6 whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}>
       <th className="text-right pr-4 font-IRsans md:px-4">ردیف</th>
-      <th className="text-right font-IRsans md:px-4">تاریخ سفر</th>
+      <th className="text-right font-IRsans md:px-4">نام مامور</th>
       <th className="text-right font-IRsans md:px-4">موضوع سفر</th>
-      <th className="text-center font-IRsan md:px-4s">کشور مقصد</th>
+      <th className="text-center font-IRsan md:px-4s">محل خدمت</th>
       <th className="text-center font-IRsans md:px-4">وضعیت</th>
-      <th className="text-center font-IRsans md:px-4" >عملیات</th>
+      <th className="text-center font-IRsans md:px-4" >مشاهده</th>
     </tr>
   </thead>
   <tbody>
@@ -124,8 +133,8 @@ const tableRow =[
                       
                        </div>
                        
-                       <div className="relative p-6 flex-auto">
-                         <p className="my-4 text-black text-sm leading-relaxed break-words whitespace-normal font-IRsans">
+                       <div className="p-6">
+                         <p className="my-4 text-black text-sm w-full break-words whitespace-normal font-IRsans">
                          درخواست شما به علت عدم توضیح کافی راجع به موضوع سفر و مشخص نبودن تاریخ دقیق آن پذیرفته نشد.
 لطفا موارد ذکر شده را اصلاح کنید و سپس مجددا درخواست خود را ثبت کنید.
                          </p>
@@ -158,4 +167,4 @@ const tableRow =[
         </div>
     )
 }
-export default UserHistoryRequest;
+export default ReportTable;
