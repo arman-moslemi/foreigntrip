@@ -20,7 +20,7 @@ const AgentRightMenu = () => {
 
                     <ul>
                         <li className="my-10">
-                           <Link to={'/'} className="flex items-center">
+                           <Link to={'/newRequest'} className="flex items-center">
                            <Add/>
                             <p className="font-IRsans text-white font-medium mr-4 lg:text-sm">
                                 ثبت درخواست جدید 
@@ -28,7 +28,7 @@ const AgentRightMenu = () => {
                            </Link>
                         </li>
                         <li className="my-10">
-                           <Link to={'/'} className="flex items-center">
+                           <Link to={'/requestHistory'} className="flex items-center">
                            <Doc/>
                             <p className="font-IRsans text-white font-medium mr-4 lg:text-sm">
                                 تاریخچه درخواست ها
@@ -36,7 +36,7 @@ const AgentRightMenu = () => {
                            </Link>
                         </li>
                         <li className="my-10">
-                           <Link to={'/'} className="flex items-center">
+                           <Link to={'/passportRequest'} className="flex items-center">
                            <img src={DocImg} alt="doc" className="w-[19px]"/>
                             <p className="font-IRsans text-white font-medium mr-4 lg:text-sm">
                                درخواست صدور گذرنامه خدمت سیاسی
@@ -44,7 +44,7 @@ const AgentRightMenu = () => {
                            </Link>
                         </li>
                         <li className="my-10">
-                           <Link to={'/'} className="flex items-center">
+                           <Link to={'/profile'} className="flex items-center">
                            <Profile/>
                             <p className="font-IRsans text-white font-medium mr-4 lg:text-sm">
                                اطلاعات کاربری
@@ -80,7 +80,7 @@ const AgentRightMenu = () => {
 
                     <ul>
                         <li className="my-10">
-                           <Link to={'/'} className="flex items-center">
+                           <Link to={'/newRequest'} className="flex items-center">
                            <Add/>
                             <p className="font-IRsans text-white font-medium mr-4 lg:text-sm">
                                 ثبت درخواست جدید 
@@ -88,7 +88,7 @@ const AgentRightMenu = () => {
                            </Link>
                         </li>
                         <li className="my-10">
-                           <Link to={'/'} className="flex items-center">
+                           <Link to={'/requestHistory'} className="flex items-center">
                            <Doc/>
                             <p className="font-IRsans text-white font-medium mr-4 lg:text-sm">
                                 تاریخچه درخواست ها
@@ -96,7 +96,7 @@ const AgentRightMenu = () => {
                            </Link>
                         </li>
                         <li className="my-10">
-                           <Link to={'/'} className="flex items-center">
+                           <Link to={'/passportRequest'} className="flex items-center">
                            <img src={DocImg} alt="doc" className="w-[19px]"/>
                             <p className="font-IRsans text-white font-medium mr-4 lg:text-sm">
                                درخواست صدور گذرنامه خدمت سیاسی
@@ -104,7 +104,7 @@ const AgentRightMenu = () => {
                            </Link>
                         </li>
                         <li className="my-10">
-                           <Link to={'/'} className="flex items-center">
+                           <Link to={'/profile'} className="flex items-center">
                            <Profile/>
                             <p className="font-IRsans text-white font-medium mr-4 lg:text-sm">
                                اطلاعات کاربری

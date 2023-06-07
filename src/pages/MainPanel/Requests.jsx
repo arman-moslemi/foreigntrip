@@ -14,6 +14,40 @@ const Request = () =>{
                         تاریخچه درخواست ها
                 </span>
                 </div>
+                <div className="flex items-center mt-6 justify-between">
+                
+                <label for="cars" className="font-IRsans">فلیتر بر اساس :</label>
+
+            <div className="flex items-center ">
+
+            <select name="cars" id="cars" className="font-IRsans mr-2 border border-[#c1c1c1] rounded-md p-2">
+  <option value="volvo" className="font-IRsans">درخواست جدید</option>
+  <option value="saab" className="font-IRsans">تایید شده</option>
+  <option value="mercedes" className="font-IRsans">رد شده</option>
+ 
+</select>
+<select name="cars" id="cars" className="font-IRsans mr-2 border border-[#c1c1c1] rounded-md p-2">
+  <option value="volvo" className="font-IRsans">فروردین</option>
+  <option value="saab" className="font-IRsans">تایید شده</option>
+  <option value="mercedes" className="font-IRsans">رد شده</option>
+ 
+</select>
+
+            </div>
+
+            <div className="flex">
+            <button  className="mr-5 bg-mainColor hover:bg-white hover:text-mainColor hover:border-2 hover:border-mainColor w-[162px] rounded-md h-[40px] flex justify-center items-center text-white  font-IRsans font-medium text-base shadow-blueShadow">
+                      اعمال فیلتر
+                    </button>
+                    <button  className="mr-5 bg-mainColor hover:bg-white hover:text-mainColor hover:border-2 hover:border-mainColor w-[162px] rounded-md h-[40px] flex justify-center items-center text-white  font-IRsans font-medium text-base shadow-blueShadow">
+                      دریافت خروجی اکسل
+                    </button>
+            </div>
+
+          
+
+
+        </div>
                 <MainHistoryRequest/>
             </div>
         </div>

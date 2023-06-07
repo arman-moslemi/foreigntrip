@@ -1,9 +1,9 @@
-import React,{useState} from "react";
+import React ,{useState} from "react";
 
 import {ReactComponent as Info} from "../assets/icon/black/info.svg"
 import {ReactComponent as Send} from "../assets/icon/blue/Send.svg"
 import { Link } from "react-router-dom";
-const SubmitForm = () =>{
+const TravelForm = () =>{
   const [showSuccessModal, setShowSuccessModal] = React.useState(false);
 
     return(
@@ -11,7 +11,7 @@ const SubmitForm = () =>{
           <div className="flex items-center">
               <Send/>
               <span className="font-IRsans text-mainColor mr-3 font-bold">
-                  ارسال گزارش دستاورد سفر
+                 رهگیری سفر
               </span>
           </div>
           <p className="font-IRsans text-black font-bold text-base mt-5">
@@ -33,7 +33,7 @@ const SubmitForm = () =>{
           </div> 
           <div class="mb-6">
               <label class="block text-gray-700 text-sm font-bold mt-4 mb-2 font-IRsans" for="password">
-                توضیحات خود راجع به سفر٬دستاوردها و اتفاقات سفر را بنویسید.
+                توضیحات شرایط و موقعیت فعلی خود را بنویسید.
               </label>
               <textarea id="message" rows="8" class="block p-2.5 font-IRsans w-full text-sm text-gray-900 bg-gray-50 rounded border  border-[#CCCCCD] focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="توضیحات خود را اینجا بنویسید..."></textarea>
           </div>
@@ -51,7 +51,8 @@ const SubmitForm = () =>{
               <button onClick={() => setShowSuccessModal(true)} className="mt-12 min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
                ارسال
               </button>
-              {showSuccessModal ?
+         
+            {showSuccessModal ?
            <>
             <div
             className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
@@ -62,14 +63,14 @@ const SubmitForm = () =>{
            
                 <div className="flex items-start justify-between p-4 border-b border-solid border-b-midGray rounded-t">
                   <span className="text-base font-bold font-IRsans text-green">
-                    ارسال گزارش دستاورد سفر
+                    ارسال گزارش رهگیری سفر
                   </span>
                
                 </div>
                 
                 <div className="relative p-6 flex-auto">
                   <p className="my-4 text-black text-sm font-IRsans leading-relaxed">
-                 ارسال گزارش دستاورد با موفقیت انجام شد
+                 ارسال گزارش رهگیری مرحله ای با موفقیت انجام شد
                   </p>
                 </div>
                
@@ -95,4 +96,4 @@ const SubmitForm = () =>{
          
     )
 }
-export default SubmitForm;
+export default TravelForm;

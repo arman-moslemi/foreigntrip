@@ -38,7 +38,7 @@ const tableRow =[
    subject:truncate("لغو قرارداد 142 وزارت خانه",30),
    location:'مالزی',
    status:<span className="text-sm text-green font-bold font-IRsans">تایید شده</span >,
-   function:<Link to={`/`}>
+   function:<Link to={`/passportRequest`}>
               <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
                 درخواست صدور گذرنامه
               </button>
@@ -51,7 +51,7 @@ const tableRow =[
    subject:truncate("لغو قرارداد 142 وزارت خانه",30),
    location:'لندن',
    status:<span className="text-sm text-mainColor font-bold font-IRsans">اعزام</span >,
-   function:<Link to={`/`}>
+   function:<Link to={`/travelTracking`}>
               <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
                 رهگیری مرحله ای
               </button>
@@ -64,7 +64,7 @@ const tableRow =[
    subject:truncate("لغو قرارداد 142 وزارت خانه",30),
    location:'پاریس',
    status:<span className="text-sm text-mainColor font-bold font-IRsans">اتمام سفر</span >,
-   function:<Link to={`/`}>
+   function:<Link to={`/submitReport`}>
               <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
                ثبت گزارش دستاورد
               </button>
@@ -139,13 +139,15 @@ const tableRow =[
                          >
                            بستن
                          </button>
-                         <button
+                        <Link to={'/newRequest'}>
+                        <button
                            className="text-mainColor font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                            type="button"
-                           onClick={() => setShowSuccessModal(false)}
+                           
                          >
                            درخواست مجدد
                          </button>
+                        </Link>
                        </div>
                      </div>
                    </div>

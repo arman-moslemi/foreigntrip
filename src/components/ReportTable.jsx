@@ -25,10 +25,9 @@ const tableRow =[
    location:'اداره بازرگانی شماره ۲',
    status:<span className="text-sm text-tripDone font-bold font-IRsans">اتمام ماموریت</span >,
    function: 
-                <button onClick={() => setShowSuccessModal(true)} className="">
-                  <Eye/>
-                </button>
-             
+             <Link to={'/travelDone'}>
+              <Eye/>
+             </Link>
                
   },
   {
@@ -39,9 +38,10 @@ const tableRow =[
    location:'اداره بازرگانی شماره ۲',
    status:<span className="text-sm text-mainColor font-bold font-IRsans">درحال انجام ماموریت</span >,
    function: 
-                <button onClick={() => setShowSuccessModal(true)} className="">
-                  <Eye/>
-                </button>
+   <Link to={'/traveling'}>
+   <Eye/>
+  </Link>
+    
   },
   {
     id:'3',
@@ -50,10 +50,9 @@ const tableRow =[
    subject: truncate("ارسال کالا به کشور ترکیه برای انجام فعالیت سیاسی",30),
    location:'اداره بازرگانی شماره ۲',
    status:<span className="text-sm text-green font-medium font-IRsans">تایید گزارش نهایی</span >,
-   function: 
-                <button onClick={() => setShowSuccessModal(true)} className="">
-                  <Eye/>
-                </button>
+   function:  <Link to={'/traveling'}>
+   <Eye/>
+  </Link>
   },
   {
     id:'4',
@@ -63,9 +62,9 @@ const tableRow =[
    location:'اداره بازرگانی شماره ۲',
    status:<span className="text-sm text-red font-medium font-IRsans">رد گزارش نهایی</span >,
    function: 
-                <button onClick={() => setShowSuccessModal(true)} className="">
-                  <Eye/>
-                </button>
+   <Link to={'/traveling'}>
+   <Eye/>
+  </Link>
   },
   {
     id:'5',
@@ -75,9 +74,9 @@ const tableRow =[
    location:'اداره بازرگانی شماره ۲',
    status:<span className="text-sm text-green font-medium font-IRsans">تایید شده</span >,
    function: 
-                <button onClick={() => setShowSuccessModal(true)} className="">
-                  <Eye/>
-                </button>
+   <Link to={'/traveling'}>
+   <Eye/>
+  </Link>
   }
 ]
   const tableBody = tableRow.map((tableRow) =>
