@@ -21,7 +21,7 @@ const MainRightMenu = () => {
                     <ul>
                        
                         <li className="my-10">
-                           <Link to={'/'} className="flex items-center">
+                           <Link to={'/requests'} className="flex items-center">
                            <Doc/>
                             <p className="font-IRsans text-white font-medium mr-4 lg:text-sm">
                                 تاریخچه درخواست ها
@@ -29,7 +29,7 @@ const MainRightMenu = () => {
                            </Link>
                         </li>
                         <li className="my-10">
-                           <Link to={'/'} className="flex items-center">
+                           <Link to={'/reportHistory'} className="flex items-center">
                            <img src={DocImg} alt="doc" className="w-[19px]"/>
                             <p className="font-IRsans text-white font-medium mr-4 lg:text-sm">
                              مشاهده ی گزارشات

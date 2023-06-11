@@ -18,7 +18,7 @@ import RequestRejectedPage from "../pages/MainPanel/RequestRejected";
 import ReportHistory from "../pages/MainPanel/ReportHistory";
 import Traveling from "../pages/MainPanel/Traveling";
 import TravelDone from "../pages/MainPanel/TravelDone";
-
+import TravelTracking from "../pages/UserPanel/TravelTracking";
 const MainRoutes = (props) =>{
     return(
             <BrowserRouter>
@@ -75,6 +75,9 @@ const MainRoutes = (props) =>{
                 </Routes>
                 <Routes>
                     <Route path="/travelDone" element={<TravelDone/>} />
+                </Routes>
+                <Routes>
+                    <Route path="/travelTracking" element={<TravelTracking/>} />
                 </Routes>
             </BrowserRouter>
     )
