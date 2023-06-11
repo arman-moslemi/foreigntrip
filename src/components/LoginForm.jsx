@@ -54,7 +54,7 @@ const LoginForm = () =>{
                         تغییر رمز عبور
                     </Link>
                 </div> */}
-                <Link to={'/profile'}>
+                <Link to={'/newPassword'}>
                     <button className="w-full h-12 bg-mainColor shadow-blueShadow mt-6 font-IRsans text-white text-base font-bold rounded-lg hover:bg-lightBlue hover:text-mainColor">
                        دریافت رمز عبور یک بار مصرف
                     </button>

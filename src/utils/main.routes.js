@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NewRequest from "../pages/UserPanel/NewRequest";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/Login/SignUp";
-import ChangePassStep1 from "../pages/Login/ChangePassStep1";
-import ChangePassStep2 from "../pages/Login/ChangePassStep2";
+import SignUpDone from "../pages/Login/SignUpDone";
+
 import NewPassword from "../pages/Login/NewPassword";
 import RequestRegistered from "../pages/UserPanel/RequestRegistered";
 import RequestHistory from "../pages/UserPanel/RequestHistory";
@@ -19,6 +19,8 @@ import ReportHistory from "../pages/MainPanel/ReportHistory";
 import Traveling from "../pages/MainPanel/Traveling";
 import TravelDone from "../pages/MainPanel/TravelDone";
 import TravelTracking from "../pages/UserPanel/TravelTracking";
+import TicketList from "../pages/UserPanel/TicketList";
+import TicketShow from "../pages/UserPanel/TicketShow";
 const MainRoutes = (props) =>{
     return(
             <BrowserRouter>
@@ -32,11 +34,9 @@ const MainRoutes = (props) =>{
                     <Route path="/signup" element={<SignUp/>} />
                 </Routes>
                 <Routes>
-                    <Route path="/changePassStep1" element={<ChangePassStep1/>} />
+                    <Route path="/signUpDone" element={<SignUpDone/>} />
                 </Routes>
-                <Routes>
-                    <Route path="/changePassStep2" element={<ChangePassStep2/>} />
-                </Routes>
+          
                 <Routes>
                     <Route path="/newPassword" element={<NewPassword/>} />
                 </Routes>
@@ -78,6 +78,12 @@ const MainRoutes = (props) =>{
                 </Routes>
                 <Routes>
                     <Route path="/travelTracking" element={<TravelTracking/>} />
+                </Routes>
+                <Routes>
+                    <Route path="/ticketList" element={<TicketList/>} />
+                </Routes>
+                <Routes>
+                    <Route path="/ticketShow" element={<TicketShow/>} />
                 </Routes>
             </BrowserRouter>
     )

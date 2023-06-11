@@ -4,17 +4,20 @@ import { Link } from "react-router-dom";
 import {ReactComponent as Add} from "../assets/icon/white/add.svg"
 import {ReactComponent as Doc} from "../assets/icon/white/doc.svg"
 import {ReactComponent as Profile} from "../assets/icon/white/profile.svg"
+import {ReactComponent as Ticket} from "../assets/icon/white/ticket.svg"
 import {ReactComponent as Exit} from "../assets/icon/white/exit.svg"
 import DocImg from "../assets/img/doc.png"
+import User2 from "../assets/img/user2.png"
 const AgentRightMenu = () => {
    const [showMenu,setShowMenu] = useState(false);
     return(
         
                <>
                 <div className="bg-mainColor p-9 rounded-2xl w-[20%] min-w-[300px] lg:min-w-[250px] md:hidden">
-                    <img src={WhiteLogo} alt="logo" className="w-[140px] mx-auto"/>
-                    <p className="text-white  font-bold text-lg text-center mt-4 font-IRsans lg:text-base">
-                        علی اطهری خوش آمدید !
+                    <img src={WhiteLogo} alt="logo" className="w-[170px] mx-auto"/>
+                    <img src={User2} alt="user" className="w-[76px] h-[76px] rounded-full mt-4 mb-4 block mx-auto"/>
+                    <p className="text-white  font-bold text-lg text-center mt-4 font-IRsans lg:text-base ">
+                        آقای هاشمی خوش آمدید !
                     </p>
                     <hr className="border-t-lightGray my-5 border-opacity-50"/>
 
@@ -35,19 +38,20 @@ const AgentRightMenu = () => {
                             </p>
                            </Link>
                         </li>
-                        <li className="my-10">
-                           <Link to={'/passportRequest'} className="flex items-center">
-                           <img src={DocImg} alt="doc" className="w-[19px]"/>
-                            <p className="font-IRsans text-white font-medium mr-4 lg:text-sm">
-                               درخواست صدور گذرنامه خدمت سیاسی
-                            </p>
-                           </Link>
-                        </li>
+                   
                         <li className="my-10">
                            <Link to={'/profile'} className="flex items-center">
                            <Profile/>
                             <p className="font-IRsans text-white font-medium mr-4 lg:text-sm">
                                اطلاعات کاربری
+                            </p>
+                           </Link>
+                        </li>
+                        <li className="my-10">
+                           <Link to={'/profile'} className="flex items-center">
+                           <Ticket/>
+                            <p className="font-IRsans text-white font-medium mr-4 lg:text-sm">
+                               تیکت ها و پشتیبانی
                             </p>
                            </Link>
                         </li>

@@ -1,7 +1,7 @@
 import React from "react";
 import './components.css';
 import { Link } from "react-router-dom";
-
+import {ReactComponent as Eye} from "../assets/icon/black/eye.svg"
 export const truncate = (str, len) => {
   // console.log("truncate", str, str.length, len);
   if (str.length > len && str.length > 0) {
@@ -14,75 +14,67 @@ export const truncate = (str, len) => {
   return str;
 };
 
-const UserHistoryRequest = () =>{
+const TicketListTable = () =>{
   const [showSuccessModal, setShowSuccessModal] = React.useState(false);
   const [showRuleModal, setShowRuleModal] = React.useState(false);
 const tableRow =[
   {
     id:'1',
    num:'1',
-   date:'1402/05/12',
-   subject:truncate("لغو قرارداد 142 وزارت خانه",30),
-   location:'برلین',
-   status:<span className="text-sm text-red font-bold font-IRsans">رد شده</span >,
-   function: 
-                <button onClick={() => setShowSuccessModal(true)} className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
-                  مشاهده علت
-                </button>
+   date:'#1234',
+   subject:truncate("فراموشی رمز عبور ...",30),
+   location:'02/02/12-23:50',
+   status:<span className="text-sm text-[#ffd200] font-bold font-IRsans">بسته شده</span >,
+   function: <Link className="flex justify-center">
+   <Eye/>
+   </Link>
              
                
   },
   {
     id:'2',
    num:'2',
-   date:'1402/06/12',
-   subject:truncate("لغو قرارداد 142 وزارت خانه",30),
-   location:'مالزی',
-   status:<span className="text-sm text-green font-bold font-IRsans">تایید شده</span >,
-   function:
-              <button onClick={() => setShowRuleModal(true)}  className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
-               مشاهده آیین نامه سفر
-              </button>
+   date:'#4323',
+   subject:truncate("فراموشی رمز عبور ...",30),
+   location:'02/02/12-23:50',
+   status:<span className="text-sm text-green font-bold font-IRsans">پاسخ داده شده</span >,
+   function:<Link className="flex justify-center">
+   <Eye/>
+   </Link>
             
   },
   {
     id:'3',
    num:'3',
-   date:'1402/03/28',
-   subject:truncate("لغو قرارداد 142 وزارت خانه",30),
-   location:'لندن',
-   status:<span className="text-sm text-mainColor font-bold font-IRsans">اعزام</span >,
-   function:<Link to={`/travelTracking`}>
-              <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
-                رهگیری مرحله ای
-              </button>
-            </Link>
+   date:'#4321',
+   subject:truncate("فراموشی رمز عبور ...",30),
+   location:'02/02/12-23:50',
+   status:<span className="text-sm text-[#ff6900] font-bold font-IRsans">در انتظار پاسخ</span >,
+   function:<Link className="flex justify-center">
+   <Eye/>
+   </Link>
   },
   {
     id:'4',
    num:'4',
-   date:'1402/11/22',
-   subject:truncate("لغو قرارداد 142 وزارت خانه",30),
-   location:'پاریس',
-   status:<span className="text-sm text-mainColor font-bold font-IRsans">اتمام سفر</span >,
-   function:<Link to={`/submitReport`}>
-              <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
-               ثبت گزارش دستاورد
-              </button>
-            </Link>
+   date:'#2323',
+   subject:truncate("فراموشی رمز عبور ...",30),
+   location:'02/02/12-23:50',
+   status:<span className="text-sm text-green font-bold font-IRsans">پاسخ داده شده</span >,
+   function:<Link className="flex justify-center">
+   <Eye/>
+   </Link>
   },
   {
     id:'5',
    num:'5',
-   date:'1402/02/23',
-   subject:truncate("لغو قرارداد 142 وزارت خانه",30),
-   location:'پاریس',
-   status:<span className="text-sm text-green font-bold font-IRsans">تایید گزارش</span >,
-   function:<Link to={`/`}>
-   <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
-     مشاهده گزارش
-   </button>
- </Link>
+   date:'#1212',
+   subject:truncate("فراموشی رمز عبور ...",30),
+   location:'02/02/12-23:50',
+   status:<span className="text-sm text-[#ff6900] font-bold font-IRsans">در انتظار پاسخ</span >,
+   function:<Link className="flex justify-center">
+   <Eye/>
+   </Link>
   }
 ]
   const tableBody = tableRow.map((tableRow) =>
@@ -101,11 +93,11 @@ const tableRow =[
   <thead className="bg-darkGray h-11 rounded-t-2xl w-full whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}> 
     <tr className="text-white  p-6 whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}>
       <th className="text-right pr-4 font-IRsans md:px-4">ردیف</th>
-      <th className="text-right font-IRsans md:px-4">تاریخ سفر</th>
-      <th className="text-right font-IRsans md:px-4">موضوع سفر</th>
-      <th className="text-center font-IRsan md:px-4s">کشور مقصد</th>
-      <th className="text-center font-IRsans md:px-4">وضعیت</th>
-      <th className="text-center font-IRsans md:px-4" >عملیات</th>
+      <th className="text-right font-IRsans md:px-4">شماره تیکت</th>
+      <th className="text-right font-IRsans md:px-4">موضوع تیکت</th>
+      <th className="text-center font-IRsan md:px-4s">آخرین به روز رسانی</th>
+      <th className="text-center font-IRsans md:px-4">وضعیت تیکت</th>
+      <th className="text-center font-IRsans md:px-4" >مشاهده</th>
     </tr>
   </thead>
   <tbody>
@@ -222,4 +214,4 @@ const tableRow =[
         </div>
     )
 }
-export default UserHistoryRequest;
+export default TicketListTable;

@@ -4,8 +4,8 @@ import {ReactComponent as User} from "../assets/icon/black/profile.svg"
 import {ReactComponent as Doc} from "../assets/icon/black/doc.svg"
 import {ReactComponent as Phone} from "../assets/icon/blue/phone.svg"
 import {ReactComponent as Profile} from "../assets/icon/blue/profile.svg"
-import {ReactComponent as Lock} from "../assets/icon/black/lock.svg"
-
+import {ReactComponent as Info} from "../assets/icon/black/info.svg"
+import User2 from "../assets/img/user2.png"
 import { Link } from "react-router-dom";
 import SuccessModal from "./SuccessModal";
 const ProfileInfo = () =>{
@@ -19,99 +19,93 @@ const ProfileInfo = () =>{
                 ویرایش اطلاعات حساب کاربری
             </span>
         </div>
-      <div className="flex w-[80%] mx-auto flex-wrap justify-between mt-10 xl:w-[100%]">
-        <div class="relative my-2 w-[45%] lg:w-[48%] xs:w-[100%] xs:my-1">
-            <div class="absolute top-5 right-2 flex items-center pl-3 pointer-events-none">
-                <User/>
-            </div>
-            <input type="text" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="نام و نام خانوادگی"/>
-        </div>
-        <div class="relative my-2 w-[45%] lg:w-[48%] xs:w-[100%] xs:my-1">
-            <div class="absolute top-5 right-2 flex items-center pl-3 pointer-events-none">
-                <Doc/>
-            </div>
-            <input type="text" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="شناسه ملی"/>
-        </div>
-        <div class="relative my-2 w-[45%] lg:w-[48%] xs:w-[100%] xs:my-1">
-            <div class="absolute top-5 right-2 flex items-center pl-3 pointer-events-none">
-                <User/>
-            </div>
-            <input type="text" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="سمت"/>
-        </div>
+        <div className="w-[70%] mx-auto block">
+        <div className="flex justify-center">
+            <div className="relative rounded-full h-[150px] w-[150px] mt-4 mb-4">
+                <img src={User2}/>
               
-        <div class="relative my-2 w-[45%] lg:w-[48%] xs:w-[100%] xs:my-1">
-            <div class="absolute top-5 right-2 flex items-center pl-3 pointer-events-none">
-                <Doc/>
             </div>
-            <input type="text" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="کد ملی"/>
         </div>
-        <div class="relative my-2 w-[45%] lg:w-[48%] xs:w-[100%] xs:my-1">
-            <div class="absolute top-5 right-2 flex items-center pl-3 pointer-events-none">
-                <Phone/>
-            </div>
-            <input type="text" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="شماره تلفن همراه"/>
+        <div className="flex mt-4 mb-5">
+          <Info/>
+          <p className="font-IRSans text-black text-sm mr-2">
+          شما فقط میتوانید اطلاعات کاربری خود را در اینجا مشاهده کنید و امکان تغییر آنها وجود ندارد .اگر موارد زیر با اطلاعات شما مغایرت دارد میتوانید از طریق تیکت به پشتیبانی پیام دهید تا درخواست تغییر اطلاعات شما بررسی شود.
+          </p>
         </div>
-        <div class="relative my-2 w-[45%] lg:w-[48%] xs:w-[100%] xs:my-1">
-            <div class="absolute top-5 right-2 flex items-center pl-3 pointer-events-none">
-                <Lock/>
-            </div>
-            <input type="text" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="رمز عبور"/>
-        </div>
-        <div class="relative my-2 w-[45%] lg:w-[48%] xs:w-[100%] xs:my-1">
-            <div class="absolute top-5 right-2 flex items-center pl-3 pointer-events-none">
-                <Lock/>
-            </div>
-            <input type="text" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="تکرار رمز عبور"/>
-        </div>
-       
-       
-        <button onClick={() => setShowSuccessModal(true)}
- className="w-[140px] h-10 bg-mainColor shadow-blueShadow mt-5 lg:text-base font-IRsans text-white text-lg rounded-lg hover:bg-lightBlue xs:float-left xs:mr-auto hover:text-mainColor">
-                        ویرایش اطلاعات
-            </button>
-            {showSuccessModal ?
-           <>
-            <div
-            className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
-          >
-            <div className="relative w-auto my-5 mx-auto max-w-3xl">
-             
-              <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-           
-                <div className="flex items-start justify-between p-4 border-b border-solid border-b-midGray rounded-t">
-                  <span className="text-base font-bold font-IRsans text-green">
-                    ویرایش اطلاعات
-                  </span>
-               
+      <div className="flex w-full flex-wrap">
+      <div className="flex flex-col w-[49%] ml-[1%] mb-4">
+            <span>نام شما</span>
+            <div class="relative mt-3">
+                    <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
+                        <User/>
+                    </div>
+                    <input type="text" disabled="true" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="علی"/>
                 </div>
-                
-                <div className="relative p-6 flex-auto">
-                  <p className="my-4 text-black text-sm font-IRsans leading-relaxed">
-                 ویرایش اطلاعات با موفقیت انجام شد !
-                  </p>
+         </div>
+         <div className="flex flex-col w-[49%] mr-[1%] mb-4">
+            <span>نام خانوادگی شما</span>
+            <div class="relative mt-3">
+                    <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
+                        <User/>
+                    </div>
+                    <input type="text" id="input-group-1" disabled="true"  class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="اطهری"/>
                 </div>
-               
-                <div className="flex items-center justify-endborder-t justify-end border-solid border-slate-200 rounded-b">
-                  <button
-                    className="text-mainColor font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                    type="button"
-                    onClick={() => setShowSuccessModal(false)}
-                  >
-                    بستن
-                  </button>
-                
+         </div>
+         <div className="flex flex-col w-[49%] ml-[1%] mb-4">
+            <span>کد ملی شما</span>
+            <div class="relative mt-3">
+                    <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
+                        <Doc/>
+                    </div>
+                    <input type="text" id="input-group-1" disabled="true" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="۰۰۲۰۱۶۵۴۷۸"/>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
-          
-           </>
-           :null
-        }
-    
-             
+         </div>
+         <div className="flex flex-col w-[49%] mr-[1%] mb-4">
+            <span>شماره تلفن همراه شما</span>
+            <div class="relative mt-3">
+                    <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
+                        <Phone/>
+                    </div>
+                    <input type="text" id="input-group-1" disabled="true"  class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="۰۹۱۲۰۰۸۹۰۷۶"/>
+                </div>
+         </div>
+         <div className="flex flex-col w-[49%] ml-[1%] mb-4">
+            <span>نام هولدینگ را وارد کنید</span>
+            <div class="relative mt-3">
+                    <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
+                        <Doc/>
+                    </div>
+                    <input type="text" id="input-group-1" disabled="true" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="شستا"/>
+                </div>
+         </div>
+         <div className="flex flex-col w-[49%] mr-[1%] mb-4">
+            <span>نام شرکت را وارد کنید</span>
+            <div class="relative mt-3">
+                    <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
+                        <Doc/>
+                    </div>
+                    <input type="text" id="input-group-1" disabled="true" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="فراتوسعه هوشمند ایرانیان"/>
+                </div>
+         </div>
+         <div className="flex flex-col w-[49%] ml-[1%] mb-4">
+            <span>سمت خود را وارد کنید</span>
+            <div class="relative mt-3">
+                    <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
+                        <Doc/>
+                    </div>
+                    <input type="text" id="input-group-1"  disabled="true" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="مدیر کل"/>
+                </div>
+         </div>
+   
       </div>
+            
+                
+                
+             
+                
+              
+              
+       </div>
               
     </div>
          
