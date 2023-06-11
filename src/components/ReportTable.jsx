@@ -41,12 +41,8 @@ const tableRow =[
    function: 
    <Link to={'/traveling'}>
    <Eye/>
-<<<<<<< HEAD
-   </Link>
-=======
   </Link>
     
->>>>>>> da29792cce6fbb850b8cc6fd1d893aa32ad0a637
   },
   {
     id:'3',
@@ -55,16 +51,9 @@ const tableRow =[
    subject: truncate("ارسال کالا به کشور ترکیه برای انجام فعالیت سیاسی",30),
    location:'اداره بازرگانی شماره ۲',
    status:<span className="text-sm text-green font-medium font-IRsans">تایید گزارش نهایی</span >,
-<<<<<<< HEAD
-   function: 
-                <Link to={'/'}>
-                <Eye/>
-                </Link>
-=======
    function:  <Link to={'/traveling'}>
    <Eye/>
   </Link>
->>>>>>> da29792cce6fbb850b8cc6fd1d893aa32ad0a637
   },
   {
     id:'4',
@@ -74,15 +63,9 @@ const tableRow =[
    location:'اداره بازرگانی شماره ۲',
    status:<span className="text-sm text-red font-medium font-IRsans">رد گزارش نهایی</span >,
    function: 
-<<<<<<< HEAD
-                <Link to={'/'}>
-                <Eye/>
-                </Link>
-=======
    <Link to={'/traveling'}>
    <Eye/>
   </Link>
->>>>>>> da29792cce6fbb850b8cc6fd1d893aa32ad0a637
   },
   {
     id:'5',
@@ -92,15 +75,9 @@ const tableRow =[
    location:'اداره بازرگانی شماره ۲',
    status:<span className="text-sm text-green font-medium font-IRsans">تایید شده</span >,
    function: 
-<<<<<<< HEAD
-                <Link to={'/'}>
-                <Eye/>
-                </Link>
-=======
    <Link to={'/traveling'}>
    <Eye/>
   </Link>
->>>>>>> da29792cce6fbb850b8cc6fd1d893aa32ad0a637
   }
 ]
   const tableBody = tableRow.map((tableRow) =>
