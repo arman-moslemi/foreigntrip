@@ -21,6 +21,7 @@ import TravelDone from "../pages/MainPanel/TravelDone";
 import TravelTracking from "../pages/UserPanel/TravelTracking";
 import TicketList from "../pages/UserPanel/TicketList";
 import TicketShow from "../pages/UserPanel/TicketShow";
+import Userlist from "../pages/Supervisor/Userlist";
 const MainRoutes = (props) =>{
     return(
             <BrowserRouter>
@@ -84,6 +85,9 @@ const MainRoutes = (props) =>{
                 </Routes>
                 <Routes>
                     <Route path="/ticketShow" element={<TicketShow/>} />
+                </Routes>
+                <Routes>
+                    <Route path="/supervisor/userList" element={<Userlist/>}/>
                 </Routes>
             </BrowserRouter>
     )
