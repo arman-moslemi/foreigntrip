@@ -5,6 +5,7 @@ import {ReactComponent as Add} from "../assets/icon/white/add.svg"
 import {ReactComponent as Doc} from "../assets/icon/white/doc.svg"
 import {ReactComponent as Profile} from "../assets/icon/white/profile.svg"
 import {ReactComponent as Exit} from "../assets/icon/white/exit.svg"
+import { ReactComponent as Ticket } from "../assets/icon/white/ticket.svg";
 import DocImg from "../assets/img/doc.png"
 const MainRightMenu = () => {
    const [showMenu,setShowMenu] = useState(false);
@@ -36,7 +37,38 @@ const MainRightMenu = () => {
                             </p>
                            </Link>
                         </li>
-                      
+                        <li className="my-10">
+                           <Link to={'/'} className="flex items-center">
+                           <img src={DocImg} alt="doc" className="w-[19px]"/>
+                            <p className="font-IRsans text-white font-medium mr-4 lg:text-sm">
+                             درخواست های ثبت نام
+                            </p>
+                           </Link>
+                        </li>
+                        <li className="my-10">
+                           <Link to={'/'} className="flex items-center">
+                          <Profile/>
+                            <p className="font-IRsans text-white font-medium mr-4 lg:text-sm">
+                             لیست ماموران اعزامی
+                            </p>
+                           </Link>
+                        </li>
+                        <li className="my-10">
+                           <Link to={'/'} className="flex items-center">
+                           <Profile/>
+                            <p className="font-IRsans text-white font-medium mr-4 lg:text-sm">
+                             تعریف کاربر ناظر
+                            </p>
+                           </Link>
+                        </li>
+                        <li className="my-10">
+                           <Link to={'/ticketListMain'} className="flex items-center">
+                           <Ticket/>
+                            <p className="font-IRanianSans text-white font-medium mr-4 lg:text-sm">
+                           تیکت ها و پشتیبانی
+                            </p>
+                           </Link>
+                        </li>
                         <li className="my-10">
                            <Link to={'/'} className="flex items-center">
                            <Exit/>

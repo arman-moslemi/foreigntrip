@@ -16,48 +16,87 @@ export const truncate = (str, len) => {
   };
 
 const UserReportList = () =>{
-    const tableRow =[
-        {
-          id:'1',
-         num:'1',
-         name:'علی',
-         lastName:'اطهری',
-         position:'مدیر مالی',
-         holding:'شستا',
-         company:'شرکت یک',
-         status:<span className="font-IRSans text-green text-sm">آنلاین</span>             
-                   
-                     
-        },   {
-            id:'1',
-           num:'1',
-           name:'حسن',
-           lastName:'تابان',
-           position:'حسابرس',
-           holding:'شستا',
-           company:'شرکت یک',
-           status:<span className="font-IRSans text-[#FF6900] text-sm">آفلاین</span>             
-                     
-                       
-          },
+  const tableRow =[
+    {
+      id:'1',
+     num:'1',
+     name:'علی اطهری',
+     subject:truncate("لغو قرارداد 142 وزارت خانه",30),
+     location:'اداره بازرگانی شماره ۲',
+     status:<span className="text-sm text-tripDone font-bold font-IRsans">اتمام ماموریت</span >,
+     function: 
+                  <Link to={'/supervisor/reportView'}>
+                  <Eye/>
+                  </Link>
+               
+                 
+    },
+    {
+      id:'2',
+     num:'2',
+     name:'علیرضا بیاتی',
+     subject:truncate("لغو قرارداد 142 وزارت خانه",30),
+     location:'اداره بازرگانی شماره ۲',
+     status:<span className="text-sm text-mainColor font-bold font-IRsans">درحال انجام ماموریت</span >,
+     function: 
+     <Link to={'/supervisor/reportView'}>
+     <Eye/>
+    </Link>
       
-      ]
+    },
+    {
+      id:'3',
+     num:'3',
+     name:'دارا دورانی',
+     subject: truncate("ارسال کالا به کشور ترکیه برای انجام فعالیت سیاسی",30),
+     location:'اداره بازرگانی شماره ۲',
+     status:<span className="text-sm text-green font-medium font-IRsans">تایید گزارش نهایی</span >,
+     function:  <Link to={'/supervisor/reportView'}>
+     <Eye/>
+    </Link>
+    },
+    {
+      id:'4',
+     num:'4',
+     name:'احمدرضا قلی زاده',
+     subject:truncate("لغو قرارداد 142 وزارت خانه",30),
+     location:'اداره بازرگانی شماره ۲',
+     status:<span className="text-sm text-red font-medium font-IRsans">رد گزارش نهایی</span >,
+     function: 
+     <Link to={'/supervisor/reportView'}>
+     <Eye/>
+    </Link>
+    },
+    {
+      id:'5',
+     num:'5',
+     name:'علی اطهری',
+     subject:truncate("لغو قرارداد 142 وزارت خانه",30),
+     location:'اداره بازرگانی شماره ۲',
+     status:<span className="text-sm text-green font-medium font-IRsans">تایید شده</span >,
+     function: 
+     <Link to={'/supervisor/reportView'}>
+     <Eye/>
+    </Link>
+    }
+  ]
     const tableBody = tableRow.map((tableRow) =>
     <tr key={tableRow.id} className="border-b border-b-borderGray">
       <td className="py-4 text-sm text-right pr-4 font-IRsans px-4">{tableRow.num}</td>
       <td className="py-4 text-sm text-right font-IRsans px-4">
-        
-      
+        <div className="flex items-center">
+          <div>
           {tableRow.name}
-        
-        
-       
+          </div>
+          <div className="w-[20px] h-[20px] rounded-full bg-[#FFBD14] flex items-center justify-center mr-2">
+            <span className="text-white font-IRsans text-sm font-bold">2</span>
+          </div>
+        </div>
       </td>
-      <td className="py-4 text-sm text-right px-4 font-IRsans">{tableRow.lastName}</td>
-      <td className="py-4 text-sm text-center px-4 font-IRsans" >{tableRow.position}</td>
-      <td className="py-4 text-sm text-center px-4 font-IRsans"  >{tableRow.holding}</td>
-      <td className="py-4 text-sm text-center px-4 font-IRsans">{tableRow.company}</td>
-      <td className="py-4 text-sm text-center px-4 font-IRsans">{tableRow.status}</td>
+      <td className="py-4 text-sm text-right px-4 font-IRsans">{tableRow.subject}</td>
+      <td className="py-4 text-sm text-center px-4 font-IRsans" >{tableRow.location}</td>
+      <td className="py-4 text-sm text-center px-4 font-IRsans"  >{tableRow.status}</td>
+      <td className="py-4 text-sm text-center px-4 font-IRsans">{tableRow.function}</td>
       </tr> 
     )
     return(
@@ -80,12 +119,11 @@ const UserReportList = () =>{
   <thead className="bg-darkGray h-11 rounded-t-2xl w-full whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}> 
     <tr className="text-white  p-6 whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}>
       <th className="text-right pr-4 font-IRsans md:px-4">ردیف</th>
-      <th className="text-right font-IRsans md:px-4">نام کاربر</th>
-      <th className="text-right font-IRsans md:px-4">نام خانوادگی کاربر</th>
-      <th className="text-center font-IRsan md:px-4">سمت</th>
-      <th className="text-center font-IRsans md:px-4">هولدینگ</th>
-      <th className="text-center font-IRsans md:px-4" >شرکت</th>
-      <th className="text-center font-IRsans md:px-4" >وضعیت</th>
+      <th className="text-right font-IRsans md:px-4">نام مامور</th>
+      <th className="text-right font-IRsans md:px-4">موضوع سفر</th>
+      <th className="text-center font-IRsan md:px-4s">محل خدمت</th>
+      <th className="text-center font-IRsans md:px-4">وضعیت</th>
+      <th className="text-center font-IRsans md:px-4" >مشاهده</th>
     </tr>
   </thead>
   <tbody>

@@ -19,7 +19,7 @@ const ProfileInfo = () =>{
                 ویرایش اطلاعات حساب کاربری
             </span>
         </div>
-        <div className="w-[70%] mx-auto block">
+        <div className="w-[70%] mx-auto block sm:w-[95%] xs:w-[100%]">
         <div className="flex justify-center">
             <div className="relative rounded-full h-[150px] w-[150px] mt-4 mb-4">
                 <img src={User2}/>

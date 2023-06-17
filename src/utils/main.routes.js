@@ -21,8 +21,11 @@ import TravelDone from "../pages/MainPanel/TravelDone";
 import TravelTracking from "../pages/UserPanel/TravelTracking";
 import TicketList from "../pages/UserPanel/TicketList";
 import TicketShow from "../pages/UserPanel/TicketShow";
+import TicketListMain from "../pages/MainPanel/TicketListMain";
+import TicketShowMain from "../pages/MainPanel/TicketShowMain";
 import Userlist from "../pages/Supervisor/Userlist";
 import ReportList from "../pages/Supervisor/ReportList";
+import ReportView from "../pages/Supervisor/ReportView";
 const MainRoutes = (props) =>{
     return(
             <BrowserRouter>
@@ -92,6 +95,15 @@ const MainRoutes = (props) =>{
                 </Routes>
                 <Routes>
                     <Route path="/supervisor/reportList" element={<ReportList/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/supervisor/reportView" element={<ReportView/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/ticketShowMain" element={<TicketShowMain/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/ticketListMain" element={<TicketListMain/>}/>
                 </Routes>
             </BrowserRouter>
     )

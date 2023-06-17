@@ -4,7 +4,7 @@ import {ReactComponent as Send} from "../assets/icon/black/send.svg"
 import { ReactComponent as Support } from "../assets/icon/white/support.svg";
 import { ReactComponent as User } from "../assets/icon/white/profile.svg";
 import Profile from "../pages/UserPanel/Profile";
-const TicketDetail = () =>{
+const TicketDetailMain = () =>{
  
     return(
         <>
@@ -92,4 +92,4 @@ const TicketDetail = () =>{
         </>
     )
 }
-export default TicketDetail;
+export default TicketDetailMain;

@@ -1,4 +1,7 @@
+import { type } from '@testing-library/user-event/dist/type'
+
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}",],
   theme: {
@@ -17,9 +20,10 @@ module.exports = {
       tripDone:'#FFBD14',
       
     },
-    fontFamily:{
-    IRsans:'IRANSans',
-    FaNums:'FaNum'
+    fontFamily: {
+      custom1: ["IRANSans", "sans-serif"],
+      custom2: ["IRanianSans", "sans-serif"],
+    
     },
     boxShadow:{
       blueShadow:'0px 4px 20px rgba(8, 137, 165, 0.68)',

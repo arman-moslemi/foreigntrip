@@ -2,10 +2,14 @@
 	font-family: IRANSans;
 	font-style: normal;
 	font-weight: 400;
-	src: url('../fonts/IRANSans\(FaNum\).ttf') format('ttf'),  /* FF39+,Chrome36+, Opera24+*/
+	src: url('../fonts/IRANSans\(FaNum\).ttf'),  /* FF39+,Chrome36+, Opera24+*/
 		 /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
 }
 @font-face {
 	font-family: FaNum;
 	src: url('../fonts/IR.ttf');
+}
+@font-face {
+	font-family: IRanianSans;
+	src: url('../fonts/IRanianSans.ttf');
 }
