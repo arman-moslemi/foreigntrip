@@ -15,7 +15,7 @@ export const truncate = (str, len) => {
     return str;
   };
 
-const UserlistTable = () =>{
+const UserReportList = () =>{
     const tableRow =[
         {
           id:'1',
@@ -65,7 +65,7 @@ const UserlistTable = () =>{
         <div className="flex justify-between items-center mt-8 flex-wrap md:justify-end">
             <div className="flex items-center flex-wrap">
                 <span className="font-IRsans text-mainColor font-bold text-base ml-4">
-                    جستجو در بین کاربران
+                   جستجو در بین گزارشات
                 </span>
                 <input type="text" className="border rounded-full w-80 border-midGray px-4 py-1.5 font-IRsans md:mt-3" placeholder="جستجو کنید ..."/>
             </div>
@@ -101,4 +101,4 @@ const UserlistTable = () =>{
 
 }
 
-export default UserlistTable;
+export default UserReportList;
