@@ -64,7 +64,7 @@ const MainRightMenu = () => {
                         <li className="my-10">
                            <Link to={'/ticketListMain'} className="flex items-center">
                            <Ticket/>
-                            <p className="font-IRanianSans text-white font-medium mr-4 lg:text-sm">
+                            <p className="font-IRsans text-white font-medium mr-4 lg:text-sm">
                            تیکت ها و پشتیبانی
                             </p>
                            </Link>

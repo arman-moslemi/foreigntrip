@@ -26,6 +26,7 @@ import TicketShowMain from "../pages/MainPanel/TicketShowMain";
 import Userlist from "../pages/Supervisor/Userlist";
 import ReportList from "../pages/Supervisor/ReportList";
 import ReportView from "../pages/Supervisor/ReportView";
+import AgentList from "../pages/MainPanel/AgentList"; 
 const MainRoutes = (props) =>{
     return(
             <BrowserRouter>
@@ -104,6 +105,9 @@ const MainRoutes = (props) =>{
                 </Routes>
                 <Routes>
                     <Route path="/ticketListMain" element={<TicketListMain/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/agentList" element={<AgentList/>}/>
                 </Routes>
             </BrowserRouter>
     )

@@ -21,7 +21,7 @@ module.exports = {
       
     },
     fontFamily: {
-      custom1: ["IRANSans", "sans-serif"],
+      IRsans: ["IRANSans", "sans-serif"],
       custom2: ["IRanianSans", "sans-serif"],
     
     },
