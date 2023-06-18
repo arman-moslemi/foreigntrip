@@ -5,8 +5,8 @@ import React,{useState} from "react";
 import {ReactComponent as Search} from "../assets/icon/white/search.svg"
 import './components.css';
 import { Link } from "react-router-dom";
-import {ReactComponent as Trash} from "../assets/icon/blue/trash.svg";
-import { ReactComponent as Pencil } from "../assets/icon/blue/pencil.svg";
+import {ReactComponent as Eye} from "../assets/icon/black/eye.svg"
+
 export const truncate = (str, len) => {
     // console.log("truncate", str, str.length, len);
     if (str.length > len && str.length > 0) {
@@ -19,7 +19,7 @@ export const truncate = (str, len) => {
     return str;
   };
 
-const AgentListTable = () =>{
+const RegistrationRequestTable = () =>{
   const[showError,setShowError]= React.useState(false);
   const[showEdit,setShowEdit] = React.useState(false);
  
@@ -31,13 +31,12 @@ const AgentListTable = () =>{
          lastName:'اطهری',
          code:'۰۰۳۰۶۷۸۷۶۵',
          phoneNumber:'۰۹۱۲۹۸۷۶۷۶۵',
-         date:'در انتظار تکمیل اطلاعات',
-         edit:<button disabled="true">
-          <Pencil/> 
-         </button> ,
-         delete:<button disabled="true">
-          <Trash/> 
-         </button>          
+         
+         date:'۰۲/۰۳/۲۸',
+         view:<Link to={''}
+         >
+          <Eye/>
+         </Link>   
                    
                      
         },  {
@@ -48,12 +47,11 @@ const AgentListTable = () =>{
          code:'۰۰۳۰۶۷۸۷۶۵',
          phoneNumber:'۰۹۱۲۹۸۷۶۷۶۵',
          date:'۰۲/۰۳/۲۸',
-         edit:<button onClick={() =>setShowEdit(true)}>
-         <Pencil/> 
-        </button> ,
-        delete:<button onClick={() => setShowError(true)}>
-         <Trash/> 
-        </button>         
+         view:<Link to={''}
+         >
+          <Eye/>
+         </Link>   
+              
                    
                      
         },
@@ -65,12 +63,10 @@ const AgentListTable = () =>{
          code:'۰۰۳۰۶۷۸۷۶۵',
          phoneNumber:'۰۹۱۲۹۸۷۶۷۶۵',
          date:'۰۲/۰۳/۲۸',
-         edit:<button>
-         <Pencil/> 
-        </button> ,
-        delete:<button>
-         <Trash/> 
-        </button>           
+         view:<Link to={''}
+         >
+          <Eye/>
+         </Link>   
                    
                      
         }
@@ -91,8 +87,7 @@ const AgentListTable = () =>{
       <td className="py-4 text-sm text-center px-4 font-IRsans" >{tableRow.code}</td>
       <td className="py-4 text-sm text-center px-4 font-IRsans"  >{tableRow.phoneNumber}</td>
       <td className="py-4 text-sm text-center px-4 font-IRsans">{tableRow.date}</td>
-      <td className="py-4 text-sm text-center px-4 font-IRsans">{tableRow.edit}</td>
-      <td className="py-4 text-sm text-center px-4 font-IRsans">{tableRow.delete}</td>
+      <td className="py-4 text-sm text-center px-4 font-IRsans">{tableRow.view}</td>
       </tr> 
     )
     return(
@@ -108,8 +103,8 @@ const AgentListTable = () =>{
       <th className="text-center font-IRsan md:px-4">کد ملی</th>
       <th className="text-center font-IRsan md:px-4">شماره تلفن همراه</th>
       <th className="text-center font-IRsans md:px-4">تاریخ ثبت نام</th>
-      <th className="text-center font-IRsans md:px-4" >ویرایش</th>
-      <th className="text-center font-IRsans md:px-4" >حذف</th>
+      <th className="text-center font-IRsans md:px-4" >مشاهده</th>
+      
     </tr>
   </thead>
   <tbody>
@@ -240,4 +235,4 @@ const AgentListTable = () =>{
 
 }
 
-export default AgentListTable;
+export default RegistrationRequestTable;

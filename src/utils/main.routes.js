@@ -27,6 +27,7 @@ import Userlist from "../pages/Supervisor/Userlist";
 import ReportList from "../pages/Supervisor/ReportList";
 import ReportView from "../pages/Supervisor/ReportView";
 import AgentList from "../pages/MainPanel/AgentList"; 
+import RegistrationRequestList from "../pages/MainPanel/RegistrationRequestList";
 const MainRoutes = (props) =>{
     return(
             <BrowserRouter>
@@ -108,6 +109,9 @@ const MainRoutes = (props) =>{
                 </Routes>
                 <Routes>
                     <Route path="/agentList" element={<AgentList/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/registrationRequestList" element={<RegistrationRequestList/>}/>
                 </Routes>
             </BrowserRouter>
     )
