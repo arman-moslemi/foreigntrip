@@ -1,10 +1,12 @@
 import React,{useState} from "react";
 import { Link } from "react-router-dom";
 import RequestDetail from "./RequestDetail";
+import{ReactComponent as Download} from "../assets/icon/white/download.svg"
 const IncomeRequest = () =>{
 const [show , setShow]=useState(false);
 const [showSuccessModal, setShowSuccessModal] = React.useState(false);
 const [showSendModal, setShowSendModal] = React.useState(false);
+const [showButton,setShowButton] = React.useState(false);
     return (
         <div className="border border-borderGray rounded-md pt-10 px-5 py-5 mt-7">
   <RequestDetail/>
@@ -97,13 +99,21 @@ const [showSendModal, setShowSendModal] = React.useState(false);
                
                 <div className="flex items-center justify-endborder-t justify-end border-solid border-slate-200 rounded-b">
                   <button
-                    className="text-mainColor font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="text-white font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowSuccessModal(false)}
                   >
-                    بستن
+                    <Download/>
+                    دانلود فرم با فرمت doc
                   </button>
-                
+                  <button
+                    className="text-white font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    type="button"
+                    onClick={() => setShowSuccessModal(false)}
+                  >
+                    <Download/>
+                    دانبود فرم با فرمت PDF
+                  </button>
                 </div>
               </div>
             </div>
