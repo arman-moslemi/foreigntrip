@@ -28,6 +28,7 @@ import ReportList from "../pages/Supervisor/ReportList";
 import ReportView from "../pages/Supervisor/ReportView";
 import AgentList from "../pages/MainPanel/AgentList"; 
 import RegistrationRequestList from "../pages/MainPanel/RegistrationRequestList";
+import Waiting from "../pages/MainPanel/Waiting";
 const MainRoutes = (props) =>{
     return(
             <BrowserRouter>
@@ -112,6 +113,9 @@ const MainRoutes = (props) =>{
                 </Routes>
                 <Routes>
                     <Route path="/registrationRequestList" element={<RegistrationRequestList/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/waiting" element={<Waiting/>}/>
                 </Routes>
             </BrowserRouter>
     )
