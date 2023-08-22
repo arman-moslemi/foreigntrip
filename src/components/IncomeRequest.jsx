@@ -80,7 +80,7 @@ const [showButton,setShowButton] = React.useState(false);
             <div
             className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
           >
-            <div className="relative w-auto my-5 mx-auto max-w-3xl">
+            <div className="relative w-[30%] my-5 mx-auto max-w-3xl">
              
               <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
            
@@ -92,27 +92,35 @@ const [showButton,setShowButton] = React.useState(false);
                 </div>
                 
                 <div className="relative p-6 flex-auto">
-                  <p className="my-4 text-black text-sm font-IRsans leading-relaxed">
-                تایید درخواست سفر مامور اعزامی با موفقیت انجام شد
+                  <p className="my-4 text-black text-sm font-IRsans">
+                درخواست مامور اعزامی توسط شما در گام اول تایید شد.فرم این مامور را دانلود کرده و پس از گرفتن تایید مسئولان،قسمت امضا را تکمیل کنید تا فرم تایید نهایی شود.برای این کار به صفحه ی تاریخچه درخواست ها مراجعه کنید.
                   </p>
                 </div>
                
-                <div className="flex items-center justify-endborder-t justify-end border-solid border-slate-200 rounded-b">
+                <div className="flex items-center justify-center  border-solid border-slate-200 rounded-b mb-4">
                   <button
-                    className="text-white font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className=" float-left flex bg-mainColor items-center rounded-md shadow-blueShadow uppercase px-3 py-2 mx-1 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowSuccessModal(false)}
                   >
-                    <Download/>
+                  
+                    <span className="text-white font-IRsans text-sm font-bold">
                     دانلود فرم با فرمت doc
+                    </span>
+                   
+                    
                   </button>
                   <button
-                    className="text-white font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className=" float-left flex items-center bg-mainColor rounded-md shadow-blueShadow uppercase px-3 py-2 mx-1 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowSuccessModal(false)}
                   >
-                    <Download/>
-                    دانبود فرم با فرمت PDF
+                     
+                    <span className="text-white font-IRsans text-sm font-bold">
+                    دانلود فرم با فرمت Pdf
+                    </span>
+                   
+                    
                   </button>
                 </div>
               </div>

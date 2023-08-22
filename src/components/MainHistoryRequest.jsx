@@ -23,6 +23,7 @@ const tableRow =[
    subject:truncate("انجام لغو قرارداد 142 وزارت خانه",30),
    location:'اداره بازرگانی شماره ۲',
    date:'02/02/12',
+   type:'عادی',
    status:<span className="text-sm text-red font-bold font-IRsans">درخواست جدید</span >,
    function: 
                 <Link to={'/newIncomeRequest'}>
@@ -40,7 +41,8 @@ const tableRow =[
    subject:truncate("لغو قرارداد 142 وزارت خانه",30),
    location:'اداره بازرگانی شماره ۲',
    date:'02/02/12',
-   status:<span className="text-sm text-red font-bold font-IRsans">درخواست جدید</span >,
+   type:<span className="font-IRsans text-red font-bold">فوری</span>,
+   status:<span className="text-sm text-[#ffb921] font-bold font-IRsans">منتظر آپلود امضا</span >,
    function: <Link to={'/newIncomeRequest'}  className="">
                 <Eye/>
              </Link>
@@ -52,6 +54,7 @@ const tableRow =[
    subject:truncate("لغو قرارداد 142 وزارت خانه",30),
    location:'اداره بازرگانی شماره ۲',
    date:'02/02/12',
+   type:<span className="font-IRsans text-red font-bold">فوری</span>,
    status:<span className="text-sm text-green font-medium font-IRsans">تایید شده</span >,
    function: 
    <Link to={'/newIncomeAccepted'}>
@@ -65,6 +68,7 @@ const tableRow =[
    subject:truncate("لغو قرارداد 142 وزارت خانه",30),
    location:'اداره بازرگانی شماره ۲',
    date:'02/02/12',
+   type:<span className="font-IRsans text-red font-bold">فوری</span>,
    status:<span className="text-sm text-green font-medium font-IRsans">تایید شده</span >,
    function: 
    <Link to={'/newIncomeAccepted'}>
@@ -78,6 +82,7 @@ const tableRow =[
    subject:truncate("لغو قرارداد 142 وزارت خانه",30),
    location:'اداره بازرگانی شماره ۲',
    date:'02/02/12',
+   type:'عادی',
    status:<span className="text-sm text-green font-medium font-IRsans">تایید شده</span >,
    function: 
    <Link to={'/newIncomeAccepted'} className="">
@@ -94,6 +99,7 @@ const tableRow =[
       </td>
     <td className="py-4 text-sm text-center font-IRsans" >{tableRow.location}</td>
     <td className="py-4 text-sm text-center font-IRsans" >{tableRow.date}</td>
+    <td className="py-4 text-sm text-center font-IRsans" >{tableRow.type}</td>
     <td className="py-4 text-sm text-center font-IRsans"  >{tableRow.status}</td>
     <td className="py-4 text-sm text-center font-IRsans flex justify-center">{tableRow.function}</td>
     </tr> 
@@ -110,6 +116,8 @@ const tableRow =[
       <th className="text-right font-IRsans md:px-4">موضوع سفر</th>
       <th className="text-center font-IRsan md:px-4s">محل خدمت</th>
       <th className="text-center font-IRsan md:px-4s">تاریخ</th>
+      <th className="text-center font-IRsan md:px-4s">نوع سفر</th>
+
       <th className="text-center font-IRsans md:px-4">وضعیت</th>
       <th className="text-center font-IRsans md:px-4" >مشاهده</th>
     </tr>

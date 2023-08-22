@@ -29,6 +29,7 @@ import ReportView from "../pages/Supervisor/ReportView";
 import AgentList from "../pages/MainPanel/AgentList"; 
 import SignUpRequest from "../pages/MainPanel/SignUpRequest";
 import RegistrationRequestList from "../pages/MainPanel/RegistrationRequestList";
+import Waiting from "../pages/MainPanel/Waiting";
 import SignUpDetail from "../pages/MainPanel/SignUpDetail";
 import Slist from "../pages/MainPanel/Slist";
 const MainRoutes = (props) =>{
@@ -117,6 +118,7 @@ const MainRoutes = (props) =>{
                     <Route path="/registrationRequestList" element={<RegistrationRequestList/>}/>
                 </Routes>
                 <Routes>
+                    <Route path="/waiting" element={<Waiting/>}/>
                     <Route path="/signUpRequest" element={<SignUpRequest/>}/>
                 </Routes>
                 <Routes>

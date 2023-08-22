@@ -22,6 +22,7 @@ const Request = () =>{
 
             <select name="cars" id="cars" className="font-IRsans mr-2 border border-[#c1c1c1] rounded-md p-2">
                   <option value="newRequest" className="font-IRsans">درخواست جدید</option>
+                  <option value="waiting" className="font-IRsans">منتظر آپلود امضا</option>
                   <option value="check" className="font-IRsans">تایید شده</option>
                   <option value="not" className="font-IRsans">رد شده</option>
                 
