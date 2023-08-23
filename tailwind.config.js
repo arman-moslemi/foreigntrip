@@ -18,10 +18,11 @@ module.exports = {
       borderGray:'#EDF3FA',
       darkBlue:'#0D296E',
       tripDone:'#FFBD14',
+      linkBlue: '#0889A5',
       
     },
     fontFamily: {
-      IRsans: ["IRANSans", "sans-serif"],
+      IRsans: ["IRANSans"],
       custom2: ["IRanianSans", "sans-serif"],
     
     },
