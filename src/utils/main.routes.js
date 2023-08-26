@@ -1,6 +1,9 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NewRequest from "../pages/UserPanel/NewRequest";
+import NewRequestStep1 from "../pages/UserPanel/NewRequestStep1";
+import NewRequestStep2 from "../pages/UserPanel/NewRequestStep2";
+import NewRequestStep3 from "../pages/UserPanel/NewRequestStep3";
+import NewRequestStep4 from "../pages/UserPanel/NewRequestStep4";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/Login/SignUp";
 import SignUpDone from "../pages/Login/SignUpDone";
@@ -36,7 +39,16 @@ const MainRoutes = (props) =>{
     return(
             <BrowserRouter>
                 <Routes>
-                    <Route path="/newRequest" element={<NewRequest/>} />
+                    <Route path="/newRequestStep1" element={<NewRequestStep1/>} />
+                </Routes>
+                <Routes>
+                    <Route path="/newRequestStep2" element={<NewRequestStep2/>} />
+                </Routes>
+                <Routes>
+                    <Route path="/newRequestStep3" element={<NewRequestStep3/>} />
+                </Routes>
+                <Routes>
+                    <Route path="/newRequestStep4" element={<NewRequestStep4/>} />
                 </Routes>
                 <Routes>
                     <Route path="/" element={<Login/>} />

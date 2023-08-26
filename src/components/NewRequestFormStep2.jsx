@@ -11,7 +11,7 @@ import {ReactComponent as Add} from "../assets/icon/blue/add.svg"
 import {ReactComponent as Check} from "../assets/icon/black/check.svg"
 import { Link } from "react-router-dom";
 
-const NewRequestForm = () =>{
+const NewRequestFormStep2 = () =>{
     const [showSuccessModal, setShowSuccessModal] = React.useState(false);
     return(
     <div>
@@ -110,4 +110,4 @@ const NewRequestForm = () =>{
          
     )
 }
-export default NewRequestForm;
+export default NewRequestFormStep2;
