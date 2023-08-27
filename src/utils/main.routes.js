@@ -36,6 +36,7 @@ import Waiting from "../pages/MainPanel/Waiting";
 import SignUpDetail from "../pages/MainPanel/SignUpDetail";
 import Slist from "../pages/MainPanel/Slist";
 import ChangePassword from "../pages/Login/ChangePassword";
+import NewPasswordSet from "../pages/Login/NewPasswordSet";
 const MainRoutes = (props) =>{
     return(
             <BrowserRouter>
@@ -142,6 +143,9 @@ const MainRoutes = (props) =>{
                 </Routes>
                 <Routes>
                     <Route path="/changePassword" element={<ChangePassword/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/newPasswordSet" element={<NewPasswordSet/>}/>
                 </Routes>
             </BrowserRouter>
     )
