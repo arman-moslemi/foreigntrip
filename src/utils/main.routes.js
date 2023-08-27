@@ -35,6 +35,7 @@ import RegistrationRequestList from "../pages/MainPanel/RegistrationRequestList"
 import Waiting from "../pages/MainPanel/Waiting";
 import SignUpDetail from "../pages/MainPanel/SignUpDetail";
 import Slist from "../pages/MainPanel/Slist";
+import ChangePassword from "../pages/Login/ChangePassword";
 const MainRoutes = (props) =>{
     return(
             <BrowserRouter>
@@ -138,6 +139,9 @@ const MainRoutes = (props) =>{
                 </Routes>
                 <Routes>
                     <Route path="/supervisorList" element={<Slist/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/changePassword" element={<ChangePassword/>}/>
                 </Routes>
             </BrowserRouter>
     )

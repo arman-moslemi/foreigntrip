@@ -2,7 +2,13 @@
     font-family: IRANSans;
     src: url('../../assets/fonts/IRANSansFaNum.ttf') format('ttf');
 }
-
+@font-face{
+    font-family: Shabnam;
+    src:url('../../assets/fonts/Shabnam.ttf') format('ttf');
+}
 .test{
     font-family: IRANSans;
+}
+.font-Shabnam{
+    font-family: Shabnam;
 }

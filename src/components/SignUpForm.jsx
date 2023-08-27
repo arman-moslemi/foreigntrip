@@ -36,7 +36,7 @@ const SignUpForm = () => {
             <div className="flex justify-center">
                 <div className="relative rounded-full h-[86px] w-[86px] mt-4 mb-4 ml-8">
                     <img src={UserImg}/>
-                    <button
+                    <button style={{fontFamily:'Shabnam'}}
                         className="absolute rounded-full shadow-blueShadow bg-mainColor p-2 top-12 -right-2">
                         <Pencil/>
                     </button>
@@ -44,12 +44,12 @@ const SignUpForm = () => {
             </div>
             <div className="flex w-full flex-wrap">
                 <div className="flex flex-col w-[48%] ml-[2%] mb-4">
-                    <span className="text-base font-normal font-IRsans">کد ملی</span>
+                    <span  style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">کد ملی</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <Doc/>
                         </div>
-                        <input
+                        <input style={{fontFamily:'Shabnam'}}
                             type="text"
                             id="input-group-1"
                             class="pr-9 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
@@ -58,10 +58,10 @@ const SignUpForm = () => {
                 </div>
                 <div className="flex w-[48%] mr-[2%] mb-4 items-end">
                     <div className="flex flex-col w-[64%] ">
-                        <span className="text-base font-normal font-IRsans">تاریخ تولد</span>
+                        <span style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">تاریخ تولد</span>
                         <div class="flex items-center h-10 pr-2 mt-3 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor  w-full pl-10 " id="test">
                             <Calender/>
-                            <DatePicker placeholder="خهاخعل"  onChange={(e) => console.log(e.value)} />
+                            <DatePicker style={{fontFamily:'Shabnam'}} placeholder="خهاخعل"  onChange={(e) => console.log(e.value)} />
                             {/* <input
                                 type="text"
                                 id="input-group-1"
@@ -70,17 +70,17 @@ const SignUpForm = () => {
                         </div>
                     </div>
                     <div className="w-[35%] mr-2">
-                        <button
+                        <button style={{fontFamily:'Shabnam'}}
                             className="w-[100%] p-2.5 bg-mainColor rounded-md text-white shadow-blueShadow text-base font-bold font-IRsans">استعلام</button>
                     </div>
                 </div>
                 <div className="flex flex-col w-[48%] ml-[2%] mb-4">
-                    <span className="text-base font-normal font-IRsans">نام شما</span>
+                    <span style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">نام شما</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <User/>
                         </div>
-                        <input
+                        <input style={{fontFamily:'Shabnam'}}
                             type="text"
                             id="input-group-1"
                             disabled="true"
@@ -89,12 +89,12 @@ const SignUpForm = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[48%] mr-[2%] mb-4">
-                    <span className="text-base font-normal font-IRsans">نام خانوادگی شما</span>
+                    <span style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">نام خانوادگی شما</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <User/>
                         </div>
-                        <input
+                        <input style={{fontFamily:'Shabnam'}}
                             type="text"
                             id="input-group-1"
                             disabled="true"
@@ -103,12 +103,12 @@ const SignUpForm = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[48%] ml-[2%] mb-4">
-                    <span className="text-base font-normal font-IRsans">شماره تلفن همراه</span>
+                    <span  style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">شماره تلفن همراه</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <Phone/>
                         </div>
-                        <input
+                        <input style={{fontFamily:'Shabnam'}}
                             type="text"
                             id="input-group-1"
                             class="pr-9 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
@@ -116,12 +116,12 @@ const SignUpForm = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[48%] mr-[2%] mb-4">
-                    <span className="text-base font-normal font-IRsans">شماره تلفن ثابت</span>
+                    <span  style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">شماره تلفن ثابت</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <Phone/>
                         </div>
-                        <input
+                        <input style={{fontFamily:'Shabnam'}}
                             type="text"
                             id="input-group-1"
                             class="pr-9 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
@@ -129,12 +129,12 @@ const SignUpForm = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[48%] ml-[2%] mb-4">
-                    <span className="text-base font-normal font-IRsans">آدرس ایمیل</span>
+                    <span style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">آدرس ایمیل</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <Mail/>
                         </div>
-                        <input
+                        <input style={{fontFamily:'Shabnam'}}
                             type="text"
                             id="input-group-1"
                             class="pr-9 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
@@ -143,12 +143,12 @@ const SignUpForm = () => {
                 </div>
                 <div className="flex w-[48%] mr-[2%] mb-4 items-end">
                     <div className="flex flex-col w-[64%] ">
-                        <span className="text-base font-normal font-IRsans">کد پستی</span>
+                        <span style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">کد پستی</span>
                         <div class="relative mt-3">
                             <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                                 <Doc/>
                             </div>
-                            <input
+                            <input style={{fontFamily:'Shabnam'}}
                                 type="text"
                                 id="input-group-1"
                                 class="pr-9 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
@@ -156,17 +156,17 @@ const SignUpForm = () => {
                         </div>
                     </div>
                     <div className="w-[35%] mr-2">
-                        <button
+                        <button style={{fontFamily:'Shabnam'}}
                             className="w-[100%] p-2.5 bg-mainColor rounded-md text-white shadow-blueShadow text-base font-bold font-IRsans">استعلام</button>
                     </div>
                 </div>
                 <div className="flex flex-col w-[100%]  mb-4">
-                    <span className="text-base font-normal font-IRsans">آدرس شما</span>
+                    <span style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">آدرس شما</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <Location/>
                         </div>
-                        <textarea
+                        <textarea style={{fontFamily:'Shabnam'}}
                             rows={4}
                             type="text"
                             disabled="true"
@@ -176,24 +176,24 @@ const SignUpForm = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[48%] ml-[2%] mb-4">
-                    <span className="text-base font-normal font-IRsans">دسته بندی مجموعه</span>
+                    <span style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">دسته بندی مجموعه</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <Doc/>
                         </div>
-                        <select
+                        <select style={{fontFamily:'Shabnam'}}
                             name="cars"
                             id="cars"
                             className="pr-9 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5">
-                            <option value="newRequest" className="font-IRsans">انتخاب دسته بندی</option>
-                            <option value="waiting" className="font-IRsans">هولدینگ</option>
-                            <option value="check" className="font-IRsans">صندوق</option>
-                            <option value="not" className="font-IRsans">سازمان</option>
-                            <option value="newRequest" className="font-IRsans">بانک</option>
-                            <option value="waiting" className="font-IRsans">معاونت</option>
-                            <option value="check" className="font-IRsans">شرکت ها</option>
-                            <option value="not" className="font-IRsans">فدراسیون</option>
-                            <option value="not" className="font-IRsans">موسسات</option>
+                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className="font-IRsans">انتخاب دسته بندی</option>
+                            <option  style={{fontFamily:'Shabnam'}}value="waiting" className="font-IRsans">هولدینگ</option>
+                            <option  style={{fontFamily:'Shabnam'}}value="check" className="font-IRsans">صندوق</option>
+                            <option style={{fontFamily:'Shabnam'}} value="not" className="font-IRsans">سازمان</option>
+                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className="font-IRsans">بانک</option>
+                            <option style={{fontFamily:'Shabnam'}} value="waiting" className="font-IRsans">معاونت</option>
+                            <option style={{fontFamily:'Shabnam'}}  value="check" className="font-IRsans">شرکت ها</option>
+                            <option style={{fontFamily:'Shabnam'}} value="not" className="font-IRsans">فدراسیون</option>
+                            <option style={{fontFamily:'Shabnam'}} value="not" className="font-IRsans">موسسات</option>
 
                         </select>
                         {/* <input
@@ -205,12 +205,12 @@ const SignUpForm = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[48%] mr-[2%] mb-4">
-                    <span className="text-base font-normal font-IRsans">زیر مجموعه</span>
+                    <span style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">زیر مجموعه</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <Doc/>
                         </div>
-                        <input
+                        <input style={{fontFamily:'Shabnam'}}
                             type="text"
                             id="input-group-1"
                             class="pr-9 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
@@ -218,12 +218,12 @@ const SignUpForm = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[48%] ml-[2%] mb-4">
-                    <span className="text-base font-normal font-IRsans">نوع رابط استخدامی</span>
+                    <span style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">نوع رابط استخدامی</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <Doc/>
                         </div>
-                        <select
+                        <select style={{fontFamily:'Shabnam'}}
                             name="cars"
                             id="cars"
                             className="pr-9 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5">
@@ -243,22 +243,22 @@ const SignUpForm = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[48%] mr-[2%] mb-4">
-                    <span className="text-base font-normal font-IRsans">سمت</span>
+                    <span style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">سمت</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <Doc/>
                         </div>
-                        <select
+                        <select style={{fontFamily:'Shabnam'}}
                             name="cars"
                             id="cars"
                             className="pr-9 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5">
-                            <option value="newRequest" className="font-IRsans">انتخاب سمت</option>
-                            <option value="waiting" className="font-IRsans">مدیر عامل</option>
-                            <option value="check" className="font-IRsans">مدیر کل</option>
-                            <option value="not" className="font-IRsans">معاون</option>
-                            <option value="waiting" className="font-IRsans">رئیس مرکزی</option>
-                            <option value="check" className="font-IRsans">رئیس اداره</option>
-                            <option value="not" className="font-IRsans">کارشناس</option>
+                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className="font-IRsans">انتخاب سمت</option>
+                            <option style={{fontFamily:'Shabnam'}} value="waiting" className="font-IRsans">مدیر عامل</option>
+                            <option style={{fontFamily:'Shabnam'}} value="check" className="font-IRsans">مدیر کل</option>
+                            <option style={{fontFamily:'Shabnam'}} value="not" className="font-IRsans">معاون</option>
+                            <option style={{fontFamily:'Shabnam'}} value="waiting" className="font-IRsans">رئیس مرکزی</option>
+                            <option style={{fontFamily:'Shabnam'}} value="check" className="font-IRsans">رئیس اداره</option>
+                            <option style={{fontFamily:'Shabnam'}} value="not" className="font-IRsans">کارشناس</option>
 
                         </select>
                         {/* <input
@@ -270,12 +270,12 @@ const SignUpForm = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[48%] ml-[2%] mb-4">
-                    <span className="text-base font-normal font-IRsans">رمز عبور</span>
+                    <span style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">رمز عبور</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <Lock/>
                         </div>
-                        <input
+                        <input style={{fontFamily:'Shabnam'}}
                             type="text"
                             id="input-group-1"
                             class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
@@ -283,37 +283,37 @@ const SignUpForm = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[48%] mr-[2%] mb-4">
-                    <span className="text-base font-normal font-IRsans">کد امنیتی</span>
+                    <span  style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">کد امنیتی</span>
                     <div className="flex justify-between items-center ">
                         <div class="relative mt-3 w-[90%]">
                             <div
                                 class="absolute top-[10px] right-2 flex items-center pl-3 pointer-events-none">
                                 <Secure/>
                             </div>
-                            <input
+                            <input style={{fontFamily:'Shabnam'}}
                                 type="text"
                                 id="input-group-1"
                                 class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md mb-0 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
                                 placeholder="کد امنیتی"/>
                             <img src={Captcha} alt="captcha" className="w-[90px] top-1 left-2 absolute"/>
                         </div>
-                        <button className="mt-4">
+                        <button style={{fontFamily:'Shabnam'}} className="mt-4">
                             <Reload/>
                         </button>
                     </div>
                 </div>
             </div>
             <div className="mt-3">
-                <label className="font-IRsans text-base font-normal">
-                    <input
+                <label style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-normal">
+                    <input style={{fontFamily:'Shabnam'}}
                         type="checkbox"
                         class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-2"/>
-                    <a href="#" className="text-mainColor">آیین نامه</a>  و <a href="#" className="text-mainColor">مقررات</a> را مطالعه کرده و آنها را پذیرفته ام .
+                    <Link to={'/'} className="text-mainColor">آیین نامه</Link>  و <Link to={'/'}  className="text-mainColor">مقررات</Link> را مطالعه کرده و آنها را پذیرفته ام .
                 </label>
             </div>
             
 
-            <button
+            <button style={{fontFamily:'Shabnam'}}
                 className="w-[60%] mx-auto block h-12 bg-mainColor shadow-blueShadow mt-10 font-IRsans text-white text-xl font-medium rounded-lg hover:bg-lightBlue hover:text-mainColor">
                 ورود
             </button>

@@ -24,7 +24,7 @@ module.exports = {
     fontFamily: {
       IRsans: ["IRANSans"],
       custom2: ["IRanianSans", "sans-serif"],
-    
+      'shabnam':["Shabnam"]
     },
     boxShadow:{
       blueShadow:'0px 4px 20px rgba(8, 137, 165, 0.68)',
