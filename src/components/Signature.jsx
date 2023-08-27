@@ -8,13 +8,13 @@ const [showAlert,setShowAlert] = React.useState(false);
     return (
         <div className="border border-borderGray rounded-md pt-10 px-5 py-5 mt-7">
         
-        <p className="font-IRsans font-bold text-black">
+        <p style={{fontFamily:'Shabnam'}} className="font-IRsans font-bold text-black">
             تایید درخواست و بارگزاری امضاها
         </p>
 
         <div className="flex items-center my-5 flex-wrap">
-            <span className="font-IRsans text-black text-sm">این فرم از نظر 
-              <span className="font-IRsans text-mainColor mx-2 font-bold">    آقای احمدی مسئول شماره یک  </span>
+            <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-black text-sm">این فرم از نظر 
+              <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-mainColor mx-2 font-bold">    آقای احمدی مسئول شماره یک  </span>
                 مورد تایید  :
             </span>
             <div className="flex items-center flex-wrap">
@@ -38,7 +38,7 @@ const [showAlert,setShowAlert] = React.useState(false);
     <label for="dropzone-file" class="mt-2 flex flex-col items-center justify-center w-40 md:w-full h-12 border-2 border-borderGray border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
             <div class="flex items-center justify-center pt-5 pb-6 font-IRsans">
                 <svg aria-hidden="true" class="w-5 h-5  text-[#B7B8BB]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
-                <p class="mb-0 text-xs text-gray-500 dark:text-gray-400 mr-2"><span class="font-normal font-IRsans ">انتخاب فایل</span></p>
+                <p style={{fontFamily:'Shabnam'}} class="mb-0 text-xs text-gray-500 dark:text-gray-400 mr-2"><span style={{fontFamily:'Shabnam'}} class="font-normal font-IRsans ">انتخاب فایل</span></p>
                
             </div>
             <input id="dropzone-file" type="file" class="hidden" />
@@ -50,8 +50,8 @@ const [showAlert,setShowAlert] = React.useState(false);
 
         </div>
         <div className="flex items-center my-5 flex-wrap">
-            <span className="font-IRsans text-black text-sm">این فرم از نظر 
-              <span className="font-IRsans text-mainColor mx-2 font-bold">    آقای احمدی مسئول شماره یک  </span>
+            <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-black text-sm">این فرم از نظر 
+              <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-mainColor mx-2 font-bold">    آقای احمدی مسئول شماره یک  </span>
                 مورد تایید  :
             </span>
             <div className="flex items-center flex-wrap">
@@ -75,7 +75,7 @@ const [showAlert,setShowAlert] = React.useState(false);
     <label for="dropzone-file" class="mt-2 flex flex-col items-center justify-center w-40 md:w-full h-12 border-2 border-borderGray border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
             <div class="flex items-center justify-center pt-5 pb-6 font-IRsans">
                 <svg aria-hidden="true" class="w-5 h-5  text-[#B7B8BB]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
-                <p class="mb-0 text-xs text-gray-500 dark:text-gray-400 mr-2"><span class="font-normal font-IRsans ">انتخاب فایل</span></p>
+                <p style={{fontFamily:'Shabnam'}} class="mb-0 text-xs text-gray-500 dark:text-gray-400 mr-2"><span style={{fontFamily:'Shabnam'}} class="font-normal font-IRsans ">انتخاب فایل</span></p>
                
             </div>
             <input id="dropzone-file" type="file" class="hidden" />
@@ -87,8 +87,8 @@ const [showAlert,setShowAlert] = React.useState(false);
 
         </div>
         <div className="flex items-center my-5 flex-wrap">
-            <span className="font-IRsans text-black text-sm">این فرم از نظر 
-              <span className="font-IRsans text-mainColor mx-2 font-bold">    آقای احمدی مسئول شماره یک  </span>
+            <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-black text-sm">این فرم از نظر 
+              <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-mainColor mx-2 font-bold">    آقای احمدی مسئول شماره یک  </span>
                 مورد تایید  :
             </span>
             <div className="flex items-center flex-wrap">
@@ -112,7 +112,7 @@ const [showAlert,setShowAlert] = React.useState(false);
     <label for="dropzone-file" class="mt-2 flex flex-col items-center justify-center w-40 md:w-full h-12 border-2 border-borderGray border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
             <div class="flex items-center justify-center pt-5 pb-6 font-IRsans">
                 <svg aria-hidden="true" class="w-5 h-5  text-[#B7B8BB]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
-                <p class="mb-0 text-xs text-gray-500 dark:text-gray-400 mr-2"><span class="font-normal font-IRsans ">انتخاب فایل</span></p>
+                <p style={{fontFamily:'Shabnam'}} class="mb-0 text-xs text-gray-500 dark:text-gray-400 mr-2"><span style={{fontFamily:'Shabnam'}} class="font-normal font-IRsans ">انتخاب فایل</span></p>
                
             </div>
             <input id="dropzone-file" type="file" class="hidden" />
@@ -124,8 +124,8 @@ const [showAlert,setShowAlert] = React.useState(false);
 
         </div>
         <div className="flex items-center my-5 flex-wrap">
-            <span className="font-IRsans text-black text-sm">این فرم از نظر 
-              <span className="font-IRsans text-mainColor mx-2 font-bold">    آقای احمدی مسئول شماره یک  </span>
+            <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-black text-sm">این فرم از نظر 
+              <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-mainColor mx-2 font-bold">    آقای احمدی مسئول شماره یک  </span>
                 مورد تایید  :
             </span>
             <div className="flex items-center flex-wrap">
@@ -149,7 +149,7 @@ const [showAlert,setShowAlert] = React.useState(false);
     <label for="dropzone-file" class="mt-2 flex flex-col items-center justify-center w-40 md:w-full h-12 border-2 border-borderGray border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
             <div class="flex items-center justify-center pt-5 pb-6 font-IRsans">
                 <svg aria-hidden="true" class="w-5 h-5  text-[#B7B8BB]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
-                <p class="mb-0 text-xs text-gray-500 dark:text-gray-400 mr-2"><span class="font-normal font-IRsans ">انتخاب فایل</span></p>
+                <p style={{fontFamily:'Shabnam'}} class="mb-0 text-xs text-gray-500 dark:text-gray-400 mr-2"><span style={{fontFamily:'Shabnam'}} class="font-normal font-IRsans ">انتخاب فایل</span></p>
                
             </div>
             <input id="dropzone-file" type="file" class="hidden" />
@@ -161,8 +161,8 @@ const [showAlert,setShowAlert] = React.useState(false);
 
         </div>
         <div className="flex items-center my-5 flex-wrap">
-            <span className="font-IRsans text-black text-sm">این فرم از نظر 
-              <span className="font-IRsans text-mainColor mx-2 font-bold">    آقای احمدی مسئول شماره یک  </span>
+            <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-black text-sm">این فرم از نظر 
+              <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-mainColor mx-2 font-bold">    آقای احمدی مسئول شماره یک  </span>
                 مورد تایید  :
             </span>
             <div className="flex items-center ">
@@ -186,7 +186,7 @@ const [showAlert,setShowAlert] = React.useState(false);
     <label for="dropzone-file" class="mt-2 flex flex-col items-center justify-center w-40 md:w-full h-12 border-2 border-borderGray border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
             <div class="flex items-center justify-center pt-5 pb-6 font-IRsans">
                 <svg aria-hidden="true" class="w-5 h-5  text-[#B7B8BB]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
-                <p class="mb-0 text-xs text-gray-500 dark:text-gray-400 mr-2"><span class="font-normal font-IRsans ">انتخاب فایل</span></p>
+                <p style={{fontFamily:'Shabnam'}} class="mb-0 text-xs text-gray-500 dark:text-gray-400 mr-2"><span style={{fontFamily:'Shabnam'}} class="font-normal font-IRsans ">انتخاب فایل</span></p>
                
             </div>
             <input id="dropzone-file" type="file" class="hidden" />
@@ -214,14 +214,14 @@ const [showAlert,setShowAlert] = React.useState(false);
               <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
            
                 <div className="flex items-start justify-between p-4 border-b border-solid border-b-midGray rounded-t">
-                  <span className="text-base font-bold font-IRsans text-green">
+                  <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-green">
                     تایید درخواست
                   </span>
                
                 </div>
                 
                 <div className="relative p-6 flex-auto">
-                  <p className="my-4 text-black text-sm font-IRsans">
+                  <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-IRsans">
                         ارسال تایید درخواست با موفقیت انجام شد
                   </p>
                 </div>
@@ -257,14 +257,14 @@ const [showAlert,setShowAlert] = React.useState(false);
               <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
            
                 <div className="flex items-start justify-between p-4 border-b border-solid border-b-midGray rounded-t">
-                  <span className="text-base font-bold font-IRsans text-black">
+                  <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-black">
                    هشدار!
                   </span>
                
                 </div>
                 
                 <div className="relative p-6 flex-auto">
-                  <p className="my-4 text-black text-sm font-IRsans">
+                  <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-IRsans">
                   وضعیت نظر آقای احمدی مسئول شماره دو نا مشخض است !لطفا وضعیت را مشخص کنید سپس تایید یا رد خواست را انجام دهید.
                   </p>
                 </div>

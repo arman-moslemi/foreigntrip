@@ -23,9 +23,9 @@ const UserReportList = () =>{
      name:'علی اطهری',
      subject:truncate("لغو قرارداد 142 وزارت خانه",30),
      location:'اداره بازرگانی شماره ۲',
-     status:<span className="text-sm text-tripDone font-bold font-IRsans">اتمام ماموریت</span >,
+     status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-tripDone font-bold font-IRsans">اتمام ماموریت</span >,
      function: 
-                  <Link to={'/supervisor/reportView'}>
+                  <Link style={{fontFamily:'Shabnam'}}  to={'/supervisor/reportView'}>
                   <Eye/>
                   </Link>
                
@@ -37,9 +37,9 @@ const UserReportList = () =>{
      name:'علیرضا بیاتی',
      subject:truncate("لغو قرارداد 142 وزارت خانه",30),
      location:'اداره بازرگانی شماره ۲',
-     status:<span className="text-sm text-mainColor font-bold font-IRsans">درحال انجام ماموریت</span >,
+     status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-mainColor font-bold font-IRsans">درحال انجام ماموریت</span >,
      function: 
-     <Link to={'/supervisor/reportView'}>
+     <Link style={{fontFamily:'Shabnam'}}  to={'/supervisor/reportView'}>
      <Eye/>
     </Link>
       
@@ -50,8 +50,8 @@ const UserReportList = () =>{
      name:'دارا دورانی',
      subject: truncate("ارسال کالا به کشور ترکیه برای انجام فعالیت سیاسی",30),
      location:'اداره بازرگانی شماره ۲',
-     status:<span className="text-sm text-green font-medium font-IRsans">تایید گزارش نهایی</span >,
-     function:  <Link to={'/supervisor/reportView'}>
+     status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-green font-medium font-IRsans">تایید گزارش نهایی</span >,
+     function:  <Link style={{fontFamily:'Shabnam'}}  to={'/supervisor/reportView'}>
      <Eye/>
     </Link>
     },
@@ -61,9 +61,9 @@ const UserReportList = () =>{
      name:'احمدرضا قلی زاده',
      subject:truncate("لغو قرارداد 142 وزارت خانه",30),
      location:'اداره بازرگانی شماره ۲',
-     status:<span className="text-sm text-red font-medium font-IRsans">رد گزارش نهایی</span >,
+     status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-red font-medium font-IRsans">رد گزارش نهایی</span >,
      function: 
-     <Link to={'/supervisor/reportView'}>
+     <Link style={{fontFamily:'Shabnam'}}  to={'/supervisor/reportView'}>
      <Eye/>
     </Link>
     },
@@ -73,9 +73,9 @@ const UserReportList = () =>{
      name:'علی اطهری',
      subject:truncate("لغو قرارداد 142 وزارت خانه",30),
      location:'اداره بازرگانی شماره ۲',
-     status:<span className="text-sm text-green font-medium font-IRsans">تایید شده</span >,
+     status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-green font-medium font-IRsans">تایید شده</span >,
      function: 
-     <Link to={'/supervisor/reportView'}>
+     <Link style={{fontFamily:'Shabnam'}}  to={'/supervisor/reportView'}>
      <Eye/>
     </Link>
     }
@@ -89,7 +89,7 @@ const UserReportList = () =>{
           {tableRow.name}
           </div>
           <div className="w-[20px] h-[20px] rounded-full bg-[#FFBD14] flex items-center justify-center mr-2">
-            <span className="text-white font-IRsans text-sm font-bold">2</span>
+            <span style={{fontFamily:'Shabnam'}} className="text-white font-IRsans text-sm font-bold">2</span>
           </div>
         </div>
       </td>
@@ -103,7 +103,7 @@ const UserReportList = () =>{
         <>
         <div className="flex justify-between items-center mt-8 flex-wrap md:justify-end">
             <div className="flex items-center flex-wrap">
-                <span className="font-IRsans text-mainColor font-bold text-base ml-4">
+                <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-mainColor font-bold text-base ml-4">
                    جستجو در بین گزارشات
                 </span>
                 <input type="text" className="border rounded-full w-80 border-midGray px-4 py-1.5 font-IRsans md:mt-3" placeholder="جستجو کنید ..."/>

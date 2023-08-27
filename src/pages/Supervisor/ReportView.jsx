@@ -12,7 +12,7 @@ const ReportView = () =>{
             <div className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl p-12 my-10 w-[80%] xl:p-5 md:w-[95%] md:rounded-xl md:mx-auto">
             <div className="flex items-center">
                     <Doc/>
-                <span className="font-IRsans text-mainColor mr-3 font-bold">
+                <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-mainColor mr-3 font-bold">
                       گزارش سفر
                 </span>
                 </div>

@@ -34,13 +34,13 @@ const NewPasswordForm = () =>{
                     <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-black text-xs">
                        ارسال مجدد : 
                     </p>
-                    <p  style={{fontFamily:'Shabnam'}} className="font-IRsans text-mainColor text-xs mr-1 font-bold hover:text-lightBlue">
+                    <p style={{fontFamily:'Shabnam'}}   className="font-IRsans text-mainColor text-xs mr-1 font-bold hover:text-lightBlue">
                         00:20
                     </p>
                 </div>
               
-               <Link  style={{fontFamily:'Shabnam'}} to={'/newPasswordSet'}>
-               <button style={{fontFamily:'Shabnam'}} className="w-full h-12 bg-mainColor shadow-blueShadow mt-6 font-IRsans text-white text-lg rounded-lg hover:bg-lightBlue hover:text-mainColor">
+               <Link style={{fontFamily:'Shabnam'}}  style={{fontFamily:'Shabnam'}}   to={'/newPasswordSet'}>
+               <button style={{fontFamily:'Shabnam'}}  style={{fontFamily:'Shabnam'}} className="w-full h-12 bg-mainColor shadow-blueShadow mt-6 font-IRsans text-white text-lg rounded-lg hover:bg-lightBlue hover:text-mainColor">
                  ثبت
                 </button>
                </Link>

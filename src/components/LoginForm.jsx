@@ -64,18 +64,18 @@ const LoginForm = () => {
                 </button>
             </div>
             <div className="flex mt-3 mb-4">
-                <p style={{fontFamily:'Shabnam'}} className="text-xs font-IRsans text-black font-normal">کلمه عبور خود را فراموش کرده اید ؟</p>
-                <Link style={{fontFamily:'Shabnam'}} to={'/changePassword'} className="text-xs font-IRsans text-linkBlue font-normal mr-1">تغییر رمز عبور</Link>
+                <p style={{fontFamily:'Shabnam'}} style={{fontFamily:'Shabnam'}} className="text-xs font-IRsans text-black font-normal">کلمه عبور خود را فراموش کرده اید ؟</p>
+                <Link style={{fontFamily:'Shabnam'}}  style={{fontFamily:'Shabnam'}} to={'/changePassword'} className="text-xs font-IRsans text-linkBlue font-normal mr-1">تغییر رمز عبور</Link>
             </div>
             {/* <div className="flex items-center justify-start mt-2">
-                    <p className="font-IRsans text-black text-xs">
+                    <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-black text-xs">
                         کلمه عبور خود را فراموش کردید ؟
                     </p>
-                    <Link to={'/changePassStep1'} className="font-IRsans text-mainColor text-xs mr-1 font-bold hover:text-lightBlue">
+                    <Link style={{fontFamily:'Shabnam'}}  to={'/changePassStep1'} className="font-IRsans text-mainColor text-xs mr-1 font-bold hover:text-lightBlue">
                         تغییر رمز عبور
                     </Link>
                 </div> */}
-            <Link style={{fontFamily:'Shabnam'}} to={'/newPassword'}>
+            <Link style={{fontFamily:'Shabnam'}}  style={{fontFamily:'Shabnam'}} to={'/newPassword'}>
                 <button style={{fontFamily:'Shabnam'}}
                     className="w-full h-12 bg-mainColor shadow-blueShadow mt-6 font-IRsans text-white text-xl font-medium rounded-lg hover:bg-lightBlue hover:text-mainColor">
                       ورود   
@@ -83,10 +83,10 @@ const LoginForm = () => {
             </Link>
 
             {/* <div className="flex items-center justify-start mt-2 xs:flex-wrap">
-                    <p className="font-IRsans text-black text-xs">
+                    <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-black text-xs">
                        حساب کاربری ندارید ؟
                     </p>
-                    <Link to={'/signup'} className="font-IRsans text-mainColor text-xs mr-1 font-bold hover:text-lightBlue">
+                    <Link style={{fontFamily:'Shabnam'}}  to={'/signup'} className="font-IRsans text-mainColor text-xs mr-1 font-bold hover:text-lightBlue">
                        ثبت نام کنید
                     </Link>
                 </div> */}

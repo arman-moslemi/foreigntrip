@@ -13,10 +13,10 @@ const RequestRejected = () =>{
             </div>
          <RequestDetail/>
             <div className="mt-20">
-                <p className="font-IRsans text-base font-bold text-[#0D296E]">
+                <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
 علت رد درخواست مامورد اعزامی :
                 </p>
-                <p className="font-IRsans علت رد درخواست مامور اعزامی را اینجا بنویسیدtext-sm font-medium text-darkGray mt-4 leading-7">
+                <p style={{fontFamily:'Shabnam'}} className="font-IRsans علت رد درخواست مامور اعزامی را اینجا بنویسیدtext-sm font-medium text-darkGray mt-4 leading-7">
                     درخواست شما به علت عدم توضیح کافی راجع به موضوع سفر  و مشخص نبودن تاریخ دقیق سفر پذیرفته نشد.
                     لطفا موارد ذکر شده را اصلاح کنید و سپس مجدد درخواست خود را ثبت کنید.
                 </p>

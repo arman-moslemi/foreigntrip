@@ -5,12 +5,12 @@ const ReportBox = () =>{
     return(
         <>
          <div className="mt-20 border-b border-b-borderGray">
-            <p className="font-IRsans text-base font-bold text-[#0D296E]">
+            <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
                         گزارش یک
                       
             </p>
             <br/>
-            <p className="font-IRsans text-xs font-medium text-black leading-8">
+            <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-xs font-medium text-black leading-8">
                        در روز اول مذاکره با ارگان دولتی کشور مقصد وارد مذاکره شدیم و به نتیجه ای نرسیدیم
                        پاسخ به این سوال از یک زاویه خیر و از منظری دیگر بله است. اگر سفر رییس‌جمهور چین به ایران در بهمن ماه 1394 را مبدا زمانی آغاز تلاش‌های دو کشور برای رسیدن به سند همکاری‌های راهبردی جامع فرض کنیم که شواهد نیز با این فرضیه در تطابق است می‌توان گفت که اراده تهران و پکن برای توسعه رابطه تحت تاثیر ناامیدی از غرب در سایه خروج ایالات متحده از برجام نبوده است.
 
@@ -22,7 +22,7 @@ const ReportBox = () =>{
             </p>
             <div className="flex flex-wrap items-center mt-5">
                 <div className="flex ml-5 items-center bg-lightBlue px-6 h-[45px] justify-between rounded-full mb-5">
-                    <span className="text-mainColor font-IRsans text-xs font-medium">
+                    <span style={{fontFamily:'Shabnam'}} className="text-mainColor font-IRsans text-xs font-medium">
                         فایل گزارش اولیه سفر من.pdf
                     </span>
                     <button className="bg-mainColor mr-5 w-[30px] h-[30px] rounded-full flex items-center justify-center">
@@ -30,7 +30,7 @@ const ReportBox = () =>{
                     </button>
                 </div>
                 <div className="flex ml-5 items-center bg-lightBlue px-6 h-[45px] justify-between rounded-full mb-5">
-                    <span className="text-mainColor font-IRsans text-xs font-medium">
+                    <span style={{fontFamily:'Shabnam'}} className="text-mainColor font-IRsans text-xs font-medium">
                         فایل گزارش اولیه سفر من.pdf
                     </span>
                     <button className="bg-mainColor mr-5 w-[30px] h-[30px] rounded-full flex items-center justify-center">
@@ -38,7 +38,7 @@ const ReportBox = () =>{
                     </button>
                 </div>
                 <div className="flex ml-5 items-center bg-lightBlue px-6 h-[45px] justify-between rounded-full mb-5">
-                    <span className="text-mainColor font-IRsans text-xs font-medium">
+                    <span style={{fontFamily:'Shabnam'}} className="text-mainColor font-IRsans text-xs font-medium">
                         فایل گزارش اولیه سفر من.pdf
                     </span>
                     <button className="bg-mainColor mr-5 w-[30px] h-[30px] rounded-full flex items-center justify-center">
@@ -46,7 +46,7 @@ const ReportBox = () =>{
                     </button>
                 </div>
                 <div className="flex ml-5 items-center bg-lightBlue px-6 h-[45px] justify-between rounded-full mb-5">
-                    <span className="text-mainColor font-IRsans text-xs font-medium">
+                    <span style={{fontFamily:'Shabnam'}} className="text-mainColor font-IRsans text-xs font-medium">
                         فایل گزارش اولیه سفر من.pdf
                     </span>
                     <button className="bg-mainColor mr-5 w-[30px] h-[30px] rounded-full flex items-center justify-center">
@@ -56,19 +56,19 @@ const ReportBox = () =>{
             </div>
             </div>
             <div className="mt-20 border-b border-b-borderGray">
-            <p className="font-IRsans text-base font-bold text-[#0D296E]">
+            <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
                         گزارش دو
                       
             </p>
             <br/>
-            <p className="font-IRsans text-xs font-medium text-black leading-8">
+            <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-xs font-medium text-black leading-8">
                        در روز اول مذاکره با ارگان دولتی کشور مقصد وارد مذاکره شدیم و به نتیجه ای نرسیدیم
                        پاسخ به این سوال از یک زاویه خیر و از منظری دیگر برای توسعه رابطه
                         تحت تاثیر ناامیدی از غرب رییس‌جمهور چین یک هفته پس از اجرای برجام و در حالی که کمپانی‌های ار
                         </p>
             <div className="flex flex-wrap items-center mt-5">
                 <div className="flex ml-5 items-center bg-lightBlue px-6 h-[45px] justify-between rounded-full mb-5">
-                    <span className="text-mainColor font-IRsans text-xs font-medium">
+                    <span style={{fontFamily:'Shabnam'}} className="text-mainColor font-IRsans text-xs font-medium">
                         فایل گزارش اولیه سفر من.pdf
                     </span>
                     <button className="bg-mainColor mr-5 w-[30px] h-[30px] rounded-full flex items-center justify-center">

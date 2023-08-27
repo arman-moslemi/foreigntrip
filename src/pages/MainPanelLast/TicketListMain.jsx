@@ -13,7 +13,7 @@ const TicketListMain = () => {
                 <div className="flex items-center justify-between sm:flex-wrap">
                     <div className="flex">
                     <Ticket/>
-                <span className="font-IRsans text-mainColor mr-3 font-bold">
+                <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-mainColor mr-3 font-bold">
                        تیکت ها و پشتیبانی
                 </span>
                     </div>
@@ -36,7 +36,7 @@ const TicketListMain = () => {
                   
                        <div className="flex items-centers justify-center p-4 border-b border-solid border-b-[#EDF3FA] rounded-t">
                       
-                         <span className="mr-3 text-base font-bold font-IRsans text-black text-center">
+                         <span style={{fontFamily:'Shabnam'}} className="mr-3 text-base font-bold font-IRsans text-black text-center">
                          عنوان پیام خود را بنویسید
                          </span>
                       
@@ -44,14 +44,14 @@ const TicketListMain = () => {
                        
                        <div className="flex flex-col p-3">
 
-                        <span className="font-IRSans text-black font-Bold text-base">
+                        <span style={{fontFamily:'Shabnam'}} className="font-IRSans text-black font-Bold text-base">
                             عنوان پیام شما
                         </span>
                         <input type="text" className="pr-2 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5" placeholder="عنوان پیام خود را اینجا بنویسید..."/>
                        </div>
                       
                        <div className="flex items-center mb-2 justify-endborder-t justify-center border-solid border-slate-200 rounded-b">
-                       <Link to={'/'}>
+                       <Link style={{fontFamily:'Shabnam'}}  to={'/'}>
                         <button
                            className="text-mainColor font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                            type="button"

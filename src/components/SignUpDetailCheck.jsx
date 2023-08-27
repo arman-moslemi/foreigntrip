@@ -17,57 +17,57 @@ const [showRejectModal,setShowRejectModal] = React.useState(false);
         </div>
         <div className="flex flex-wrap">
           <div className="w-full mb-10">
-            <p className="font-IRSans text-[#0D296E] font-bold text-base">
+            <p style={{fontFamily:'Shabnam'}} className="font-IRSans text-[#0D296E] font-bold text-base">
               نام و نام خانوادگی مامور : 
-              <span className="font-IRSans text-black font-medium">
+              <span style={{fontFamily:'Shabnam'}} className="font-IRSans text-black font-medium">
                 علی اطهری
               </span>
             </p>
           </div>
           <div className="w-[50%] mb-10 md:w-full">
-            <p className="font-IRSans text-[#0D296E] font-bold text-base">
+            <p style={{fontFamily:'Shabnam'}} className="font-IRSans text-[#0D296E] font-bold text-base">
               کد ملی : 
-              <span className="font-IRSans text-black font-medium">
+              <span style={{fontFamily:'Shabnam'}} className="font-IRSans text-black font-medium">
                 0020786545
               </span>
             </p>
           </div>
           <div className="w-[50%] mb-10 md:w-full">
-            <p className="font-IRSans text-[#0D296E] font-bold text-base">
+            <p style={{fontFamily:'Shabnam'}} className="font-IRSans text-[#0D296E] font-bold text-base">
               شماره تلفن همراه : 
-              <span className="font-IRSans text-black font-medium">
+              <span style={{fontFamily:'Shabnam'}} className="font-IRSans text-black font-medium">
                 ۰۹۱۲۲۴۵۶۷۶۵
               </span>
             </p>
           </div>
           <div className="w-[50%] mb-10 md:w-full">
-            <p className="font-IRSans text-[#0D296E] font-bold text-base">
+            <p style={{fontFamily:'Shabnam'}} className="font-IRSans text-[#0D296E] font-bold text-base">
               تاریخ ثبت نام : 
-              <span className="font-IRSans text-black font-medium">
+              <span style={{fontFamily:'Shabnam'}} className="font-IRSans text-black font-medium">
                ۰۲/۰۴/۰۱
               </span>
             </p>
           </div>
           <div className="w-[50%] mb-10 md:w-full">
-            <p className="font-IRSans text-[#0D296E] font-bold text-base">
+            <p style={{fontFamily:'Shabnam'}} className="font-IRSans text-[#0D296E] font-bold text-base">
               سمت : 
-              <span className="font-IRSans text-black font-medium">
+              <span style={{fontFamily:'Shabnam'}} className="font-IRSans text-black font-medium">
                مدیر فنی
               </span>
             </p>
           </div>
           <div className="w-[50%] mb-10 md:w-full">
-            <p className="font-IRSans text-[#0D296E] font-bold text-base">
+            <p style={{fontFamily:'Shabnam'}} className="font-IRSans text-[#0D296E] font-bold text-base">
               هولدینگ : 
-              <span className="font-IRSans text-black font-medium">
+              <span style={{fontFamily:'Shabnam'}} className="font-IRSans text-black font-medium">
                شستا
               </span>
             </p>
           </div>
           <div className="w-[50%] mb-10 md:w-full">
-            <p className="font-IRSans text-[#0D296E] font-bold text-base">
+            <p style={{fontFamily:'Shabnam'}} className="font-IRSans text-[#0D296E] font-bold text-base">
               شرکت : 
-              <span className="font-IRSans text-black font-medium">
+              <span style={{fontFamily:'Shabnam'}} className="font-IRSans text-black font-medium">
                 توسعه هوشمند
               </span>
             </p>
@@ -97,14 +97,14 @@ const [showRejectModal,setShowRejectModal] = React.useState(false);
             <div className="border-0 rounded-md p-2 shadow-md relative flex flex-col w-full bg-white outline-none focus:outline-none">
          
               <div className="flex items-start justify-between p-4 border-b border-solid border-b-midGray rounded-t">
-                <span className="text-base font-bold font-IRsans text-red">
+                <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-red">
                  رد درخواست ثبت نام
                 </span>
              
               </div>
               
               <div className="relative p-6 flex-auto">
-                <p className="my-2 text-black text-sm font-IRsans leading-relaxed">
+                <p style={{fontFamily:'Shabnam'}} className="my-2 text-black text-sm font-IRsans leading-relaxed">
              شما میتوانید علت رد درخواست ثبت نام مامور اعزامی را اینجا بنویسید تا به ایشان نمایش داده شود
                 </p>
               </div>
@@ -149,14 +149,14 @@ const [showRejectModal,setShowRejectModal] = React.useState(false);
             <div className="border-0 rounded-md p-2 shadow-md relative flex flex-col w-full bg-white outline-none focus:outline-none">
          
               <div className="flex items-start justify-between p-4 border-b border-solid border-b-midGray rounded-t">
-                <span className="text-base font-bold font-IRsans text-green">
+                <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-green">
                  تایید درخواست ثبت نام
                 </span>
              
               </div>
               
               <div className="relative p-6 flex-auto">
-                <p className="my-2 text-black text-sm font-IRsans leading-relaxed">
+                <p style={{fontFamily:'Shabnam'}} className="my-2 text-black text-sm font-IRsans leading-relaxed">
             تایید درخواست ثبت نام کاربر با موفقیت انجام شد
                 </p>
               </div>

@@ -24,8 +24,8 @@ const tableRow =[
    date:'#1234',
    subject:truncate("فراموشی رمز عبور ...",30),
    location:'02/02/12-23:50',
-   status:<span className="text-sm text-[#ffd200] font-bold font-IRsans">بسته شده</span >,
-   function: <Link className="flex justify-center">
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-[#ffd200] font-bold font-IRsans">بسته شده</span >,
+   function: <Link style={{fontFamily:'Shabnam'}}  className="flex justify-center">
    <Eye/>
    </Link>
              
@@ -37,8 +37,8 @@ const tableRow =[
    date:'#4323',
    subject:truncate("فراموشی رمز عبور ...",30),
    location:'02/02/12-23:50',
-   status:<span className="text-sm text-green font-bold font-IRsans">پاسخ داده شده</span >,
-   function:<Link className="flex justify-center">
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-green font-bold font-IRsans">پاسخ داده شده</span >,
+   function:<Link style={{fontFamily:'Shabnam'}}  className="flex justify-center">
    <Eye/>
    </Link>
             
@@ -49,8 +49,8 @@ const tableRow =[
    date:'#4321',
    subject:truncate("فراموشی رمز عبور ...",30),
    location:'02/02/12-23:50',
-   status:<span className="text-sm text-[#ff6900] font-bold font-IRsans">در انتظار پاسخ</span >,
-   function:<Link className="flex justify-center">
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-[#ff6900] font-bold font-IRsans">در انتظار پاسخ</span >,
+   function:<Link style={{fontFamily:'Shabnam'}}  className="flex justify-center">
    <Eye/>
    </Link>
   },
@@ -60,8 +60,8 @@ const tableRow =[
    date:'#2323',
    subject:truncate("فراموشی رمز عبور ...",30),
    location:'02/02/12-23:50',
-   status:<span className="text-sm text-green font-bold font-IRsans">پاسخ داده شده</span >,
-   function:<Link className="flex justify-center">
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-green font-bold font-IRsans">پاسخ داده شده</span >,
+   function:<Link style={{fontFamily:'Shabnam'}}  className="flex justify-center">
    <Eye/>
    </Link>
   },
@@ -71,8 +71,8 @@ const tableRow =[
    date:'#1212',
    subject:truncate("فراموشی رمز عبور ...",30),
    location:'02/02/12-23:50',
-   status:<span className="text-sm text-[#ff6900] font-bold font-IRsans">در انتظار پاسخ</span >,
-   function:<Link className="flex justify-center">
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-[#ff6900] font-bold font-IRsans">در انتظار پاسخ</span >,
+   function:<Link style={{fontFamily:'Shabnam'}}  className="flex justify-center">
    <Eye/>
    </Link>
   }
@@ -115,14 +115,14 @@ const tableRow =[
                      <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                   
                        <div className="flex justify-center p-4 border-b border-solid border-b-[#EDF3FA] rounded-t">
-                         <span className="text-base font-bold font-IRsans text-black text-center">
+                         <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-black text-center">
                           علت رد درخواست سفر
                          </span>
                       
                        </div>
                        
                        <div className="relative p-6 flex-auto">
-                         <p className="my-4 text-black text-sm leading-relaxed break-words whitespace-normal font-IRsans">
+                         <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm leading-relaxed break-words whitespace-normal font-IRsans">
                          درخواست شما به علت عدم توضیح کافی راجع به موضوع سفر و مشخص نبودن تاریخ دقیق آن پذیرفته نشد.
 لطفا موارد ذکر شده را اصلاح کنید و سپس مجددا درخواست خود را ثبت کنید.
                          </p>
@@ -136,7 +136,7 @@ const tableRow =[
                          >
                            بستن
                          </button>
-                        <Link to={'/newRequest'}>
+                        <Link style={{fontFamily:'Shabnam'}}  to={'/newRequest'}>
                         <button
                            className="text-mainColor font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                            type="button"
@@ -165,17 +165,17 @@ const tableRow =[
                   <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                
                     <div className="flex justify-center p-4 border-b border-solid border-b-[#EDF3FA] rounded-t">
-                      <span className="text-base font-bold font-IRsans text-black text-center">
+                      <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-black text-center">
                        آیین نامه سفر و ثبت گزارش دستاورد سفر
                       </span>
                    
                     </div>
                     
                     <div className="relative p-6 flex-auto">
-                      <p className="my-4 text-black text-sm font-bold leading-relaxed break-words whitespace-normal font-IRsans">
+                      <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-bold leading-relaxed break-words whitespace-normal font-IRsans">
                      قوانین سفر :
                      </p>
-                     <p className="my-4 text-black text-sm leading-relaxed break-words whitespace-normal font-IRsans">
+                     <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm leading-relaxed break-words whitespace-normal font-IRsans">
                     
                     
                      هر مامور اعزامی موظف است هر روز گزارش دستاورد از آن روز سفر را ونل خود ثبت کند تا کارشناس امور بین الملل بررسی کند و تایید یا رد کند.

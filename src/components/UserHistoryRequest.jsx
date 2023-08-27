@@ -24,7 +24,7 @@ const tableRow =[
    date:'1402/05/12',
    subject:truncate("لغو قرارداد 142 وزارت خانه",30),
    location:'برلین',
-   status:<span className="text-sm text-red font-bold font-IRsans">رد شده</span >,
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-red font-bold font-IRsans">رد شده</span >,
    function: 
                 <button onClick={() => setShowSuccessModal(true)} className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
                   مشاهده علت
@@ -38,7 +38,7 @@ const tableRow =[
    date:'1402/06/12',
    subject:truncate("لغو قرارداد 142 وزارت خانه",30),
    location:'مالزی',
-   status:<span className="text-sm text-green font-bold font-IRsans">تایید شده</span >,
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-green font-bold font-IRsans">تایید شده</span >,
    function:
               <button onClick={() => setShowRuleModal(true)}  className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
                مشاهده آیین نامه سفر
@@ -51,8 +51,8 @@ const tableRow =[
    date:'1402/03/28',
    subject:truncate("لغو قرارداد 142 وزارت خانه",30),
    location:'لندن',
-   status:<span className="text-sm text-mainColor font-bold font-IRsans">اعزام</span >,
-   function:<Link to={`/travelTracking`}>
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-mainColor font-bold font-IRsans">اعزام</span >,
+   function:<Link style={{fontFamily:'Shabnam'}}  to={`/travelTracking`}>
               <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
                 رهگیری مرحله ای
               </button>
@@ -64,8 +64,8 @@ const tableRow =[
    date:'1402/11/22',
    subject:truncate("لغو قرارداد 142 وزارت خانه",30),
    location:'پاریس',
-   status:<span className="text-sm text-mainColor font-bold font-IRsans">اتمام سفر</span >,
-   function:<Link to={`/submitReport`}>
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-mainColor font-bold font-IRsans">اتمام سفر</span >,
+   function:<Link style={{fontFamily:'Shabnam'}}  to={`/submitReport`}>
               <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
                ثبت گزارش دستاورد
               </button>
@@ -77,8 +77,8 @@ const tableRow =[
    date:'1402/02/23',
    subject:truncate("لغو قرارداد 142 وزارت خانه",30),
    location:'پاریس',
-   status:<span className="text-sm text-green font-bold font-IRsans">تایید گزارش</span >,
-   function:<Link to={`/`}>
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-green font-bold font-IRsans">تایید گزارش</span >,
+   function:<Link style={{fontFamily:'Shabnam'}}  to={`/`}>
    <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
      مشاهده گزارش
    </button>
@@ -123,14 +123,14 @@ const tableRow =[
                      <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                   
                        <div className="flex justify-center p-4 border-b border-solid border-b-[#EDF3FA] rounded-t">
-                         <span className="text-base font-bold font-IRsans text-black text-center">
+                         <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-black text-center">
                           علت رد درخواست سفر
                          </span>
                       
                        </div>
                        
                        <div className="relative p-6 flex-auto">
-                         <p className="my-4 text-black text-sm leading-relaxed break-words whitespace-normal font-IRsans">
+                         <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm leading-relaxed break-words whitespace-normal font-IRsans">
                          درخواست شما به علت عدم توضیح کافی راجع به موضوع سفر و مشخص نبودن تاریخ دقیق آن پذیرفته نشد.
 لطفا موارد ذکر شده را اصلاح کنید و سپس مجددا درخواست خود را ثبت کنید.
                          </p>
@@ -144,7 +144,7 @@ const tableRow =[
                          >
                            بستن
                          </button>
-                        <Link to={'/newRequest'}>
+                        <Link style={{fontFamily:'Shabnam'}}  to={'/newRequest'}>
                         <button
                            className="text-mainColor font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                            type="button"
@@ -173,17 +173,17 @@ const tableRow =[
                   <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                
                     <div className="flex justify-center p-4 border-b border-solid border-b-[#EDF3FA] rounded-t">
-                      <span className="text-base font-bold font-IRsans text-black text-center">
+                      <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-black text-center">
                        آیین نامه سفر و ثبت گزارش دستاورد سفر
                       </span>
                    
                     </div>
                     
                     <div className="relative p-6 flex-auto">
-                      <p className="my-4 text-black text-sm font-bold leading-relaxed break-words whitespace-normal font-IRsans">
+                      <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-bold leading-relaxed break-words whitespace-normal font-IRsans">
                      قوانین سفر :
                      </p>
-                     <p className="my-4 text-black text-sm leading-relaxed break-words whitespace-normal font-IRsans">
+                     <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm leading-relaxed break-words whitespace-normal font-IRsans">
                     
                     
                      هر مامور اعزامی موظف است هر روز گزارش دستاورد از آن روز سفر را ونل خود ثبت کند تا کارشناس امور بین الملل بررسی کند و تایید یا رد کند.

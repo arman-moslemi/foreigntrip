@@ -151,14 +151,14 @@ const tableRow =[
     <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
  
       <div className="text-center p-4 border-b border-solid border-b-midGray rounded-t">
-        <span className="text-base font-bold font-IRsans text-black align-middle text-center">
+        <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-black align-middle text-center">
          هشدار!
         </span>
      
       </div>
       
       <div className="relative p-6 flex-auto">
-        <p className="my-4 text-black text-sm font-IRsans leading-relaxed">
+        <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-IRsans leading-relaxed">
      آیا از حذف کاربر ناظر انتخاب شده مطمئن هستید؟
         </p>
       </div>
@@ -200,14 +200,14 @@ const tableRow =[
     <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
  
       <div className="text-center p-4 border-b border-solid border-b-midGray rounded-t">
-        <span className="text-base font-bold font-IRsans text-black align-middle text-center">
+        <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-black align-middle text-center">
         ویرایش کاربر
         </span>
      
       </div>
       
       <div className="relative p-6 flex-auto">
-        <p className="my-4 text-black text-sm font-IRsans leading-relaxed">
+        <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-IRsans leading-relaxed">
      آیا از حذف کاربر ناظر انتخاب شده مطمئن هستید؟
         </p>
       </div>

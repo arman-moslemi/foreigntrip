@@ -15,7 +15,7 @@ const ProfileInfo = () =>{
     <div>
         <div className="flex items-center">
             <Profile/>
-            <span className="font-IRsans text-mainColor mr-3 font-bold">
+            <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-mainColor mr-3 font-bold">
                 ویرایش اطلاعات حساب کاربری
             </span>
         </div>
@@ -28,13 +28,13 @@ const ProfileInfo = () =>{
         </div>
         <div className="flex mt-4 mb-5">
           <Info/>
-          <p className="font-IRsans text-sm text-black">
+          <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-sm text-black">
           شما فقط میتوانید اطلاعات کاربری خود را در اینجا مشاهده کنید و امکان تغییر آنها وجود ندارد .اگر موارد زیر با اطلاعات شما مغایرت دارد میتوانید از طریق تیکت به پشتیبانی پیام دهید تا درخواست تغییر اطلاعات شما بررسی شود.
           </p>
         </div>
       <div className="flex w-full flex-wrap">
       <div className="flex flex-col w-[49%] ml-[1%] mb-4">
-            <span className="font-IRsans text-sm text-black font-bold">نام شما</span>
+            <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-sm text-black font-bold">نام شما</span>
             <div class="relative mt-3">
                     <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                         <User/>
@@ -43,7 +43,7 @@ const ProfileInfo = () =>{
                 </div>
          </div>
          <div className="flex flex-col w-[49%] mr-[1%] mb-4">
-            <span className="font-IRsans text-sm text-black font-bold">نام خانوادگی شما</span>
+            <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-sm text-black font-bold">نام خانوادگی شما</span>
             <div class="relative mt-3">
                     <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                         <User/>
@@ -52,7 +52,7 @@ const ProfileInfo = () =>{
                 </div>
          </div>
          <div className="flex flex-col w-[49%] ml-[1%] mb-4">
-            <span className="font-IRsans text-sm text-black font-bold">کد ملی شما</span>
+            <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-sm text-black font-bold">کد ملی شما</span>
             <div class="relative mt-3">
                     <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                         <Doc/>
@@ -61,7 +61,7 @@ const ProfileInfo = () =>{
                 </div>
          </div>
          <div className="flex flex-col w-[49%] mr-[1%] mb-4">
-            <span className="font-IRsans text-sm text-black font-bold">شماره تلفن همراه شما</span>
+            <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-sm text-black font-bold">شماره تلفن همراه شما</span>
             <div class="relative mt-3">
                     <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                         <Phone/>
@@ -70,7 +70,7 @@ const ProfileInfo = () =>{
                 </div>
          </div>
          <div className="flex flex-col w-[49%] ml-[1%] mb-4">
-            <span className="font-IRsans text-sm text-black font-bold">نام هولدینگ را وارد کنید</span>
+            <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-sm text-black font-bold">نام هولدینگ را وارد کنید</span>
             <div class="relative mt-3">
                     <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                         <Doc/>
@@ -79,7 +79,7 @@ const ProfileInfo = () =>{
                 </div>
          </div>
          <div className="flex flex-col w-[49%] mr-[1%] mb-4">
-            <span className="font-IRsans text-sm text-black font-bold">نام شرکت را وارد کنید</span>
+            <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-sm text-black font-bold">نام شرکت را وارد کنید</span>
             <div class="relative mt-3">
                     <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                         <Doc/>
@@ -88,7 +88,7 @@ const ProfileInfo = () =>{
                 </div>
          </div>
          <div className="flex flex-col w-[49%] ml-[1%] mb-4">
-            <span className="font-IRsans text-sm text-black font-bold">سمت خود را وارد کنید</span>
+            <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-sm text-black font-bold">سمت خود را وارد کنید</span>
             <div class="relative mt-3">
                     <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                         <Doc/>

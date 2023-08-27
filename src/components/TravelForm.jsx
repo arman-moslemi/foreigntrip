@@ -10,16 +10,16 @@ const TravelForm = () =>{
       <div>
           <div className="flex items-center">
               <Send/>
-              <span className="font-IRsans text-mainColor mr-3 font-bold">
+              <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-mainColor mr-3 font-bold">
                  رهگیری سفر
               </span>
           </div>
-          <p className="font-IRsans text-black font-bold text-base mt-5">
+          <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-black font-bold text-base mt-5">
             شما موطف هستید بعد از اتمام سفر خود٬گزارش دستاورد خود از این سفر را در سامانه بارگذاری کنید.
           </p>
           <div className="flex items-center mt-2">
             <Info/>
-            <p className="font-IRsans text-[#5C5F66] font-bold text-sm mr-2">
+            <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-[#5C5F66] font-bold text-sm mr-2">
             در صورت عدم بارگذاری گزارش دستاورد و یا عدم بارگذاری گزارش مناسب برای سفر آتی اجازه سفر صادر نمی شود.
           </p>
           
@@ -41,8 +41,8 @@ const TravelForm = () =>{
         <label for="dropzone-file" class="flex flex-col items-center justify-center w-[40%] md:w-full h-64 border-2 border-[#CCCCCD] border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
             <div class="flex flex-col items-center justify-center pt-5 pb-6 font-IRsans">
                 <svg aria-hidden="true" class="w-10 h-10 mb-3 text-[#B7B8BB]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
-                <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold font-IRsans">انتخاب فایل</span></p>
-                <p class="text-xs text-gray-500 dark:text-gray-400 font-IRsans">JPG,JPEG,PNG,PDF,TXT</p>
+                <p style={{fontFamily:'Shabnam'}} class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span style={{fontFamily:'Shabnam'}} class="font-semibold font-IRsans">انتخاب فایل</span></p>
+                <p style={{fontFamily:'Shabnam'}} class="text-xs text-gray-500 dark:text-gray-400 font-IRsans">JPG,JPEG,PNG,PDF,TXT</p>
             </div>
             <input id="dropzone-file" type="file" class=" md:hidden" />
         </label>
@@ -62,14 +62,14 @@ const TravelForm = () =>{
               <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
            
                 <div className="flex items-start justify-between p-4 border-b border-solid border-b-midGray rounded-t">
-                  <span className="text-base font-bold font-IRsans text-green">
+                  <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-green">
                     ارسال گزارش رهگیری سفر
                   </span>
                
                 </div>
                 
                 <div className="relative p-6 flex-auto">
-                  <p className="my-4 text-black text-sm font-IRsans leading-relaxed">
+                  <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-IRsans leading-relaxed">
                  ارسال گزارش رهگیری مرحله ای با موفقیت انجام شد
                   </p>
                 </div>

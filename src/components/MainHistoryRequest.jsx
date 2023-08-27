@@ -24,9 +24,9 @@ const tableRow =[
    location:'اداره بازرگانی شماره ۲',
    date:'02/02/12',
    type:'عادی',
-   status:<span className="text-sm text-red font-bold font-IRsans">درخواست جدید</span >,
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-red font-bold font-IRsans">درخواست جدید</span >,
    function: 
-                <Link to={'/newIncomeRequest'}>
+                <Link style={{fontFamily:'Shabnam'}}  to={'/newIncomeRequest'}>
                     <Eye/> 
                 </Link>
                   
@@ -41,9 +41,9 @@ const tableRow =[
    subject:truncate("لغو قرارداد 142 وزارت خانه",30),
    location:'اداره بازرگانی شماره ۲',
    date:'02/02/12',
-   type:<span className="font-IRsans text-red font-bold">فوری</span>,
-   status:<span className="text-sm text-[#ffb921] font-bold font-IRsans">منتظر آپلود امضا</span >,
-   function: <Link to={'/newIncomeRequest'}  className="">
+   type:<span style={{fontFamily:'Shabnam'}} className="font-IRsans text-red font-bold">فوری</span>,
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-[#ffb921] font-bold font-IRsans">منتظر آپلود امضا</span >,
+   function: <Link style={{fontFamily:'Shabnam'}}  to={'/newIncomeRequest'}  className="">
                 <Eye/>
              </Link>
   },
@@ -54,10 +54,10 @@ const tableRow =[
    subject:truncate("لغو قرارداد 142 وزارت خانه",30),
    location:'اداره بازرگانی شماره ۲',
    date:'02/02/12',
-   type:<span className="font-IRsans text-red font-bold">فوری</span>,
-   status:<span className="text-sm text-green font-medium font-IRsans">تایید شده</span >,
+   type:<span style={{fontFamily:'Shabnam'}} className="font-IRsans text-red font-bold">فوری</span>,
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-green font-medium font-IRsans">تایید شده</span >,
    function: 
-   <Link to={'/newIncomeAccepted'}>
+   <Link style={{fontFamily:'Shabnam'}}  to={'/newIncomeAccepted'}>
    <Eye/> 
 </Link>
   },
@@ -68,10 +68,10 @@ const tableRow =[
    subject:truncate("لغو قرارداد 142 وزارت خانه",30),
    location:'اداره بازرگانی شماره ۲',
    date:'02/02/12',
-   type:<span className="font-IRsans text-red font-bold">فوری</span>,
-   status:<span className="text-sm text-green font-medium font-IRsans">تایید شده</span >,
+   type:<span style={{fontFamily:'Shabnam'}} className="font-IRsans text-red font-bold">فوری</span>,
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-green font-medium font-IRsans">تایید شده</span >,
    function: 
-   <Link to={'/newIncomeAccepted'}>
+   <Link style={{fontFamily:'Shabnam'}}  to={'/newIncomeAccepted'}>
    <Eye/> 
 </Link>
   },
@@ -83,9 +83,9 @@ const tableRow =[
    location:'اداره بازرگانی شماره ۲',
    date:'02/02/12',
    type:'عادی',
-   status:<span className="text-sm text-green font-medium font-IRsans">تایید شده</span >,
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-green font-medium font-IRsans">تایید شده</span >,
    function: 
-   <Link to={'/newIncomeAccepted'} className="">
+   <Link style={{fontFamily:'Shabnam'}}  to={'/newIncomeAccepted'} className="">
    <Eye/> 
 </Link>
   }

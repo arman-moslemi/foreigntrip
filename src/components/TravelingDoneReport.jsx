@@ -18,7 +18,7 @@ const TravelingDoneReport = () =>{
             {
                 show?
                 <div className="mt-20">
-                   <p className="font-IRsans text-base font-bold text-[#0D296E]">
+                   <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
                        علت رد گزارش مامور اعزامی را اینجا بنویسید.
                         </p>
                         <textarea id="message" rows="8" class="block p-2.5 mt-5 font-IRsans w-full text-sm text-gray-900 bg-gray-50 rounded border  border-borderGray focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="توضیحات خود را اینجا بنویسید..."></textarea>
@@ -37,14 +37,14 @@ const TravelingDoneReport = () =>{
               <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
            
                 <div className="flex items-start justify-between p-4 border-b border-solid border-b-midGray rounded-t">
-                  <span className="text-base font-bold font-IRsans text-green">
+                  <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-green">
                     رد درخواست
                   </span>
                
                 </div>
                 
                 <div className="relative p-6 flex-auto">
-                  <p className="my-4 text-black text-sm font-IRsans leading-relaxed">
+                  <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-IRsans leading-relaxed">
                 علت رد خواست مامور اعزامی با موفقیت برای ایشان ارسال گردید.
                   </p>
                 </div>
@@ -90,14 +90,14 @@ const TravelingDoneReport = () =>{
               <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
            
                 <div className="flex items-start justify-between p-4 border-b border-solid border-b-midGray rounded-t">
-                  <span className="text-base font-bold font-IRsans text-green">
+                  <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-green">
                     تایید درخواست
                   </span>
                
                 </div>
                 
                 <div className="relative p-6 flex-auto">
-                  <p className="my-4 text-black text-sm font-IRsans leading-relaxed">
+                  <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-IRsans leading-relaxed">
                 تایید درخواست سفر مامور اعزامی با موفقیت انجام شد
                   </p>
                 </div>

@@ -13,7 +13,7 @@ const RegistrationRequestList = () =>{
          
             <div className="flex items-center">
                     <Doc/>
-                <span className="font-IRsans text-mainColor mr-3 font-bold">
+                <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-mainColor mr-3 font-bold">
                     درخواست های ثبت نام
                 </span>
                 
@@ -34,7 +34,7 @@ const RegistrationRequestList = () =>{
               <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
            
                 <div className="text-center p-4 border-b border-solid border-b-midGray rounded-t">
-                  <span className="text-base font-bold font-IRsans text-black align-middle text-center">
+                  <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-black align-middle text-center">
                   افزودن کاربر
                   </span>
                
@@ -43,26 +43,26 @@ const RegistrationRequestList = () =>{
                
                <div className="flex flex-wrap p-6">
                 <div className="flex flex-col w-[39%] ml-[2%]">
-                  <span className="font-IRsans text-[#0D296E] font-bold text-sm">
+                  <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-[#0D296E] font-bold text-sm">
                     نام
                   </span>
                   <input className="border border-borderGray rounded-md px-2 py-1 font-IRsans mt-2" placeholder="نام"/>
                 </div>
                 <div className="flex flex-col w-[59%]">
-                  <span className="font-IRsans text-[#0D296E] font-bold text-sm">
+                  <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-[#0D296E] font-bold text-sm">
                     نام خانوادگی
                   </span>
                   <input className="border border-borderGray rounded-md px-2 py-1 font-IRsans mt-2" placeholder="نام خانوادگی"/>
                 </div>
                </div>
                <div className="flex flex-col w-[100%] px-6 mb-6">
-                  <span className="font-IRsans text-[#0D296E] font-bold text-sm">
+                  <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-[#0D296E] font-bold text-sm">
                     کد ملی
                   </span>
                   <input className="border border-borderGray rounded-md px-2 py-1 font-IRsans mt-2" placeholder="کد ملی"/>
                 </div>
                 <div className="flex flex-col w-[100%] px-6 mb-6">
-                  <span className="font-IRsans text-[#0D296E] font-bold text-sm">
+                  <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-[#0D296E] font-bold text-sm">
                     شماره تلفن همراه
                   </span>
                   <input className="border border-borderGray rounded-md px-2 py-1 font-IRsans mt-2" placeholder="شماره تلفن همراه"/>

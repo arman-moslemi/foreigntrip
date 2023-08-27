@@ -14,29 +14,34 @@ import RequestHistory from "../pages/UserPanel/RequestHistory";
 import Profile from "../pages/UserPanel/Profile";
 import SubmitReport from "../pages/UserPanel/SubmitReport";
 import PassportRequest from "../pages/UserPanel/PassportRequest";
-import Request from "../pages/MainPanel/Requests";
-import NewIncomeRequest from "../pages/MainPanel/NewIncomeRequest";
-import NewIncomeRequestAccepted from "../pages/MainPanel/NewIncomeRequestAccepted";
-import RequestRejectedPage from "../pages/MainPanel/RequestRejected";
-import ReportHistory from "../pages/MainPanel/ReportHistory";
-import Traveling from "../pages/MainPanel/Traveling";
-import TravelDone from "../pages/MainPanel/TravelDone";
+import Request from "../pages/MainPanelLast/Requests";
+import NewIncomeRequest from "../pages/MainPanelLast/NewIncomeRequest";
+import NewIncomeRequestAccepted from "../pages/MainPanelLast/NewIncomeRequestAccepted";
+import RequestRejectedPage from "../pages/MainPanelLast/RequestRejected";
+import ReportHistory from "../pages/MainPanelLast/ReportHistory";
+import Traveling from "../pages/MainPanelLast/Traveling";
+import TravelDone from "../pages/MainPanelLast/TravelDone";
 import TravelTracking from "../pages/UserPanel/TravelTracking";
 import TicketList from "../pages/UserPanel/TicketList";
 import TicketShow from "../pages/UserPanel/TicketShow";
-import TicketListMain from "../pages/MainPanel/TicketListMain";
-import TicketShowMain from "../pages/MainPanel/TicketShowMain";
+import TicketListMain from "../pages/MainPanelLast/TicketListMain";
+import TicketShowMain from "../pages/MainPanelLast/TicketShowMain";
 import Userlist from "../pages/Supervisor/Userlist";
 import ReportList from "../pages/Supervisor/ReportList";
 import ReportView from "../pages/Supervisor/ReportView";
-import AgentList from "../pages/MainPanel/AgentList"; 
-import SignUpRequest from "../pages/MainPanel/SignUpRequest";
-import RegistrationRequestList from "../pages/MainPanel/RegistrationRequestList";
-import Waiting from "../pages/MainPanel/Waiting";
-import SignUpDetail from "../pages/MainPanel/SignUpDetail";
-import Slist from "../pages/MainPanel/Slist";
+import AgentList from "../pages/MainPanelLast/AgentList"; 
+import SignUpRequest from "../pages/MainPanelLast/SignUpRequest";
+import RegistrationRequestList from "../pages/MainPanelLast/RegistrationRequestList";
+import Waiting from "../pages/MainPanelLast/Waiting";
+import SignUpDetail from "../pages/MainPanelLast/SignUpDetail";
+import Slist from "../pages/MainPanelLast/Slist";
 import ChangePassword from "../pages/Login/ChangePassword";
 import NewPasswordSet from "../pages/Login/NewPasswordSet";
+
+
+/*   newPages */
+
+import UserList from "../pages/MainPanel/UserList";
 const MainRoutes = (props) =>{
     return(
             <BrowserRouter>
@@ -146,6 +151,16 @@ const MainRoutes = (props) =>{
                 </Routes>
                 <Routes>
                     <Route path="/newPasswordSet" element={<NewPasswordSet/>}/>
+                </Routes>
+
+                {/*
+                
+                newPages
+            
+    */}
+
+                <Routes>
+                    <Route path="/mainAdmin/userList" element={<UserList/>}/>
                 </Routes>
             </BrowserRouter>
     )

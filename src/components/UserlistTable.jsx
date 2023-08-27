@@ -25,7 +25,7 @@ const UserlistTable = () =>{
          position:'مدیر مالی',
          holding:'شستا',
          company:'شرکت یک',
-         status:<span className="font-IRSans text-green text-sm">آنلاین</span>             
+         status:<span style={{fontFamily:'Shabnam'}} className="font-IRSans text-green text-sm">آنلاین</span>             
                    
                      
         },   {
@@ -36,7 +36,7 @@ const UserlistTable = () =>{
            position:'حسابرس',
            holding:'شستا',
            company:'شرکت یک',
-           status:<span className="font-IRSans text-[#FF6900] text-sm">آفلاین</span>             
+           status:<span style={{fontFamily:'Shabnam'}} className="font-IRSans text-[#FF6900] text-sm">آفلاین</span>             
                      
                        
           },
@@ -64,7 +64,7 @@ const UserlistTable = () =>{
         <>
         <div className="flex justify-between items-center mt-8 flex-wrap md:justify-end">
             <div className="flex items-center flex-wrap">
-                <span className="font-IRsans text-mainColor font-bold text-base ml-4">
+                <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-mainColor font-bold text-base ml-4">
                     جستجو در بین کاربران
                 </span>
                 <input type="text" className="border rounded-full w-80 border-midGray px-4 py-1.5 font-IRsans md:mt-3" placeholder="جستجو کنید ..."/>

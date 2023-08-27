@@ -23,9 +23,9 @@ const tableRow =[
    name:'علی اطهری',
    subject:truncate("لغو قرارداد 142 وزارت خانه",30),
    location:'اداره بازرگانی شماره ۲',
-   status:<span className="text-sm text-tripDone font-bold font-IRsans">اتمام ماموریت</span >,
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-tripDone font-bold font-IRsans">اتمام ماموریت</span >,
    function: 
-                <Link to={'/travelDone'}>
+                <Link style={{fontFamily:'Shabnam'}}  to={'/travelDone'}>
                 <Eye/>
                 </Link>
              
@@ -37,9 +37,9 @@ const tableRow =[
    name:'علیرضا بیاتی',
    subject:truncate("لغو قرارداد 142 وزارت خانه",30),
    location:'اداره بازرگانی شماره ۲',
-   status:<span className="text-sm text-mainColor font-bold font-IRsans">درحال انجام ماموریت</span >,
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-mainColor font-bold font-IRsans">درحال انجام ماموریت</span >,
    function: 
-   <Link to={'/traveling'}>
+   <Link style={{fontFamily:'Shabnam'}}  to={'/traveling'}>
    <Eye/>
   </Link>
     
@@ -50,8 +50,8 @@ const tableRow =[
    name:'دارا دورانی',
    subject: truncate("ارسال کالا به کشور ترکیه برای انجام فعالیت سیاسی",30),
    location:'اداره بازرگانی شماره ۲',
-   status:<span className="text-sm text-green font-medium font-IRsans">تایید گزارش نهایی</span >,
-   function:  <Link to={'/traveling'}>
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-green font-medium font-IRsans">تایید گزارش نهایی</span >,
+   function:  <Link style={{fontFamily:'Shabnam'}}  to={'/traveling'}>
    <Eye/>
   </Link>
   },
@@ -61,9 +61,9 @@ const tableRow =[
    name:'احمدرضا قلی زاده',
    subject:truncate("لغو قرارداد 142 وزارت خانه",30),
    location:'اداره بازرگانی شماره ۲',
-   status:<span className="text-sm text-red font-medium font-IRsans">رد گزارش نهایی</span >,
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-red font-medium font-IRsans">رد گزارش نهایی</span >,
    function: 
-   <Link to={'/traveling'}>
+   <Link style={{fontFamily:'Shabnam'}}  to={'/traveling'}>
    <Eye/>
   </Link>
   },
@@ -73,9 +73,9 @@ const tableRow =[
    name:'علی اطهری',
    subject:truncate("لغو قرارداد 142 وزارت خانه",30),
    location:'اداره بازرگانی شماره ۲',
-   status:<span className="text-sm text-green font-medium font-IRsans">تایید شده</span >,
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-green font-medium font-IRsans">تایید شده</span >,
    function: 
-   <Link to={'/traveling'}>
+   <Link style={{fontFamily:'Shabnam'}}  to={'/traveling'}>
    <Eye/>
   </Link>
   }
@@ -89,7 +89,7 @@ const tableRow =[
         {tableRow.name}
         </div>
         <div className="w-[20px] h-[20px] rounded-full bg-[#FFBD14] flex items-center justify-center mr-2">
-          <span className="text-white font-IRsans text-sm font-bold">2</span>
+          <span style={{fontFamily:'Shabnam'}} className="text-white font-IRsans text-sm font-bold">2</span>
         </div>
       </div>
     </td>

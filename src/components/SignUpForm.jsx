@@ -44,7 +44,7 @@ const SignUpForm = () => {
             </div>
             <div className="flex w-full flex-wrap">
                 <div className="flex flex-col w-[48%] ml-[2%] mb-4">
-                    <span  style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">کد ملی</span>
+                    <span style={{fontFamily:'Shabnam'}}   className="text-base font-normal font-IRsans">کد ملی</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <Doc/>
@@ -58,7 +58,7 @@ const SignUpForm = () => {
                 </div>
                 <div className="flex w-[48%] mr-[2%] mb-4 items-end">
                     <div className="flex flex-col w-[64%] ">
-                        <span style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">تاریخ تولد</span>
+                        <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal font-IRsans">تاریخ تولد</span>
                         <div class="flex items-center h-10 pr-2 mt-3 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor  w-full pl-10 " id="test">
                             <Calender/>
                             <DatePicker style={{fontFamily:'Shabnam'}} placeholder="خهاخعل"  onChange={(e) => console.log(e.value)} />
@@ -75,7 +75,7 @@ const SignUpForm = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[48%] ml-[2%] mb-4">
-                    <span style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">نام شما</span>
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal font-IRsans">نام شما</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <User/>
@@ -89,7 +89,7 @@ const SignUpForm = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[48%] mr-[2%] mb-4">
-                    <span style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">نام خانوادگی شما</span>
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal font-IRsans">نام خانوادگی شما</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <User/>
@@ -103,7 +103,7 @@ const SignUpForm = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[48%] ml-[2%] mb-4">
-                    <span  style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">شماره تلفن همراه</span>
+                    <span style={{fontFamily:'Shabnam'}}   className="text-base font-normal font-IRsans">شماره تلفن همراه</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <Phone/>
@@ -116,7 +116,7 @@ const SignUpForm = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[48%] mr-[2%] mb-4">
-                    <span  style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">شماره تلفن ثابت</span>
+                    <span style={{fontFamily:'Shabnam'}}   className="text-base font-normal font-IRsans">شماره تلفن ثابت</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <Phone/>
@@ -129,7 +129,7 @@ const SignUpForm = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[48%] ml-[2%] mb-4">
-                    <span style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">آدرس ایمیل</span>
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal font-IRsans">آدرس ایمیل</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <Mail/>
@@ -143,7 +143,7 @@ const SignUpForm = () => {
                 </div>
                 <div className="flex w-[48%] mr-[2%] mb-4 items-end">
                     <div className="flex flex-col w-[64%] ">
-                        <span style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">کد پستی</span>
+                        <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal font-IRsans">کد پستی</span>
                         <div class="relative mt-3">
                             <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                                 <Doc/>
@@ -161,7 +161,7 @@ const SignUpForm = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[100%]  mb-4">
-                    <span style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">آدرس شما</span>
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal font-IRsans">آدرس شما</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <Location/>
@@ -176,7 +176,7 @@ const SignUpForm = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[48%] ml-[2%] mb-4">
-                    <span style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">دسته بندی مجموعه</span>
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal font-IRsans">دسته بندی مجموعه</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <Doc/>
@@ -205,7 +205,7 @@ const SignUpForm = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[48%] mr-[2%] mb-4">
-                    <span style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">زیر مجموعه</span>
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal font-IRsans">زیر مجموعه</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <Doc/>
@@ -218,7 +218,7 @@ const SignUpForm = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[48%] ml-[2%] mb-4">
-                    <span style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">نوع رابط استخدامی</span>
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal font-IRsans">نوع رابط استخدامی</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <Doc/>
@@ -243,7 +243,7 @@ const SignUpForm = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[48%] mr-[2%] mb-4">
-                    <span style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">سمت</span>
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal font-IRsans">سمت</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <Doc/>
@@ -270,7 +270,7 @@ const SignUpForm = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[48%] ml-[2%] mb-4">
-                    <span style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">رمز عبور</span>
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal font-IRsans">رمز عبور</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <Lock/>
@@ -283,7 +283,7 @@ const SignUpForm = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[48%] mr-[2%] mb-4">
-                    <span  style={{fontFamily:'Shabnam'}} className="text-base font-normal font-IRsans">کد امنیتی</span>
+                    <span style={{fontFamily:'Shabnam'}}   className="text-base font-normal font-IRsans">کد امنیتی</span>
                     <div className="flex justify-between items-center ">
                         <div class="relative mt-3 w-[90%]">
                             <div
@@ -308,7 +308,7 @@ const SignUpForm = () => {
                     <input style={{fontFamily:'Shabnam'}}
                         type="checkbox"
                         class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-2"/>
-                    <Link to={'/'} className="text-mainColor">آیین نامه</Link>  و <Link to={'/'}  className="text-mainColor">مقررات</Link> را مطالعه کرده و آنها را پذیرفته ام .
+                    <Link style={{fontFamily:'Shabnam'}}  to={'/'} className="text-mainColor">آیین نامه</Link>  و <Link style={{fontFamily:'Shabnam'}}  to={'/'}  className="text-mainColor">مقررات</Link> را مطالعه کرده و آنها را پذیرفته ام .
                 </label>
             </div>
             

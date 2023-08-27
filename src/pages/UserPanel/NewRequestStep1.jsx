@@ -18,11 +18,11 @@ const NewRequestStep1 = () => {
                         <div className="flex-col pb-5 px-12 pt-12 ">
                             <div className="flex items-center mb-6">
                                 <Add/>
-                                <span className="font-IRsans text-mainColor mr-3 font-bold text-base">
+                                <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-mainColor mr-3 font-bold text-base">
                                     ثبت درخواست جدید
                                 </span>
                             </div>
-                            <p className="font-IRsans font-normal text-base">فرم زیر را با دقت پر کنید تا
+                            <p style={{fontFamily:'Shabnam'}} className="font-IRsans font-normal text-base">فرم زیر را با دقت پر کنید تا
                                 درخواست شما ثبت شود .پس از بررسی درخواست شما ،اجازه ی سفر برای شما صادر میشود.</p>
                         </div>
 

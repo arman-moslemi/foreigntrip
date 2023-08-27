@@ -24,7 +24,7 @@ const tableRow =[
    phone:'09123345673',
    date:'02/02/12',
   function: 
-                <Link to={'/signUpDetail'}>
+                <Link style={{fontFamily:'Shabnam'}}  to={'/signUpDetail'}>
                     <Eye/> 
                 </Link>
                   
@@ -40,7 +40,7 @@ const tableRow =[
     phone:'09123345673',
     date:'02/02/12',
    function: 
-                 <Link to={'/signUpDetail'}>
+                 <Link style={{fontFamily:'Shabnam'}}  to={'/signUpDetail'}>
                      <Eye/> 
                  </Link>
                    
@@ -53,7 +53,7 @@ const tableRow =[
     phone:'09123345673',
     date:'02/02/12',
    function: 
-                 <Link to={'/signUpDetail'}>
+                 <Link style={{fontFamily:'Shabnam'}}  to={'/signUpDetail'}>
                      <Eye/> 
                  </Link>
                    
@@ -66,7 +66,7 @@ const tableRow =[
     phone:'09123345673',
     date:'02/02/12',
    function: 
-                 <Link to={'/signUpDetail'}>
+                 <Link style={{fontFamily:'Shabnam'}}  to={'/signUpDetail'}>
                      <Eye/> 
                  </Link>
                    
@@ -79,7 +79,7 @@ const tableRow =[
    phone:'09123345673',
    date:'02/02/12',
   function: 
-                <Link to={'/signUpDetail'}>
+                <Link style={{fontFamily:'Shabnam'}}  to={'/signUpDetail'}>
                     <Eye/> 
                 </Link>
                   
