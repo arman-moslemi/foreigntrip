@@ -42,7 +42,7 @@ const TicketDetailMain = () =>{
                 پیام
               </span>
               <div className="flex w-full h-auto items-center justify-between border  px-2 py-3 border-midGray mt-2 rounded-md">
-                <textarea className="w-[90%] min-h-[120px] overflow-y-auto resize-none" placeholder="متن پیام ..." />
+                <textarea style={{fontFamily:'Shabnam'}} className="w-[90%] min-h-[120px] overflow-y-auto resize-none" placeholder="متن پیام ..." />
                 <button>
                   <Send/>
                 </button>

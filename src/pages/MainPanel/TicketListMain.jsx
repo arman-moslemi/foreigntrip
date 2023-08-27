@@ -17,7 +17,7 @@ const TicketListMain = () => {
                        تیکت ها و پشتیبانی
                 </span>
                     </div>
-                    <button onClick={() =>{setShowNewTicket(true)}} className="bg-mainColor px-4 py-1.5 shadow-blueShadow text-white font-IRSans text-base rounded-md sm:mr-auto sm:mt-5">
+                    <button onClick={() =>{setShowNewTicket(true)}} style={{fontFamily:'Shabnam'}}  className="bg-mainColor px-4 py-1.5 shadow-blueShadow text-white font-IRSans text-base rounded-md sm:mr-auto sm:mt-5">
                         + تیکت جدید
                     </button>
                 </div>
@@ -47,7 +47,7 @@ const TicketListMain = () => {
                         <span style={{fontFamily:'Shabnam'}} className="font-IRSans text-black font-Bold text-base">
                             عنوان پیام شما
                         </span>
-                        <input type="text" className="pr-2 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5" placeholder="عنوان پیام خود را اینجا بنویسید..."/>
+                        <input type="text" style={{fontFamily:'Shabnam'}} className="pr-2 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5" placeholder="عنوان پیام خود را اینجا بنویسید..."/>
                        </div>
                       
                        <div className="flex items-center mb-2 justify-endborder-t justify-center border-solid border-slate-200 rounded-b">
@@ -60,13 +60,16 @@ const TicketListMain = () => {
                           بستن
                          </button>
                         </Link>
-                         <button
+                        <Link to={'/mainAdmin/ticketShowMain'}>
+                        <button
                            className="text-white bg-mainColor shadow-blueShadow rounded-lg font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                            type="button"
-                           onClick={() => setShowNewTicket(false)}
+                          
                          >
                           شروع ارسال پیام
                          </button>
+                        </Link>
+                      
                       
                        </div>
                      </div>

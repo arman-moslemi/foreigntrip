@@ -24,8 +24,7 @@ import TravelDone from "../pages/MainPanelLast/TravelDone";
 import TravelTracking from "../pages/UserPanel/TravelTracking";
 import TicketList from "../pages/UserPanel/TicketList";
 import TicketShow from "../pages/UserPanel/TicketShow";
-import TicketListMain from "../pages/MainPanelLast/TicketListMain";
-import TicketShowMain from "../pages/MainPanelLast/TicketShowMain";
+
 import Userlist from "../pages/Supervisor/Userlist";
 import ReportList from "../pages/Supervisor/ReportList";
 import ReportView from "../pages/Supervisor/ReportView";
@@ -42,6 +41,14 @@ import NewPasswordSet from "../pages/Login/NewPasswordSet";
 /*   newPages */
 
 import UserList from "../pages/MainPanel/UserList";
+import AddAgent from "../pages/MainPanel/AddAgent";
+import ReportsList from "../pages/MainPanel/ReportList";
+import ReportsView from "../pages/MainPanel/ReportsView";
+import TicketListMain from "../pages/MainPanel/TicketListMain";
+import TicketShowMain from "../pages/MainPanel/TicketShowMain";
+import AdminList from "../pages/MainPanel/AdminList";
+import SendMessageList from "../pages/MainPanel/SendMessageList";
+import Message from "../pages/MainPanel/Message";
 const MainRoutes = (props) =>{
     return(
             <BrowserRouter>
@@ -124,12 +131,7 @@ const MainRoutes = (props) =>{
                 <Routes>
                     <Route path="/supervisor/reportView" element={<ReportView/>}/>
                 </Routes>
-                <Routes>
-                    <Route path="/ticketShowMain" element={<TicketShowMain/>}/>
-                </Routes>
-                <Routes>
-                    <Route path="/ticketListMain" element={<TicketListMain/>}/>
-                </Routes>
+              
                 <Routes>
                     <Route path="/agentList" element={<AgentList/>}/>
                 </Routes>
@@ -161,6 +163,30 @@ const MainRoutes = (props) =>{
 
                 <Routes>
                     <Route path="/mainAdmin/userList" element={<UserList/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/mainAdmin/addAgent" element={<AddAgent/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/mainAdmin/reportList" element={<ReportsList/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/mainAdmin/reportView" element={<ReportsView/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/mainAdmin/ticketShowMain" element={<TicketShowMain/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/mainAdmin/ticketListMain" element={<TicketListMain/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/mainAdmin/adminList" element={<AdminList/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/mainAdmin/sendMessageList" element={<SendMessageList/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/mainAdmin/message" element={<Message/>}/>
                 </Routes>
             </BrowserRouter>
     )
