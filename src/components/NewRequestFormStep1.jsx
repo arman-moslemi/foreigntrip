@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-
+import { DatePicker } from "zaman";
+import './components.css';
 import {Link} from "react-router-dom";
 
 const NewRequestFormStep1 = () => {
@@ -51,22 +52,24 @@ const NewRequestFormStep1 = () => {
                 </div>
                 <div className="flex w-[32%] mx-[1.5%] mb-7 items-end">
                     <div className="flex flex-col w-[39%] ">
-                        <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">کد پستی</span>
-                        <div class="mt-2">
-                            <input style={{fontFamily: 'Shabnam'}}
+                        <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">تاریخ و مدت سفر</span>
+                        <div class="mt-2 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full" id="StartDate">
+                        <DatePicker style={{fontFamily:'Shabnam'}} placeholder="خهاخعل"  onChange={(e) => console.log(e.value)} />
+                            {/* <input style={{fontFamily: 'Shabnam'}}
                                 type="text"
                                 id="input-group-1"
                                 class=" font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
-                                placeholder="کد پستی"/>
+                                placeholder="کد پستی"/> */}
                         </div>
                     </div>
                     <div className="w-[22%] flex justify-center pb-2"><p style={{fontFamily: 'Shabnam'}} className="text-base font-normal">لغایت</p></div>
-                    <div className="w-[39%]">
-                            <input style={{fontFamily: 'Shabnam'}}
+                    <div className="w-[39%] font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block" id="EndDate">
+                    <DatePicker style={{fontFamily:'Shabnam'}} placeholder="خهاخعل"  onChange={(e) => console.log(e.value)} />
+                            {/* <input style={{fontFamily: 'Shabnam'}}
                                 type="text"
                                 id="input-group-1"
                                 class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
-                                placeholder="کد پستی"/>
+                                placeholder="کد پستی"/> */}
                     </div>
                 </div>
                 <div className="flex flex-col w-[31%] mr-[1.5%] mb-7">
@@ -82,13 +85,11 @@ const NewRequestFormStep1 = () => {
                 <div className="flex flex-col w-[100%]  mb-8">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">موضوع سفر</span>
                     <div class="mt-2">
-                        <textarea style={{fontFamily: 'Shabnam'}}
-                            rows={1}
+                        <input style={{fontFamily: 'Shabnam'}}
                             type="text"
-                            disabled="true"
                             id="input-group-1"
                             class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
-                            placeholder="موضوع سفر را اینجا بنویسید"></textarea>
+                            placeholder="موضوع سفر را اینجا بنویسید"/>
                     </div>
                 </div>
                 <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans mb-4">اهداف سفر</span>

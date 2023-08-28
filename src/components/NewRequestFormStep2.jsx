@@ -1,113 +1,223 @@
-import React,{useState} from "react";
+import React, {useState} from "react";
+import { DatePicker } from "zaman";
+import './components.css';
+import {Link} from "react-router-dom";
 
-import {ReactComponent as User} from "../assets/icon/black/profile.svg"
-import {ReactComponent as Location} from "../assets/icon/black/location.svg"
-import {ReactComponent as Calendar} from "../assets/icon/black/calender.svg"
-import {ReactComponent as Clock} from "../assets/icon/black/clock.svg"
-import {ReactComponent as Doc} from "../assets/icon/black/doc.svg"
-import {ReactComponent as Website} from "../assets/icon/black/website.svg"
-import {ReactComponent as Card} from "../assets/icon/black/card.svg"
-import {ReactComponent as Add} from "../assets/icon/blue/add.svg"
-import {ReactComponent as Check} from "../assets/icon/black/check.svg"
-import { Link } from "react-router-dom";
-
-const NewRequestFormStep2 = () =>{
-    const [showSuccessModal, setShowSuccessModal] = React.useState(false);
-    return(
-    <div>
-        <div className="flex items-center">
-            <Add/>
-            <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-mainColor mr-3 font-bold">
-                ثبت درخواست جدید
-            </span>
-        </div>
-      <div className="flex w-[100%] mx-auto flex-wrap justify-between mt-10 xl:w-[100%]">
-        <div class="relative my-2 w-[45%] lg:w-[48%] xs:w-[100%] xs:my-1">
-            <div class="absolute top-5 right-2 flex items-center pl-3 pointer-events-none">
-                <Calendar/>
+const NewRequestFormStep2 = () => {
+    const [showSuccessModal,
+        setShowSuccessModal] = React.useState(false);
+    return (
+        <div>
+          <p style={{fontFamily: 'Shabnam'}} className="text-xl text-mainColor font-normal mt-3.5 mb-8 ">گام 2 - فهرست اسامی و مشخصات ماموران اعزامی</p>
+            <div className="flex w-full flex-wrap">
+                <div className="flex flex-col w-[31%] ml-[1.5%] mb-5">
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">نام</span>
+                    <div class="mt-2">
+                        <input style={{fontFamily: 'Shabnam'}}
+                            type="text"
+                            id="input-group-1"
+                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            placeholder="نام"/>
+                    </div>
+                </div>
+                <div className="flex flex-col w-[32%] mx-[1.5%] mb-5">
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">نام خانوادگی</span>
+                    <div class="mt-2">
+                        <input style={{fontFamily: 'Shabnam'}}
+                            type="text"
+                            id="input-group-1"
+                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            placeholder="نام خانوادگی"/>
+                    </div>
+                </div>
+                <div className="flex flex-col w-[31%] mr-[1.5%] mb-5">
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">نام پدر</span>
+                    <div class="mt-2">
+                        <input style={{fontFamily: 'Shabnam'}}
+                            type="text"
+                            id="input-group-1"
+                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            placeholder="نام پدر"/>
+                    </div>
+                </div>
+                <div className="flex flex-col w-[31%] ml-[1.5%] mb-7">
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">شماره شناسنامه</span>
+                    <div class="mt-2">
+                        <input style={{fontFamily: 'Shabnam'}}
+                            type="text"
+                            id="input-group-1"
+                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            placeholder="شماره شناسنامه"/>
+                    </div>
+                </div>
+                <div className="flex flex-col w-[32%] mx-[1.5%] mb-7">
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">کد ملی</span>
+                    <div class="mt-2">
+                        <input style={{fontFamily: 'Shabnam'}}
+                            type="text"
+                            id="input-group-1"
+                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            placeholder="کد ملی"/>
+                    </div>
+                </div>
+                <div className="flex flex-col w-[31%] mr-[1.5%] mb-7">
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">تاریخ تولد</span>
+                    <div class="mt-2">
+                        <input style={{fontFamily: 'Shabnam'}}
+                            type="text"
+                            id="input-group-1"
+                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            placeholder="تاریخ تولد"/>
+                    </div>
+                </div>
+                <div className="flex flex-col w-[25%] ml-[1.5%] mb-12">
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">جنسیت</span>
+                    <div class="mt-6 flex items-center">
+                    <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1" type="radio" name="gender" id="woman" />
+                          <label style={{fontFamily: 'Shabnam'}} className="" For="a1">خانم</label>
+                          <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-8 ml-1" type="radio" name="gender" id="man" />
+                          <label style={{fontFamily: 'Shabnam'}} className="" For="a2">آقا</label>
+                    </div>
+                </div>
+                <div className="flex flex-col w-[20%] ml-[1%] mb-12">
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">وضعیت تاهل</span>
+                    <div class="mt-6 flex items-center">
+                    <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1" type="radio" name="MaritalStatus" id="single" />
+                          <label style={{fontFamily: 'Shabnam'}} className="" For="a1">مجرد</label>
+                          <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-8 ml-1" type="radio" name="MaritalStatus" id="married" />
+                          <label style={{fontFamily: 'Shabnam'}} className="" For="a2">متاهل</label>
+                    </div>
+                </div>
+                <div className="flex flex-col w-[24%] mx-[1.5%] mb-12">
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">مدرک</span>
+                    <div class="mt-2">
+                        <input style={{fontFamily: 'Shabnam'}}
+                            type="text"
+                            id="input-group-1"
+                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            placeholder="مدرک"/>
+                    </div>
+                </div>
+                <div className="flex flex-col w-[24%] mr-[1.5%] mb-12">
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">رشته تحصیلی</span>
+                    <div class="mt-2">
+                        <input style={{fontFamily: 'Shabnam'}}
+                            type="text"
+                            id="input-group-1"
+                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            placeholder="رشته تحصیلی"/>
+                    </div>
+                </div>
+                <div className="flex flex-col w-[17%] ml-[5%] mb-12">
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">سابقه کار (سال)</span>
+                    <div class="mt-2">
+                        <input style={{fontFamily: 'Shabnam'}}
+                            type="text"
+                            id="input-group-1"
+                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            placeholder="سابقه کار به سال"/>
+                    </div>
+                </div>
+                <div className="flex flex-col w-[43%] ml-[1.5%] mb-12">
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">میزان آشنایی با زبان خارجی</span>
+                    <div class="mt-6 flex items-center">
+                          <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1" type="radio" name="LanguageKnowledge" id="nothing" />
+                          <label style={{fontFamily: 'Shabnam'}} className="" For="a1">هیچ</label>
+                          <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-8 ml-1" type="radio" name="LanguageKnowledge" id="low" />
+                          <label style={{fontFamily: 'Shabnam'}} className="" For="a2">کم</label>
+                          <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-8 ml-1" type="radio" name="LanguageKnowledge" id="medium" />
+                          <label style={{fontFamily: 'Shabnam'}} className="" For="a2">متوسط</label>
+                          <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-8 ml-1" type="radio" name="LanguageKnowledge" id="acceptable" />
+                          <label style={{fontFamily: 'Shabnam'}} className="" For="a2">قابل قبول</label>
+                    </div>
+                </div>
+                <div className="flex flex-col w-[32%] mr-[1.5%] mb-12">
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">شماره تلفن همراه</span>
+                    <div class="mt-2">
+                        <input style={{fontFamily: 'Shabnam'}}
+                            type="text"
+                            id="input-group-1"
+                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            placeholder="شماره تلفن همراه"/>
+                    </div>
+                </div>
+                <div className="flex flex-col w-[31%] ml-[3%] mb-12">
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">شماره تلفن ثابت</span>
+                    <div class="mt-2">
+                        <input style={{fontFamily: 'Shabnam'}}
+                            type="text"
+                            id="input-group-1"
+                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            placeholder="شماره تلفن ثابت"/>
+                    </div>
+                </div>
+                <div className="flex flex-col w-[31%] ml-[1.5%] mb-12">
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">نوع گذرنامه</span>
+                    <div class="mt-6 flex items-center">
+                          <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1" type="radio" name="passport" id="normal" />
+                          <label style={{fontFamily: 'Shabnam'}} className="" For="a1">عادی</label>
+                          <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-8 ml-1" type="radio" name="passport" id="service" />
+                          <label style={{fontFamily: 'Shabnam'}} className="" For="a2">خدمت</label>
+                          <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-8 ml-1" type="radio" name="passport" id="political" />
+                          <label style={{fontFamily: 'Shabnam'}} className="" For="a2">سیاسی</label>
+                          
+                    </div>
+                </div>
+                <div className="flex flex-col w-[32%] mr-[1.5%] mb-12">
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">محل خدمت</span>
+                    <div class="mt-2">
+                        <input style={{fontFamily: 'Shabnam'}}
+                            type="text"
+                            id="input-group-1"
+                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            placeholder="محل خدمت"/>
+                    </div>
+                </div>
+                <div className="flex flex-col w-[31%] ml-[1.5%] mb-10">
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">سمت</span>
+                    <div class="mt-2">
+                        <input style={{fontFamily: 'Shabnam'}}
+                            type="text"
+                            id="input-group-1"
+                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            placeholder="سمت"/>
+                    </div>
+                </div>
+                <div className="flex flex-col w-[33%] mx-[1.5%] mb-10">
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">وضعیت استخدامی</span>
+                    <div class="mt-2">
+                        <input style={{fontFamily: 'Shabnam'}}
+                            type="text"
+                            id="input-group-1"
+                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            placeholder="وضعیت استخدامی"/>
+                    </div>
+                </div>
+                <div className="flex flex-col w-[30%] mr-[1.5%] mb-10">
+                    <div class="flex justify-end">
+                    <button style={{fontFamily: 'Shabnam'}} className="w-40 h-11 mt-7 bg-mainColor shadow-blueShadow font-IRsans text-white text-xl font-normal rounded-lg hover:bg-lightBlue hover:text-mainColor">
+                    + افزودن 
+                    </button>
+                    </div>
+                </div>
+                
+                
             </div>
-            <input type="text" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="تاریخ سفر"/>
-        </div>
-       
-    
-             
-      </div>
-      <div class="my-2 w-[100%] lg:w-[48%] xs:w-[100%] xs:my-1">
-            <span>دلایل فوری بودن سفر خود را بنویسید</span>
-            <textarea type="text" id="input-group-1" class="pr-4 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  h-[218px]" placeholder="توضیحات خود را اینجا بنویسید..."/>
-        </div>  
-        <p style={{fontFamily:'Shabnam'}} className="font-IRSans text-black text-base font-bold mt-5 mb-5">
-            بارگزاری مستندات سفر
-        </p>
-        <p style={{fontFamily:'Shabnam'}} className="font-IRSans text-black text-base font-medium">
-            مستندات سفر
-        </p>
-        <label for="dropzone-file" class="mt-2 flex flex-col items-center justify-center w-[30%] md:w-full h-12 border-2 border-borderGray border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
-            <div class="flex flex-col items-center justify-center pt-5 pb-6 font-IRsans">
-                <svg aria-hidden="true" class="w-5 h-5 mt-1 text-[#B7B8BB]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
-                <p style={{fontFamily:'Shabnam'}} class="mb-0 text-xs text-gray-500 dark:text-gray-400"><span style={{fontFamily:'Shabnam'}} class="font-normal font-IRsans ">انتخاب فایل</span></p>
-               
-            </div>
-            <input id="dropzone-file" type="file" class="hidden" />
-        </label>
-      
-        <button onClick={() => setShowSuccessModal(true)} className="w-[140px] h-10 bg-mainColor shadow-blueShadow mt-5 font-IRsans xs:mr-auto xs:float-left text-white float-left text-lg rounded-lg hover:bg-lightBlue hover:text-mainColor">
-                        ثبت درخواست
+            <div className="flex justify-end">
+            <button
+                style={{fontFamily: 'Shabnam'}}
+                className="w-40 h-12 mt-20 bg-midGray shadow-blueShadow font-IRsans text-white text-xl font-normal rounded-lg hover:bg-lightGray hover:text-darkGray">
+                گام قبلی
             </button>
-    
-        {showSuccessModal ?
-                  <>
-                   <div
-                   className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
-                 >
-                   <div className="relative w-[30%] my-5 mx-auto max-w-5xl">
-                    
-                     <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-                  
-                       <div className="flex items-centers justify-center p-4 border-b border-solid border-b-[#EDF3FA] rounded-t">
-                         <Check/>
-                         <span style={{fontFamily:'Shabnam'}} className="mr-3 text-base font-bold font-IRsans text-black text-center">
-                         درخواست شما با موفقیت ثبت شد
-                         </span>
-                      
-                       </div>
-                       
-                       <div className="relative p-6 flex-auto">
-                         <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm leading-relaxed break-words whitespace-normal font-IRsans">
-                         درخواست شما با کد رهگیری 1256359 ثبت شد.میتوانید نتیجه ی درخواست خود را پس از بررسی توسط ارگان مربوطه،در قسمت تاریخچه درخواست ها مشاهده کنید.
-همچنین میتوانید فرم پر شده ی درخواست خود را دانلود کنید.
-</p>
-                       </div>
-                      
-                       <div className="flex items-center mb-2 justify-endborder-t justify-center border-solid border-slate-200 rounded-b">
-                         <button
-                           className="text-white bg-mainColor shadow-blueShadow rounded-lg font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                           type="button"
-                           onClick={() => setShowSuccessModal(false)}
-                         >
-                           دانلود فرم ثبت شده
-                         </button>
-                        <Link style={{fontFamily:'Shabnam'}}  to={'/newRequest'}>
-                        <button
-                           className="text-mainColor font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                           type="button"
-                           
-                         >
-                          تاریخچه درخواست ها
-                         </button>
-                        </Link>
-                       </div>
-                     </div>
-                   </div>
-                 </div>
-                 <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
-                 
-                  </>
-                  :null
-               }
-    </div>
-    
-         
+            <button
+                style={{fontFamily: 'Shabnam'}}
+                className="w-40 h-12 mt-20 mr-4 bg-mainColor shadow-blueShadow font-IRsans text-white text-xl font-normal rounded-lg hover:bg-lightBlue hover:text-mainColor">
+                گام بعدی
+            </button>
+            </div>
+
+        </div>
+
     )
 }
 export default NewRequestFormStep2;
