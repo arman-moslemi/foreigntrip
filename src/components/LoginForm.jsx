@@ -1,15 +1,18 @@
-import React from "react";
+import React,{useState,useEffect,useRef} from "react";
 
 import {ReactComponent as User} from "../assets/icon/black/profile.svg"
 import {ReactComponent as Pass} from "../assets/icon/black/lock.svg"
 import {ReactComponent as Reload} from "../assets/icon/black/reload.svg"
 import {ReactComponent as Secure} from "../assets/icon/black/secure.svg"
+import { Captcha } from "@nabidam/react-captcha";
 
-import Captcha from "../assets/img/captcha.png"
+// import Captcha from "../assets/img/captcha.png"
 import {Link} from "react-router-dom";
 const LoginForm = () => {
     // const [passwordShown, setPasswordShown] = useState(false); const
     // togglePassword = () => {   setPasswordShown(!passwordShown); };
+    const captchaRef = useRef();
+    const [captcha,setCaptcha]=useState()
 
     return (
         <div>
@@ -57,15 +60,23 @@ const LoginForm = () => {
                         id="input-group-1"
                         class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md mb-0 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
                         placeholder="کد امنیتی"/>
-                    <img src={Captcha} alt="captcha" className="w-[90px] top-1 left-2 absolute"/>
+                
+                    {/* <img src={Captcha} alt="captcha" className="w-[90px] top-1 left-2 absolute"/> */}
                 </div>
-                <button>
+                {/* <button>
                     <Reload/>
-                </button>
+                </button> */}
+              
             </div>
+            <div id="captchas"  className="w-[90px] top-1 left-2  flex">
+         <Captcha className="absolute"  setWord={setCaptcha} ref={captchaRef} 
+         reloadEl={<button onClick={()=>captchaRef.current.initializeCaptcha()}>
+        <Reload/>  </button>}
+         persianChars={true} fontFamily={"Shabnam"} backgroundColor={"#a0afd5"} fontColor="#fff" border="1px solid #000"/>
+         </div>
             <div className="flex mt-3 mb-4">
-                <p style={{fontFamily:'Shabnam'}} style={{fontFamily:'Shabnam'}} className="text-xs font-IRsans text-black font-normal">کلمه عبور خود را فراموش کرده اید ؟</p>
-                <Link style={{fontFamily:'Shabnam'}}  style={{fontFamily:'Shabnam'}} to={'/changePassword'} className="text-xs font-IRsans text-linkBlue font-normal mr-1">تغییر رمز عبور</Link>
+                <p style={{fontFamily:'Shabnam'}}className="text-xs font-IRsans text-black font-normal">کلمه عبور خود را فراموش کرده اید ؟</p>
+                <Link style={{fontFamily:'Shabnam'}}  to={'/changePassword'} className="text-xs font-IRsans text-linkBlue font-normal mr-1">تغییر رمز عبور</Link>
             </div>
             {/* <div className="flex items-center justify-start mt-2">
                     <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-black text-xs">
@@ -75,7 +86,7 @@ const LoginForm = () => {
                         تغییر رمز عبور
                     </Link>
                 </div> */}
-            <Link style={{fontFamily:'Shabnam'}}  style={{fontFamily:'Shabnam'}} to={'/newPassword'}>
+            <Link style={{fontFamily:'Shabnam'}}   to={'/newPassword'}>
                 <button style={{fontFamily:'Shabnam'}}
                     className="w-full h-12 bg-mainColor shadow-blueShadow mt-6 font-IRsans text-white text-xl font-medium rounded-lg hover:bg-lightBlue hover:text-mainColor">
                       ورود   
