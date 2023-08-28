@@ -51,6 +51,7 @@ import SendMessageList from "../pages/MainPanel/SendMessageList";
 import Message from "../pages/MainPanel/Message";
 import RequestsList from "../pages/MainPanel/RequestsList";
 import RequestsView from "../pages/MainPanel/RequestsView";
+import UploadSignature from "../pages/MainPanel/UploadSignature";
 const MainRoutes = (props) =>{
     return(
             <BrowserRouter>
@@ -195,6 +196,9 @@ const MainRoutes = (props) =>{
                 </Routes>
                 <Routes>
                     <Route path="/mainAdmin/requestView" element={<RequestsView/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/mainAdmin/uploadSignature" element={<UploadSignature/>}/>
                 </Routes>
             </BrowserRouter>
     )
