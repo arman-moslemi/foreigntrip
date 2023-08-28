@@ -6,7 +6,7 @@ const Userlist = () =>{
 
     return(
         <>
-         <div className="w-full h-screen md:h-screen bg-lightGray py-10 px-32 xl:px-0 md:p-0  lg:h-screen" style={{direction:'rtl'}}>
+         <div className="w-full h-screen md:h-screen bg-lightGray py-10 px-20 xl:px-0 md:p-0  lg:h-screen" style={{direction:'rtl'}}>
 
 <div className="flex md:block">
 <SuperVisorRightMenu/>

@@ -1,9 +1,9 @@
 import React,{useState} from "react";
 import MainRightMenu from "../../components/MainRightMenu";
 import { Link } from "react-router-dom";
-import {ReactComponent as Ticket} from "../../assets/icon/blue/ticket.svg"
-import TicketListTable from "../../components/TicketListTable";
-const TicketListMain = () => {
+import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
+import MessageForm from "../../components/MessageForm";
+const Message = () => {
     const [showNewTicket,setShowNewTicket] = React.useState(false);
     return(
         <div className="w-full h-screen bg-lightGray py-10 px-20 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>
@@ -11,17 +11,15 @@ const TicketListMain = () => {
                 <MainRightMenu/>
                 <div className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl p-12 my-10 w-[80%] xl:p-5 md:w-[95%] md:rounded-xl md:mx-auto">
                 <div className="flex items-center justify-between sm:flex-wrap">
-                    <div className="flex">
-                    <Ticket/>
+                    <div className="flex items-center">
+                    <Doc/>
                 <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-mainColor mr-3 font-bold">
-                       تیکت ها و پشتیبانی
+                   ارسال پیام جدید
                 </span>
                     </div>
-                    <button onClick={() =>{setShowNewTicket(true)}} className="bg-mainColor px-4 py-1.5 shadow-blueShadow text-white font-IRSans text-base rounded-md sm:mr-auto sm:mt-5">
-                        + تیکت جدید
-                    </button>
+             
                 </div>
-                <TicketListTable/>
+                <MessageForm/>
                 </div>
             </div>
             {
@@ -47,7 +45,7 @@ const TicketListMain = () => {
                         <span style={{fontFamily:'Shabnam'}} className="font-IRSans text-black font-Bold text-base">
                             عنوان پیام شما
                         </span>
-                        <input type="text" className="pr-2 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5" placeholder="عنوان پیام خود را اینجا بنویسید..."/>
+                        <input type="text" style={{fontFamily:'Shabnam'}} className="pr-2 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5" placeholder="عنوان پیام خود را اینجا بنویسید..."/>
                        </div>
                       
                        <div className="flex items-center mb-2 justify-endborder-t justify-center border-solid border-slate-200 rounded-b">
@@ -60,13 +58,16 @@ const TicketListMain = () => {
                           بستن
                          </button>
                         </Link>
-                         <button
+                        <Link to={'/mainAdmin/ticketShowMain'}>
+                        <button
                            className="text-white bg-mainColor shadow-blueShadow rounded-lg font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                            type="button"
-                           onClick={() => setShowNewTicket(false)}
+                          
                          >
                           شروع ارسال پیام
                          </button>
+                        </Link>
+                      
                       
                        </div>
                      </div>
@@ -80,7 +81,7 @@ const TicketListMain = () => {
         </div>
     )
 }
-export default TicketListMain;
+export default Message;
 
 
 /*responsive--done*/
