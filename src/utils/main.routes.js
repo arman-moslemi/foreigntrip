@@ -49,6 +49,8 @@ import TicketShowMain from "../pages/MainPanel/TicketShowMain";
 import AdminList from "../pages/MainPanel/AdminList";
 import SendMessageList from "../pages/MainPanel/SendMessageList";
 import Message from "../pages/MainPanel/Message";
+import RequestsList from "../pages/MainPanel/RequestsList";
+import RequestsView from "../pages/MainPanel/RequestsView";
 const MainRoutes = (props) =>{
     return(
             <BrowserRouter>
@@ -187,6 +189,12 @@ const MainRoutes = (props) =>{
                 </Routes>
                 <Routes>
                     <Route path="/mainAdmin/message" element={<Message/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/mainAdmin/requestsList" element={<RequestsList/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/mainAdmin/requestView" element={<RequestsView/>}/>
                 </Routes>
             </BrowserRouter>
     )
