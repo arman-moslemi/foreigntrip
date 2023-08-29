@@ -5,6 +5,7 @@ import {ReactComponent as Pass} from "../assets/icon/black/lock.svg"
 import {ReactComponent as Reload} from "../assets/icon/black/reload.svg"
 import {ReactComponent as Secure} from "../assets/icon/black/secure.svg"
 import { Captcha } from "@nabidam/react-captcha";
+import './components.css';
 
 // import Captcha from "../assets/img/captcha.png"
 import {Link} from "react-router-dom";
