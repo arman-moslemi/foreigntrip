@@ -12,3 +12,17 @@
 	height: 30px !important;
 	outline-color: transparent !important;
 }
+#StartDate input{
+	/* border:1px solid #000; */
+	height: 38px !important;
+	width: 100%;
+	padding-right: 10px;
+	border-radius: 6px;
+}
+#EndDate input{
+	/* border:1px solid #000; */
+	height: 38px !important;
+	width: 100%;
+	padding-right: 10px;
+	border-radius: 6px;
+}
