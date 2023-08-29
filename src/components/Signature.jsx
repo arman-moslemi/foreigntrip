@@ -6,7 +6,7 @@ const Signature = () =>{
 const [showModal,setShowModal] = React.useState(false);
 const [showAlert,setShowAlert] = React.useState(false);
     return (
-        <div className="border border-borderGray rounded-md pt-10 px-5 py-5 mt-7">
+        <div className="rounded-md  mt-7">
         
         <p style={{fontFamily:'Shabnam'}} className="font-IRsans font-bold text-black">
             تایید درخواست و بارگزاری امضاها
@@ -209,7 +209,7 @@ const [showAlert,setShowAlert] = React.useState(false);
             <div
             className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
           >
-            <div className="relative w-[20%] md:w-[90%] my-5 mx-auto max-w-3xl">
+            <div className="relative w-[30%] md:w-[90%] my-5 mx-auto max-w-3xl">
              
               <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
            
@@ -228,7 +228,7 @@ const [showAlert,setShowAlert] = React.useState(false);
                
                 <div className="flex items-center justify-center  border-solid border-slate-200 rounded-b mb-4">
                   <button
-                    className=" float-left font-IRsans text-white flex bg-mainColor items-center rounded-md shadow-blueShadow uppercase px-3 py-2 mx-1 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className=" float-left font-IRsans text-white flex bg-mainColor items-center rounded-md shadow-blueShadow uppercase px-12 py-2 mx-1 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowModal(false)}
                   >
@@ -236,7 +236,15 @@ const [showAlert,setShowAlert] = React.useState(false);
                    
                     
                   </button>
-                
+                  <button
+                    className=" float-left font-IRsans text-black flex bg-transparent items-center rounded-md  uppercase px-3 py-2 mx-1 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    type="button"
+                    onClick={() => setShowModal(false)}
+                  >
+                اصلاح
+                   
+                    
+                  </button>
                 </div>
               </div>
             </div>

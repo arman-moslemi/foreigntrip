@@ -28,6 +28,7 @@ module.exports = {
     },
     boxShadow:{
       blueShadow:'0px 4px 20px rgba(8, 137, 165, 0.68)',
+      midGrayShadow:'0px 4px 20px rgba(146, 146, 146, 0.25)',
       blackShadow:'0px 4px 50px rgba(146, 146, 146, 0.25)',
       redShadow:'0px 4px 20px rgba(255, 0, 0, 0.43)',
       greenShadow:'0px 4px 20px rgba(58, 181, 14, 0.49)',
