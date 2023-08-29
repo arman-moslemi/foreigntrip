@@ -1,14 +1,14 @@
 import React from "react";
-import MainRightMenu from "../../components/MainRightMenu";
+import InternationalRightMenu from "../../components/InternationalComponent/InternationalRightMenu";
 import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
-import InternatioanlRequestTable from "../../components/InternatioanlRequestTable";
+import InternatioanlRequestTable from "../../components/InternationalComponent/InternatioanlRequestTable";
 import {ReactComponent as Search} from "../../assets/icon/white/search.svg"
 import { Link } from "react-router-dom";
 const InternationalRequestsList = () =>{
     return(
         <div className="w-full h-screen bg-lightGray py-10 px-10 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>
         <div className="flex md:block">
-            <MainRightMenu/>
+            <InternationalRightMenu/>
             <div className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl p-8 my-10 w-[80%] xl:p-5 md:w-[95%] md:rounded-xl md:mx-auto">
            
             <div className="flex items-center">
@@ -26,7 +26,7 @@ const InternationalRequestsList = () =>{
                     </button>
                 </div>
                 <div className="flex items-end">
-                <div className="flex flex-col w-[130px] ">
+                <div className="flex flex-col w-[150px] ">
                     <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal font-IRsans">بازه زمانی</span>
                     <div class=" mt-3">
                         
@@ -49,7 +49,7 @@ const InternationalRequestsList = () =>{
                             placeholder="آرمان"/> */}
                     </div>
                 </div>
-                <div className="flex flex-col w-[130px] mr-2">
+                <div className="flex flex-col w-[150px] mr-2">
                 <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal font-IRsans">وضعیت درخواست</span>
                    <div class=" mt-3">
                   
@@ -71,7 +71,7 @@ const InternationalRequestsList = () =>{
                             placeholder="آرمان"/> */}
                     </div>
                 </div>
-                <div className="flex flex-col w-[130px] mr-2">
+                <div className="flex flex-col w-[150px] mr-2">
                 <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal font-IRsans">تایید شده توسط</span>
 
                    <div class=" mt-3">

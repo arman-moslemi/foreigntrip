@@ -1,6 +1,6 @@
 import React from "react";
 import UserlistTable from "../../components/UserlistTable";
-import SuperVisorRightMenu from "../../components/SuperVisorRightMenu";
+import SuperVisorRightMenu from "../../components/SupervisorComponent/SuperVisorRightMenu";
 import {ReactComponent as User} from "../../assets/icon/blue/profile.svg";
 const Userlist = () =>{
 

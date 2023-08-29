@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import MainRightMenu from "../../components/MainRightMenu";
+import InternationalRightMenu from "../../components/InternationalComponent/InternationalRightMenu";
 import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
 import ReportTable from "../../components/ReportTable";
 import {ReactComponent as Search} from "../../assets/icon/white/search.svg"
@@ -11,18 +11,14 @@ const InternationalReportsView = () =>{
     return(
         <div className="w-full h-full  bg-lightGray py-10 px-20 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>
         <div className="flex md:block">
-            <MainRightMenu/>
+            <InternationalRightMenu/>
             <div className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl p-12 my-10 w-[80%] xl:p-5 md:w-[95%] md:rounded-xl md:mx-auto">
             <div className="flex items-center justify-between">
                     
                 <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-mainColor  font-bold">
                        مشاهده گزارش ارسال شده
                 </span>
-                <div className="bg-green text-white font-bold px-5 py-2 rounded-full">
-                    <span style={{fontFamily:'Shabnam'}}>
-                        تایید شده
-                    </span>
-                </div>
+           
                 </div>
                 <div className="flex justify-between flex-wrap">
                 <div className="w-full my-3">
@@ -149,25 +145,24 @@ const InternationalReportsView = () =>{
            
                 <div className="flex items-start justify-between p-4 border-b border-solid border-b-midGray rounded-t">
                   <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-red">
-                    رد درخواست
-                  </span>
+                    رد گزارش                  </span>
                
                 </div>
                 
                 <div className="relative p-6 flex-auto">
                   <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-IRsans leading-relaxed">
-                علت رد خواست مامور اعزامی با موفقیت برای ایشان ارسال گردید.
+                علت رد گزارش مامور اعزامی با موفقیت برای ایشان ارسال گردید.
                   </p>
                 </div>
                
                 <div className="flex items-center justify-endborder-t justify-end border-solid border-slate-200 rounded-b">
-                  <button style={{fontFamily:'Shabnam'}} 
+                  <Link to={'/internationalAdmin/reportList'} style={{fontFamily:'Shabnam'}} 
                     className="text-mainColor font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowSendModal(false)}
                   >
                     بستن
-                  </button>
+                  </Link>
                 
                 </div>
               </div>
@@ -185,10 +180,10 @@ const InternationalReportsView = () =>{
                 <button style={{fontFamily:'Shabnam'}}  className=" bg-[#ff0000] w-[162px] rounded-md h-[40px] flex justify-center items-center text-white  font-IRsans font-medium text-base shadow-redShadow hover:bg-white hover:text-[#ff0000] hover:border-2 hover:border-[#ff0000]" 
                 onClick={()=>setShow(true)
                 }>
-                        رد کردن درخواست
+                        رد کردن گزارش
                     </button>
                     <button style={{fontFamily:'Shabnam'}}  onClick={() => setShowSuccessModal(true)} className="mr-5 bg-[#3AB50E] hover:bg-white hover:text-[#3AB50E] hover:border-2 hover:border-[#3AB50E] w-[162px] rounded-md h-[40px] flex justify-center items-center text-white  font-IRsans font-medium text-base shadow-greenShadow">
-                       تایید درخواست
+                       تایید گزارش
                     </button>
                     {showSuccessModal ?
            <>
@@ -201,14 +196,14 @@ const InternationalReportsView = () =>{
            
                 <div className="flex items-start justify-between p-4 border-b border-solid border-b-midGray rounded-t">
                   <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-green">
-                    تایید درخواست
+                    تایید گزارش
                   </span>
                
                 </div>
                 
                 <div className="relative p-6 flex-auto">
                   <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-IRsans">
-                درخواست مامور اعزامی توسط شما در گام اول تایید شد.فرم این مامور را دانلود کرده و پس از گرفتن تایید مسئولان،قسمت امضا را تکمیل کنید تا فرم تایید نهایی شود.برای این کار به صفحه ی تاریخچه درخواست ها مراجعه کنید.
+تایید گزارش مامور اعزامی با موفقیت انجام شد.
                   </p>
                 </div>
                
@@ -220,23 +215,12 @@ const InternationalReportsView = () =>{
                   >
                   
                     <span style={{fontFamily:'Shabnam'}} className="text-white font-IRsans text-sm font-bold">
-                    دانلود فرم با فرمت doc
+                   بستن
                     </span>
                    
                     
                   </button>
-                  <button style={{fontFamily:'Shabnam'}} 
-                    className=" float-left flex items-center bg-mainColor rounded-md shadow-blueShadow uppercase px-3 py-2 mx-1 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                    type="button"
-                    onClick={() => setShowSuccessModal(false)}
-                  >
-                     
-                    <span style={{fontFamily:'Shabnam'}} className="text-white font-IRsans text-sm font-bold">
-                    دانلود فرم با فرمت Pdf
-                    </span>
-                   
-                    
-                  </button>
+             
                 </div>
               </div>
             </div>

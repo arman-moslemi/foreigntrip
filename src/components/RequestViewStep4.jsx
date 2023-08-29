@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 import {ReactComponent as Download} from "../assets/icon/blue/download.svg"
+import { Link } from "react-router-dom";
 const RequestViewStep4 = () =>{
 const [showReason,
         setShowReason]= useState(false);
@@ -99,13 +100,13 @@ const [showButton,setShowButton] = React.useState(false);
                 </div>
                
                 <div className="flex items-center justify-endborder-t justify-end border-solid border-slate-200 rounded-b">
-                  <button style={{fontFamily:'Shabnam'}} 
+                  <Link to={'/internationalAdmin/requestList'} style={{fontFamily:'Shabnam'}} 
                     className="text-mainColor font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowSendModal(false)}
                   >
                     بستن
-                  </button>
+                  </Link>
                 
                 </div>
               </div>
@@ -151,7 +152,7 @@ const [showButton,setShowButton] = React.useState(false);
                 </div>
                
                 <div className="flex items-center justify-center  border-solid border-slate-200 rounded-b mb-4">
-                  <button style={{fontFamily:'Shabnam'}} 
+                  <Link to={'/internationalAdmin/uploadSignature'} style={{fontFamily:'Shabnam'}} 
                     className=" float-left flex bg-mainColor items-center rounded-md shadow-blueShadow uppercase px-3 py-2 mx-1 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowSuccessModal(false)}
@@ -162,8 +163,8 @@ const [showButton,setShowButton] = React.useState(false);
                     </span>
                    
                     
-                  </button>
-                  <button style={{fontFamily:'Shabnam'}} 
+                  </Link>
+                  <Link to={'/internationalAdmin/uploadSignature'} style={{fontFamily:'Shabnam'}} 
                     className=" float-left flex items-center bg-mainColor rounded-md shadow-blueShadow uppercase px-3 py-2 mx-1 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowSuccessModal(false)}
@@ -174,7 +175,7 @@ const [showButton,setShowButton] = React.useState(false);
                     </span>
                    
                     
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

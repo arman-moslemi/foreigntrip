@@ -1,7 +1,7 @@
 import React from "react";
 import './components.css';
 import { Link } from "react-router-dom";
-import {ReactComponent as Eye} from "../assets/icon/black/eye.svg";
+import {ReactComponent as Eye} from "../../assets/icon/black/eye.svg";
 export const truncate = (str, len) => {
   // console.log("truncate", str, str.length, len);
   if (str.length > len && str.length > 0) {

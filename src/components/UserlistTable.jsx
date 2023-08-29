@@ -63,8 +63,8 @@ const UserlistTable = () =>{
       ]
     const tableBody = tableRow.map((tableRow) =>
     <tr key={tableRow.id} className="border-b border-b-borderGray">
-      <td className="py-4 text-sm text-right pr-4 font-IRsans px-4">{tableRow.num}</td>
-      <td className="py-4 text-sm text-right font-IRsans px-4">
+      <td className="py-4 text-sm text-right pr-4 font-IRsans px-4" style={{fontFamily:'Shabnam'}}>{tableRow.num}</td>
+      <td className="py-4 text-sm text-right font-IRsans px-4" style={{fontFamily:'Shabnam'}}>
         
       
           {tableRow.name}
@@ -73,11 +73,11 @@ const UserlistTable = () =>{
        
       </td>
    
-      <td className="py-4 text-sm text-center px-4 font-IRsans" >{tableRow.position}</td>
-      <td className="py-4 text-sm text-center px-4 font-IRsans"  >{tableRow.holding}</td>
-      <td className="py-4 text-sm text-center px-4 font-IRsans">{tableRow.company}</td>
-      <td className="py-4 text-sm text-center px-4 font-IRsans">{tableRow.lastEdit}</td>
-      <td className="py-4 text-sm text-center px-4 font-IRsans">{tableRow.status}</td>
+      <td className="py-4 text-sm text-center px-4 font-IRsans" style={{fontFamily:'Shabnam'}}>{tableRow.position}</td>
+      <td className="py-4 text-sm text-center px-4 font-IRsans" style={{fontFamily:'Shabnam'}} >{tableRow.holding}</td>
+      <td className="py-4 text-sm text-center px-4 font-IRsans" style={{fontFamily:'Shabnam'}}>{tableRow.company}</td>
+      <td className="py-4 text-sm text-center px-4 font-IRsans" style={{fontFamily:'Shabnam'}}>{tableRow.lastEdit}</td>
+      <td className="py-4 text-sm text-center px-4 font-IRsans" style={{fontFamily:'Shabnam'}}>{tableRow.status}</td>
       </tr> 
     )
     return(
@@ -90,12 +90,12 @@ const UserlistTable = () =>{
                 <input type="text" className="border rounded-full w-80 border-midGray px-4 py-1.5 font-IRsans md:mt-3" placeholder="جستجو کنید ..."/>
             </div>
           <div className="flex">
-          <button className="bg-mainColor shadow-blueShadow rounded-md text-base font-IRsans text-white flex px-5 py-2  items-center justify-center md:float-left md:mt-3">
+          <button style={{fontFamily:'Shabnam'}} className="bg-mainColor shadow-blueShadow rounded-md text-base font-IRsans text-white flex px-5 py-2  items-center justify-center md:float-left md:mt-3">
                 <Search/>
                 جستجو
 
             </button>
-          <button className="bg-mainColor shadow-blueShadow rounded-md text-base mr-2 font-IRsans text-white flex px-5 py-2  items-center justify-center md:float-left md:mt-3">
+          <button style={{fontFamily:'Shabnam'}} className="bg-mainColor shadow-blueShadow rounded-md text-base mr-2 font-IRsans text-white flex px-5 py-2  items-center justify-center md:float-left md:mt-3">
                 <Download className="w-[25px]"/>
                 گزارش گیری
 
@@ -106,14 +106,14 @@ const UserlistTable = () =>{
           <table class="table-auto w-full font-IRsans">
   <thead className="bg-darkGray h-11 rounded-t-2xl w-full whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}> 
     <tr className="text-white  p-6 whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}>
-      <th className="text-right pr-4 font-IRsans md:px-4">ردیف</th>
-      <th className="text-right font-IRsans md:px-4 pr-4">نام و نام خانوادگی</th>
+      <th className="text-right pr-4 font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>ردیف</th>
+      <th className="text-right font-IRsans md:px-4 pr-4" style={{fontFamily:'Shabnam'}}>نام و نام خانوادگی</th>
 
-      <th className="text-center font-IRsan md:px-4">سمت</th>
-      <th className="text-center font-IRsans md:px-4">هولدینگ</th>
-      <th className="text-center font-IRsans md:px-4" >شرکت</th>
-      <th className="text-center font-IRsans md:px-4" >آخرین به روزرسانی</th>
-      <th className="text-center font-IRsans md:px-4" >وضعیت</th>
+      <th className="text-center font-IRsan md:px-4" style={{fontFamily:'Shabnam'}}>سمت</th>
+      <th className="text-center font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>هولدینگ</th>
+      <th className="text-center font-IRsans md:px-4" style={{fontFamily:'Shabnam'}} >شرکت</th>
+      <th className="text-center font-IRsans md:px-4" style={{fontFamily:'Shabnam'}} >آخرین به روزرسانی</th>
+      <th className="text-center font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>وضعیت</th>
     </tr>
   </thead>
   <tbody>

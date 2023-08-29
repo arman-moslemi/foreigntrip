@@ -1,7 +1,7 @@
 import React from "react";
 import './components.css';
 import { Link } from "react-router-dom";
-import {ReactComponent as Eye} from "../assets/icon/black/eye.svg"
+import {ReactComponent as Eye} from "../../assets/icon/black/eye.svg"
 export const truncate = (str, len) => {
   // console.log("truncate", str, str.length, len);
   if (str.length > len && str.length > 0) {
@@ -14,95 +14,77 @@ export const truncate = (str, len) => {
   return str;
 };
 
-const InternationalMessageList = () =>{
+const InternationalTicketListTable = () =>{
   const [showSuccessModal, setShowSuccessModal] = React.useState(false);
   const [showRuleModal, setShowRuleModal] = React.useState(false);
 const tableRow =[
   {
     id:'1',
    num:'1',
-   subject:truncate("با سلام می توانید از امروز اطلاعات ",30),
-   text:truncate("پس از ورود به پنل می توانید از امروز اطلاعات خود را ویرایش کنید",40),
-   to:'کاربران ناظر(سطح 4)',
-   date:'02/02/12-23:50',
-  
-
-   function: <Link style={{fontFamily:'Shabnam'}}  className="flex justify-center" to={'/mainAdmin/ticketShowMain'}>
+   date:'#1234',
+   subject:truncate("فراموشی رمز عبور ...",30),
+   location:'02/02/12-23:50',
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-[#ffd200] font-bold font-IRsans">بسته شده</span >,
+   function: <Link style={{fontFamily:'Shabnam'}}  className="flex justify-center" to={'/internationalAdmin/ticketShow'}>
    <Eye/>
    </Link>
              
                
   },
   {
-    id:'1',
-    num:'1',
-    subject:truncate("با سلام می توانید از امروز اطلاعات ",30),
-    text:truncate("پس از ورود به پنل می توانید از امروز اطلاعات خود را ویرایش کنید",40),
-    to:'کاربران ناظر(سطح 4)',
-    date:'02/02/12-23:50',
-   
- 
-    function: <Link style={{fontFamily:'Shabnam'}}  className="flex justify-center" to={'/mainAdmin/ticketShowMain'}>
-    <Eye/>
-    </Link>
-              
-          
+    id:'2',
+   num:'2',
+   date:'#4323',
+   subject:truncate("فراموشی رمز عبور ...",30),
+   location:'02/02/12-23:50',
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-green font-bold font-IRsans">پاسخ داده شده</span >,
+   function:<Link style={{fontFamily:'Shabnam'}}  className="flex justify-center" to={'/internationalAdmin/ticketShow'}>
+   <Eye/>
+   </Link>
             
   },
   {
-    id:'1',
-    num:'1',
-    subject:truncate("با سلام می توانید از امروز اطلاعات ",30),
-    text:truncate("پس از ورود به پنل می توانید از امروز اطلاعات خود را ویرایش کنید",40),
-    to:'کاربران ناظر(سطح 4)',
-    date:'02/02/12-23:50',
-   
- 
-    function: <Link style={{fontFamily:'Shabnam'}}  className="flex justify-center" to={'/mainAdmin/ticketShowMain'}>
-    <Eye/>
-    </Link>
-              
-          
+    id:'3',
+   num:'3',
+   date:'#4321',
+   subject:truncate("فراموشی رمز عبور ...",30),
+   location:'02/02/12-23:50',
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-[#ff6900] font-bold font-IRsans">در انتظار پاسخ</span >,
+   function:<Link style={{fontFamily:'Shabnam'}}  className="flex justify-center" to={'/internationalAdmin/ticketShow'}>
+   <Eye/>
+   </Link>
   },
   {
-    id:'1',
-    num:'1',
-    subject:truncate("با سلام می توانید از امروز اطلاعات ",30),
-    text:truncate("پس از ورود به پنل می توانید از امروز اطلاعات خود را ویرایش کنید",40),
-    to:'کاربران ناظر(سطح 4)',
-    date:'02/02/12-23:50',
-   
- 
-    function: <Link style={{fontFamily:'Shabnam'}}  className="flex justify-center" to={'/mainAdmin/ticketShowMain'}>
-    <Eye/>
-    </Link>
-              
-          
+    id:'4',
+   num:'4',
+   date:'#2323',
+   subject:truncate("فراموشی رمز عبور ...",30),
+   location:'02/02/12-23:50',
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-green font-bold font-IRsans">پاسخ داده شده</span >,
+   function:<Link style={{fontFamily:'Shabnam'}}  className="flex justify-center" to={'/internationalAdmin/ticketShow'}>
+   <Eye/>
+   </Link>
   },
   {
-    id:'1',
-    num:'1',
-    subject:truncate("با سلام می توانید از امروز اطلاعات ",30),
-    text:truncate("پس از ورود به پنل می توانید از امروز اطلاعات خود را ویرایش کنید",40),
-    to:'کاربران ناظر(سطح 4)',
-    date:'02/02/12-23:50',
-   
- 
-    function: <Link style={{fontFamily:'Shabnam'}}  className="flex justify-center" to={'/mainAdmin/ticketShowMain'}>
-    <Eye/>
-    </Link>
-              
-          
+    id:'5',
+   num:'5',
+   date:'#1212',
+   subject:truncate("فراموشی رمز عبور ...",30),
+   location:'02/02/12-23:50',
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-[#ff6900] font-bold font-IRsans">در انتظار پاسخ</span >,
+   function:<Link style={{fontFamily:'Shabnam'}}  className="flex justify-center" to={'/internationalAdmin/ticketShow'}>
+   <Eye/>
+   </Link>
   }
 ]
   const tableBody = tableRow.map((tableRow) =>
   <tr key={tableRow.id} className="border-b border-b-borderGray">
-    <td className="py-4 text-sm text-right pr-4 font-IRsans" style={{fontFamily:'Shabnam'}}>{tableRow.num}</td>
-    <td className="py-4 text-sm text-right font-IRsans" style={{fontFamily:'Shabnam'}}>{tableRow.subject}</td>
-    <td className="py-4 text-sm text-right font-IRsans truncate" style={{fontFamily:'Shabnam'}}>{tableRow.text}</td>
-    <td className="py-4 text-sm text-center font-IRsans" style={{fontFamily:'Shabnam'}}>{tableRow.to}</td>
-    <td className="py-4 text-sm text-center font-IRsans" style={{fontFamily:'Shabnam'}} >{tableRow.date}</td>
-    <td className="py-4 text-sm text-center font-IRsans"style={{fontFamily:'Shabnam'}}>{tableRow.function}</td>
+    <td className="py-4 text-sm text-right pr-4 font-IRsans">{tableRow.num}</td>
+    <td className="py-4 text-sm text-right font-IRsans">{tableRow.date}</td>
+    <td className="py-4 text-sm text-right font-IRsans truncate">{tableRow.subject}</td>
+    <td className="py-4 text-sm text-center font-IRsans" >{tableRow.location}</td>
+    <td className="py-4 text-sm text-center font-IRsans"  >{tableRow.status}</td>
+    <td className="py-4 text-sm text-center font-IRsans">{tableRow.function}</td>
     </tr> 
   )
     return(
@@ -110,12 +92,12 @@ const tableRow =[
           <table class="table-auto w-full font-IRsans">
   <thead className="bg-darkGray h-11 rounded-t-2xl w-full whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}> 
     <tr className="text-white  p-6 whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}>
-      <th className="text-right pr-4 font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>ردیف</th>
-      <th className="text-right font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>شماره تیکت</th>
-      <th className="text-right font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>موضوع تیکت</th>
-      <th className="text-center font-IRsan md:px-4s" style={{fontFamily:'Shabnam'}}>آخرین به روز رسانی</th>
-      <th className="text-center font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>وضعیت تیکت</th>
-      <th className="text-center font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>مشاهده</th>
+      <th className="text-right pr-4 font-IRsans md:px-4">ردیف</th>
+      <th className="text-right font-IRsans md:px-4">شماره تیکت</th>
+      <th className="text-right font-IRsans md:px-4">موضوع تیکت</th>
+      <th className="text-center font-IRsan md:px-4s">آخرین به روز رسانی</th>
+      <th className="text-center font-IRsans md:px-4">وضعیت تیکت</th>
+      <th className="text-center font-IRsans md:px-4" >مشاهده</th>
     </tr>
   </thead>
   <tbody>
@@ -232,4 +214,4 @@ const tableRow =[
         </div>
     )
 }
-export default InternationalMessageList;
+export default InternationalTicketListTable;

@@ -1,10 +1,10 @@
 import React,{useState} from "react";
-import MainRightMenu from "../../components/MainRightMenu";
+import MainRightMenu from "../../components/MainAdminComponent/MainRightMenu";
 import {ReactComponent as Profile} from "../../assets/icon/blue/profile.svg"
 import {ReactComponent as Search} from "../../assets/icon/white/search.svg"
 import {ReactComponent as Download} from "../../assets/icon/white/download.svg"
 import {ReactComponent as Add} from "../../assets/icon/white/add.svg"
-import MainAdminUserList from "../../components/MainAdminUserList";
+import MainAdminUserList from "../../components/MainAdminComponent/MainAdminUserList";
 import { Link } from "react-router-dom";
 const UserList = () =>{
  

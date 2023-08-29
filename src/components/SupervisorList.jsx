@@ -108,7 +108,7 @@ const tableRow =[
   const tableBody = tableRow.map((tableRow) =>
   <tr key={tableRow.id} className="border-b border-b-borderGray">
     <td className="py-4 text-sm text-right pr-4 font-IRsans px-4">{tableRow.num}</td>
-    <td className="py-4 text-sm text-right font-IRsans px-4">
+    <td className="py-4 text-sm text-right font-IRsans px-4" style={{fontFamily:'Shabnam'}}>
       <div className="flex items-center">
         <div>
         {tableRow.name}
@@ -116,10 +116,10 @@ const tableRow =[
    
       </div>
     </td>
-    <td className="py-4 text-sm text-right px-4 font-IRsans">{tableRow.userName}</td>
-    <td className="py-4 text-sm text-center px-4 font-IRsans" >{tableRow.password}</td>
-    <td className="py-4 text-sm text-center px-4 font-IRsans"  >{tableRow.edit}</td>
-    <td className="py-4 text-sm text-center px-4 font-IRsans">{tableRow.delete}</td>
+    <td className="py-4 text-sm text-right px-4 font-IRsans" style={{fontFamily:'Shabnam'}}>{tableRow.userName}</td>
+    <td className="py-4 text-sm text-center px-4 font-IRsans" style={{fontFamily:'Shabnam'}}>{tableRow.password}</td>
+    <td className="py-4 text-sm text-center px-4 font-IRsans"  style={{fontFamily:'Shabnam'}}>{tableRow.edit}</td>
+    <td className="py-4 text-sm text-center px-4 font-IRsans" style={{fontFamily:'Shabnam'}}>{tableRow.delete}</td>
     </tr> 
   )
     return(
@@ -127,12 +127,12 @@ const tableRow =[
           <table class="table-auto w-full font-IRsans">
   <thead className="bg-darkGray h-11 rounded-t-2xl w-full whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}> 
     <tr className="text-white  p-6 whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}>
-      <th className="text-right pr-4 font-IRsans md:px-4">ردیف</th>
-      <th className="text-right font-IRsans md:px-4">نام و نام خانوادگی</th>
-      <th className="text-right font-IRsans md:px-4">نام کاربری</th>
-      <th className="text-center font-IRsan md:px-4s">رمز عبور</th>
-      <th className="text-center font-IRsans md:px-4">ویرایش</th>
-      <th className="text-center font-IRsans md:px-4" >حذف</th>
+      <th className="text-right pr-4 font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>ردیف</th>
+      <th className="text-right font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>نام و نام خانوادگی</th>
+      <th className="text-right font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>نام کاربری</th>
+      <th className="text-center font-IRsan md:px-4s" style={{fontFamily:'Shabnam'}}>رمز عبور</th>
+      <th className="text-center font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>ویرایش</th>
+      <th className="text-center font-IRsans md:px-4" style={{fontFamily:'Shabnam'}} >حذف</th>
     </tr>
   </thead>
   <tbody>
@@ -165,6 +165,7 @@ const tableRow =[
      
       <div className="flex items-center justify-center justify-end border-solid border-slate-200 rounded-b">
         <button
+        style={{fontFamily:'Shabnam'}}
           className="text-black font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button"
           onClick={() => setShowError(false)}
@@ -172,6 +173,7 @@ const tableRow =[
           خیر
         </button>
         <button
+        style={{fontFamily:'Shabnam'}}
           className="text-white font-IRsans float-left bg-red shadow-redShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button"
           onClick={() => setShowError(false)}
@@ -235,6 +237,7 @@ const tableRow =[
      
       <div className="flex items-center justify-center justify-end border-solid border-slate-200 rounded-b">
         <button
+        style={{fontFamily:'Shabnam'}}
           className="text-black font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button"
           onClick={() => setShowEditModal(false)}
@@ -242,6 +245,7 @@ const tableRow =[
           بستن
         </button>
         <button
+        style={{fontFamily:'Shabnam'}}
           className="text-white font-IRsans float-left bg-mainColor shadow-blueShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button"
           onClick={() => setShowEditModal(false)}

@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import { Link } from "react-router-dom";
-import RequestDetail from "./RequestDetail";
-import{ReactComponent as Download} from "../assets/icon/white/download.svg"
+import RequestDetail from "../RequestDetail";
+import{ReactComponent as Download} from "../../assets/icon/white/download.svg"
 const IncomeRequest = () =>{
 const [show , setShow]=useState(false);
 const [showSuccessModal, setShowSuccessModal] = React.useState(false);

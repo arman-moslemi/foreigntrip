@@ -1,7 +1,7 @@
 import React from "react";
 import './components.css';
 import { Link } from "react-router-dom";
-import {ReactComponent as Eye} from "../assets/icon/black/eye.svg";
+import {ReactComponent as Eye} from "../../assets/icon/black/eye.svg";
 export const truncate = (str, len) => {
   // console.log("truncate", str, str.length, len);
   if (str.length > len && str.length > 0) {
@@ -82,9 +82,9 @@ const tableRow =[
 ]
   const tableBody = tableRow.map((tableRow) =>
   <tr key={tableRow.id} className="border-b border-b-borderGray">
-    <td className="py-4 text-sm text-right pr-4 font-IRsans px-4">{tableRow.num}</td>
+    <td className="py-4 text-sm text-right pr-4 font-IRsans px-4" style={{fontFamily:'Shabnam'}} >{tableRow.num}</td>
     <td className="py-4 text-sm text-right font-IRsans px-4">
-      <div className="flex items-center">
+      <div className="flex items-center" style={{fontFamily:'Shabnam'}} >
         <div>
         {tableRow.name}
         </div>
@@ -93,10 +93,10 @@ const tableRow =[
         </div>
       </div>
     </td>
-    <td className="py-4 text-sm text-right px-4 font-IRsans">{tableRow.subject}</td>
-    <td className="py-4 text-sm text-center px-4 font-IRsans" >{tableRow.location}</td>
-    <td className="py-4 text-sm text-center px-4 font-IRsans"  >{tableRow.status}</td>
-    <td className="py-4 text-sm text-center px-4 font-IRsans">{tableRow.function}</td>
+    <td className="py-4 text-sm text-right px-4 font-IRsans" style={{fontFamily:'Shabnam'}} >{tableRow.subject}</td>
+    <td className="py-4 text-sm text-center px-4 font-IRsans" style={{fontFamily:'Shabnam'}}  >{tableRow.location}</td>
+    <td className="py-4 text-sm text-center px-4 font-IRsans" style={{fontFamily:'Shabnam'}}  >{tableRow.status}</td>
+    <td className="py-4 text-sm text-center px-4 font-IRsans" style={{fontFamily:'Shabnam'}} >{tableRow.function}</td>
     </tr> 
   )
     return(
@@ -104,12 +104,12 @@ const tableRow =[
           <table class="table-auto w-full font-IRsans">
   <thead className="bg-darkGray h-11 rounded-t-2xl w-full whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}> 
     <tr className="text-white  p-6 whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}>
-      <th className="text-right pr-4 font-IRsans md:px-4">ردیف</th>
-      <th className="text-right font-IRsans md:px-4">نام مامور</th>
-      <th className="text-right font-IRsans md:px-4">موضوع سفر</th>
-      <th className="text-center font-IRsan md:px-4s">محل خدمت</th>
-      <th className="text-center font-IRsans md:px-4">وضعیت</th>
-      <th className="text-center font-IRsans md:px-4" >مشاهده</th>
+      <th className="text-right pr-4 font-IRsans md:px-4" style={{fontFamily:'Shabnam'}} >ردیف</th>
+      <th className="text-right font-IRsans md:px-4" style={{fontFamily:'Shabnam'}} >نام مامور</th>
+      <th className="text-right font-IRsans md:px-4" style={{fontFamily:'Shabnam'}} >موضوع سفر</th>
+      <th className="text-center font-IRsan md:px-4s" style={{fontFamily:'Shabnam'}} >محل خدمت</th>
+      <th className="text-center font-IRsans md:px-4" style={{fontFamily:'Shabnam'}} >وضعیت</th>
+      <th className="text-center font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}  >مشاهده</th>
     </tr>
   </thead>
   <tbody>

@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import MainRightMenu from "../../components/MainRightMenu";
+import InternationalRightMenu from "../../components/InternationalComponent/InternationalRightMenu";
 import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
 import {ReactComponent as Search} from "../../assets/icon/white/search.svg"
 import {ReactComponent as Download} from "../../assets/icon/white/download.svg"
@@ -12,7 +12,7 @@ const ExpertList = () =>{
     return(
         <div className="w-full h-full bg-lightGray py-10 px-10 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>
         <div className="flex md:block">
-            <MainRightMenu/>
+            <InternationalRightMenu/>
             <div className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl p-12 my-10 w-[80%] xl:p-5 md:w-[95%] md:rounded-xl md:mx-auto">
            
          <div className="flex justify-between">
@@ -74,6 +74,7 @@ const ExpertList = () =>{
      
       <div className="flex items-center justify-center justify-end border-solid border-slate-200 rounded-b">
         <button
+        style={{fontFamily:'Shabnam'}}
           className="text-black font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button"
           onClick={() => setShowAdd(false)}
@@ -81,6 +82,7 @@ const ExpertList = () =>{
           بستن
         </button>
         <button
+        style={{fontFamily:'Shabnam'}}
           className="text-white font-IRsans float-left bg-mainColor shadow-blueShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button"
           onClick={() => setShowAdd(false)}

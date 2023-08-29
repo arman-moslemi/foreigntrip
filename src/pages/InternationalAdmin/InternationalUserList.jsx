@@ -1,23 +1,23 @@
 import React,{useState} from "react";
-import MainRightMenu from "../../components/MainRightMenu";
+import InternationalRightMenu from "../../components/InternationalComponent/InternationalRightMenu";
 import {ReactComponent as Profile} from "../../assets/icon/blue/profile.svg"
 import {ReactComponent as Search} from "../../assets/icon/white/search.svg"
 import {ReactComponent as Download} from "../../assets/icon/white/download.svg"
 import {ReactComponent as Add} from "../../assets/icon/white/add.svg"
-import InternationalUserTable from "../../components/InternationalUserTable";
+import InternationalUserTable from "../../components/InternationalComponent/InternationalUserTable";
 import { Link } from "react-router-dom";
 const InternationalUserList = () =>{
  
     return(
         <div className="w-full h-screen bg-lightGray py-10 px-10 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>
         <div className="flex md:block">
-            <MainRightMenu/>
+            <InternationalRightMenu/>
             <div className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl p-12 my-10 w-[80%] xl:p-5 md:w-[95%] md:rounded-xl md:mx-auto">
            
             <div className="flex items-center">
                     <Profile/>
                 <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-mainColor mr-3 font-bold">
-                     لیست کاربران
+                     لیست ماموران اعزامی
                 </span>
                 
                 </div>

@@ -199,7 +199,7 @@ const [showAlert,setShowAlert] = React.useState(false);
         </div>
         <div className="flex justify-end mt-10">
  
-                    <button  onClick={() =>{setShowModal(true)}} className=" bg-[#3AB50E] hover:bg-white md:text-xs hover:text-[#3AB50E] hover:border-2 hover:border-[#3AB50E] w-auto px-3 py-2 rounded-md h-[40px] flex justify-center items-center text-white  font-IRsans font-medium text-base shadow-greenShadow">
+                    <button  style={{fontFamily:'Shabnam'}} onClick={() =>{setShowModal(true)}} className=" bg-[#3AB50E] hover:bg-white md:text-xs hover:text-[#3AB50E] hover:border-2 hover:border-[#3AB50E] w-auto px-3 py-2 rounded-md h-[40px] flex justify-center items-center text-white  font-IRsans font-medium text-base shadow-greenShadow">
                        آپلود امضا و تایید نهایی درخواست
                     </button>
         </div>
@@ -222,12 +222,13 @@ const [showAlert,setShowAlert] = React.useState(false);
                 
                 <div className="relative p-6 flex-auto">
                   <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-IRsans">
-                        ارسال تایید درخواست با موفقیت انجام شد
+                        بارگزاری امضاها با موفقیت انجام شد.
                   </p>
                 </div>
                
                 <div className="flex items-center justify-center  border-solid border-slate-200 rounded-b mb-4">
                   <button
+                  style={{fontFamily:'Shabnam'}}
                     className=" float-left font-IRsans text-white flex bg-mainColor items-center rounded-md shadow-blueShadow uppercase px-12 py-2 mx-1 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowModal(false)}
@@ -237,6 +238,7 @@ const [showAlert,setShowAlert] = React.useState(false);
                     
                   </button>
                   <button
+                  style={{fontFamily:'Shabnam'}}
                     className=" float-left font-IRsans text-black flex bg-transparent items-center rounded-md  uppercase px-3 py-2 mx-1 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowModal(false)}

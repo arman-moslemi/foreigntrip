@@ -2,14 +2,14 @@
 
 
 import React,{useState} from "react";
-import {ReactComponent as Search} from "../assets/icon/white/search.svg"
-import { ReactComponent as Eye } from "../assets/icon/black/eye.svg";
-import { ReactComponent as Ban } from "../assets/icon/black/ban.svg";
+import {ReactComponent as Search} from "../../assets/icon/white/search.svg"
+import { ReactComponent as Eye } from "../../assets/icon/black/eye.svg";
+import { ReactComponent as Ban } from "../../assets/icon/black/ban.svg";
 import './components.css';
 import { Link } from "react-router-dom";
-import {ReactComponent as Trash} from "../assets/icon/blue/trash.svg";
-import { ReactComponent as Pencil } from "../assets/icon/blue/pencil.svg";
-import Img1 from "../assets/img/user.png";
+import {ReactComponent as Trash} from "../../assets/icon/blue/trash.svg";
+import { ReactComponent as Pencil } from "../../assets/icon/blue/pencil.svg";
+import Img1 from "../../assets/img/user.png";
 export const truncate = (str, len) => {
     // console.log("truncate", str, str.length, len);
     if (str.length > len && str.length > 0) {
@@ -22,7 +22,7 @@ export const truncate = (str, len) => {
     return str;
   };
 
-const InternatioanlRequestTable = () =>{
+const MainAdminUserList = () =>{
   const[showError,setShowError]= React.useState(false);
   const[showLog,setShowLog] = React.useState(false);
   const [showBan,setShowBan] =React.useState(false);
@@ -30,7 +30,7 @@ const InternatioanlRequestTable = () =>{
         {
           id:'1',
        
-   
+         num:'1',
          name:<div className="flex items-center">
           <div className="relative ml-2">
             <img src={Img1} alt="userImg" className="rounded-full w-[40px] h-[40px]"/>
@@ -43,102 +43,112 @@ const InternatioanlRequestTable = () =>{
           </span>
          </div>,
          
-         subject:truncate("اغو قرار داد 12345 وزارت صنعت معدن تجارت در راستای مقاومت اقتصادی",30),
-         acceptedBy:'علی اسد زاده',
-         date:'02/05/28',
-         tripType:<span className="text-red" style={{fontFamily:'Shabnam'}}>
-        فوری
-         </span>,
-         status:<span className="text-red" style={{fontFamily:'Shabnam'}}>
-          درخواست جدید
-         </span>,
+         code:'۰۰۳۰۶۷۸۷۶۵',
+         phoneNumber:'۰۹۱۲۹۸۷۶۷۶۵',
+         post:'مدیر کل',
          action:
          <div className="flex justify-center">
-          <Link to={'/'} className="mx-2" >
+          <button className="mx-2" onClick={()=>setShowLog(true)}>
             <Eye/>
-          </Link>
-       
+          </button>
+          <button className="mx-2"  onClick={() => setShowBan(true)}>
+            <Ban/>
+          </button>
+          <Link to={'/mainAdmin/addAgent'}>
+        <button className="mx-2" >
+            <Pencil/>
+          </button>
+        </Link>
+          <button className="mx-2" onClick={()=>setShowError(true)}>
+            <Trash/>
+          </button>
          </div>        
                    
                      
-        }, 
+        },  {
+          id:'1',
+         num:'1',
+         name:<div className="flex items-center">
+         <div className="relative ml-2">
+           <img src={Img1} alt="userImg" className="rounded-full w-[40px] h-[40px]"/>
+           <div className="absolute top-0 -left-2 bg-[#4CFF0D] w-[15px] h-[15px] rounded-full">
+             
+           </div>
+         </div>
+         <span className="text-sm text-[#000] mr-2 font-semibold" style={{fontFamily:'Shabnam'}}>
+           علی عطایی
+         </span>
+        </div>,
+         code:'۰۰۳۰۶۷۸۷۶۵',
+         phoneNumber:'۰۹۱۲۹۸۷۶۷۶۵',
+         post:'مدیر کل',
+         action:
+         <div className="flex justify-center">
+          <button className="mx-2" onClick={()=>setShowLog(true)}>
+            <Eye/>
+          </button>
+          <button className="mx-2 "  onClick={() => setShowBan(true)}>
+            <Ban/>
+          </button>
+          <Link to={'/mainAdmin/addAgent'}>
+        <button className="mx-2" >
+            <Pencil/>
+          </button>
+        </Link>
+          <button className="mx-2" onClick={()=>setShowError(true)}>
+            <Trash/>
+          </button>
+         </div>         
+                   
+                     
+        },
         {
           id:'1',
-       
-
+         num:'1',
          name:<div className="flex items-center">
-          <div className="relative ml-2">
-            <img src={Img1} alt="userImg" className="rounded-full w-[40px] h-[40px]"/>
-            <div className="absolute top-0 -left-2 bg-tripDone w-[15px] h-[15px] rounded-full">
-              
-            </div>
-          </div>
-          <span className="text-sm text-[#000] mr-2 font-semibold" style={{fontFamily:'Shabnam'}}>
-            علی عطایی
-          </span>
-         </div>,
-         
-         subject:truncate("اغو قرار داد 12345 وزارت صنعت معدن تجارت در راستای مقاومت اقتصادی",30),
-         acceptedBy:'علی اسد زاده',
-         date:'02/05/28',
-         tripType:<span className="text-red" style={{fontFamily:'Shabnam'}}>
-         فوری
-         </span>,
-         status:<span className="text-tripDone" style={{fontFamily:'Shabnam'}}>
-         منتظر آپلود امضا
-         </span>,
+         <div className="relative ml-2">
+           <img src={Img1} alt="userImg" className="rounded-full w-[40px] h-[40px]"/>
+           <div className="absolute top-0 -left-2 bg-[#FFBD14] w-[15px] h-[15px] rounded-full">
+             
+           </div>
+         </div>
+         <span className="text-sm text-[#000] mr-2 font-semibold" style={{fontFamily:'Shabnam'}}>
+           علی عطایی
+         </span>
+        </div>,
+         code:'۰۰۳۰۶۷۸۷۶۵',
+         phoneNumber:'۰۹۱۲۹۸۷۶۷۶۵',
+         post:'مدیر کل',
          action:
          <div className="flex justify-center">
-          <Link to={'/'} className="mx-2" >
+          <button className="mx-2" onClick={()=>setShowLog(true)}>
             <Eye/>
-          </Link>
-       
-         </div>        
-                   
-                     
-        }, 
-        {
-          id:'1',
-       
-     
-         name:<div className="flex items-center">
-          <div className="relative ml-2">
-            <img src={Img1} alt="userImg" className="rounded-full w-[40px] h-[40px]"/>
-            <div className="absolute top-0 -left-2 bg-[#4CFF0D] w-[15px] h-[15px] rounded-full">
+          </button>
+          <button className="mx-2"  onClick={() => setShowBan(true)}>
+            <Ban/>
+          </button>
+        <Link to={'/mainAdmin/addAgent'}>
+        <button className="mx-2" >
+            <Pencil/>
+          </button>
+        </Link>
+          <button className="mx-2" onClick={()=>setShowError(true)}>
+            <Trash/>
+          </button>
+         </div>   
               
-            </div>
-          </div>
-          <span className="text-sm text-[#000] mr-2 font-semibold" style={{fontFamily:'Shabnam'}}>
-            علی عطایی
-          </span>
-         </div>,
-         
-         subject:truncate("اغو قرار داد 12345 وزارت صنعت معدن تجارت در راستای مقاومت اقتصادی",30),
-         acceptedBy:'علی اسد زاده',
-         date:'02/05/28',
-         tripType:<span className="text-black" style={{fontFamily:'Shabnam'}}>
-         عادی
-         </span>,
-         status:<span className="text-green" style={{fontFamily:'Shabnam'}}>
-         تایید شده
-         </span>,
-         action:
-         <div className="flex justify-center">
-          <Link to={'/'} className="mx-2" >
-            <Eye/>
-          </Link>
-       
-         </div>        
                    
                      
-        }, 
+        }
       
       ]
     const tableBody = tableRow.map((tableRow) =>
     <tr key={tableRow.id} className="border-b border-b-borderGray">
-    
-    
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-right  px-4">
+       <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-right pr-4 font-IRsans px-4">
+        <input type="checkbox"/>
+       </td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-right pr-4 font-IRsans px-4">{tableRow.num}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-right  px-4 pr-0">
         
       
           {tableRow.name} 
@@ -147,12 +157,11 @@ const InternatioanlRequestTable = () =>{
        
       </td>
     
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">{tableRow.subject}</td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">{tableRow.acceptedBy}</td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">{tableRow.date}</td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">{tableRow.tripType}</td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">{tableRow.status}</td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">{tableRow.action}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center px-4 font-IRsans" >{tableRow.code}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center px-4 font-IRsans"  >{tableRow.phoneNumber}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center px-4 font-IRsans">{tableRow.post}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center px-4 font-IRsans">{tableRow.action}</td>
+
       </tr> 
     )
     return(
@@ -162,14 +171,16 @@ const InternatioanlRequestTable = () =>{
           <table class="table-auto w-full font-IRsans">
   <thead className="bg-darkGray h-11 rounded-t-2xl w-full whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}> 
     <tr className="text-white  p-6 whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}>
-
-      <th style={{fontFamily:'Shabnam'}} className="text-right font-IRsans md:px-4 pr-4 text-sm">نام مامور</th>
-     <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsan md:px-4 text-sm">موضوع سفر</th>
-      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsan md:px-4 text-sm">تایید شده توسط</th>
-      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsans md:px-4 text-sm">تاریخ سفر</th>
-      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsans md:px-4 text-sm" >نوع سفر</th>
-      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsans md:px-4 text-sm" >وضعیت</th>
-      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsans md:px-4 text-sm" >مشاهده</th>
+    <th style={{fontFamily:'Shabnam'}} className="text-right pr-4 font-IRsans md:px-4">
+      <input type="checkbox"/>
+    </th>
+      <th style={{fontFamily:'Shabnam'}} className="text-right pr-4 font-IRsans md:px-4">ردیف</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-right font-IRsans md:px-4">نام و نام خانوادگی کاربر</th>
+     <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsan md:px-4">کد ملی</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsan md:px-4">شماره تلفن همراه</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsans md:px-4">پست ستادی</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsans md:px-4" >عملیات</th>
+      
     </tr>
   </thead>
   <tbody>
@@ -203,6 +214,7 @@ const InternatioanlRequestTable = () =>{
                
                 <div className="flex items-center justify-center justify-end border-solid border-slate-200 rounded-b">
                   <button
+                  style={{fontFamily:'Shabnam'}}
                     className="text-black font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowError(false)}
@@ -210,6 +222,7 @@ const InternatioanlRequestTable = () =>{
                     خیر
                   </button>
                   <button
+                  style={{fontFamily:'Shabnam'}}
                     className="text-white font-IRsans float-left bg-red shadow-redShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowError(false)}
@@ -250,6 +263,7 @@ const InternatioanlRequestTable = () =>{
                
                 <div className="flex items-center justify-center justify-end border-solid border-slate-200 rounded-b">
                   <button
+                  style={{fontFamily:'Shabnam'}}
                     className="text-black font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowBan(false)}
@@ -257,6 +271,7 @@ const InternatioanlRequestTable = () =>{
                     خیر
                   </button>
                   <button
+                  style={{fontFamily:'Shabnam'}}
                     className="text-white font-IRsans float-left bg-red shadow-redShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowBan(false)}
@@ -302,6 +317,7 @@ const InternatioanlRequestTable = () =>{
                 <div className="flex items-center justify-center justify-end border-solid border-slate-200 rounded-b">
                 
                   <button
+                  style={{fontFamily:'Shabnam'}}
                     className="text-white font-IRsans float-left bg-mainColor shadow-blueShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowLog(false)}
@@ -324,4 +340,4 @@ const InternatioanlRequestTable = () =>{
 
 }
 
-export default InternatioanlRequestTable;
+export default MainAdminUserList;

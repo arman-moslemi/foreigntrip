@@ -4,10 +4,10 @@ import {ReactComponent as User} from "../assets/icon/black/profile.svg"
 import {ReactComponent as Pass} from "../assets/icon/black/lock.svg"
 import {ReactComponent as Reload} from "../assets/icon/black/reload.svg"
 import {ReactComponent as Secure} from "../assets/icon/black/secure.svg"
-import { Captcha } from "@nabidam/react-captcha";
+// import { Captcha } from "@nabidam/react-captcha";
 import './components.css';
 
-// import Captcha from "../assets/img/captcha.png"
+import Captcha from "../assets/img/captcha.png"
 import {Link} from "react-router-dom";
 const LoginForm = () => {
     // const [passwordShown, setPasswordShown] = useState(false); const
@@ -62,19 +62,19 @@ const LoginForm = () => {
                         class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md mb-0 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
                         placeholder="کد امنیتی"/>
                 
-                    {/* <img src={Captcha} alt="captcha" className="w-[90px] top-1 left-2 absolute"/> */}
+                   <img src={Captcha} alt="captcha" className="w-[90px] top-1 left-2 absolute"/> 
                 </div>
-                {/* <button>
+                <button>
                     <Reload/>
-                </button> */}
+                </button> 
               
             </div>
-            <div id="captchas"  className="w-[90px] top-1 left-2  flex">
+            {/* <div id="captchas"  className="w-[90px] top-1 left-2  flex">
          <Captcha className="absolute"  setWord={setCaptcha} ref={captchaRef} 
          reloadEl={<button onClick={()=>captchaRef.current.initializeCaptcha()}>
         <Reload/>  </button>}
          persianChars={true} fontFamily={"Shabnam"} backgroundColor={"#a0afd5"} fontColor="#fff" border="1px solid #000"/>
-         </div>
+         </div> */}
             <div className="flex mt-3 mb-4">
                 <p style={{fontFamily:'Shabnam'}}className="text-xs font-IRsans text-black font-normal">کلمه عبور خود را فراموش کرده اید ؟</p>
                 <Link style={{fontFamily:'Shabnam'}}  to={'/changePassword'} className="text-xs font-IRsans text-linkBlue font-normal mr-1">تغییر رمز عبور</Link>

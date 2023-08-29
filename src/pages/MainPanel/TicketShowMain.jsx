@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import MainRightMenu from "../../components/MainRightMenu";
+import MainRightMenu from "../../components/MainAdminComponent/MainRightMenu";
 import { Link } from "react-router-dom";
 import {ReactComponent as Ticket} from "../../assets/icon/blue/ticket.svg"
 import TicketDetailMain from "../../components/TicketDetailMain";

@@ -1,5 +1,5 @@
 import React from "react";
-import MainRightMenu from "../../components/MainRightMenu";
+import MainRightMenu from "../../components/MainAdminComponent/MainRightMenu";
 import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
 import ReportTable from "../../components/ReportTable";
 import {ReactComponent as Search} from "../../assets/icon/white/search.svg"

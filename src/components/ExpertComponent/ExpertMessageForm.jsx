@@ -58,7 +58,7 @@ const ExpertMessageForm = () => {
                         <input style={{fontFamily:'Shabnam'}}
                             type="text"
                             id="input-group-1"
-                            disabled="true"
+                        
                             class="pr-9 font-IRsans text-right right-6 bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
                             placeholder="عنوان پیام خود را اینجا بنویسید"/>
                     </div>
@@ -73,7 +73,7 @@ const ExpertMessageForm = () => {
                         rows={5}
                             type="text"
                             id="input-group-1"
-                            disabled="true"
+                            
                             class="pr-9 font-IRsans text-right right-6 bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
                             placeholder="متن پیام خود را اینجا بنویسید"></textarea>
                     </div>
@@ -101,7 +101,7 @@ const ExpertMessageForm = () => {
                             name="cars"
                             id="cars"
                             className=" font-IRsans text-right  bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2">
-                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className="font-IRsans">انتخاب مجموعه</option>
+                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className="font-IRsans">انتخاب همه</option>
                             <option  style={{fontFamily:'Shabnam'}}value="waiting" className="font-IRsans">هولدینگ</option>
                             <option  style={{fontFamily:'Shabnam'}}value="check" className="font-IRsans">صندوق</option>
                             <option style={{fontFamily:'Shabnam'}} value="not" className="font-IRsans">سازمان</option>
@@ -112,12 +112,7 @@ const ExpertMessageForm = () => {
                             <option style={{fontFamily:'Shabnam'}} value="not" className="font-IRsans">موسسات</option>
 
                         </select>
-                        {/* <input
-                            type="text"
-                            id="input-group-1"
-                            disabled="true"
-                            class="pr-9 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
-                            placeholder="آرمان"/> */}
+                    
                     </div>
                 </div>
                 <div className="flex flex-col w-[150px] ">
@@ -128,23 +123,15 @@ const ExpertMessageForm = () => {
                             name="cars"
                             id="cars"
                             className=" font-IRsans text-right  bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2">
-                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className="font-IRsans">انتخاب مجموعه</option>
-                            <option  style={{fontFamily:'Shabnam'}}value="waiting" className="font-IRsans">هولدینگ</option>
-                            <option  style={{fontFamily:'Shabnam'}}value="check" className="font-IRsans">صندوق</option>
-                            <option style={{fontFamily:'Shabnam'}} value="not" className="font-IRsans">سازمان</option>
-                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className="font-IRsans">بانک</option>
-                            <option style={{fontFamily:'Shabnam'}} value="waiting" className="font-IRsans">معاونت</option>
-                            <option style={{fontFamily:'Shabnam'}}  value="check" className="font-IRsans">شرکت ها</option>
-                            <option style={{fontFamily:'Shabnam'}} value="not" className="font-IRsans">فدراسیون</option>
-                            <option style={{fontFamily:'Shabnam'}} value="not" className="font-IRsans">موسسات</option>
+                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className="font-IRsans">انتخاب همه</option>
+                            <option  style={{fontFamily:'Shabnam'}}value="waiting" className="font-IRsans">شستا</option>
+                            <option  style={{fontFamily:'Shabnam'}}value="check" className="font-IRsans">مهر امام رضا</option>
+                            <option style={{fontFamily:'Shabnam'}} value="not" className="font-IRsans">انصار</option>
+                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className="font-IRsans">قوامین</option>
+
 
                         </select>
-                        {/* <input
-                            type="text"
-                            id="input-group-1"
-                            disabled="true"
-                            class="pr-9 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
-                            placeholder="آرمان"/> */}
+                  
                     </div>
                 </div>
                 <div className="flex flex-col w-[150px] ">
@@ -155,28 +142,19 @@ const ExpertMessageForm = () => {
                             name="cars"
                             id="cars"
                             className=" font-IRsans text-right  bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2">
-                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className="font-IRsans">انتخاب مامور</option>
+                         
                             <option  style={{fontFamily:'Shabnam'}}value="waiting" className="flex">
                                 <input type="checkbox"/>
                                 <span style={{fontFamily:'Shabnam'}}>
                                     انتخاب همه
                                 </span>
                             </option>
-                            <option  style={{fontFamily:'Shabnam'}}value="check" className="font-IRsans">صندوق</option>
-                            <option style={{fontFamily:'Shabnam'}} value="not" className="font-IRsans">سازمان</option>
-                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className="font-IRsans">بانک</option>
-                            <option style={{fontFamily:'Shabnam'}} value="waiting" className="font-IRsans">معاونت</option>
-                            <option style={{fontFamily:'Shabnam'}}  value="check" className="font-IRsans">شرکت ها</option>
-                            <option style={{fontFamily:'Shabnam'}} value="not" className="font-IRsans">فدراسیون</option>
-                            <option style={{fontFamily:'Shabnam'}} value="not" className="font-IRsans">موسسات</option>
+                            <option  style={{fontFamily:'Shabnam'}}value="check" className="font-IRsans">علی طاهری</option>
+                            <option style={{fontFamily:'Shabnam'}} value="not" className="font-IRsans">غلامرضا زارع</option>
+                         
 
                         </select>
-                        {/* <input
-                            type="text"
-                            id="input-group-1"
-                            disabled="true"
-                            class="pr-9 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
-                            placeholder="آرمان"/> */}
+
                     </div>
                 </div>
                 </div>
@@ -205,7 +183,7 @@ const ExpertMessageForm = () => {
                             name="cars"
                             id="cars"
                             className=" font-IRsans text-right  bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2">
-                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className="font-IRsans">انتخاب کارشناس</option>
+                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className="font-IRsans">انتخاب همه</option>
                             <option  style={{fontFamily:'Shabnam'}}value="waiting" className="font-IRsans">علی اسدی</option>
                             <option  style={{fontFamily:'Shabnam'}}value="check" className="font-IRsans">غلامرضا عطاردی</option>
                            

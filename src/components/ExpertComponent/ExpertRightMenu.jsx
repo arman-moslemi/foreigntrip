@@ -1,60 +1,60 @@
 import React ,{useState} from "react";
-import WhiteLogo from "../assets/img/whiteLogo.png"
+import WhiteLogo from "../../assets/img/whiteLogo.png"
 import { Link } from "react-router-dom";
-import {ReactComponent as Add} from "../assets/icon/white/add.svg"
-import {ReactComponent as Doc} from "../assets/icon/white/doc.svg"
-import {ReactComponent as Profile} from "../assets/icon/white/profile.svg"
-import {ReactComponent as Exit} from "../assets/icon/white/exit.svg"
-import { ReactComponent as Ticket } from "../assets/icon/white/ticket.svg";
-import DocImg from "../assets/img/doc.png"
-const MainRightMenu = () => {
+import {ReactComponent as Add} from "../../assets/icon/white/add.svg"
+import {ReactComponent as Doc} from "../../assets/icon/white/doc.svg"
+import {ReactComponent as Profile} from "../../assets/icon/white/profile.svg"
+import {ReactComponent as Ticket} from "../../assets/icon/white/ticket.svg"
+import {ReactComponent as Exit} from "../../assets/icon/white/exit.svg"
+import {ReactComponent as Message} from "../../assets/icon/white/message.svg"
+import DocImg from "../../assets/img/doc.png"
+
+const ExpertRightMenu = () => {
    const [showMenu,setShowMenu] = useState(false);
     return(
         
                <>
-                <div className="bg-mainColor p-9 min-h-[700px] rounded-2xl w-[20%] min-w-[300px] lg:min-w-[250px] md:hidden">
-                    <img src={WhiteLogo} alt="logo" className="w-[140px] mx-auto"/>
-                    <p style={{fontFamily:'Shabnam'}} className="text-white  font-bold text-lg text-center mt-4 font-IRsans lg:text-base">
-                        علی اطهری خوش آمدید !
+                <div className="bg-mainColor p-9 rounded-2xl w-[20%] min-w-[300px] lg:min-w-[250px] md:hidden">
+                    <img src={WhiteLogo} alt="logo" className="w-[170px] mx-auto"/>
+                   <p style={{fontFamily:'Shabnam'}} className="text-white  font-bold text-lg text-center mt-4 font-IRsans lg:text-base ">
+                        آقای هاشمی خوش آمدید !
                     </p>
                     <hr className="border-t-lightGray my-5 border-opacity-50"/>
 
                     <ul>
-                       
                         <li className="my-10">
-                           <Link style={{fontFamily:'Shabnam'}}  to={'/requests'} className="flex items-center">
+                           <Link style={{fontFamily:'Shabnam'}}  to={'/expert/requestList'} className="flex items-center">
                            <Doc/>
                             <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-white font-medium mr-4 lg:text-sm">
-                                لیست کاربران سامانه
+                                تاریخچه درخواست ها
                             </p>
                            </Link>
                         </li>
                         <li className="my-10">
-                           <Link style={{fontFamily:'Shabnam'}}  to={'/reportHistory'} className="flex items-center">
-                           <img src={DocImg} alt="doc" className="w-[19px]"/>
+                           <Link style={{fontFamily:'Shabnam'}}  to={'/expert/reportList'} className="flex items-center">
+                           <Doc/>
                             <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-white font-medium mr-4 lg:text-sm">
-                             مشاهده ی گزارشات
+                             تاریخچه گزارشات
+                            </p>
+                           </Link>
+                        </li>
+                   
+                        <li className="my-10">
+                           <Link style={{fontFamily:'Shabnam'}}  to={'/expert/messageList'} className="flex items-center">
+                           <Message/>
+                            <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-white font-medium mr-4 lg:text-sm">
+                               ارسال پیام
                             </p>
                            </Link>
                         </li>
                         <li className="my-10">
-                           <Link style={{fontFamily:'Shabnam'}}  to={'/'} className="flex items-center">
-                           <img src={DocImg} alt="doc" className="w-[19px]"/>
+                           <Link style={{fontFamily:'Shabnam'}}  to={'/expert/ticketList'} className="flex items-center">
+                           <Ticket/>
                             <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-white font-medium mr-4 lg:text-sm">
-                            تاریخچه درخواست ها
+                               تیکت ها و پشتیبانی
                             </p>
                            </Link>
                         </li>
-                        <li className="my-10">
-                           <Link style={{fontFamily:'Shabnam'}}  to={'/'} className="flex items-center">
-                          <Profile/>
-                            <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-white font-medium mr-4 lg:text-sm">
-                             تیکت ها و پشتیبانی
-                            </p>
-                           </Link>
-                        </li>
-                      
-                      
                         <li className="my-10">
                            <Link style={{fontFamily:'Shabnam'}}  to={'/'} className="flex items-center">
                            <Exit/>
@@ -84,7 +84,7 @@ const MainRightMenu = () => {
 
                     <ul>
                         <li className="my-10">
-                           <Link style={{fontFamily:'Shabnam'}}  to={'/'} className="flex items-center">
+                           <Link style={{fontFamily:'Shabnam'}}  to={'/newRequest'} className="flex items-center">
                            <Add/>
                             <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-white font-medium mr-4 lg:text-sm">
                                 ثبت درخواست جدید 
@@ -92,7 +92,7 @@ const MainRightMenu = () => {
                            </Link>
                         </li>
                         <li className="my-10">
-                           <Link style={{fontFamily:'Shabnam'}}  to={'/'} className="flex items-center">
+                           <Link style={{fontFamily:'Shabnam'}}  to={'/requestHistory'} className="flex items-center">
                            <Doc/>
                             <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-white font-medium mr-4 lg:text-sm">
                                 تاریخچه درخواست ها
@@ -100,7 +100,7 @@ const MainRightMenu = () => {
                            </Link>
                         </li>
                         <li className="my-10">
-                           <Link style={{fontFamily:'Shabnam'}}  to={'/'} className="flex items-center">
+                           <Link style={{fontFamily:'Shabnam'}}  to={'/passportRequest'} className="flex items-center">
                            <img src={DocImg} alt="doc" className="w-[19px]"/>
                             <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-white font-medium mr-4 lg:text-sm">
                                درخواست صدور گذرنامه خدمت سیاسی
@@ -108,7 +108,7 @@ const MainRightMenu = () => {
                            </Link>
                         </li>
                         <li className="my-10">
-                           <Link style={{fontFamily:'Shabnam'}}  to={'/'} className="flex items-center">
+                           <Link style={{fontFamily:'Shabnam'}}  to={'/profile'} className="flex items-center">
                            <Profile/>
                             <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-white font-medium mr-4 lg:text-sm">
                                اطلاعات کاربری
@@ -134,4 +134,4 @@ const MainRightMenu = () => {
           
     )
 }
-export default MainRightMenu;
+export default ExpertRightMenu;

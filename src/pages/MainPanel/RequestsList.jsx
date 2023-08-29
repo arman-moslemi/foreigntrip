@@ -1,7 +1,7 @@
 import React from "react";
-import MainRightMenu from "../../components/MainRightMenu";
+import MainRightMenu from "../../components/MainAdminComponent/MainRightMenu";
 import {ReactComponent as Profile} from "../../assets/icon/blue/profile.svg"
-import MainAdminRequestList from "../../components/MainAdminRequestList";
+import MainAdminRequestList from "../../components/MainAdminComponent/MainAdminRequestList";
 import {ReactComponent as Search} from "../../assets/icon/white/search.svg"
 import { Link } from "react-router-dom";
 const RequestsList = () =>{
@@ -14,7 +14,7 @@ const RequestsList = () =>{
             <div className="flex items-center">
                     <Profile/>
                 <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-mainColor mr-3 font-bold">
-                     لیست کاربران
+                    تاریخچه درخواست ها
                 </span>
                 
                 </div>
@@ -26,7 +26,7 @@ const RequestsList = () =>{
                     </button>
                 </div>
                 <div className="flex items-end">
-                <div className="flex flex-col w-[130px] ">
+                <div className="flex flex-col w-[150px] ">
                     <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal font-IRsans">بازه زمانی</span>
                     <div class=" mt-3">
                         
@@ -49,7 +49,7 @@ const RequestsList = () =>{
                             placeholder="آرمان"/> */}
                     </div>
                 </div>
-                <div className="flex flex-col w-[130px] mr-2">
+                <div className="flex flex-col w-[150px] mr-2">
                 <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal font-IRsans">وضعیت درخواست</span>
                    <div class=" mt-3">
                   
@@ -71,7 +71,7 @@ const RequestsList = () =>{
                             placeholder="آرمان"/> */}
                     </div>
                 </div>
-                <div className="flex flex-col w-[130px] mr-2">
+                <div className="flex flex-col w-[150px] mr-2">
                 <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal font-IRsans">تایید شده توسط</span>
 
                    <div class=" mt-3">

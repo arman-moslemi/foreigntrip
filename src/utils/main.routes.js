@@ -14,13 +14,13 @@ import RequestHistory from "../pages/UserPanel/RequestHistory";
 import Profile from "../pages/UserPanel/Profile";
 import SubmitReport from "../pages/UserPanel/SubmitReport";
 import PassportRequest from "../pages/UserPanel/PassportRequest";
-import Request from "../pages/MainPanelLast/Requests";
-import NewIncomeRequest from "../pages/MainPanelLast/NewIncomeRequest";
-import NewIncomeRequestAccepted from "../pages/MainPanelLast/NewIncomeRequestAccepted";
-import RequestRejectedPage from "../pages/MainPanelLast/RequestRejected";
-import ReportHistory from "../pages/MainPanelLast/ReportHistory";
-import Traveling from "../pages/MainPanelLast/Traveling";
-import TravelDone from "../pages/MainPanelLast/TravelDone";
+// import Request from "../pages/MainPanelLast/Requests";
+// import NewIncomeRequest from "../pages/MainPanelLast/NewIncomeRequest";
+// import NewIncomeRequestAccepted from "../pages/MainPanelLast/NewIncomeRequestAccepted";
+// import RequestRejectedPage from "../pages/MainPanelLast/RequestRejected";
+// import ReportHistory from "../pages/MainPanelLast/ReportHistory";
+// import Traveling from "../pages/MainPanelLast/Traveling";
+// import TravelDone from "../pages/MainPanelLast/TravelDone";
 import TravelTracking from "../pages/UserPanel/TravelTracking";
 import TicketList from "../pages/UserPanel/TicketList";
 import TicketShow from "../pages/UserPanel/TicketShow";
@@ -28,12 +28,12 @@ import TicketShow from "../pages/UserPanel/TicketShow";
 import Userlist from "../pages/Supervisor/Userlist";
 import ReportList from "../pages/Supervisor/ReportList";
 import ReportView from "../pages/Supervisor/ReportView";
-import AgentList from "../pages/MainPanelLast/AgentList"; 
-import SignUpRequest from "../pages/MainPanelLast/SignUpRequest";
-import RegistrationRequestList from "../pages/MainPanelLast/RegistrationRequestList";
-import Waiting from "../pages/MainPanelLast/Waiting";
-import SignUpDetail from "../pages/MainPanelLast/SignUpDetail";
-import Slist from "../pages/MainPanelLast/Slist";
+// import AgentList from "../pages/MainPanelLast/AgentList"; 
+// import SignUpRequest from "../pages/MainPanelLast/SignUpRequest";
+// import RegistrationRequestList from "../pages/MainPanelLast/RegistrationRequestList";
+// import Waiting from "../pages/MainPanelLast/Waiting";
+// import SignUpDetail from "../pages/MainPanelLast/SignUpDetail";
+// import Slist from "../pages/MainPanelLast/Slist";
 import ChangePassword from "../pages/Login/ChangePassword";
 import NewPasswordSet from "../pages/Login/NewPasswordSet";
 
@@ -118,7 +118,7 @@ const MainRoutes = (props) =>{
                 <Routes>
                     <Route path="/passportRequest" element={<PassportRequest/>} />
                 </Routes>
-                <Routes>
+                {/* <Routes>
                     <Route path="/requests" element={<Request/>} />
                 </Routes>
                 <Routes>
@@ -141,7 +141,7 @@ const MainRoutes = (props) =>{
                 </Routes>
                 <Routes>
                     <Route path="/travelTracking" element={<TravelTracking/>} />
-                </Routes>
+                </Routes> */}
                 <Routes>
                     <Route path="/ticketList" element={<TicketList/>} />
                 </Routes>
@@ -164,7 +164,7 @@ const MainRoutes = (props) =>{
                     <Route path="/supervisor/reportView" element={<ReportView/>}/>
                 </Routes>
               
-                <Routes>
+                {/* <Routes>
                     <Route path="/agentList" element={<AgentList/>}/>
                 </Routes>
                 <Routes>
@@ -173,13 +173,13 @@ const MainRoutes = (props) =>{
                 <Routes>
                     <Route path="/waiting" element={<Waiting/>}/>
                     <Route path="/signUpRequest" element={<SignUpRequest/>}/>
-                </Routes>
-                <Routes>
+                </Routes> */}
+                {/* <Routes>
                     <Route path="/signUpDetail" element={<SignUpDetail/>}/>
-                </Routes>
-                <Routes>
+                </Routes> */}
+                {/* <Routes>
                     <Route path="/supervisorList" element={<Slist/>}/>
-                </Routes>
+                </Routes> */}
                 <Routes>
                     <Route path="/changePassword" element={<ChangePassword/>}/>
                 </Routes>

@@ -1,14 +1,14 @@
 import React,{useState} from "react";
-import MainRightMenu from "../../components/MainRightMenu";
+import SuperVisorRightMenu from "../../components/SupervisorComponent/SuperVisorRightMenu";
 import { Link } from "react-router-dom";
 import {ReactComponent as Ticket} from "../../assets/icon/blue/ticket.svg"
-import SupervisorTicketListTable from "../../components/SupervisorTicketListTable";
+import SupervisorTicketListTable from "../../components/SupervisorComponent/SupervisorTicketListTable";
 const SupervisorTicketList= () => {
     const [showNewTicket,setShowNewTicket] = React.useState(false);
     return(
         <div className="w-full h-screen bg-lightGray py-10 px-20 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>
         <div className="flex md:block">
-                <MainRightMenu/>
+                <SuperVisorRightMenu/>
                 <div className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl p-12 my-10 w-[80%] xl:p-5 md:w-[95%] md:rounded-xl md:mx-auto">
                 <div className="flex items-center justify-between sm:flex-wrap">
                     <div className="flex">
@@ -51,17 +51,20 @@ const SupervisorTicketList= () => {
                        </div>
                       
                        <div className="flex items-center mb-2 justify-endborder-t justify-center border-solid border-slate-200 rounded-b">
-                       <Link style={{fontFamily:'Shabnam'}}  to={'/'}>
+                      
                         <button
+                        style={{fontFamily:'Shabnam'}}
+                        onClick={()=>setShowNewTicket(false)}
                            className="text-mainColor font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                            type="button"
                            
                          >
                           بستن
-                         </button>
-                        </Link>
-                        <Link to={'/internationalAdmin/ticketShow'}>
+                      
+                  </button>
+                        <Link to={'/supervisor/ticketView'}>
                         <button
+                        style={{fontFamily:'Shabnam'}}
                            className="text-white bg-mainColor shadow-blueShadow rounded-lg font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                            type="button"
                           

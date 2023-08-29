@@ -1,6 +1,6 @@
 import React from "react";
 import {ReactComponent as Profile} from "../../assets/icon/blue/profile.svg"
-import MainRightMenu from "../../components/MainRightMenu";
+import MainRightMenu from "../../components/MainAdminComponent/MainRightMenu";
 import AddAgentForm from "../../components/AddAgentForm";
 const AddAgent = () =>{
 

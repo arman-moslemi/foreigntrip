@@ -1,12 +1,12 @@
 import React from "react";
 import UserReportList from "../../components/UserReportList";
-import SuperVisorRightMenu from "../../components/SuperVisorRightMenu";
+import SuperVisorRightMenu from "../../components/SupervisorComponent/SuperVisorRightMenu";
 import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
 const ReportList = () =>{
 
     return(
         <>
-         <div className="w-full h-full md:h-screen bg-lightGray py-10 px-10 xl:px-0 md:p-0  lg:h-screen" style={{direction:'rtl'}}>
+         <div className="w-full h-screen md:h-screen bg-lightGray py-10 px-10 xl:px-0 md:p-0  lg:h-screen" style={{direction:'rtl'}}>
 
 <div className="flex md:block">
 <SuperVisorRightMenu/>

@@ -1,7 +1,3 @@
-@font-face {
-	font-family: Fanum;
-	src: url('../../assets/fonts/IR.ttf') format('ttf');
-}
 
 #test input{
 	/* border:1px solid #000; */
@@ -11,6 +7,9 @@
 #test input:focus-visible{
 	height: 30px !important;
 	outline-color: transparent !important;
+}
+.captchas{
+	display: flex;
 }
 #StartDate input{
 	/* border:1px solid #000; */
@@ -26,12 +25,3 @@
 	padding-right: 10px;
 	border-radius: 6px;
 }
-.zm-Header{
-	font-family: Shabnam !important;
-  }
-  .css-15c7cx9{
-	font-family: Shabnam !important;
-  }
-  input{
-	font-family: Shabnam !important;
-  }

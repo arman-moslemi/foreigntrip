@@ -114,12 +114,13 @@ const tableRow =[
       
       <div className="relative p-6 flex-auto">
         <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-IRsans leading-relaxed">
-     آیا از حذف کاربر ناظر انتخاب شده مطمئن هستید؟
+     آیا از حذف کارشناس  انتخاب شده مطمئن هستید؟
         </p>
       </div>
      
       <div className="flex items-center justify-center justify-end border-solid border-slate-200 rounded-b">
         <button
+        style={{fontFamily:'Shabnam'}}
           className="text-black font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button"
           onClick={() => setShowError(false)}
@@ -127,6 +128,7 @@ const tableRow =[
           خیر
         </button>
         <button
+        style={{fontFamily:'Shabnam'}}
           className="text-white font-IRsans float-left bg-red shadow-redShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button"
           onClick={() => setShowError(false)}
@@ -156,7 +158,7 @@ const tableRow =[
  
       <div className="text-center p-4 border-b border-solid border-b-midGray rounded-t">
         <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-black align-middle text-center">
-        ویرایش کاربر
+        ویرایش کارشناس
         </span>
      
       </div>
@@ -190,6 +192,7 @@ const tableRow =[
      
       <div className="flex items-center justify-center justify-end border-solid border-slate-200 rounded-b">
         <button
+        style={{fontFamily:'Shabnam'}}
           className="text-black font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button"
           onClick={() => setShowEditModal(false)}
@@ -197,6 +200,7 @@ const tableRow =[
           بستن
         </button>
         <button
+        style={{fontFamily:'Shabnam'}}
           className="text-white font-IRsans float-left bg-mainColor shadow-blueShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button"
           onClick={() => setShowEditModal(false)}
@@ -239,6 +243,7 @@ const tableRow =[
      
       <div className="flex items-center justify-center justify-end border-solid border-slate-200 rounded-b">
         <button
+        style={{fontFamily:'Shabnam'}}
           className="text-black font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button"
           onClick={() => setShowBan(false)}
@@ -246,6 +251,7 @@ const tableRow =[
           خیر
         </button>
         <button
+        style={{fontFamily:'Shabnam'}}
           className="text-white font-IRsans float-left bg-red shadow-redShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button"
           onClick={() => setShowBan(false)}

@@ -2,14 +2,14 @@
 
 
 import React,{useState} from "react";
-import {ReactComponent as Search} from "../assets/icon/white/search.svg"
-import { ReactComponent as Eye } from "../assets/icon/black/eye.svg";
-import { ReactComponent as Ban } from "../assets/icon/black/ban.svg";
+import {ReactComponent as Search} from "../../assets/icon/white/search.svg"
+import { ReactComponent as Eye } from "../../assets/icon/black/eye.svg";
+import { ReactComponent as Ban } from "../../assets/icon/black/ban.svg";
 import './components.css';
 import { Link } from "react-router-dom";
-import {ReactComponent as Trash} from "../assets/icon/blue/trash.svg";
-import { ReactComponent as Pencil } from "../assets/icon/blue/pencil.svg";
-import Img1 from "../assets/img/user.png";
+import {ReactComponent as Trash} from "../../assets/icon/blue/trash.svg";
+import { ReactComponent as Pencil } from "../../assets/icon/blue/pencil.svg";
+import Img1 from "../../assets/img/user.png";
 export const truncate = (str, len) => {
     // console.log("truncate", str, str.length, len);
     if (str.length > len && str.length > 0) {
@@ -22,7 +22,7 @@ export const truncate = (str, len) => {
     return str;
   };
 
-const MainAdminUserList = () =>{
+const InternationalUserTable = () =>{
   const[showError,setShowError]= React.useState(false);
   const[showLog,setShowLog] = React.useState(false);
   const [showBan,setShowBan] =React.useState(false);
@@ -54,7 +54,7 @@ const MainAdminUserList = () =>{
           <button className="mx-2"  onClick={() => setShowBan(true)}>
             <Ban/>
           </button>
-          <Link to={'/'}>
+          <Link to={'/internationalAdmin/addAgent'}>
         <button className="mx-2" >
             <Pencil/>
           </button>
@@ -90,7 +90,7 @@ const MainAdminUserList = () =>{
           <button className="mx-2 "  onClick={() => setShowBan(true)}>
             <Ban/>
           </button>
-          <Link to={'/'}>
+          <Link to={'/internationalAdmin/addAgent'}>
         <button className="mx-2" >
             <Pencil/>
           </button>
@@ -127,7 +127,7 @@ const MainAdminUserList = () =>{
           <button className="mx-2"  onClick={() => setShowBan(true)}>
             <Ban/>
           </button>
-        <Link to={'/'}>
+        <Link to={'/internationalAdmin/addAgent'}>
         <button className="mx-2" >
             <Pencil/>
           </button>
@@ -214,6 +214,7 @@ const MainAdminUserList = () =>{
                
                 <div className="flex items-center justify-center justify-end border-solid border-slate-200 rounded-b">
                   <button
+                  style={{fontFamily:'Shabnam'}}
                     className="text-black font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowError(false)}
@@ -221,6 +222,7 @@ const MainAdminUserList = () =>{
                     خیر
                   </button>
                   <button
+                  style={{fontFamily:'Shabnam'}}
                     className="text-white font-IRsans float-left bg-red shadow-redShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowError(false)}
@@ -261,6 +263,7 @@ const MainAdminUserList = () =>{
                
                 <div className="flex items-center justify-center justify-end border-solid border-slate-200 rounded-b">
                   <button
+                  style={{fontFamily:'Shabnam'}}
                     className="text-black font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowBan(false)}
@@ -268,6 +271,7 @@ const MainAdminUserList = () =>{
                     خیر
                   </button>
                   <button
+                  style={{fontFamily:'Shabnam'}}
                     className="text-white font-IRsans float-left bg-red shadow-redShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowBan(false)}
@@ -313,6 +317,7 @@ const MainAdminUserList = () =>{
                 <div className="flex items-center justify-center justify-end border-solid border-slate-200 rounded-b">
                 
                   <button
+                  style={{fontFamily:'Shabnam'}}
                     className="text-white font-IRsans float-left bg-mainColor shadow-blueShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowLog(false)}
@@ -335,4 +340,4 @@ const MainAdminUserList = () =>{
 
 }
 
-export default MainAdminUserList;
+export default InternationalUserTable;
