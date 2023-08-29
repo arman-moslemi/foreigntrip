@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { DatePicker } from "zaman";
 import './components.css';
 import {Link} from "react-router-dom";
+import NewRequestFormStep2Table from "./NewRequestFormStep2Table";
 
 const NewRequestFormStep2 = () => {
     const [showSuccessModal,
@@ -62,12 +63,16 @@ const NewRequestFormStep2 = () => {
                 </div>
                 <div className="flex flex-col w-[31%] mr-[1.5%] mb-7">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">تاریخ تولد</span>
-                    <div class="mt-2">
-                        <input style={{fontFamily: 'Shabnam'}}
-                            type="text"
-                            id="input-group-1"
-                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
-                            placeholder="تاریخ تولد"/>
+                    <div >
+                    
+                        <div class="mt-2 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full" id="StartDate">
+                        <DatePicker style={{fontFamily:'Shabnam'}} placeholder="خهاخعل"  onChange={(e) => console.log(e.value)} />
+                            {/* <input style={{fontFamily: 'Shabnam'}}
+                                type="text"
+                                id="input-group-1"
+                                class=" font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                                placeholder="کد پستی"/> */}
+                        </div>
                     </div>
                 </div>
                 <div className="flex flex-col w-[25%] ml-[1.5%] mb-12">
@@ -200,13 +205,16 @@ const NewRequestFormStep2 = () => {
                     </button>
                     </div>
                 </div>
+                <div className="flex flex-col w-[100%]">
+                <NewRequestFormStep2Table/>
+                </div>
                 
                 
             </div>
             <div className="flex justify-end">
             <button
                 style={{fontFamily: 'Shabnam'}}
-                className="w-40 h-12 mt-20 bg-midGray shadow-blueShadow font-IRsans text-white text-xl font-normal rounded-lg hover:bg-lightGray hover:text-darkGray">
+                className="w-40 h-12 mt-20 bg-midGray shadow-blackShadow font-IRsans text-white text-xl font-normal rounded-lg hover:bg-lightGray hover:text-darkGray">
                 گام قبلی
             </button>
             <button
