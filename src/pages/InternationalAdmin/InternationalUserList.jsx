@@ -4,9 +4,9 @@ import {ReactComponent as Profile} from "../../assets/icon/blue/profile.svg"
 import {ReactComponent as Search} from "../../assets/icon/white/search.svg"
 import {ReactComponent as Download} from "../../assets/icon/white/download.svg"
 import {ReactComponent as Add} from "../../assets/icon/white/add.svg"
-import MainAdminUserList from "../../components/MainAdminUserList";
+import InternationalUserTable from "../../components/InternationalUserTable";
 import { Link } from "react-router-dom";
-const UserList = () =>{
+const InternationalUserList = () =>{
  
     return(
         <div className="w-full h-screen bg-lightGray py-10 px-10 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>
@@ -93,7 +93,7 @@ const UserList = () =>{
                             گزارش گیری
                         </span>
                     </button>
-               <Link to={'/mainAdmin/addAgent'}>
+               <Link to={'/internationalAdmin/addAgent'}>
                <button className="shadow-blueShadow flex px-2 h-[40px] items-center bg-mainColor text-white rounded-md mr-2">
                        
                        <span className="text-white " style={{fontFamily:'Shabnam'}}>
@@ -105,7 +105,7 @@ const UserList = () =>{
             </div>
             
 
-                <MainAdminUserList/>
+                <InternationalUserTable/>
             </div>
         </div>
       
@@ -113,6 +113,6 @@ const UserList = () =>{
     </div>
     )
 }
-export default UserList;
+export default InternationalUserList;
 
 /*responsive--done*/
