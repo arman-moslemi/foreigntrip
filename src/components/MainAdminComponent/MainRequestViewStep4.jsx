@@ -1,7 +1,7 @@
 import React,{useState} from "react";
-import {ReactComponent as Download} from "../assets/icon/blue/download.svg"
+import {ReactComponent as Download} from "../../assets/icon/blue/download.svg"
 import { Link } from "react-router-dom";
-const RequestViewStep4 = () =>{
+const MainRequestViewStep4 = () =>{
 const [showReason,
         setShowReason]= useState(false);
         const [show , setShow]=useState(false);
@@ -152,7 +152,7 @@ const [showButton,setShowButton] = React.useState(false);
                 </div>
                
                 <div className="flex items-center justify-center  border-solid border-slate-200 rounded-b mb-4">
-                  <Link to={'/internationalAdmin/uploadSignature'} style={{fontFamily:'Shabnam'}} 
+                  <Link to={'/mainAdmin/uploadSignature'} style={{fontFamily:'Shabnam'}} 
                     className=" float-left flex bg-mainColor items-center rounded-md shadow-blueShadow uppercase px-3 py-2 mx-1 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowSuccessModal(false)}
@@ -164,7 +164,7 @@ const [showButton,setShowButton] = React.useState(false);
                    
                     
                   </Link>
-                  <Link to={'/internationalAdmin/uploadSignature'} style={{fontFamily:'Shabnam'}} 
+                  <Link to={'/mainAdmin/uploadSignature'} style={{fontFamily:'Shabnam'}} 
                     className=" float-left flex items-center bg-mainColor rounded-md shadow-blueShadow uppercase px-3 py-2 mx-1 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowSuccessModal(false)}
@@ -193,4 +193,4 @@ const [showButton,setShowButton] = React.useState(false);
     )
 }
 
-export default RequestViewStep4;
+export default MainRequestViewStep4;

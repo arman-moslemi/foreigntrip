@@ -24,9 +24,17 @@ const MainRightMenu = () => {
                        
                         <li className="my-10">
                            <Link style={{fontFamily:'Shabnam'}}  to={'/mainAdmin/userList'} className="flex items-center">
-                           <Doc/>
+                           <Profile/>
                             <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-white font-medium mr-4 lg:text-sm">
                                لیست ماموران اعزامی
+                            </p>
+                           </Link>
+                        </li>
+                        <li className="my-10">
+                           <Link style={{fontFamily:'Shabnam'}}  to={'/mainAdmin/adminList'} className="flex items-center">
+                           <Profile/>
+                            <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-white font-medium mr-4 lg:text-sm">
+                               لیست مدیران سامانه
                             </p>
                            </Link>
                         </li>

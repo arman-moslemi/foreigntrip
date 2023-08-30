@@ -1,7 +1,7 @@
 import React from "react";
 import MainRightMenu from "../../components/MainAdminComponent/MainRightMenu";
 import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
-import AdminListTable from "../../components/AdminListTable";
+import AdminListTable from "../../components/MainAdminComponent/AdminListTable";
 const AdminList = () =>{
     return(
         <div className="w-full h-screen  bg-lightGray py-10 px-20 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>

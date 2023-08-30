@@ -23,16 +23,16 @@ const [showAlert,setShowAlert] = React.useState(false);
                 <div class="flex items-center flex-wrap md:mt-2">
     <div class="">
         <div class="flex items-center pl-3">
-        <label for="horizontal-list-radio-license" className="font-IRsans text-black  ml-4 text-sm">هست</label>
+        <label for="horizontal-list-radio-license" style={{fontFamily:'Shabnam'}} className="font-IRsans text-black  ml-4 text-sm">هست</label>
        
-            <input id="hast" type="radio" value="" name="list-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-borderGray focus:ring-mainColor "/>
+            <input id="hast1" type="radio" value="" name="list-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-borderGray focus:ring-mainColor "/>
         </div>
     </div>
     <div class="">
         <div class="flex items-center pl-3">
-        <label for="horizontal-list-radio-license" className="font-IRsans text-black  ml-4 text-sm">نیست</label>
+        <label for="horizontal-list-radio-license" style={{fontFamily:'Shabnam'}} className="font-IRsans text-black  ml-4 text-sm">نیست</label>
        
-            <input id="nist" type="radio" value="" name="list-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-borderGray focus:ring-mainColor "/>
+            <input id="nist1" type="radio" value="" name="list-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-borderGray focus:ring-mainColor "/>
         </div>
     </div>
     <label for="dropzone-file" class="mt-2 flex flex-col items-center justify-center w-40 md:w-full h-12 border-2 border-borderGray border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
@@ -60,16 +60,16 @@ const [showAlert,setShowAlert] = React.useState(false);
                 <div class="flex items-center flex-wrap md:mt-2">
     <div class="">
         <div class="flex items-center pl-3">
-        <label for="horizontal-list-radio-license" className="font-IRsans text-black  ml-4 text-sm">هست</label>
+        <label for="horizontal-list-radio-license" style={{fontFamily:'Shabnam'}} className="font-IRsans text-black  ml-4 text-sm">هست</label>
        
-            <input id="hast" type="radio" value="" name="list-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-borderGray focus:ring-mainColor "/>
+            <input id="hast2" type="radio" value="" name="list-radio2" class="w-6 h-6 text-blue-600 bg-gray-100 border-borderGray focus:ring-mainColor "/>
         </div>
     </div>
     <div class="">
         <div class="flex items-center pl-3">
-        <label for="horizontal-list-radio-license" className="font-IRsans text-black  ml-4 text-sm">نیست</label>
+        <label for="horizontal-list-radio-license" style={{fontFamily:'Shabnam'}} className="font-IRsans text-black  ml-4 text-sm">نیست</label>
        
-            <input id="nist" type="radio" value="" name="list-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-borderGray focus:ring-mainColor "/>
+            <input id="nist2" type="radio" value="" name="list-radio2" class="w-6 h-6 text-blue-600 bg-gray-100 border-borderGray focus:ring-mainColor "/>
         </div>
     </div>
     <label for="dropzone-file" class="mt-2 flex flex-col items-center justify-center w-40 md:w-full h-12 border-2 border-borderGray border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
@@ -97,16 +97,16 @@ const [showAlert,setShowAlert] = React.useState(false);
                 <div class="flex items-center flex-wrap md:mt-2">
     <div class="">
         <div class="flex items-center pl-3">
-        <label for="horizontal-list-radio-license" className="font-IRsans text-black  ml-4 text-sm">هست</label>
+        <label for="horizontal-list-radio-license" style={{fontFamily:'Shabnam'}} className="font-IRsans text-black  ml-4 text-sm">هست</label>
        
-            <input id="hast" type="radio" value="" name="list-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-borderGray focus:ring-mainColor "/>
+            <input id="hast3" type="radio" value="" name="list-radio3" class="w-6 h-6 text-blue-600 bg-gray-100 border-borderGray focus:ring-mainColor "/>
         </div>
     </div>
     <div class="">
         <div class="flex items-center pl-3">
-        <label for="horizontal-list-radio-license" className="font-IRsans text-black  ml-4 text-sm">نیست</label>
+        <label for="horizontal-list-radio-license" style={{fontFamily:'Shabnam'}} className="font-IRsans text-black  ml-4 text-sm">نیست</label>
        
-            <input id="nist" type="radio" value="" name="list-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-borderGray focus:ring-mainColor "/>
+            <input id="nist3" type="radio" value="" name="list-radio3" class="w-6 h-6 text-blue-600 bg-gray-100 border-borderGray focus:ring-mainColor "/>
         </div>
     </div>
     <label for="dropzone-file" class="mt-2 flex flex-col items-center justify-center w-40 md:w-full h-12 border-2 border-borderGray border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
@@ -134,16 +134,16 @@ const [showAlert,setShowAlert] = React.useState(false);
                 <div class="flex items-center flex-wrap md:mt-2">
     <div class="">
         <div class="flex items-center pl-3">
-        <label for="horizontal-list-radio-license" className="font-IRsans text-black  ml-4 text-sm">هست</label>
+        <label for="horizontal-list-radio-license" style={{fontFamily:'Shabnam'}} className="font-IRsans text-black  ml-4 text-sm">هست</label>
        
-            <input id="hast" type="radio" value="" name="list-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-borderGray focus:ring-mainColor "/>
+            <input id="hast4" type="radio" value="" name="list-radio4" class="w-6 h-6 text-blue-600 bg-gray-100 border-borderGray focus:ring-mainColor "/>
         </div>
     </div>
     <div class="">
         <div class="flex items-center pl-3">
-        <label for="horizontal-list-radio-license" className="font-IRsans text-black  ml-4 text-sm">نیست</label>
+        <label for="horizontal-list-radio-license" style={{fontFamily:'Shabnam'}} className="font-IRsans text-black  ml-4 text-sm">نیست</label>
        
-            <input id="nist" type="radio" value="" name="list-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-borderGray focus:ring-mainColor "/>
+            <input id="nist4" type="radio" value="" name="list-radio4" class="w-6 h-6 text-blue-600 bg-gray-100 border-borderGray focus:ring-mainColor "/>
         </div>
     </div>
     <label for="dropzone-file" class="mt-2 flex flex-col items-center justify-center w-40 md:w-full h-12 border-2 border-borderGray border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
@@ -171,16 +171,16 @@ const [showAlert,setShowAlert] = React.useState(false);
                 <div class="flex items-center flex-wrap md:mt-2">
     <div class="">
         <div class="flex items-center pl-3">
-        <label for="horizontal-list-radio-license" className="font-IRsans text-black  ml-4 text-sm">هست</label>
+        <label for="horizontal-list-radio-license" style={{fontFamily:'Shabnam'}} className="font-IRsans text-black  ml-4 text-sm">هست</label>
        
-            <input id="hast" type="radio" value="" name="list-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-borderGray focus:ring-mainColor "/>
+            <input id="hast5" type="radio" value="" name="list-radio5" class="w-6 h-6 text-blue-600 bg-gray-100 border-borderGray focus:ring-mainColor "/>
         </div>
     </div>
     <div class="">
         <div class="flex items-center pl-3">
-        <label for="horizontal-list-radio-license" className="font-IRsans text-black  ml-4 text-sm">نیست</label>
+        <label for="horizontal-list-radio-license" style={{fontFamily:'Shabnam'}} className="font-IRsans text-black  ml-4 text-sm">نیست</label>
        
-            <input id="nist" type="radio" value="" name="list-radio" class="w-6 h-6 text-blue-600 bg-gray-100 border-borderGray focus:ring-mainColor "/>
+            <input id="nist5" type="radio" value="" name="list-radio5" class="w-6 h-6 text-blue-600 bg-gray-100 border-borderGray focus:ring-mainColor "/>
         </div>
     </div>
     <label for="dropzone-file" class="mt-2 flex flex-col items-center justify-center w-40 md:w-full h-12 border-2 border-borderGray border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">

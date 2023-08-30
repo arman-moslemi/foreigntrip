@@ -1,8 +1,6 @@
 import React,{useState} from "react";
 import InternationalRightMenu from "../../components/InternationalComponent/InternationalRightMenu";
-import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
-import ReportTable from "../../components/ReportTable";
-import {ReactComponent as Search} from "../../assets/icon/white/search.svg"
+
 import { Link } from "react-router-dom";
 const InternationalReportsView = () =>{
     const [show , setShow]=useState(false);

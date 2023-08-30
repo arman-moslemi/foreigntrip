@@ -111,10 +111,10 @@ const tableRow =[
   <thead className="bg-darkGray h-11 rounded-t-2xl w-full whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}> 
     <tr className="text-white  p-6 whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}>
       <th className="text-right pr-4 font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>ردیف</th>
-      <th className="text-right font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>شماره تیکت</th>
-      <th className="text-right font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>موضوع تیکت</th>
-      <th className="text-center font-IRsan md:px-4s" style={{fontFamily:'Shabnam'}}>آخرین به روز رسانی</th>
-      <th className="text-center font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>وضعیت تیکت</th>
+      <th className="text-right font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}> عنوان پیام</th>
+      <th className="text-right font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>متن پیام</th>
+      <th className="text-center font-IRsan md:px-4s" style={{fontFamily:'Shabnam'}}>مخاطب</th>
+      <th className="text-center font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>زمان ارسال</th>
       <th className="text-center font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>مشاهده</th>
     </tr>
   </thead>

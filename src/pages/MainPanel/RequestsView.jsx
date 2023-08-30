@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import RequestViewStep1 from "../../components/RequestViewStep1";
 import RequestViewStep2 from "../../components/RequestViewStep2";
 import RequestViewStep3 from "../../components/RequestViewStep3";
-import RequestViewStep4 from "../../components/RequestViewStep4";
+import MainRequestViewStep4 from "../../components/MainAdminComponent/MainRequestViewStep4";
 const RequestsView = () =>{
     return(
         <div className="w-full h-full  bg-lightGray py-10 px-10 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>
@@ -45,7 +45,7 @@ const RequestsView = () =>{
                   گام 4 -توضیحات سفر
                 </span>
                 </div> 
-                <RequestViewStep4/>
+                <MainRequestViewStep4/>
             </div>
 
         </div>
