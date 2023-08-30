@@ -248,7 +248,7 @@ const MainAdminRequestList = () =>{
                   </p>
                 </div>
                
-                <div className="flex items-center justify-center justify-end border-solid border-slate-200 rounded-b">
+                <div className="flex items-center justify-center  border-solid border-slate-200 rounded-b">
                   <button
                     className="text-black font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
