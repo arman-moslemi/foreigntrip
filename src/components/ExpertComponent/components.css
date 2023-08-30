@@ -1,0 +1,28 @@
+@font-face {
+	font-family: Fanum;
+	src: url('../../assets/fonts/IR.ttf') format('ttf');
+}
+
+#test input{
+	/* border:1px solid #000; */
+	height: 38px !important;
+	margin-right: 10px;
+}
+#test input:focus-visible{
+	height: 30px !important;
+	outline-color: transparent !important;
+}
+#StartDate input{
+	/* border:1px solid #000; */
+	height: 38px !important;
+	width: 100%;
+	padding-right: 10px;
+	border-radius: 6px;
+}
+#EndDate input{
+	/* border:1px solid #000; */
+	height: 38px !important;
+	width: 100%;
+	padding-right: 10px;
+	border-radius: 6px;
+}

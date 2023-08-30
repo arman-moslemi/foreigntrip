@@ -52,6 +52,29 @@ import Message from "../pages/MainPanel/Message";
 import RequestsList from "../pages/MainPanel/RequestsList";
 import RequestsView from "../pages/MainPanel/RequestsView";
 import UploadSignature from "../pages/MainPanel/UploadSignature";
+import SupervisorsList from "../pages/InternationalAdmin/SupervisorList";
+import ExpertList from "../pages/InternationalAdmin/ExpertList";
+import InternationalUserList from "../pages/InternationalAdmin/InternationalUserList";
+import InternationalAddAgent from "../pages/InternationalAdmin/AddAgent";
+import InternationalMessage from "../pages/InternationalAdmin/Message";
+import InternationalSendMessageList from "../pages/InternationalAdmin/SendMessageList";
+import InternationalRequestsList from "../pages/InternationalAdmin/RequestsList";
+import InternatioanlRequestsView from "../pages/InternationalAdmin/RequestsView";
+import InternationalUploadSignature from "../pages/InternationalAdmin/UploadSignature";
+import InternationalReportsList from "../pages/InternationalAdmin/ReportList";
+import InternationalReportsView from "../pages/InternationalAdmin/ReportsView";
+import InternationalTicketList from "../pages/InternationalAdmin/TicketListMain";
+import InternatinalTicketShow from "../pages/InternationalAdmin/TicketShowMain";
+import SupervisorTicketList from "../pages/Supervisor/TicketListMain";
+import SupervisorTicketShow from "../pages/Supervisor/TicketShowMain";
+import ExpertMessage from "../pages/Expert/Message";
+import ExpertSendMessageList from "../pages/Expert/SendMessageList";
+import ExpertRequestsList from "../pages/Expert/RequestsList";
+import ExpertRequestsView from "../pages/Expert/RequestsView";
+import ExpertReportsList from "../pages/Expert/ReportList";
+import ExpertReportsView from "../pages/Expert/ReportsView";
+import ExpertTicketList from "../pages/Expert/TicketListMain";
+import ExpertTicketShow from "../pages/Expert/TicketShow";
 const MainRoutes = (props) =>{
     return(
             <BrowserRouter>
@@ -129,6 +152,12 @@ const MainRoutes = (props) =>{
                     <Route path="/supervisor/userList" element={<Userlist/>}/>
                 </Routes>
                 <Routes>
+                    <Route path="/supervisor/ticketList" element={<SupervisorTicketList/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/supervisor/ticketView" element={<SupervisorTicketShow/>}/>
+                </Routes>
+                <Routes>
                     <Route path="/supervisor/reportList" element={<ReportList/>}/>
                 </Routes>
                 <Routes>
@@ -199,6 +228,69 @@ const MainRoutes = (props) =>{
                 </Routes>
                 <Routes>
                     <Route path="/mainAdmin/uploadSignature" element={<UploadSignature/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/internationalAdmin/supervisorList" element={<SupervisorsList/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/internationalAdmin/expertList" element={<ExpertList/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/internationalAdmin/userList" element={<InternationalUserList/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/internationalAdmin/addAgent" element={<InternationalAddAgent/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/internationalAdmin/message" element={<InternationalMessage/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/internationalAdmin/messageList" element={<InternationalSendMessageList/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/internationalAdmin/requestList" element={<InternationalRequestsList/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/internationalAdmin/requestView" element={<InternatioanlRequestsView/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/internationalAdmin/uploadSignature" element={<InternationalUploadSignature/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/internationalAdmin/reportList" element={<InternationalReportsList/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/internationalAdmin/reportView" element={<InternationalReportsView/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/internationalAdmin/ticketList" element={<InternationalTicketList/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/internationalAdmin/ticketShow" element={<InternatinalTicketShow/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/expert/message" element={<ExpertMessage/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/expert/messageList" element={<ExpertSendMessageList/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/expert/requestList" element={<ExpertRequestsList/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/expert/requestView" element={<ExpertRequestsView/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/expert/reportList" element={<ExpertReportsList/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/expert/reportView" element={<ExpertReportsView/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/expert/ticketList" element={<ExpertTicketList/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/expert/ticketShow" element={<ExpertTicketShow/>}/>
                 </Routes>
             </BrowserRouter>
     )
