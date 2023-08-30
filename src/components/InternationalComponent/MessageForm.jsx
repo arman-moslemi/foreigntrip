@@ -2,13 +2,13 @@ import React, {useState} from "react";
 import { DatePicker } from "zaman";
 import './components.css';
 
-import {ReactComponent as Doc} from "../assets/icon/black/doc.svg"
+import {ReactComponent as Doc} from "../../assets/icon/black/doc.svg"
 
-import {ReactComponent as Calender} from "../assets/icon/black/calender.svg"
-import {ReactComponent as Message} from "../assets/icon/white/message.svg"
+import {ReactComponent as Calender} from "../../assets/icon/black/calender.svg"
+import {ReactComponent as Message} from "../../assets/icon/white/message.svg"
 
-import {ReactComponent as Clock} from "../assets/icon/black/clock.svg"
-import {ReactComponent as Cross} from "../assets/icon/white/close.svg"
+import {ReactComponent as Clock} from "../../assets/icon/black/clock.svg"
+import {ReactComponent as Cross} from "../../assets/icon/white/close.svg"
 
 const MessageForm = () => {
     const [showAgent,

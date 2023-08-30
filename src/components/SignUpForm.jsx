@@ -42,6 +42,11 @@ const SignUpForm = () => {
                     </button>
                 </div>
             </div>
+            <div className="w-full my-4">
+                <p className="text-red" style={{fontFamily:'Shabnam'}}>
+                    * پر کردن تمامی فیلد ها اجباری است.
+                </p>
+            </div>
             <div className="flex w-full flex-wrap">
                 <div className="flex flex-col w-[48%] ml-[2%] mb-4">
                     <span style={{fontFamily:'Shabnam'}}   className="text-base font-normal font-IRsans">کد ملی</span>
@@ -50,7 +55,7 @@ const SignUpForm = () => {
                             <Doc/>
                         </div>
                         <input style={{fontFamily:'Shabnam'}}
-                            type="text"
+                            type="number"
                             id="input-group-1"
                             class="pr-9 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
                             placeholder="کد ملی"/>
@@ -109,7 +114,7 @@ const SignUpForm = () => {
                             <Phone/>
                         </div>
                         <input style={{fontFamily:'Shabnam'}}
-                            type="text"
+                            type="number"
                             id="input-group-1"
                             class="pr-9 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
                             placeholder="شماره تلفن همراه"/>
@@ -122,7 +127,7 @@ const SignUpForm = () => {
                             <Phone/>
                         </div>
                         <input style={{fontFamily:'Shabnam'}}
-                            type="text"
+                            type="number"
                             id="input-group-1"
                             class="pr-9 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
                             placeholder="شماره تلفن ثابت"/>
@@ -135,7 +140,7 @@ const SignUpForm = () => {
                             <Mail/>
                         </div>
                         <input style={{fontFamily:'Shabnam'}}
-                            type="text"
+                            type="email"
                             id="input-group-1"
                             class="pr-9 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
                             placeholder="ایمیل"/>
@@ -149,7 +154,7 @@ const SignUpForm = () => {
                                 <Doc/>
                             </div>
                             <input style={{fontFamily:'Shabnam'}}
-                                type="text"
+                                type="number"
                                 id="input-group-1"
                                 class="pr-9 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
                                 placeholder="کد پستی"/>
@@ -171,7 +176,7 @@ const SignUpForm = () => {
                             type="text"
                             disabled="true"
                             id="input-group-1"
-                            class="pr-9 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                            class="pr-9 font-IRsans text-right right-6 bg-white border border-gray-300 text-black text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
                             placeholder="آدرس شما"></textarea>
                     </div>
                 </div>
@@ -313,10 +318,10 @@ const SignUpForm = () => {
             </div>
             
 
-            <button style={{fontFamily:'Shabnam'}}
-                className="w-[60%] mx-auto block h-12 bg-mainColor shadow-blueShadow mt-10 font-IRsans text-white text-xl font-medium rounded-lg hover:bg-lightBlue hover:text-mainColor">
-                ورود
-            </button>
+            <Link to={'/signUpDone'} style={{fontFamily:'Shabnam'}}
+                className="w-[60%] mx-auto flex justify-center items-center h-12 bg-mainColor shadow-blueShadow mt-10 font-IRsans text-white text-xl font-medium rounded-lg hover:bg-lightBlue hover:text-mainColor">
+                ثبت نام
+            </Link>
 
         </div>
 

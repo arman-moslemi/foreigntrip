@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import MainRightMenu from "../../components/MainAdminComponent/MainRightMenu";
 import { Link } from "react-router-dom";
 import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
-import MessageForm from "../../components/MessageForm";
+import MessageForm from "../../components/MainAdminComponent/MessageForm";
 const Message = () => {
     const [showNewTicket,setShowNewTicket] = React.useState(false);
     return(

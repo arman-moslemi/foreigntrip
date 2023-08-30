@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import InternationalRightMenu from "../../components/InternationalComponent/InternationalRightMenu";
 import { Link } from "react-router-dom";
 import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
-import MessageForm from "../../components/MessageForm";
+import MessageForm from "../../components/InternationalComponent/MessageForm";
 const InternationalMessage = () => {
     const [showNewTicket,setShowNewTicket] = React.useState(false);
     return(
