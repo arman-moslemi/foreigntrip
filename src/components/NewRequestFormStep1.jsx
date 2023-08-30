@@ -8,10 +8,10 @@ const NewRequestFormStep1 = () => {
         setShowSuccessModal] = React.useState(false);
     return (
         <div>
-          <p style={{fontFamily: 'Shabnam'}} className="text-xl text-mainColor font-normal mt-3.5 mb-8 ">گام 1 - اطلاعات اولیه</p>
+          <p style={{fontFamily: 'Shabnam'}} className="text-xl text-mainColor font-bold mt-3.5 mb-8 ">گام 1 - اطلاعات اولیه</p>
             <div className="flex w-full flex-wrap">
                 <div className="flex flex-col w-[31%] ml-[1.5%] mb-5">
-                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">نام دستگاه اجرایی</span>
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold font-IRsans">نام دستگاه اجرایی</span>
                     <div class="mt-2">
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
@@ -21,7 +21,7 @@ const NewRequestFormStep1 = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[32%] mx-[1.5%] mb-5">
-                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">آدرس اینترنتی دستگاه اجرایی</span>
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold font-IRsans">آدرس اینترنتی دستگاه اجرایی</span>
                     <div class="mt-2">
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
@@ -31,7 +31,7 @@ const NewRequestFormStep1 = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[31%] mr-[1.5%] mb-5">
-                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">کشور و شهر مقصد</span>
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold font-IRsans">کشور و شهر مقصد</span>
                     <div class="mt-2">
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
@@ -41,7 +41,7 @@ const NewRequestFormStep1 = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[31%] ml-[1.5%] mb-7">
-                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">مسیر پروازی</span>
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold font-IRsans">مسیر پروازی</span>
                     <div class="mt-2">
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
@@ -52,7 +52,7 @@ const NewRequestFormStep1 = () => {
                 </div>
                 <div className="flex w-[32%] mx-[1.5%] mb-7 items-end">
                     <div className="flex flex-col w-[39%] ">
-                        <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">تاریخ و مدت سفر</span>
+                        <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold font-IRsans">تاریخ و مدت سفر</span>
                         <div class="mt-2 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full" id="StartDate">
                         <DatePicker style={{fontFamily:'Shabnam'}} placeholder="خهاخعل"  onChange={(e) => console.log(e.value)} />
                             {/* <input style={{fontFamily: 'Shabnam'}}
@@ -73,7 +73,7 @@ const NewRequestFormStep1 = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[31%] mr-[1.5%] mb-7">
-                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">مدت زمان سفر</span>
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold font-IRsans">مدت زمان سفر</span>
                     <div class="mt-2">
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
@@ -83,7 +83,7 @@ const NewRequestFormStep1 = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[100%]  mb-8">
-                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">موضوع سفر</span>
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold font-IRsans">موضوع سفر</span>
                     <div class="mt-2">
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
@@ -92,7 +92,7 @@ const NewRequestFormStep1 = () => {
                             placeholder="موضوع سفر را اینجا بنویسید"/>
                     </div>
                 </div>
-                <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans mb-4">اهداف سفر</span>
+                <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold font-IRsans mb-4">اهداف سفر</span>
                 <div className="flex flex-wrap w-[100%]">
                   <div className="ml-14 mb-4">
                     <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
@@ -160,7 +160,7 @@ const NewRequestFormStep1 = () => {
                   </div>
 
                 </div>
-                <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans mb-4 mt-9">اهداف شغلی</span>
+                <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold font-IRsans mb-4 mt-9">اهداف شغلی</span>
                 <div className="flex flex-wrap w-[100%]">
                   <div className="ml-5 mb-4">
                     <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
@@ -222,7 +222,7 @@ const NewRequestFormStep1 = () => {
                 </div>
                 <div className="flex flex-col w-[48.5%] ml-[1.5%] mt-8 mb-12">
                   
-                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">متولیان / شرکت کنندگان</span>
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold font-IRsans">متولیان / شرکت کنندگان</span>
                     
                     <div class="mt-5 flex w-[100%]">
                         <input style={{fontFamily: 'Shabnam'}}
@@ -241,7 +241,7 @@ const NewRequestFormStep1 = () => {
                 </div>
                 <div className="flex flex-col w-[48.5%] mr-[1.5%] mt-8 mb-12">
                   
-                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">نوع گذرنامه</span>
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold font-IRsans">نوع گذرنامه</span>
                     
                     <div class="mt-7 flex w-[100%]">
                         <div className="flex items-center">
@@ -256,7 +256,7 @@ const NewRequestFormStep1 = () => {
                 
                 </div>
                 <div className="flex w-[100%] mb-10">
-                  <p style={{fontFamily: 'Shabnam'}} className="text-base font-normal">آیا نیاز به یادداشت وزارت امور خارجه برای اخذ ویزا دارد ؟</p>
+                  <p style={{fontFamily: 'Shabnam'}} className="text-base font-bold">آیا نیاز به یادداشت وزارت امور خارجه برای اخذ ویزا دارد ؟</p>
                   <div className="flex items-center">
                           <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-7 ml-1" type="radio" name="q1" id="a1" />
                           <label style={{fontFamily: 'Shabnam'}} className="" For="a1">بله</label>
@@ -265,7 +265,7 @@ const NewRequestFormStep1 = () => {
                   </div>
                 </div>
                 <div className="flex w-[100%] mb-8">
-                  <p style={{fontFamily: 'Shabnam'}} className="text-base font-normal">آیا سفر مشترک بین چند دستگاه اجرایی است ؟</p>
+                  <p style={{fontFamily: 'Shabnam'}} className="text-base font-bold">آیا سفر مشترک بین چند دستگاه اجرایی است ؟</p>
                   <div className="flex items-center">
                           <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-7 ml-1" type="radio" name="q2" id="a3" />
                           <label style={{fontFamily: 'Shabnam'}} className="" For="a1">بله</label>
@@ -274,7 +274,7 @@ const NewRequestFormStep1 = () => {
                   </div>
                 </div>
                 <div className="flex flex-col w-[90%] ml-[1.5%] mb-3">
-                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">شماره تاریخ نامه و مقام پیشنهاد دهنده داخلی دستگاه برای انجام سفر را درج نمائید :</span>
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold font-IRsans">شماره تاریخ نامه و مقام پیشنهاد دهنده داخلی دستگاه برای انجام سفر را درج نمائید :</span>
                     <div class="mt-6">
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
@@ -286,11 +286,11 @@ const NewRequestFormStep1 = () => {
                 
             </div>
             <div className="flex justify-end">
-            <button
+            <Link to={'/newRequestStep2'}
                 style={{fontFamily: 'Shabnam'}}
-                className="w-40 h-12 bg-mainColor shadow-blueShadow font-IRsans text-white text-xl font-normal rounded-lg hover:bg-lightBlue hover:text-mainColor">
+                className="w-40 h-12 flex justify-center items-center bg-mainColor shadow-blueShadow font-IRsans text-white text-xl font-bold rounded-lg hover:bg-lightBlue hover:text-mainColor">
                 گام بعدی
-            </button>
+            </Link>
             </div>
 
         </div>

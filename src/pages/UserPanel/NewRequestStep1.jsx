@@ -5,7 +5,7 @@ import {ReactComponent as Add} from "../../assets/icon/blue/add.svg"
 const NewRequestStep1 = () => {
     return (
         <div
-            className="w-full h-full bg-lightGray py-10 px-20 xl:px-0 md:p-0  lg:h-full"
+            className="w-full h-full bg-lightGray py-10 px-10 xl:px-0 md:p-0  lg:h-full"
             style={{
             direction: 'rtl'
         }}>

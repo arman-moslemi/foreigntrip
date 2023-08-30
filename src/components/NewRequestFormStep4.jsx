@@ -9,10 +9,10 @@ const NewRequestFormStep4 = () => {
         setShowSuccessModal] = React.useState(false);
     return (
         <div>
-          <p style={{fontFamily: 'Shabnam'}} className="text-xl text-mainColor font-normal mt-3.5 mb-10 ">گام ۴ - توضیحات سفر</p>
+          <p style={{fontFamily: 'Shabnam'}} className="text-xl text-mainColor font-bold mt-3.5 mb-10 ">گام ۴ - توضیحات سفر</p>
             <div className="flex w-full flex-wrap">
             <div className="flex flex-col w-[100%]  mb-7">
-                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">شرح اهمیت موضوع سفر ( حداکثر در ۵ سطر )</span>
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold font-IRsans">شرح اهمیت موضوع سفر ( حداکثر در ۵ سطر )</span>
                     <div class="mt-2">
                     <textarea style={{fontFamily:'Shabnam'}}
                             rows={5}
@@ -24,7 +24,7 @@ const NewRequestFormStep4 = () => {
                     </div>
             </div>
             <div className="flex flex-col w-[100%]  mb-7">
-                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">سوابق دستاوردهای قبلی مرتبط با موضوع این ماموریت (حداکثر در ۵ سطر )</span>
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold font-IRsans">سوابق دستاوردهای قبلی مرتبط با موضوع این ماموریت (حداکثر در ۵ سطر )</span>
                     <div class="mt-2">
                     <textarea style={{fontFamily:'Shabnam'}}
                             rows={5}
@@ -36,7 +36,7 @@ const NewRequestFormStep4 = () => {
                     </div>
             </div>
             <div className="flex flex-col w-[100%]  mb-7">
-                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">خلاصه ترجمه شده دعوتنامه و یا قید هزینه ها و برنامه ریزی زمانبندی شده روزهای ماموریت بر اساس دعوتنامه(حداکثر در ۵ سطر)</span>
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold font-IRsans">خلاصه ترجمه شده دعوتنامه و یا قید هزینه ها و برنامه ریزی زمانبندی شده روزهای ماموریت بر اساس دعوتنامه(حداکثر در ۵ سطر)</span>
                     <div class="mt-2">
                     <textarea style={{fontFamily:'Shabnam'}}
                             rows={5}
@@ -48,7 +48,7 @@ const NewRequestFormStep4 = () => {
                     </div>
             </div>
             <div className="flex flex-col w-[100%]  mb-7">
-                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">خلاصه ترجمه شده دیگر نامه های طرف خارجی (حداکثر در ۱۰ سطر)</span>
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold font-IRsans">خلاصه ترجمه شده دیگر نامه های طرف خارجی (حداکثر در ۱۰ سطر)</span>
                     <div class="mt-2">
                     <textarea style={{fontFamily:'Shabnam'}}
                             rows={10}
@@ -60,7 +60,7 @@ const NewRequestFormStep4 = () => {
                     </div>
             </div>
             <div className="flex flex-col w-[100%]  mb-7">
-                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-normal font-IRsans">آیا سفر مذکور نیاز به موافقت دستگاه های مرجع دیگری در داخل دارد؟ در صورت مثبت بودن پاسخ اصل نامه دعوت نامه ضمیمه شود</span>
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold font-IRsans">آیا سفر مذکور نیاز به موافقت دستگاه های مرجع دیگری در داخل دارد؟ در صورت مثبت بودن پاسخ اصل نامه دعوت نامه ضمیمه شود</span>
                     <div class="mt-4 flex">
                     <div className="flex items-center">
                           <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor  ml-1" type="radio" name="confirmation" id="confirmationYes" />
@@ -81,7 +81,7 @@ const NewRequestFormStep4 = () => {
                     </div>
             </div>
             <div className="flex w-[100%] mb-8">
-                  <p style={{fontFamily: 'Shabnam'}} className="text-base font-normal">سفر در راستای برنامه اقتصاد مقاومتی می باشد؟</p>
+                  <p style={{fontFamily: 'Shabnam'}} className="text-base font-bold">سفر در راستای برنامه اقتصاد مقاومتی می باشد؟</p>
                   <div className="flex items-center">
                           <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-7 ml-1" type="radio" name="economy" id="EconomyYes" />
                           <label style={{fontFamily: 'Shabnam'}} className="" For="a1">بله</label>
@@ -96,18 +96,71 @@ const NewRequestFormStep4 = () => {
                 
             </div>
             <div className="flex justify-end">
-            <button
+            <Link
+            to={'/newRequestStep3'}
                 style={{fontFamily: 'Shabnam'}}
-                className="w-40 h-12 mt-20 bg-midGray shadow-blackShadow font-IRsans text-white text-xl font-normal rounded-lg hover:bg-lightGray hover:text-darkGray">
+                className="w-40 h-12 flex justify-center items-center mt-20 bg-midGray shadow-blackShadow font-IRsans text-white text-xl font-normal rounded-lg hover:bg-lightGray hover:text-darkGray">
                 گام قبلی
-            </button>
+            </Link>
             <button
+             onClick={() => setShowSuccessModal(true)}
                 style={{fontFamily: 'Shabnam'}}
-                className="w-40 h-12 mt-20 mr-4 bg-mainColor shadow-blueShadow font-IRsans text-white text-xl font-normal rounded-lg hover:bg-lightBlue hover:text-mainColor">
+                className="w-40 h-12 mt-20 justify-center items-center flex mr-4 bg-mainColor shadow-blueShadow font-IRsans text-white text-xl font-normal rounded-lg hover:bg-lightBlue hover:text-mainColor">
                 ثبت درخواست
             </button>
             </div>
-
+            {showSuccessModal ?
+           <>
+            <div
+            className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+          >
+            <div className="relative w-[70%] my-5 mx-auto max-w-3xl">
+             
+              <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+           
+                <div className="flex items-start justify-between p-4 border-b border-solid border-b-midGray rounded-t">
+                  <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-green">
+                    ملاحظات
+                  </span>
+               
+                </div>
+                
+                <div className="relative p-6 flex-auto">
+                  <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-IRsans leading-relaxed">
+                  ۱.قبل از انجام سفر پس از صدور مجوز موافقت با سفر می بایستی مواردی که قطعیت یافته و با علامت مشخص شده است توسط دستگاه تکمیل و مجددا جهت صدور مجوز خروج از کشور(صرفا از بعد نظارت بر سفر های خارجی کارکنان دولت می باشد و فاقد هرگونه ارزش دیگری جهت ارائه به سازمان های دیگر می باشد) ارائه شود.
+                  </p>
+                  <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-IRsans leading-relaxed">
+                  ۲-بعد از انجام سفر تجربیات حاصل از سفر می بایستی بر روی پورتال اینترنتی دستگاه گذاشته شده (حداکثر در ۱۰ سطر )به اطلاع کارگروه برسد                  </p>
+                  <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-IRsans leading-relaxed">
+                  ۳-در صورت هرگونه تغییری در کلیه موارد فوق الذکر قبل یا بعد از انجام سفر بلافاصله به کارگروه داخلی اطلاع رسانی شود.</p>               
+                  <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-IRsans leading-relaxed">
+                  ۴-در صورت محرمانه بودن سفر با موضوع یا هر مورد دیگر الزام به تکمیل آن بخش نمایید.                  </p>   
+                  <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-IRsans leading-relaxed">
+                  ۵-در صورتی که تامین هزینه ها از طرف بخش خصوصی می باشد.نام بخش خصوصی و علت تامین هزینه ها توضیح داده می شود.             </p>              
+                  <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-IRsans leading-relaxed">
+                  ۶-در صورتی که تامین هزینه ها توسط دستگاه است محل تامین ارزی و ریالی آن را ذکر نمایید.            </p>              
+                
+                </div>
+               
+                <div className="flex items-center justify-endborder-t justify-end border-solid border-slate-200 rounded-b">
+                  <button
+                  style={{fontFamily:'Shabnam'}}
+                    className="text-white font-IRsans rounded-sm shadow-blueShadow float-left bg-mainColor font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    type="button"
+                    onClick={() => setShowSuccessModal(false)}
+                  >
+                    ثبت درخواست
+                  </button>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+          
+           </>
+           :null
+        }   
         </div>
 
     )
