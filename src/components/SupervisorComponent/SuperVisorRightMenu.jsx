@@ -15,7 +15,7 @@ const SuperVisorRightMenu = () => {
                <>
                 <div className="bg-mainColor p-9 rounded-2xl w-[20%] min-w-[300px] lg:min-w-[250px] md:hidden">
                     <img src={WhiteLogo} alt="logo" className="w-[170px] mx-auto"/>
-                     <p style={{fontFamily:'Shabnam'}} className="text-white  font-bold text-lg text-center mt-4 font-IRsans lg:text-base ">
+                     <p style={{fontFamily:'Shabnam'}} className="text-white  font-bold text-lg text-center mt-4   lg:text-base ">
                         آقای ناظر خوش آمدید !
                     </p>
                     <hr className="border-t-lightGray my-5 border-opacity-50"/>
@@ -24,7 +24,7 @@ const SuperVisorRightMenu = () => {
                       <li className="my-10">
                            <Link style={{fontFamily:'Shabnam'}}  to={'/supervisor/userList'} className="flex items-center">
                            <Profile/>
-                            <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-white font-medium mr-4 lg:text-sm">
+                            <p style={{fontFamily:'Shabnam'}} className="  text-white font-medium mr-4 lg:text-sm">
                                لیست کاربران سامانه
                             </p>
                            </Link>
@@ -32,7 +32,7 @@ const SuperVisorRightMenu = () => {
                         <li className="my-10">
                            <Link style={{fontFamily:'Shabnam'}}  to={'/supervisor/reportList'} className="flex items-center">
                            <Doc/>
-                            <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-white font-medium mr-4 lg:text-sm">
+                            <p style={{fontFamily:'Shabnam'}} className="  text-white font-medium mr-4 lg:text-sm">
                               مشاهده گزارشات
                             </p>
                            </Link>
@@ -42,7 +42,7 @@ const SuperVisorRightMenu = () => {
                         <li className="my-10">
                            <Link style={{fontFamily:'Shabnam'}}  to={'/supervisor/ticketList'} className="flex items-center">
                            <Ticket/>
-                            <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-white font-medium mr-4 lg:text-sm">
+                            <p style={{fontFamily:'Shabnam'}} className="  text-white font-medium mr-4 lg:text-sm">
                               تیکت ها و پشتیبانی
                             </p>
                            </Link>
@@ -50,7 +50,7 @@ const SuperVisorRightMenu = () => {
                         <li className="my-10">
                            <Link style={{fontFamily:'Shabnam'}}  to={'/'} className="flex items-center">
                            <Exit/>
-                            <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-white font-medium mr-4 lg:text-sm">
+                            <p style={{fontFamily:'Shabnam'}} className="  text-white font-medium mr-4 lg:text-sm">
                                خروج از حساب کاربری
                             </p>
                            </Link>
@@ -69,7 +69,7 @@ const SuperVisorRightMenu = () => {
                   showMenu?
                   <div className="w-full  h-full absolute right-0">
                         <div className="bg-mainColor w-[290px] h-full z-50 absolute right-0 px-8 py-10">
-                        <p style={{fontFamily:'Shabnam'}} className="text-white  font-bold text-lg text-center mt-4 font-IRsans lg:text-base">
+                        <p style={{fontFamily:'Shabnam'}} className="text-white  font-bold text-lg text-center mt-4   lg:text-base">
                         علی اطهری خوش آمدید !
                     </p>
                     <hr className="border-t-lightGray my-5 border-opacity-50"/>
@@ -79,7 +79,7 @@ const SuperVisorRightMenu = () => {
                         <li className="my-10">
                            <Link style={{fontFamily:'Shabnam'}}  to={'/'} className="flex items-center">
                            <Doc/>
-                            <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-white font-medium mr-4 lg:text-sm">
+                            <p style={{fontFamily:'Shabnam'}} className="  text-white font-medium mr-4 lg:text-sm">
                                 مشاهده گزارشات
                             </p>
                            </Link>
@@ -88,7 +88,7 @@ const SuperVisorRightMenu = () => {
                         <li className="my-10">
                            <Link style={{fontFamily:'Shabnam'}}  to={'/'} className="flex items-center">
                            <Profile/>
-                            <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-white font-medium mr-4 lg:text-sm">
+                            <p style={{fontFamily:'Shabnam'}} className="  text-white font-medium mr-4 lg:text-sm">
                                لیست کاربران سامانه
                             </p>
                            </Link>
@@ -96,7 +96,7 @@ const SuperVisorRightMenu = () => {
                         <li className="my-10">
                            <Link style={{fontFamily:'Shabnam'}}  to={'/'} className="flex items-center">
                            <Exit/>
-                            <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-white font-medium mr-4 lg:text-sm">
+                            <p style={{fontFamily:'Shabnam'}} className="  text-white font-medium mr-4 lg:text-sm">
                                خروج از حساب کاربری
                             </p>
                            </Link>

@@ -14,7 +14,7 @@ const ReportList = () =>{
 <div className="flex items-center justify-between">
                     <div className="flex">
                     <Doc/>
-                <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-mainColor mr-3 font-bold">
+                <span style={{fontFamily:'Shabnam'}} className="  text-mainColor mr-3 font-bold">
                        تاریخچه گزارشات
                 </span>
                     </div>

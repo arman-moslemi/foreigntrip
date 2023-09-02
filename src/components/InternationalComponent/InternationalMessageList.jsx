@@ -97,25 +97,25 @@ const tableRow =[
 ]
   const tableBody = tableRow.map((tableRow) =>
   <tr key={tableRow.id} className="border-b border-b-borderGray">
-    <td className="py-4 text-sm text-right pr-4 font-IRsans" style={{fontFamily:'Shabnam'}}>{tableRow.num}</td>
-    <td className="py-4 text-sm text-right font-IRsans" style={{fontFamily:'Shabnam'}}>{tableRow.subject}</td>
-    <td className="py-4 text-sm text-right font-IRsans truncate" style={{fontFamily:'Shabnam'}}>{tableRow.text}</td>
-    <td className="py-4 text-sm text-center font-IRsans" style={{fontFamily:'Shabnam'}}>{tableRow.to}</td>
-    <td className="py-4 text-sm text-center font-IRsans" style={{fontFamily:'Shabnam'}} >{tableRow.date}</td>
-    <td className="py-4 text-sm text-center font-IRsans"style={{fontFamily:'Shabnam'}}>{tableRow.function}</td>
+    <td className="py-4 text-sm text-right pr-4  " style={{fontFamily:'Shabnam'}}>{tableRow.num}</td>
+    <td className="py-4 text-sm text-right  " style={{fontFamily:'Shabnam'}}>{tableRow.subject}</td>
+    <td className="py-4 text-sm text-right   truncate" style={{fontFamily:'Shabnam'}}>{tableRow.text}</td>
+    <td className="py-4 text-sm text-center  " style={{fontFamily:'Shabnam'}}>{tableRow.to}</td>
+    <td className="py-4 text-sm text-center  " style={{fontFamily:'Shabnam'}} >{tableRow.date}</td>
+    <td className="py-4 text-sm text-center  "style={{fontFamily:'Shabnam'}}>{tableRow.function}</td>
     </tr> 
   )
     return(
         <div className=" mt-10 border-borderGray border border-solid w-full overflow-x-auto whitespace-nowrap ">
-          <table class="table-auto w-full font-IRsans">
+          <table class="table-auto w-full  ">
   <thead className="bg-darkGray h-11 rounded-t-2xl w-full whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}> 
     <tr className="text-white  p-6 whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}>
-    <th className="text-right pr-4 font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>ردیف</th>
-      <th className="text-right font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}> عنوان پیام</th>
-      <th className="text-right font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>متن پیام</th>
+    <th className="text-right pr-4   md:px-4" style={{fontFamily:'Shabnam'}}>ردیف</th>
+      <th className="text-right   md:px-4" style={{fontFamily:'Shabnam'}}> عنوان پیام</th>
+      <th className="text-right   md:px-4" style={{fontFamily:'Shabnam'}}>متن پیام</th>
       <th className="text-center font-IRsan md:px-4s" style={{fontFamily:'Shabnam'}}>مخاطب</th>
-      <th className="text-center font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>زمان ارسال</th>
-      <th className="text-center font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>مشاهده</th>
+      <th className="text-center   md:px-4" style={{fontFamily:'Shabnam'}}>زمان ارسال</th>
+      <th className="text-center   md:px-4" style={{fontFamily:'Shabnam'}}>مشاهده</th>
     </tr>
   </thead>
   <tbody>
@@ -133,14 +133,14 @@ const tableRow =[
                      <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                   
                        <div className="flex justify-center p-4 border-b border-solid border-b-[#EDF3FA] rounded-t">
-                         <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-black text-center">
+                         <span style={{fontFamily:'Shabnam'}} className="text-base font-bold   text-black text-center">
                           علت رد درخواست سفر
                          </span>
                       
                        </div>
                        
                        <div className="relative p-6 flex-auto">
-                         <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm leading-relaxed break-words whitespace-normal font-IRsans">
+                         <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm leading-relaxed break-words whitespace-normal  ">
                          درخواست شما به علت عدم توضیح کافی راجع به موضوع سفر و مشخص نبودن تاریخ دقیق آن پذیرفته نشد.
 لطفا موارد ذکر شده را اصلاح کنید و سپس مجددا درخواست خود را ثبت کنید.
                          </p>
@@ -148,7 +148,7 @@ const tableRow =[
                       
                        <div className="flex items-center justify-endborder-t justify-end border-solid border-slate-200 rounded-b">
                          <button
-                           className="text-mainColor font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                           className="text-mainColor   float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                            type="button"
                            onClick={() => setShowSuccessModal(false)}
                          >
@@ -156,7 +156,7 @@ const tableRow =[
                          </button>
                         <Link style={{fontFamily:'Shabnam'}}  to={'/newRequest'}>
                         <button
-                           className="text-mainColor font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                           className="text-mainColor   float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                            type="button"
                            
                          >
@@ -183,17 +183,17 @@ const tableRow =[
                   <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                
                     <div className="flex justify-center p-4 border-b border-solid border-b-[#EDF3FA] rounded-t">
-                      <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-black text-center">
+                      <span style={{fontFamily:'Shabnam'}} className="text-base font-bold   text-black text-center">
                        آیین نامه سفر و ثبت گزارش دستاورد سفر
                       </span>
                    
                     </div>
                     
                     <div className="relative p-6 flex-auto">
-                      <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-bold leading-relaxed break-words whitespace-normal font-IRsans">
+                      <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-bold leading-relaxed break-words whitespace-normal  ">
                      قوانین سفر :
                      </p>
-                     <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm leading-relaxed break-words whitespace-normal font-IRsans">
+                     <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm leading-relaxed break-words whitespace-normal  ">
                     
                     
                      هر مامور اعزامی موظف است هر روز گزارش دستاورد از آن روز سفر را ونل خود ثبت کند تا کارشناس امور بین الملل بررسی کند و تایید یا رد کند.
@@ -205,7 +205,7 @@ const tableRow =[
                    
                     <div className="flex items-center justify-endborder-t justify-center mb-3 border-solid border-slate-200 rounded-b">
                       <button
-                        className="text-mainColor font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        className="text-mainColor   float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
                         onClick={() => setShowRuleModal(false)}
                       >
@@ -213,7 +213,7 @@ const tableRow =[
                       </button>
                   
                      <button
-                        className="text-white bg-mainColor shadow-blueShadow rounded-md font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        className="text-white bg-mainColor shadow-blueShadow rounded-md   float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
                         onClick={() => setShowRuleModal(false)}
                       >

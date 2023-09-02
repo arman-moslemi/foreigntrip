@@ -24,7 +24,7 @@ const tableRow =[
    date:'#1234',
    subject:truncate("فراموشی رمز عبور ...",30),
    location:'02/02/12-23:50',
-   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-[#ffd200] font-bold font-IRsans">بسته شده</span >,
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-[#ffd200] font-bold  ">بسته شده</span >,
    function: <Link style={{fontFamily:'Shabnam'}}  className="flex justify-center" to={'/expert/ticketShow'}>
    <Eye/>
    </Link>
@@ -37,7 +37,7 @@ const tableRow =[
    date:'#4323',
    subject:truncate("فراموشی رمز عبور ...",30),
    location:'02/02/12-23:50',
-   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-green font-bold font-IRsans">پاسخ داده شده</span >,
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-green font-bold  ">پاسخ داده شده</span >,
    function:<Link style={{fontFamily:'Shabnam'}}  className="flex justify-center" to={'/expert/ticketShow'}>
    <Eye/>
    </Link>
@@ -49,7 +49,7 @@ const tableRow =[
    date:'#4321',
    subject:truncate("فراموشی رمز عبور ...",30),
    location:'02/02/12-23:50',
-   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-[#ff6900] font-bold font-IRsans">در انتظار پاسخ</span >,
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-[#ff6900] font-bold  ">در انتظار پاسخ</span >,
    function:<Link style={{fontFamily:'Shabnam'}}  className="flex justify-center" to={'/expert/ticketShow'}>
    <Eye/>
    </Link>
@@ -60,7 +60,7 @@ const tableRow =[
    date:'#2323',
    subject:truncate("فراموشی رمز عبور ...",30),
    location:'02/02/12-23:50',
-   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-green font-bold font-IRsans">پاسخ داده شده</span >,
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-green font-bold  ">پاسخ داده شده</span >,
    function:<Link style={{fontFamily:'Shabnam'}}  className="flex justify-center" to={'/expert/ticketShow'}>
    <Eye/>
    </Link>
@@ -71,7 +71,7 @@ const tableRow =[
    date:'#1212',
    subject:truncate("فراموشی رمز عبور ...",30),
    location:'02/02/12-23:50',
-   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-[#ff6900] font-bold font-IRsans">در انتظار پاسخ</span >,
+   status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-[#ff6900] font-bold  ">در انتظار پاسخ</span >,
    function:<Link style={{fontFamily:'Shabnam'}}  className="flex justify-center" to={'/expert/ticketShow'}>
    <Eye/>
    </Link>
@@ -79,25 +79,25 @@ const tableRow =[
 ]
   const tableBody = tableRow.map((tableRow) =>
   <tr key={tableRow.id} className="border-b border-b-borderGray">
-    <td className="py-4 text-sm text-right pr-4 font-IRsans" style={{fontFamily:'Shabnam'}}>{tableRow.num}</td>
-    <td className="py-4 text-sm text-right font-IRsans" style={{fontFamily:'Shabnam'}}>{tableRow.date}</td>
-    <td className="py-4 text-sm text-right font-IRsans truncate" style={{fontFamily:'Shabnam'}}>{tableRow.subject}</td>
-    <td className="py-4 text-sm text-center font-IRsans"style={{fontFamily:'Shabnam'}} >{tableRow.location}</td>
-    <td className="py-4 text-sm text-center font-IRsans"  style={{fontFamily:'Shabnam'}}>{tableRow.status}</td>
-    <td className="py-4 text-sm text-center font-IRsans" style={{fontFamily:'Shabnam'}}>{tableRow.function}</td>
+    <td className="py-4 text-sm text-right pr-4  " style={{fontFamily:'Shabnam'}}>{tableRow.num}</td>
+    <td className="py-4 text-sm text-right  " style={{fontFamily:'Shabnam'}}>{tableRow.date}</td>
+    <td className="py-4 text-sm text-right   truncate" style={{fontFamily:'Shabnam'}}>{tableRow.subject}</td>
+    <td className="py-4 text-sm text-center  "style={{fontFamily:'Shabnam'}} >{tableRow.location}</td>
+    <td className="py-4 text-sm text-center  "  style={{fontFamily:'Shabnam'}}>{tableRow.status}</td>
+    <td className="py-4 text-sm text-center  " style={{fontFamily:'Shabnam'}}>{tableRow.function}</td>
     </tr> 
   )
     return(
         <div className=" mt-10 border-borderGray border border-solid w-full overflow-x-auto whitespace-nowrap ">
-          <table class="table-auto w-full font-IRsans">
+          <table class="table-auto w-full  ">
   <thead className="bg-darkGray h-11 rounded-t-2xl w-full whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}> 
     <tr className="text-white  p-6 whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}>
-      <th className="text-right pr-4 font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>ردیف</th>
-      <th className="text-right font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>شماره تیکت</th>
-      <th className="text-right font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>موضوع تیکت</th>
+      <th className="text-right pr-4   md:px-4" style={{fontFamily:'Shabnam'}}>ردیف</th>
+      <th className="text-right   md:px-4" style={{fontFamily:'Shabnam'}}>شماره تیکت</th>
+      <th className="text-right   md:px-4" style={{fontFamily:'Shabnam'}}>موضوع تیکت</th>
       <th className="text-center font-IRsan md:px-4" style={{fontFamily:'Shabnam'}}>آخرین به روز رسانی</th>
-      <th className="text-center font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>وضعیت تیکت</th>
-      <th className="text-center font-IRsans md:px-4" style={{fontFamily:'Shabnam'}} >مشاهده</th>
+      <th className="text-center   md:px-4" style={{fontFamily:'Shabnam'}}>وضعیت تیکت</th>
+      <th className="text-center   md:px-4" style={{fontFamily:'Shabnam'}} >مشاهده</th>
     </tr>
   </thead>
   <tbody>

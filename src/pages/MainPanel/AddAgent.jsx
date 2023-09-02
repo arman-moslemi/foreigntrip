@@ -12,7 +12,7 @@ const AddAgent = () =>{
            
             <div className="flex items-center">
                     <Profile/>
-                <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-mainColor mr-3 font-bold">
+                <span style={{fontFamily:'Shabnam'}} className="  text-mainColor mr-3 font-bold">
                   تعریف مامور اعزامی
                 </span>
                 

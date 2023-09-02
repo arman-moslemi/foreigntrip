@@ -7,7 +7,7 @@ const RequestViewStep3 = () =>{
       
                     <div className="flex justify-between flex-wrap border-b border-dashed border-[#CCCCCD] pb-4">
                     <div className="w-full my-3">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            نوع اقامت : 
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -16,7 +16,7 @@ const RequestViewStep3 = () =>{
                         </p>
                     </div>
                     <div className="w-[48%] mx-1 my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            هزینه اقامت بر عهده :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -25,7 +25,7 @@ const RequestViewStep3 = () =>{
                         </p>
                     </div>
                     <div className="w-[48%] mx-1 my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                         میزان هزینه :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -34,7 +34,7 @@ const RequestViewStep3 = () =>{
                         </p>
                     </div>
                     <div className="w-[48%] mx-1 my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            هزینه غذا بر عهده : 
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -43,7 +43,7 @@ const RequestViewStep3 = () =>{
                         </p>
                     </div>
                     <div className="w-[48%] mx-1 my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                           میزان هزینه : 
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -52,7 +52,7 @@ const RequestViewStep3 = () =>{
                         </p>
                     </div>
                     <div className="w-[48%] mx-1 my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                           نوع بلیط رفت و برگشت :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -61,7 +61,7 @@ const RequestViewStep3 = () =>{
                         </p>
                     </div>
                     <div className="w-[100%] my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            شرکت هواپیمایی :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -70,7 +70,7 @@ const RequestViewStep3 = () =>{
                         </p>
                     </div>
                     <div className="w-[48%] mx-1 my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                           هزینه بلیط بر عهده :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -79,7 +79,7 @@ const RequestViewStep3 = () =>{
                         </p>
                     </div>
                     <div className="w-[48%] mx-1 my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                           میزان هزینه : 
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -88,7 +88,7 @@ const RequestViewStep3 = () =>{
                         </p>
                     </div>
                     <div className="w-[48%] mx-1 my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                           حق ماموریت :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -97,7 +97,7 @@ const RequestViewStep3 = () =>{
                         </p>
                     </div>
                     <div className="w-[48%] mx-1 my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                          میزان حق ماموریت : 
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -106,7 +106,7 @@ const RequestViewStep3 = () =>{
                         </p>
                     </div>
                     <div className="w-[48%] mx-1 my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                           حق آموزش : 
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -115,7 +115,7 @@ const RequestViewStep3 = () =>{
                         </p>
                     </div>
                     <div className="w-[48%] mx-1 my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            حق ایاب و ذهاب : 
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -124,7 +124,7 @@ const RequestViewStep3 = () =>{
                         </p>
                     </div>
                     <div className="w-[48%] mx-1 my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            ویزا :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -133,7 +133,7 @@ const RequestViewStep3 = () =>{
                         </p>
                     </div>
                     <div className="w-[48%] mx-1 my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            عوارض خروج :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -142,7 +142,7 @@ const RequestViewStep3 = () =>{
                         </p>
                     </div>
                     <div className="w-full my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                          پرداخت از طریق سیستم بانکی :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">

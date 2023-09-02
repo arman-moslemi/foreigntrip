@@ -144,10 +144,10 @@ const MainAdminUserList = () =>{
       ]
     const tableBody = tableRow.map((tableRow) =>
     <tr key={tableRow.id} className="border-b border-b-borderGray">
-       <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-right pr-4 font-IRsans px-4">
+       <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-right pr-4   px-4">
         <input type="checkbox"/>
        </td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-right pr-4 font-IRsans px-4">{tableRow.num}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-right pr-4   px-4">{tableRow.num}</td>
       <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-right  px-4 pr-0">
         
       
@@ -157,10 +157,10 @@ const MainAdminUserList = () =>{
        
       </td>
     
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center px-4 font-IRsans" >{tableRow.code}</td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center px-4 font-IRsans"  >{tableRow.phoneNumber}</td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center px-4 font-IRsans">{tableRow.post}</td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center px-4 font-IRsans">{tableRow.action}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center px-4  " >{tableRow.code}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center px-4  "  >{tableRow.phoneNumber}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center px-4  ">{tableRow.post}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center px-4  ">{tableRow.action}</td>
 
       </tr> 
     )
@@ -168,18 +168,18 @@ const MainAdminUserList = () =>{
         <>
      
         <div className=" mt-10 border-borderGray border border-solid w-full overflow-x-auto whitespace-nowrap ">
-          <table class="table-auto w-full font-IRsans">
+          <table class="table-auto w-full  ">
   <thead className="bg-darkGray h-11 rounded-t-2xl w-full whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}> 
     <tr className="text-white  p-6 whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}>
-    <th style={{fontFamily:'Shabnam'}} className="text-right pr-4 font-IRsans md:px-4">
+    <th style={{fontFamily:'Shabnam'}} className="text-right pr-4   md:px-4">
       <input type="checkbox"/>
     </th>
-      <th style={{fontFamily:'Shabnam'}} className="text-right pr-4 font-IRsans md:px-4">ردیف</th>
-      <th style={{fontFamily:'Shabnam'}} className="text-right font-IRsans md:px-4">نام و نام خانوادگی کاربر</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-right pr-4   md:px-4">ردیف</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-right   md:px-4">نام و نام خانوادگی کاربر</th>
      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsan md:px-4">کد ملی</th>
       <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsan md:px-4">شماره تلفن همراه</th>
-      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsans md:px-4">پست ستادی</th>
-      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsans md:px-4" >عملیات</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4">پست ستادی</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4" >عملیات</th>
       
     </tr>
   </thead>
@@ -200,14 +200,14 @@ const MainAdminUserList = () =>{
               <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
            
                 <div className="text-center p-4 border-b border-solid border-b-midGray rounded-t">
-                  <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-black align-middle text-center">
+                  <span style={{fontFamily:'Shabnam'}} className="text-base font-bold   text-black align-middle text-center">
                    هشدار!
                   </span>
                
                 </div>
                 
                 <div className="relative p-6 flex-auto">
-                  <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-IRsans leading-relaxed">
+                  <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm   leading-relaxed">
                آیا از حذف مورد انتخاب شده مطمئن هستید؟
                   </p>
                 </div>
@@ -215,7 +215,7 @@ const MainAdminUserList = () =>{
                 <div className="flex items-center justify-center justify-end border-solid border-slate-200 rounded-b">
                   <button
                   style={{fontFamily:'Shabnam'}}
-                    className="text-black font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="text-black   float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowError(false)}
                   >
@@ -223,7 +223,7 @@ const MainAdminUserList = () =>{
                   </button>
                   <button
                   style={{fontFamily:'Shabnam'}}
-                    className="text-white font-IRsans float-left bg-red shadow-redShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="text-white   float-left bg-red shadow-redShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowError(false)}
                   >
@@ -249,14 +249,14 @@ const MainAdminUserList = () =>{
               <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
            
                 <div className="text-center p-4 border-b border-solid border-b-midGray rounded-t">
-                  <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-black align-middle text-center">
+                  <span style={{fontFamily:'Shabnam'}} className="text-base font-bold   text-black align-middle text-center">
                    هشدار!
                   </span>
                
                 </div>
                 
                 <div className="relative p-6 flex-auto">
-                  <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-IRsans leading-relaxed">
+                  <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm   leading-relaxed">
                آیا از مسدود سازی کاربر انتخاب شده مطمئن هستید؟
                   </p>
                 </div>
@@ -264,7 +264,7 @@ const MainAdminUserList = () =>{
                 <div className="flex items-center justify-center justify-end border-solid border-slate-200 rounded-b">
                   <button
                   style={{fontFamily:'Shabnam'}}
-                    className="text-black font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="text-black   float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowBan(false)}
                   >
@@ -272,7 +272,7 @@ const MainAdminUserList = () =>{
                   </button>
                   <button
                   style={{fontFamily:'Shabnam'}}
-                    className="text-white font-IRsans float-left bg-red shadow-redShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="text-white   float-left bg-red shadow-redShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowBan(false)}
                   >
@@ -298,7 +298,7 @@ const MainAdminUserList = () =>{
               <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
            
                 <div className="text-center p-4 border-b border-solid border-b-midGray rounded-t">
-                  <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-black align-middle text-center">
+                  <span style={{fontFamily:'Shabnam'}} className="text-base font-bold   text-black align-middle text-center">
                 مشاهده لاگ
                   </span>
                
@@ -318,7 +318,7 @@ const MainAdminUserList = () =>{
                 
                   <button
                   style={{fontFamily:'Shabnam'}}
-                    className="text-white font-IRsans float-left bg-mainColor shadow-blueShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="text-white   float-left bg-mainColor shadow-blueShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowLog(false)}
                   >

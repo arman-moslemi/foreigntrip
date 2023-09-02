@@ -15,7 +15,7 @@ const ExpertRequestsView = () =>{
             <div className="flex items-center justify-between sm:flex-wrap">
                     <div className="flex items-center">
                     <Doc/>
-                <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-mainColor mr-3 font-bold">
+                <span style={{fontFamily:'Shabnam'}} className="  text-mainColor mr-3 font-bold">
                   مشاهده درخواست
                 </span>
                     </div>

@@ -159,17 +159,17 @@ const InternatioanlRequestTable = () =>{
         <>
      
         <div className=" mt-10 border-borderGray border border-solid w-full overflow-x-auto whitespace-nowrap ">
-          <table class="table-auto w-full font-IRsans">
+          <table class="table-auto w-full  ">
   <thead className="bg-darkGray h-11 rounded-t-2xl w-full whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}> 
     <tr className="text-white  p-6 whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}>
 
-      <th style={{fontFamily:'Shabnam'}} className="text-right font-IRsans md:px-4 pr-4 text-sm">نام مامور</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-right   md:px-4 pr-4 text-sm">نام مامور</th>
      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsan md:px-4 text-sm">موضوع سفر</th>
       <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsan md:px-4 text-sm">تایید شده توسط</th>
-      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsans md:px-4 text-sm">تاریخ سفر</th>
-      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsans md:px-4 text-sm" >نوع سفر</th>
-      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsans md:px-4 text-sm" >وضعیت</th>
-      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsans md:px-4 text-sm" >مشاهده</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4 text-sm">تاریخ سفر</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4 text-sm" >نوع سفر</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4 text-sm" >وضعیت</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4 text-sm" >مشاهده</th>
     </tr>
   </thead>
   <tbody>
@@ -189,28 +189,28 @@ const InternatioanlRequestTable = () =>{
               <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
            
                 <div className="text-center p-4 border-b border-solid border-b-midGray rounded-t">
-                  <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-black align-middle text-center">
+                  <span style={{fontFamily:'Shabnam'}} className="text-base font-bold   text-black align-middle text-center">
                    هشدار!
                   </span>
                
                 </div>
                 
                 <div className="relative p-6 flex-auto">
-                  <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-IRsans leading-relaxed">
+                  <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm   leading-relaxed">
                آیا از حذف مورد انتخاب شده مطمئن هستید؟
                   </p>
                 </div>
                
                 <div className="flex items-center justify-center justify-end border-solid border-slate-200 rounded-b">
                   <button
-                    className="text-black font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="text-black   float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowError(false)}
                   >
                     خیر
                   </button>
                   <button
-                    className="text-white font-IRsans float-left bg-red shadow-redShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="text-white   float-left bg-red shadow-redShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowError(false)}
                   >
@@ -236,28 +236,28 @@ const InternatioanlRequestTable = () =>{
               <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
            
                 <div className="text-center p-4 border-b border-solid border-b-midGray rounded-t">
-                  <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-black align-middle text-center">
+                  <span style={{fontFamily:'Shabnam'}} className="text-base font-bold   text-black align-middle text-center">
                    هشدار!
                   </span>
                
                 </div>
                 
                 <div className="relative p-6 flex-auto">
-                  <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-IRsans leading-relaxed">
+                  <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm   leading-relaxed">
                آیا از مسدود سازی کاربر انتخاب شده مطمئن هستید؟
                   </p>
                 </div>
                
                 <div className="flex items-center justify-center justify-end border-solid border-slate-200 rounded-b">
                   <button
-                    className="text-black font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="text-black   float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowBan(false)}
                   >
                     خیر
                   </button>
                   <button
-                    className="text-white font-IRsans float-left bg-red shadow-redShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="text-white   float-left bg-red shadow-redShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowBan(false)}
                   >
@@ -283,7 +283,7 @@ const InternatioanlRequestTable = () =>{
               <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
            
                 <div className="text-center p-4 border-b border-solid border-b-midGray rounded-t">
-                  <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-black align-middle text-center">
+                  <span style={{fontFamily:'Shabnam'}} className="text-base font-bold   text-black align-middle text-center">
                 مشاهده لاگ
                   </span>
                
@@ -302,7 +302,7 @@ const InternatioanlRequestTable = () =>{
                 <div className="flex items-center justify-center justify-end border-solid border-slate-200 rounded-b">
                 
                   <button
-                    className="text-white font-IRsans float-left bg-mainColor shadow-blueShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="text-white   float-left bg-mainColor shadow-blueShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowLog(false)}
                   >

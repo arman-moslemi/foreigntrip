@@ -13,12 +13,12 @@ const InternationalSendMessageList = () => {
                 <div className="flex items-center justify-between sm:flex-wrap">
                     <div className="flex items-center">
                     <Doc/>
-                <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-mainColor mr-3 font-bold">
+                <span style={{fontFamily:'Shabnam'}} className="  text-mainColor mr-3 font-bold">
                       ارسال پیام
                 </span>
                     </div>
                    <Link to={'/internationalAdmin/message'}>
-                   <button  style={{fontFamily:'Shabnam'}}  className="bg-mainColor px-4 py-1.5 shadow-blueShadow text-white font-IRSans text-base rounded-md sm:mr-auto sm:mt-5">
+                   <button  style={{fontFamily:'Shabnam'}}  className="bg-mainColor px-4 py-1.5 shadow-blueShadow text-white   text-base rounded-md sm:mr-auto sm:mt-5">
                         + پیام جدید
                     </button>
                    </Link>

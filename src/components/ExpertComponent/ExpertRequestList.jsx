@@ -156,17 +156,17 @@ const ExpertRequestList  = () =>{
         <>
      
         <div className=" mt-10 border-borderGray border border-solid w-full overflow-x-auto whitespace-nowrap ">
-          <table class="table-auto w-full font-IRsans">
+          <table class="table-auto w-full  ">
   <thead className="bg-darkGray h-11 rounded-t-2xl w-full whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}> 
     <tr className="text-white  p-6 whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}>
 
-      <th style={{fontFamily:'Shabnam'}} className="text-right font-IRsans md:px-4 pr-4 text-sm">نام مامور</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-right   md:px-4 pr-4 text-sm">نام مامور</th>
      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsan md:px-4 text-sm">موضوع سفر</th>
       <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsan md:px-4 text-sm">تایید شده توسط</th>
-      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsans md:px-4 text-sm">تاریخ سفر</th>
-      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsans md:px-4 text-sm" >نوع سفر</th>
-      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsans md:px-4 text-sm" >وضعیت</th>
-      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsans md:px-4 text-sm" >مشاهده</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4 text-sm">تاریخ سفر</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4 text-sm" >نوع سفر</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4 text-sm" >وضعیت</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4 text-sm" >مشاهده</th>
     </tr>
   </thead>
   <tbody>

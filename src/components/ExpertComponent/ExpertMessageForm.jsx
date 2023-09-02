@@ -26,8 +26,8 @@ const ExpertMessageForm = () => {
             <div className="flex w-[60%] mx-auto flex-wrap">
             <div className="flex w-[48%] ml-[4%] mb-4 items-end">
                     <div className="flex flex-col w-[100%] ">
-                        <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal font-IRsans">تاریخ ارسال پیام</span>
-                        <div class="flex items-center h-11 pr-2 mt-3 font-IRsans text-right right-6 bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor  w-full pl-10 " id="test">
+                        <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">تاریخ ارسال پیام</span>
+                        <div class="flex items-center h-11 pr-2 mt-3   text-right right-6 bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor  w-full pl-10 " id="test">
                             <Calender/>
                             <DatePicker style={{fontFamily:'Shabnam'}} placeholder="تاریخ ارسال پیام"  onChange={(e) => console.log(e.value)} />
                        
@@ -36,7 +36,7 @@ const ExpertMessageForm = () => {
                
                 </div>
                 <div className="flex flex-col w-[48%]  mb-4">
-                    <span style={{fontFamily:'Shabnam'}}   className="text-base font-normal font-IRsans">زمان ارسال پیام</span>
+                    <span style={{fontFamily:'Shabnam'}}   className="text-base font-normal  ">زمان ارسال پیام</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <Clock/>
@@ -44,13 +44,13 @@ const ExpertMessageForm = () => {
                         <input style={{fontFamily:'Shabnam'}}
                             type="text"
                             id="input-group-1"
-                            class="pr-9 font-IRsans text-right right-6 bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                            class="pr-9   text-right right-6 bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
                             placeholder="12:33"/>
                     </div>
                 </div>
                
                 <div className="flex flex-col w-[100%] mb-4">
-                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal font-IRsans">عنوان پیام</span>
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">عنوان پیام</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <Doc/>
@@ -59,12 +59,12 @@ const ExpertMessageForm = () => {
                             type="text"
                             id="input-group-1"
                         
-                            class="pr-9 font-IRsans text-right right-6 bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                            class="pr-9   text-right right-6 bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
                             placeholder="عنوان پیام خود را اینجا بنویسید"/>
                     </div>
                 </div>
                 <div className="flex flex-col w-[100%] mb-4">
-                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal font-IRsans">متن پیام</span>
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">متن پیام</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <Doc/>
@@ -74,14 +74,14 @@ const ExpertMessageForm = () => {
                             type="text"
                             id="input-group-1"
                             
-                            class="pr-9 font-IRsans text-right right-6 bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                            class="pr-9   text-right right-6 bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
                             placeholder="متن پیام خود را اینجا بنویسید"></textarea>
                     </div>
                 </div>
              
                 <div className="w-full">
          <div className="mt-3">
-                <label style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-normal">
+                <label style={{fontFamily:'Shabnam'}} className="  text-base font-normal">
                 <span style={{fontFamily:'Shabnam'}}   className="text-black">مامورین اعزامی</span>                
                     <input style={{fontFamily:'Shabnam'}}
                      onChange={()=>setShowAgent(!showAgent)}
@@ -94,40 +94,40 @@ const ExpertMessageForm = () => {
             showAgent?
                 <div className="w-full flex justify-between mt-4 mb-4">
                         <div className="flex flex-col w-[150px] ">
-                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal font-IRsans">انتخاب مجموعه</span>
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">انتخاب مجموعه</span>
                     <div class=" mt-2">
                         
                         <select style={{fontFamily:'Shabnam'}}
                             name="cars"
                             id="cars"
-                            className=" font-IRsans text-right  bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2">
-                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className="font-IRsans">انتخاب همه</option>
-                            <option  style={{fontFamily:'Shabnam'}}value="waiting" className="font-IRsans">هولدینگ</option>
-                            <option  style={{fontFamily:'Shabnam'}}value="check" className="font-IRsans">صندوق</option>
-                            <option style={{fontFamily:'Shabnam'}} value="not" className="font-IRsans">سازمان</option>
-                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className="font-IRsans">بانک</option>
-                            <option style={{fontFamily:'Shabnam'}} value="waiting" className="font-IRsans">معاونت</option>
-                            <option style={{fontFamily:'Shabnam'}}  value="check" className="font-IRsans">شرکت ها</option>
-                            <option style={{fontFamily:'Shabnam'}} value="not" className="font-IRsans">فدراسیون</option>
-                            <option style={{fontFamily:'Shabnam'}} value="not" className="font-IRsans">موسسات</option>
+                            className="   text-right  bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2">
+                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className=" ">انتخاب همه</option>
+                            <option  style={{fontFamily:'Shabnam'}}value="waiting" className=" ">هولدینگ</option>
+                            <option  style={{fontFamily:'Shabnam'}}value="check" className=" ">صندوق</option>
+                            <option style={{fontFamily:'Shabnam'}} value="not" className=" ">سازمان</option>
+                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className=" ">بانک</option>
+                            <option style={{fontFamily:'Shabnam'}} value="waiting" className=" ">معاونت</option>
+                            <option style={{fontFamily:'Shabnam'}}  value="check" className=" ">شرکت ها</option>
+                            <option style={{fontFamily:'Shabnam'}} value="not" className=" ">فدراسیون</option>
+                            <option style={{fontFamily:'Shabnam'}} value="not" className=" ">موسسات</option>
 
                         </select>
                     
                     </div>
                 </div>
                 <div className="flex flex-col w-[150px] ">
-                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal font-IRsans">انتخاب زیر مجموعه</span>
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">انتخاب زیر مجموعه</span>
                     <div class=" mt-2">
                         
                         <select style={{fontFamily:'Shabnam'}}
                             name="cars"
                             id="cars"
-                            className=" font-IRsans text-right  bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2">
-                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className="font-IRsans">انتخاب همه</option>
-                            <option  style={{fontFamily:'Shabnam'}}value="waiting" className="font-IRsans">شستا</option>
-                            <option  style={{fontFamily:'Shabnam'}}value="check" className="font-IRsans">مهر امام رضا</option>
-                            <option style={{fontFamily:'Shabnam'}} value="not" className="font-IRsans">انصار</option>
-                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className="font-IRsans">قوامین</option>
+                            className="   text-right  bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2">
+                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className=" ">انتخاب همه</option>
+                            <option  style={{fontFamily:'Shabnam'}}value="waiting" className=" ">شستا</option>
+                            <option  style={{fontFamily:'Shabnam'}}value="check" className=" ">مهر امام رضا</option>
+                            <option style={{fontFamily:'Shabnam'}} value="not" className=" ">انصار</option>
+                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className=" ">قوامین</option>
 
 
                         </select>
@@ -135,13 +135,13 @@ const ExpertMessageForm = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[150px] ">
-                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal font-IRsans">انتخاب مامور اعزامی</span>
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">انتخاب مامور اعزامی</span>
                     <div class=" mt-2">
                         
                         <select style={{fontFamily:'Shabnam'}}
                             name="cars"
                             id="cars"
-                            className=" font-IRsans text-right  bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2">
+                            className="   text-right  bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2">
                          
                             <option  style={{fontFamily:'Shabnam'}}value="waiting" className="flex">
                                 <input type="checkbox"/>
@@ -149,8 +149,8 @@ const ExpertMessageForm = () => {
                                     انتخاب همه
                                 </span>
                             </option>
-                            <option  style={{fontFamily:'Shabnam'}}value="check" className="font-IRsans">علی طاهری</option>
-                            <option style={{fontFamily:'Shabnam'}} value="not" className="font-IRsans">غلامرضا زارع</option>
+                            <option  style={{fontFamily:'Shabnam'}}value="check" className=" ">علی طاهری</option>
+                            <option style={{fontFamily:'Shabnam'}} value="not" className=" ">غلامرضا زارع</option>
                          
 
                         </select>
@@ -163,7 +163,7 @@ const ExpertMessageForm = () => {
 
          <div className="w-full">
          <div className="mt-3">
-                <label style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-normal">
+                <label style={{fontFamily:'Shabnam'}} className="  text-base font-normal">
                 <span style={{fontFamily:'Shabnam'}}   className="text-black">کارشناس امور بین الملل</span>                
                     <input style={{fontFamily:'Shabnam'}}
                     onChange={()=>setShowExpert(!showExpert)}
@@ -176,16 +176,16 @@ const ExpertMessageForm = () => {
             showExpert?
                 <div className="w-full flex justify-between mt-4 mb-4">
                         <div className="flex flex-col w-[150px] ">
-                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal font-IRsans">انتخاب کارشناس</span>
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">انتخاب کارشناس</span>
                     <div class=" mt-2">
                         
                         <select style={{fontFamily:'Shabnam'}}
                             name="cars"
                             id="cars"
-                            className=" font-IRsans text-right  bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2">
-                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className="font-IRsans">انتخاب همه</option>
-                            <option  style={{fontFamily:'Shabnam'}}value="waiting" className="font-IRsans">علی اسدی</option>
-                            <option  style={{fontFamily:'Shabnam'}}value="check" className="font-IRsans">غلامرضا عطاردی</option>
+                            className="   text-right  bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2">
+                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className=" ">انتخاب همه</option>
+                            <option  style={{fontFamily:'Shabnam'}}value="waiting" className=" ">علی اسدی</option>
+                            <option  style={{fontFamily:'Shabnam'}}value="check" className=" ">غلامرضا عطاردی</option>
                            
 
                         </select>
@@ -199,7 +199,7 @@ const ExpertMessageForm = () => {
 
          <div className="w-full">
          <div className="mt-3">
-                <label style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-normal">
+                <label style={{fontFamily:'Shabnam'}} className="  text-base font-normal">
                 <span style={{fontFamily:'Shabnam'}}   className="text-black">ناظر</span>                
                     <input style={{fontFamily:'Shabnam'}}
                     onChange={()=>setShowSupervisor(!showSupervisor)}
@@ -212,16 +212,16 @@ const ExpertMessageForm = () => {
             showSupervisor?
                 <div className="w-full flex justify-between mt-4 mb-4">
                         <div className="flex flex-col w-[150px] ">
-                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal font-IRsans">انتخاب ناظر</span>
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">انتخاب ناظر</span>
                     <div class=" mt-2">
                         
                         <select style={{fontFamily:'Shabnam'}}
                             name="cars"
                             id="cars"
-                            className=" font-IRsans text-right  bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2">
-                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className="font-IRsans">انتخاب ناظر</option>
-                            <option  style={{fontFamily:'Shabnam'}}value="waiting" className="font-IRsans">علی اسدی</option>
-                            <option  style={{fontFamily:'Shabnam'}}value="check" className="font-IRsans">غلامرضا عطاردی</option>
+                            className="   text-right  bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2">
+                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className=" ">انتخاب ناظر</option>
+                            <option  style={{fontFamily:'Shabnam'}}value="waiting" className=" ">علی اسدی</option>
+                            <option  style={{fontFamily:'Shabnam'}}value="check" className=" ">غلامرضا عطاردی</option>
                            
 
                         </select>
@@ -254,7 +254,7 @@ const ExpertMessageForm = () => {
                  <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
            
            <div className="flex items-start justify-between p-4 border-b border-solid border-b-midGray rounded-t">
-           <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-green">
+           <span style={{fontFamily:'Shabnam'}} className="text-base font-bold   text-green">
               پیام شما با موفقیت ارسال گردید !
              </span>
                 <button onClick={()=>setShowAlert(false)}>
@@ -265,7 +265,7 @@ const ExpertMessageForm = () => {
            </div>
            
            <div className="relative p-6 flex-auto">
-             <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-IRsans leading-relaxed">
+             <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm   leading-relaxed">
          ،این پیام برای کاربران مشخص شده ارسال می شود.بعد از رسیدن زمان ارسال
              </p>
            </div>

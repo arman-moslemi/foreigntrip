@@ -13,11 +13,11 @@ const TicketList = () => {
                 <div className="flex items-center justify-between sm:flex-wrap">
                     <div className="flex">
                     <Ticket/>
-                <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-mainColor mr-3 font-bold">
+                <span style={{fontFamily:'Shabnam'}} className="  text-mainColor mr-3 font-bold">
                        تیکت ها و پشتیبانی
                 </span>
                     </div>
-                    <button style={{fontFamily:'Shabnam'}} onClick={() =>{setShowNewTicket(true)}} className="bg-mainColor px-4 py-1.5 shadow-blueShadow text-white font-IRSans text-base rounded-md sm:mr-auto sm:mt-5">
+                    <button style={{fontFamily:'Shabnam'}} onClick={() =>{setShowNewTicket(true)}} className="bg-mainColor px-4 py-1.5 shadow-blueShadow text-white   text-base rounded-md sm:mr-auto sm:mt-5">
                         + تیکت جدید
                     </button>
                 </div>
@@ -36,7 +36,7 @@ const TicketList = () => {
                   
                        <div className="flex items-centers justify-center p-4 border-b border-solid border-b-[#EDF3FA] rounded-t">
                       
-                         <span style={{fontFamily:'Shabnam'}} className="mr-3 text-base font-bold font-IRsans text-black text-center">
+                         <span style={{fontFamily:'Shabnam'}} className="mr-3 text-base font-bold   text-black text-center">
                          عنوان پیام خود را بنویسید
                          </span>
                       
@@ -44,16 +44,16 @@ const TicketList = () => {
                        
                        <div className="flex flex-col p-3">
 
-                        <span style={{fontFamily:'Shabnam'}} className="font-IRSans text-black font-Bold text-base">
+                        <span style={{fontFamily:'Shabnam'}} className="  text-black font-Bold text-base">
                             عنوان پیام شما
                         </span>
-                        <input type="text" className="pr-2 font-IRsans text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5" placeholder="عنوان پیام خود را اینجا بنویسید..."/>
+                        <input type="text" className="pr-2   text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5" placeholder="عنوان پیام خود را اینجا بنویسید..."/>
                        </div>
                       
                        <div className="flex items-center mb-2 justify-endborder-t justify-center border-solid border-slate-200 rounded-b">
                        <Link style={{fontFamily:'Shabnam'}}  to={'/'}>
                         <button
-                           className="text-mainColor font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                           className="text-mainColor   float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                            type="button"
                            
                          >
@@ -62,7 +62,7 @@ const TicketList = () => {
                         </Link>
                          <Link
                          to={'/ticketShow'}
-                           className="text-white bg-mainColor shadow-blueShadow rounded-lg font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                           className="text-white bg-mainColor shadow-blueShadow rounded-lg   float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                            
                            
                          >

@@ -16,7 +16,7 @@ const UserList = () =>{
            
             <div className="flex items-center">
                     <Profile/>
-                <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-mainColor mr-3 font-bold">
+                <span style={{fontFamily:'Shabnam'}} className="  text-mainColor mr-3 font-bold">
                      لیست کاربران
                 </span>
                 
@@ -30,29 +30,29 @@ const UserList = () =>{
                 </div>
                 <div className="flex items-end">
                 <div className="flex flex-col w-[150px] ">
-                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal font-IRsans">مرتب سازی</span>
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">مرتب سازی</span>
                     <div class=" mt-3">
                         
                         <select style={{fontFamily:'Shabnam'}}
                             name="cars"
                             id="cars"
-                            className=" font-IRsans text-right  bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2">
-                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className="font-IRsans">انتخاب مجموعه</option>
-                            <option  style={{fontFamily:'Shabnam'}}value="waiting" className="font-IRsans">هولدینگ</option>
-                            <option  style={{fontFamily:'Shabnam'}}value="check" className="font-IRsans">صندوق</option>
-                            <option style={{fontFamily:'Shabnam'}} value="not" className="font-IRsans">سازمان</option>
-                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className="font-IRsans">بانک</option>
-                            <option style={{fontFamily:'Shabnam'}} value="waiting" className="font-IRsans">معاونت</option>
-                            <option style={{fontFamily:'Shabnam'}}  value="check" className="font-IRsans">شرکت ها</option>
-                            <option style={{fontFamily:'Shabnam'}} value="not" className="font-IRsans">فدراسیون</option>
-                            <option style={{fontFamily:'Shabnam'}} value="not" className="font-IRsans">موسسات</option>
+                            className="   text-right  bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2">
+                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className=" ">انتخاب مجموعه</option>
+                            <option  style={{fontFamily:'Shabnam'}}value="waiting" className=" ">هولدینگ</option>
+                            <option  style={{fontFamily:'Shabnam'}}value="check" className=" ">صندوق</option>
+                            <option style={{fontFamily:'Shabnam'}} value="not" className=" ">سازمان</option>
+                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className=" ">بانک</option>
+                            <option style={{fontFamily:'Shabnam'}} value="waiting" className=" ">معاونت</option>
+                            <option style={{fontFamily:'Shabnam'}}  value="check" className=" ">شرکت ها</option>
+                            <option style={{fontFamily:'Shabnam'}} value="not" className=" ">فدراسیون</option>
+                            <option style={{fontFamily:'Shabnam'}} value="not" className=" ">موسسات</option>
 
                         </select>
                         {/* <input
                             type="text"
                             id="input-group-1"
                             disabled="true"
-                            class="pr-9 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                            class="pr-9   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
                             placeholder="آرمان"/> */}
                     </div>
                 </div>
@@ -62,23 +62,23 @@ const UserList = () =>{
                         <select style={{fontFamily:'Shabnam'}}
                             name="cars"
                             id="cars"
-                            className=" font-IRsans text-right  bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2">
-                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className="font-IRsans">انتخاب زیر مجموعه</option>
-                            <option  style={{fontFamily:'Shabnam'}}value="waiting" className="font-IRsans">هولدینگ</option>
-                            <option  style={{fontFamily:'Shabnam'}}value="check" className="font-IRsans">صندوق</option>
-                            <option style={{fontFamily:'Shabnam'}} value="not" className="font-IRsans">سازمان</option>
-                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className="font-IRsans">بانک</option>
-                            <option style={{fontFamily:'Shabnam'}} value="waiting" className="font-IRsans">معاونت</option>
-                            <option style={{fontFamily:'Shabnam'}}  value="check" className="font-IRsans">شرکت ها</option>
-                            <option style={{fontFamily:'Shabnam'}} value="not" className="font-IRsans">فدراسیون</option>
-                            <option style={{fontFamily:'Shabnam'}} value="not" className="font-IRsans">موسسات</option>
+                            className="   text-right  bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2">
+                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className=" ">انتخاب زیر مجموعه</option>
+                            <option  style={{fontFamily:'Shabnam'}}value="waiting" className=" ">هولدینگ</option>
+                            <option  style={{fontFamily:'Shabnam'}}value="check" className=" ">صندوق</option>
+                            <option style={{fontFamily:'Shabnam'}} value="not" className=" ">سازمان</option>
+                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className=" ">بانک</option>
+                            <option style={{fontFamily:'Shabnam'}} value="waiting" className=" ">معاونت</option>
+                            <option style={{fontFamily:'Shabnam'}}  value="check" className=" ">شرکت ها</option>
+                            <option style={{fontFamily:'Shabnam'}} value="not" className=" ">فدراسیون</option>
+                            <option style={{fontFamily:'Shabnam'}} value="not" className=" ">موسسات</option>
 
                         </select>
                         {/* <input
                             type="text"
                             id="input-group-1"
                             disabled="true"
-                            class="pr-9 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                            class="pr-9   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
                             placeholder="آرمان"/> */}
                     </div>
                 </div>

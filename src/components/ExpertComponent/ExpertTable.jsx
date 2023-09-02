@@ -62,8 +62,8 @@ const tableRow =[
 ]
   const tableBody = tableRow.map((tableRow) =>
   <tr key={tableRow.id} className="border-b border-b-borderGray">
-    <td className="py-4 text-sm text-right pr-4 font-IRsans px-4" style={{fontFamily:'Shabnam'}}>{tableRow.num}</td>
-    <td className="py-4 text-sm text-right font-IRsans px-4">
+    <td className="py-4 text-sm text-right pr-4   px-4" style={{fontFamily:'Shabnam'}}>{tableRow.num}</td>
+    <td className="py-4 text-sm text-right   px-4">
       <div className="flex items-center" style={{fontFamily:'Shabnam'}}>
         <div>
         {tableRow.name}
@@ -71,22 +71,22 @@ const tableRow =[
    
       </div>
     </td>
-    <td className="py-4 text-sm text-right px-4 font-IRsans" style={{fontFamily:'Shabnam'}}>{tableRow.userName}</td>
-    <td className="py-4 text-sm text-center px-4 font-IRsans" style={{fontFamily:'Shabnam'}} >{tableRow.password}</td>
-    <td className="py-4 text-sm text-center px-4 font-IRsans"  style={{fontFamily:'Shabnam'}}>{tableRow.action}</td>
+    <td className="py-4 text-sm text-right px-4  " style={{fontFamily:'Shabnam'}}>{tableRow.userName}</td>
+    <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}} >{tableRow.password}</td>
+    <td className="py-4 text-sm text-center px-4  "  style={{fontFamily:'Shabnam'}}>{tableRow.action}</td>
   
     </tr> 
   )
     return(
         <div className=" mt-10 border-borderGray border border-solid w-full overflow-x-auto whitespace-nowrap ">
-          <table class="table-auto w-full font-IRsans">
+          <table class="table-auto w-full  ">
   <thead className="bg-darkGray h-11 rounded-t-2xl w-full whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}> 
     <tr className="text-white  p-6 whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}>
-      <th className="text-right pr-4 font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>ردیف</th>
-      <th className="text-right font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>نام و نام خانوادگی</th>
-      <th className="text-right font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>نام کاربری</th>
+      <th className="text-right pr-4   md:px-4" style={{fontFamily:'Shabnam'}}>ردیف</th>
+      <th className="text-right   md:px-4" style={{fontFamily:'Shabnam'}}>نام و نام خانوادگی</th>
+      <th className="text-right   md:px-4" style={{fontFamily:'Shabnam'}}>نام کاربری</th>
       <th className="text-center font-IRsan md:px-4" style={{fontFamily:'Shabnam'}}>رمز عبور</th>
-      <th className="text-center font-IRsans md:px-4" style={{fontFamily:'Shabnam'}}>عملیات</th>
+      <th className="text-center   md:px-4" style={{fontFamily:'Shabnam'}}>عملیات</th>
 
     </tr>
   </thead>
@@ -106,14 +106,14 @@ const tableRow =[
     <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
  
       <div className="text-center p-4 border-b border-solid border-b-midGray rounded-t">
-        <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-black align-middle text-center">
+        <span style={{fontFamily:'Shabnam'}} className="text-base font-bold   text-black align-middle text-center">
          هشدار!
         </span>
      
       </div>
       
       <div className="relative p-6 flex-auto">
-        <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-IRsans leading-relaxed">
+        <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm   leading-relaxed">
      آیا از حذف کارشناس  انتخاب شده مطمئن هستید؟
         </p>
       </div>
@@ -121,7 +121,7 @@ const tableRow =[
       <div className="flex items-center justify-center justify-end border-solid border-slate-200 rounded-b">
         <button
         style={{fontFamily:'Shabnam'}}
-          className="text-black font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          className="text-black   float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button"
           onClick={() => setShowError(false)}
         >
@@ -129,7 +129,7 @@ const tableRow =[
         </button>
         <button
         style={{fontFamily:'Shabnam'}}
-          className="text-white font-IRsans float-left bg-red shadow-redShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          className="text-white   float-left bg-red shadow-redShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button"
           onClick={() => setShowError(false)}
         >
@@ -157,7 +157,7 @@ const tableRow =[
     <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
  
       <div className="text-center p-4 border-b border-solid border-b-midGray rounded-t">
-        <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-black align-middle text-center">
+        <span style={{fontFamily:'Shabnam'}} className="text-base font-bold   text-black align-middle text-center">
         ویرایش کارشناس
         </span>
      
@@ -165,35 +165,35 @@ const tableRow =[
       
       <div className="flex flex-wrap p-6">
                 <div className="flex flex-col w-[39%] ml-[2%]">
-                  <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-[#0D296E] font-bold text-sm">
+                  <span style={{fontFamily:'Shabnam'}} className="  text-[#0D296E] font-bold text-sm">
                     نام
                   </span>
-                  <input className="border border-borderGray rounded-md px-2 py-1 font-IRsans mt-2" placeholder="علی"/>
+                  <input className="border border-borderGray rounded-md px-2 py-1   mt-2" placeholder="علی"/>
                 </div>
                 <div className="flex flex-col w-[59%]">
-                  <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-[#0D296E] font-bold text-sm">
+                  <span style={{fontFamily:'Shabnam'}} className="  text-[#0D296E] font-bold text-sm">
                     نام خانوادگی
                   </span>
-                  <input className="border border-borderGray rounded-md px-2 py-1 font-IRsans mt-2" placeholder="اطهری"/>
+                  <input className="border border-borderGray rounded-md px-2 py-1   mt-2" placeholder="اطهری"/>
                 </div>
                </div>
                <div className="flex flex-col w-[100%] px-6 mb-6">
-                  <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-[#0D296E] font-bold text-sm">
+                  <span style={{fontFamily:'Shabnam'}} className="  text-[#0D296E] font-bold text-sm">
                     نام کاربری
                   </span>
-                  <input className="border border-borderGray rounded-md px-2 py-1 font-IRsans mt-2" placeholder="۰۰۲۰۷۶۸۹۷۶"/>
+                  <input className="border border-borderGray rounded-md px-2 py-1   mt-2" placeholder="۰۰۲۰۷۶۸۹۷۶"/>
                 </div>
                 <div className="flex flex-col w-[100%] px-6 mb-6">
-                  <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-[#0D296E] font-bold text-sm">
+                  <span style={{fontFamily:'Shabnam'}} className="  text-[#0D296E] font-bold text-sm">
                  رمز عبور
                   </span>
-                  <input className="border border-borderGray rounded-md px-2 py-1 font-IRsans mt-2" placeholder="۰۹۱۲۸۷۶۸۷۶۵"/>
+                  <input className="border border-borderGray rounded-md px-2 py-1   mt-2" placeholder="۰۹۱۲۸۷۶۸۷۶۵"/>
                 </div>
      
       <div className="flex items-center justify-center justify-end border-solid border-slate-200 rounded-b">
         <button
         style={{fontFamily:'Shabnam'}}
-          className="text-black font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          className="text-black   float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button"
           onClick={() => setShowEditModal(false)}
         >
@@ -201,7 +201,7 @@ const tableRow =[
         </button>
         <button
         style={{fontFamily:'Shabnam'}}
-          className="text-white font-IRsans float-left bg-mainColor shadow-blueShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          className="text-white   float-left bg-mainColor shadow-blueShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button"
           onClick={() => setShowEditModal(false)}
         >
@@ -229,14 +229,14 @@ const tableRow =[
     <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
  
       <div className="text-center p-4 border-b border-solid border-b-midGray rounded-t">
-        <span style={{fontFamily:'Shabnam'}} className="text-base font-bold font-IRsans text-black align-middle text-center">
+        <span style={{fontFamily:'Shabnam'}} className="text-base font-bold   text-black align-middle text-center">
          هشدار!
         </span>
      
       </div>
       
       <div className="relative p-6 flex-auto">
-        <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm font-IRsans leading-relaxed">
+        <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm   leading-relaxed">
     آیا از مسدودسازی کارشناس انتخاب شده مطمئن هستید؟
         </p>
       </div>
@@ -244,7 +244,7 @@ const tableRow =[
       <div className="flex items-center justify-center justify-end border-solid border-slate-200 rounded-b">
         <button
         style={{fontFamily:'Shabnam'}}
-          className="text-black font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          className="text-black   float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button"
           onClick={() => setShowBan(false)}
         >
@@ -252,7 +252,7 @@ const tableRow =[
         </button>
         <button
         style={{fontFamily:'Shabnam'}}
-          className="text-white font-IRsans float-left bg-red shadow-redShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          className="text-white   float-left bg-red shadow-redShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button"
           onClick={() => setShowBan(false)}
         >
