@@ -1,7 +1,6 @@
 import React  from "react";
 import SuperVisorRightMenu from "../../components/SupervisorComponent/SuperVisorRightMenu";
-import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
-import SupervisorReportView from "../../components/SupervisorComponent/SupervisorReportView";
+
 
 const ReportView = () =>{
 

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { DatePicker } from "zaman";
 import './components.css';
 import {ReactComponent as User} from "../assets/icon/black/profile.svg"
@@ -7,35 +7,21 @@ import {ReactComponent as Reload} from "../assets/icon/black/reload.svg"
 import {ReactComponent as Secure} from "../assets/icon/black/secure.svg"
 import {ReactComponent as Doc} from "../assets/icon/black/doc.svg"
 import {ReactComponent as Location} from "../assets/icon/black/location.svg"
-import {ReactComponent as Calender} from "../assets/icon/black/calender.svg"
+
 import {ReactComponent as Mail} from "../assets/icon/black/envelope.svg"
 import {ReactComponent as Phone} from "../assets/icon/black/phone.svg"
-import {ReactComponent as Show} from "../assets/icon/black/show.svg"
+
 import {ReactComponent as Pencil} from "../assets/icon/white/pencil.svg"
 import Captcha from "../assets/img/captcha.png"
 import UserImg from "../assets/img/user.png"
 import {Link} from "react-router-dom";
 const AddAgentForm = () => {
-    const [passwordShown,
-        setPasswordShown] = useState(false);
 
-    const togglePassword = () => {
-
-        setPasswordShown(!passwordShown);
-    };
-
-    const [passwordAgainShown,
-        setPasswordAgainShown] = useState(false);
-
-    const togglePasswordAgain = () => {
-
-        setPasswordAgainShown(!passwordAgainShown);
-    };
     return (
         <div className="w-[80%] mx-auto">
             <div className="flex justify-center">
                 <div className="relative rounded-full h-[86px] w-[86px] mt-4 mb-4 ml-8">
-                    <img src={UserImg}/>
+                    <img src={UserImg} alt=""/>
                     <button style={{fontFamily:'Shabnam'}}
                         className="absolute rounded-full shadow-blueShadow bg-mainColor p-2 top-12 -right-2">
                         <Pencil/>

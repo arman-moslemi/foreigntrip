@@ -2,7 +2,7 @@ import React from "react";
 import InternationalRightMenu from "../../components/InternationalComponent/InternationalRightMenu";
 import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
 
-import { Link } from "react-router-dom";
+
 import RequestViewStep1 from "../../components/RequestViewStep1";
 import Signature from "../../components/Signature";
 const InternationalUploadSignature = () =>{

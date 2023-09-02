@@ -25,8 +25,8 @@ const ChangePassword = () =>{
           
      
         
-         <Link style={{fontFamily:'Shabnam'}}  style={{fontFamily:'Shabnam'}}  to={'/newPassword'}>
-         <button style={{fontFamily:'Shabnam'}}  style={{fontFamily:'Shabnam'}} className="w-full h-12 bg-mainColor shadow-blueShadow mt-6   text-white text-lg rounded-lg hover:bg-lightBlue hover:text-mainColor">
+         <Link style={{fontFamily:'Shabnam'}}    to={'/newPassword'}>
+         <button style={{fontFamily:'Shabnam'}}   className="w-full h-12 bg-mainColor shadow-blueShadow mt-6   text-white text-lg rounded-lg hover:bg-lightBlue hover:text-mainColor">
              ارسال کد تایید
           </button>
          </Link>

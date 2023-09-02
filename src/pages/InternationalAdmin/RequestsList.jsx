@@ -3,7 +3,7 @@ import InternationalRightMenu from "../../components/InternationalComponent/Inte
 import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
 import InternatioanlRequestTable from "../../components/InternationalComponent/InternatioanlRequestTable";
 import {ReactComponent as Search} from "../../assets/icon/white/search.svg"
-import { Link } from "react-router-dom";
+
 const InternationalRequestsList = () =>{
     return(
         <div className="w-full h-screen bg-lightGray py-10 px-10 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>

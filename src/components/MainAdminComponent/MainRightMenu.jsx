@@ -6,7 +6,7 @@ import {ReactComponent as Doc} from "../../assets/icon/white/doc.svg"
 import {ReactComponent as Profile} from "../../assets/icon/white/profile.svg"
 import {ReactComponent as Exit} from "../../assets/icon/white/exit.svg"
 import { ReactComponent as Ticket } from "../../assets/icon/white/ticket.svg";
-import { ReactComponent as Message } from "../../assets/icon/white/message.svg";
+
 import DocImg from "../../assets/img/doc.png"
 const MainRightMenu = () => {
    const [showMenu,setShowMenu] = useState(false);

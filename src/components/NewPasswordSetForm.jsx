@@ -1,23 +1,10 @@
-import React , {useState} from "react";
+import React , {} from "react";
 import {ReactComponent as Lock} from "../assets/icon/black/lock.svg"
-import {ReactComponent as Show} from "../assets/icon/black/show.svg"
+
 import { Link } from "react-router-dom";
-import { ReactComponent as Doc } from "../assets/icon/black/doc.svg"
+
 const NewPasswordSetForm = () =>{
-    const [passwordShown, setPasswordShown] = useState(false);
-
- 
-    const togglePassword = () => {
    
-      setPasswordShown(!passwordShown);
-    };
-    const [passwordAgainShown, setPasswordAgainShown] = useState(false);
-
- 
-    const toggleAgainPassword = () => {
-   
-        setPasswordAgainShown(!passwordAgainShown);
-    };
     
     return(
         <div>
@@ -38,7 +25,7 @@ const NewPasswordSetForm = () =>{
                     
                 </div>
               
-               <Link style={{fontFamily:'Shabnam'}}   style={{fontFamily:'Shabnam'}} to={'/'}>
+               <Link style={{fontFamily:'Shabnam'}}  to={'/'}>
                <button style={{fontFamily:'Shabnam'}} className="w-full h-12 bg-mainColor shadow-blueShadow mt-6   text-white text-lg rounded-lg hover:bg-lightBlue hover:text-mainColor">
                 تغییر رمز عبور
                 </button>

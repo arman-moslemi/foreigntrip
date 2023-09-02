@@ -2,12 +2,11 @@ import React,{useState} from "react";
 import {ReactComponent as Download} from "../../assets/icon/blue/download.svg"
 import { Link } from "react-router-dom";
 const MainRequestViewStep4 = () =>{
-const [showReason,
-        setShowReason]= useState(false);
+
         const [show , setShow]=useState(false);
 const [showSuccessModal, setShowSuccessModal] = React.useState(false);
 const [showSendModal, setShowSendModal] = React.useState(false);
-const [showButton,setShowButton] = React.useState(false);
+
     return(
         <>
       

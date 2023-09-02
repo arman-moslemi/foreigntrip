@@ -1,9 +1,6 @@
 import React from "react";
 import MainRightMenu from "../../components/MainAdminComponent/MainRightMenu";
-import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
-import ReportTable from "../../components/MainAdminComponent/ReportTable";
-import {ReactComponent as Search} from "../../assets/icon/white/search.svg"
-import { Link } from "react-router-dom";
+
 const ReportsView = () =>{
     return(
         <div className="w-full h-screen  bg-lightGray py-10 px-20 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>

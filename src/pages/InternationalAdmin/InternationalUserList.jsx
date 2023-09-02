@@ -1,9 +1,8 @@
-import React,{useState} from "react";
+import React from "react";
 import InternationalRightMenu from "../../components/InternationalComponent/InternationalRightMenu";
 import {ReactComponent as Profile} from "../../assets/icon/blue/profile.svg"
 import {ReactComponent as Search} from "../../assets/icon/white/search.svg"
-import {ReactComponent as Download} from "../../assets/icon/white/download.svg"
-import {ReactComponent as Add} from "../../assets/icon/white/add.svg"
+
 import InternationalUserTable from "../../components/InternationalComponent/InternationalUserTable";
 import { Link } from "react-router-dom";
 const InternationalUserList = () =>{
@@ -48,12 +47,7 @@ const InternationalUserList = () =>{
                             <option style={{fontFamily:'Shabnam'}} value="not" className=" ">موسسات</option>
 
                         </select>
-                        {/* <input
-                            type="text"
-                            id="input-group-1"
-                            disabled="true"
-                            class="pr-9   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
-                            placeholder="آرمان"/> */}
+                    
                     </div>
                 </div>
                 <div className="flex flex-col w-[150px] mr-2">
@@ -74,12 +68,7 @@ const InternationalUserList = () =>{
                             <option style={{fontFamily:'Shabnam'}} value="not" className=" ">موسسات</option>
 
                         </select>
-                        {/* <input
-                            type="text"
-                            id="input-group-1"
-                            disabled="true"
-                            class="pr-9   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
-                            placeholder="آرمان"/> */}
+               
                     </div>
                 </div>
                 <button className="bg-mainColor shadow-blueShadow p-2 text-white mr-2 rounded-md" style={{fontFamily:'Shabnam'}} >

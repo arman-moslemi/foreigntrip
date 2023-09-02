@@ -1,7 +1,6 @@
 import React  from "react";
 import blackLogo from "../../assets/img/logoBlack.png"
-import { Link } from "react-router-dom";
-import {ReactComponent as Phone} from "../../assets/icon/black/phone.svg"
+
 const SignUpDone = () =>{
 
     return(

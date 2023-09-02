@@ -1,10 +1,10 @@
-import React,{useState} from "react";
+import React from "react";
 import InternationalRightMenu from "../../components/InternationalComponent/InternationalRightMenu";
-import { Link } from "react-router-dom";
+
 import {ReactComponent as Ticket} from "../../assets/icon/blue/ticket.svg"
 import TicketDetailMain from "../../components/TicketDetailMain";
 const InternatinalTicketShow = () => {
-    const [showNewTicket,setShowNewTicket] = React.useState(false);
+
     return(
         <div className="w-full h-full bg-lightGray py-10 px-20 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>
         <div className="flex md:block">

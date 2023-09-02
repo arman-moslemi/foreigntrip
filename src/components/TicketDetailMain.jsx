@@ -3,7 +3,7 @@ import {ReactComponent as Attachment} from "../assets/icon/blue/attach.svg"
 import {ReactComponent as Send} from "../assets/icon/black/send.svg"
 import { ReactComponent as Support } from "../assets/icon/white/support.svg";
 import { ReactComponent as User } from "../assets/icon/white/profile.svg";
-import Profile from "../pages/UserPanel/Profile";
+
 const TicketDetailMain = () =>{
  
     return(

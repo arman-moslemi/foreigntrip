@@ -3,7 +3,7 @@ import MainRightMenu from "../../components/MainAdminComponent/MainRightMenu";
 import {ReactComponent as Profile} from "../../assets/icon/blue/profile.svg"
 import MainAdminRequestList from "../../components/MainAdminComponent/MainAdminRequestList";
 import {ReactComponent as Search} from "../../assets/icon/white/search.svg"
-import { Link } from "react-router-dom";
+
 const RequestsList = () =>{
     return(
         <div className="w-full h-screen bg-lightGray py-10 px-10 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>

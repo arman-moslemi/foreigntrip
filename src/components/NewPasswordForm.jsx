@@ -1,23 +1,9 @@
-import React , {useState} from "react";
-import {ReactComponent as Lock} from "../assets/icon/black/lock.svg"
-import {ReactComponent as Show} from "../assets/icon/black/show.svg"
+import React , {} from "react";
+
 import { Link } from "react-router-dom";
 import { ReactComponent as Doc } from "../assets/icon/black/doc.svg"
 const NewPasswordForm = () =>{
-    const [passwordShown, setPasswordShown] = useState(false);
-
  
-    const togglePassword = () => {
-   
-      setPasswordShown(!passwordShown);
-    };
-    const [passwordAgainShown, setPasswordAgainShown] = useState(false);
-
- 
-    const toggleAgainPassword = () => {
-   
-        setPasswordAgainShown(!passwordAgainShown);
-    };
     
     return(
         <div>
@@ -39,8 +25,8 @@ const NewPasswordForm = () =>{
                     </p>
                 </div>
               
-               <Link style={{fontFamily:'Shabnam'}}  style={{fontFamily:'Shabnam'}}   to={'/newPasswordSet'}>
-               <button style={{fontFamily:'Shabnam'}}  style={{fontFamily:'Shabnam'}} className="w-full h-12 bg-mainColor shadow-blueShadow mt-6   text-white text-lg rounded-lg hover:bg-lightBlue hover:text-mainColor">
+               <Link style={{fontFamily:'Shabnam'}}     to={'/newPasswordSet'}>
+               <button style={{fontFamily:'Shabnam'}}  className="w-full h-12 bg-mainColor shadow-blueShadow mt-6   text-white text-lg rounded-lg hover:bg-lightBlue hover:text-mainColor">
                  ثبت
                 </button>
                </Link>

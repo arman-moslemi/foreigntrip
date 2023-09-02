@@ -1,4 +1,4 @@
-import React,{useState,useEffect,useRef} from "react";
+import React from "react";
 
 import {ReactComponent as User} from "../assets/icon/black/profile.svg"
 import {ReactComponent as Pass} from "../assets/icon/black/lock.svg"
@@ -12,8 +12,7 @@ import {Link} from "react-router-dom";
 const LoginForm = () => {
     // const [passwordShown, setPasswordShown] = useState(false); const
     // togglePassword = () => {   setPasswordShown(!passwordShown); };
-    const captchaRef = useRef();
-    const [captcha,setCaptcha]=useState()
+
 
     return (
         <div>

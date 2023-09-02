@@ -1,11 +1,10 @@
-import React, {useState} from "react";
-import { DatePicker } from "zaman";
+import React from "react";
+
 import './components.css';
 import {Link} from "react-router-dom";
 
 const NewRequestFormStep3 = () => {
-    const [showSuccessModal,
-        setShowSuccessModal] = React.useState(false);
+
     return (
         <div>
           <p style={{fontFamily: 'Shabnam'}} className="text-xl text-mainColor font-bold mt-3.5 mb-8 ">گام 3 - اطلاعات تکمیلی</p>

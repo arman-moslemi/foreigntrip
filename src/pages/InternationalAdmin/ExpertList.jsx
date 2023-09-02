@@ -1,11 +1,9 @@
 import React,{useState} from "react";
 import InternationalRightMenu from "../../components/InternationalComponent/InternationalRightMenu";
 import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
-import {ReactComponent as Search} from "../../assets/icon/white/search.svg"
-import {ReactComponent as Download} from "../../assets/icon/white/download.svg"
-import {ReactComponent as Add} from "../../assets/icon/white/add.svg"
+
 import ExpertTable from "../../components/ExpertComponent/ExpertTable";
-import { Link } from "react-router-dom";
+
 const ExpertList = () =>{
     const[showAdd,
             setShowAdd]=useState(false);

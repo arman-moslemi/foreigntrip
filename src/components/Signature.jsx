@@ -1,10 +1,10 @@
-import React,{useState} from "react";
+import React from "react";
 
 
 
 const Signature = () =>{
 const [showModal,setShowModal] = React.useState(false);
-const [showAlert,setShowAlert] = React.useState(false);
+const [showAlert] = React.useState(false);
     return (
         <div className="rounded-md  mt-7">
         

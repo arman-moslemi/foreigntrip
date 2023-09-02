@@ -15,8 +15,7 @@ export const truncate = (str, len) => {
 };
 
 const ExpertTicketListTable = () =>{
-  const [showSuccessModal, setShowSuccessModal] = React.useState(false);
-  const [showRuleModal, setShowRuleModal] = React.useState(false);
+
 const tableRow =[
   {
     id:'1',

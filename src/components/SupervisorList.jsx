@@ -1,6 +1,6 @@
-import React,{useState} from "react";
+import React from "react";
 import './components.css';
-import { Link } from "react-router-dom";
+
 import {ReactComponent as Trash} from "../assets/icon/blue/trash.svg";
 import { ReactComponent as Pencil } from "../assets/icon/blue/pencil.svg";
 export const truncate = (str, len) => {

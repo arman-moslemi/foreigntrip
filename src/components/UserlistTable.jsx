@@ -1,7 +1,7 @@
 import React from "react";
 import {ReactComponent as Search} from "../assets/icon/white/search.svg"
 import './components.css';
-import { Link } from "react-router-dom";
+
 import {ReactComponent as Download} from "../assets/icon/white/download.svg"
 import Img1 from "../assets/img/user.png"
 export const truncate = (str, len) => {

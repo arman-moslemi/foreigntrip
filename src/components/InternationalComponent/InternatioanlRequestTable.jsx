@@ -1,14 +1,13 @@
 
 
 
-import React,{useState} from "react";
-import {ReactComponent as Search} from "../../assets/icon/white/search.svg"
+import React from "react";
+
 import { ReactComponent as Eye } from "../../assets/icon/black/eye.svg";
-import { ReactComponent as Ban } from "../../assets/icon/black/ban.svg";
+
 import './components.css';
 import { Link } from "react-router-dom";
-import {ReactComponent as Trash} from "../../assets/icon/blue/trash.svg";
-import { ReactComponent as Pencil } from "../../assets/icon/blue/pencil.svg";
+
 import Img1 from "../../assets/img/user.png";
 export const truncate = (str, len) => {
     // console.log("truncate", str, str.length, len);

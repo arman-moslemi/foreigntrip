@@ -1,13 +1,11 @@
 import React ,{useState} from "react";
 import WhiteLogo from "../../assets/img/whiteLogo.png"
 import { Link } from "react-router-dom";
-import {ReactComponent as Add} from "../../assets/icon/white/add.svg"
 import {ReactComponent as Doc} from "../../assets/icon/white/doc.svg"
 import {ReactComponent as Profile} from "../../assets/icon/white/profile.svg"
 import {ReactComponent as Ticket} from "../../assets/icon/white/ticket.svg"
 import {ReactComponent as Exit} from "../../assets/icon/white/exit.svg"
-import DocImg from "../../assets/img/doc.png"
-import User2 from "../../assets/img/user2.png"
+
 const SuperVisorRightMenu = () => {
    const [showMenu,setShowMenu] = useState(false);
     return(
