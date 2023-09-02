@@ -17,7 +17,7 @@ const TicketList = () => {
                        تیکت ها و پشتیبانی
                 </span>
                     </div>
-                    <button onClick={() =>{setShowNewTicket(true)}} className="bg-mainColor px-4 py-1.5 shadow-blueShadow text-white font-IRSans text-base rounded-md sm:mr-auto sm:mt-5">
+                    <button style={{fontFamily:'Shabnam'}} onClick={() =>{setShowNewTicket(true)}} className="bg-mainColor px-4 py-1.5 shadow-blueShadow text-white font-IRSans text-base rounded-md sm:mr-auto sm:mt-5">
                         + تیکت جدید
                     </button>
                 </div>
@@ -60,13 +60,14 @@ const TicketList = () => {
                           بستن
                          </button>
                         </Link>
-                         <button
+                         <Link
+                         to={'/ticketShow'}
                            className="text-white bg-mainColor shadow-blueShadow rounded-lg font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                           type="button"
-                           onClick={() => setShowNewTicket(false)}
+                           
+                           
                          >
                           شروع ارسال پیام
-                         </button>
+                         </Link>
                       
                        </div>
                      </div>

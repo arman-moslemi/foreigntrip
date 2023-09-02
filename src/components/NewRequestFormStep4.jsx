@@ -143,14 +143,14 @@ const NewRequestFormStep4 = () => {
                 </div>
                
                 <div className="flex items-center justify-endborder-t justify-end border-solid border-slate-200 rounded-b">
-                  <button
+                  <Link
                   style={{fontFamily:'Shabnam'}}
                     className="text-white font-IRsans rounded-sm shadow-blueShadow float-left bg-mainColor font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={() => setShowSuccessModal(false)}
+                   to={'/requestHistory'}
                   >
                     ثبت درخواست
-                  </button>
+                  </Link>
                 
                 </div>
               </div>

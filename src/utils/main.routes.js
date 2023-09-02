@@ -75,6 +75,7 @@ import ExpertReportsList from "../pages/Expert/ReportList";
 import ExpertReportsView from "../pages/Expert/ReportsView";
 import ExpertTicketList from "../pages/Expert/TicketListMain";
 import ExpertTicketShow from "../pages/Expert/TicketShow";
+import UserReportsView from "../pages/UserPanel/ReportsView";
 const MainRoutes = (props) =>{
     return(
             <BrowserRouter>
@@ -291,6 +292,9 @@ const MainRoutes = (props) =>{
                 </Routes>
                 <Routes>
                     <Route path="/expert/ticketShow" element={<ExpertTicketShow/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/reportView" element={<UserReportsView/>}/>
                 </Routes>
             </BrowserRouter>
     )

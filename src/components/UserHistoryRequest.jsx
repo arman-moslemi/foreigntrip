@@ -52,7 +52,7 @@ const tableRow =[
    subject:truncate("لغو قرارداد 142 وزارت خانه",30),
    location:'لندن',
    status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-mainColor font-bold font-IRsans">اعزام</span >,
-   function:<Link style={{fontFamily:'Shabnam'}}  to={`/travelTracking`}>
+   function:<Link style={{fontFamily:'Shabnam'}}  to={`/submitReport`}>
               <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
                 رهگیری مرحله ای
               </button>
@@ -78,7 +78,7 @@ const tableRow =[
    subject:truncate("لغو قرارداد 142 وزارت خانه",30),
    location:'پاریس',
    status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-green font-bold font-IRsans">تایید گزارش</span >,
-   function:<Link style={{fontFamily:'Shabnam'}}  to={`/`}>
+   function:<Link style={{fontFamily:'Shabnam'}}  to={`/reportView`}>
    <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
      مشاهده گزارش
    </button>
@@ -144,7 +144,7 @@ const tableRow =[
                          >
                            بستن
                          </button>
-                        <Link style={{fontFamily:'Shabnam'}}  to={'/newRequest'}>
+                        <Link style={{fontFamily:'Shabnam'}}  to={'/newRequestStep1'}>
                         <button
                            className="text-mainColor font-IRsans float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                            type="button"
