@@ -73,30 +73,36 @@ cookies.set('token',response.data.token, { path: '/' })
 cookies.set('ID',response.data.id, { path: '/' })
   // console.log(response.data.token)
 setSnipper(false)
-  if(response.data.role=="Organ"){
+  if(response.data.role=="Agent"){
     cookies.set('Role',response.data.role, { path: '/' })
 
     navigate("/newRequestStep1");
   }
-  if(response.data.role=="Expert"){
+  if(response.data.role=="InternationalExpert"){
     cookies.set('Role',response.data.role, { path: '/' })
     // cookies.set('Role',response.data.role, { path: '/karshenas' })
-    cookies.set('token',response.data.token, { path: '/karshenas' })
-    cookies.set('token',response.data.token, { path: '/karshenas/viewRequest' })
+    cookies.set('token',response.data.token, { path: '/expert' })
 
-    navigate("/karshenas/request");
+    navigate("/expert/messageList");
+  }
+  if(response.data.role=="Supervisor"){
+    cookies.set('Role',response.data.role, { path: '/' })
+    // cookies.set('Role',response.data.role, { path: '/karshenas' })
+    cookies.set('token',response.data.token, { path: '/supervisor' })
+
+    navigate("/supervisor/userList");
   }
   if(response.data.role=="Admin"){
     cookies.set('Role',response.data.role, { path: '/' })
 
     cookies.set('Role',response.data.role, { path: '/admin' })
 
-    navigate("/admin/dashboard");
+    navigate("/internationalAdmin/userList");
   }
   if(response.data.role=="MainAdmin"){
     cookies.set('Role',response.data.role)
 
-    navigate("/mainadmin/mainadminTicketList");
+    navigate("/mainAdmin/userList");
   }
 }
 else{
