@@ -6,10 +6,10 @@ import SupervisorTicketListTable from "../../components/SupervisorComponent/Supe
 const SupervisorTicketList= () => {
     const [showNewTicket,setShowNewTicket] = React.useState(false);
     return(
-        <div className="w-full h-screen bg-lightGray py-10 px-20 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>
+        <div className="w-full h-screen bg-lightGray py-10 px-20 lg:px-8 md:p-0  lg:h-full" style={{direction:'rtl'}}>
         <div className="flex md:block">
                 <SuperVisorRightMenu/>
-                <div className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl p-12 my-10 w-[80%] xl:p-5 md:w-[95%] md:rounded-xl md:mx-auto">
+                <div className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl p-12 my-10 w-[80%] min-w-[500px] lg:min-w-[450px] xl:p-5 md:w-[95%] md:min-w-[95%] md:rounded-xl md:mx-auto">
                 <div className="flex items-center justify-between sm:flex-wrap">
                     <div className="flex">
                     <Ticket/>
