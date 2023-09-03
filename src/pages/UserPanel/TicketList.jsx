@@ -2,7 +2,7 @@ import React from "react";
 import AgentRightMenu from "../../components/AgentRightMenu";
 import { Link } from "react-router-dom";
 import {ReactComponent as Ticket} from "../../assets/icon/blue/ticket.svg"
-import TicketListTable from "../../components/TicketListTable";
+import TicketListTableMain from "../../components/TicketListTableMain";
 const TicketList = () => {
     const [showNewTicket,setShowNewTicket] = React.useState(false);
     return(
@@ -21,7 +21,7 @@ const TicketList = () => {
                         + تیکت جدید
                     </button>
                 </div>
-                <TicketListTable/>
+                <TicketListTableMain/>
                 </div>
             </div>
             {

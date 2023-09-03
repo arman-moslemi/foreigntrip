@@ -14,7 +14,7 @@ export const truncate = (str, len) => {
   return str;
 };
 
-const TicketListTable = () =>{
+const TicketListTableMain = () =>{
   const [showSuccessModal, setShowSuccessModal] = React.useState(false);
   const [showRuleModal, setShowRuleModal] = React.useState(false);
 const tableRow =[
@@ -214,4 +214,4 @@ const tableRow =[
         </div>
     )
 }
-export default TicketListTable;
+export default TicketListTableMain;
