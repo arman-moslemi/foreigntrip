@@ -37,108 +37,108 @@ const LoginForm = () => {
   };
 
   const login=()=>{
-    console.log(captcha)
+//     console.log(captcha)
 
-    if(!pass||!user){
-        if(!pass){
-          setErPass(true)
-        }
-        if(!user){
-          setErUser(true)
-        }
-    }
-    else{
-      setErPass(false)
-      setErUser(false)
-    console.log(pass)
-    console.log(captcha)
-// if(validateCaptcha(captcha)==false||!user || !pass){
-if(captchaIn !== captcha||!user || !pass){
-  handleClick()
+//     if(!pass||!user){
+//         if(!pass){
+//           setErPass(true)
+//         }
+//         if(!user){
+//           setErUser(true)
+//         }
+//     }
+//     else{
+//       setErPass(false)
+//       setErUser(false)
+//     console.log(pass)
+//     console.log(captcha)
+// // if(validateCaptcha(captcha)==false||!user || !pass){
+// if(captchaIn !== captcha||!user || !pass){
+//   handleClick()
+// }
+// else{
+//   setSnipper(true)
+//   axios
+//   .post(apiUrl + "auth/Login",{
+//     Username:user,
+//     Password:pass
+//   })
+// .then(function (response) {
+//   console.log(123456)
+//   console.log(response)
+
+// if (response.request.status == 200) {
+//   const cookies = new Cookies();
+// cookies.set('token',response.data.token, { path: '/' })
+// cookies.set('ID',response.data.id, { path: '/' })
+//   // console.log(response.data.token)
+// setSnipper(false)
+//   if(response.data.role=="Organ"){
+//     cookies.set('Role',response.data.role, { path: '/' })
+
+//     navigate("/newRequestStep1");
+//   }
+//   if(response.data.role=="Expert"){
+//     cookies.set('Role',response.data.role, { path: '/' })
+//     // cookies.set('Role',response.data.role, { path: '/karshenas' })
+//     cookies.set('token',response.data.token, { path: '/karshenas' })
+//     cookies.set('token',response.data.token, { path: '/karshenas/viewRequest' })
+
+//     navigate("/karshenas/request");
+//   }
+//   if(response.data.role=="Admin"){
+//     cookies.set('Role',response.data.role, { path: '/' })
+
+//     cookies.set('Role',response.data.role, { path: '/admin' })
+
+//     navigate("/admin/dashboard");
+//   }
+//   if(response.data.role=="MainAdmin"){
+//     cookies.set('Role',response.data.role)
+
+//     navigate("/mainadmin/mainadminTicketList");
+//   }
+// }
+// else{
+//   handleClick()
+//   setSnipper(false)
+
+// }})
+// .catch(function (error) {
+// console.log(error);
+// setSnipper(false)
+
+// });
+console.log(user)
+console.log(pass)
+  if(user=="agent" && pass=="123456"){
+    navigate("/profile");
+  }
+
+  if(user=="expert" && pass=="123456"){
+    navigate("/expert/requestList");
+
+  }
+
+  if(user=="international" && pass=="123456"){
+    navigate("/internationalAdmin/userList");
+
+  }
+
+  if(user=="supervisor" && pass=="123456"){
+    navigate("/supervisor/userList");
+
+  }
+  if(user=="mainAdmin" && pass=="123456"){
+    navigate("/mainAdmin/userList");
+
+  }
+
+
+//   }
+
+//   }
 }
-else{
-  setSnipper(true)
-  axios
-  .post(apiUrl + "auth/Login",{
-    Username:user,
-    Password:pass
-  })
-.then(function (response) {
-  console.log(123456)
-  console.log(response)
-
-if (response.request.status == 200) {
-  const cookies = new Cookies();
-cookies.set('token',response.data.token, { path: '/' })
-cookies.set('ID',response.data.id, { path: '/' })
-  // console.log(response.data.token)
-setSnipper(false)
-  if(response.data.role=="Organ"){
-    cookies.set('Role',response.data.role, { path: '/' })
-
-    navigate("/newRequestStep1");
-  }
-  if(response.data.role=="Expert"){
-    cookies.set('Role',response.data.role, { path: '/' })
-    // cookies.set('Role',response.data.role, { path: '/karshenas' })
-    cookies.set('token',response.data.token, { path: '/karshenas' })
-    cookies.set('token',response.data.token, { path: '/karshenas/viewRequest' })
-
-    navigate("/karshenas/request");
-  }
-  if(response.data.role=="Admin"){
-    cookies.set('Role',response.data.role, { path: '/' })
-
-    cookies.set('Role',response.data.role, { path: '/admin' })
-
-    navigate("/admin/dashboard");
-  }
-  if(response.data.role=="MainAdmin"){
-    cookies.set('Role',response.data.role)
-
-    navigate("/mainadmin/mainadminTicketList");
-  }
-}
-else{
-  handleClick()
-  setSnipper(false)
-
-}})
-.catch(function (error) {
-console.log(error);
-setSnipper(false)
-
-});
-  // if(user=="admin" && pass=="123456"){
-  //   navigate("/admin/dashboard");
-  // }
-
-  // if(user=="anjoman" && pass=="123456"){
-  //   navigate("/anjoman/lastStatus");
-
-  // }
-
-  // if(user=="karshenas" && pass=="123456"){
-  //   navigate("/karshenas/request");
-
-  // }
-
-  // if(user=="sabt" && pass=="123456"){
-  //   navigate("/sabtesherkat/sabtRequest");
-
-  // }
-  // if(user=="tashakol" && pass=="123456"){
-  //   navigate("/tashakolRegister1");
-
-  // }
-  // if(user=="main" && pass=="123456"){
-  //   navigate("/mainadmin/mainadminTicketList");
-
-  // }
-
-  }
-
-  }}
 
     return (
         <div>
@@ -148,7 +148,7 @@ setSnipper(false)
                 </div>
                 <input
                 style={{fontFamily:'Shabnam'}}
-                    type="number"
+                    type="text"
                     id="input-group-1"
                     class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md my-5 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
                     placeholder="کد ملی"
