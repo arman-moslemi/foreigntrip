@@ -14,7 +14,7 @@ export const truncate = (str, len) => {
   return str;
 };
 
-const UserHistoryRequest = () =>{
+const UserHistoryRequest = ({data}) =>{
   const [showSuccessModal, setShowSuccessModal] = React.useState(false);
   const [showRuleModal, setShowRuleModal] = React.useState(false);
 const tableRow =[
@@ -85,13 +85,13 @@ const tableRow =[
  </Link>
   }
 ]
-  const tableBody = tableRow.map((tableRow) =>
+  const tableBody = data?.map((tableRow) =>
   <tr key={tableRow.id} className="border-b border-b-borderGray">
-    <td className="py-4 text-sm text-right pr-4 font-IRsans">{tableRow.num}</td>
-    <td className="py-4 text-sm text-right font-IRsans">{tableRow.date}</td>
-    <td className="py-4 text-sm text-right font-IRsans truncate">{tableRow.subject}</td>
-    <td className="py-4 text-sm text-center font-IRsans" >{tableRow.location}</td>
-    <td className="py-4 text-sm text-center font-IRsans"  >{tableRow.status}</td>
+    <td className="py-4 text-sm text-right pr-4 font-IRsans">{tableRow.requestId}</td>
+    <td className="py-4 text-sm text-right font-IRsans">{tableRow.travelDate}</td>
+    <td className="py-4 text-sm text-right font-IRsans truncate">{tableRow.travelTopic}</td>
+    <td className="py-4 text-sm text-center font-IRsans" >{tableRow.destinationCity}</td>
+    <td className="py-4 text-sm text-center font-IRsans"  >{tableRow.requestStatus?.requestStatusTitle}</td>
     <td className="py-4 text-sm text-center font-IRsans">{tableRow.function}</td>
     </tr> 
   )
