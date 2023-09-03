@@ -1,5 +1,4 @@
-import React,{useState} from "react";
-
+import React,{useState,useEffect} from "react";
 import {ReactComponent as User} from "../assets/icon/black/profile.svg"
 import {ReactComponent as Doc} from "../assets/icon/black/doc.svg"
 import {ReactComponent as Phone} from "../assets/icon/blue/phone.svg"
@@ -8,9 +7,51 @@ import {ReactComponent as Info} from "../assets/icon/black/info.svg"
 import User2 from "../assets/img/user2.png"
 import { Link } from "react-router-dom";
 import SuccessModal from "./SuccessModal";
+import Cookies from 'universal-cookie';
+import {axiosReq} from "../commons/axiosReq";
+import { useNavigate } from "react-router-dom";
+
 const ProfileInfo = () =>{
     const [showSuccessModal, setShowSuccessModal] = React.useState(false);
+    const [data, setData] = useState();
+    const [reCheck, setRecheck] = useState(false);
 
+    let navigate = useNavigate();
+  
+    useEffect(() => {
+    
+      auth();
+    }, [reCheck]);
+    const auth=async()=>{
+      const cookies = new Cookies();
+      var token= cookies.get('token');
+      console.log(token)
+      if(!token){
+       navigate("/");
+      }else{
+   if( cookies.get('Role')=="Agent")
+   {
+     GetData()
+  
+   }
+   else{
+    navigate("/");
+  
+   }
+      }
+    }
+    const GetData=async()=>{
+        console.log(1234)
+        const cookies = new Cookies();
+     
+     
+     
+       const dataUser = await axiosReq("Agents/GetAgent");
+       console.log(dataUser)
+     setData(dataUser)
+  
+       
+       }
     return(
     <div>
         <div className="flex items-center">
@@ -39,7 +80,7 @@ const ProfileInfo = () =>{
                     <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                         <User/>
                     </div>
-                    <input type="text" disabled="true" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="علی"/>
+                    <input value={data?.agentName} type="text" disabled="true" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="علی"/>
                 </div>
          </div>
          <div className="flex flex-col w-[49%] mr-[1%] mb-4">
@@ -48,7 +89,7 @@ const ProfileInfo = () =>{
                     <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                         <User/>
                     </div>
-                    <input type="text" id="input-group-1" disabled="true"  class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="اطهری"/>
+                    <input value={data?.agentFamily} type="text" id="input-group-1" disabled="true"  class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="اطهری"/>
                 </div>
          </div>
          <div className="flex flex-col w-[49%] ml-[1%] mb-4">
@@ -57,7 +98,7 @@ const ProfileInfo = () =>{
                     <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                         <Doc/>
                     </div>
-                    <input type="text" id="input-group-1" disabled="true" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="۰۰۲۰۱۶۵۴۷۸"/>
+                    <input value={data?.nationalCode} type="text" id="input-group-1" disabled="true" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="۰۰۲۰۱۶۵۴۷۸"/>
                 </div>
          </div>
          <div className="flex flex-col w-[49%] mr-[1%] mb-4">
@@ -66,7 +107,7 @@ const ProfileInfo = () =>{
                     <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                         <Phone/>
                     </div>
-                    <input type="text" id="input-group-1" disabled="true"  class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="۰۹۱۲۰۰۸۹۰۷۶"/>
+                    <input value={data?.mobile} type="text" id="input-group-1" disabled="true"  class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="۰۹۱۲۰۰۸۹۰۷۶"/>
                 </div>
          </div>
          <div className="flex flex-col w-[49%] ml-[1%] mb-4">
@@ -75,7 +116,7 @@ const ProfileInfo = () =>{
                     <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                         <Doc/>
                     </div>
-                    <input type="text" id="input-group-1" disabled="true" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="شستا"/>
+                    <input value={data?.subset} type="text" id="input-group-1" disabled="true" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="شستا"/>
                 </div>
          </div>
          <div className="flex flex-col w-[49%] mr-[1%] mb-4">
@@ -84,7 +125,7 @@ const ProfileInfo = () =>{
                     <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                         <Doc/>
                     </div>
-                    <input type="text" id="input-group-1" disabled="true" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="فراتوسعه هوشمند ایرانیان"/>
+                    <input type="text" value={data?.companyName} id="input-group-1" disabled="true" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="فراتوسعه هوشمند ایرانیان"/>
                 </div>
          </div>
          <div className="flex flex-col w-[49%] ml-[1%] mb-4">
@@ -93,7 +134,7 @@ const ProfileInfo = () =>{
                     <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                         <Doc/>
                     </div>
-                    <input type="text" id="input-group-1"  disabled="true" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="مدیر کل"/>
+                    <input type="text" id="input-group-1" value={data?.position?.positionType}  disabled="true" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="مدیر کل"/>
                 </div>
          </div>
    

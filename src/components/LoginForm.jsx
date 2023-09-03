@@ -76,7 +76,7 @@ setSnipper(false)
   if(response.data.role=="Agent"){
     cookies.set('Role',response.data.role, { path: '/' })
 
-    navigate("/newRequestStep1");
+    navigate("/profile");
   }
   if(response.data.role=="InternationalExpert"){
     cookies.set('Role',response.data.role, { path: '/' })
