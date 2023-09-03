@@ -26,7 +26,7 @@ const tableRow =[
    location:'برلین',
    status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-red font-bold  ">رد شده</span >,
    function: 
-                <button onClick={() => setShowSuccessModal(true)} className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow   text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
+                <button style={{fontFamily:'Shabnam'}} onClick={() => setShowSuccessModal(true)} className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow   text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
                   مشاهده علت
                 </button>
              
@@ -40,7 +40,7 @@ const tableRow =[
    location:'مالزی',
    status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-green font-bold  ">تایید شده</span >,
    function:
-              <button onClick={() => setShowRuleModal(true)}  className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow   text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
+              <button style={{fontFamily:'Shabnam'}} onClick={() => setShowRuleModal(true)}  className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow   text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
                مشاهده آیین نامه سفر
               </button>
             
@@ -53,7 +53,7 @@ const tableRow =[
    location:'لندن',
    status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-mainColor font-bold  ">اعزام</span >,
    function:<Link style={{fontFamily:'Shabnam'}}  to={`/submitReport`}>
-              <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow   text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
+              <button style={{fontFamily:'Shabnam'}} className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow   text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
                 رهگیری مرحله ای
               </button>
             </Link>
@@ -66,7 +66,7 @@ const tableRow =[
    location:'پاریس',
    status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-mainColor font-bold  ">اتمام سفر</span >,
    function:<Link style={{fontFamily:'Shabnam'}}  to={`/submitReport`}>
-              <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow   text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
+              <button style={{fontFamily:'Shabnam'}} className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow   text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
                ثبت گزارش دستاورد
               </button>
             </Link>
@@ -79,7 +79,7 @@ const tableRow =[
    location:'پاریس',
    status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-green font-bold  ">تایید گزارش</span >,
    function:<Link style={{fontFamily:'Shabnam'}}  to={`/reportView`}>
-   <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow   text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
+   <button style={{fontFamily:'Shabnam'}} className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow   text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
      مشاهده گزارش
    </button>
  </Link>
@@ -87,12 +87,12 @@ const tableRow =[
 ]
   const tableBody = tableRow.map((tableRow) =>
   <tr key={tableRow.id} className="border-b border-b-borderGray">
-    <td className="py-4 text-sm text-right pr-4  ">{tableRow.num}</td>
-    <td className="py-4 text-sm text-right  ">{tableRow.date}</td>
-    <td className="py-4 text-sm text-right   truncate">{tableRow.subject}</td>
-    <td className="py-4 text-sm text-center  " >{tableRow.location}</td>
-    <td className="py-4 text-sm text-center  "  >{tableRow.status}</td>
-    <td className="py-4 text-sm text-center  ">{tableRow.function}</td>
+    <td className="py-4 text-sm text-right pr-4  "style={{fontFamily:'Shabnam'}}>{tableRow.num}</td>
+    <td className="py-4 text-sm text-right  "style={{fontFamily:'Shabnam'}}>{tableRow.date}</td>
+    <td className="py-4 text-sm text-right   truncate"style={{fontFamily:'Shabnam'}}>{tableRow.subject}</td>
+    <td className="py-4 text-sm text-center  " style={{fontFamily:'Shabnam'}}>{tableRow.location}</td>
+    <td className="py-4 text-sm text-center  "  style={{fontFamily:'Shabnam'}}>{tableRow.status}</td>
+    <td className="py-4 text-sm text-center  "style={{fontFamily:'Shabnam'}}>{tableRow.function}</td>
     </tr> 
   )
     return(
@@ -100,12 +100,12 @@ const tableRow =[
           <table class="table-auto w-full  ">
   <thead className="bg-darkGray h-11 rounded-t-2xl w-full whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}> 
     <tr className="text-white  p-6 whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}>
-      <th className="text-right pr-4   md:px-4">ردیف</th>
-      <th className="text-right   md:px-4">تاریخ سفر</th>
-      <th className="text-right   md:px-4">موضوع سفر</th>
-      <th className="text-center font-IRsan md:px-4s">کشور مقصد</th>
-      <th className="text-center   md:px-4">وضعیت</th>
-      <th className="text-center   md:px-4" >عملیات</th>
+      <th className="text-right pr-4   md:px-4"style={{fontFamily:'Shabnam'}}>ردیف</th>
+      <th className="text-right   md:px-4"style={{fontFamily:'Shabnam'}}>تاریخ سفر</th>
+      <th className="text-right   md:px-4"style={{fontFamily:'Shabnam'}}>موضوع سفر</th>
+      <th className="text-center font-IRsan md:px-4s"style={{fontFamily:'Shabnam'}}>کشور مقصد</th>
+      <th className="text-center   md:px-4"style={{fontFamily:'Shabnam'}}>وضعیت</th>
+      <th className="text-center   md:px-4"style={{fontFamily:'Shabnam'}} >عملیات</th>
     </tr>
   </thead>
   <tbody>
@@ -137,7 +137,7 @@ const tableRow =[
                        </div>
                       
                        <div className="flex items-center justify-endborder-t justify-end border-solid border-slate-200 rounded-b">
-                         <button
+                         <button style={{fontFamily:'Shabnam'}}
                            className="text-mainColor   float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                            type="button"
                            onClick={() => setShowSuccessModal(false)}
@@ -145,7 +145,7 @@ const tableRow =[
                            بستن
                          </button>
                         <Link style={{fontFamily:'Shabnam'}}  to={'/newRequestStep1'}>
-                        <button
+                        <button style={{fontFamily:'Shabnam'}}
                            className="text-mainColor   float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                            type="button"
                            
@@ -194,7 +194,7 @@ const tableRow =[
                     </div>
                    
                     <div className="flex items-center justify-endborder-t justify-center mb-3 border-solid border-slate-200 rounded-b">
-                      <button
+                      <button style={{fontFamily:'Shabnam'}}
                         className="text-mainColor   float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
                         onClick={() => setShowRuleModal(false)}
@@ -202,7 +202,7 @@ const tableRow =[
                         بستن
                       </button>
                   
-                     <button
+                     <button style={{fontFamily:'Shabnam'}}
                         className="text-white bg-mainColor shadow-blueShadow rounded-md   float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
                         onClick={() => setShowRuleModal(false)}

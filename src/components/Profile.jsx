@@ -297,7 +297,7 @@ const Profile = () => {
        
             
 
-            <Link to={'/mainAdmin/userList'} style={{fontFamily:'Shabnam'}}
+            <Link to={'/profile'} style={{fontFamily:'Shabnam'}}
                 className="w-[60%] mx-auto  h-12 bg-mainColor shadow-blueShadow mt-10 flex justify-center items-center text-white text-xl font-medium rounded-lg hover:bg-lightBlue hover:text-mainColor">
 ویرایش اطلاعات کاربری
             </Link>
