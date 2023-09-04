@@ -23,7 +23,7 @@ const AgentRightMenu = () => {
 
                     <ul>
                         <li className="my-10">
-                           <Link style={{fontFamily:'Shabnam'}}  to={'/newRequest'} className="flex items-center">
+                           <Link style={{fontFamily:'Shabnam'}}  to={'/newRequestStep1'} className="flex items-center">
                            <Add/>
                             <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-white font-medium mr-4 lg:text-sm">
                                 ثبت درخواست جدید 

@@ -92,7 +92,39 @@ const tableRow =[
     <td className="py-4 text-sm text-right font-IRsans truncate">{tableRow.travelTopic}</td>
     <td className="py-4 text-sm text-center font-IRsans" >{tableRow.destinationCity}</td>
     <td className="py-4 text-sm text-center font-IRsans"  >{tableRow.requestStatus?.requestStatusTitle}</td>
-    <td className="py-4 text-sm text-center font-IRsans">{tableRow.function}</td>
+    <td className="py-4 text-sm text-center font-IRsans">
+      {
+        tableRow.requestStatusId==2?
+        <button onClick={() => setShowSuccessModal(true)} className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
+        مشاهده علت
+      </button>
+        :
+        tableRow.requestStatusId==1?
+        <Link style={{fontFamily:'Shabnam'}}  to={`/submitReport`}>
+              <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
+               ثبت گزارش دستاورد
+              </button>
+            </Link>
+                 :
+                 tableRow.requestStatusId==3?
+                 <Link style={{fontFamily:'Shabnam'}}  to={`/travelTracking`}>
+              <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
+                رهگیری مرحله ای
+              </button>
+            </Link>
+            :
+            tableRow.requestStatusId==4 ||  tableRow.requestStatusId==5 ?
+<Link style={{fontFamily:'Shabnam'}}  to={`/`}>
+   <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
+     مشاهده گزارش
+   </button>
+ </Link>:null
+ 
+      }
+    
+ 
+ 
+ </td>
     </tr> 
   )
     return(
