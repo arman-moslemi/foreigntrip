@@ -107,18 +107,20 @@ const tableRow =[
             </Link>
                  :
                  tableRow.requestStatusId==3?
-                 <Link style={{fontFamily:'Shabnam'}}  to={`/travelTracking`}>
-              <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
-                رهگیری مرحله ای
-              </button>
-            </Link>
+                 <Link style={{fontFamily:'Shabnam'}}  to={`/submitReport`}>
+                 <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
+                  ثبت گزارش دستاورد
+                 </button>
+               </Link>
             :
             tableRow.requestStatusId==4 ||  tableRow.requestStatusId==5 ?
 <Link style={{fontFamily:'Shabnam'}}  to={`/`}>
    <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
      مشاهده گزارش
    </button>
- </Link>:null
+ </Link>:    <button onClick={() => setShowRuleModal(true)}  className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
+                )در انتظار تایید)مشاهده آیین نامه سفر
+              </button>
  
       }
     

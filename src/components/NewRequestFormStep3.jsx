@@ -1,11 +1,102 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import { DatePicker } from "zaman";
 import './components.css';
 import {Link} from "react-router-dom";
-
+import Cookies from 'universal-cookie';
+import { axiosReq } from "../commons/axiosReq";
+import { useNavigate, useParams } from "react-router-dom";
 const NewRequestFormStep3 = () => {
     const [showSuccessModal,
         setShowSuccessModal] = React.useState(false);
+        const id = useParams().id;
+        const [allValues, setAllValues] = useState({
+    
+            PayerCitizenShip: "",   
+            AmountOfCost :  "",
+            PayerFood:  "",
+            CostOfFood :  "",
+            TickerTypeId :  "",
+            AirlineCompany :  "",
+            TicketCost:  "",
+            TheCostOfTicket :  "",
+            RightOfMissionId :  "",
+            LevelRightOfMission :  "",
+            ExpertRightOfMission:  "",
+            RightToEducationCost :  "",
+            RightToEducationId :  "",
+            RightOfCommutingCost :  "",
+            RightOfCommutingId :  "",
+            VisaCost :  "",
+            TollAmountCost :  "",
+            TollAmountId:  "",
+            PaymentFromBank :  "",
+        });
+        let navigate = useNavigate();
+    
+        useEffect(() => {
+    
+            auth();
+        }, []);
+        const auth = async () => {
+            const cookies = new Cookies();
+            var token = cookies.get('token');
+            console.log(token)
+            if (!token) {
+                navigate("/");
+            } else {
+                if (cookies.get('Role') == "Agent") {
+    
+                }
+                else {
+                    navigate("/");
+    
+                }
+            }
+        }
+        const changeHandler = e => {
+          if (e.target) {
+  
+              setAllValues({ ...allValues, [e.target.name]: e.target.value })
+          }
+  
+      }
+      const updateReq= async () => {
+          console.log("req")
+          console.log(allValues)
+          const cookies = new Cookies();
+          const dataUser = await axiosReq("Request/UpdateRequest3", {
+            RequestId:id,
+            PayerCitizenShip: allValues?.PayerCitizenShip,   
+            AmountOfCost :  allValues?.AmountOfCost,
+            PayerFood:  allValues?.PayerFood,
+            CostOfFood : allValues?.CostOfFood,
+            TickerTypeId :  allValues?.TickerTypeId,
+            AirlineCompany :  allValues?.AirlineCompany,
+            TicketCost:  allValues?.TicketCost,
+            TheCostOfTicket :  allValues?.TheCostOfTicket,
+            RightOfMissionId :  allValues?.RightOfMissionId,
+            LevelRightOfMission : allValues?.LevelRightOfMission,
+            ExpertRightOfMission:  allValues?.ExpertRightOfMission,
+            RightToEducationCost :  allValues?.RightToEducationCost,
+            RightToEducationId : allValues?.RightToEducationId,
+            RightOfCommutingCost :  allValues?.RightOfCommutingCost,
+            RightOfCommutingId :  allValues?.RightOfCommutingId,
+            VisaCost :  allValues?.VisaCost,
+            TollAmountCost :  allValues?.TollAmountCost,
+            TollAmountId:  allValues?.TollAmountId,
+            PaymentFromBank :  allValues?.PaymentFromBank,
+          });
+          console.log(dataUser)
+          if (dataUser?.status == 200 || dataUser?.status == 204 || dataUser?.status == 201) {
+  
+              navigate("/newRequestStep4/"+id)
+  
+          }
+          else {
+              alert("اطلاعات ورودی نادرست می باشند")
+          }
+  
+      }
     return (
         <div>
           <p style={{fontFamily: 'Shabnam'}} className="text-xl text-mainColor font-bold mt-3.5 mb-8 ">گام 3 - اطلاعات تکمیلی</p>
@@ -61,6 +152,8 @@ const NewRequestFormStep3 = () => {
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
                             id="input-group-1"
+                            onChange={changeHandler}
+                            name="PayerCitizenShip"
                             class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
                             placeholder="هزینه اقامت بر عهده"/>
                     </div>
@@ -71,6 +164,8 @@ const NewRequestFormStep3 = () => {
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
                             id="input-group-1"
+                            onChange={changeHandler}
+                            name="AmountOfCost"
                             class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
                             placeholder="میزان هزینه"/>
                     </div>
@@ -81,6 +176,8 @@ const NewRequestFormStep3 = () => {
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
                             id="input-group-1"
+                            onChange={changeHandler}
+                            name="PayerFood"
                             class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
                             placeholder="هزینه غذا به عهده"/>
                     </div>
@@ -91,6 +188,8 @@ const NewRequestFormStep3 = () => {
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
                             id="input-group-1"
+                            onChange={changeHandler}
+                            name="CostOfFood"
                             class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
                             placeholder="میزان هزینه غذا"/>
                     </div>
@@ -102,6 +201,9 @@ const NewRequestFormStep3 = () => {
                     <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
                     <input style={{fontFamily:'Shabnam'}}
                         type="checkbox"
+                        onChange={changeHandler}
+                        name="TickerTypeId"
+                        value={"1"}
                         class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1.5"/>
                       Business
                     </label>
@@ -110,6 +212,9 @@ const NewRequestFormStep3 = () => {
                     <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
                     <input style={{fontFamily:'Shabnam'}}
                         type="checkbox"
+                        onChange={changeHandler}
+                        name="TickerTypeId"
+                        value={"2"}
                         class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1.5"/>
                       Economic 
                     </label>
@@ -122,6 +227,8 @@ const NewRequestFormStep3 = () => {
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
                             id="input-group-1"
+                            onChange={changeHandler}
+                            name="AirlineCompany"
                             class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
                             placeholder="نام شرکت هواپیمایی"/>
                     </div>
@@ -132,6 +239,8 @@ const NewRequestFormStep3 = () => {
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
                             id="input-group-1"
+                            onChange={changeHandler}
+                            name="TicketCost"
                             class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
                             placeholder="هزینه بلیط بر عهده"/>
                     </div>
@@ -142,6 +251,8 @@ const NewRequestFormStep3 = () => {
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
                             id="input-group-1"
+                            onChange={changeHandler}
+                            name="TheCostOfTicket"
                             class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
                             placeholder="میزان هزینه بلیط"/>
                     </div>
@@ -150,19 +261,25 @@ const NewRequestFormStep3 = () => {
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold font-IRsans">حق ماموریت</span>
                     <div class="mt-5 flex-col">
                         <div className="flex items-center">
-                          <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-3" type="radio" name="RightMission" id="InWith" />
+                          <input                          
+                             onChange={changeHandler}
+                            name="RightOfMissionId" value={"1"}className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-3" type="radio"  id="InWith" />
                           <label style={{fontFamily: 'Shabnam'}} className="" For="a1">با دریافت حق ماموریت از دستگاه داخلی</label>
                         </div>
                         <div className="flex items-center mt-4">
-                          <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-3" type="radio" name="RightMission" id="InWithout" />
+                          <input                   value={"2"}          onChange={changeHandler}
+                            name="RightOfMissionId"
+                            className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-3" type="radio"  id="InWithout" />
                           <label style={{fontFamily: 'Shabnam'}} className="" For="a1">بدون دریافت حق ماموریت از دستگاه داخلی</label>
                         </div>
                         <div className="flex items-center mt-4">
-                          <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-3" type="radio" name="RightMission" id="OutWith" />
+                          <input           value={"3"}                  onChange={changeHandler}
+                            name="RightOfMissionId"className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-3" type="radio"  id="OutWith" />
                           <label style={{fontFamily: 'Shabnam'}} className="" For="a1">با دریافت حق ماموریت از دستگاه خارجی</label>
                         </div>
                         <div className="flex items-center mt-4">
-                          <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-3" type="radio" name="RightMission" id="OutWithout" />
+                          <input                   value={"4"}          onChange={changeHandler}
+                            name="RightOfMissionId"className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-3" type="radio" id="OutWithout" />
                           <label style={{fontFamily: 'Shabnam'}} className="" For="a1">بدون دریافت حق ماموریت از دستگاه خارجی</label>
                         </div>
                           
@@ -176,12 +293,18 @@ const NewRequestFormStep3 = () => {
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
+                          value={"1"}         
+                          onChange={changeHandler}
+                          name="LevelRightOfMission"
+                          
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4 mr-8"/>
                            کارشناس : 
                           </label>
                         </div>
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
+                            onChange={changeHandler}
+                            name="ExpertRightOfMission"
                             id="input-group-1"
                             class="text-right h-[32px] w-[52%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
                             />
@@ -193,12 +316,17 @@ const NewRequestFormStep3 = () => {
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
+                          value={"2"}         
+                          onChange={changeHandler}
+                          name="LevelRightOfMission"
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4 mr-8"/>
                             مدیر :
                           </label>
                         </div>
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
+                            onChange={changeHandler}
+                            name="ExpertRightOfMission"
                             id="input-group-1"
                             class="text-right h-[32px] w-[52%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
                             />
@@ -210,6 +338,9 @@ const NewRequestFormStep3 = () => {
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
+                          value={"3"}         
+                          onChange={changeHandler}
+                          name="LevelRightOfMission"
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4 mr-8"/>
                             مدیر کل :
                           </label>
@@ -217,6 +348,8 @@ const NewRequestFormStep3 = () => {
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
                             id="input-group-1"
+                            onChange={changeHandler}
+                            name="ExpertRightOfMission"
                             class="text-right h-[32px] w-[52%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
                             />
 
@@ -233,6 +366,9 @@ const NewRequestFormStep3 = () => {
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
+                          onChange={changeHandler}
+                          name="RightToEducationId"
+                          value={"1"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
                             هزینه آموزش توسط متقاضی پرداخت می شود. میزان هزینه :
                           </label>
@@ -240,6 +376,9 @@ const NewRequestFormStep3 = () => {
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
                             id="input-group-1"
+                            onChange={changeHandler}
+                            name="RightToEducationCost"
+                            
                             class="text-right h-[32px] w-[16%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
                             />
 
@@ -250,6 +389,9 @@ const NewRequestFormStep3 = () => {
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
+                          onChange={changeHandler}
+                          name="RightToEducationId"
+                          value={"2"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
                             هزینه آموزش توسط دستگاه داخلی پرداخت می شود. میزان هزینه :
                           </label>
@@ -257,6 +399,8 @@ const NewRequestFormStep3 = () => {
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
                             id="input-group-1"
+                            onChange={changeHandler}
+                            name="RightToEducationCost"
                             class="text-right h-[32px] w-[16%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
                             />
 
@@ -267,6 +411,9 @@ const NewRequestFormStep3 = () => {
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
+                          onChange={changeHandler}
+                          name="RightToEducationId"
+                          value={"3"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
                              با توجه به پرداخت حق عضویت بین المللی هزینه ای ندارد.
                           </label>
@@ -274,6 +421,8 @@ const NewRequestFormStep3 = () => {
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
                             id="input-group-1"
+                            onChange={changeHandler}
+                            name="RightToEducationCost"
                             class="text-right h-[32px] w-[16%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
                             />
 
@@ -290,6 +439,9 @@ const NewRequestFormStep3 = () => {
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
+                          onChange={changeHandler}
+                          name="RightOfCommutingId"
+                          value={"1"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
                             بر عهده دستگاه اجرایی . میزان هزینه :
                           </label>
@@ -307,6 +459,9 @@ const NewRequestFormStep3 = () => {
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
+                          onChange={changeHandler}
+                          name="RightOfCommutingId"
+                          value={"1"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
                             بر عهده شخص می باشد . میزان هزینه :
                           </label>
@@ -314,6 +469,8 @@ const NewRequestFormStep3 = () => {
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
                             id="input-group-1"
+                            onChange={changeHandler}
+                            name="RightOfCommutingCost"
                             class="text-right h-[32px] w-[36%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
                             />
 
@@ -324,6 +481,9 @@ const NewRequestFormStep3 = () => {
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
+                          onChange={changeHandler}
+                          name="RightOfCommutingId"
+                          value={"1"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
                              بر عهده طرف خارجی می باشد.
                           </label>
@@ -331,6 +491,8 @@ const NewRequestFormStep3 = () => {
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
                             id="input-group-1"
+                            onChange={changeHandler}
+                            name="RightOfCommutingCost"
                             class="text-right h-[32px] w-[36%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
                             />
 
@@ -354,6 +516,8 @@ const NewRequestFormStep3 = () => {
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
                             id="input-group-1"
+                            onChange={changeHandler}
+                            name="VisaCost"
                             class="text-right h-[32px] w-[22%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
                             />
 
@@ -364,6 +528,8 @@ const NewRequestFormStep3 = () => {
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
+                          onChange={changeHandler}
+                          name="RightOfCommutingCost"
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
                             هزینه ویزا ندارد.
                           </label>
@@ -383,6 +549,9 @@ const NewRequestFormStep3 = () => {
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
+                          onChange={changeHandler}
+                          name="TollAmountId"
+                          value={"1"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
                             با توجه به اینکه گذرنامه دولتی است عوارض خروج ندارد.
                           </label>
@@ -396,6 +565,9 @@ const NewRequestFormStep3 = () => {
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
+                          onChange={changeHandler}
+                          name="TollAmountId"
+                          value={"2"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
                            بر عهده شخص . مبلغ عوارض :
                           </label>
@@ -403,6 +575,8 @@ const NewRequestFormStep3 = () => {
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
                             id="input-group-1"
+                            onChange={changeHandler}
+                            name="TollAmountCost"
                             class="text-right h-[32px] w-[16%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
                             />
 
@@ -413,6 +587,9 @@ const NewRequestFormStep3 = () => {
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
+                          onChange={changeHandler}
+                          name="TollAmountId"
+                          value={"3"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
                              بر عهده دستگاه متبوعه. مبلغ عوارض :
                           </label>
@@ -420,6 +597,8 @@ const NewRequestFormStep3 = () => {
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
                             id="input-group-1"
+                            onChange={changeHandler}
+                            name="TollAmountCost"
                             class="text-right h-[32px] w-[16%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
                             />
 
@@ -434,6 +613,8 @@ const NewRequestFormStep3 = () => {
                     <input style={{fontFamily: 'Shabnam'}}
                             type="text"
                             id="input-group-1"
+                            onChange={changeHandler}
+                            name="PaymentFromBank"
                             class="text-right h-[32px] w-[40%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
                             />
                       
@@ -448,12 +629,12 @@ const NewRequestFormStep3 = () => {
                 className="w-40 h-12 mt-20  flex justify-center items-center bg-midGray shadow-blackShadow font-IRsans text-white text-xl font-normal rounded-lg hover:bg-lightGray hover:text-darkGray">
                 گام قبلی
             </Link>
-            <Link
-            to={'/newRequestStep4'}
+            <button
+            onClick={()=>updateReq()}
                 style={{fontFamily: 'Shabnam'}}
                 className="w-40 h-12 mt-20 mr-4 flex justify-center items-center bg-mainColor shadow-blueShadow font-IRsans text-white text-xl font-normal rounded-lg hover:bg-lightBlue hover:text-mainColor">
                 گام بعدی
-            </Link>
+            </button>
             </div>
 
         </div>

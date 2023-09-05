@@ -88,7 +88,7 @@ const MainRoutes = (props) =>{
                     <Route path="/newRequestStep3/:id" element={<NewRequestStep3/>} />
                 </Routes>
                 <Routes>
-                    <Route path="/newRequestStep4" element={<NewRequestStep4/>} />
+                    <Route path="/newRequestStep4/:id" element={<NewRequestStep4/>} />
                 </Routes>
                 <Routes>
                     <Route path="/" element={<Login/>} />
