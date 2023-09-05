@@ -3,7 +3,7 @@ import InternationalRightMenu from "../../components/InternationalComponent/Inte
 import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
 import InternationalReportTable from "../../components/InternationalComponent/InternationalReportTable";
 import {ReactComponent as Search} from "../../assets/icon/white/search.svg"
-import { Link } from "react-router-dom";
+
 const InternationalReportsList = () =>{
     return(
         <div className="w-full h-full  bg-lightGray py-10 px-20 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>
@@ -12,7 +12,7 @@ const InternationalReportsList = () =>{
             <div className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl p-12 my-10 w-[80%] xl:p-5 md:w-[95%] md:rounded-xl md:mx-auto">
             <div className="flex items-center">
                     <Doc/>
-                <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-mainColor mr-3 font-bold">
+                <span style={{fontFamily:'Shabnam'}} className="  text-mainColor mr-3 font-bold">
                         تاریخچه گزارشات
                 </span>
                 </div>
@@ -28,19 +28,19 @@ const InternationalReportsList = () =>{
                 <div className="flex items-end">
                
                 <div className="flex flex-col w-[150px] ">
-                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal font-IRsans">مرتب سازی</span>
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">مرتب سازی</span>
                     <div class=" mt-3">
                         
                         <select style={{fontFamily:'Shabnam'}}
                             name="cars"
                             id="cars"
-                            className=" font-IRsans text-right  bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2">
-                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className="font-IRsans">وضعیت</option>
-                            <option  style={{fontFamily:'Shabnam'}}value="waiting" className="font-IRsans">در حال انجام ماموریت</option>
-                            <option  style={{fontFamily:'Shabnam'}}value="check" className="font-IRsans">منتظر تایید درخواست</option>
-                            <option style={{fontFamily:'Shabnam'}} value="not" className="font-IRsans">اتمام ماموریت</option>
-                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className="font-IRsans">تایید گزارش نهایی</option>
-                            <option style={{fontFamily:'Shabnam'}} value="waiting" className="font-IRsans">رد گزارش نهایی</option>
+                            className="   text-right  bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2">
+                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className=" ">وضعیت</option>
+                            <option  style={{fontFamily:'Shabnam'}}value="waiting" className=" ">در حال انجام ماموریت</option>
+                            <option  style={{fontFamily:'Shabnam'}}value="check" className=" ">منتظر تایید درخواست</option>
+                            <option style={{fontFamily:'Shabnam'}} value="not" className=" ">اتمام ماموریت</option>
+                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className=" ">تایید گزارش نهایی</option>
+                            <option style={{fontFamily:'Shabnam'}} value="waiting" className=" ">رد گزارش نهایی</option>
 
 
                         </select>
@@ -48,7 +48,7 @@ const InternationalReportsList = () =>{
                             type="text"
                             id="input-group-1"
                             disabled="true"
-                            class="pr-9 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                            class="pr-9   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
                             placeholder="آرمان"/> */}
                     </div>
                 </div>

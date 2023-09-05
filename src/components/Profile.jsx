@@ -1,155 +1,309 @@
-import React,{useState,useEffect} from "react";
+import React from "react";
+import { DatePicker } from "zaman";
+import './components.css';
 import {ReactComponent as User} from "../assets/icon/black/profile.svg"
+import {ReactComponent as Lock} from "../assets/icon/black/lock.svg"
+import {ReactComponent as Reload} from "../assets/icon/black/reload.svg"
+import {ReactComponent as Secure} from "../assets/icon/black/secure.svg"
 import {ReactComponent as Doc} from "../assets/icon/black/doc.svg"
-import {ReactComponent as Phone} from "../assets/icon/blue/phone.svg"
-import {ReactComponent as Profile} from "../assets/icon/blue/profile.svg"
-import {ReactComponent as Info} from "../assets/icon/black/info.svg"
-import User2 from "../assets/img/user2.png"
-import { Link } from "react-router-dom";
-import SuccessModal from "./SuccessModal";
-import Cookies from 'universal-cookie';
-import {axiosReq} from "../commons/axiosReq";
-import { useNavigate } from "react-router-dom";
+import {ReactComponent as Location} from "../assets/icon/black/location.svg"
 
-const ProfileInfo = () =>{
-    const [showSuccessModal, setShowSuccessModal] = React.useState(false);
-    const [data, setData] = useState();
-    const [reCheck, setRecheck] = useState(false);
+import {ReactComponent as Mail} from "../assets/icon/black/envelope.svg"
+import {ReactComponent as Phone} from "../assets/icon/black/phone.svg"
 
-    let navigate = useNavigate();
-  
-    useEffect(() => {
-    
-      auth();
-    }, [reCheck]);
-    const auth=async()=>{
-      const cookies = new Cookies();
-      var token= cookies.get('token');
-      console.log(token)
-      if(!token){
-       navigate("/");
-      }else{
-   if( cookies.get('Role')=="Agent")
-   {
-     GetData()
-  
-   }
-   else{
-    navigate("/");
-  
-   }
-      }
-    }
-    const GetData=async()=>{
-        console.log(1234)
-        const cookies = new Cookies();
-     
-     
-     
-       const dataUser = await axiosReq("Agents/GetAgent");
-       console.log(dataUser)
-     setData(dataUser)
-  
-       
-       }
-    return(
-    <div>
-        <div className="flex items-center">
-            <Profile/>
-            <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-mainColor mr-3 font-bold">
-                ویرایش اطلاعات حساب کاربری
-            </span>
-        </div>
-        <div className="w-[70%] mx-auto block sm:w-[95%] xs:w-[100%]">
-        <div className="flex justify-center">
-            <div className="relative rounded-full h-[150px] w-[150px] mt-4 mb-4">
-                <img src={User2}/>
-              
+import {ReactComponent as Pencil} from "../assets/icon/white/pencil.svg"
+import Captcha from "../assets/img/captcha.png"
+import UserImg from "../assets/img/user.png"
+import {Link} from "react-router-dom";
+const Profile = () => {
+
+    return (
+        <div className="w-[80%] mx-auto">
+            <div className="flex justify-center">
+                <div className="relative rounded-full h-[86px] w-[86px] mt-4 mb-4 ml-8">
+                    <img src={UserImg} alt=""/>
+                    <button style={{fontFamily:'Shabnam'}}
+                        className="absolute rounded-full shadow-blueShadow bg-mainColor p-2 top-12 -right-2">
+                        <Pencil/>
+                    </button>
+                </div>
             </div>
-        </div>
-        <div className="flex mt-4 mb-5">
-          <Info/>
-          <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-sm text-black">
-          شما فقط میتوانید اطلاعات کاربری خود را در اینجا مشاهده کنید و امکان تغییر آنها وجود ندارد .اگر موارد زیر با اطلاعات شما مغایرت دارد میتوانید از طریق تیکت به پشتیبانی پیام دهید تا درخواست تغییر اطلاعات شما بررسی شود.
-          </p>
-        </div>
-      <div className="flex w-full flex-wrap">
-      <div className="flex flex-col w-[49%] ml-[1%] mb-4">
-            <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-sm text-black font-bold">نام شما</span>
-            <div class="relative mt-3">
-                    <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
-                        <User/>
+            <div className="w-full mb-6">
+                <p style={{fontFamily:'Shabnam'}} className="text-red">
+                    * پر کردن تمامی فیلدها اجباری است.
+                </p>
+            </div>
+            <div className="flex w-full flex-wrap">
+                <div className="flex flex-col w-[48%] ml-[2%] mb-4">
+                    <span style={{fontFamily:'Shabnam'}}   className="text-base font-normal  ">کد ملی</span>
+                    <div class="relative mt-3">
+                        <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
+                            <Doc/>
+                        </div>
+                        <input style={{fontFamily:'Shabnam'}}
+                            type="number"
+                            id="input-group-1"
+                            class="pr-9   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                            placeholder="کد ملی"/>
                     </div>
-                    <input value={data?.agentName} type="text" disabled="true" id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="علی"/>
                 </div>
-         </div>
-         <div className="flex flex-col w-[49%] mr-[1%] mb-4">
-            <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-sm text-black font-bold">نام خانوادگی شما</span>
-            <div class="relative mt-3">
-                    <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
-                        <User/>
+                <div className="flex w-[48%] mr-[2%] mb-4 items-end">
+                    <div className="flex flex-col w-[64%] ">
+                        <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">تاریخ تولد</span>
+                        <div class="flex items-center h-10 pr-2 mt-3   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor  w-full pl-10 " id="test">
+                         
+                            <DatePicker style={{fontFamily:'Shabnam'}} placeholder="خهاخعل"  onChange={(e) => console.log(e.value)} />
+                            {/* <input
+                                type="text"
+                                id="input-group-1"
+                                class="pr-9   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                                placeholder="تاریخ تولد"/> */}
+                        </div>
                     </div>
-                    <input value={data?.agentFamily} type="text" id="input-group-1" disabled="true"  class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="اطهری"/>
-                </div>
-         </div>
-         <div className="flex flex-col w-[49%] ml-[1%] mb-4">
-            <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-sm text-black font-bold">کد ملی شما</span>
-            <div class="relative mt-3">
-                    <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
-                        <Doc/>
+                    <div className="w-[35%] mr-2">
+                        <button style={{fontFamily:'Shabnam'}}
+                            className="w-[100%] p-2.5 bg-mainColor rounded-md text-white shadow-blueShadow text-base font-bold  ">استعلام</button>
                     </div>
-                    <input value={data?.nationalCode} type="text" id="input-group-1" disabled="true" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="۰۰۲۰۱۶۵۴۷۸"/>
                 </div>
-         </div>
-         <div className="flex flex-col w-[49%] mr-[1%] mb-4">
-            <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-sm text-black font-bold">شماره تلفن همراه شما</span>
-            <div class="relative mt-3">
-                    <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
-                        <Phone/>
+                <div className="flex flex-col w-[48%] ml-[2%] mb-4">
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">نام شما</span>
+                    <div class="relative mt-3">
+                        <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
+                            <User/>
+                        </div>
+                        <input style={{fontFamily:'Shabnam'}}
+                            type="text"
+                            id="input-group-1"
+                            disabled="true"
+                            class="pr-9   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                            placeholder="نام"/>
                     </div>
-                    <input value={data?.mobile} type="text" id="input-group-1" disabled="true"  class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="۰۹۱۲۰۰۸۹۰۷۶"/>
                 </div>
-         </div>
-         <div className="flex flex-col w-[49%] ml-[1%] mb-4">
-            <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-sm text-black font-bold">نام هولدینگ را وارد کنید</span>
-            <div class="relative mt-3">
-                    <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
-                        <Doc/>
+                <div className="flex flex-col w-[48%] mr-[2%] mb-4">
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">نام خانوادگی شما</span>
+                    <div class="relative mt-3">
+                        <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
+                            <User/>
+                        </div>
+                        <input style={{fontFamily:'Shabnam'}}
+                            type="text"
+                            id="input-group-1"
+                            disabled="true"
+                            class="pr-9   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                            placeholder="نام خانوادگی"/>
                     </div>
-                    <input value={data?.subset} type="text" id="input-group-1" disabled="true" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="شستا"/>
                 </div>
-         </div>
-         <div className="flex flex-col w-[49%] mr-[1%] mb-4">
-            <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-sm text-black font-bold">نام شرکت را وارد کنید</span>
-            <div class="relative mt-3">
-                    <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
-                        <Doc/>
+                <div className="flex flex-col w-[48%] ml-[2%] mb-4">
+                    <span style={{fontFamily:'Shabnam'}}   className="text-base font-normal  ">شماره تلفن همراه</span>
+                    <div class="relative mt-3">
+                        <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
+                            <Phone/>
+                        </div>
+                        <input style={{fontFamily:'Shabnam'}}
+                            type="number"
+                            id="input-group-1"
+                            class="pr-9   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                            placeholder="شماره تلفن همراه"/>
                     </div>
-                    <input type="text" value={data?.companyName} id="input-group-1" disabled="true" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="فراتوسعه هوشمند ایرانیان"/>
                 </div>
-         </div>
-         <div className="flex flex-col w-[49%] ml-[1%] mb-4">
-            <span style={{fontFamily:'Shabnam'}} className="font-IRsans text-sm text-black font-bold">سمت خود را وارد کنید</span>
-            <div class="relative mt-3">
-                    <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
-                        <Doc/>
+                <div className="flex flex-col w-[48%] mr-[2%] mb-4">
+                    <span style={{fontFamily:'Shabnam'}}   className="text-base font-normal  ">شماره تلفن ثابت</span>
+                    <div class="relative mt-3">
+                        <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
+                            <Phone/>
+                        </div>
+                        <input style={{fontFamily:'Shabnam'}}
+                            type="number"
+                            id="input-group-1"
+                            class="pr-9   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                            placeholder="شماره تلفن ثابت"/>
                     </div>
-                    <input type="text" id="input-group-1" value={data?.position?.positionType}  disabled="true" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="مدیر کل"/>
                 </div>
-         </div>
-   
-      </div>
+                <div className="flex flex-col w-[48%] ml-[2%] mb-4">
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">آدرس ایمیل</span>
+                    <div class="relative mt-3">
+                        <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
+                            <Mail/>
+                        </div>
+                        <input style={{fontFamily:'Shabnam'}}
+                            type="email"
+                            id="input-group-1"
+                            class="pr-9   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                            placeholder="ایمیل"/>
+                    </div>
+                </div>
+                <div className="flex w-[48%] mr-[2%] mb-4 items-end">
+                    <div className="flex flex-col w-[64%] ">
+                        <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">کد پستی</span>
+                        <div class="relative mt-3">
+                            <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
+                                <Doc/>
+                            </div>
+                            <input style={{fontFamily:'Shabnam'}}
+                                type="number"
+                                id="input-group-1"
+                                class="pr-9   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                                placeholder="کد پستی"/>
+                        </div>
+                    </div>
+                    <div className="w-[35%] mr-2">
+                        <button style={{fontFamily:'Shabnam'}}
+                            className="w-[100%] p-2.5 bg-mainColor rounded-md text-white shadow-blueShadow text-base font-bold  ">استعلام</button>
+                    </div>
+                </div>
+                <div className="flex flex-col w-[100%]  mb-4">
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">آدرس شما</span>
+                    <div class="relative mt-3">
+                        <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
+                            <Location/>
+                        </div>
+                        <textarea style={{fontFamily:'Shabnam'}}
+                            rows={4}
+                            type="text"
+                            disabled="true"
+                            id="input-group-1"
+                            class="pr-9   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                            placeholder="آدرس شما"></textarea>
+                    </div>
+                </div>
+                <div className="flex flex-col w-[48%] ml-[2%] mb-4">
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">دسته بندی مجموعه</span>
+                    <div class="relative mt-3">
+                        <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
+                            <Doc/>
+                        </div>
+                        <select style={{fontFamily:'Shabnam'}}
+                            name="cars"
+                            id="cars"
+                            className="pr-9   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5">
+                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className=" ">انتخاب دسته بندی</option>
+                            <option  style={{fontFamily:'Shabnam'}}value="waiting" className=" ">هولدینگ</option>
+                            <option  style={{fontFamily:'Shabnam'}}value="check" className=" ">صندوق</option>
+                            <option style={{fontFamily:'Shabnam'}} value="not" className=" ">سازمان</option>
+                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className=" ">بانک</option>
+                            <option style={{fontFamily:'Shabnam'}} value="waiting" className=" ">معاونت</option>
+                            <option style={{fontFamily:'Shabnam'}}  value="check" className=" ">شرکت ها</option>
+                            <option style={{fontFamily:'Shabnam'}} value="not" className=" ">فدراسیون</option>
+                            <option style={{fontFamily:'Shabnam'}} value="not" className=" ">موسسات</option>
+
+                        </select>
+                        {/* <input
+                            type="text"
+                            id="input-group-1"
+                            disabled="true"
+                            class="pr-9   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                            placeholder="آرمان"/> */}
+                    </div>
+                </div>
+                <div className="flex flex-col w-[48%] mr-[2%] mb-4">
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">زیر مجموعه</span>
+                    <div class="relative mt-3">
+                        <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
+                            <Doc/>
+                        </div>
+                        <input style={{fontFamily:'Shabnam'}}
+                            type="text"
+                            id="input-group-1"
+                            class="pr-9   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                            placeholder="نام زیر مجموعه"/>
+                    </div>
+                </div>
+                <div className="flex flex-col w-[48%] ml-[2%] mb-4">
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">نوع رابط استخدامی</span>
+                    <div class="relative mt-3">
+                        <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
+                            <Doc/>
+                        </div>
+                        <select style={{fontFamily:'Shabnam'}}
+                            name="cars"
+                            id="cars"
+                            className="pr-9   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5">
+                            <option value="newRequest" className=" ">انتخاب نوع</option>
+                            <option value="waiting" className=" ">رسمی</option>
+                            <option value="check" className=" ">پیمانی</option>
+                            <option value="not" className=" ">قراردادی</option>
+                            <option value="not" className=" ">شرکتی</option>
+
+                        </select>
+                        {/* <input
+                            type="text"
+                            id="input-group-1"
+                            disabled="true"
+                            class="pr-9   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                            placeholder="آرمان"/> */}
+                    </div>
+                </div>
+                <div className="flex flex-col w-[48%] mr-[2%] mb-4">
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">سمت</span>
+                    <div class="relative mt-3">
+                        <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
+                            <Doc/>
+                        </div>
+                        <select style={{fontFamily:'Shabnam'}}
+                            name="cars"
+                            id="cars"
+                            className="pr-9   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5">
+                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className=" ">انتخاب سمت</option>
+                            <option style={{fontFamily:'Shabnam'}} value="waiting" className=" ">مدیر عامل</option>
+                            <option style={{fontFamily:'Shabnam'}} value="check" className=" ">مدیر کل</option>
+                            <option style={{fontFamily:'Shabnam'}} value="not" className=" ">معاون</option>
+                            <option style={{fontFamily:'Shabnam'}} value="waiting" className=" ">رئیس مرکزی</option>
+                            <option style={{fontFamily:'Shabnam'}} value="check" className=" ">رئیس اداره</option>
+                            <option style={{fontFamily:'Shabnam'}} value="not" className=" ">کارشناس</option>
+
+                        </select>
+                        {/* <input
+                            type="text"
+                            id="input-group-1"
+                            disabled="true"
+                            class="pr-9   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                            placeholder="آرمان"/> */}
+                    </div>
+                </div>
+                <div className="flex flex-col w-[48%] ml-[2%] mb-4">
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">رمز عبور</span>
+                    <div class="relative mt-3">
+                        <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
+                            <Lock/>
+                        </div>
+                        <input style={{fontFamily:'Shabnam'}}
+                            type="text"
+                            id="input-group-1"
+                            class="pr-9   text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                            placeholder="رمز عبور"/>
+                    </div>
+                </div>
+                <div className="flex flex-col w-[48%] mr-[2%] mb-4">
+                    <span style={{fontFamily:'Shabnam'}}   className="text-base font-normal  ">کد امنیتی</span>
+                    <div className="flex justify-between items-center ">
+                        <div class="relative mt-3 w-[90%]">
+                            <div
+                                class="absolute top-[10px] right-2 flex items-center pl-3 pointer-events-none">
+                                <Secure/>
+                            </div>
+                            <input style={{fontFamily:'Shabnam'}}
+                                type="text"
+                                id="input-group-1"
+                                class="pr-9   text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md mb-0 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                                placeholder="کد امنیتی"/>
+                            <img src={Captcha} alt="captcha" className="w-[90px] top-1 left-2 absolute"/>
+                        </div>
+                        <button style={{fontFamily:'Shabnam'}} className="mt-4">
+                            <Reload/>
+                        </button>
+                    </div>
+                </div>
+            </div>
+       
             
-                
-                
-             
-                
-              
-              
-       </div>
-              
-    </div>
-         
+
+            <Link to={'/profile'} style={{fontFamily:'Shabnam'}}
+                className="w-[60%] mx-auto  h-12 bg-mainColor shadow-blueShadow mt-10 flex justify-center items-center text-white text-xl font-medium rounded-lg hover:bg-lightBlue hover:text-mainColor">
+ویرایش اطلاعات کاربری
+            </Link>
+
+        </div>
+
     )
 }
-export default ProfileInfo;
+export default Profile;

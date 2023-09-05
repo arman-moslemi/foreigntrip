@@ -249,7 +249,7 @@ const NewRequestFormStep2 = () => {
                             {/* <input style={{fontFamily: 'Shabnam'}}
                                 type="text"
                                 id="input-group-1"
-                                class=" font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                                class="   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
                                 placeholder="کد پستی"/> */}
                         </div>
                     </div>

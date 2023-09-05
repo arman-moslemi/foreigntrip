@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import RequestDetail from "./RequestDetail";
 import ReportBox from "./ReportBox";
-const TravelingReport = () =>{
+const ReportView = () =>{
 
 
     return (
@@ -18,4 +18,4 @@ const TravelingReport = () =>{
         </div>
     )
 }
-export default TravelingReport;
+export default ReportView;

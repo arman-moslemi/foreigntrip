@@ -37,6 +37,8 @@ const LoginForm = () => {
   };
 
   const login=()=>{
+    console.log(user)
+console.log(pass)
     console.log(captcha)
 
     if(!pass||!user){
@@ -73,36 +75,30 @@ cookies.set('token',response.data.token, { path: '/' })
 cookies.set('ID',response.data.id, { path: '/' })
   // console.log(response.data.token)
 setSnipper(false)
-  if(response.data.role=="Agent"){
+  if(response.data.role=="Organ"){
     cookies.set('Role',response.data.role, { path: '/' })
 
-    navigate("/profile");
+    navigate("/newRequestStep1");
   }
-  if(response.data.role=="InternationalExpert"){
+  if(response.data.role=="Expert"){
     cookies.set('Role',response.data.role, { path: '/' })
     // cookies.set('Role',response.data.role, { path: '/karshenas' })
-    cookies.set('token',response.data.token, { path: '/expert' })
+    cookies.set('token',response.data.token, { path: '/karshenas' })
+    cookies.set('token',response.data.token, { path: '/karshenas/viewRequest' })
 
-    navigate("/expert/messageList");
-  }
-  if(response.data.role=="Supervisor"){
-    cookies.set('Role',response.data.role, { path: '/' })
-    // cookies.set('Role',response.data.role, { path: '/karshenas' })
-    cookies.set('token',response.data.token, { path: '/supervisor' })
-
-    navigate("/supervisor/userList");
+    navigate("/karshenas/request");
   }
   if(response.data.role=="Admin"){
     cookies.set('Role',response.data.role, { path: '/' })
 
     cookies.set('Role',response.data.role, { path: '/admin' })
 
-    navigate("/internationalAdmin/userList");
+    navigate("/admin/dashboard");
   }
   if(response.data.role=="MainAdmin"){
     cookies.set('Role',response.data.role)
 
-    navigate("/mainAdmin/userList");
+    navigate("/mainadmin/mainadminTicketList");
   }
 }
 else{
@@ -114,37 +110,36 @@ else{
 console.log(error);
 setSnipper(false)
 
-});
-  // if(user=="admin" && pass=="123456"){
-  //   navigate("/admin/dashboard");
+});}}}
+// }
+  // if(user=="agent" && pass=="123456"){
+  //   navigate("/profile");
   // }
 
-  // if(user=="anjoman" && pass=="123456"){
-  //   navigate("/anjoman/lastStatus");
-
-  // }
-
-  // if(user=="karshenas" && pass=="123456"){
-  //   navigate("/karshenas/request");
+  // if(user=="expert" && pass=="123456"){
+  //   navigate("/expert/requestList");
 
   // }
 
-  // if(user=="sabt" && pass=="123456"){
-  //   navigate("/sabtesherkat/sabtRequest");
-
-  // }
-  // if(user=="tashakol" && pass=="123456"){
-  //   navigate("/tashakolRegister1");
-
-  // }
-  // if(user=="main" && pass=="123456"){
-  //   navigate("/mainadmin/mainadminTicketList");
+  // if(user=="international" && pass=="123456"){
+  //   navigate("/internationalAdmin/userList");
 
   // }
 
-  }
+  // if(user=="supervisor" && pass=="123456"){
+  //   navigate("/supervisor/userList");
 
-  }}
+  // }
+  // if(user=="mainAdmin" && pass=="123456"){
+  //   navigate("/mainAdmin/userList");
+
+  // }
+
+
+//   }
+
+//   }
+// }
 
     return (
         <div>
@@ -180,7 +175,7 @@ setSnipper(false)
                     <div class="absolute inset-y-5 right-2 flex items-center pl-3 pointer-events-none">
                         <Lock/>
                     </div>
-                    <input type={passwordShown ? "text" : "password"} id="input-group-1" class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md my-5 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="رمز عبور"/>
+                    <input type={passwordShown ? "text" : "password"} id="input-group-1" class="pr-9   text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md my-5 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  " placeholder="رمز عبور"/>
                     <button onClick={togglePassword} className="absolute top-[10px] left-[10px]">
                         <Show/>
                     </button>
@@ -196,7 +191,7 @@ setSnipper(false)
                     style={{fontFamily:'Shabnam'}}
                         type="text"
                         id="input-group-1"
-                        class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md mb-0 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                        class="pr-9   text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md mb-0 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
                         placeholder="کد امنیتی"/>
                 
                    <img src={Captcha} alt="captcha" className="w-[90px] top-1 left-2 absolute"/> 
@@ -213,14 +208,14 @@ setSnipper(false)
          persianChars={true} fontFamily={"Shabnam"} backgroundColor={"#a0afd5"} fontColor="#fff" border="1px solid #000"/>
          </div> */}
             <div className="flex mt-3 mb-4">
-                <p style={{fontFamily:'Shabnam'}}className="text-xs font-IRsans text-black font-normal">کلمه عبور خود را فراموش کرده اید ؟</p>
-                <Link style={{fontFamily:'Shabnam'}}  to={'/changePassword'} className="text-xs font-IRsans text-linkBlue font-normal mr-1">تغییر رمز عبور</Link>
+                <p style={{fontFamily:'Shabnam'}}className="text-xs   text-black font-normal">کلمه عبور خود را فراموش کرده اید ؟</p>
+                <Link style={{fontFamily:'Shabnam'}}  to={'/changePassword'} className="text-xs   text-linkBlue font-normal mr-1">تغییر رمز عبور</Link>
             </div>
             {/* <div className="flex items-center justify-start mt-2">
-                    <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-black text-xs">
+                    <p style={{fontFamily:'Shabnam'}} className="  text-black text-xs">
                         کلمه عبور خود را فراموش کردید ؟
                     </p>
-                    <Link style={{fontFamily:'Shabnam'}}  to={'/changePassStep1'} className="font-IRsans text-mainColor text-xs mr-1 font-bold hover:text-lightBlue">
+                    <Link style={{fontFamily:'Shabnam'}}  to={'/changePassStep1'} className="  text-mainColor text-xs mr-1 font-bold hover:text-lightBlue">
                         تغییر رمز عبور
                     </Link>
                 </div> */}
@@ -230,10 +225,10 @@ setSnipper(false)
                 </button>
 
             {/* <div className="flex items-center justify-start mt-2 xs:flex-wrap">
-                    <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-black text-xs">
+                    <p style={{fontFamily:'Shabnam'}} className="  text-black text-xs">
                        حساب کاربری ندارید ؟
                     </p>
-                    <Link style={{fontFamily:'Shabnam'}}  to={'/signup'} className="font-IRsans text-mainColor text-xs mr-1 font-bold hover:text-lightBlue">
+                    <Link style={{fontFamily:'Shabnam'}}  to={'/signup'} className="  text-mainColor text-xs mr-1 font-bold hover:text-lightBlue">
                        ثبت نام کنید
                     </Link>
                 </div> */}

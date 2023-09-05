@@ -1,24 +1,27 @@
-import React  from "react";
-import SuperVisorRightMenu from "../../components/SupervisorComponent/SuperVisorRightMenu";
+import React from "react";
+import AgentRightMenu from "../../components/AgentRightMenu";
+
+import {ReactComponent as Download} from "../../assets/icon/white/download.svg"
 
 
-const ReportView = () =>{
+const UserReportsView = () =>{
 
     return(
         <div className="w-full h-screen  bg-lightGray py-10 px-20 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>
         <div className="flex md:block">
-            <SuperVisorRightMenu/>
+            <AgentRightMenu/>
             <div className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl p-12 my-10 w-[80%] xl:p-5 md:w-[95%] md:rounded-xl md:mx-auto">
             <div className="flex items-center justify-between">
                     
                 <span style={{fontFamily:'Shabnam'}} className="  text-mainColor  font-bold">
                        مشاهده گزارش ارسال شده
                 </span>
-                <div className="bg-green text-white font-bold px-5 py-2 rounded-full">
-                    <span style={{fontFamily:'Shabnam'}}>
-                        تایید شده
-                    </span>
+                <div className="bg-green px-10 py-2 rounded-full">
+                  <span className="text-white font-bold flex justify-center items-center shadow-greenShadow" style={{fontFamily:'Shabnam'}}>
+                    تایید شده
+                  </span>
                 </div>
+           
                 </div>
                 <div className="flex justify-between flex-wrap">
                 <div className="w-full my-3">
@@ -121,13 +124,21 @@ const ReportView = () =>{
                         </span>
                     </p>
                 </div>
+                <div className="w-full flex justify-end">
+                  <button className="bg-mainColor rounded-xl shadow-blueShadow px-5 py-3  flex justify-center items-center text-white font-bold" style={{fontFamily:'Shabnam'}}>
+                    <Download className="w-[30px]"/>
+                    <span className="mr-2">
+                      دانلود گزارش pdf
+                    </span>
+                  </button>
+                </div>
             </div>
+          
             </div>
         </div>
-    </div> 
+    </div>
     )
 }
-export default ReportView;
-
+export default UserReportsView;
 
 /*responsive--done*/

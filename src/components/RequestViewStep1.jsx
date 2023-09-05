@@ -7,7 +7,7 @@ const RequestViewStep1 = () =>{
       
                     <div className="flex justify-between flex-wrap border-b border-dashed border-[#CCCCCD] pb-4">
                     <div className="w-full my-3">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            نام دستگاه اجرایی :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -16,7 +16,7 @@ const RequestViewStep1 = () =>{
                         </p>
                     </div>
                     <div className="w-[48%] mx-1 my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            آدرس اینترنتی دستگاه اجرایی :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -25,7 +25,7 @@ const RequestViewStep1 = () =>{
                         </p>
                     </div>
                     <div className="w-[48%] mx-1 my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                           کشور و شهر مقصد :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -34,7 +34,7 @@ const RequestViewStep1 = () =>{
                         </p>
                     </div>
                     <div className="w-[48%] mx-1 my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                             مسیر پروازی :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -43,7 +43,7 @@ const RequestViewStep1 = () =>{
                         </p>
                     </div>
                     <div className="w-[48%] mx-1 my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            تاریخ و مدت سفر :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -52,7 +52,7 @@ const RequestViewStep1 = () =>{
                         </p>
                     </div>
                     <div className="w-[48%] mx-1 my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                             مدت زمان سفر : 
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -61,7 +61,7 @@ const RequestViewStep1 = () =>{
                         </p>
                     </div>
                     <div className="w-[100%] my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                             موضوع سفر :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -70,7 +70,7 @@ const RequestViewStep1 = () =>{
                         </p>
                     </div>
                     <div className="w-[48%] mx-1 my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                             اهداف سفر :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -79,7 +79,7 @@ const RequestViewStep1 = () =>{
                         </p>
                     </div>
                     <div className="w-[48%] mx-1 my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                           اهداف شغلی :  
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -88,7 +88,7 @@ const RequestViewStep1 = () =>{
                         </p>
                     </div>
                     <div className="w-[48%] mx-1 my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            متولیان / شرکت کنندگان :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -97,7 +97,7 @@ const RequestViewStep1 = () =>{
                         </p>
                     </div>
                     <div className="w-[48%] mx-1 my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                           نوع گذرنامه :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -106,7 +106,7 @@ const RequestViewStep1 = () =>{
                         </p>
                     </div>
                     <div className="w-[48%] mx-1 my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            آیا نیاز به یادداشت وزارت امورخارجه برای اخذ ویزا دارد؟
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -115,7 +115,7 @@ const RequestViewStep1 = () =>{
                         </p>
                     </div>
                     <div className="w-[48%] mx-1 my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            آیا سفر مشترک بین چند دستگاه اجرایی است ؟
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -124,7 +124,7 @@ const RequestViewStep1 = () =>{
                         </p>
                     </div>
                     <div className="w-full my-3 md:w-full">
-                        <p style={{fontFamily:'Shabnam'}} className="font-IRsans text-base font-bold text-[#0D296E]">
+                        <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            شماره،تاریخ نامه و مقام پیشنهاد دهنده داخلی دستگاه برای انجام سفر :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
