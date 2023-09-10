@@ -65,7 +65,6 @@ if(e.target)    {
 }
 
   }
-  const [data, setData] = useState();
     const [reCheck, setRecheck] = useState(false);
 
     let navigate = useNavigate();

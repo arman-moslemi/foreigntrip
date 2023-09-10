@@ -114,7 +114,7 @@ const MainRoutes = (props) =>{
                     <Route path="/profile" element={<Profile/>} />
                 </Routes>
                 <Routes>
-                    <Route path="/submitReport" element={<SubmitReport/>} />
+                    <Route path="/submitReport/:id" element={<SubmitReport/>} />
                 </Routes>
                 <Routes>
                     <Route path="/passportRequest" element={<PassportRequest/>} />

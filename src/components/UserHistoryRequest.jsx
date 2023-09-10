@@ -88,7 +88,7 @@ const tableRow =[
   const tableBody = data?.map((tableRow) =>
   <tr key={tableRow.id} className="border-b border-b-borderGray">
     <td className="py-4 text-sm text-right pr-4 font-IRsans">{tableRow.requestId}</td>
-    <td className="py-4 text-sm text-right font-IRsans">{tableRow.travelDate}</td>
+    <td className="py-4 text-sm text-right font-IRsans">{tableRow.travelDateStart}</td>
     <td className="py-4 text-sm text-right font-IRsans truncate">{tableRow.travelTopic}</td>
     <td className="py-4 text-sm text-center font-IRsans" >{tableRow.destinationCity}</td>
     <td className="py-4 text-sm text-center font-IRsans"  >{tableRow.requestStatus?.requestStatusTitle}</td>
@@ -100,14 +100,14 @@ const tableRow =[
       </button>
         :
         tableRow.requestStatusId==1?
-        <Link style={{fontFamily:'Shabnam'}}  to={`/submitReport`}>
+        <Link style={{fontFamily:'Shabnam'}}  to={`/submitReport/`+tableRow.requestId}>
               <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
                ثبت گزارش دستاورد
               </button>
             </Link>
                  :
                  tableRow.requestStatusId==3?
-                 <Link style={{fontFamily:'Shabnam'}}  to={`/submitReport`}>
+                 <Link style={{fontFamily:'Shabnam'}}  to={`/submitReport/`+tableRow.requestId}>
                  <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
                   ثبت گزارش دستاورد
                  </button>

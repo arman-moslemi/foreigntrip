@@ -1,11 +1,99 @@
-import React  from "react";
+import React, { useState, useEffect } from "react";
 import { DatePicker } from "zaman";
 import {ReactComponent as Info} from "../assets/icon/black/info.svg"
 import {ReactComponent as Send} from "../assets/icon/blue/Send.svg"
 import { Link } from "react-router-dom";
+import Cookies from 'universal-cookie';
+import { axiosReq } from "../commons/axiosReq";
+import { useNavigate,useParams } from "react-router-dom";
 const TravelForm = () =>{
   const [showSuccessModal, setShowSuccessModal] = React.useState(false);
+  const [reCheck, setRecheck] = useState(false);
+  const [data, setData] = useState();
 
+    let navigate = useNavigate();
+    const [allValues, setAllValues] = useState({
+      Phone: '',
+      Email: '',
+      PostalCode: '',
+      Address: '',
+      SubCategoryId: '',
+      Subset: '',
+      TypeOfEmploymentId: '',
+      PositionId: '',
+
+  });
+    useEffect(() => {
+    
+      auth();
+    }, [reCheck]);
+    const auth=async()=>{
+      const cookies = new Cookies();
+      var token= cookies.get('token');
+      console.log(token)
+      if(!token){
+       navigate("/");
+      }else{
+   if( cookies.get('Role')=="Agent")
+   {
+  GetData()
+   }
+   else{
+    navigate("/");
+  
+   }
+      }
+    }
+    const id = useParams().id;
+
+    const GetData = async () => {
+      console.log(1234)
+      const cookies = new Cookies();
+
+
+
+      const dataUser = await axiosReq("Request/GetRequest", {
+          RequestId: id
+      });
+      console.log(dataUser)
+      setData(dataUser?.data)
+
+
+  }
+    const insertRep=async()=>{
+        console.log("rep")
+        console.log(allValues)
+        const cookies = new Cookies();
+       const dataUser = await axiosReq("Request/InsertRequest",{
+        AgentId:cookies?.get("ID"),
+        ExecutiveDeviceName:allValues?.ExecutiveDeviceName,
+        InternetAddressOfTheExecutiveDevice: allValues.InternetAddressOfTheExecutiveDevice,
+        DestinationCity: allValues?.DestinationCity,
+        FlightPath:allValues?.FlightPath,
+        TravelDateStart: allValues?.TravelDate,
+        TravelEndDate: allValues?.TravelEndDate,
+        TravelTime: allValues?.TravelTime,
+        TravelTopic: allValues?.TravelTopic,
+        TravelGoalId: allValues?.TravelGoalId,
+        JobGoalId: allValues?.JobGoalId,
+        DeviceName: allValues?.DeviceName,
+        PassportTypeId: allValues?.PassportTypeId,
+        GetVisa: allValues?.GetVisa,
+        JointTrip: allValues?.JointTrip,
+        DateLetter: allValues?.DateLetter,
+        ParticipantID:allValues?.ParticipantID
+       });
+       console.log(dataUser)
+       if (dataUser?.status == 200 || dataUser?.status == 204|| dataUser?.status == 201) {
+        
+        navigate("/newRequestStep2/"+dataUser?.data?.requestId)
+  
+      }
+      else {
+        alert("اطلاعات ورودی نادرست می باشند")
+      }  
+       
+       }
     return(
       <div>
           <div className="flex items-center">
