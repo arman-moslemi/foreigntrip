@@ -13,11 +13,11 @@ const SupervisorTicketList= () => {
                 <div className="flex items-center justify-between sm:flex-wrap">
                     <div className="flex">
                     <Ticket/>
-                <span style={{fontFamily:'Shabnam'}} className="  text-mainColor mr-3 font-bold">
+                <span style={{fontFamily:'Shabnam'}} className="  text-mainColor mr-3 font-bold 2xs:mb-3 2xs:w-[100%]">
                        تیکت ها و پشتیبانی
                 </span>
                     </div>
-                    <button onClick={() =>{setShowNewTicket(true)}} style={{fontFamily:'Shabnam'}}  className="bg-mainColor px-4 py-1.5 shadow-blueShadow text-white   text-base rounded-md sm:mr-auto sm:mt-5">
+                    <button onClick={() =>{setShowNewTicket(true)}} style={{fontFamily:'Shabnam'}}  className="bg-mainColor 2xs:w-[100%] px-4 py-1.5 shadow-blueShadow text-white   text-base rounded-md sm:mr-auto ">
                         + تیکت جدید
                     </button>
                 </div>

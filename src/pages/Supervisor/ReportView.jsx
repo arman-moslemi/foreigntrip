@@ -31,82 +31,82 @@ const ReportView = () =>{
                     </p>
                 </div>
                 <div className="w-[50%] xl-lg:w-[100%] my-3 md:w-full">
-                    <p style={{fontFamily:'Shabnam'}} className="text-base font-bold text-[#0D296E]">
+                    <p style={{fontFamily:'Shabnam'}} className=" 2xs:grid text-base font-bold text-[#0D296E]">
                        شماره و تاریخ درخواست : 
                         <span>   </span> 
-                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
+                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray 2xs:mt-1 text-sm font-medium">
                              02/04/28 - 123
                         </span>
                     </p>
                 </div>
                 <div className="w-[50%] xl-lg:w-[100%] my-3 md:w-full">
-                    <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
+                    <p style={{fontFamily:'Shabnam'}} className=" 2xs:grid  text-base font-bold text-[#0D296E]">
                         شماره و تاریخ مجوز :
                         <span>   </span> 
-                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
+                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray 2xs:mt-1 text-sm font-medium">
                         02/04/28 - 123
                         </span>
                     </p>
                 </div>
                 <div className="w-[50%] xl-lg:w-[100%] my-3 md:w-full">
-                    <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
+                    <p style={{fontFamily:'Shabnam'}} className="  2xs:grid  text-base font-bold text-[#0D296E]">
                         تاریخ انجام سفر :
                         <span>   </span> 
-                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
+                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray 2xs:mt-1 text-sm font-medium">
                               02/12/12
                         </span>
                     </p>
                 </div>
                 <div className="w-[50%] xl-lg:w-[100%] my-3 md:w-full">
-                    <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
+                    <p style={{fontFamily:'Shabnam'}} className=" 2xs:grid text-base font-bold text-[#0D296E]">
                        آدرس الکترونیکی دستگاه مقصد : 
                         <span>   </span> 
-                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
+                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray 2xs:mt-1 text-sm font-medium">
                               info@mta.com
                         </span>
                     </p>
                 </div>
                 <div className="w-[50%] lg-md:w-[100%] my-3 md:w-full">
-                    <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
+                    <p style={{fontFamily:'Shabnam'}} className=" 2xs:grid  text-base font-bold text-[#0D296E]">
                         نام دستگاه داخلی : 
                         <span>   </span> 
-                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
+                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray 2xs:mt-1 text-sm font-medium">
                               وزارت نیرو
                         </span>
                     </p>
                 </div>
                 <div className="w-[50%] lg-md:w-[100%] my-3 md:w-full">
-                    <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
+                    <p style={{fontFamily:'Shabnam'}} className=" 2xs:grid text-base font-bold text-[#0D296E]">
                         نام دستگاه مقصد : 
                         <span>   </span> 
-                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
+                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray 2xs:mt-1 text-sm font-medium">
                              وزارت نیرو خارج
                         </span>
                     </p>
                 </div>
                 <div className="w-[50%] my-3 md:w-full">
-                    <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
+                    <p style={{fontFamily:'Shabnam'}} className=" 2xs:grid text-base font-bold text-[#0D296E]">
                         کشور مقصد : 
                         <span>   </span> 
-                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
+                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray 2xs:mt-1 text-sm font-medium">
                              قراردادی
                         </span>
                     </p>
                 </div>
                 <div className="w-[50%] my-3 md:w-full">
-                    <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
+                    <p style={{fontFamily:'Shabnam'}} className=" 2xs:grid text-base font-bold text-[#0D296E]">
                        کشور مقصد :  
                         <span>   </span> 
-                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
+                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray 2xs:mt-1 text-sm font-medium">
                               ایتالیا
                         </span>
                     </p>
                 </div>
                 <div className="w-[50%] my-3 md:w-full">
-                    <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
+                    <p style={{fontFamily:'Shabnam'}} className=" 2xs:grid text-base font-bold text-[#0D296E]">
                        شهر مقصد : 
                         <span>   </span> 
-                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
+                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray 2xs:mt-1 text-sm font-medium">
                             رم
                         </span>
                     </p>

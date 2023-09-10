@@ -59,12 +59,12 @@ const tableRow =[
 ]
   const tableBody = tableRow.map((tableRow) =>
   <tr key={tableRow.id} className="border-b border-b-borderGray">
-    <td className="py-4 text-sm text-right pr-4  " style={{fontFamily:'Shabnam'}}>{tableRow.num}</td>
-    <td className="py-4 text-sm text-right  " style={{fontFamily:'Shabnam'}}>{tableRow.date}</td>
-    <td className="py-4 text-sm text-right   truncate" style={{fontFamily:'Shabnam'}}>{tableRow.subject}</td>
-    <td className="py-4 text-sm text-center  " style={{fontFamily:'Shabnam'}}>{tableRow.location}</td>
-    <td className="py-4 text-sm text-center  " style={{fontFamily:'Shabnam'}} >{tableRow.status}</td>
-    <td className="py-4 text-sm text-center  " style={{fontFamily:'Shabnam'}}>{tableRow.function}</td>
+    <td className="py-4 text-sm text-center pr-4  " style={{fontFamily:'Shabnam'}}>{tableRow.num}</td>
+    <td className="py-4 text-sm text-center pr-4  " style={{fontFamily:'Shabnam'}}>{tableRow.date}</td>
+    <td className="py-4 text-sm text-right pr-4   truncate" style={{fontFamily:'Shabnam'}}>{tableRow.subject}</td>
+    <td className="py-4 text-sm text-center pr-4  " style={{fontFamily:'Shabnam'}}>{tableRow.location}</td>
+    <td className="py-4 text-sm text-center pr-4  " style={{fontFamily:'Shabnam'}} >{tableRow.status}</td>
+    <td className="py-4 text-sm text-center pr-4 pl-4  " style={{fontFamily:'Shabnam'}}>{tableRow.function}</td>
     </tr> 
   )
     return(
@@ -72,12 +72,12 @@ const tableRow =[
           <table class="table-auto w-full  ">
   <thead className="bg-darkGray h-11 rounded-t-2xl w-full whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}> 
     <tr className="text-white  p-6 whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}>
-      <th className="text-right pr-4   md:px-4" style={{fontFamily:'Shabnam'}}>ردیف</th>
-      <th className="text-right   md:px-4" style={{fontFamily:'Shabnam'}}>شماره تیکت</th>
-      <th className="text-right   md:px-4" style={{fontFamily:'Shabnam'}}>موضوع تیکت</th>
-      <th className="text-center font-IRsan md:px-4s" style={{fontFamily:'Shabnam'}}>آخرین به روز رسانی</th>
-      <th className="text-center   md:px-4" style={{fontFamily:'Shabnam'}}>وضعیت تیکت</th>
-      <th className="text-center   md:px-4" style={{fontFamily:'Shabnam'}} >مشاهده</th>
+      <th className="text-center pr-4   " style={{fontFamily:'Shabnam'}}>ردیف</th>
+      <th className="text-center pr-4  " style={{fontFamily:'Shabnam'}}>شماره تیکت</th>
+      <th className="text-right pr-4 " style={{fontFamily:'Shabnam'}}>موضوع تیکت</th>
+      <th className="text-center pr-4 font-IRsan " style={{fontFamily:'Shabnam'}}>آخرین به روز رسانی</th>
+      <th className="text-center pr-4   " style={{fontFamily:'Shabnam'}}>وضعیت تیکت</th>
+      <th className="text-center pr-4 pl-4  " style={{fontFamily:'Shabnam'}} >مشاهده</th>
     </tr>
   </thead>
   <tbody>
