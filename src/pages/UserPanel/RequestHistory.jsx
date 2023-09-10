@@ -1,9 +1,51 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import AgentRightMenu from "../../components/AgentRightMenu";
-
+import Cookies from 'universal-cookie';
+import {axiosReq} from "../../commons/axiosReq";
+import { useNavigate } from "react-router-dom";
 import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
 import UserHistoryRequest from "../../components/UserHistoryRequest";
 const RequestHistory = () => {
+    const [showSuccessModal, setShowSuccessModal] = React.useState(false);
+    const [data, setData] = useState();
+    const [reCheck, setRecheck] = useState(false);
+
+    let navigate = useNavigate();
+  
+    useEffect(() => {
+    
+      auth();
+    }, [reCheck]);
+    const auth=async()=>{
+      const cookies = new Cookies();
+      var token= cookies.get('token');
+      console.log(token)
+      if(!token){
+       navigate("/");
+      }else{
+   if( cookies.get('Role')=="Agent")
+   {
+     GetData()
+  
+   }
+   else{
+    navigate("/");
+  
+   }
+      }
+    }
+    const GetData=async()=>{
+        console.log(1234)
+        const cookies = new Cookies();
+     
+     
+     
+       const dataUser = await axiosReq("Agents/GetRequestsAgent");
+       console.log(dataUser)
+     setData(dataUser)
+  
+       
+       }
     return(
         <div className="w-full h-screen bg-lightGray py-10 px-20 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>
         <div className="flex md:block">
@@ -15,7 +57,7 @@ const RequestHistory = () => {
                         تاریخچه درخواست ها
                 </span>
                 </div>
-                <UserHistoryRequest/>
+                <UserHistoryRequest data={data}/>
                 </div>
             </div>
         </div>

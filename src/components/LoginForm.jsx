@@ -37,108 +37,114 @@ const LoginForm = () => {
   };
 
   const login=()=>{
-//     console.log(captcha)
+    console.log(captcha)
 
-//     if(!pass||!user){
-//         if(!pass){
-//           setErPass(true)
-//         }
-//         if(!user){
-//           setErUser(true)
-//         }
-//     }
-//     else{
-//       setErPass(false)
-//       setErUser(false)
-//     console.log(pass)
-//     console.log(captcha)
-// // if(validateCaptcha(captcha)==false||!user || !pass){
-// if(captchaIn !== captcha||!user || !pass){
-//   handleClick()
-// }
-// else{
-//   setSnipper(true)
-//   axios
-//   .post(apiUrl + "auth/Login",{
-//     Username:user,
-//     Password:pass
-//   })
-// .then(function (response) {
-//   console.log(123456)
-//   console.log(response)
+    if(!pass||!user){
+        if(!pass){
+          setErPass(true)
+        }
+        if(!user){
+          setErUser(true)
+        }
+    }
+    else{
+      setErPass(false)
+      setErUser(false)
+    console.log(pass)
+    console.log(captcha)
+// if(validateCaptcha(captcha)==false||!user || !pass){
+if(captchaIn !== captcha||!user || !pass){
+  handleClick()
+}
+else{
+  setSnipper(true)
+  axios
+  .post(apiUrl + "auth/Login",{
+    Username:user,
+    Password:pass
+  })
+.then(function (response) {
+  console.log(123456)
+  console.log(response)
 
-// if (response.request.status == 200) {
-//   const cookies = new Cookies();
-// cookies.set('token',response.data.token, { path: '/' })
-// cookies.set('ID',response.data.id, { path: '/' })
-//   // console.log(response.data.token)
-// setSnipper(false)
-//   if(response.data.role=="Organ"){
-//     cookies.set('Role',response.data.role, { path: '/' })
+if (response.request.status == 200) {
+  const cookies = new Cookies();
+cookies.set('token',response.data.token, { path: '/' })
+cookies.set('ID',response.data.id, { path: '/' })
+  // console.log(response.data.token)
+setSnipper(false)
+  if(response.data.role=="Agent"){
+    cookies.set('Role',response.data.role, { path: '/' })
 
-//     navigate("/newRequestStep1");
-//   }
-//   if(response.data.role=="Expert"){
-//     cookies.set('Role',response.data.role, { path: '/' })
-//     // cookies.set('Role',response.data.role, { path: '/karshenas' })
-//     cookies.set('token',response.data.token, { path: '/karshenas' })
-//     cookies.set('token',response.data.token, { path: '/karshenas/viewRequest' })
-
-//     navigate("/karshenas/request");
-//   }
-//   if(response.data.role=="Admin"){
-//     cookies.set('Role',response.data.role, { path: '/' })
-
-//     cookies.set('Role',response.data.role, { path: '/admin' })
-
-//     navigate("/admin/dashboard");
-//   }
-//   if(response.data.role=="MainAdmin"){
-//     cookies.set('Role',response.data.role)
-
-//     navigate("/mainadmin/mainadminTicketList");
-//   }
-// }
-// else{
-//   handleClick()
-//   setSnipper(false)
-
-// }})
-// .catch(function (error) {
-// console.log(error);
-// setSnipper(false)
-
-// });
-console.log(user)
-console.log(pass)
-  if(user=="agent" && pass=="123456"){
     navigate("/profile");
   }
+  if(response.data.role=="InternationalExpert"){
+    cookies.set('Role',response.data.role, { path: '/' })
+    // cookies.set('Role',response.data.role, { path: '/karshenas' })
+    cookies.set('token',response.data.token, { path: '/expert' })
 
-  if(user=="expert" && pass=="123456"){
-    navigate("/expert/requestList");
-
+    navigate("/expert/messageList");
   }
+  if(response.data.role=="Supervisor"){
+    cookies.set('Role',response.data.role, { path: '/' })
+    // cookies.set('Role',response.data.role, { path: '/karshenas' })
+    cookies.set('token',response.data.token, { path: '/supervisor' })
 
-  if(user=="international" && pass=="123456"){
-    navigate("/internationalAdmin/userList");
-
-  }
-
-  if(user=="supervisor" && pass=="123456"){
     navigate("/supervisor/userList");
-
   }
-  if(user=="mainAdmin" && pass=="123456"){
+  if(response.data.role=="Admin"){
+    cookies.set('Role',response.data.role, { path: '/' })
+
+    cookies.set('Role',response.data.role, { path: '/admin' })
+
+    navigate("/internationalAdmin/userList");
+  }
+  if(response.data.role=="MainAdmin"){
+    cookies.set('Role',response.data.role)
+
     navigate("/mainAdmin/userList");
-
   }
-
-
-//   }
-
-//   }
 }
+else{
+  handleClick()
+  setSnipper(false)
+
+}})
+.catch(function (error) {
+console.log(error);
+setSnipper(false)
+
+});
+}}}
+// }
+  // if(user=="agent" && pass=="123456"){
+  //   navigate("/profile");
+  // }
+
+  // if(user=="expert" && pass=="123456"){
+  //   navigate("/expert/requestList");
+
+  // }
+
+  // if(user=="international" && pass=="123456"){
+  //   navigate("/internationalAdmin/userList");
+
+  // }
+
+  // if(user=="supervisor" && pass=="123456"){
+  //   navigate("/supervisor/userList");
+
+  // }
+  // if(user=="mainAdmin" && pass=="123456"){
+  //   navigate("/mainAdmin/userList");
+
+  // }
+
+
+//   }
+
+//   }
+// }
 
     return (
         <div>

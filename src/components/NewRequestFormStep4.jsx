@@ -1,12 +1,79 @@
-import React from "react";
-
+import React, {useState,useEffect} from "react";
+import { DatePicker } from "zaman";
 import './components.css';
 import {Link} from "react-router-dom";
-
+import Cookies from 'universal-cookie';
+import { axiosReq } from "../commons/axiosReq";
+import { useNavigate, useParams } from "react-router-dom";
 
 const NewRequestFormStep4 = () => {
     const [showSuccessModal,
         setShowSuccessModal] = React.useState(false);
+        const id = useParams().id;
+        const [allValues, setAllValues] = useState({
+    
+          ImportantTravel: "",   
+          MissionAchievementRecords :  "",
+          SummaryInvitation:  "",
+          ForeignTravelSummary :  "",
+          ReferenceDeviceAgreement :  "",
+          ResistanceEconomyTravel :  "",
+         
+        });
+        let navigate = useNavigate();
+    
+        useEffect(() => {
+    
+            auth();
+        }, []);
+        const auth = async () => {
+            const cookies = new Cookies();
+            var token = cookies.get('token');
+            console.log(token)
+            if (!token) {
+                navigate("/");
+            } else {
+                if (cookies.get('Role') == "Agent") {
+    
+                }
+                else {
+                    navigate("/");
+    
+                }
+            }
+        }
+        const changeHandler = e => {
+          if (e.target) {
+  
+              setAllValues({ ...allValues, [e.target.name]: e.target.value })
+          }
+  
+      }
+      const updateReq= async () => {
+          console.log("req")
+          console.log(allValues)
+          const cookies = new Cookies();
+          const dataUser = await axiosReq("Request/UpdateRequest4", {
+            RequestId:id,
+            ImportantTravel: allValues?.ImportantTravel,   
+            MissionAchievementRecords :  allValues?.MissionAchievementRecords,
+            SummaryInvitation:  allValues?.SummaryInvitation,
+            ForeignTravelSummary : allValues?.ForeignTravelSummary,
+            ReferenceDeviceAgreement :  allValues?.ReferenceDeviceAgreement,
+            ResistanceEconomyTravel :  allValues?.ResistanceEconomyTravel,
+       
+          });
+          console.log(dataUser)
+          if (dataUser?.status == 200 || dataUser?.status == 204 || dataUser?.status == 201) {
+  // setShowSuccessModal(true)
+  navigate("/requestRegistered")
+  
+          }
+          else {
+              alert("اطلاعات ورودی نادرست می باشند")
+          }
+  
+      }
     return (
         <div>
           <p style={{fontFamily: 'Shabnam'}} className="text-xl text-mainColor font-bold mt-3.5 mb-10 ">گام ۴ - توضیحات سفر</p>
@@ -17,7 +84,8 @@ const NewRequestFormStep4 = () => {
                     <textarea style={{fontFamily:'Shabnam'}}
                             rows={5}
                             type="text"
-                            
+                            onChange={changeHandler}
+                            name="ImportantTravel"
                             id="input-group-1"
                             class="pr-4   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full  p-2.5  "
                             placeholder="شرح را اینجا بنویسید"></textarea>
@@ -29,7 +97,8 @@ const NewRequestFormStep4 = () => {
                     <textarea style={{fontFamily:'Shabnam'}}
                             rows={5}
                             type="text"
-                            
+                            onChange={changeHandler}
+                            name="MissionAchievementRecords"
                             id="input-group-1"
                             class="pr-4   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full  p-2.5  "
                             placeholder="شرح را اینجا بنویسید"></textarea>
@@ -41,7 +110,8 @@ const NewRequestFormStep4 = () => {
                     <textarea style={{fontFamily:'Shabnam'}}
                             rows={5}
                             type="text"
-                            
+                            onChange={changeHandler}
+                            name="SummaryInvitation"
                             id="input-group-1"
                             class="pr-4   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full  p-2.5  "
                             placeholder="شرح را اینجا بنویسید"></textarea>
@@ -53,7 +123,8 @@ const NewRequestFormStep4 = () => {
                     <textarea style={{fontFamily:'Shabnam'}}
                             rows={10}
                             type="text"
-                            
+                            onChange={changeHandler}
+                            name="ForeignTravelSummary"
                             id="input-group-1"
                             class="pr-4   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full  p-2.5  "
                             placeholder="شرح را اینجا بنویسید"></textarea>
@@ -63,9 +134,11 @@ const NewRequestFormStep4 = () => {
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">آیا سفر مذکور نیاز به موافقت دستگاه های مرجع دیگری در داخل دارد؟ در صورت مثبت بودن پاسخ اصل نامه دعوت نامه ضمیمه شود</span>
                     <div class="mt-4 flex">
                     <div className="flex items-center">
-                          <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor  ml-1" type="radio" name="confirmation" id="confirmationYes" />
+                          <input            value={true}                onChange={changeHandler}
+                            name="ReferenceDeviceAgreement" className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor  ml-1" type="radio"  id="confirmationYes" />
                           <label style={{fontFamily: 'Shabnam'}} className="" For="a1">بله</label>
-                          <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-8 ml-1" type="radio" name="confirmation" id="confirmationNo" />
+                          <input               value={false}                 onChange={changeHandler}
+                            name="ReferenceDeviceAgreement"className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-8 ml-1" type="radio" id="confirmationNo" />
                           <label style={{fontFamily: 'Shabnam'}} className="" For="a2">خیر</label>
                     </div>
                     <div className="mr-10">
@@ -83,9 +156,11 @@ const NewRequestFormStep4 = () => {
             <div className="flex w-[100%] mb-8">
                   <p style={{fontFamily: 'Shabnam'}} className="text-base font-bold">سفر در راستای برنامه اقتصاد مقاومتی می باشد؟</p>
                   <div className="flex items-center">
-                          <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-7 ml-1" type="radio" name="economy" id="EconomyYes" />
+                          <input          onChange={changeHandler}
+                            name="ResistanceEconomyTravel" value={true} className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-7 ml-1" type="radio"  id="EconomyYes" />
                           <label style={{fontFamily: 'Shabnam'}} className="" For="a1">بله</label>
-                          <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-8 ml-1" type="radio" name="economy" id="EconomyNo" />
+                          <input         onChange={changeHandler}
+                            name="ResistanceEconomyTravel" value={false} className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-8 ml-1" type="radio"  id="EconomyNo" />
                           <label style={{fontFamily: 'Shabnam'}} className="" For="a2">خیر</label>
                   </div>
                 </div>
@@ -97,7 +172,7 @@ const NewRequestFormStep4 = () => {
             </div>
             <div className="flex justify-end">
             <Link
-            to={'/newRequestStep3'}
+            to={'/newRequestStep3/'+id}
                 style={{fontFamily: 'Shabnam'}}
                 className="w-40 h-12 flex justify-center items-center mt-20 bg-midGray shadow-blackShadow   text-white text-xl font-normal rounded-lg hover:bg-lightGray hover:text-darkGray">
                 گام قبلی
@@ -147,7 +222,7 @@ const NewRequestFormStep4 = () => {
                   style={{fontFamily:'Shabnam'}}
                     className="text-white   rounded-sm shadow-blueShadow float-left bg-mainColor font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                   to={'/requestHistory'}
+                    onClick={() => updateReq()}
                   >
                     ثبت درخواست
                   </Link>

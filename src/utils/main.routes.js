@@ -83,13 +83,13 @@ const MainRoutes = (props) =>{
                     <Route path="/newRequestStep1" element={<NewRequestStep1/>} />
                 </Routes>
                 <Routes>
-                    <Route path="/newRequestStep2" element={<NewRequestStep2/>} />
+                    <Route path="/newRequestStep2/:id" element={<NewRequestStep2/>} />
                 </Routes>
                 <Routes>
-                    <Route path="/newRequestStep3" element={<NewRequestStep3/>} />
+                    <Route path="/newRequestStep3/:id" element={<NewRequestStep3/>} />
                 </Routes>
                 <Routes>
-                    <Route path="/newRequestStep4" element={<NewRequestStep4/>} />
+                    <Route path="/newRequestStep4/:id" element={<NewRequestStep4/>} />
                 </Routes>
                 <Routes>
                     <Route path="/" element={<Login/>} />
