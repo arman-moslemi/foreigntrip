@@ -1,6 +1,6 @@
 import React ,{useState} from "react";
 import WhiteLogo from "../../assets/img/whiteLogo.png"
-import { Link } from "react-router-dom";
+import { Link,useLocation } from "react-router-dom";
 import {ReactComponent as Add} from "../../assets/icon/white/add.svg"
 import {ReactComponent as Doc} from "../../assets/icon/white/doc.svg"
 import {ReactComponent as Profile} from "../../assets/icon/white/profile.svg"
@@ -10,6 +10,9 @@ import { ReactComponent as Ticket } from "../../assets/icon/white/ticket.svg";
 import DocImg from "../../assets/img/doc.png"
 const MainRightMenu = () => {
    const [showMenu,setShowMenu] = useState(false);
+   const location = useLocation();
+   const { pathname } = location;
+   const splitLocation = pathname.split("/mainAdmin/");
     return(
         
                <>
@@ -23,7 +26,9 @@ const MainRightMenu = () => {
                     <ul>
                        
                         <li className="my-10">
-                           <Link style={{fontFamily:'Shabnam'}}  to={'/mainAdmin/userList'} className="flex items-center">
+                           <Link style={{fontFamily:'Shabnam'}} 
+                           className={splitLocation[1] ==="userList" ? " flex items-center text-activeText font-medium" : "flex items-center  font-semibold text-base text-[#919eab]"}
+                           to={'/mainAdmin/userList'} >
                            <Profile/>
                             <p style={{fontFamily:'Shabnam'}} className="  text-white font-medium mr-4 lg:text-sm">
                                لیست ماموران اعزامی

@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState,useEffect,useRef} from "react";
 
 import {ReactComponent as User} from "../assets/icon/black/profile.svg"
 import {ReactComponent as Pass} from "../assets/icon/black/lock.svg"
@@ -6,13 +6,139 @@ import {ReactComponent as Reload} from "../assets/icon/black/reload.svg"
 import {ReactComponent as Secure} from "../assets/icon/black/secure.svg"
 // import { Captcha } from "@nabidam/react-captcha";
 import './components.css';
-
+import axios from "axios";
+import {apiUrl} from "../commons/inFormTypes";
+import Cookies from 'universal-cookie';
 import Captcha from "../assets/img/captcha.png"
 import {Link} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 const LoginForm = () => {
     // const [passwordShown, setPasswordShown] = useState(false); const
     // togglePassword = () => {   setPasswordShown(!passwordShown); };
+    const [user,setUser]=useState()
+  const [erUser,setErUser]=useState(false)
+  const [pass,setPass]=useState()
+  const [erPass,setErPass]=useState(false)
+  const [captcha,setCaptcha]=useState()
+  const [captchaIn,setCaptchaIn]=useState()
 
+  const [isShown, setIsShown] = useState(false);
+  const [snipper, setSnipper] = useState(false);
+  const [guid, setGuid] = useState();
+  let navigate = useNavigate();
+  const captchaRef = useRef();
+
+  const handleClick = event => {
+
+    setIsShown(!isShown);
+
+
+  };
+
+  const login=()=>{
+//     console.log(captcha)
+
+//     if(!pass||!user){
+//         if(!pass){
+//           setErPass(true)
+//         }
+//         if(!user){
+//           setErUser(true)
+//         }
+//     }
+//     else{
+//       setErPass(false)
+//       setErUser(false)
+//     console.log(pass)
+//     console.log(captcha)
+// // if(validateCaptcha(captcha)==false||!user || !pass){
+// if(captchaIn !== captcha||!user || !pass){
+//   handleClick()
+// }
+// else{
+//   setSnipper(true)
+//   axios
+//   .post(apiUrl + "auth/Login",{
+//     Username:user,
+//     Password:pass
+//   })
+// .then(function (response) {
+//   console.log(123456)
+//   console.log(response)
+
+// if (response.request.status == 200) {
+//   const cookies = new Cookies();
+// cookies.set('token',response.data.token, { path: '/' })
+// cookies.set('ID',response.data.id, { path: '/' })
+//   // console.log(response.data.token)
+// setSnipper(false)
+//   if(response.data.role=="Organ"){
+//     cookies.set('Role',response.data.role, { path: '/' })
+
+//     navigate("/newRequestStep1");
+//   }
+//   if(response.data.role=="Expert"){
+//     cookies.set('Role',response.data.role, { path: '/' })
+//     // cookies.set('Role',response.data.role, { path: '/karshenas' })
+//     cookies.set('token',response.data.token, { path: '/karshenas' })
+//     cookies.set('token',response.data.token, { path: '/karshenas/viewRequest' })
+
+//     navigate("/karshenas/request");
+//   }
+//   if(response.data.role=="Admin"){
+//     cookies.set('Role',response.data.role, { path: '/' })
+
+//     cookies.set('Role',response.data.role, { path: '/admin' })
+
+//     navigate("/admin/dashboard");
+//   }
+//   if(response.data.role=="MainAdmin"){
+//     cookies.set('Role',response.data.role)
+
+//     navigate("/mainadmin/mainadminTicketList");
+//   }
+// }
+// else{
+//   handleClick()
+//   setSnipper(false)
+
+// }})
+// .catch(function (error) {
+// console.log(error);
+// setSnipper(false)
+
+// });
+console.log(user)
+console.log(pass)
+  if(user=="agent" && pass=="123456"){
+    navigate("/profile");
+  }
+
+  if(user=="expert" && pass=="123456"){
+    navigate("/expert/requestList");
+
+  }
+
+  if(user=="international" && pass=="123456"){
+    navigate("/internationalAdmin/userList");
+
+  }
+
+  if(user=="supervisor" && pass=="123456"){
+    navigate("/supervisor/userList");
+
+  }
+  if(user=="mainAdmin" && pass=="123456"){
+    navigate("/mainAdmin/userList");
+
+  }
+
+
+//   }
+
+//   }
+}
 
     return (
         <div>
@@ -22,10 +148,13 @@ const LoginForm = () => {
                 </div>
                 <input
                 style={{fontFamily:'Shabnam'}}
-                    type="number"
+                    type="text"
                     id="input-group-1"
-                    class="pr-9   text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md my-5 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
-                    placeholder="کد ملی"/>
+                    class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md my-5 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                    placeholder="کد ملی"
+                    onChange={(e)=>setUser(e.target.value)}   
+
+                    />
             </div>
             <div class="relative my-6">
                 <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
@@ -35,8 +164,11 @@ const LoginForm = () => {
                 style={{fontFamily:'Shabnam'}}
                     type="text"
                     id="input-group-1"
-                    class="pr-9   text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md my-5 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
-                    placeholder="رمز عبور"/>
+                    class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md my-5 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                    placeholder="رمز عبور"
+                    onChange={(e)=>setPass(e.target.value)}   
+
+                    />
             </div>
             {/* <div class="relative my-6">
                     <div class="absolute inset-y-5 right-2 flex items-center pl-3 pointer-events-none">
@@ -86,12 +218,10 @@ const LoginForm = () => {
                         تغییر رمز عبور
                     </Link>
                 </div> */}
-            <Link style={{fontFamily:'Shabnam'}}   to={'/newPassword'}>
-                <button style={{fontFamily:'Shabnam'}}
-                    className="w-full h-12 bg-mainColor shadow-blueShadow mt-6   text-white text-xl font-medium rounded-lg hover:bg-lightBlue hover:text-mainColor">
+                <button onClick={()=>login()} style={{fontFamily:'Shabnam'}}
+                    className="w-full h-12 bg-mainColor shadow-blueShadow mt-6 font-IRsans text-white text-xl font-medium rounded-lg hover:bg-lightBlue hover:text-mainColor">
                       ورود   
                 </button>
-            </Link>
 
             {/* <div className="flex items-center justify-start mt-2 xs:flex-wrap">
                     <p style={{fontFamily:'Shabnam'}} className="  text-black text-xs">

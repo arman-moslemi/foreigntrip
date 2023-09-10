@@ -25,7 +25,7 @@ const tableRow =[
    subject:truncate("فراموشی رمز عبور ...",30),
    location:'02/02/12-23:50',
    status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-[#ffd200] font-bold  ">بسته شده</span >,
-   function: <Link style={{fontFamily:'Shabnam'}}  className="flex justify-center" to={'/mainAdmin/ticketShowMain'}>
+   function: <Link style={{fontFamily:'Shabnam'}}  className="flex justify-center" to={'/ticketShow'}>
    <Eye/>
    </Link>
              
@@ -38,7 +38,7 @@ const tableRow =[
    subject:truncate("فراموشی رمز عبور ...",30),
    location:'02/02/12-23:50',
    status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-green font-bold  ">پاسخ داده شده</span >,
-   function:<Link style={{fontFamily:'Shabnam'}}  className="flex justify-center" to={'/mainAdmin/ticketShowMain'}>
+   function:<Link style={{fontFamily:'Shabnam'}}  className="flex justify-center" to={'/ticketShow'}>
    <Eye/>
    </Link>
             
@@ -50,7 +50,7 @@ const tableRow =[
    subject:truncate("فراموشی رمز عبور ...",30),
    location:'02/02/12-23:50',
    status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-[#ff6900] font-bold  ">در انتظار پاسخ</span >,
-   function:<Link style={{fontFamily:'Shabnam'}}  className="flex justify-center" to={'/mainAdmin/ticketShowMain'}>
+   function:<Link style={{fontFamily:'Shabnam'}}  className="flex justify-center" to={'/ticketShow'}>
    <Eye/>
    </Link>
   },
@@ -61,7 +61,7 @@ const tableRow =[
    subject:truncate("فراموشی رمز عبور ...",30),
    location:'02/02/12-23:50',
    status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-green font-bold  ">پاسخ داده شده</span >,
-   function:<Link style={{fontFamily:'Shabnam'}}  className="flex justify-center" to={'/mainAdmin/ticketShowMain'}>
+   function:<Link style={{fontFamily:'Shabnam'}}  className="flex justify-center" to={'/ticketShow'}>
    <Eye/>
    </Link>
   },
@@ -72,7 +72,7 @@ const tableRow =[
    subject:truncate("فراموشی رمز عبور ...",30),
    location:'02/02/12-23:50',
    status:<span style={{fontFamily:'Shabnam'}} className="text-sm text-[#ff6900] font-bold  ">در انتظار پاسخ</span >,
-   function:<Link style={{fontFamily:'Shabnam'}}  className="flex justify-center" to={'/mainAdmin/ticketShowMain'}>
+   function:<Link style={{fontFamily:'Shabnam'}}  className="flex justify-center" to={'/ticketShow'}>
    <Eye/>
    </Link>
   }
