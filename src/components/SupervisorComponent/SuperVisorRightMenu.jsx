@@ -8,6 +8,7 @@ import {ReactComponent as Exit} from "../../assets/icon/white/exit.svg"
 
 const SuperVisorRightMenu = () => {
    const [showMenu,setShowMenu] = useState(false);
+   const [close,setClose] = useState(false);
     return(
         
                <>
@@ -68,26 +69,34 @@ const SuperVisorRightMenu = () => {
                   <div className="w-full  h-full absolute right-0">
                         <div className="bg-mainColor w-[290px] h-full z-50 absolute right-0 px-8 py-10">
                         <p style={{fontFamily:'Shabnam'}} className="text-white  font-bold text-lg text-center mt-4   lg:text-base">
-                        علی اطهری خوش آمدید !
+                        آقای ناظر خوش آمدید !
                     </p>
                     <hr className="border-t-lightGray my-5 border-opacity-50"/>
 
                     <ul>
-                       
-                        <li className="my-10">
-                           <Link style={{fontFamily:'Shabnam'}}  to={'/'} className="flex items-center">
-                           <Doc/>
-                            <p style={{fontFamily:'Shabnam'}} className="  text-white font-medium mr-4 lg:text-sm">
-                                مشاهده گزارشات
-                            </p>
-                           </Link>
-                        </li>
-                       
-                        <li className="my-10">
-                           <Link style={{fontFamily:'Shabnam'}}  to={'/'} className="flex items-center">
+                      <li className="my-10">
+                           <Link style={{fontFamily:'Shabnam'}}  to={'/supervisor/userList'} className="flex items-center">
                            <Profile/>
                             <p style={{fontFamily:'Shabnam'}} className="  text-white font-medium mr-4 lg:text-sm">
                                لیست کاربران سامانه
+                            </p>
+                           </Link>
+                        </li>
+                        <li className="my-10">
+                           <Link style={{fontFamily:'Shabnam'}}  to={'/supervisor/reportList'} className="flex items-center">
+                           <Doc/>
+                            <p style={{fontFamily:'Shabnam'}} className="  text-white font-medium mr-4 lg:text-sm">
+                              مشاهده گزارشات
+                            </p>
+                           </Link>
+                        </li>
+                   
+                       
+                        <li className="my-10">
+                           <Link style={{fontFamily:'Shabnam'}}  to={'/supervisor/ticketList'} className="flex items-center">
+                           <Ticket/>
+                            <p style={{fontFamily:'Shabnam'}} className="  text-white font-medium mr-4 lg:text-sm">
+                              تیکت ها و پشتیبانی
                             </p>
                            </Link>
                         </li>

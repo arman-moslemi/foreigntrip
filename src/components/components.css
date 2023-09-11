@@ -29,6 +29,19 @@
 	padding-right: 10px;
 	border-radius: 6px;
 }
+#payam textarea{
+	/* border:1px solid #000; */
+	height: 100% !important;
+	width: 96%;
+	padding-top: 13px;
+	padding-right: 10px;
+	border-radius: 6px;
+}
+#payam textarea:focus-visible{
+	border-top-left-radius: 0px !important;
+	border-bottom-left-radius: 0px !important;
+	outline-color: lightgray !important;
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
