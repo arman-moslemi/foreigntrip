@@ -1,10 +1,54 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import AgentRightMenu from "../../components/AgentRightMenu";
 import { Link } from "react-router-dom";
 import {ReactComponent as Ticket} from "../../assets/icon/blue/ticket.svg"
 import TicketListTableMain from "../../components/TicketListTableMain";
+import Cookies from 'universal-cookie';
+import { axiosReq } from "../../commons/axiosReq";
+import { useNavigate } from "react-router-dom";
 const TicketList = () => {
     const [showNewTicket,setShowNewTicket] = React.useState(false);
+    const [data, setData] = useState();
+    const [reCheck, setRecheck] = useState(false);
+  
+    let navigate = useNavigate();
+  
+    useEffect(() => {
+    
+      auth();
+    }, [reCheck]);
+    const auth=async()=>{
+      const cookies = new Cookies();
+      var token= cookies.get('token');
+      console.log(token)
+      if(!token){
+       navigate("/");
+      }else{
+   if( cookies.get('Role')=="Agent")
+   {
+     GetData()
+  
+   }
+   else{
+    navigate("/");
+  
+   }
+      }
+    }
+    const GetData=async()=>{
+        console.log(1234)
+        const cookies = new Cookies();
+     
+     
+     
+       const dataUser = await axiosReq("Agents/GetTickets",{
+        AgentId:cookies.get("ID")
+       });
+       console.log(dataUser)
+     setData(dataUser.data)
+  
+       
+       }
     return(
         <div className="w-full h-screen bg-lightGray py-10 px-20 lg:px-8 md:p-0  lg:h-full" style={{direction:'rtl'}}>
         <div className="flex md:block">
@@ -21,7 +65,7 @@ const TicketList = () => {
                         + تیکت جدید
                     </button>
                 </div>
-                <TicketListTableMain/>
+                <TicketListTableMain data={data}/>
                 </div>
             </div>
             {
