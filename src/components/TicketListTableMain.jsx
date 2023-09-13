@@ -78,10 +78,10 @@ const TicketListTableMain = ({data}) => {
       </Link>
     }
   ]
-  const tableBody = data?.map((tableRow) =>
+  const tableBody = data?.map((tableRow,index) =>
     <tr key={tableRow.id} className="border-b border-b-borderGray">
-      <td className="py-4 text-sm text-center pr-4  " style={{ fontFamily: 'Shabnam' }}>{tableRow.ticketNumber}</td>
-      <td className="py-4 text-sm text-center pr-4 " style={{ fontFamily: 'Shabnam' }}>{tableRow.date}</td>
+      <td className="py-4 text-sm text-center pr-4  " style={{ fontFamily: 'Shabnam' }}>{index+1}</td>
+      <td className="py-4 text-sm text-center pr-4 " style={{ fontFamily: 'Shabnam' }}>{tableRow.ticketNumber}</td>
       <td className="py-4 text-sm text-right  pr-4 truncate" style={{ fontFamily: 'Shabnam' }}>{tableRow.subject}</td>
       <td className="py-4 text-sm text-center pr-4 " style={{ fontFamily: 'Shabnam' }} >{tableRow.latestUpdate}</td>
       <td className="py-4 text-sm text-center pr-4 " style={{ fontFamily: 'Shabnam' }}>{tableRow?.ticketStatus?.ticketStatusTitle}</td>
