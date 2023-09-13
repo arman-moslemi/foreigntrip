@@ -26,7 +26,7 @@ const NewPasswordSetForm = () =>{
                 </div>
               
                <Link style={{fontFamily:'Shabnam'}}  to={'/'}>
-               <button style={{fontFamily:'Shabnam'}} className="w-full h-12 bg-mainColor shadow-blueShadow mt-6   text-white text-lg rounded-lg hover:bg-lightBlue hover:text-mainColor">
+               <button style={{fontFamily:'Shabnam'}} className="w-full h-12 bg-mainColor shadow-blueShadow mt-6 xs-510:mt-2  text-white text-lg rounded-lg hover:bg-lightBlue hover:text-mainColor">
                 تغییر رمز عبور
                 </button>
                </Link>
