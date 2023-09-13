@@ -168,7 +168,7 @@ setSnipper(false)
                 </div>
                 <input
                 style={{fontFamily:'Shabnam'}}
-                    type="text"
+                    type="password"
                     id="input-group-1"
                     class="pr-9 font-IRsans text-right right-6 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md my-5 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
                     placeholder="رمز عبور"
