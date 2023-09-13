@@ -6,18 +6,18 @@ import TicketListTableMain from "../../components/TicketListTableMain";
 const TicketList = () => {
     const [showNewTicket,setShowNewTicket] = React.useState(false);
     return(
-        <div className="w-full h-screen bg-lightGray py-10 px-20 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>
+        <div className="w-full h-screen bg-lightGray py-10 px-20 lg:px-8 md:p-0  lg:h-full" style={{direction:'rtl'}}>
         <div className="flex md:block">
                 <AgentRightMenu/>
-                <div className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl p-12 my-10 w-[80%] xl:p-5 md:w-[95%] md:rounded-xl md:mx-auto">
+                <div className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl p-12 my-10 w-[80%] min-w-[500px] lg:min-w-[450px] xl:p-5 md:w-[95%] md:min-w-[95%] md:rounded-xl md:mx-auto">
                 <div className="flex items-center justify-between sm:flex-wrap">
                     <div className="flex">
                     <Ticket/>
-                <span style={{fontFamily:'Shabnam'}} className="  text-mainColor mr-3 font-bold">
+                <span style={{fontFamily:'Shabnam'}} className="  text-mainColor mr-3 font-bold 2xs:mb-3 2xs:w-[100%]">
                        تیکت ها و پشتیبانی
                 </span>
                     </div>
-                    <button style={{fontFamily:'Shabnam'}} onClick={() =>{setShowNewTicket(true)}} className="bg-mainColor px-4 py-1.5 shadow-blueShadow text-white   text-base rounded-md sm:mr-auto sm:mt-5">
+                    <button style={{fontFamily:'Shabnam'}} onClick={() =>{setShowNewTicket(true)}} className="bg-mainColor px-4 py-1.5 shadow-blueShadow text-white   text-base rounded-md sm:mr-auto  2xs:w-[100%]">
                         + تیکت جدید
                     </button>
                 </div>

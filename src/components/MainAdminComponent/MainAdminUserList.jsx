@@ -144,11 +144,11 @@ const MainAdminUserList = () =>{
       ]
     const tableBody = tableRow.map((tableRow) =>
     <tr key={tableRow.id} className="border-b border-b-borderGray">
-       <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-right pr-4   px-4">
+       <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center pr-4   ">
         <input type="checkbox"/>
        </td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-right pr-4   px-4">{tableRow.num}</td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-right  px-4 pr-0">
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center pr-4   ">{tableRow.num}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center  pr-4">
         
       
           {tableRow.name} 
@@ -157,29 +157,29 @@ const MainAdminUserList = () =>{
        
       </td>
     
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center px-4  " >{tableRow.code}</td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center px-4  "  >{tableRow.phoneNumber}</td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center px-4  ">{tableRow.post}</td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center px-4  ">{tableRow.action}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center pr-4  " >{tableRow.code}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center pr-4  "  >{tableRow.phoneNumber}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center pr-4  ">{tableRow.post}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center pr-4 pl-4 ">{tableRow.action}</td>
 
       </tr> 
     )
     return(
         <>
      
-        <div className=" mt-10 border-borderGray border border-solid w-full overflow-x-auto whitespace-nowrap ">
+        <div className=" mt-10 lg:mt-6 border-borderGray border border-solid w-full overflow-x-auto whitespace-nowrap ">
           <table class="table-auto w-full  ">
   <thead className="bg-darkGray h-11 rounded-t-2xl w-full whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}> 
     <tr className="text-white  p-6 whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}>
-    <th style={{fontFamily:'Shabnam'}} className="text-right pr-4   md:px-4">
+    <th style={{fontFamily:'Shabnam'}} className="text-center pr-4   ">
       <input type="checkbox"/>
     </th>
-      <th style={{fontFamily:'Shabnam'}} className="text-right pr-4   md:px-4">ردیف</th>
-      <th style={{fontFamily:'Shabnam'}} className="text-right   md:px-4">نام و نام خانوادگی کاربر</th>
-     <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsan md:px-4">کد ملی</th>
-      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsan md:px-4">شماره تلفن همراه</th>
-      <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4">پست ستادی</th>
-      <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4" >عملیات</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-center pr-4   ">ردیف</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-center pr-4  ">نام و نام خانوادگی کاربر</th>
+     <th style={{fontFamily:'Shabnam'}} className="text-center  pr-4 font-IRsan ">کد ملی</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-center pr-4 font-IRsan">شماره تلفن همراه</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-center pr-4  ">پست ستادی</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-center pr-4 pl-4  " >عملیات</th>
       
     </tr>
   </thead>
