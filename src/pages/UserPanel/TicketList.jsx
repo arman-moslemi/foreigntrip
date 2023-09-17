@@ -10,6 +10,7 @@ const TicketList = () => {
     const [showNewTicket,setShowNewTicket] = React.useState(false);
     const [data, setData] = useState();
     const [reCheck, setRecheck] = useState(false);
+    const [message, setMessage] = useState();
   
     let navigate = useNavigate();
   
@@ -41,11 +42,32 @@ const TicketList = () => {
      
      
      
-       const dataUser = await axiosReq("Agents/GetTickets",{
+       const dataUser = await axiosReq("Ticket/GetTickets",{
         AgentId:cookies.get("ID")
        });
        console.log(dataUser)
      setData(dataUser.data)
+  
+       
+       }
+    const insertTicket=async()=>{
+        console.log(1234)
+        const cookies = new Cookies();
+     
+     
+     
+       const dataUser = await axiosReq("Ticket/InsertTicket",{
+        AgentId:cookies.get("ID"),
+        Subject:message
+       });
+       if (dataUser?.status == 200 || dataUser?.status == 204 || dataUser?.status == 201) {
+setRecheck(!reCheck)
+        navigate("/ticketShow/"+dataUser?.data?.ticketId)
+
+    }
+    else {
+        alert("اطلاعات ورودی نادرست می باشند")
+    }
   
        
        }
@@ -91,27 +113,24 @@ const TicketList = () => {
                         <span style={{fontFamily:'Shabnam'}} className="  text-black font-Bold text-base">
                             عنوان پیام شما
                         </span>
-                        <input type="text" className="pr-2   text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5" placeholder="عنوان پیام خود را اینجا بنویسید..."/>
+                        <input onChange={(e)=>setMessage(e.target.value)} type="text" className="pr-2   text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5" placeholder="عنوان پیام خود را اینجا بنویسید..."/>
                        </div>
                       
                        <div className="flex items-center mb-2 justify-endborder-t justify-center border-solid border-slate-200 rounded-b">
-                       <Link style={{fontFamily:'Shabnam'}}  to={'/'}>
                         <button
                            className="text-mainColor   float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                            type="button"
-                           
+                           onClick={()=>setShowNewTicket(false)}
                          >
                           بستن
                          </button>
-                        </Link>
-                         <Link
-                         to={'/ticketShow'}
+                         <button
                            className="text-white bg-mainColor shadow-blueShadow rounded-lg   float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                           
+                           onClick={()=>insertTicket()}
                            
                          >
                           شروع ارسال پیام
-                         </Link>
+                         </button>
                       
                        </div>
                      </div>

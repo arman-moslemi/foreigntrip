@@ -147,7 +147,7 @@ const MainRoutes = (props) =>{
                     <Route path="/ticketList" element={<TicketList/>} />
                 </Routes>
                 <Routes>
-                    <Route path="/ticketShow" element={<TicketShow/>} />
+                    <Route path="/ticketShow/:id" element={<TicketShow/>} />
                 </Routes>
                 <Routes>
                     <Route path="/supervisor/userList" element={<Userlist/>}/>

@@ -4,7 +4,7 @@ import {ReactComponent as Send} from "../assets/icon/black/send.svg"
 import { ReactComponent as Support } from "../assets/icon/white/support.svg";
 import { ReactComponent as User } from "../assets/icon/white/profile.svg";
 
-const TicketDetail = () =>{
+const TicketDetail = ({data}) =>{
  
   return(
     <>
@@ -14,7 +14,7 @@ const TicketDetail = () =>{
           فراموشی رمزعبور اکانت
         </span>
         <span style={{fontFamily:'Shabnam'}} className="  text-darkGray mt-2 xs:mt-1 xl-lg:text-base">
-          #1256
+          #{data[0]?.ticketNumber}
         </span>
       </div>
       <div className="flex flex-col justify-end items-end xs:mt-2.5 xs:items-start">
