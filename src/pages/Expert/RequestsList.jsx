@@ -1,10 +1,58 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ExpertRightMenu from "../../components/ExpertComponent/ExpertRightMenu";
 import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
 import ExpertRequestList from "../../components/ExpertComponent/ExpertRequestList";
 import {ReactComponent as Search} from "../../assets/icon/white/search.svg"
-
+import Cookies from 'universal-cookie';
+import { axiosReq } from "../../commons/axiosReq";
+import { useNavigate } from "react-router-dom";
 const ExpertRequestsList = () =>{
+    const [data, setData] = useState();
+  const [reCheck, setRecheck] = useState(false);
+  const [ticket, setTicket] = useState()
+
+  let navigate = useNavigate();
+
+  useEffect(() => {
+
+    auth();
+  }, [reCheck]);
+  const auth = async () => {
+    const cookies = new Cookies();
+    var token = cookies.get('token');
+    console.log(token)
+    if (!token) {
+      navigate("/");
+    } else {
+      if (cookies.get('Role') == "InternationalExpert") {
+        GetData()
+
+      }
+      else {
+        navigate("/");
+
+      }
+    }
+  }
+    const GetData = async () => {
+        console.log(1234)
+        const cookies = new Cookies();
+    
+    
+    
+        const dataUser = await axiosReq("Ticket/GetSubTickets", {
+          TicketId: cookies.get("ID")
+        });
+        console.log(dataUser)
+        setData(dataUser.data)
+        const tickets = await axiosReq("Ticket/GetTicket", {
+          TicketId: cookies.get("ID")
+        });
+        console.log(tickets)
+        setTicket(tickets?.data)
+    
+    
+      }
     return(
         <div className="w-full h-screen bg-lightGray py-10 px-10 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>
         <div className="flex md:block">
@@ -66,7 +114,7 @@ const ExpertRequestsList = () =>{
                             placeholder="آرمان"/> */}
                     </div>
                 </div>
-                <div className="flex flex-col w-[150px] mr-2">
+                {/* <div className="flex flex-col w-[150px] mr-2">
                 <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal   ">تایید شده توسط</span>
 
                    <div class=" mt-3">
@@ -81,14 +129,9 @@ const ExpertRequestsList = () =>{
                         
 
                         </select>
-                        {/* <input
-                            type="text"
-                            id="input-group-1"
-                            disabled="true"
-                            class="pr-9    text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
-                            placeholder="آرمان"/> */}
+                      
                     </div>
-                </div>
+                </div> */}
                 <button className="bg-mainColor shadow-blueShadow py-2 px-4 text-white mr-2 rounded-md" style={{fontFamily:'Shabnam'}} >
                     اعمال
                 </button>

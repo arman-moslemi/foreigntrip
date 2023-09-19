@@ -83,7 +83,7 @@ setSnipper(false)
     // cookies.set('Role',response.data.role, { path: '/karshenas' })
     cookies.set('token',response.data.token, { path: '/expert' })
 
-    navigate("/expert/messageList");
+    navigate("/expert/requestList");
   }
   if(response.data.role=="Supervisor"){
     cookies.set('Role',response.data.role, { path: '/' })
