@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import {ReactComponent as Download} from "../assets/icon/blue/download.svg"
 import { Link } from "react-router-dom";
-const RequestViewStep4 = () =>{
+const RequestViewStep4 = ({data}) =>{
 
         const [show , setShow]=useState(false);
 const [showSuccessModal, setShowSuccessModal] = React.useState(false);
@@ -16,7 +16,7 @@ const [showSendModal, setShowSendModal] = React.useState(false);
                          شرح اهمیت موضوع :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                            شرح اهمیت موضوع : لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                            {data?.importantTravel}
                             </span>
                         </p>
                     </div>
@@ -26,7 +26,8 @@ const [showSendModal, setShowSendModal] = React.useState(false);
                          سوابق و دستاوردهای قبلی مرتبط با موضوع این ماموریت :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                            سوابق و دستاوردهای قبلی مرتبط با موضوع این ماموریت : لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد .                            </span>
+                            {data?.missionAchievementRecords}
+                            </span>
                         </p>
                     </div>
                     <div className="w-full my-3">
@@ -34,20 +35,23 @@ const [showSendModal, setShowSendModal] = React.useState(false);
                         خلاصه ترجمه شده دعوتنامه و یا قید هزینه ها و برنامه زمانبندی شده روزهای ماموریت بر اساس دعوتنامه :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                            خلاصه ترجمه شده دعوتنامه و یا قید هزینه ها و برنامه زمانبندی شده روزهای ماموریت بر اساس دعوتنامه : لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.   </span></p>
+                           {data?.summaryInvitation}
+                             </span></p>
                     </div>
                     <div className="w-full my-3">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                        خلاصه ترجمه شده دیگر نامه های طرف خارجی :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                            خلاصه ترجمه شده دیگر نامه های طرف خارجی : لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.                 </span></p>   </div>
+                            {data?.foreignTravelSummary}
+
+                                        </span></p>   </div>
                             <div className="w-full my-3 flex">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                        آیا سفر مذکور نیاز به موافقت دستگاه های مرجع دیگری در داخل دارد ؟
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                               بله
+                            {data?.referenceDeviceAgreement?"بله":"خیر"}
                                </span></p>
                                <button style={{fontFamily:'Shabnam'}} className="mr-4 rounded-full text-mainColor font-bold h-[28px] bg-lightBlue flex justify-center items-center px-4">
                                 <Download/>
@@ -61,7 +65,7 @@ const [showSendModal, setShowSendModal] = React.useState(false);
                             آیا سفر در راستای مقاومت اقتصادی می باشد ؟
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-خیر
+{data?.resistanceEconomyTravel?"بله":"خیر"}
                               </span></p>
                     </div>
                     {

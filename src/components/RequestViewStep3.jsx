@@ -1,6 +1,6 @@
 import React from "react";
 
-const RequestViewStep3 = () =>{
+const RequestViewStep3 = ({data}) =>{
 
     return(
         <>
@@ -11,7 +11,6 @@ const RequestViewStep3 = () =>{
                            نوع اقامت : 
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                                مکان متعلق به دستگاه داخلی
                             </span>
                         </p>
                     </div>
@@ -20,7 +19,7 @@ const RequestViewStep3 = () =>{
                            هزینه اقامت بر عهده :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                                 سازمان امور بین الملل
+                            {data?.payerCitizenShip}
                             </span>
                         </p>
                     </div>
@@ -29,7 +28,7 @@ const RequestViewStep3 = () =>{
                         میزان هزینه :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                          120000 دلار
+                          {data?.amountOfCost} دلار
                             </span>
                         </p>
                     </div>
@@ -38,7 +37,7 @@ const RequestViewStep3 = () =>{
                            هزینه غذا بر عهده : 
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                              سازمان امور بین الملل
+                            {data?.payerFood}
                             </span>
                         </p>
                     </div>
@@ -47,7 +46,8 @@ const RequestViewStep3 = () =>{
                           میزان هزینه : 
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                                 12000 دلار
+                            {data?.costOfFood}
+ دلار
                             </span>
                         </p>
                     </div>
@@ -56,7 +56,7 @@ const RequestViewStep3 = () =>{
                           نوع بلیط رفت و برگشت :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                               Ecconomic
+                               {data?.tickerTypeId}
                             </span>
                         </p>
                     </div>
@@ -65,7 +65,7 @@ const RequestViewStep3 = () =>{
                            شرکت هواپیمایی :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                              ایران ایر تور
+                              {data?.airlineCompany}
                             </span>
                         </p>
                     </div>
@@ -74,7 +74,7 @@ const RequestViewStep3 = () =>{
                           هزینه بلیط بر عهده :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                               کشور مقصد
+                              {data?.ticketCost}
                             </span>
                         </p>
                     </div>
@@ -83,7 +83,7 @@ const RequestViewStep3 = () =>{
                           میزان هزینه : 
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                              1000 دلار
+                            {data?.theCostOfTicket} دلار
                             </span>
                         </p>
                     </div>
@@ -92,7 +92,7 @@ const RequestViewStep3 = () =>{
                           حق ماموریت :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                              با دریافت حق ماموریت از دستگاه خارجی
+                              {data?.rightOfMission?.rightOfMissionType}
                             </span>
                         </p>
                     </div>
@@ -101,7 +101,7 @@ const RequestViewStep3 = () =>{
                          میزان حق ماموریت : 
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                           کارشناس : 1000 دلار
+                           {data?.levelRightOfMission} : {data?.expertRightOfMission} دلار
                             </span>
                         </p>
                     </div>
@@ -110,7 +110,7 @@ const RequestViewStep3 = () =>{
                           حق آموزش : 
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                             هزینه آموزش توسط متقاضی پرداخت می شود.میزان هزینه : 1000 دلار
+                             هزینه آموزش توسط {data?.rightToEducation?.rightToEducationType} پرداخت می شود.میزان هزینه : {data?.rightToEducationCost} دلار
                             </span>
                         </p>
                     </div>
@@ -119,7 +119,7 @@ const RequestViewStep3 = () =>{
                            حق ایاب و ذهاب : 
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                              بر عهده دستگاه اجرایی : 100 دلار
+                              بر عهده {data?.rightOfCommuting?.rightOfCommutingType} : {data?.rightOfCommutingCost} دلار
                             </span>
                         </p>
                     </div>
@@ -128,7 +128,7 @@ const RequestViewStep3 = () =>{
                            ویزا :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                            هزینه ویزا توسط دستگاه پرداخت می شود.ویزا : 1000 دلار
+                         {data?.visaCost} دلار
                             </span>
                         </p>
                     </div>
@@ -137,7 +137,7 @@ const RequestViewStep3 = () =>{
                            عوارض خروج :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                             بر عهده دستگاه متبوعه
+                            {data?.tollAmount?.tollAmountType}:{data?.tollAmountCost}
                             </span>
                         </p>
                     </div>
@@ -146,7 +146,7 @@ const RequestViewStep3 = () =>{
                          پرداخت از طریق سیستم بانکی :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                           IR986745689700000023
+                           {data?.paymentFromBank}
                             </span>
                         </p>
                     </div>
