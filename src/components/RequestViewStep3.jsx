@@ -14,7 +14,7 @@ const RequestViewStep3 = ({data}) =>{
                             </span>
                         </p>
                     </div>
-                    <div className="w-[48%] mx-1 my-3 md:w-full">
+                    <div className="w-[48%] mx-1 my-3 lg:w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            هزینه اقامت بر عهده :
                             <span>   </span> 
@@ -23,7 +23,7 @@ const RequestViewStep3 = ({data}) =>{
                             </span>
                         </p>
                     </div>
-                    <div className="w-[48%] mx-1 my-3 md:w-full">
+                    <div className="w-[48%] mx-1 my-3 lg:w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                         میزان هزینه :
                             <span>   </span> 
@@ -32,7 +32,7 @@ const RequestViewStep3 = ({data}) =>{
                             </span>
                         </p>
                     </div>
-                    <div className="w-[48%] mx-1 my-3 md:w-full">
+                    <div className="w-[48%] mx-1 my-3 lg:w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            هزینه غذا بر عهده : 
                             <span>   </span> 
@@ -41,7 +41,7 @@ const RequestViewStep3 = ({data}) =>{
                             </span>
                         </p>
                     </div>
-                    <div className="w-[48%] mx-1 my-3 md:w-full">
+                    <div className="w-[48%] mx-1 my-3 lg:w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                           میزان هزینه : 
                             <span>   </span> 
@@ -51,7 +51,7 @@ const RequestViewStep3 = ({data}) =>{
                             </span>
                         </p>
                     </div>
-                    <div className="w-[48%] mx-1 my-3 md:w-full">
+                    <div className="w-[48%] mx-1 my-3 lg:w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                           نوع بلیط رفت و برگشت :
                             <span>   </span> 
@@ -60,7 +60,7 @@ const RequestViewStep3 = ({data}) =>{
                             </span>
                         </p>
                     </div>
-                    <div className="w-[100%] my-3 md:w-full">
+                    <div className="w-[100%] my-3 lg:w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            شرکت هواپیمایی :
                             <span>   </span> 
@@ -69,7 +69,7 @@ const RequestViewStep3 = ({data}) =>{
                             </span>
                         </p>
                     </div>
-                    <div className="w-[48%] mx-1 my-3 md:w-full">
+                    <div className="w-[48%] mx-1 my-3 lg:w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                           هزینه بلیط بر عهده :
                             <span>   </span> 
@@ -78,7 +78,7 @@ const RequestViewStep3 = ({data}) =>{
                             </span>
                         </p>
                     </div>
-                    <div className="w-[48%] mx-1 my-3 md:w-full">
+                    <div className="w-[48%] mx-1 my-3 lg:w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                           میزان هزینه : 
                             <span>   </span> 
@@ -87,7 +87,7 @@ const RequestViewStep3 = ({data}) =>{
                             </span>
                         </p>
                     </div>
-                    <div className="w-[48%] mx-1 my-3 md:w-full">
+                    <div className="w-[48%] mx-1 my-3 lg:w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                           حق ماموریت :
                             <span>   </span> 
@@ -96,7 +96,7 @@ const RequestViewStep3 = ({data}) =>{
                             </span>
                         </p>
                     </div>
-                    <div className="w-[48%] mx-1 my-3 md:w-full">
+                    <div className="w-[48%] mx-1 my-3 lg:w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                          میزان حق ماموریت : 
                             <span>   </span> 
@@ -105,7 +105,7 @@ const RequestViewStep3 = ({data}) =>{
                             </span>
                         </p>
                     </div>
-                    <div className="w-[48%] mx-1 my-3 md:w-full">
+                    <div className=" mx-1 my-3 w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                           حق آموزش : 
                             <span>   </span> 
@@ -114,7 +114,7 @@ const RequestViewStep3 = ({data}) =>{
                             </span>
                         </p>
                     </div>
-                    <div className="w-[48%] mx-1 my-3 md:w-full">
+                    <div className=" mx-1 my-3 w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            حق ایاب و ذهاب : 
                             <span>   </span> 
@@ -123,7 +123,7 @@ const RequestViewStep3 = ({data}) =>{
                             </span>
                         </p>
                     </div>
-                    <div className="w-[48%] mx-1 my-3 md:w-full">
+                    <div className="w-[48%] mx-1 my-3 lg:w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            ویزا :
                             <span>   </span> 
@@ -132,7 +132,7 @@ const RequestViewStep3 = ({data}) =>{
                             </span>
                         </p>
                     </div>
-                    <div className="w-[48%] mx-1 my-3 md:w-full">
+                    <div className="w-[48%] mx-1 my-3 lg:w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            عوارض خروج :
                             <span>   </span> 
@@ -141,7 +141,7 @@ const RequestViewStep3 = ({data}) =>{
                             </span>
                         </p>
                     </div>
-                    <div className="w-full my-3 md:w-full">
+                    <div className="w-full my-3 lg:w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                          پرداخت از طریق سیستم بانکی :
                             <span>   </span> 
