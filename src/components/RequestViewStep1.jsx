@@ -1,6 +1,6 @@
 import React from "react";
 
-const RequestViewStep1 = () =>{
+const RequestViewStep1 = ({data}) =>{
 
     return(
         <>
@@ -11,7 +11,7 @@ const RequestViewStep1 = () =>{
                            نام دستگاه اجرایی :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                                 شرکت توسعه هوشمند
+                                 {data?.executiveDeviceName}
                             </span>
                         </p>
                     </div>
@@ -20,7 +20,7 @@ const RequestViewStep1 = () =>{
                            آدرس اینترنتی دستگاه اجرایی :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                                 cokatex.com
+                                {data?.internetAddressOfTheExecutiveDevice}
                             </span>
                         </p>
                     </div>
@@ -29,7 +29,7 @@ const RequestViewStep1 = () =>{
                           کشور و شهر مقصد :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                           ایتالیا / رم
+                           {data?.destinationCountry} / {data?.destinationCity}
                             </span>
                         </p>
                     </div>
@@ -38,7 +38,7 @@ const RequestViewStep1 = () =>{
                             مسیر پروازی :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                                 ایران-دوبی / دوبی - ایتالیا
+                               {data?.flightPath}
                             </span>
                         </p>
                     </div>
@@ -47,7 +47,7 @@ const RequestViewStep1 = () =>{
                            تاریخ و مدت سفر :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                                  از 02/04/28 لغایت 02/06/28
+                                  از {data?.travelDateStart} لغایت {data?.travalEndDate}
                             </span>
                         </p>
                     </div>
@@ -56,7 +56,7 @@ const RequestViewStep1 = () =>{
                             مدت زمان سفر : 
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                                 36 روز
+                                 {data?.travelTime} روز
                             </span>
                         </p>
                     </div>
@@ -65,7 +65,7 @@ const RequestViewStep1 = () =>{
                             موضوع سفر :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                                انجام حسابرسی پس از پایان مذاکرات
+                                {data?.travelTopic}
                             </span>
                         </p>
                     </div>
@@ -74,7 +74,7 @@ const RequestViewStep1 = () =>{
                             اهداف سفر :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                                اداری - تجاری - سیاسی
+                               {data?.travelGoal?.travelGoalsType}
                             </span>
                         </p>
                     </div>
@@ -83,7 +83,7 @@ const RequestViewStep1 = () =>{
                           اهداف شغلی :  
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                                 مذاکرات - حسابرسی -بازاریابی
+                                 {data?.jobGoal?.jobGoalsType}
                             </span>
                         </p>
                     </div>
@@ -92,7 +92,7 @@ const RequestViewStep1 = () =>{
                            متولیان / شرکت کنندگان :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                              ریاست جمهوری - متولی
+                             {data?.participant?.deviceNameType}
                             </span>
                         </p>
                     </div>
@@ -101,7 +101,7 @@ const RequestViewStep1 = () =>{
                           نوع گذرنامه :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                              سیاسی
+                              {data?.passportType?.passportType}
                             </span>
                         </p>
                     </div>
@@ -110,7 +110,7 @@ const RequestViewStep1 = () =>{
                            آیا نیاز به یادداشت وزارت امورخارجه برای اخذ ویزا دارد؟
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                              بله
+                              {data?.getVisa?"بله":"خیر"}
                             </span>
                         </p>
                     </div>
@@ -119,7 +119,7 @@ const RequestViewStep1 = () =>{
                            آیا سفر مشترک بین چند دستگاه اجرایی است ؟
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                              بله
+                              {data?.joinTrip?"بله":"خیر"}
                             </span>
                         </p>
                     </div>
@@ -128,7 +128,7 @@ const RequestViewStep1 = () =>{
                            شماره،تاریخ نامه و مقام پیشنهاد دهنده داخلی دستگاه برای انجام سفر :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                            120ش/25 - ریاست جمهوری
+{data?.dateLetter}
                             </span>
                         </p>
                     </div>

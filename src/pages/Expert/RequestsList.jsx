@@ -9,7 +9,6 @@ import { useNavigate } from "react-router-dom";
 const ExpertRequestsList = () =>{
     const [data, setData] = useState();
   const [reCheck, setRecheck] = useState(false);
-  const [ticket, setTicket] = useState()
 
   let navigate = useNavigate();
 
@@ -40,16 +39,12 @@ const ExpertRequestsList = () =>{
     
     
     
-        const dataUser = await axiosReq("Ticket/GetSubTickets", {
-          TicketId: cookies.get("ID")
+        const dataUser = await axiosReq("Request/GetRequestsExpert", {
+          ExpertId: cookies.get("ID")
         });
         console.log(dataUser)
         setData(dataUser.data)
-        const tickets = await axiosReq("Ticket/GetTicket", {
-          TicketId: cookies.get("ID")
-        });
-        console.log(tickets)
-        setTicket(tickets?.data)
+   
     
     
       }
@@ -147,7 +142,7 @@ const ExpertRequestsList = () =>{
                 </div>
             </div>
             
-            <ExpertRequestList/>
+            <ExpertRequestList data={data}/>
               
             </div>
         </div>

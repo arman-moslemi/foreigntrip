@@ -279,7 +279,7 @@ const MainRoutes = (props) =>{
                     <Route path="/expert/requestList" element={<ExpertRequestsList/>}/>
                 </Routes>
                 <Routes>
-                    <Route path="/expert/requestView" element={<ExpertRequestsView/>}/>
+                    <Route path="/expert/requestView/:id" element={<ExpertRequestsView/>}/>
                 </Routes>
                 <Routes>
                     <Route path="/expert/reportList" element={<ExpertReportsList/>}/>
