@@ -6,10 +6,10 @@ import {ReactComponent as Search} from "../../assets/icon/white/search.svg"
 
 const RequestsList = () =>{
     return(
-        <div className="w-full h-screen bg-lightGray py-10 px-10 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>
+        <div className="w-full h-screen bg-lightGray py-10 px-10 lg:px-8 md:p-0  lg:h-full" style={{direction:'rtl'}}>
         <div className="flex md:block">
             <MainRightMenu/>
-            <div className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl p-8 my-10 w-[80%] xl:p-5 md:w-[95%] md:rounded-xl md:mx-auto">
+            <div className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl p-8 my-10 w-[80%] min-w-[500px] lg:min-w-[450px] md:min-w-[95%] xl:p-5 md:w-[95%] md:rounded-xl md:mx-auto">
            
             <div className="flex items-center">
                     <Profile/>
@@ -18,15 +18,17 @@ const RequestsList = () =>{
                 </span>
                 
                 </div>
-            <div className="flex justify-between mt-10 items-end">
-                <div className="flex justify-between border border-[#CCCCCD] rounded-full h-[38px] w-[260px] items-center px-2 py-1">
+            <div className="flex xl-1400:flex-col xl-1400:items-start justify-between mt-10 items-end">
+                
+                <div className="flex justify-between border border-[#CCCCCD] rounded-full h-[38px] w-[260px] xl-1400:w-[100%] items-center px-2 py-1">
                     <input type="text" className="border-none focus-visible:outline-none" style={{fontFamily:'Shabnam'}} placeholder="جستجو کنید ..."/>
                     <button className="w-[30px] h-[30px] bg-mainColor shadow-blueShadow rounded-full flex justify-center items-center">
                         <Search/>
                     </button>
                 </div>
-                <div className="flex items-end">
-                <div className="flex flex-col w-[150px] ">
+                <div className="flex items-end justify-between lg:flex-col-reverse lg:items-start  w-[70%] xl-1400:w-[100%] xl-1400:mt-6">
+                <div className="flex lg:flex-wrap items-end xl-1400:w-[83%] lg:w-[100%] lg:mt-6">
+                <div className="flex flex-col w-[150px] lg:w-[48%] lg:ml-[2%] 2xs:w-[100%] 2xs:mx-0 ">
                     <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">بازه زمانی</span>
                     <div class=" mt-3">
                         
@@ -49,7 +51,7 @@ const RequestsList = () =>{
                             placeholder="آرمان"/> */}
                     </div>
                 </div>
-                <div className="flex flex-col w-[150px] mr-2">
+                <div className="flex flex-col w-[150px] lg:w-[48%] lg:mr-0 mr-2 xl-1400:mr-1 2xs:w-[100%] 2xs:mx-0 2xs:mt-4">
                 <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">وضعیت درخواست</span>
                    <div class=" mt-3">
                   
@@ -71,7 +73,7 @@ const RequestsList = () =>{
                             placeholder="آرمان"/> */}
                     </div>
                 </div>
-                <div className="flex flex-col w-[150px] mr-2">
+                <div className="flex flex-col w-[150px] lg:w-[48%] lg:ml-[2%] lg:mr-0 mr-2 xl-1400:mr-1 lg:mt-4 2xs:w-[100%] 2xs:mx-0">
                 <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">تایید شده توسط</span>
 
                    <div class=" mt-3">
@@ -94,18 +96,19 @@ const RequestsList = () =>{
                             placeholder="آرمان"/> */}
                     </div>
                 </div>
-                <button className="bg-mainColor shadow-blueShadow py-2 px-4 text-white mr-2 rounded-md" style={{fontFamily:'Shabnam'}} >
+                <button className="bg-mainColor shadow-blueShadow py-2 px-4 text-white lg:w-[48%]  lg:mr-0 mr-2 2xs:w-[100%] 2xs:mx-0 2xs:mt-4 xl-1400:mr-1 rounded-md" style={{fontFamily:'Shabnam'}} >
                     اعمال
                 </button>
                 </div>
-                <div className="flex">
-                    <button className="shadow-blueShadow  flex px-2  items-center h-[40px] bg-mainColor text-white rounded-md">
+                <div className="flex mr-8 xl-1400:mr-0 xl-1400:w-[16%] lg:w-[100%] justify-end">
+                    <button className="shadow-blueShadow  flex px-2 xl-1400:w-[100%] xl-1400:justify-center items-center h-[40px] bg-mainColor text-white rounded-md">
                   
                         <span className="text-white" style={{fontFamily:'Shabnam'}}>
                             گزارش گیری
                         </span>
                     </button>
          
+                </div>
                 </div>
             </div>
             

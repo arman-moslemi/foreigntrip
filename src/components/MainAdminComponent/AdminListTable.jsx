@@ -115,8 +115,8 @@ const tableRow =[
      <td className="py-4 text-sm text-right pr-4   px-4">
       <input type="checkbox"/>
      </td>
-    <td className="py-4 text-sm text-right pr-4   px-4" style={{fontFamily:'Shabnam'}}>{tableRow.num}</td>
-    <td className="py-4 text-sm text-right   px-4" style={{fontFamily:'Shabnam'}}>
+    <td className="py-4 text-sm text-right pr-4   " style={{fontFamily:'Shabnam'}}>{tableRow.num}</td>
+    <td className="py-4 text-sm text-right   pr-4" style={{fontFamily:'Shabnam'}}>
       <div className="flex items-center">
         <div>
         {tableRow.name}
@@ -124,10 +124,10 @@ const tableRow =[
    
       </div>
     </td>
-    <td className="py-4 text-sm text-right px-4  " style={{fontFamily:'Shabnam'}}>{tableRow.userName}</td>
-    <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}}>{tableRow.password}</td>
-    <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}}>{tableRow.role}</td>
-    <td className="py-4 text-sm text-center px-4  "  style={{fontFamily:'Shabnam'}}>{tableRow.edit}</td>
+    <td className="py-4 text-sm text-right pr-4  " style={{fontFamily:'Shabnam'}}>{tableRow.userName}</td>
+    <td className="py-4 text-sm text-center pr-4  " style={{fontFamily:'Shabnam'}}>{tableRow.password}</td>
+    <td className="py-4 text-sm text-center pr-4  " style={{fontFamily:'Shabnam'}}>{tableRow.role}</td>
+    <td className="py-4 text-sm text-center pr-4  "  style={{fontFamily:'Shabnam'}}>{tableRow.edit}</td>
     <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}}>{tableRow.delete}</td>
     </tr> 
   )
@@ -139,13 +139,13 @@ const tableRow =[
     <th className="text-right pr-4   md:px-4">
       <input type="checkbox"/>
     </th>
-      <th className="text-right pr-4   md:px-4" style={{fontFamily:'Shabnam'}}>ردیف</th>
-      <th className="text-right   md:px-4" style={{fontFamily:'Shabnam'}}>نام و نام خانوادگی</th>
-      <th className="text-right   md:px-4" style={{fontFamily:'Shabnam'}}>نام کاربری</th>
-      <th className="text-center font-IRsan md:px-4" style={{fontFamily:'Shabnam'}}>رمز عبور</th>
-      <th className="text-center font-IRsan md:px-4" style={{fontFamily:'Shabnam'}}>نقش</th>
-      <th className="text-center   md:px-4" style={{fontFamily:'Shabnam'}}>ویرایش</th>
-      <th className="text-center   md:px-4" style={{fontFamily:'Shabnam'}}>حذف</th>
+      <th className="text-right pr-4   " style={{fontFamily:'Shabnam'}}>ردیف</th>
+      <th className="text-right  pr-4 " style={{fontFamily:'Shabnam'}}>نام و نام خانوادگی</th>
+      <th className="text-right  pr-4 " style={{fontFamily:'Shabnam'}}>نام کاربری</th>
+      <th className="text-center pr-4 font-IRsan " style={{fontFamily:'Shabnam'}}>رمز عبور</th>
+      <th className="text-center pr-4 font-IRsan " style={{fontFamily:'Shabnam'}}>نقش</th>
+      <th className="text-center pr-4  " style={{fontFamily:'Shabnam'}}>ویرایش</th>
+      <th className="text-center pr-4 pl-4 " style={{fontFamily:'Shabnam'}}>حذف</th>
     </tr>
   </thead>
   <tbody>
@@ -157,9 +157,9 @@ const tableRow =[
   showError ?
   <>
   <div
-  className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+  className="justify-center 2xs:w-[100%] items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
 >
-  <div className="relative w-auto my-5 mx-auto max-w-3xl">
+  <div className="relative w-auto 2xs:w-[97%] my-5 mx-auto max-w-3xl">
    
     <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
  
@@ -170,7 +170,7 @@ const tableRow =[
      
       </div>
       
-      <div className="relative p-6 flex-auto">
+      <div className="relative p-6 2xs:pr-2 flex-auto">
         <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm   leading-relaxed">
      آیا از حذف مدیر انتخاب شده مطمئن هستید؟
         </p>
@@ -210,7 +210,7 @@ const tableRow =[
   <div
   className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
 >
-  <div className="relative w-[30%] my-5 mx-auto max-w-3xl">
+  <div className="relative w-[30%] xl:w-[50%] md:w-[75%] xs:w-[90%] my-5 mx-auto max-w-3xl">
    
     <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
  
@@ -222,42 +222,42 @@ const tableRow =[
       </div>
       
      
-     <div className="flex flex-wrap p-6">
-      <div className="flex flex-col w-[49%] ml-[2%]">
+     <div className="flex flex-wrap p-6 xs:py-0">
+      <div className="flex flex-col w-[49%] xs:w-[100%] xs:ml-0 xs:mt-3 ml-[2%]">
         <span style={{fontFamily:'Shabnam'}} className="  text-[#0D296E] font-bold text-sm">
           نام
         </span>
         <input className="border border-borderGray rounded-md px-2 py-1   mt-2" placeholder="علی"/>
       </div>
-      <div className="flex flex-col w-[49%]">
+      <div className="flex flex-col w-[49%] xs:w-[100%] xs:mt-3">
         <span style={{fontFamily:'Shabnam'}} className="  text-[#0D296E] font-bold text-sm">
           نام خانوادگی
         </span>
         <input className="border border-borderGray rounded-md px-2 py-1   mt-2" placeholder="اطهری"/>
       </div>
      </div>
-    <div className="flex flex-wrap p-6">
-    <div className="flex flex-col w-[49%]">
+    <div className="flex flex-wrap p-6 xs:py-0">
+    <div className="flex flex-col w-[49%] xs:w-[100%] xs:ml-0 xs:mt-3 ml-[2%]">
         <span style={{fontFamily:'Shabnam'}} className="  text-[#0D296E] font-bold text-sm">
           نام کاربری
         </span>
         <input className="border border-borderGray rounded-md px-2 py-1   mt-2" placeholder="۰۰۲۰۷۶۸۹۷۶"/>
       </div>
-      <div className="flex flex-col w-[49%]">
+      <div className="flex flex-col w-[49%] xs:w-[100%] xs:mt-3">
         <span style={{fontFamily:'Shabnam'}} className="  text-[#0D296E] font-bold text-sm">
           رمز عبور
         </span>
         <input className="border border-borderGray rounded-md px-2 py-1   mt-2" placeholder="۰۹۱۲۸۷۶۸۷۶۵"/>
       </div>
     </div>
-      <div className="flex flex-col w-[50%] px-6 mb-6">
+      <div className="flex flex-col w-[65%] xs:w-[100%] xs:mt-3 px-6 mb-6">
         <span style={{fontFamily:'Shabnam'}} className="  text-[#0D296E] font-bold text-sm">
           نقش
         </span>
         <select style={{fontFamily:'Shabnam'}}
                             name="role"
                             id="role"
-                            className="pr-9   text-right right-6 bg-white border border-borderGray mt-2 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5">
+                            className="pr-2   text-right right-6 bg-white border border-borderGray mt-2 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-2 p-2.5">
                             <option style={{fontFamily:'Shabnam'}} value="newRequest" className=" ">نقش</option>
                             <option  style={{fontFamily:'Shabnam'}}value="waiting" className=" ">ناظر</option>
                             <option  style={{fontFamily:'Shabnam'}}value="check" className=" ">کارشناس امور بین الملل</option>

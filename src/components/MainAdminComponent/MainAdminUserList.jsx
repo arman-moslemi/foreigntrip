@@ -193,9 +193,9 @@ const MainAdminUserList = () =>{
         {showError ?
            <>
             <div
-            className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+            className="justify-center 2xs:w-[100%] items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
           >
-            <div className="relative w-auto my-5 mx-auto max-w-3xl">
+            <div className="relative 2xs:w-[100%] w-auto my-5 mx-auto max-w-3xl">
              
               <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
            
@@ -242,9 +242,9 @@ const MainAdminUserList = () =>{
           {showBan ?
            <>
             <div
-            className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+            className="justify-center 2xs:w-[100%] items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
           >
-            <div className="relative w-auto my-5 mx-auto max-w-3xl">
+            <div className="relative 2xs:w-[100%] w-auto my-5 mx-auto max-w-3xl">
              
               <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
            
@@ -293,7 +293,7 @@ const MainAdminUserList = () =>{
             <div
             className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
           >
-            <div className="relative w-[30%] md:w-[90%] my-5 mx-auto max-w-3xl">
+            <div className="relative w-[30%] xl-lg:w-[50%] md:w-[90%] 2xs:w-[97%] my-5 mx-auto max-w-3xl">
              
               <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
            

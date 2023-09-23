@@ -23,8 +23,8 @@ const MessageForm = () => {
     return (
         <div>
             
-            <div className="flex w-[60%] mx-auto flex-wrap">
-            <div className="flex w-[48%] ml-[4%] mb-4 items-end">
+            <div className="flex w-[60%] 2xl:w-[100%] 2xl:mt-5 mx-auto flex-wrap">
+            <div className="flex w-[48%] xs:w-[100%] ml-[4%] xs:ml-0 mb-4 items-end">
                     <div className="flex flex-col w-[100%] ">
                         <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">تاریخ ارسال پیام</span>
                         <div class="flex items-center h-11 pr-2 mt-3   text-right right-6 bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor  w-full pl-10 " id="test">
@@ -35,16 +35,16 @@ const MessageForm = () => {
                     </div>
                
                 </div>
-                <div className="flex flex-col w-[48%]  mb-4">
+                <div className="flex flex-col w-[48%] xs:w-[100%] mb-4">
                     <span style={{fontFamily:'Shabnam'}}   className="text-base font-normal  ">زمان ارسال پیام</span>
-                    <div class="relative mt-3">
+                    <div class="relative mt-4 ">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
                             <Clock/>
                         </div>
                         <input style={{fontFamily:'Shabnam'}}
                             type="text"
                             id="input-group-1"
-                            class="pr-9   text-right right-6 bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                            class="pr-9 h-[45px]  text-right right-6 bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
                             placeholder="12:33"/>
                     </div>
                 </div>
@@ -92,8 +92,8 @@ const MessageForm = () => {
          </div>
          {
             showAgent?
-                <div className="w-full flex justify-between mt-4 mb-4">
-                        <div className="flex flex-col w-[150px] ">
+                <div className="w-full flex xs:flex-wrap xs:justify-start justify-between  mt-4 mb-4">
+                        <div className="flex flex-col w-[150px] lg-md:w-[135px] xs:mb-3 xs:mr-3 ">
                     <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">انتخاب مجموعه</span>
                     <div class=" mt-2">
                         
@@ -120,7 +120,7 @@ const MessageForm = () => {
                             placeholder="آرمان"/> */}
                     </div>
                 </div>
-                <div className="flex flex-col w-[150px] ">
+                <div className="flex flex-col xs:mx-3 w-[150px] lg-md:w-[135px] ">
                     <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">انتخاب زیر مجموعه</span>
                     <div class=" mt-2">
                         
@@ -147,7 +147,7 @@ const MessageForm = () => {
                             placeholder="آرمان"/> */}
                     </div>
                 </div>
-                <div className="flex flex-col w-[150px] ">
+                <div className="flex flex-col w-[150px] lg-md:w-[135px] xs:mr-3 ">
                     <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">انتخاب مامور اعزامی</span>
                     <div class=" mt-2">
                         
@@ -197,7 +197,7 @@ const MessageForm = () => {
          {
             showExpert?
                 <div className="w-full flex justify-between mt-4 mb-4">
-                        <div className="flex flex-col w-[150px] ">
+                        <div className="flex flex-col w-[150px] xs:mr-3 ">
                     <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">انتخاب کارشناس</span>
                     <div class=" mt-2">
                         
@@ -233,7 +233,7 @@ const MessageForm = () => {
          {
             showSupervisor?
                 <div className="w-full flex justify-between mt-4 mb-4">
-                        <div className="flex flex-col w-[150px] ">
+                        <div className="flex flex-col w-[150px] xs:mr-3 ">
                     <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">انتخاب ناظر</span>
                     <div class=" mt-2">
                         
@@ -258,7 +258,7 @@ const MessageForm = () => {
          
             <button style={{fontFamily:'Shabnam'}}
             onClick={()=>setShowAlert(true)}
-                className=" mr-auto flex items-center justify-center px-4 h-12 bg-mainColor shadow-blueShadow  text-white text-xl font-base rounded-lg hover:bg-lightBlue hover:text-mainColor">
+                className=" mr-auto flex items-center justify-center px-4 h-12 xs:mt-5 xs:w-[100%] bg-mainColor shadow-blueShadow  text-white text-xl font-base rounded-lg hover:bg-lightBlue hover:text-mainColor">
                <Message/>
                <span style={{fontFamily:'Shabnam'}} className="mr-2">
                 ارسال پیام
