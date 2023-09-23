@@ -1,12 +1,45 @@
 import React,{useState} from "react";
 import {ReactComponent as Download} from "../assets/icon/blue/download.svg"
 import { Link } from "react-router-dom";
-const RequestViewStep4 = ({data}) =>{
+import { axiosReq } from "../commons/axiosReq";
+
+const RequestViewStep4 = ({data,id}) =>{
 
         const [show , setShow]=useState(false);
-const [showSuccessModal, setShowSuccessModal] = React.useState(false);
-const [showSendModal, setShowSendModal] = React.useState(false);
+        const [rejDes , setRejDes]=useState();
+const [showSuccessModal, setShowSuccessModal] =useState(false);
+const [showSendModal, setShowSendModal] = useState(false);
+const RejectReq = async () => {
+  console.log(1234)
+  const dataUser = await axiosReq("InternationalExpert/RejectRequest", {
+    RequestId: id,
+    RejectRequest:rejDes
+  });
+  if (dataUser?.status == 200 || dataUser?.status == 204 || dataUser?.status == 201) {
+  
+    setShowSendModal(true)
+}
+else {
+    alert("اطلاعات ورودی نادرست می باشند")
+}
 
+
+}
+const AcceptReq = async () => {
+  console.log(1234)
+  const dataUser = await axiosReq("InternationalExpert/AcceptRequest", {
+    RequestId: id
+  });
+  if (dataUser?.status == 200 || dataUser?.status == 204 || dataUser?.status == 201) {
+    setShowSuccessModal(true)
+
+}
+else {
+    alert("اطلاعات ورودی نادرست می باشند")
+}
+
+
+}
     return(
         <>
       
@@ -74,10 +107,10 @@ const [showSendModal, setShowSendModal] = React.useState(false);
                    <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                         علت رد درخواست مامور اعزامی را اینجا بنویسید
                         </p>
-                        <textarea id="message" style={{fontFamily:'Shabnam'}} rows="8" class="text-black block p-2.5 mt-5   w-full text-sm  rounded border  border-borderGray focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600   dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="توضیحات خود را اینجا بنویسید..."></textarea>
+                        <textarea onChange={(e)=>setRejDes(e.target.value)} id="message" style={{fontFamily:'Shabnam'}} rows="8" class="text-black block p-2.5 mt-5   w-full text-sm  rounded border  border-borderGray focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600   dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="توضیحات خود را اینجا بنویسید..."></textarea>
                        <div className="flex justify-end w-full">
                        
-              <button style={{fontFamily:'Shabnam'}}  onClick={() => setShowSendModal(true)} className="mt-5 min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow   text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor ">
+              <button style={{fontFamily:'Shabnam'}}  onClick={() =>RejectReq()} className="mt-5 min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow   text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor ">
                ارسال
               </button>
               {showSendModal ?
@@ -103,7 +136,7 @@ const [showSendModal, setShowSendModal] = React.useState(false);
                 </div>
                
                 <div className="flex items-center justify-endborder-t justify-end border-solid border-slate-200 rounded-b">
-                  <Link to={'/internationalAdmin/requestList'} style={{fontFamily:'Shabnam'}} 
+                  <Link to={'/internationalExpert/requestList'} style={{fontFamily:'Shabnam'}} 
                     className="text-mainColor   float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowSendModal(false)}
@@ -124,15 +157,28 @@ const [showSendModal, setShowSendModal] = React.useState(false);
                 </div>
                 :
                 <div className="flex w-full justify-end mt-10">
-                <button style={{fontFamily:'Shabnam'}}  className=" bg-[#ff0000] w-[162px] rounded-md h-[40px] flex justify-center items-center text-white    font-medium text-base shadow-redShadow hover:bg-white hover:text-[#ff0000] hover:border-2 hover:border-[#ff0000]" 
-                onClick={()=>setShow(true)
-                }>
-                        رد کردن درخواست
-                    </button>
-                    <button style={{fontFamily:'Shabnam'}}  onClick={() => setShowSuccessModal(true)} className="mr-5 bg-[#3AB50E] hover:bg-white hover:text-[#3AB50E] hover:border-2 hover:border-[#3AB50E] w-[162px] rounded-md h-[40px] flex justify-center items-center text-white    font-medium text-base shadow-greenShadow">
-                       تایید درخواست
-                    </button>
-                    {showSuccessModal ?
+                  {data?.requestStatusId==1?
+                     <button style={{fontFamily:'Shabnam'}}  className=" bg-[#ff0000] w-[162px] rounded-md h-[40px] flex justify-center items-center text-white    font-medium text-base shadow-redShadow hover:bg-white hover:text-[#ff0000] hover:border-2 hover:border-[#ff0000]" 
+                     onClick={()=>setShow(true)
+                     }>
+                             رد کردن درخواست
+                         </button>
+                         :
+                         data?.requestStatusId==1||data?.requestStatusId==3 ?
+                         <button style={{fontFamily:'Shabnam'}}  onClick={() => AcceptReq()} className="mr-5 bg-[#3AB50E] hover:bg-white hover:text-[#3AB50E] hover:border-2 hover:border-[#3AB50E] w-[162px] rounded-md h-[40px] flex justify-center items-center text-white    font-medium text-base shadow-greenShadow">
+                         تایید درخواست
+                      </button>
+                      :
+                      null
+                }
+             
+                  
+             
+             
+                </div>
+            }
+
+{showSuccessModal ?
            <>
             <div
             className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
@@ -155,7 +201,7 @@ const [showSendModal, setShowSendModal] = React.useState(false);
                 </div>
                
                 <div className="flex items-center justify-center  border-solid border-slate-200 rounded-b mb-4">
-                  <Link to={'/internationalAdmin/uploadSignature'} style={{fontFamily:'Shabnam'}} 
+                  <Link to={'/internationalExpert/uploadSignature'} style={{fontFamily:'Shabnam'}} 
                     className=" float-left flex bg-mainColor items-center rounded-md shadow-blueShadow uppercase px-3 py-2 mx-1 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowSuccessModal(false)}
@@ -187,10 +233,7 @@ const [showSendModal, setShowSendModal] = React.useState(false);
           
            </>
            :null
-        }   
-             
-                </div>
-            }
+        }  
                 </div>
         </>
     )

@@ -154,7 +154,6 @@ const ExpertRequestList  = ({data}) =>{
       </td>
     
       <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">{truncate(tableRow.travelTopic,30)}</td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">{tableRow.internationalExpert?.internationalExpertName}</td>
       <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">{tableRow.travelDateStart}</td>
       <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 "><span className="text-black" style={{fontFamily:'Shabnam'}}>
          {tableRow?.travelType?.travelType}
@@ -164,6 +163,12 @@ const ExpertRequestList  = ({data}) =>{
           tableRow.requestStatusId==7?"text-green":tableRow.requestStatusId==1||tableRow.requestStatusId==6?"text-tripDone":"text-red"} style={{fontFamily:'Shabnam'}}>
           {tableRow.requestStatus?.requestStatusTitle}</span>
           </td>
+          <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 "> <div className="flex justify-center">
+          <Link to={'/expert/reportView/'+tableRow?.requestId} className="mx-2" >
+            <Eye/>
+          </Link>
+       
+         </div>  </td>
       <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 "> <div className="flex justify-center">
           <Link to={'/expert/requestView/'+tableRow?.requestId} className="mx-2" >
             <Eye/>
@@ -182,10 +187,11 @@ const ExpertRequestList  = ({data}) =>{
 
       <th style={{fontFamily:'Shabnam'}} className="text-right   md:px-4 pr-4 text-sm">نام مامور</th>
      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsan md:px-4 text-sm">موضوع سفر</th>
-      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsan md:px-4 text-sm">تایید شده توسط</th>
       <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4 text-sm">تاریخ سفر</th>
       <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4 text-sm" >نوع سفر</th>
       <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4 text-sm" >وضعیت</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4 text-sm" >گزارش</th>
+
       <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4 text-sm" >مشاهده</th>
     </tr>
   </thead>

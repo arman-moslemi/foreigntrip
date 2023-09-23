@@ -96,7 +96,7 @@ const ExpertRequestsView = () =>{
                   گام 4 -توضیحات سفر
                 </span>
                 </div> 
-                <RequestViewStep4 data={data}/>
+                <RequestViewStep4 data={data} id={id}/>
             </div>
 
         </div>

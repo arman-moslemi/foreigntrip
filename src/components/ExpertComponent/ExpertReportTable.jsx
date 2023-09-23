@@ -14,7 +14,7 @@ export const truncate = (str, len) => {
   return str;
 };
 
-const ExpertReportTable = () =>{
+const ExpertReportTable = ({data}) =>{
   
 const tableRow =[
   {
@@ -80,23 +80,25 @@ const tableRow =[
   </Link>
   }
 ]
-  const tableBody = tableRow.map((tableRow) =>
+  const tableBody = data?.map((tableRow,index) =>
   <tr key={tableRow.id} className="border-b border-b-borderGray">
-    <td className="py-4 text-sm text-right pr-4   px-4">{tableRow.num}</td>
+    <td className="py-4 text-sm text-right pr-4   px-4">{index+1}</td>
     <td className="py-4 text-sm text-right   px-4">
       <div className="flex items-center">
         <div>
-        {tableRow.name}
+        {tableRow?.request?.agent?.agentName} {tableRow?.request?.agent?.agentFamily}
         </div>
         <div className="w-[20px] h-[20px] rounded-full bg-[#FFBD14] flex items-center justify-center mr-2">
           <span style={{fontFamily:'Shabnam'}} className="text-white   text-sm font-bold">2</span>
         </div>
       </div>
     </td>
-    <td className="py-4 text-sm text-right px-4  ">{tableRow.subject}</td>
-    <td className="py-4 text-sm text-center px-4  " >{tableRow.location}</td>
-    <td className="py-4 text-sm text-center px-4  "  >{tableRow.status}</td>
-    <td className="py-4 text-sm text-center px-4  ">{tableRow.function}</td>
+    <td className="py-4 text-sm text-right px-4  ">{tableRow.requset?.travelTopic}</td>
+    <td className="py-4 text-sm text-center px-4  " >{tableRow.request?.destinationCity}</td>
+    <td className="py-4 text-sm text-center px-4  "  >{tableRow?.request?.requestStatus?.requestStatusTitle}</td>
+    <td className="py-4 text-sm text-center px-4  "> <Link style={{fontFamily:'Shabnam'}}  to={'/expert/reportView'}>
+                <Eye/>
+                </Link></td>
     </tr> 
   )
     return(

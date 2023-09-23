@@ -1,10 +1,55 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ExpertRightMenu from "../../components/ExpertComponent/ExpertRightMenu";
 import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
 import ExpertReportTable from "../../components/ExpertComponent/ExpertReportTable";
 import {ReactComponent as Search} from "../../assets/icon/white/search.svg"
-
+import Cookies from 'universal-cookie';
+import { axiosReq } from "../../commons/axiosReq";
+import { useNavigate,useParams } from "react-router-dom";
 const ExpertReportsList = () =>{
+
+    const [data, setData] = useState();
+    const [reCheck, setRecheck] = useState(false);
+    const id = useParams().id;
+
+    let navigate = useNavigate();
+  
+    useEffect(() => {
+  
+      auth();
+    }, [reCheck]);
+    const auth = async () => {
+      const cookies = new Cookies();
+      var token = cookies.get('token');
+      console.log(token)
+      if (!token) {
+        navigate("/");
+      } else {
+        if (cookies.get('Role') == "InternationalExpert") {
+          GetData()
+  
+        }
+        else {
+          navigate("/");
+  
+        }
+      }
+    }
+      const GetData = async () => {
+          console.log(1234)
+          const cookies = new Cookies();
+      
+      
+      
+          const dataUser = await axiosReq("Report/GetReportByRequest", {
+            RequestId: id
+          });
+          console.log(dataUser)
+          setData(dataUser.data)
+     
+      
+      
+        }
     return(
         <div className="w-full h-screen  bg-lightGray py-10 px-20 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>
         <div className="flex md:block">
@@ -63,7 +108,7 @@ const ExpertReportsList = () =>{
            
                 </div>
             </div>
-                <ExpertReportTable/>
+                <ExpertReportTable data={data}/>
             </div>
         </div>
     </div>
