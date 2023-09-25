@@ -14,7 +14,7 @@ export const truncate = (str, len) => {
   return str;
 };
 
-const ExpertTicketListTable = () =>{
+const ExpertTicketListTable = ({data}) =>{
 
 const tableRow =[
   {
@@ -76,15 +76,28 @@ const tableRow =[
    </Link>
   }
 ]
-  const tableBody = tableRow.map((tableRow) =>
+  const tableBody = data?.map((tableRow,index) =>
   <tr key={tableRow.id} className="border-b border-b-borderGray">
-    <td className="py-4 text-sm text-right pr-4  " style={{fontFamily:'Shabnam'}}>{tableRow.num}</td>
-    <td className="py-4 text-sm text-right  " style={{fontFamily:'Shabnam'}}>{tableRow.date}</td>
-    <td className="py-4 text-sm text-right   truncate" style={{fontFamily:'Shabnam'}}>{tableRow.subject}</td>
-    <td className="py-4 text-sm text-center  "style={{fontFamily:'Shabnam'}} >{tableRow.location}</td>
-    <td className="py-4 text-sm text-center  "  style={{fontFamily:'Shabnam'}}>{tableRow.status}</td>
-    <td className="py-4 text-sm text-center  " style={{fontFamily:'Shabnam'}}>{tableRow.function}</td>
-    </tr> 
+  <td className="py-4 text-sm text-center pr-4  " style={{ fontFamily: 'Shabnam' }}>{index + 1}</td>
+  <td className="py-4 text-sm text-center pr-4 " style={{ fontFamily: 'Shabnam' }}>{tableRow.ticketNumber}</td>
+  <td className="py-4 text-sm text-right  pr-4 truncate" style={{ fontFamily: 'Shabnam' }}>{tableRow.subject}</td>
+  <td className="py-4 text-sm text-center pr-4 " style={{ fontFamily: 'Shabnam' }} >{tableRow.latestUpdate}</td>
+  <td className="py-4 text-sm text-center pr-4 " style={{ fontFamily: 'Shabnam' }}>
+    {
+      tableRow?.ticketStatusId == 1 ?
+        <span style={{ fontFamily: 'Shabnam' }} className="text-sm text-[#ff6900] font-bold  "> {tableRow?.ticketStatus?.ticketStatusTitle}</span >
+        :
+        tableRow?.ticketStatusId == 2 ?
+          <span style={{ fontFamily: 'Shabnam' }} className="text-sm text-green font-bold  "  > {tableRow?.ticketStatus?.ticketStatusTitle}</span >
+          :
+          <span style={{ fontFamily: 'Shabnam' }} className="text-sm text-green font-bold ">     {tableRow?.ticketStatus?.ticketStatusTitle}</span >
+    }
+
+  </td>
+  <td className="py-4 text-sm text-center pr-4 pl-4 " style={{ fontFamily: 'Shabnam' }}><Link style={{ fontFamily: 'Shabnam' }} className="flex justify-center" to={'/ticketShow/'+tableRow?.ticketId}>
+    <Eye />
+  </Link></td>
+</tr>
   )
     return(
         <div className=" mt-10 border-borderGray border border-solid w-full overflow-x-auto whitespace-nowrap ">

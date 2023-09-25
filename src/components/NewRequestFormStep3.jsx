@@ -20,7 +20,8 @@ const NewRequestFormStep3 = () => {
             TicketCost:  "",
             TheCostOfTicket :  "",
             RightOfMissionId :  "",
-            LevelRightOfMission :  "",
+            ManagerRightOfMission :  "",
+            GeneralManagerRightOfMission :  "",
             ExpertRightOfMission:  "",
             RightToEducationCost :  "",
             RightToEducationId :  "",
@@ -66,6 +67,7 @@ const NewRequestFormStep3 = () => {
           const cookies = new Cookies();
           const dataUser = await axiosReq("Request/UpdateRequest3", {
             RequestId:id,
+            TypeAccommodationId:allValues?.TypeAccommodationId,
             PayerCitizenShip: allValues?.PayerCitizenShip,   
             AmountOfCost :  allValues?.AmountOfCost,
             PayerFood:  allValues?.PayerFood,
@@ -75,8 +77,9 @@ const NewRequestFormStep3 = () => {
             TicketCost:  allValues?.TicketCost,
             TheCostOfTicket :  allValues?.TheCostOfTicket,
             RightOfMissionId :  allValues?.RightOfMissionId,
-            LevelRightOfMission : allValues?.LevelRightOfMission,
             ExpertRightOfMission:  allValues?.ExpertRightOfMission,
+            ManagerRightOfMission:  allValues?.ManagerRightOfMission,
+            GeneralManagerRightOfMission:allValues?.GeneralManagerRightOfMission,
             RightToEducationCost :  allValues?.RightToEducationCost,
             RightToEducationId : allValues?.RightToEducationId,
             RightOfCommutingCost :  allValues?.RightOfCommutingCost,
@@ -107,6 +110,9 @@ const NewRequestFormStep3 = () => {
                     <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
                     <input style={{fontFamily:'Shabnam'}}
                         type="checkbox"
+                        value={"1"}          
+                        onChange={changeHandler}
+                        name="TypeAccommodationId"
                         class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1.5"/>
                       هتل 3 ستاره
                     </label>
@@ -115,6 +121,9 @@ const NewRequestFormStep3 = () => {
                     <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
                     <input style={{fontFamily:'Shabnam'}}
                         type="checkbox"
+                        value={"2"}          
+                        onChange={changeHandler}
+                        name="TypeAccommodationId"
                         class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1.5"/>
                       هتل 4 ستاره
                     </label>
@@ -123,6 +132,9 @@ const NewRequestFormStep3 = () => {
                     <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
                     <input style={{fontFamily:'Shabnam'}}
                         type="checkbox"
+                        value={"3"}          
+                        onChange={changeHandler}
+                        name="TypeAccommodationId"
                         class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1.5"/>
                       هتل 5 ستاره 
                     </label>
@@ -131,6 +143,9 @@ const NewRequestFormStep3 = () => {
                     <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
                     <input style={{fontFamily:'Shabnam'}}
                         type="checkbox"
+                        value={"4"}          
+                        onChange={changeHandler}
+                        name="TypeAccommodationId"
                         class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1.5"/>
                       مکان متعلق به دستگاه خارجی
                     </label>
@@ -139,6 +154,9 @@ const NewRequestFormStep3 = () => {
                     <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
                     <input style={{fontFamily:'Shabnam'}}
                         type="checkbox"
+                        value={"5"}          
+                        onChange={changeHandler}
+                        name="TypeAccommodationId"
                         class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1.5"/>
                       مکان متعلق به دستگاه داخلی
                     </label>
@@ -291,13 +309,13 @@ const NewRequestFormStep3 = () => {
                       <div className="flex items-center w-[100%]">
                         <div className="w-36">
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
-                          <input style={{fontFamily:'Shabnam'}}
+                          {/* <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
                           value={"1"}         
                           onChange={changeHandler}
                           name="LevelRightOfMission"
                           
-                          class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4 mr-8"/>
+                          class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4 mr-8"/> */}
                            کارشناس : 
                           </label>
                         </div>
@@ -314,19 +332,19 @@ const NewRequestFormStep3 = () => {
                       <div className="flex items-center mt-3 w-[100%]">
                         <div className="w-36">
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
-                          <input style={{fontFamily:'Shabnam'}}
+                          {/* <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
                           value={"2"}         
                           onChange={changeHandler}
-                          name="LevelRightOfMission"
-                          class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4 mr-8"/>
+                          name=""
+                          class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4 mr-8"/> */}
                             مدیر :
                           </label>
                         </div>
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
                             onChange={changeHandler}
-                            name="ExpertRightOfMission"
+                            name="ManagerRightOfMission"
                             id="input-group-1"
                             class="text-right h-[32px] w-[52%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
                             />
@@ -336,12 +354,12 @@ const NewRequestFormStep3 = () => {
                       <div className="flex items-center mt-3 w-[100%]">
                         <div className="w-36">
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
-                          <input style={{fontFamily:'Shabnam'}}
+                          {/* <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
                           value={"3"}         
                           onChange={changeHandler}
                           name="LevelRightOfMission"
-                          class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4 mr-8"/>
+                          class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4 mr-8"/> */}
                             مدیر کل :
                           </label>
                         </div>
@@ -349,7 +367,7 @@ const NewRequestFormStep3 = () => {
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
-                            name="ExpertRightOfMission"
+                            name="GeneralManagerRightOfMission"
                             class="text-right h-[32px] w-[52%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
                             />
 

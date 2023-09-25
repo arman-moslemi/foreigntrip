@@ -92,10 +92,10 @@ setSnipper(false)
 
     navigate("/supervisor/userList");
   }
-  if(response.data.role=="Admin"){
+  if(response.data.role=="InternationalAdmin"){
     cookies.set('Role',response.data.role, { path: '/' })
 
-    cookies.set('Role',response.data.role, { path: '/admin' })
+    cookies.set('Role',response.data.role, { path: '/internationalAdmin' })
 
     navigate("/internationalAdmin/userList");
   }

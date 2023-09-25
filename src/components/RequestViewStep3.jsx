@@ -9,7 +9,7 @@ const RequestViewStep3 = ({data}) =>{
                     <div className="w-full my-3">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            نوع اقامت : 
-                            <span>   </span> 
+                            <span>   {data?.typeAccommodation?.typeAccommodationType} </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
                             </span>
                         </p>

@@ -1,10 +1,77 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import ExpertRightMenu from "../../components/ExpertComponent/ExpertRightMenu";
 import { Link } from "react-router-dom";
 import {ReactComponent as Ticket} from "../../assets/icon/blue/ticket.svg"
 import ExpertTicketListTable from "../../components/ExpertComponent/ExpertTicketListTable";
+import Cookies from 'universal-cookie';
+import { axiosReq } from "../../commons/axiosReq";
+import { useNavigate } from "react-router-dom";
 const ExpertTicketList= () => {
-    const [showNewTicket,setShowNewTicket] = React.useState(false);
+    const [showNewTicket,setShowNewTicket] = useState(false);
+    const [data, setData] = useState();
+    const [reCheck, setRecheck] = useState(false);
+    const [message, setMessage] = useState();
+  
+    let navigate = useNavigate();
+  
+    useEffect(() => {
+    
+      auth();
+    }, [reCheck]);
+    const auth=async()=>{
+      const cookies = new Cookies();
+      var token= cookies.get('token');
+      console.log(token)
+      if(!token){
+       navigate("/");
+      }else{
+   if( cookies.get('Role')=="InternationalExpert")
+   {
+     GetData()
+  
+   }
+   else{
+    navigate("/");
+  
+   }
+      }
+    }
+    const GetData=async()=>{
+        console.log(1234)
+        const cookies = new Cookies();
+     
+     
+     
+       const dataUser = await axiosReq("Ticket/GetTicketExpert",{
+        InternationalExpertIdId:cookies.get("ID")
+       });
+       console.log(dataUser)
+     setData(dataUser.data)
+  
+       
+       }
+    const insertTicket=async()=>{
+        console.log(1234)
+        const cookies = new Cookies();
+     
+     
+     
+       const dataUser = await axiosReq("Ticket/InsertSubTicketExpertAdmin",{
+        InternationalExpertId:cookies.get("ID"),
+        Subject:message,
+        AdminId:1
+       });
+       if (dataUser?.status == 200 || dataUser?.status == 204 || dataUser?.status == 201) {
+setRecheck(!reCheck)
+        navigate("/expert/ticketShow/"+dataUser?.data?.ticketId)
+
+    }
+    else {
+        alert("اطلاعات ورودی نادرست می باشند")
+    }
+  
+       
+       }
     return(
         <div className="w-full h-screen bg-lightGray py-10 px-20 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>
         <div className="flex md:block">
@@ -21,7 +88,7 @@ const ExpertTicketList= () => {
                         + تیکت جدید
                     </button>
                 </div>
-                <ExpertTicketListTable/>
+                <ExpertTicketListTable data={data}/>
                 </div>
             </div>
             {
@@ -47,7 +114,7 @@ const ExpertTicketList= () => {
                         <span style={{fontFamily:'Shabnam'}} className="  text-black font-Bold text-base">
                             عنوان پیام شما
                         </span>
-                        <input type="text" style={{fontFamily:'Shabnam'}} className="pr-2   text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5" placeholder="عنوان پیام خود را اینجا بنویسید..."/>
+                        <input onChange={(e)=>setMessage(e.target.value)} type="text" style={{fontFamily:'Shabnam'}} className="pr-2   text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5" placeholder="عنوان پیام خود را اینجا بنویسید..."/>
                        </div>
                       
                        <div className="flex items-center mb-2 justify-endborder-t justify-center border-solid border-slate-200 rounded-b">
@@ -61,16 +128,15 @@ const ExpertTicketList= () => {
                           بستن
                          </button>
                     
-                        <Link to={'/expert/ticketShow'}>
                         <button
                         style={{fontFamily:'Shabnam'}}
                            className="text-white bg-mainColor shadow-blueShadow rounded-lg   float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                            type="button"
-                          
+                           onClick={()=>insertTicket()}
+
                          >
                           شروع ارسال پیام
                          </button>
-                        </Link>
                       
                       
                        </div>
