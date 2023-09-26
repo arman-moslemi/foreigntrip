@@ -94,7 +94,8 @@ const tableRow =[
     }
 
   </td>
-  <td className="py-4 text-sm text-center pr-4 pl-4 " style={{ fontFamily: 'Shabnam' }}><Link style={{ fontFamily: 'Shabnam' }} className="flex justify-center" to={'/ticketShow/'+tableRow?.ticketId}>
+  <td className="py-4 text-sm text-center pr-4 pl-4 " style={{ fontFamily: 'Shabnam' }}>
+    <Link style={{ fontFamily: 'Shabnam' }} className="flex justify-center" to={'/expert/ticketShow/'+tableRow?.ticketId}>
     <Eye />
   </Link></td>
 </tr>

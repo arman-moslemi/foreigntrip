@@ -291,7 +291,7 @@ const MainRoutes = (props) =>{
                     <Route path="/expert/ticketList" element={<ExpertTicketList/>}/>
                 </Routes>
                 <Routes>
-                    <Route path="/expert/ticketShow" element={<ExpertTicketShow/>}/>
+                    <Route path="/expert/ticketShow/:id" element={<ExpertTicketShow/>}/>
                 </Routes>
                 <Routes>
                     <Route path="/reportView" element={<UserReportsView/>}/>

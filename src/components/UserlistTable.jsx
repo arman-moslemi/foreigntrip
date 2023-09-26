@@ -16,7 +16,7 @@ export const truncate = (str, len) => {
     return str;
   };
 
-const UserlistTable = () =>{
+const UserlistTable = ({data}) =>{
     const tableRow =[
         {
           id:'1',
@@ -61,23 +61,23 @@ const UserlistTable = () =>{
           },
       
       ]
-    const tableBody = tableRow.map((tableRow) =>
+    const tableBody = data?.map((tableRow,index) =>
     <tr key={tableRow.id} className="border-b border-b-borderGray">
-      <td className="py-4 text-sm text-right pr-4   px-4" style={{fontFamily:'Shabnam'}}>{tableRow.num}</td>
+      <td className="py-4 text-sm text-right pr-4   px-4" style={{fontFamily:'Shabnam'}}>{index+1}</td>
       <td className="py-4 text-sm text-right   px-4" style={{fontFamily:'Shabnam'}}>
         
       
-          {tableRow.name}
+          {tableRow.agentName} {tableRow.agentFamily}
         
         
        
       </td>
    
-      <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}}>{tableRow.position}</td>
-      <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}} >{tableRow.holding}</td>
-      <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}}>{tableRow.company}</td>
-      <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}}>{tableRow.lastEdit}</td>
-      <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}}>{tableRow.status}</td>
+      <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}}>{tableRow.position?.positionType}</td>
+      <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}} >{tableRow.subset}</td>
+      <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}}>{tableRow.companyName}</td>
+      <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}}>{tableRow.registerDate}</td>
+      <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}}>{tableRow.agentStatus?.agentStatusType}</td>
       </tr> 
     )
     return(
@@ -112,7 +112,7 @@ const UserlistTable = () =>{
       <th className="text-center font-IRsan md:px-4" style={{fontFamily:'Shabnam'}}>سمت</th>
       <th className="text-center   md:px-4" style={{fontFamily:'Shabnam'}}>هولدینگ</th>
       <th className="text-center   md:px-4" style={{fontFamily:'Shabnam'}} >شرکت</th>
-      <th className="text-center   md:px-4" style={{fontFamily:'Shabnam'}} >آخرین به روزرسانی</th>
+      <th className="text-center   md:px-4" style={{fontFamily:'Shabnam'}}>تاریخ ثبت </th>
       <th className="text-center   md:px-4" style={{fontFamily:'Shabnam'}}>وضعیت</th>
     </tr>
   </thead>

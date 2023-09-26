@@ -19,7 +19,7 @@ const ExpertRequestsList = () => {
     const auth = async () => {
         const cookies = new Cookies();
         var token = cookies.get('token');
-        console.log(token)
+        console.log(cookies.get('Role'))
         if (!token) {
             navigate("/");
         } else {
