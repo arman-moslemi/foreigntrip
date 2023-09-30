@@ -28,68 +28,6 @@ const NewRequestFormStep1 = () => {
     ParticipantID:''
   });
 
-<<<<<<< HEAD
-    return (
-        <div>
-          <p style={{fontFamily: 'Shabnam'}} className="text-xl text-mainColor font-bold mt-3.5 mb-8 ">گام 1 - اطلاعات اولیه</p>
-            <div className="flex w-full flex-wrap">
-                <div className="flex flex-col w-[31%] ml-[1.5%] mb-5">
-                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">نام دستگاه اجرایی</span>
-                    <div class="mt-2">
-                        <input style={{fontFamily: 'Shabnam'}}
-                            type="text"
-                            id="input-group-1"
-                            class="  text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
-                            placeholder="نام دستکاه اجرایی"/>
-                    </div>
-                </div>
-                <div className="flex flex-col w-[32%] mx-[1.5%] mb-5">
-                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">آدرس اینترنتی دستگاه اجرایی</span>
-                    <div class="mt-2">
-                        <input style={{fontFamily: 'Shabnam'}}
-                            type="text"
-                            id="input-group-1"
-                            class="  text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
-                            placeholder="آدرس اینترنتی دستگاه اجرایی"/>
-                    </div>
-                </div>
-                <div className="flex flex-col w-[12%] mr-[1.5%] mb-5">
-                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">کشور مقصد</span>
-                    <div class="mt-2">
-                        <input style={{fontFamily: 'Shabnam'}}
-                            type="text"
-                            id="input-group-1"
-                            class="  text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
-                            placeholder="کشور مقصد"/>
-                    </div>
-                </div>
-                <div className="flex flex-col w-[12%] mr-[1.5%] mb-5">
-                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">شهر مقصد</span>
-                    <div class="mt-2">
-                        <input style={{fontFamily: 'Shabnam'}}
-                            type="text"
-                            id="input-group-1"
-                            class="  text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
-                            placeholder="شهر مقصد"/>
-                    </div>
-                </div>
-                <div className="flex flex-col w-[31%] ml-[1.5%] mb-7">
-                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">مسیر پروازی</span>
-                    <div class="mt-2">
-                        <input style={{fontFamily: 'Shabnam'}}
-                            type="text"
-                            id="input-group-1"
-                            class="  text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
-                            placeholder="مسیر پروازی"/>
-                    </div>
-                </div>
-                <div className="flex w-[32%] mx-[1.5%] mb-7 items-end">
-                    <div className="flex flex-col w-[39%] ">
-                        <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">تاریخ و مدت سفر</span>
-                        <div class="mt-2   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full" id="StartDate">
-                        <DatePicker style={{fontFamily:'Shabnam'}} placeholder="خهاخعل"  onChange={(e) => console.log(e.value)} />
-                            {/* <input style={{fontFamily: 'Shabnam'}}
-=======
   const fixNumbers = function (str)
 {
   var
@@ -248,7 +186,6 @@ if(e.target)    {
 
               />
               {/* <input style={{fontFamily: 'Shabnam'}}
->>>>>>> 6b9e95c6bae36929eb2c3f517bf90862035f4fa8
                                 type="text"
                                 id="input-group-1"
                                 class="   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "

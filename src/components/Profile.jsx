@@ -38,7 +38,7 @@ const Profile = () => {
         var token = cookies.get('token');
         console.log(token)
         if (!token) {
-            navigate("/");
+            // navigate("/");
         } else {
             if (cookies.get('Role') == "Agent") {
                 GetData()
@@ -126,7 +126,7 @@ const Profile = () => {
 
     }
     return (
-        <div className="w-[80%] mx-auto">
+        <div className="w-[80%] mx-auto lg-md:w-[100%]">
             <div className="flex justify-center">
                 <div className="relative rounded-full h-[86px] w-[86px] mt-4 mb-4 ml-8">
                     <img src={UserImg} alt="" />
@@ -141,8 +141,8 @@ const Profile = () => {
                     * پر کردن تمامی فیلدها اجباری است.
                 </p>
             </div>
-            <div className="flex w-full flex-wrap">
-                <div className="flex flex-col w-[48%] ml-[2%] mb-4">
+            <div className="flex w-full flex-wrap xs-510:block">
+                <div className="flex flex-col w-[48%] ml-[2%] mb-4 xs-510:w-[100%] xs-510:ml-[0px]">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-normal  ">کد ملی</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
@@ -157,7 +157,7 @@ const Profile = () => {
                             placeholder="کد ملی" />
                     </div>
                 </div>
-                <div className="flex w-[48%] mr-[2%] mb-4 items-end">
+                <div className="flex w-[48%] mr-[2%] mb-4 items-end xs-510:w-[100%] xs-510:mr-[0px]">
                     <div className="flex flex-col w-[100%] ">
                         <span style={{ fontFamily: 'Shabnam' }} className="text-base font-normal  ">تاریخ تولد</span>
                         <div class="relative mt-3">
@@ -185,7 +185,7 @@ const Profile = () => {
                             className="w-[100%] p-2.5 bg-mainColor rounded-md text-white shadow-blueShadow text-base font-bold  ">استعلام</button>
                     </div> */}
                 </div>
-                <div className="flex flex-col w-[48%] ml-[2%] mb-4">
+                <div className="flex flex-col w-[48%] ml-[2%] mb-4 xs-510:w-[100%] xs-510:ml-[0px]">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-normal  ">نام شما</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
@@ -200,7 +200,7 @@ const Profile = () => {
                             placeholder="نام" />
                     </div>
                 </div>
-                <div className="flex flex-col w-[48%] mr-[2%] mb-4">
+                <div className="flex flex-col w-[48%] mr-[2%] mb-4 xs-510:w-[100%] xs-510:mr-[0px]">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-normal  ">نام خانوادگی شما</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
@@ -215,7 +215,7 @@ const Profile = () => {
                             placeholder="نام خانوادگی" />
                     </div>
                 </div>
-                <div className="flex flex-col w-[48%] ml-[2%] mb-4">
+                <div className="flex flex-col w-[48%] ml-[2%] mb-4 xs-510:w-[100%] xs-510:ml-[0px]">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-normal  ">شماره تلفن همراه</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
@@ -230,7 +230,7 @@ const Profile = () => {
                             placeholder="شماره تلفن همراه" />
                     </div>
                 </div>
-                <div className="flex flex-col w-[48%] mr-[2%] mb-4">
+                <div className="flex flex-col w-[48%] mr-[2%] mb-4 xs-510:w-[100%] xs-510:mr-[0px]">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-normal  ">شماره تلفن ثابت</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
@@ -246,7 +246,7 @@ const Profile = () => {
                             placeholder="شماره تلفن ثابت" />
                     </div>
                 </div>
-                <div className="flex flex-col w-[48%] ml-[2%] mb-4">
+                <div className="flex flex-col w-[48%] ml-[2%] mb-4 xs-510:w-[100%] xs-510:ml-[0px]">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-normal  ">آدرس ایمیل</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
@@ -262,7 +262,7 @@ const Profile = () => {
                             placeholder="ایمیل" />
                     </div>
                 </div>
-                <div className="flex w-[48%] mr-[2%] mb-4 items-end">
+                <div className="flex w-[48%] mr-[2%] mb-4 items-end xs-510:w-[100%] xs-510:mr-[0px]">
                     <div className="flex flex-col w-[64%] ">
                         <span style={{ fontFamily: 'Shabnam' }} className="text-base font-normal  ">کد پستی</span>
                         <div class="relative mt-3">
@@ -284,7 +284,7 @@ const Profile = () => {
                             className="w-[100%] p-2.5 bg-mainColor rounded-md text-white shadow-blueShadow text-base font-bold  ">استعلام</button>
                     </div>
                 </div>
-                <div className="flex flex-col w-[100%]  mb-4">
+                <div className="flex flex-col w-[100%]  mb-4 ">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-normal  ">آدرس شما</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
@@ -302,7 +302,7 @@ const Profile = () => {
                             placeholder="آدرس شما"></textarea>
                     </div>
                 </div>
-                <div className="flex flex-col w-[48%] ml-[2%] mb-4">
+                <div className="flex flex-col w-[48%] ml-[2%] mb-4 xs-510:w-[100%] xs-510:ml-[0px]">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-normal  ">دسته بندی مجموعه</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
@@ -333,7 +333,7 @@ const Profile = () => {
                             placeholder="آرمان"/> */}
                     </div>
                 </div>
-                <div className="flex flex-col w-[48%] mr-[2%] mb-4">
+                <div className="flex flex-col w-[48%] mr-[2%] mb-4 xs-510:w-[100%] xs-510:mr-[0px]">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-normal  ">زیر مجموعه</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
@@ -349,7 +349,7 @@ const Profile = () => {
                             placeholder="نام زیر مجموعه" />
                     </div>
                 </div>
-                <div className="flex flex-col w-[48%] ml-[2%] mb-4">
+                <div className="flex flex-col w-[48%] ml-[2%] mb-4 xs-510:w-[100%] xs-510:ml-[0px]">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-normal  ">نوع رابط استخدامی</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
@@ -378,7 +378,7 @@ const Profile = () => {
                             placeholder="آرمان"/> */}
                     </div>
                 </div>
-                <div className="flex flex-col w-[48%] mr-[2%] mb-4">
+                <div className="flex flex-col w-[48%] mr-[2%] mb-4 xs-510:w-[100%] xs-510:mr-[0px]">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-normal  ">سمت</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
@@ -408,7 +408,7 @@ const Profile = () => {
                             placeholder="آرمان"/> */}
                     </div>
                 </div>
-                <div className="flex flex-col w-[48%] ml-[2%] mb-4">
+                <div className="flex flex-col w-[48%] ml-[2%] mb-4 xs-510:w-[100%] xs-510:ml-[0px]">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-normal  ">رمز عبور</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
@@ -421,7 +421,7 @@ const Profile = () => {
                             placeholder="رمز عبور" />
                     </div>
                 </div>
-                <div className="flex flex-col w-[48%] mr-[2%] mb-4">
+                <div className="flex flex-col w-[48%] mr-[2%] mb-4 xs-510:w-[100%] xs-510:mr-[0px]">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-normal  ">کد امنیتی</span>
                     <div className="flex justify-between items-center ">
                         <div class="relative mt-3 w-[90%]">
@@ -446,7 +446,7 @@ const Profile = () => {
 
 
             <button onClick={updateAgent} style={{ fontFamily: 'Shabnam' }}
-                className="w-[60%] mx-auto  h-12 bg-mainColor shadow-blueShadow mt-10 flex justify-center items-center text-white text-xl font-medium rounded-lg hover:bg-lightBlue hover:text-mainColor">
+                className="w-[60%] mx-auto xs-510:w-[100%] h-12 bg-mainColor shadow-blueShadow mt-10 flex justify-center items-center text-white text-xl font-medium rounded-lg hover:bg-lightBlue hover:text-mainColor">
                 ویرایش اطلاعات کاربری
             </button>
 
