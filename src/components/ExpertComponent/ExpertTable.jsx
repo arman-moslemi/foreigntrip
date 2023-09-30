@@ -62,8 +62,8 @@ const tableRow =[
 ]
   const tableBody = tableRow.map((tableRow) =>
   <tr key={tableRow.id} className="border-b border-b-borderGray">
-    <td className="py-4 text-sm text-right pr-4   px-4" style={{fontFamily:'Shabnam'}}>{tableRow.num}</td>
-    <td className="py-4 text-sm text-right   px-4">
+    <td className="py-4 text-sm text-right pr-4   " style={{fontFamily:'Shabnam'}}>{tableRow.num}</td>
+    <td className="py-4 text-sm text-right   pr-4">
       <div className="flex items-center" style={{fontFamily:'Shabnam'}}>
         <div>
         {tableRow.name}
@@ -71,9 +71,9 @@ const tableRow =[
    
       </div>
     </td>
-    <td className="py-4 text-sm text-right px-4  " style={{fontFamily:'Shabnam'}}>{tableRow.userName}</td>
-    <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}} >{tableRow.password}</td>
-    <td className="py-4 text-sm text-center px-4  "  style={{fontFamily:'Shabnam'}}>{tableRow.action}</td>
+    <td className="py-4 text-sm text-right pr-4  " style={{fontFamily:'Shabnam'}}>{tableRow.userName}</td>
+    <td className="py-4 text-sm text-center pr-4  " style={{fontFamily:'Shabnam'}} >{tableRow.password}</td>
+    <td className="py-4 text-sm text-center pr-4 pl-4  "  style={{fontFamily:'Shabnam'}}>{tableRow.action}</td>
   
     </tr> 
   )
@@ -82,11 +82,11 @@ const tableRow =[
           <table class="table-auto w-full  ">
   <thead className="bg-darkGray h-11 rounded-t-2xl w-full whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}> 
     <tr className="text-white  p-6 whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}>
-      <th className="text-right pr-4   md:px-4" style={{fontFamily:'Shabnam'}}>ردیف</th>
-      <th className="text-right   md:px-4" style={{fontFamily:'Shabnam'}}>نام و نام خانوادگی</th>
-      <th className="text-right   md:px-4" style={{fontFamily:'Shabnam'}}>نام کاربری</th>
-      <th className="text-center font-IRsan md:px-4" style={{fontFamily:'Shabnam'}}>رمز عبور</th>
-      <th className="text-center   md:px-4" style={{fontFamily:'Shabnam'}}>عملیات</th>
+      <th className="text-right pr-4  " style={{fontFamily:'Shabnam'}}>ردیف</th>
+      <th className="text-right   pr-4" style={{fontFamily:'Shabnam'}}>نام و نام خانوادگی</th>
+      <th className="text-right   pr-4" style={{fontFamily:'Shabnam'}}>نام کاربری</th>
+      <th className="text-center font-IRsan pr-4" style={{fontFamily:'Shabnam'}}>رمز عبور</th>
+      <th className="text-center pl-4  pr-4" style={{fontFamily:'Shabnam'}}>عملیات</th>
 
     </tr>
   </thead>
@@ -164,13 +164,13 @@ const tableRow =[
       </div>
       
       <div className="flex flex-wrap p-6">
-                <div className="flex flex-col w-[39%] ml-[2%]">
+                <div className="flex flex-col w-[39%] xs:w-[100%] xs:mx-0 xs:mb-6 ml-[2%]">
                   <span style={{fontFamily:'Shabnam'}} className="  text-[#0D296E] font-bold text-sm">
                     نام
                   </span>
                   <input className="border border-borderGray rounded-md px-2 py-1   mt-2" placeholder="علی"/>
                 </div>
-                <div className="flex flex-col w-[59%]">
+                <div className="flex flex-col w-[59%] xs:w-[100%]">
                   <span style={{fontFamily:'Shabnam'}} className="  text-[#0D296E] font-bold text-sm">
                     نام خانوادگی
                   </span>
@@ -236,7 +236,7 @@ const tableRow =[
       </div>
       
       <div className="relative p-6 flex-auto">
-        <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm   leading-relaxed">
+        <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm 2xs:text-xs   leading-relaxed">
     آیا از مسدودسازی کارشناس انتخاب شده مطمئن هستید؟
         </p>
       </div>

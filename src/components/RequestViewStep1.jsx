@@ -1,6 +1,6 @@
 import React from "react";
 
-const RequestViewStep1 = () =>{
+const RequestViewStep1 = ({data}) =>{
 
     return(
         <>
@@ -9,126 +9,126 @@ const RequestViewStep1 = () =>{
                     <div className="w-full my-3">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            نام دستگاه اجرایی :
-                            <span>   </span> 
+                            <span></span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                                 شرکت توسعه هوشمند
+                                 {data?.executiveDeviceName}
                             </span>
                         </p>
                     </div>
-                    <div className="w-[48%] mx-1 my-3 md:w-full">
+                    <div className="w-[48%] mx-1 my-3 xl:w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            آدرس اینترنتی دستگاه اجرایی :
-                            <span>   </span> 
+                            <span></span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                                 cokatex.com
+                                {data?.internetAddressOfTheExecutiveDevice}
                             </span>
                         </p>
                     </div>
-                    <div className="w-[48%] mx-1 my-3 md:w-full">
+                    <div className="w-[48%] mx-1 my-3 xl:w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                           کشور و شهر مقصد :
-                            <span>   </span> 
+                            <span></span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                           ایتالیا / رم
+                           {data?.destinationCountry} / {data?.destinationCity}
                             </span>
                         </p>
                     </div>
-                    <div className="w-[48%] mx-1 my-3 md:w-full">
+                    <div className="w-[48%] mx-1 my-3 xl:w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                             مسیر پروازی :
-                            <span>   </span> 
+                            <span></span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                                 ایران-دوبی / دوبی - ایتالیا
+                               {data?.flightPath}
                             </span>
                         </p>
                     </div>
-                    <div className="w-[48%] mx-1 my-3 md:w-full">
+                    <div className="w-[48%] mx-1 my-3 xl:w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            تاریخ و مدت سفر :
-                            <span>   </span> 
+                            <span></span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                                  از 02/04/28 لغایت 02/06/28
+                                  از {data?.travelDateStart} لغایت {data?.travalEndDate}
                             </span>
                         </p>
                     </div>
-                    <div className="w-[48%] mx-1 my-3 md:w-full">
+                    <div className="w-[48%] mx-1 my-3 xl:w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                             مدت زمان سفر : 
-                            <span>   </span> 
+                            <span></span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                                 36 روز
+                                 {data?.travelTime} روز
                             </span>
                         </p>
                     </div>
-                    <div className="w-[100%] my-3 md:w-full">
+                    <div className="w-[100%] my-3 xl:w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                             موضوع سفر :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                                انجام حسابرسی پس از پایان مذاکرات
+                                {data?.travelTopic}
                             </span>
                         </p>
                     </div>
-                    <div className="w-[48%] mx-1 my-3 md:w-full">
+                    <div className="w-[48%] mx-1 my-3 xl:w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                             اهداف سفر :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                                اداری - تجاری - سیاسی
+                               {data?.travelGoal?.travelGoalsType}
                             </span>
                         </p>
                     </div>
-                    <div className="w-[48%] mx-1 my-3 md:w-full">
+                    <div className="w-[48%] mx-1 my-3 xl:w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                           اهداف شغلی :  
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                                 مذاکرات - حسابرسی -بازاریابی
+                                 {data?.jobGoal?.jobGoalsType}
                             </span>
                         </p>
                     </div>
-                    <div className="w-[48%] mx-1 my-3 md:w-full">
+                    <div className="w-[48%] mx-1 my-3 xl:w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            متولیان / شرکت کنندگان :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                              ریاست جمهوری - متولی
+                             {data?.participant?.deviceNameType}
                             </span>
                         </p>
                     </div>
-                    <div className="w-[48%] mx-1 my-3 md:w-full">
+                    <div className="w-[48%] mx-1 my-3 xl:w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                           نوع گذرنامه :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                              سیاسی
+                              {data?.passportType?.passportType}
                             </span>
                         </p>
                     </div>
-                    <div className="w-[48%] mx-1 my-3 md:w-full">
+                    <div className="w-[48%] mx-1 my-3 xl:w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            آیا نیاز به یادداشت وزارت امورخارجه برای اخذ ویزا دارد؟
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                              بله
+                              {data?.getVisa?"بله":"خیر"}
                             </span>
                         </p>
                     </div>
-                    <div className="w-[48%] mx-1 my-3 md:w-full">
+                    <div className="w-[48%] mx-1 my-3 xl:w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            آیا سفر مشترک بین چند دستگاه اجرایی است ؟
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                              بله
+                              {data?.joinTrip?"بله":"خیر"}
                             </span>
                         </p>
                     </div>
-                    <div className="w-full my-3 md:w-full">
+                    <div className="w-full my-3 xl:w-full">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                            شماره،تاریخ نامه و مقام پیشنهاد دهنده داخلی دستگاه برای انجام سفر :
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
-                            120ش/25 - ریاست جمهوری
+{data?.dateLetter}
                             </span>
                         </p>
                     </div>

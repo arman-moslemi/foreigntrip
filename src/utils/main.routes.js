@@ -83,13 +83,13 @@ const MainRoutes = (props) =>{
                     <Route path="/newRequestStep1" element={<NewRequestStep1/>} />
                 </Routes>
                 <Routes>
-                    <Route path="/newRequestStep2" element={<NewRequestStep2/>} />
+                    <Route path="/newRequestStep2/:id" element={<NewRequestStep2/>} />
                 </Routes>
                 <Routes>
-                    <Route path="/newRequestStep3" element={<NewRequestStep3/>} />
+                    <Route path="/newRequestStep3/:id" element={<NewRequestStep3/>} />
                 </Routes>
                 <Routes>
-                    <Route path="/newRequestStep4" element={<NewRequestStep4/>} />
+                    <Route path="/newRequestStep4/:id" element={<NewRequestStep4/>} />
                 </Routes>
                 <Routes>
                     <Route path="/" element={<Login/>} />
@@ -114,7 +114,7 @@ const MainRoutes = (props) =>{
                     <Route path="/profile" element={<Profile/>} />
                 </Routes>
                 <Routes>
-                    <Route path="/submitReport" element={<SubmitReport/>} />
+                    <Route path="/submitReport/:id" element={<SubmitReport/>} />
                 </Routes>
                 <Routes>
                     <Route path="/passportRequest" element={<PassportRequest/>} />
@@ -147,7 +147,7 @@ const MainRoutes = (props) =>{
                     <Route path="/ticketList" element={<TicketList/>} />
                 </Routes>
                 <Routes>
-                    <Route path="/ticketShow" element={<TicketShow/>} />
+                    <Route path="/ticketShow/:id" element={<TicketShow/>} />
                 </Routes>
                 <Routes>
                     <Route path="/supervisor/userList" element={<Userlist/>}/>
@@ -279,19 +279,19 @@ const MainRoutes = (props) =>{
                     <Route path="/expert/requestList" element={<ExpertRequestsList/>}/>
                 </Routes>
                 <Routes>
-                    <Route path="/expert/requestView" element={<ExpertRequestsView/>}/>
+                    <Route path="/expert/requestView/:id" element={<ExpertRequestsView/>}/>
                 </Routes>
                 <Routes>
-                    <Route path="/expert/reportList" element={<ExpertReportsList/>}/>
+                    <Route path="/expert/reportList/:id" element={<ExpertReportsList/>}/>
                 </Routes>
                 <Routes>
-                    <Route path="/expert/reportView" element={<ExpertReportsView/>}/>
+                    <Route path="/expert/reportView/:id" element={<ExpertReportsView/>}/>
                 </Routes>
                 <Routes>
                     <Route path="/expert/ticketList" element={<ExpertTicketList/>}/>
                 </Routes>
                 <Routes>
-                    <Route path="/expert/ticketShow" element={<ExpertTicketShow/>}/>
+                    <Route path="/expert/ticketShow/:id" element={<ExpertTicketShow/>}/>
                 </Routes>
                 <Routes>
                     <Route path="/reportView" element={<UserReportsView/>}/>

@@ -36,11 +36,19 @@ module.exports = {
     },
     screens:{
       '2xl':{'max':'1536px'},
+      'xl-1400':{'max':'1400px'},
       'xl': {'max': '1280px'},
+      'xl-lg': {'max': '1195px'},
       'lg': {'max': '1024px'},
+      'lg-md': {'max': '913px'},
       'md':{'max' : '768px'},
+      'md-sm':{'max' : '680px'},
       'sm':{'max':'640px'},
-      'xs':{'max':'480px'}
+      'sm-xs':{'max':'579px'},
+      'xs-510':{'max':'510px'},
+      'xs':{'max':'480px'},
+      '2xs':{'max':'356px'}
+
   
     }
   },

@@ -8,12 +8,12 @@ const SupervisorsList = () =>{
     const[showAdd,
             setShowAdd]=useState(false);
     return(
-        <div className="w-full h-full bg-lightGray py-10 px-10 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>
+        <div className="w-full h-full bg-lightGray py-10 px-10 lg:px-8 md:p-0  lg:h-full" style={{direction:'rtl'}}>
         <div className="flex md:block">
             <InternationalRightMenu/>
-            <div className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl p-12 my-10 w-[80%] xl:p-5 md:w-[95%] md:rounded-xl md:mx-auto">
+            <div className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl p-12 my-10 w-[80%] min-w-[500px] lg:min-w-[450px] md:min-w-[95%] xl:p-5 md:w-[95%] md:rounded-xl md:mx-auto">
            
-         <div className="flex justify-between">
+         <div className="flex justify-between 2xs:flex-col 2xs:items-start">
          <div className="flex items-center">
                     <Doc/>
                 <span style={{fontFamily:'Shabnam'}} className="  text-mainColor mr-3 font-bold">
@@ -22,7 +22,7 @@ const SupervisorsList = () =>{
                 
                 </div>
        
-                <button onClick={()=>setShowAdd(true)} className="bg-mainColor shadow-blueShadow py-2 px-4 text-white mr-2 rounded-md" style={{fontFamily:'Shabnam'}} >
+                <button onClick={()=>setShowAdd(true)} className="bg-mainColor shadow-blueShadow py-2 px-4 text-white mr-2 2xs:mt-4 2xs:w-[100%] 2xs:mr-0 rounded-md" style={{fontFamily:'Shabnam'}} >
                     + ثبت نام
                 </button>
          </div>
@@ -44,13 +44,13 @@ const SupervisorsList = () =>{
       </div>
       
       <div className="flex flex-wrap p-6">
-                <div className="flex flex-col w-[39%] ml-[2%]">
+                <div className="flex flex-col w-[39%] xs:w-[100%] xs:ml-0 xs:mb-6 ml-[2%]">
                   <span style={{fontFamily:'Shabnam'}} className="  text-[#0D296E] font-bold text-sm">
                     نام
                   </span>
                   <input className="border border-borderGray rounded-md px-2 py-1   mt-2" placeholder="نام"/>
                 </div>
-                <div className="flex flex-col w-[59%]">
+                <div className="flex flex-col xs:w-[100%] w-[59%]">
                   <span style={{fontFamily:'Shabnam'}} className="  text-[#0D296E] font-bold text-sm">
                     نام خانوادگی
                   </span>

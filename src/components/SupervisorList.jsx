@@ -107,8 +107,8 @@ const tableRow =[
 ]
   const tableBody = tableRow.map((tableRow) =>
   <tr key={tableRow.id} className="border-b border-b-borderGray">
-    <td className="py-4 text-sm text-right pr-4   px-4">{tableRow.num}</td>
-    <td className="py-4 text-sm text-right   px-4" style={{fontFamily:'Shabnam'}}>
+    <td className="py-4 text-sm text-right pr-4   ">{tableRow.num}</td>
+    <td className="py-4 text-sm text-right   pr-4" style={{fontFamily:'Shabnam'}}>
       <div className="flex items-center">
         <div>
         {tableRow.name}
@@ -116,10 +116,10 @@ const tableRow =[
    
       </div>
     </td>
-    <td className="py-4 text-sm text-right px-4  " style={{fontFamily:'Shabnam'}}>{tableRow.userName}</td>
-    <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}}>{tableRow.password}</td>
-    <td className="py-4 text-sm text-center px-4  "  style={{fontFamily:'Shabnam'}}>{tableRow.edit}</td>
-    <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}}>{tableRow.delete}</td>
+    <td className="py-4 text-sm text-right pr-4  " style={{fontFamily:'Shabnam'}}>{tableRow.userName}</td>
+    <td className="py-4 text-sm text-center pr-4  " style={{fontFamily:'Shabnam'}}>{tableRow.password}</td>
+    <td className="py-4 text-sm text-center pr-4  "  style={{fontFamily:'Shabnam'}}>{tableRow.edit}</td>
+    <td className="py-4 text-sm text-center pr-4 pl-4  " style={{fontFamily:'Shabnam'}}>{tableRow.delete}</td>
     </tr> 
   )
     return(
@@ -127,12 +127,12 @@ const tableRow =[
           <table class="table-auto w-full  ">
   <thead className="bg-darkGray h-11 rounded-t-2xl w-full whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}> 
     <tr className="text-white  p-6 whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}>
-      <th className="text-right pr-4   md:px-4" style={{fontFamily:'Shabnam'}}>ردیف</th>
-      <th className="text-right   md:px-4" style={{fontFamily:'Shabnam'}}>نام و نام خانوادگی</th>
-      <th className="text-right   md:px-4" style={{fontFamily:'Shabnam'}}>نام کاربری</th>
-      <th className="text-center font-IRsan md:px-4s" style={{fontFamily:'Shabnam'}}>رمز عبور</th>
-      <th className="text-center   md:px-4" style={{fontFamily:'Shabnam'}}>ویرایش</th>
-      <th className="text-center   md:px-4" style={{fontFamily:'Shabnam'}} >حذف</th>
+      <th className="text-right pr-4  " style={{fontFamily:'Shabnam'}}>ردیف</th>
+      <th className="text-right   pr-4" style={{fontFamily:'Shabnam'}}>نام و نام خانوادگی</th>
+      <th className="text-right   pr-4" style={{fontFamily:'Shabnam'}}>نام کاربری</th>
+      <th className="text-center font-IRsan pr-4" style={{fontFamily:'Shabnam'}}>رمز عبور</th>
+      <th className="text-center   pr-4" style={{fontFamily:'Shabnam'}}>ویرایش</th>
+      <th className="text-center  pl-4 pr-4" style={{fontFamily:'Shabnam'}} >حذف</th>
     </tr>
   </thead>
   <tbody>
@@ -163,7 +163,7 @@ const tableRow =[
         </p>
       </div>
      
-      <div className="flex items-center justify-center justify-end border-solid border-slate-200 rounded-b">
+      <div className="flex items-center justify-center  border-solid border-slate-200 rounded-b">
         <button
         style={{fontFamily:'Shabnam'}}
           className="text-black   float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
@@ -209,13 +209,13 @@ const tableRow =[
       </div>
       
       <div className="flex flex-wrap p-6">
-                <div className="flex flex-col w-[39%] ml-[2%]">
+                <div className="flex flex-col w-[39%] xs:w-[100%] xs:ml-0 xs:mb-6 ml-[2%]">
                   <span style={{fontFamily:'Shabnam'}} className="  text-[#0D296E] font-bold text-sm">
                     نام
                   </span>
                   <input className="border border-borderGray rounded-md px-2 py-1   mt-2" placeholder="علی"/>
                 </div>
-                <div className="flex flex-col w-[59%]">
+                <div className="flex flex-col w-[59%] xs:w-[100%]">
                   <span style={{fontFamily:'Shabnam'}} className="  text-[#0D296E] font-bold text-sm">
                     نام خانوادگی
                   </span>

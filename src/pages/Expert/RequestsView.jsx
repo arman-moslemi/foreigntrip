@@ -1,12 +1,64 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ExpertRightMenu from "../../components/ExpertComponent/ExpertRightMenu";
 import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
-
 import RequestViewStep1 from "../../components/RequestViewStep1";
 import RequestViewStep2 from "../../components/RequestViewStep2";
 import RequestViewStep3 from "../../components/RequestViewStep3";
+import RequestViewStep4 from "../../components/RequestViewStep4";
 import ExpertRequestViewStep4 from "../../components/ExpertComponent/ExpertRequestViewStep4";
+import Cookies from 'universal-cookie';
+import { axiosReq } from "../../commons/axiosReq";
+import { useNavigate,useParams } from "react-router-dom";
+
 const ExpertRequestsView = () =>{
+    const [data, setData] = useState();
+    const [emp, setEmployee] = useState();
+    const [reCheck, setRecheck] = useState(false);
+  
+    let navigate = useNavigate();
+    const id = useParams().id;
+
+    useEffect(() => {
+  
+      auth();
+    }, [reCheck]);
+    const auth = async () => {
+      const cookies = new Cookies();
+      var token = cookies.get('token');
+      console.log(token)
+      if (!token) {
+        navigate("/");
+      } else {
+        if (cookies.get('Role') == "InternationalExpert") {
+          GetData()
+  
+        }
+        else {
+          navigate("/");
+  
+        }
+      }
+    }
+      const GetData = async () => {
+          console.log(1234)
+          const cookies = new Cookies();
+      
+      
+      
+          const dataUser = await axiosReq("Request/GetRequest", {
+            RequestId: id
+          });
+          console.log(dataUser)
+          setData(dataUser.data)
+        
+          const dataEmployee = await axiosReq("Request/GetRequestEmployee", {
+            RequestId: id
+        });
+        console.log(dataEmployee)
+        setEmployee(dataEmployee?.data)
+      
+      
+        }
     return(
         <div className="w-full h-full  bg-lightGray py-10 px-10 xl:px-0 md:p-0  lg:h-full" style={{direction:'rtl'}}>
         <div className="flex md:block">
@@ -26,25 +78,25 @@ const ExpertRequestsView = () =>{
                     گام 1 -اطلاعات اولیه
                 </span>
                 </div>    
-          <RequestViewStep1/>
+          <RequestViewStep1 data={data}/>
           <div className="mt-12">
                 <span className="text-mainColor font-bold" style={{fontFamily:'Shabnam'}}>
                   گام 2 -فهرست اسامی و مشخصات ماموران اعزامی
                 </span>
                 </div>  
-                <RequestViewStep2/>
+                <RequestViewStep2 data={emp}/>
                 <div className="mt-12">
                 <span className="text-mainColor font-bold" style={{fontFamily:'Shabnam'}}>
                     گام 3 - اطلاعات تکمیلی
                 </span>
                 </div> 
-                <RequestViewStep3/>
+                <RequestViewStep3 data={data}/>
                 <div className="mt-12">
                 <span className="text-mainColor font-bold" style={{fontFamily:'Shabnam'}}>
                   گام 4 -توضیحات سفر
                 </span>
                 </div> 
-                <ExpertRequestViewStep4/>
+                <RequestViewStep4 data={data} id={id}/>
             </div>
 
         </div>

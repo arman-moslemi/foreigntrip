@@ -21,7 +21,7 @@ export const truncate = (str, len) => {
     return str;
   };
 
-const ExpertRequestList  = () =>{
+const ExpertRequestList  = ({data}) =>{
 
     const tableRow =[
         {
@@ -131,25 +131,50 @@ const ExpertRequestList  = () =>{
         }, 
       
       ]
-    const tableBody = tableRow.map((tableRow) =>
+    const tableBody = data?.map((tableRow) =>
     <tr key={tableRow.id} className="border-b border-b-borderGray">
     
     
       <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-right  px-4">
-        
+      <div className="flex items-center">
+          <div className="relative ml-2">
+            <img src={Img1} alt="userImg" className="rounded-full w-[40px] h-[40px]"/>
+            <div className="absolute top-0 -left-2 bg-[#4CFF0D] w-[15px] h-[15px] rounded-full">
+              
+            </div>
+          </div>
+          <span className="text-sm text-[#000] mr-2 font-semibold" style={{fontFamily:'Shabnam'}}>
+          {tableRow.agent?.agentName} {tableRow.agent?.agentFamily} 
+          </span>
+         </div>
       
-          {tableRow.name} 
         
         
        
       </td>
     
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">{tableRow.subject}</td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">{tableRow.acceptedBy}</td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">{tableRow.date}</td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">{tableRow.tripType}</td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">{tableRow.status}</td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">{tableRow.action}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">{truncate(tableRow.travelTopic,30)}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">{tableRow.travelDateStart}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 "><span className="text-black" style={{fontFamily:'Shabnam'}}>
+         {tableRow?.travelType?.travelType}
+         </span></td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">
+        <span className={tableRow.requestStatusId==2||tableRow.requestStatusId==4||
+          tableRow.requestStatusId==7?"text-green":tableRow.requestStatusId==1||tableRow.requestStatusId==6?"text-tripDone":"text-red"} style={{fontFamily:'Shabnam'}}>
+          {tableRow.requestStatus?.requestStatusTitle}</span>
+          </td>
+          <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 "> <div className="flex justify-center">
+          <Link to={'/expert/reportView/'+tableRow?.requestId} className="mx-2" >
+            <Eye/>
+          </Link>
+       
+         </div>  </td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 "> <div className="flex justify-center">
+          <Link to={'/expert/requestView/'+tableRow?.requestId} className="mx-2" >
+            <Eye/>
+          </Link>
+       
+         </div>  </td>
       </tr> 
     )
     return(
@@ -162,10 +187,11 @@ const ExpertRequestList  = () =>{
 
       <th style={{fontFamily:'Shabnam'}} className="text-right   md:px-4 pr-4 text-sm">نام مامور</th>
      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsan md:px-4 text-sm">موضوع سفر</th>
-      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsan md:px-4 text-sm">تایید شده توسط</th>
       <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4 text-sm">تاریخ سفر</th>
       <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4 text-sm" >نوع سفر</th>
       <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4 text-sm" >وضعیت</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4 text-sm" >گزارش</th>
+
       <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4 text-sm" >مشاهده</th>
     </tr>
   </thead>

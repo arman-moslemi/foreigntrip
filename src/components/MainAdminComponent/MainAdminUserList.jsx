@@ -144,11 +144,11 @@ const MainAdminUserList = () =>{
       ]
     const tableBody = tableRow.map((tableRow) =>
     <tr key={tableRow.id} className="border-b border-b-borderGray">
-       <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-right pr-4   px-4">
+       <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center pr-4   ">
         <input type="checkbox"/>
        </td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-right pr-4   px-4">{tableRow.num}</td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-right  px-4 pr-0">
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center pr-4   ">{tableRow.num}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center  pr-4">
         
       
           {tableRow.name} 
@@ -157,29 +157,29 @@ const MainAdminUserList = () =>{
        
       </td>
     
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center px-4  " >{tableRow.code}</td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center px-4  "  >{tableRow.phoneNumber}</td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center px-4  ">{tableRow.post}</td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center px-4  ">{tableRow.action}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center pr-4  " >{tableRow.code}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center pr-4  "  >{tableRow.phoneNumber}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center pr-4  ">{tableRow.post}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-sm text-center pr-4 pl-4 ">{tableRow.action}</td>
 
       </tr> 
     )
     return(
         <>
      
-        <div className=" mt-10 border-borderGray border border-solid w-full overflow-x-auto whitespace-nowrap ">
+        <div className=" mt-10 lg:mt-6 border-borderGray border border-solid w-full overflow-x-auto whitespace-nowrap ">
           <table class="table-auto w-full  ">
   <thead className="bg-darkGray h-11 rounded-t-2xl w-full whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}> 
     <tr className="text-white  p-6 whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}>
-    <th style={{fontFamily:'Shabnam'}} className="text-right pr-4   md:px-4">
+    <th style={{fontFamily:'Shabnam'}} className="text-center pr-4   ">
       <input type="checkbox"/>
     </th>
-      <th style={{fontFamily:'Shabnam'}} className="text-right pr-4   md:px-4">ردیف</th>
-      <th style={{fontFamily:'Shabnam'}} className="text-right   md:px-4">نام و نام خانوادگی کاربر</th>
-     <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsan md:px-4">کد ملی</th>
-      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsan md:px-4">شماره تلفن همراه</th>
-      <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4">پست ستادی</th>
-      <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4" >عملیات</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-center pr-4   ">ردیف</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-center pr-4  ">نام و نام خانوادگی کاربر</th>
+     <th style={{fontFamily:'Shabnam'}} className="text-center  pr-4 font-IRsan ">کد ملی</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-center pr-4 font-IRsan">شماره تلفن همراه</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-center pr-4  ">پست ستادی</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-center pr-4 pl-4  " >عملیات</th>
       
     </tr>
   </thead>
@@ -193,9 +193,9 @@ const MainAdminUserList = () =>{
         {showError ?
            <>
             <div
-            className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+            className="justify-center 2xs:w-[100%] items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
           >
-            <div className="relative w-auto my-5 mx-auto max-w-3xl">
+            <div className="relative 2xs:w-[100%] w-auto my-5 mx-auto max-w-3xl">
              
               <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
            
@@ -242,9 +242,9 @@ const MainAdminUserList = () =>{
           {showBan ?
            <>
             <div
-            className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+            className="justify-center 2xs:w-[100%] items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
           >
-            <div className="relative w-auto my-5 mx-auto max-w-3xl">
+            <div className="relative 2xs:w-[100%] w-auto my-5 mx-auto max-w-3xl">
              
               <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
            
@@ -293,7 +293,7 @@ const MainAdminUserList = () =>{
             <div
             className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
           >
-            <div className="relative w-[30%] md:w-[90%] my-5 mx-auto max-w-3xl">
+            <div className="relative w-[30%] xl-lg:w-[50%] md:w-[90%] 2xs:w-[97%] my-5 mx-auto max-w-3xl">
              
               <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
            

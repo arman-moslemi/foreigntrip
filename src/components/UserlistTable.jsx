@@ -16,7 +16,7 @@ export const truncate = (str, len) => {
     return str;
   };
 
-const UserlistTable = () =>{
+const UserlistTable = ({data}) =>{
     const tableRow =[
         {
           id:'1',
@@ -61,41 +61,41 @@ const UserlistTable = () =>{
           },
       
       ]
-    const tableBody = tableRow.map((tableRow) =>
+    const tableBody = data?.map((tableRow,index) =>
     <tr key={tableRow.id} className="border-b border-b-borderGray">
-      <td className="py-4 text-sm text-right pr-4   px-4" style={{fontFamily:'Shabnam'}}>{tableRow.num}</td>
+      <td className="py-4 text-sm text-right pr-4   px-4" style={{fontFamily:'Shabnam'}}>{index+1}</td>
       <td className="py-4 text-sm text-right   px-4" style={{fontFamily:'Shabnam'}}>
         
       
-          {tableRow.name}
+          {tableRow.agentName} {tableRow.agentFamily}
         
         
        
       </td>
    
-      <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}}>{tableRow.position}</td>
-      <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}} >{tableRow.holding}</td>
-      <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}}>{tableRow.company}</td>
-      <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}}>{tableRow.lastEdit}</td>
-      <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}}>{tableRow.status}</td>
+      <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}}>{tableRow.position?.positionType}</td>
+      <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}} >{tableRow.subset}</td>
+      <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}}>{tableRow.companyName}</td>
+      <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}}>{tableRow.registerDate}</td>
+      <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}}>{tableRow.agentStatus?.agentStatusType}</td>
       </tr> 
     )
     return(
         <>
-        <div className="flex justify-between items-center mt-8 flex-wrap md:justify-end">
-            <div className="flex items-center flex-wrap">
-                <span style={{fontFamily:'Shabnam'}} className="  text-mainColor font-bold text-base ml-4">
+        <div className="flex justify-between items-center mt-8 flex-wrap xl-lg:flex-col xl-lg:items-end">
+            <div className="flex items-center flex-wrap sm-xs:flex-col sm-xs:items-start xl-lg:w-[100%]">
+                <span style={{fontFamily:'Shabnam'}} className="  text-mainColor font-bold text-base ml-4 xl-lg:ml-0 xl-lg:w-[27%] lg:w-[31%] lg-md:w-[38%] md:w-[27%] md-sm:w-[31%] sm-xs:w-[100%] xs-510:w-[100%] xs:w-[100%] sm-xs:mb-3">
                     جستجو در بین کاربران
                 </span>
-                <input type="text" className="border rounded-full w-80 border-midGray px-4 py-1.5   md:mt-3" placeholder="جستجو کنید ..."/>
+                <input type="text" className="border rounded-full w-80 border-midGray px-4 py-1.5 xl-lg:w-[73%] lg:w-[69%] lg-md:w-[62%] md:w-[73%] md-sm:w-[69%] sm-xs:w-[100%] xs-510:w-[100%] xs:w-[100%]  " placeholder="جستجو کنید ..."/>
             </div>
-          <div className="flex">
-          <button style={{fontFamily:'Shabnam'}} className="bg-mainColor shadow-blueShadow rounded-md text-base   text-white flex px-5 py-2  items-center justify-center md:float-left md:mt-3">
+          <div className="flex xl-lg:justify-end xl-lg:mt-4 xl-lg:w-[100%]">
+          <button style={{fontFamily:'Shabnam'}} className="bg-mainColor shadow-blueShadow rounded-md text-base   text-white flex px-5 py-2  items-center justify-center md:float-left md:mt-3 sm-xs:w-[48%] 2xs:w-[49%] 2xs:px-1">
                 <Search/>
                 جستجو
 
             </button>
-          <button style={{fontFamily:'Shabnam'}} className="bg-mainColor shadow-blueShadow rounded-md text-base mr-2   text-white flex px-5 py-2  items-center justify-center md:float-left md:mt-3">
+          <button style={{fontFamily:'Shabnam'}} className="bg-mainColor shadow-blueShadow rounded-md text-base mr-2   text-white flex px-5 py-2  items-center justify-center md:float-left md:mt-3 sm-xs:mr-[4%] 2xs:mr-[2%] sm-xs:w-[48%] 2xs:w-[49%] 2xs:px-1">
                 <Download className="w-[25px]"/>
                 گزارش گیری
 
@@ -112,7 +112,7 @@ const UserlistTable = () =>{
       <th className="text-center font-IRsan md:px-4" style={{fontFamily:'Shabnam'}}>سمت</th>
       <th className="text-center   md:px-4" style={{fontFamily:'Shabnam'}}>هولدینگ</th>
       <th className="text-center   md:px-4" style={{fontFamily:'Shabnam'}} >شرکت</th>
-      <th className="text-center   md:px-4" style={{fontFamily:'Shabnam'}} >آخرین به روزرسانی</th>
+      <th className="text-center   md:px-4" style={{fontFamily:'Shabnam'}}>تاریخ ثبت </th>
       <th className="text-center   md:px-4" style={{fontFamily:'Shabnam'}}>وضعیت</th>
     </tr>
   </thead>

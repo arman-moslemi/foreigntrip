@@ -17,7 +17,7 @@ export const truncate = (str, len) => {
     return str;
 };
 
-const NewRequestFormStep2Table = () => {
+const NewRequestFormStep2Table = ({data}) => {
 
     const tableRow = [
         {
@@ -58,22 +58,22 @@ const NewRequestFormStep2Table = () => {
             employmentStatus: 'پیمانی'
         }
     ]
-    const tableBody = tableRow.map((tableRow) => <tr key={tableRow.id} className="border-b border-b-borderGray">
+    const tableBody = data?.map((tableRow) => <tr key={tableRow.requestId} className="border-b border-b-borderGray">
         <td
             style={{
             fontFamily: 'Shabnam'
         }}
-            className="py-4 text-xs text-right pr-4 px-4">{tableRow.name}</td>
+            className="py-4 text-xs text-right pr-4 px-4">{tableRow.employeeName} {tableRow.employeeFamily}</td>
         <td
             style={{
             fontFamily: 'Shabnam'
         }}
-            className="py-4 text-xs text-right px-4 ">{tableRow.father}</td>
+            className="py-4 text-xs text-right px-4 ">{tableRow.employeeFatherName}</td>
         <td
             style={{
             fontFamily: 'Shabnam'
         }}
-            className="py-4 text-xs text-right px-4 ">{tableRow.idNumber}</td>
+            className="py-4 text-xs text-right px-4 ">{tableRow.birthCertificationNumber}</td>
         <td
             style={{
             fontFamily: 'Shabnam'
@@ -83,17 +83,17 @@ const NewRequestFormStep2Table = () => {
             style={{
             fontFamily: 'Shabnam'
         }}
-            className="py-4 text-xs text-center px-4 ">{tableRow.birthday}</td>
+            className="py-4 text-xs text-center px-4 ">{tableRow.birthCertificationDate}</td>
         <td
             style={{
             fontFamily: 'Shabnam'
         }}
-            className="py-4 text-xs text-center px-4 ">{tableRow.gender}</td>
+            className="py-4 text-xs text-center px-4 ">{tableRow.gender?.genderType}</td>
         <td
             style={{
             fontFamily: 'Shabnam'
         }}
-            className="py-4 text-xs text-center px-4 ">{tableRow.maritalStatus}</td>
+            className="py-4 text-xs text-center px-4 ">{tableRow.maritalStatus?.maritalStatusType}</td>
         <td
             style={{
             fontFamily: 'Shabnam'
@@ -103,42 +103,42 @@ const NewRequestFormStep2Table = () => {
             style={{
             fontFamily: 'Shabnam'
         }}
-            className="py-4 text-xs text-center px-4 ">{tableRow.foreign}</td>
+            className="py-4 text-xs text-center px-4 ">{tableRow.fieldOfStudy}</td>
         <td
             style={{
             fontFamily: 'Shabnam'
         }}
-            className="py-4 text-xs text-center px-4 ">{tableRow.experience}</td>
+            className="py-4 text-xs text-center px-4 ">{tableRow.workExperience}سال</td>
         <td
             style={{
             fontFamily: 'Shabnam'
         }}
-            className="py-4 text-xs text-center px-4 ">{tableRow.phoneNumber}</td>
+            className="py-4 text-xs text-center px-4 ">{tableRow.mobile}</td>
         <td
             style={{
             fontFamily: 'Shabnam'
         }}
-            className="py-4 text-xs text-center px-4 ">{tableRow.landLineNumber}</td>
+            className="py-4 text-xs text-center px-4 ">{tableRow.phone}</td>
         <td
             style={{
             fontFamily: 'Shabnam'
         }}
-            className="py-4 text-xs text-center px-4 ">{tableRow.passportType}</td>
+            className="py-4 text-xs text-center px-4 ">{tableRow.passPortType?.passportType}</td>
         <td
             style={{
             fontFamily: 'Shabnam'
         }}
-            className="py-4 text-xs text-center px-4 ">{tableRow.location}</td>
+            className="py-4 text-xs text-center px-4 ">{tableRow.jobLocation}</td>
         <td
             style={{
             fontFamily: 'Shabnam'
         }}
-            className="py-4 text-xs text-center px-4 ">{tableRow.position}</td>
+            className="py-4 text-xs text-center px-4 ">{tableRow.position?.positionType}</td>
         <td
             style={{
             fontFamily: 'Shabnam'
         }}
-            className="py-4 text-xs text-center px-4">{tableRow.employmentStatus}</td>
+            className="py-4 text-xs text-center px-4">{tableRow.employeeStatus}</td>
         <td
             style={{
             fontFamily: 'Shabnam'

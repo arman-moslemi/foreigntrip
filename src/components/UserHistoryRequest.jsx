@@ -14,9 +14,10 @@ export const truncate = (str, len) => {
   return str;
 };
 
-const UserHistoryRequest = () =>{
+const UserHistoryRequest = ({data}) =>{
   const [showSuccessModal, setShowSuccessModal] = React.useState(false);
   const [showRuleModal, setShowRuleModal] = React.useState(false);
+  const [reject, setReject] = React.useState();
 const tableRow =[
   {
     id:'1',
@@ -85,14 +86,83 @@ const tableRow =[
  </Link>
   }
 ]
-  const tableBody = tableRow.map((tableRow) =>
+  const tableBody = data?.map((tableRow) =>
   <tr key={tableRow.id} className="border-b border-b-borderGray">
-    <td className="py-4 text-sm text-right pr-4  "style={{fontFamily:'Shabnam'}}>{tableRow.num}</td>
-    <td className="py-4 text-sm text-right  "style={{fontFamily:'Shabnam'}}>{tableRow.date}</td>
-    <td className="py-4 text-sm text-right   truncate"style={{fontFamily:'Shabnam'}}>{tableRow.subject}</td>
-    <td className="py-4 text-sm text-center  " style={{fontFamily:'Shabnam'}}>{tableRow.location}</td>
-    <td className="py-4 text-sm text-center  "  style={{fontFamily:'Shabnam'}}>{tableRow.status}</td>
-    <td className="py-4 text-sm text-center  "style={{fontFamily:'Shabnam'}}>{tableRow.function}</td>
+    <td className="py-4 text-sm text-right pr-4 font-IRsans">{tableRow.requestId}</td>
+    <td className="py-4 text-sm text-right font-IRsans">{tableRow.travelDateStart}</td>
+    <td className="py-4 text-sm text-right font-IRsans truncate">{tableRow.travelTopic}</td>
+    <td className="py-4 text-sm text-center font-IRsans" >{tableRow.destinationCity}</td>
+      {
+        tableRow.requestStatusId==2?
+        <>
+        <td className="py-4  text-center font-IRsans text-sm text-red font-bold "  >{tableRow.requestStatus?.requestStatusTitle}</td>
+        <td className="py-4 text-sm text-center font-IRsans">
+
+        <button onClick={() => {setReject(tableRow?.rejectRequest);setShowSuccessModal(true)}} className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
+        مشاهده علت
+      </button>
+      </td>
+
+      </>
+        :
+        tableRow.requestStatusId==1?
+        <>
+        <td className="py-4 text-sm text-center font-IRsans text-mainColor font-bold  "  >{tableRow.requestStatus?.requestStatusTitle}</td>
+        <td className="py-4 text-sm text-center font-IRsans">
+
+        <Link style={{fontFamily:'Shabnam'}}  to={`/submitReport/`+tableRow.requestId}>
+              <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
+               ثبت گزارش دستاورد
+              </button>
+            </Link>
+            </td>
+
+            </>
+
+                 :
+                 tableRow.requestStatusId==3?
+                 <>
+        <td className="py-4 text-sm text-center font-IRsans text-mainColor font-bold  "  >{tableRow.requestStatus?.requestStatusTitle}</td>
+        <td className="py-4 text-sm text-center font-IRsans">
+
+                 <Link style={{fontFamily:'Shabnam'}}  to={`/submitReport/`+tableRow.requestId}>
+                 <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
+                  ثبت گزارش دستاورد
+                 </button>
+               </Link>
+               </td>
+
+               </>
+
+            :
+            tableRow.requestStatusId==4 ||  tableRow.requestStatusId==5 ?
+            <>
+        <td className="py-4 text-sm text-center font-IRsans  text-green font-bold"  >{tableRow.requestStatus?.requestStatusTitle}</td>
+        <td className="py-4 text-sm text-center font-IRsans">
+
+<Link style={{fontFamily:'Shabnam'}}  to={`/`}>
+   <button className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
+     مشاهده گزارش
+   </button>
+ </Link>
+ </td>
+ </>
+
+ :  
+ <>
+        <td className="py-4 text-sm text-center font-IRsans"  >{tableRow.requestStatus?.requestStatusTitle}</td>
+        <td className="py-4 text-sm text-center font-IRsans">
+
+   <button onClick={() => setShowRuleModal(true)}  className="min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow font-IRsans text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor">
+                )در انتظار تایید)مشاهده آیین نامه سفر
+              </button>
+              </td>
+ </>
+
+      }
+    
+ 
+ 
     </tr> 
   )
     return(
@@ -131,8 +201,8 @@ const tableRow =[
                        
                        <div className="relative p-6 flex-auto">
                          <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm leading-relaxed break-words whitespace-normal  ">
-                         درخواست شما به علت عدم توضیح کافی راجع به موضوع سفر و مشخص نبودن تاریخ دقیق آن پذیرفته نشد.
-لطفا موارد ذکر شده را اصلاح کنید و سپس مجددا درخواست خود را ثبت کنید.
+                        {
+                        reject}
                          </p>
                        </div>
                       

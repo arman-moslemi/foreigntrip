@@ -13,7 +13,7 @@ export const truncate = (str, len) => {
   return str;
 };
 
-const RequestViewStep2 = () =>{
+const RequestViewStep2 = ({data}) =>{
   
 const tableRow =[
  {
@@ -58,26 +58,89 @@ const tableRow =[
   },
 
 ]
-  const tableBody = tableRow.map((tableRow) =>
-  <tr key={tableRow.id} className="border-b border-b-borderGray">
-    <td style={{fontFamily:'Shabnam'}} className="py-4 text-xs text-right pr-4 px-4">{tableRow.name}</td>
-    <td style={{fontFamily:'Shabnam'}} className="py-4 text-xs text-right px-4 ">{tableRow.father}</td>
-    <td style={{fontFamily:'Shabnam'}} className="py-4 text-xs text-right px-4 ">{tableRow.idNumber}</td>
-    <td style={{fontFamily:'Shabnam'}} className="py-4 text-xs text-center px-4 " >{tableRow.nationalCode}</td>
-    <td style={{fontFamily:'Shabnam'}} className="py-4 text-xs text-center px-4 "  >{tableRow.birthday}</td>
-    <td style={{fontFamily:'Shabnam'}} className="py-4 text-xs text-center px-4 ">{tableRow.gender}</td>
-    <td style={{fontFamily:'Shabnam'}} className="py-4 text-xs text-center px-4 ">{tableRow.maritalStatus}</td>
-    <td style={{fontFamily:'Shabnam'}} className="py-4 text-xs text-center px-4 ">{tableRow.degree}</td>
-    <td style={{fontFamily:'Shabnam'}} className="py-4 text-xs text-center px-4 ">{tableRow.foreign}</td>
-    <td style={{fontFamily:'Shabnam'}} className="py-4 text-xs text-center px-4 ">{tableRow.experience}</td>
-    <td style={{fontFamily:'Shabnam'}} className="py-4 text-xs text-center px-4 ">{tableRow.phoneNumber}</td>
-    <td style={{fontFamily:'Shabnam'}} className="py-4 text-xs text-center px-4 ">{tableRow.landLineNumber}</td>
-    <td style={{fontFamily:'Shabnam'}} className="py-4 text-xs text-center px-4 ">{tableRow.passportType}</td>
-    <td style={{fontFamily:'Shabnam'}} className="py-4 text-xs text-center px-4 ">{tableRow.location}</td>
-    <td style={{fontFamily:'Shabnam'}} className="py-4 text-xs text-center px-4 ">{tableRow.position}</td>
-    <td style={{fontFamily:'Shabnam'}} className="py-4 text-xs text-center px-4 pl-4">{tableRow.employmentStatus}</td>
-    </tr> 
-  )
+const tableBody = data?.map((tableRow) => <tr key={tableRow.requestId} className="border-b border-b-borderGray">
+<td
+    style={{
+    fontFamily: 'Shabnam'
+}}
+    className="py-4 text-xs text-right pr-4 px-4">{tableRow.employeeName} {tableRow.employeeFamily}</td>
+<td
+    style={{
+    fontFamily: 'Shabnam'
+}}
+    className="py-4 text-xs text-right px-4 ">{tableRow.employeeFatherName}</td>
+<td
+    style={{
+    fontFamily: 'Shabnam'
+}}
+    className="py-4 text-xs text-right px-4 ">{tableRow.birthCertificationNumber}</td>
+<td
+    style={{
+    fontFamily: 'Shabnam'
+}}
+    className="py-4 text-xs text-center px-4 ">{tableRow.nationalCode}</td>
+<td
+    style={{
+    fontFamily: 'Shabnam'
+}}
+    className="py-4 text-xs text-center px-4 ">{tableRow.birthCertificationDate}</td>
+<td
+    style={{
+    fontFamily: 'Shabnam'
+}}
+    className="py-4 text-xs text-center px-4 ">{tableRow.gender?.genderType}</td>
+<td
+    style={{
+    fontFamily: 'Shabnam'
+}}
+    className="py-4 text-xs text-center px-4 ">{tableRow.maritalStatus?.maritalStatusType}</td>
+<td
+    style={{
+    fontFamily: 'Shabnam'
+}}
+    className="py-4 text-xs text-center px-4 ">{tableRow.degree}</td>
+<td
+    style={{
+    fontFamily: 'Shabnam'
+}}
+    className="py-4 text-xs text-center px-4 ">{tableRow.fieldOfStudy}</td>
+<td
+    style={{
+    fontFamily: 'Shabnam'
+}}
+    className="py-4 text-xs text-center px-4 ">{tableRow.workExperience}سال</td>
+<td
+    style={{
+    fontFamily: 'Shabnam'
+}}
+    className="py-4 text-xs text-center px-4 ">{tableRow.mobile}</td>
+<td
+    style={{
+    fontFamily: 'Shabnam'
+}}
+    className="py-4 text-xs text-center px-4 ">{tableRow.phone}</td>
+<td
+    style={{
+    fontFamily: 'Shabnam'
+}}
+    className="py-4 text-xs text-center px-4 ">{tableRow.passPortType?.passportType}</td>
+<td
+    style={{
+    fontFamily: 'Shabnam'
+}}
+    className="py-4 text-xs text-center px-4 ">{tableRow.jobLocation}</td>
+<td
+    style={{
+    fontFamily: 'Shabnam'
+}}
+    className="py-4 text-xs text-center px-4 ">{tableRow.position?.positionType}</td>
+<td
+    style={{
+    fontFamily: 'Shabnam'
+}}
+    className="py-4 text-xs text-center px-4">{tableRow.employeeStatus}</td>
+
+</tr>)
     return(
 
       <div className="border-b border-dashed border-[#CCCCCD] pb-4">

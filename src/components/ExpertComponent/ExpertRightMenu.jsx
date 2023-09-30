@@ -30,14 +30,14 @@ const ExpertRightMenu = () => {
                             </p>
                            </Link>
                         </li>
-                        <li className="my-10">
+                        {/* <li className="my-10">
                            <Link style={{fontFamily:'Shabnam'}}  to={'/expert/reportList'} className="flex items-center">
                            <Doc/>
                             <p style={{fontFamily:'Shabnam'}} className="  text-white font-medium mr-4 lg:text-sm">
                              تاریخچه گزارشات
                             </p>
                            </Link>
-                        </li>
+                        </li> */}
                    
                         <li className="my-10">
                            <Link style={{fontFamily:'Shabnam'}}  to={'/expert/messageList'} className="flex items-center">
