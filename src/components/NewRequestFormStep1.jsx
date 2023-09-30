@@ -29,14 +29,24 @@ const NewRequestFormStep1 = () => {
                             placeholder="آدرس اینترنتی دستگاه اجرایی"/>
                     </div>
                 </div>
-                <div className="flex flex-col w-[31%] mr-[1.5%] mb-5">
-                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">کشور و شهر مقصد</span>
+                <div className="flex flex-col w-[12%] mr-[1.5%] mb-5">
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">کشور مقصد</span>
                     <div class="mt-2">
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
                             id="input-group-1"
                             class="  text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
-                            placeholder="کشور و شهر مقصد"/>
+                            placeholder="کشور مقصد"/>
+                    </div>
+                </div>
+                <div className="flex flex-col w-[12%] mr-[1.5%] mb-5">
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">شهر مقصد</span>
+                    <div class="mt-2">
+                        <input style={{fontFamily: 'Shabnam'}}
+                            type="text"
+                            id="input-group-1"
+                            class="  text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            placeholder="شهر مقصد"/>
                     </div>
                 </div>
                 <div className="flex flex-col w-[31%] ml-[1.5%] mb-7">
@@ -157,7 +167,14 @@ const NewRequestFormStep1 = () => {
                       علمی
                     </label>
                   </div>
-
+                  <div className="ml-14 mb-4">
+                    <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
+                    <input style={{fontFamily:'Shabnam'}}
+                        type="checkbox"
+                        class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1.5"/>
+                      ورزشی
+                    </label>
+                  </div>
                 </div>
                 <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold   mb-4 mt-9">اهداف شغلی</span>
                 <div className="flex flex-wrap w-[100%]">

@@ -9,3 +9,7 @@ body{
 .zm-Header{
     font-family: Shabnam !important;
   }
+  @font-face {
+	font-family: Shabnam;
+	src: url('../fonts/Shabnam.ttf');
+}
