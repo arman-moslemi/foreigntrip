@@ -213,8 +213,8 @@ setSnipper(false)
          persianChars={true} fontFamily={"Shabnam"} backgroundColor={"#a0afd5"} fontColor="#fff" border="1px solid #000"/>
          </div> */}
             <div className="flex mt-3 mb-4">
-                <p style={{fontFamily:'Shabnam'}}className="text-xs   text-black font-normal">کلمه عبور خود را فراموش کرده اید ؟</p>
-                <Link style={{fontFamily:'Shabnam'}}  to={'/changePassword'} className="text-xs   text-linkBlue font-normal mr-1">تغییر رمز عبور</Link>
+                <p style={{fontFamily:'Shabnam'}}  id="fontss-Shabnam" className="text-xs   text-black font-normal">کلمه عبور خود را فراموش کرده اید ؟</p>
+                <Link style={{fontFamily:'Shabnam'}}  id="fontss-Shabnam" to={'/changePassword'} className="text-xs   text-linkBlue font-normal mr-1">تغییر رمز عبور</Link>
             </div>
             {/* <div className="flex items-center justify-start mt-2">
                     <p style={{fontFamily:'Shabnam'}} className="  text-black text-xs">
@@ -229,14 +229,14 @@ setSnipper(false)
                       ورود   
                 </button>
 
-            {/* <div className="flex items-center justify-start mt-2 xs:flex-wrap">
+          <div className="flex items-center justify-start mt-2 xs:flex-wrap">
                     <p style={{fontFamily:'Shabnam'}} className="  text-black text-xs">
                        حساب کاربری ندارید ؟
                     </p>
                     <Link style={{fontFamily:'Shabnam'}}  to={'/signup'} className="  text-mainColor text-xs mr-1 font-bold hover:text-lightBlue">
                        ثبت نام کنید
                     </Link>
-                </div> */}
+                </div> 
         </div>
 
     )
