@@ -82,8 +82,8 @@ const tableRow =[
 ]
   const tableBody = tableRow.map((tableRow) =>
   <tr key={tableRow.id} className="border-b border-b-borderGray">
-    <td className="py-4 text-sm text-right pr-4   px-4" style={{fontFamily:'Shabnam'}} >{tableRow.num}</td>
-    <td className="py-4 text-sm text-right   px-4">
+    <td className="py-4 text-sm text-center pr-4  " style={{fontFamily:'Shabnam'}} >{tableRow.num}</td>
+    <td className="py-4 text-sm text-right   pr-4">
       <div className="flex items-center" style={{fontFamily:'Shabnam'}} >
         <div>
         {tableRow.name}
@@ -93,10 +93,10 @@ const tableRow =[
         </div>
       </div>
     </td>
-    <td className="py-4 text-sm text-right px-4  " style={{fontFamily:'Shabnam'}} >{tableRow.subject}</td>
-    <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}}  >{tableRow.location}</td>
-    <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}}  >{tableRow.status}</td>
-    <td className="py-4 text-sm text-center px-4  " style={{fontFamily:'Shabnam'}} >{tableRow.function}</td>
+    <td className="py-4 text-sm text-right pr-4 " style={{fontFamily:'Shabnam'}} >{tableRow.subject}</td>
+    <td className="py-4 text-sm text-center pr-4  " style={{fontFamily:'Shabnam'}}  >{tableRow.location}</td>
+    <td className="py-4 text-sm text-center pr-4  " style={{fontFamily:'Shabnam'}}  >{tableRow.status}</td>
+    <td className="py-4 text-sm text-left pr-4   " style={{fontFamily:'Shabnam'}} >{tableRow.function}</td>
     </tr> 
   )
     return(
@@ -104,12 +104,12 @@ const tableRow =[
           <table class="table-auto w-full  ">
   <thead className="bg-darkGray h-11 rounded-t-2xl w-full whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}> 
     <tr className="text-white  p-6 whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}>
-      <th className="text-right pr-4   md:px-4" style={{fontFamily:'Shabnam'}} >ردیف</th>
-      <th className="text-right   md:px-4" style={{fontFamily:'Shabnam'}} >نام مامور</th>
-      <th className="text-right   md:px-4" style={{fontFamily:'Shabnam'}} >موضوع سفر</th>
-      <th className="text-center font-IRsan md:px-4s" style={{fontFamily:'Shabnam'}} >محل خدمت</th>
-      <th className="text-center   md:px-4" style={{fontFamily:'Shabnam'}} >وضعیت</th>
-      <th className="text-center   md:px-4" style={{fontFamily:'Shabnam'}}  >مشاهده</th>
+      <th className="text-center pr-4   " style={{fontFamily:'Shabnam'}} >ردیف</th>
+      <th className="text-right  pr-4" style={{fontFamily:'Shabnam'}} >نام مامور</th>
+      <th className="text-right   pr-4" style={{fontFamily:'Shabnam'}} >موضوع سفر</th>
+      <th className="text-center font-IRsan pr-4" style={{fontFamily:'Shabnam'}} >محل خدمت</th>
+      <th className="text-center pr-4" style={{fontFamily:'Shabnam'}} >وضعیت</th>
+      <th className="text-right   pl-4" style={{fontFamily:'Shabnam'}}  >مشاهده</th>
     </tr>
   </thead>
   <tbody>

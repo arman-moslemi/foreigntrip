@@ -297,7 +297,7 @@ const AddAgentForm = () => {
        
             
 
-            <Link to={'/mainAdmin/userList'} style={{fontFamily:'Shabnam'}}
+            <Link to={'/internationalAdmin/userList'} style={{fontFamily:'Shabnam'}}
                 className="w-[60%] xs:w-[90%] mx-auto  h-12 bg-mainColor shadow-blueShadow mt-10 flex justify-center items-center text-white text-xl font-medium rounded-lg hover:bg-lightBlue hover:text-mainColor">
                ثبت نام مامور اعزامی
             </Link>

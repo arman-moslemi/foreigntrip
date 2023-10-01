@@ -28,89 +28,89 @@ const InternationalReportsView = () =>{
                         </span>
                     </p>
                 </div>
-                <div className="w-[50%] my-3 md:w-full">
-                    <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
+                <div className="w-[50%] xl-lg:w-[100%] my-3 md:w-full">
+                    <p style={{fontFamily:'Shabnam'}} className="2xs:grid  text-base font-bold text-[#0D296E]">
                        شماره و تاریخ درخواست : 
                         <span>   </span> 
-                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
+                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray 2xs:mt-1 text-sm font-medium">
                              02/04/28 - 123
                         </span>
                     </p>
                 </div>
-                <div className="w-[50%] my-3 md:w-full">
-                    <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
+                <div className="w-[50%] xl-lg:w-[100%] my-3 md:w-full">
+                    <p style={{fontFamily:'Shabnam'}} className=" 2xs:grid  text-base font-bold text-[#0D296E]">
                         شماره و تاریخ مجوز :
                         <span>   </span> 
-                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
+                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray 2xs:mt-1 text-sm font-medium">
                         02/04/28 - 123
                         </span>
                     </p>
                 </div>
-                <div className="w-[50%] my-3 md:w-full">
-                    <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
+                <div className="w-[50%] xl-lg:w-[100%] my-3 md:w-full">
+                    <p style={{fontFamily:'Shabnam'}} className=" 2xs:grid text-base font-bold text-[#0D296E]">
                         تاریخ انجام سفر :
                         <span>   </span> 
-                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
+                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray 2xs:mt-1 text-sm font-medium">
                               02/12/12
                         </span>
                     </p>
                 </div>
-                <div className="w-[50%] my-3 md:w-full">
-                    <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
+                <div className="w-[50%] xl-lg:w-[100%] my-3 md:w-full">
+                    <p style={{fontFamily:'Shabnam'}} className=" 2xs:grid text-base font-bold text-[#0D296E]">
                        آدرس الکترونیکی دستگاه مقصد : 
                         <span>   </span> 
-                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
+                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray 2xs:mt-1 text-sm font-medium">
                               info@mta.com
                         </span>
                     </p>
                 </div>
-                <div className="w-[50%] my-3 md:w-full">
-                    <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
+                <div className="w-[50%] lg-md:w-[100%] my-3 md:w-full">
+                    <p style={{fontFamily:'Shabnam'}} className="2xs:grid  text-base font-bold text-[#0D296E]">
                         نام دستگاه داخلی : 
                         <span>   </span> 
-                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
+                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray 2xs:mt-1 text-sm font-medium">
                               وزارت نیرو
                         </span>
                     </p>
                 </div>
-                <div className="w-[50%] my-3 md:w-full">
-                    <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
+                <div className="w-[50%] lg-md:w-[100%] my-3 md:w-full">
+                    <p style={{fontFamily:'Shabnam'}} className="2xs:grid  text-base font-bold text-[#0D296E]">
                         نام دستگاه مقصد : 
                         <span>   </span> 
-                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
+                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray 2xs:mt-1 text-sm font-medium">
                              وزارت نیرو خارج
                         </span>
                     </p>
                 </div>
                 <div className="w-[50%] my-3 md:w-full">
-                    <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
+                    <p style={{fontFamily:'Shabnam'}} className=" 2xs:grid text-base font-bold text-[#0D296E]">
                         کشور مقصد : 
                         <span>   </span> 
-                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
+                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray 2xs:mt-1 text-sm font-medium">
                              قراردادی
                         </span>
                     </p>
                 </div>
                 <div className="w-[50%] my-3 md:w-full">
-                    <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
+                    <p style={{fontFamily:'Shabnam'}} className="2xs:grid  text-base font-bold text-[#0D296E]">
                        کشور مقصد :  
                         <span>   </span> 
-                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
+                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray 2xs:mt-1 text-sm font-medium">
                               ایتالیا
                         </span>
                     </p>
                 </div>
                 <div className="w-[50%] my-3 md:w-full">
-                    <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
+                    <p style={{fontFamily:'Shabnam'}} className="2xs:grid  text-base font-bold text-[#0D296E]">
                        شهر مقصد : 
                         <span>   </span> 
-                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
+                        <span style={{fontFamily:'Shabnam'}} className="text-darkGray 2xs:mt-1 text-sm font-medium">
                             رم
                         </span>
                     </p>
                 </div>
                 <div className="w-full my-3 md:w-full">
-                    <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
+                    <p style={{fontFamily:'Shabnam'}} className="text-justify  text-base font-bold text-[#0D296E]">
                        خلاصه دستاورد سفر(اعم از مکان های مورد بازدید طرفها و مقامات ملاقات شونده موضوعات مطروحه توافقات بعمل آمده موارد کاربردی برای سایر دستگاه های ذیربط و ...) :
                         <span>   </span> 
                         <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
@@ -129,7 +129,7 @@ const InternationalReportsView = () =>{
                         <textarea id="message" rows="8" class="block p-2.5 mt-5   w-full text-sm text-gray-900 bg-gray-50 rounded border  border-borderGray focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="توضیحات خود را اینجا بنویسید..."></textarea>
                        <div className="flex justify-end w-full">
                        
-              <button style={{fontFamily:'Shabnam'}}  onClick={() => setShowSendModal(true)} className="mt-5 min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow   text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor ">
+              <button style={{fontFamily:'Shabnam'}}  onClick={() => setShowSendModal(true)} className="mt-5 min-w-[120px] h-8 px-2 bg-mainColor shadow-blueShadow   text-white text-sm rounded-lg hover:bg-lightBlue hover:text-mainColor xs:w-[100%] ">
                ارسال
               </button>
               {showSendModal ?
@@ -175,12 +175,12 @@ const InternationalReportsView = () =>{
                 </div>
                 :
                 <div className="flex w-full justify-end mt-10">
-                <button style={{fontFamily:'Shabnam'}}  className=" bg-[#ff0000] w-[162px] rounded-md h-[40px] flex justify-center items-center text-white    font-medium text-base shadow-redShadow hover:bg-white hover:text-[#ff0000] hover:border-2 hover:border-[#ff0000]" 
+                <button style={{fontFamily:'Shabnam'}}  className=" bg-[#ff0000] w-[162px] xs:w-[49%] rounded-md h-[40px] flex justify-center items-center text-white    font-medium text-base shadow-redShadow hover:bg-white hover:text-[#ff0000] hover:border-2 hover:border-[#ff0000]" 
                 onClick={()=>setShow(true)
                 }>
                         رد کردن گزارش
                     </button>
-                    <button style={{fontFamily:'Shabnam'}}  onClick={() => setShowSuccessModal(true)} className="mr-5 bg-[#3AB50E] hover:bg-white hover:text-[#3AB50E] hover:border-2 hover:border-[#3AB50E] w-[162px] rounded-md h-[40px] flex justify-center items-center text-white    font-medium text-base shadow-greenShadow">
+                    <button style={{fontFamily:'Shabnam'}}  onClick={() => setShowSuccessModal(true)} className="mr-5 xs:mr-3 xs:w-[49%] bg-[#3AB50E] hover:bg-white hover:text-[#3AB50E] hover:border-2 hover:border-[#3AB50E] w-[162px] rounded-md h-[40px] flex justify-center items-center text-white    font-medium text-base shadow-greenShadow">
                        تایید گزارش
                     </button>
                     {showSuccessModal ?
@@ -188,7 +188,7 @@ const InternationalReportsView = () =>{
             <div
             className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
           >
-            <div className="relative w-[30%] my-5 mx-auto max-w-3xl">
+            <div className="relative w-[30%] xl-lg:w-[45%] md:w-[70%] xs:w-[330px] my-5 mx-auto max-w-3xl">
              
               <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
            

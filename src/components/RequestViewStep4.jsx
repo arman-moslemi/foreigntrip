@@ -48,9 +48,9 @@ else {
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                          شرح اهمیت موضوع :
                             <span>   </span> 
-                            <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
+                            <p style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium text-justify mt-2">
                             {data?.importantTravel}
-                            </span>
+                            </p>
                         </p>
                     </div>
               
@@ -58,35 +58,35 @@ else {
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                          سوابق و دستاوردهای قبلی مرتبط با موضوع این ماموریت :
                             <span>   </span> 
-                            <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
+                            <p style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium text-justify mt-2">
                             {data?.missionAchievementRecords}
-                            </span>
+                            </p>
                         </p>
                     </div>
                     <div className="w-full my-3">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                         خلاصه ترجمه شده دعوتنامه و یا قید هزینه ها و برنامه زمانبندی شده روزهای ماموریت بر اساس دعوتنامه :
                             <span>   </span> 
-                            <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
+                            <p style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium text-justify mt-2">
                            {data?.summaryInvitation}
-                             </span></p>
+                             </p></p>
                     </div>
                     <div className="w-full my-3">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                        خلاصه ترجمه شده دیگر نامه های طرف خارجی :
                             <span>   </span> 
-                            <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
+                            <p style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium text-justify mt-2">
                             {data?.foreignTravelSummary}
 
-                                        </span></p>   </div>
-                            <div className="w-full my-3 flex">
+                                        </p></p>   </div>
+                            <div className="w-full my-3 flex xl:flex-col xl:items-start">
                         <p style={{fontFamily:'Shabnam'}} className="  text-base font-bold text-[#0D296E]">
                        آیا سفر مذکور نیاز به موافقت دستگاه های مرجع دیگری در داخل دارد ؟
                             <span>   </span> 
                             <span style={{fontFamily:'Shabnam'}} className="text-darkGray text-sm font-medium">
                             {data?.referenceDeviceAgreement?"بله":"خیر"}
                                </span></p>
-                               <button style={{fontFamily:'Shabnam'}} className="mr-4 rounded-full text-mainColor font-bold h-[28px] bg-lightBlue flex justify-center items-center px-4">
+                               <button style={{fontFamily:'Shabnam'}} className="mr-4 xl:mt-5 xl:mr-0 rounded-full text-mainColor font-bold h-[28px] bg-lightBlue flex justify-center items-center px-4">
                                 <Download/>
                                 <span className="mr-2">
                                 فایل ضمیمه.pdf

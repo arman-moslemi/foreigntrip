@@ -1,6 +1,7 @@
 import React from "react";
 import MainRightMenu from "../../components/MainAdminComponent/MainRightMenu";
 import {ReactComponent as Profile} from "../../assets/icon/blue/profile.svg"
+import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
 import MainAdminRequestList from "../../components/MainAdminComponent/MainAdminRequestList";
 import {ReactComponent as Search} from "../../assets/icon/white/search.svg"
 
@@ -12,7 +13,7 @@ const RequestsList = () =>{
             <div className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl p-8 my-10 w-[80%] min-w-[500px] lg:min-w-[450px] md:min-w-[95%] xl:p-5 md:w-[95%] md:rounded-xl md:mx-auto">
            
             <div className="flex items-center">
-                    <Profile/>
+                    <Doc/>
                 <span style={{fontFamily:'Shabnam'}} className="  text-mainColor mr-3 font-bold">
                     تاریخچه درخواست ها
                 </span>
