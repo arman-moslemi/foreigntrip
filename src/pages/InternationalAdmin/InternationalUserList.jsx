@@ -1,12 +1,52 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import InternationalRightMenu from "../../components/InternationalComponent/InternationalRightMenu";
 import {ReactComponent as Profile} from "../../assets/icon/blue/profile.svg"
 import {ReactComponent as Search} from "../../assets/icon/white/search.svg"
-
+import Cookies from 'universal-cookie';
+import { axiosReq } from "../../commons/axiosReq";
+import { useNavigate } from "react-router-dom";
 import InternationalUserTable from "../../components/InternationalComponent/InternationalUserTable";
 import { Link } from "react-router-dom";
 const InternationalUserList = () =>{
- 
+    const [data, setData] = useState();
+    const [reCheck, setRecheck] = useState(false);
+
+    let navigate = useNavigate();
+
+    useEffect(() => {
+
+        auth();
+    }, [reCheck]);
+    const auth = async () => {
+        const cookies = new Cookies();
+        var token = cookies.get('token');
+        console.log(cookies.get('Role'))
+        if (!token) {
+            navigate("/");
+        } else {
+            if (cookies.get('Role') == "InternationalAdmin") {
+                GetData()
+
+            }
+            else {
+                navigate("/");
+
+            }
+        }
+    }
+    const GetData = async () => {
+        console.log(1234)
+        const cookies = new Cookies();
+
+
+
+        const dataUser = await axiosReq("InternationalAdmin/GetAgents");
+        console.log(dataUser)
+        setData(dataUser)
+
+
+
+    }
     return(
         <div className="w-full h-screen bg-lightGray py-10 px-10 lg:px-8 md:p-0  lg:h-full" style={{direction:'rtl'}}>
         <div className="flex md:block">
@@ -108,7 +148,7 @@ const InternationalUserList = () =>{
             </div>
             
 
-            <InternationalUserTable/>
+            <InternationalUserTable data={data} reCheck={reCheck} setRecheck={setRecheck}/>
             </div>
         </div>
       
