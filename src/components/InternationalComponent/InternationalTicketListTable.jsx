@@ -79,12 +79,12 @@ const tableRow =[
 ]
   const tableBody = tableRow.map((tableRow) =>
   <tr key={tableRow.id} className="border-b border-b-borderGray">
-    <td className="py-4 text-sm text-right pr-4  ">{tableRow.num}</td>
-    <td className="py-4 text-sm text-right  ">{tableRow.date}</td>
-    <td className="py-4 text-sm text-right   truncate">{tableRow.subject}</td>
-    <td className="py-4 text-sm text-center  " >{tableRow.location}</td>
-    <td className="py-4 text-sm text-center  "  >{tableRow.status}</td>
-    <td className="py-4 text-sm text-center  ">{tableRow.function}</td>
+    <td className="py-4 text-sm text-center pr-4  ">{tableRow.num}</td>
+    <td className="py-4 text-sm text-center pr-4  ">{tableRow.date}</td>
+    <td className="py-4 text-sm text-right pr-4   truncate">{tableRow.subject}</td>
+    <td className="py-4 text-sm text-center pr-4  " >{tableRow.location}</td>
+    <td className="py-4 text-sm text-center pr-4  "  >{tableRow.status}</td>
+    <td className="py-4 text-sm text-center pr-4 pl-4  ">{tableRow.function}</td>
     </tr> 
   )
     return(
@@ -92,12 +92,12 @@ const tableRow =[
           <table class="table-auto w-full  ">
   <thead className="bg-darkGray h-11 rounded-t-2xl w-full whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}> 
     <tr className="text-white  p-6 whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}>
-      <th className="text-right pr-4   md:px-4">ردیف</th>
-      <th className="text-right   md:px-4">شماره تیکت</th>
-      <th className="text-right   md:px-4">موضوع تیکت</th>
-      <th className="text-center font-IRsan md:px-4s">آخرین به روز رسانی</th>
-      <th className="text-center   md:px-4">وضعیت تیکت</th>
-      <th className="text-center   md:px-4" >مشاهده</th>
+      <th className="text-center pr-4  ">ردیف</th>
+      <th className="text-center   pr-4">شماره تیکت</th>
+      <th className="text-right   pr-4">موضوع تیکت</th>
+      <th className="text-center font-IRsan pr-4">آخرین به روز رسانی</th>
+      <th className="text-center   pr-4">وضعیت تیکت</th>
+      <th className="text-center   pr-4 pl-4" >مشاهده</th>
     </tr>
   </thead>
   <tbody>
