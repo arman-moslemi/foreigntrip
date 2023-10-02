@@ -38,14 +38,14 @@ const SuperVisorRightMenu = () => {
                         </li>
                    
                        
-                        <li className="my-10">
+                        {/* <li className="my-10">
                            <Link style={{fontFamily:'Shabnam'}}  to={'/supervisor/ticketList'} className="flex items-center">
                            <Ticket/>
                             <p style={{fontFamily:'Shabnam'}} className="  text-white font-medium mr-4 lg:text-sm">
                               تیکت ها و پشتیبانی
                             </p>
                            </Link>
-                        </li>
+                        </li> */}
                         <li className="my-10">
                            <Link style={{fontFamily:'Shabnam'}}  to={'/'} className="flex items-center">
                            <Exit/>

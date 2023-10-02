@@ -9,6 +9,8 @@ import { useNavigate } from "react-router-dom";
 const ExpertTicketList= () => {
     const [showNewTicket,setShowNewTicket] = useState(false);
     const [data, setData] = useState();
+    const [admins, setAdmins] = useState();
+    const [admin, setAdmin] = useState();
     const [reCheck, setRecheck] = useState(false);
     const [message, setMessage] = useState();
   
@@ -43,10 +45,14 @@ const ExpertTicketList= () => {
      
      
        const dataUser = await axiosReq("Ticket/GetTicketExpert",{
-        InternationalExpertIdId:cookies.get("ID")
+        InternationalExpertId:cookies.get("ID")
        });
        console.log(dataUser)
      setData(dataUser.data)
+     
+       const dataAdmin = await axiosReq("InternationalExpert/GetInternationalAdmin");
+       console.log(dataAdmin)
+     setAdmins(dataAdmin)
   
        
        }
@@ -56,10 +62,10 @@ const ExpertTicketList= () => {
      
      
      
-       const dataUser = await axiosReq("Ticket/InsertSubTicketExpertAdmin",{
+       const dataUser = await axiosReq("Ticket/InsertTicketExpertToAdmin",{
         InternationalExpertId:cookies.get("ID"),
         Subject:message,
-        AdminId:1
+        AdminId:admin
        });
        if (dataUser?.status == 200 || dataUser?.status == 204 || dataUser?.status == 201) {
 setRecheck(!reCheck)
@@ -116,6 +122,32 @@ setRecheck(!reCheck)
                         </span>
                         <input onChange={(e)=>setMessage(e.target.value)} type="text" style={{fontFamily:'Shabnam'}} className="pr-2   text-right right-6 bg-gray-50 border border-midGray text-gray-900 text-sm rounded-md my-2 focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5" placeholder="عنوان پیام خود را اینجا بنویسید..."/>
                        </div>
+                       <div className="flex flex-col w-[150px] ">
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">انتخاب ادمین</span>
+                    <div class=" mt-2">
+                        
+                        <select style={{fontFamily:'Shabnam'}}
+                            name="cars"
+                            id="cars"
+                            onChange={(e)=>setAdmin(e.target.value)}
+                            className="   text-right  bg-white border border-[#CCCCCD] text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2">
+                                                                 <option style={{fontFamily:'Shabnam'}} value="" className=" ">انتخاب ادمین</option>
+
+                              {
+                                admins?.map((item2)=>{
+                                  return(
+
+                                    <option style={{fontFamily:'Shabnam'}} value={item2.adminId} className=" ">{item2?.adminName}</option>
+                                  )
+                                })
+                              }
+
+                           
+
+                        </select>
+                 
+                    </div>
+                </div>
                       
                        <div className="flex items-center mb-2 justify-endborder-t justify-center border-solid border-slate-200 rounded-b">
                       
