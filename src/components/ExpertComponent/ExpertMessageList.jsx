@@ -97,12 +97,12 @@ const tableRow =[
 ]
   const tableBody = tableRow.map((tableRow) =>
   <tr key={tableRow.id} className="border-b border-b-borderGray">
-    <td className="py-4 text-sm text-right pr-4  " style={{fontFamily:'Shabnam'}}>{tableRow.num}</td>
-    <td className="py-4 text-sm text-right  " style={{fontFamily:'Shabnam'}}>{tableRow.subject}</td>
-    <td className="py-4 text-sm text-right   truncate" style={{fontFamily:'Shabnam'}}>{tableRow.text}</td>
-    <td className="py-4 text-sm text-center  " style={{fontFamily:'Shabnam'}}>{tableRow.to}</td>
-    <td className="py-4 text-sm text-center  " style={{fontFamily:'Shabnam'}} >{tableRow.date}</td>
-    <td className="py-4 text-sm text-center  "style={{fontFamily:'Shabnam'}}>{tableRow.function}</td>
+    <td className="py-4 text-sm text-center pr-4  " style={{fontFamily:'Shabnam'}}>{tableRow.num}</td>
+    <td className="py-4 text-sm text-right pr-4 " style={{fontFamily:'Shabnam'}}>{tableRow.subject}</td>
+    <td className="py-4 text-sm text-right pr-4  truncate" style={{fontFamily:'Shabnam'}}>{tableRow.text}</td>
+    <td className="py-4 text-sm text-center pr-4 " style={{fontFamily:'Shabnam'}}>{tableRow.to}</td>
+    <td className="py-4 text-sm text-center pr-4 " style={{fontFamily:'Shabnam'}} >{tableRow.date}</td>
+    <td className="py-4 text-sm text-center pr-4 pl-4"style={{fontFamily:'Shabnam'}}>{tableRow.function}</td>
     </tr> 
   )
     return(
@@ -110,12 +110,12 @@ const tableRow =[
           <table class="table-auto w-full  ">
   <thead className="bg-darkGray h-11 rounded-t-2xl w-full whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}> 
     <tr className="text-white  p-6 whitespace-nowrap overflow-x-scroll" style={{borderRadius:'20px'}}>
-      <th className="text-right pr-4   md:px-4" style={{fontFamily:'Shabnam'}}>ردیف</th>
-      <th className="text-right   md:px-4" style={{fontFamily:'Shabnam'}}> عنوان پیام</th>
-      <th className="text-right   md:px-4" style={{fontFamily:'Shabnam'}}>متن پیام</th>
-      <th className="text-center font-IRsan md:px-4s" style={{fontFamily:'Shabnam'}}>مخاطب</th>
-      <th className="text-center   md:px-4" style={{fontFamily:'Shabnam'}}>زمان ارسال</th>
-      <th className="text-center   md:px-4" style={{fontFamily:'Shabnam'}}>مشاهده</th>
+      <th className="text-center pr-4  " style={{fontFamily:'Shabnam'}}>ردیف</th>
+      <th className="text-right   pr-4" style={{fontFamily:'Shabnam'}}> عنوان پیام</th>
+      <th className="text-right   pr-4" style={{fontFamily:'Shabnam'}}>متن پیام</th>
+      <th className="text-center font-IRsan pr-4" style={{fontFamily:'Shabnam'}}>مخاطب</th>
+      <th className="text-center   pr-4" style={{fontFamily:'Shabnam'}}>زمان ارسال</th>
+      <th className="text-center   pr-4 pl-4" style={{fontFamily:'Shabnam'}}>مشاهده</th>
     </tr>
   </thead>
   <tbody>

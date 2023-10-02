@@ -49,10 +49,10 @@ const ExpertRequestsList = () => {
 
     }
     return (
-        <div className="w-full h-screen bg-lightGray py-10 px-10 xl:px-0 md:p-0  lg:h-full" style={{ direction: 'rtl' }}>
+        <div className="w-full h-screen bg-lightGray py-10 px-10 lg:px-8 md:p-0  lg:h-full" style={{ direction: 'rtl' }}>
             <div className="flex md:block">
                 <ExpertRightMenu />
-                <div className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl p-8 my-10 w-[80%] xl:p-5 md:w-[95%] md:rounded-xl md:mx-auto">
+                <div className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl p-8 my-10 w-[80%] min-w-[500px] lg:min-w-[450px] md:min-w-[95%] xl:p-5 md:w-[95%] md:rounded-xl md:mx-auto">
 
                     <div className="flex items-center">
                         <Doc />
@@ -61,15 +61,15 @@ const ExpertRequestsList = () => {
                         </span>
 
                     </div>
-                    <div className="flex justify-between mt-10 items-end">
-                        <div className="flex justify-between border border-[#CCCCCD] rounded-full h-[38px] w-[260px] items-center px-2 py-1">
+                    <div className="flex justify-between mt-10 items-end xl-lg:flex-wrap">
+                        <div className="flex xl-lg:w-[100%] justify-between border border-[#CCCCCD] rounded-full h-[38px] w-[260px] items-center px-2 py-1">
                             <input type="text" className="border-none focus-visible:outline-none" style={{ fontFamily: 'Shabnam' }} placeholder="جستجو کنید ..." />
                             <button className="w-[30px] h-[30px] bg-mainColor shadow-blueShadow rounded-full flex justify-center items-center">
                                 <Search />
                             </button>
                         </div>
-                        <div className="flex items-end">
-                            <div className="flex flex-col w-[150px] ">
+                        <div className="flex xl-lg:w-[80%] xs:w-[100%] xl-lg:mt-5 xs:flex-col xs:items-start items-end">
+                            <div className="flex flex-col w-[150px] lg-md:w-[151px] xs:w-[100%] ">
                                 <span style={{ fontFamily: 'Shabnam' }} className="text-base font-normal   ">بازه زمانی</span>
                                 <div class=" mt-3">
 
@@ -87,7 +87,7 @@ const ExpertRequestsList = () => {
 
                                 </div>
                             </div>
-                            <div className="flex flex-col w-[150px] mr-2">
+                            <div className="flex flex-col w-[150px] lg-md:w-[160px] xs:w-[100%]  mr-2 lg-md:mr-1 xs:mr-0 xs:mt-4">
                                 <span style={{ fontFamily: 'Shabnam' }} className="text-base font-normal   ">وضعیت درخواست</span>
                                 <div class=" mt-3">
 
@@ -127,14 +127,14 @@ const ExpertRequestsList = () => {
                       
                     </div>
                 </div> */}
-                            <button className="bg-mainColor shadow-blueShadow py-2 px-4 text-white mr-2 rounded-md" style={{ fontFamily: 'Shabnam' }} >
+                            <button className="bg-mainColor shadow-blueShadow py-2 px-4 lg-md:px-2 text-white mr-2 lg-md:mr-1 rounded-md xs:w-[100%] xs:mt-5 xs:mr-0 xs:text-xl" style={{ fontFamily: 'Shabnam' }} >
                                 اعمال
                             </button>
                         </div>
-                        <div className="flex">
-                            <button className="shadow-blueShadow  flex px-2  items-center h-[40px] bg-mainColor text-white rounded-md">
+                        <div className="flex xl-lg:w-[20%] xs:w-[100%] xl-lg:mt-5 xl-lg:justify-end ">
+                            <button className="shadow-blueShadow  flex px-2 lg-md:px-1 lg-md:mr-1 xs:w-[100%] xs:mt-2 xs:mr-0  xs:justify-center  items-center h-[40px] bg-mainColor text-white rounded-md">
 
-                                <span className="text-white" style={{ fontFamily: 'Shabnam' }}>
+                                <span className="text-white lg-md:text-sm xs:text-xl" style={{ fontFamily: 'Shabnam' }}>
                                     گزارش گیری
                                 </span>
                             </button>
