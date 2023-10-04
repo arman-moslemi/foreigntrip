@@ -28,26 +28,43 @@ const InternationalUserTable = ({ data,reCheck,setRecheck }) => {
   const [showError, setShowError] = React.useState(false);
   const [showLog, setShowLog] = React.useState(false);
   const [showBan, setShowBan] = React.useState(false);
+  const [id, setId] = React.useState();
 
 
-  const suspendUser=async(agentId)=>{
+  const suspendUser=async()=>{
     console.log(1234)
  
  
    const dataUser = await axiosReq("InternationalAdmin/SuspendAgent",{
-    AgentId:agentId
+    AgentId:id
    });
    if (dataUser?.status == 200 || dataUser?.status == 204 || dataUser?.status == 201) {
 setRecheck(!reCheck)
-
+setShowBan(false)
 }
 else {
-    alert("اطلاعات ورودی نادرست می باشند")
+    alert("عملیات با خطا روبرو شد.")
 }
 
    
    }
+   const deleteUser=async()=>{
+    console.log(1234)
+ 
+ 
+   const dataUser = await axiosReq("InternationalAdmin/DeleteAgent",{
+    AgentId:id
+   });
+   if (dataUser?.status == 200 || dataUser?.status == 204 || dataUser?.status == 201) {
+setRecheck(!reCheck)
+setShowError(false)
+}
+else {
+    alert("عملیات با خطا روبرو شد.")
+}
 
+   
+   }
   const tableBody = data?.map((tableRow, index) =>
     <tr key={tableRow.id} className="border-b border-b-borderGray">
       <td style={{ fontFamily: 'shabnam' }} className="py-4 text-sm text-right pr-4   ">
@@ -70,7 +87,7 @@ else {
         <button className="mx-2" onClick={() => setShowLog(true)}>
           <Eye />
         </button>
-        <button className="mx-2" onClick={() => setShowBan(true)}>
+        <button className="mx-2" onClick={() => {setId(tableRow?.agentId);setShowBan(true)}}>
           <Ban />
         </button>
         <Link to={'/internationalAdmin/addAgent'}>
@@ -78,7 +95,7 @@ else {
             <Pencil />
           </button>
         </Link>
-        <button className="mx-2" onClick={() => setShowError(true)}>
+        <button className="mx-2" onClick={() => {setId(tableRow?.agentId);setShowError(true)}}>
           <Trash />
         </button>
       </div>    </td>
@@ -146,7 +163,7 @@ else {
                     style={{ fontFamily: 'Shabnam' }}
                     className="text-white   float-left bg-red shadow-redShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={() => setShowError(false)}
+                    onClick={() => deleteUser()}
                   >
                     بله
                   </button>
@@ -195,7 +212,7 @@ else {
                     style={{ fontFamily: 'Shabnam' }}
                     className="text-white   float-left bg-red shadow-redShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={() => setShowBan(false)}
+                    onClick={() => suspendUser()}
                   >
                     بله
                   </button>
