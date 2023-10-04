@@ -38,14 +38,14 @@ const Profile = () => {
         var token = cookies.get('token');
         console.log(token)
         if (!token) {
-            // navigate("/");
+            navigate("/");
         } else {
             if (cookies.get('Role') == "Agent") {
                 GetData()
 
             }
             else {
-                navigate("/");
+               navigate("/");
 
             }
         }
