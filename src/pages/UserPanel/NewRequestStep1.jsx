@@ -5,7 +5,7 @@ import {ReactComponent as Add} from "../../assets/icon/blue/add.svg"
 const NewRequestStep1 = () => {
     return (
         <div
-            className="w-full h-full bg-lightGray py-10 px-10 xl:px-0 md:p-0  lg:h-full"
+            className="w-full h-full bg-lightGray py-10 px-10 lg:px-8 md:p-0  lg:h-full"
             style={{
             direction: 'rtl'
         }}>
@@ -13,21 +13,21 @@ const NewRequestStep1 = () => {
             <div className="flex md:block">
                 <AgentRightMenu/>
                 <div
-                    className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl my-10 w-[80%] xl:p-5 md:w-[95%] md:rounded-xl md:mx-auto">
+                    className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl my-10 w-[80%] min-w-[500px] lg:min-w-[450px] md:min-w-[95%] xl:p-5 md:w-[95%] md:rounded-xl md:mx-auto">
                     <div className="border-b border-b-midGray border-dashed">
-                        <div className="flex-col pb-5 px-12 pt-12 ">
+                        <div className="flex-col pb-5 px-12 lg:px-5 xs:px-1 pt-12 ">
                             <div className="flex items-center mb-6">
                                 <Add/>
                                 <span style={{fontFamily:'Shabnam'}} className="  text-mainColor mr-3 font-bold text-base">
                                     ثبت درخواست جدید
                                 </span>
                             </div>
-                            <p style={{fontFamily:'Shabnam'}} className="  font-normal text-base">فرم زیر را با دقت پر کنید تا
+                            <p style={{fontFamily:'Shabnam'}} className="text-justify  font-normal text-base">فرم زیر را با دقت پر کنید تا
                                 درخواست شما ثبت شود .پس از بررسی درخواست شما ،اجازه ی سفر برای شما صادر میشود.</p>
                         </div>
 
                     </div>
-                    <div className="px-12 pb-12 ">
+                    <div className="px-12 lg:px-5 xs:px-1 pb-12 ">
 
                         <NewRequestFormStep1/>
                     </div>
