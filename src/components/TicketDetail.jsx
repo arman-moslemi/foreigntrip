@@ -58,7 +58,7 @@ setMessage()
       </div>
      </div>
 
-     <div className="flex items-end my-8 ">
+     <div className="flex items-end my-8  md:flex-col-reverse">
         <button className="bg-[#EDF3FA] h-[47px] w-[47px] rounded-md flex justify-center items-center">
           <Attachment/>
         </button>

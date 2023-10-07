@@ -21,7 +21,7 @@ const RequestHistory = () => {
       var token= cookies.get('token');
       console.log(token)
       if(!token){
-     navigate("/");
+ navigate("/");
       }else{
    if( cookies.get('Role')=="Agent")
    {
@@ -29,7 +29,7 @@ const RequestHistory = () => {
   
    }
    else{
-   navigate("/");
+  navigate("/");
   
    }
       }

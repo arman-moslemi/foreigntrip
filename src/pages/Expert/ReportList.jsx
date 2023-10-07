@@ -23,14 +23,14 @@ const ExpertReportsList = () =>{
       var token = cookies.get('token');
       console.log(token)
       if (!token) {
-        navigate("/");
+       navigate("/");
       } else {
         if (cookies.get('Role') == "InternationalExpert") {
           GetData()
   
         }
         else {
-          navigate("/");
+         navigate("/");
   
         }
       }
@@ -61,8 +61,8 @@ const ExpertReportsList = () =>{
                         تاریخچه گزارشات
                 </span>
                 </div>
-                <div className="flex justify-between mt-10 items-end">
-                <div className="flex justify-between border border-[#CCCCCD] rounded-full h-[38px] w-[350px] items-center px-2 py-1">
+                <div className="flex justify-between mt-10 items-end md:block">
+                <div className="flex justify-between border border-[#CCCCCD] rounded-full h-[38px] w-[350px] md:w-[100%] items-center px-2 py-1">
                     <input type="text" className="border-none focus-visible:outline-none" style={{fontFamily:'Shabnam'}} placeholder="جستجو کنید ..."/>
                     <button className="w-[30px] h-[30px] bg-mainColor shadow-blueShadow rounded-full flex justify-center items-center">
                         <Search/>
@@ -72,7 +72,7 @@ const ExpertReportsList = () =>{
                 <div className="flex items-end">
                 <div className="flex items-end">
                
-                <div className="flex flex-col w-[150px] ">
+                <div className="flex flex-col w-[150px] md:mt-5">
                     <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">مرتب سازی</span>
                     <div class=" mt-3">
                         

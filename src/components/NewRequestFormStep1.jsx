@@ -78,14 +78,14 @@ if(e.target)    {
       var token= cookies.get('token');
       console.log(token)
       if(!token){
-       navigate("/");
+      navigate("/");
       }else{
    if( cookies.get('Role')=="Agent")
    {
   
    }
    else{
-    navigate("/");
+  navigate("/");
   
    }
       }
@@ -152,35 +152,81 @@ if(e.target)    {
               placeholder="آدرس اینترنتی دستگاه اجرایی" />
           </div>
         </div>
-        <div className="flex flex-col w-[31%] xl-1400:w-[49%] xl-1400:ml-[1%] xl-1400:mr-0  xl-lg:w-[100%] xl-lg:mx-0 mr-[1.5%] mb-5">
-          <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">کشور و شهر مقصد</span>
-          <div class="mt-2">
-            <input style={{ fontFamily: 'Shabnam' }}
-              type="text"
-              id="input-group-1"
-              name="DestinationCity"
-              onChange={changeHandler}
-              class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
-              placeholder="کشور و شهر مقصد" />
-          </div>
-        </div>
+        <div className="flex flex-col w-[12%]  mb-4  xl:w-[50%] md:w-[100%] md:mx-0 mr-4">
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal ">کشور مقصد</span>
+              
+                      
+                        <select style={{fontFamily:'Shabnam'}}
+                            name="country"
+                            id="country"
+                            className="mt-2  text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5">
+                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className=" ">انتخاب کنید</option>
+                            <option  style={{fontFamily:'Shabnam'}}value="waiting" className=" ">عربستان</option>
+                            <option  style={{fontFamily:'Shabnam'}}value="check" className=" ">ایتالیا</option>
+                            <option style={{fontFamily:'Shabnam'}} value="not" className=" ">آمریکا</option>
+                           
+
+                        </select>
+                        {/* <input
+                            type="text"
+                            id="input-group-1"
+                            disabled="true"
+                            class="pr-9   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                            placeholder="آرمان"/> */}
+                    
+                </div>
+                <div className="flex flex-col w-[12%]  mb-4 xl:w-[50%]  md:w-[100%] md:mx-0 mr-4">
+                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal ">شهر مقصد</span>
+              
+                      
+                        <select style={{fontFamily:'Shabnam'}}
+                            name="city"
+                            id="city"
+                            className="mt-2  text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5">
+                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className=" ">انتخاب کنید</option>
+                            <option  style={{fontFamily:'Shabnam'}}value="waiting" className=" ">عربستان</option>
+                            <option  style={{fontFamily:'Shabnam'}}value="check" className=" ">ایتالیا</option>
+                            <option style={{fontFamily:'Shabnam'}} value="not" className=" ">آمریکا</option>
+                           
+
+                        </select>
+                        {/* <input
+                            type="text"
+                            id="input-group-1"
+                            disabled="true"
+                            class="pr-9   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                            placeholder="آرمان"/> */}
+                    
+                </div>
         <div className="flex flex-col w-[31%] xl-1400:w-[49%] xl-1400:mr-[1%] xl-1400:ml-0 xl-lg:w-[100%] xl-lg:mx-0 ml-[1.5%] mb-7">
-          <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">مسیر پروازی</span>
-          <div class="mt-2">
-            <input style={{ fontFamily: 'Shabnam' }}
-              type="text"
-              id="input-group-1"
-              name="FlightPath"
-              onChange={changeHandler}
-              class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
-              placeholder="مسیر پروازی" />
-          </div>
+        <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal ">مسیر پروازی</span>
+              
+                      
+              <select style={{fontFamily:'Shabnam'}}
+                  name="airportLine"
+                  id="airportLine"
+                  className="mt-2  text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5">
+                    <option style={{fontFamily:'Shabnam'}} value="newRequest" className=" ">انتخاب کنید</option>
+                  <option style={{fontFamily:'Shabnam'}} value="newRequest" className=" ">ایران-دوحه |دوحه آمریکا</option>
+                  <option  style={{fontFamily:'Shabnam'}}value="waiting" className=" ">ایران-قطر | قطر - آمریکا</option>
+                  <option  style={{fontFamily:'Shabnam'}}value="check" className=" ">ایران-دوبی | دوبی ایتالیا</option>
+               
+                 
+
+              </select>
+              {/* <input
+                  type="text"
+                  id="input-group-1"
+                  disabled="true"
+                  class="pr-9   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
+                  placeholder="آرمان"/> */}
+          
         </div>
         <div className="flex w-[32%] xl-1400:w-[49%] xl-1400:ml-[1%] xl-1400:mr-0 xl-lg:w-[100%] xl-lg:mx-0 mx-[1.5%] mb-7 items-end">
           <div className="flex flex-col w-[39%] ">
             <span style={{ fontFamily: 'Shabnam' }} className="text-base xs:text-sm font-bold font-IRsans">تاریخ و مدت سفر</span>
             <div class="mt-2 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full" id="StartDate">
-              <DatePicker style={{ fontFamily: 'Shabnam' }} placeholder="خهاخعل"
+              <DatePicker style={{ fontFamily: 'Shabnam' }} placeholder="تاریخ"
                 name="TravelDate"
                 onChange={(e)=>setAllValues({ ...allValues,TravelDate:formatDateTime(e.value)})}
 
@@ -194,7 +240,7 @@ if(e.target)    {
           </div>
           <div className="w-[22%] flex justify-center pb-2"><p style={{ fontFamily: 'Shabnam' }} className="text-base font-normal">لغایت</p></div>
           <div className="w-[39%] font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block" id="EndDate">
-            <DatePicker style={{ fontFamily: 'Shabnam' }} placeholder="خهاخعل"
+            <DatePicker style={{ fontFamily: 'Shabnam' }} placeholder="تاریخ"
             name="TravelEndDate"
             onChange={(e)=>setAllValues({ ...allValues,TravelEndDate:formatDateTime(e.value)})}
 
@@ -215,7 +261,8 @@ if(e.target)    {
               name="TravelTime"
               onChange={changeHandler}
               class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
-              placeholder="تعداد روز" />
+              placeholder="تعداد روز"
+              disabled="true" />
           </div>
         </div>
         <div className="flex flex-col w-[100%]  mb-8">

@@ -53,6 +53,7 @@ const TicketListMain = () => {
                        <div className="flex items-center mb-2 justify-endborder-t justify-center border-solid border-slate-200 rounded-b">
                        <Link style={{fontFamily:'Shabnam'}}  to={'/'}>
                         <button
+                        style={{fontFamily:'Shabnam'}}
                            className="text-mainColor   float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                            type="button"
                            
@@ -64,7 +65,7 @@ const TicketListMain = () => {
                         <button
                            className="text-white bg-mainColor shadow-blueShadow rounded-lg   float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                            type="button"
-                          
+                           style={{fontFamily:'Shabnam'}}
                          >
                           شروع ارسال پیام
                          </button>

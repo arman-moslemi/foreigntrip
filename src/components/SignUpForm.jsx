@@ -33,8 +33,8 @@ const SignUpForm = () => {
                     * پر کردن تمامی فیلد ها اجباری است.
                 </p>
             </div>
-            <div className="flex w-full flex-wrap">
-                <div className="flex flex-col w-[48%] ml-[2%] mb-4">
+            <div className="flex w-full flex-wrap md:block">
+                <div className="flex flex-col w-[48%] ml-[2%] mb-4 md:w-[100%] md:mx-0">
                     <span style={{fontFamily:'Shabnam'}}   className="text-base font-normal  ">کد ملی</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
@@ -47,12 +47,12 @@ const SignUpForm = () => {
                             placeholder="کد ملی"/>
                     </div>
                 </div>
-                <div className="flex w-[48%] mr-[2%] mb-4 items-end">
+                <div className="flex w-[48%] mr-[2%] mb-4 items-end  md:w-[100%] md:mx-0">
                     <div className="flex flex-col w-[64%] ">
                         <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">تاریخ تولد</span>
                         <div class="flex items-center h-10 pr-2 mt-3   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor  w-full pl-10 " id="test">
                             <Calender/>
-                            <DatePicker style={{fontFamily:'Shabnam'}} placeholder="خهاخعل"  onChange={(e) => console.log(e.value)} />
+                            <DatePicker style={{fontFamily:'Shabnam'}} placeholder="انتخاب تاریخ"  onChange={(e) => console.log(e.value)} />
                             {/* <input
                                 type="text"
                                 id="input-group-1"
@@ -65,7 +65,7 @@ const SignUpForm = () => {
                             className="w-[100%] p-2.5 bg-mainColor rounded-md text-white shadow-blueShadow text-base font-bold  ">استعلام</button>
                     </div>
                 </div>
-                <div className="flex flex-col w-[48%] ml-[2%] mb-4">
+                <div className="flex flex-col w-[48%] ml-[2%] mb-4  md:w-[100%] md:mx-0">
                     <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">نام شما</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
@@ -79,7 +79,7 @@ const SignUpForm = () => {
                             placeholder="نام"/>
                     </div>
                 </div>
-                <div className="flex flex-col w-[48%] mr-[2%] mb-4">
+                <div className="flex flex-col w-[48%] mr-[2%] mb-4  md:w-[100%] md:mx-0">
                     <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">نام خانوادگی شما</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
@@ -93,7 +93,7 @@ const SignUpForm = () => {
                             placeholder="نام خانوادگی"/>
                     </div>
                 </div>
-                <div className="flex flex-col w-[48%] ml-[2%] mb-4">
+                <div className="flex flex-col w-[48%] ml-[2%] mb-4  md:w-[100%] md:mx-0">
                     <span style={{fontFamily:'Shabnam'}}   className="text-base font-normal  ">شماره تلفن همراه</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
@@ -106,7 +106,7 @@ const SignUpForm = () => {
                             placeholder="شماره تلفن همراه"/>
                     </div>
                 </div>
-                <div className="flex flex-col w-[48%] mr-[2%] mb-4">
+                <div className="flex flex-col w-[48%] mr-[2%] mb-4  md:w-[100%] md:mx-0">
                     <span style={{fontFamily:'Shabnam'}}   className="text-base font-normal  ">شماره تلفن ثابت</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
@@ -119,7 +119,7 @@ const SignUpForm = () => {
                             placeholder="شماره تلفن ثابت"/>
                     </div>
                 </div>
-                <div className="flex flex-col w-[48%] ml-[2%] mb-4">
+                <div className="flex flex-col w-[48%] ml-[2%] mb-4  md:w-[100%] md:mx-0">
                     <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">آدرس ایمیل</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
@@ -132,7 +132,7 @@ const SignUpForm = () => {
                             placeholder="ایمیل"/>
                     </div>
                 </div>
-                <div className="flex w-[48%] mr-[2%] mb-4 items-end">
+                <div className="flex w-[48%] mr-[2%] mb-4 items-end  md:w-[100%] md:mx-0">
                     <div className="flex flex-col w-[64%] ">
                         <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">کد پستی</span>
                         <div class="relative mt-3">
@@ -151,7 +151,7 @@ const SignUpForm = () => {
                             className="w-[100%] p-2.5 bg-mainColor rounded-md text-white shadow-blueShadow text-base font-bold  ">استعلام</button>
                     </div>
                 </div>
-                <div className="flex flex-col w-[100%]  mb-4">
+                <div className="flex flex-col w-[100%]  mb-4  md:w-[100%] md:mx-0">
                     <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">آدرس شما</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
@@ -166,7 +166,7 @@ const SignUpForm = () => {
                             placeholder="آدرس شما"></textarea>
                     </div>
                 </div>
-                <div className="flex flex-col w-[48%] ml-[2%] mb-4">
+                <div className="flex flex-col w-[48%] ml-[2%] mb-4  md:w-[100%] md:mx-0">
                     <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">دسته بندی مجموعه</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
@@ -195,7 +195,7 @@ const SignUpForm = () => {
                             placeholder="آرمان"/> */}
                     </div>
                 </div>
-                <div className="flex flex-col w-[48%] mr-[2%] mb-4">
+                <div className="flex flex-col w-[48%] mr-[2%] mb-4  md:w-[100%] md:mx-0">
                     <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">زیر مجموعه</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
@@ -208,7 +208,7 @@ const SignUpForm = () => {
                             placeholder="نام زیر مجموعه"/>
                     </div>
                 </div>
-                <div className="flex flex-col w-[48%] ml-[2%] mb-4">
+                <div className="flex flex-col w-[48%] ml-[2%] mb-4  md:w-[100%] md:mx-0">
                     <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">نوع رابط استخدامی</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
@@ -233,7 +233,7 @@ const SignUpForm = () => {
                             placeholder="آرمان"/> */}
                     </div>
                 </div>
-                <div className="flex flex-col w-[48%] mr-[2%] mb-4">
+                <div className="flex flex-col w-[48%] mr-[2%] mb-4  md:w-[100%] md:mx-0">
                     <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">سمت</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
@@ -260,7 +260,7 @@ const SignUpForm = () => {
                             placeholder="آرمان"/> */}
                     </div>
                 </div>
-                <div className="flex flex-col w-[48%] ml-[2%] mb-4">
+                <div className="flex flex-col w-[48%] ml-[2%] mb-4  md:w-[100%] md:mx-0">
                     <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal  ">رمز عبور</span>
                     <div class="relative mt-3">
                         <div class="absolute top-3 right-2 flex items-center pl-3 pointer-events-none">
@@ -273,7 +273,7 @@ const SignUpForm = () => {
                             placeholder="رمز عبور"/>
                     </div>
                 </div>
-                <div className="flex flex-col w-[48%] mr-[2%] mb-4">
+                <div className="flex flex-col w-[48%] mr-[2%] mb-4  md:w-[100%] md:mx-0">
                     <span style={{fontFamily:'Shabnam'}}   className="text-base font-normal  ">کد امنیتی</span>
                     <div className="flex justify-between items-center ">
                         <div class="relative mt-3 w-[90%]">
@@ -295,7 +295,7 @@ const SignUpForm = () => {
                 </div>
             </div>
             <div className="mt-3">
-                <label style={{fontFamily:'Shabnam'}} className="  text-base font-normal">
+                <label style={{fontFamily:'Shabnam'}} className="  text-base font-normal xs:text-sm">
                     <input style={{fontFamily:'Shabnam'}}
                         type="checkbox"
                         class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-2"/>

@@ -43,13 +43,13 @@ const NewRequestFormStep3 = () => {
             var token = cookies.get('token');
             console.log(token)
             if (!token) {
-                navigate("/");
+             navigate("/");
             } else {
                 if (cookies.get('Role') == "Agent") {
     
                 }
                 else {
-                    navigate("/");
+             navigate("/");
     
                 }
             }
@@ -164,7 +164,7 @@ const NewRequestFormStep3 = () => {
                   
 
                 </div>
-                <div className="flex flex-col w-[30%] 2xl:w-[49%] 2xl:mr-0 2xl:ml-[1%] ml-[2.5%] mb-10">
+                <div className="flex flex-col w-[30%] 2xl:w-[100%]  2xl:mr-0 2xl:ml-[1%] ml-[2.5%] mb-10 ">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">هزینه اقامت بر عهده</span>
                     <div class="mt-2">
                         <input style={{fontFamily: 'Shabnam'}}
@@ -176,7 +176,7 @@ const NewRequestFormStep3 = () => {
                             placeholder="هزینه اقامت بر عهده"/>
                     </div>
                 </div>
-                <div className="flex flex-col w-[30%] 2xl:w-[49%] 2xl:ml-0 2xl:mr-[1%] mr-[2.5%] ml-[35%] mb-10">
+                <div className="flex flex-col w-[30%] 2xl:w-[100%] 2xl:ml-0 2xl:mr-[1%] mr-[2.5%] ml-[35%] mb-10">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">میزان هزینه</span>
                     <div class="mt-2">
                         <input style={{fontFamily: 'Shabnam'}}
@@ -188,7 +188,7 @@ const NewRequestFormStep3 = () => {
                             placeholder="میزان هزینه"/>
                     </div>
                 </div>
-                <div className="flex flex-col w-[30%] 2xl:w-[49%] 2xl:mr-0 2xl:ml-[1%] ml-[2.5%] mb-12">
+                <div className="flex flex-col w-[30%] 2xl:w-[100%] 2xl:mr-0 2xl:ml-[1%] ml-[2.5%] mb-12">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">هزینه غذا به عهده</span>
                     <div class="mt-2">
                         <input style={{fontFamily: 'Shabnam'}}
@@ -200,7 +200,7 @@ const NewRequestFormStep3 = () => {
                             placeholder="هزینه غذا به عهده"/>
                     </div>
                 </div>
-                <div className="flex flex-col w-[30%] 2xl:w-[49%] 2xl:ml-0 2xl:mr-[1%] mr-[2.5%] ml-[35%] mb-12">
+                <div className="flex flex-col w-[30%] 2xl:w-[100%] 2xl:ml-0 2xl:mr-[1%] mr-[2.5%] ml-[35%] mb-12">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">میزان هزینه غذا</span>
                     <div class="mt-2">
                         <input style={{fontFamily: 'Shabnam'}}
@@ -212,9 +212,9 @@ const NewRequestFormStep3 = () => {
                             placeholder="میزان هزینه غذا"/>
                     </div>
                 </div>
-                <div className="flex flex-col w-[30%] 2xl:w-[49%] 2xl:mr-0 2xl:ml-[1%] ml-[2.5%] mb-12">
+                <div className="flex flex-col w-[30%] 2xl:w-[100%] 2xl:mr-0 2xl:ml-[1%] ml-[2.5%] mb-12">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">نوع بلیط رفت و برگشت</span>
-                    <div class="mt-6 flex">
+                    <div class="mt-6 flex md:block">
                     <div className="ml-5 mb-4">
                     <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
                     <input style={{fontFamily:'Shabnam'}}
@@ -226,7 +226,7 @@ const NewRequestFormStep3 = () => {
                       Business
                     </label>
                   </div>
-                  <div className="mr-10 mb-4">
+                  <div className="mr-10 mb-4 md:mr-0">
                     <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
                     <input style={{fontFamily:'Shabnam'}}
                         type="checkbox"
@@ -239,7 +239,7 @@ const NewRequestFormStep3 = () => {
                   </div>
                     </div>
                 </div>
-                <div className="flex flex-col w-[30%] 2xl:w-[49%] 2xl:ml-0 2xl:mr-[1%]  mr-[2.5%] ml-[35%] mb-12">
+                <div className="flex flex-col w-[30%] 2xl:w-[100%] 2xl:ml-0 2xl:mr-[1%]  mr-[2.5%] ml-[35%] mb-12">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">شرکت هواپیمایی</span>
                     <div class="mt-2">
                         <input style={{fontFamily: 'Shabnam'}}
@@ -251,7 +251,7 @@ const NewRequestFormStep3 = () => {
                             placeholder="نام شرکت هواپیمایی"/>
                     </div>
                 </div>
-                <div className="flex flex-col w-[30%] 2xl:w-[49%] 2xl:mr-0 2xl:ml-[1%] ml-[2.5%] mb-10">
+                <div className="flex flex-col w-[30%] 2xl:w-[100%] 2xl:mr-0 2xl:ml-[1%] ml-[2.5%] mb-10">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">هزینه بلیط بر عهده</span>
                     <div class="mt-2">
                         <input style={{fontFamily: 'Shabnam'}}
@@ -263,7 +263,7 @@ const NewRequestFormStep3 = () => {
                             placeholder="هزینه بلیط بر عهده"/>
                     </div>
                 </div>
-                <div className="flex flex-col w-[30%] 2xl:w-[49%] 2xl:ml-0 2xl:mr-[1%] mr-[2.5%] ml-[35%] mb-10">
+                <div className="flex flex-col w-[30%] 2xl:w-[100%] 2xl:ml-0 2xl:mr-[1%] mr-[2.5%] ml-[35%] mb-10">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">میزان هزینه بلیط</span>
                     <div class="mt-2">
                         <input style={{fontFamily: 'Shabnam'}}
@@ -275,7 +275,7 @@ const NewRequestFormStep3 = () => {
                             placeholder="میزان هزینه بلیط"/>
                     </div>
                 </div>
-                <div className="flex flex-col w-[35%] 2xl:w-[49%] 2xl:mr-0 2xl:ml-[1%] xl:w-[100%] xl:mx-0 ml-[2.5%] mb-16">
+                <div className="flex flex-col w-[35%] 2xl:w-[100%] 2xl:mr-0 2xl:ml-[1%] xl:w-[100%] xl:mx-0 ml-[2.5%] mb-16">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">حق ماموریت</span>
                     <div class="mt-5 flex-col">
                         <div className="flex items-center">
@@ -306,7 +306,7 @@ const NewRequestFormStep3 = () => {
                 <div className="flex flex-col w-[45%] 2xl:w-[49%] 2xl:ml-0 2xl:mr-[1%] xl:w-[100%] xl:mx-0 mr-[2.5%] ml-[15%] mb-16">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">میزان حق ماموریت</span>
                     <div class="mt-5 flex-col w-[100%]">
-                      <div className="flex items-center w-[100%]">
+                      <div className="flex items-center w-[100%] md:block">
                         <div className="flex justify-start">
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[7px]">
                           {/* <input style={{fontFamily:'Shabnam'}}
@@ -324,12 +324,12 @@ const NewRequestFormStep3 = () => {
                             onChange={changeHandler}
                             name="ExpertRightOfMission"
                             id="input-group-1"
-                            class="text-right h-[32px] w-[52%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            class="md:mt-2 md:w-[100%] text-right h-[32px] w-[52%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
                             />
 
 
                       </div>
-                      <div className="flex items-center mt-3 w-[100%]">
+                      <div className="flex items-center mt-3 w-[100%] md:block">
                         <div className="flex justify-start">
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[37px]">
                           {/* <input style={{fontFamily:'Shabnam'}}
@@ -346,12 +346,12 @@ const NewRequestFormStep3 = () => {
                             onChange={changeHandler}
                             name="ManagerRightOfMission"
                             id="input-group-1"
-                            class="text-right h-[32px] w-[52%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            class="md:mt-2 md:w-[100%] text-right h-[32px] w-[52%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
                             />
 
 
                       </div>
-                      <div className="flex items-center mt-3 w-[100%]">
+                      <div className="flex items-center mt-3 w-[100%] md:block">
                         <div className="flex justify-start">
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[15px]">
                           {/* <input style={{fontFamily:'Shabnam'}}
@@ -368,7 +368,7 @@ const NewRequestFormStep3 = () => {
                             id="input-group-1"
                             onChange={changeHandler}
                             name="GeneralManagerRightOfMission"
-                            class="text-right h-[32px] w-[52%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            class="md:mt-2 md:w-[100%] text-right h-[32px] w-[52%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
                             />
 
 
@@ -376,18 +376,18 @@ const NewRequestFormStep3 = () => {
                         
                     </div>
                 </div>
-                <div className="flex flex-col w-[100%]  mb-11">
+                <div className="flex flex-col w-[100%]  mb-11 md:block">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">حق آموزش</span>
-                    <div class="mt-5 flex-col w-[100%]">
+                    <div class="mt-5 flex-col w-[100%] md:block">
                       <div className="flex items-center xl:flex-col xl:items-start w-[100%]">
                         <div className="flex justify-start ">
-                          <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[45px]  xl:mb-3">
+                          <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[45px] md:ml-0  xl:mb-3">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
                           onChange={changeHandler}
                           name="RightToEducationId"
                           value={"1"}
-                          class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4 "/>
+                          class="accent-mainColor md:w-[100%]  w-4 h-4 border-2 border-mainColor outline-mainColor ml-4 md:ml-0"/>
                             هزینه آموزش توسط متقاضی پرداخت می شود. میزان هزینه :
                           </label>
                         </div>
@@ -397,14 +397,14 @@ const NewRequestFormStep3 = () => {
                             onChange={changeHandler}
                             name="RightToEducationCost"
                             
-                            class="text-right h-[32px] w-[16%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            class="text-right h-[32px] md:w-[100%] w-[16%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
                             />
 
 
                       </div>
                       <div className="flex items-center mt-3 w-[100%]">
-                        <div className="flex justify-start">
-                          <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[7px]">
+                        <div className="flex justify-start md:block">
+                          <label style={{fontFamily:'Shabnam'}} className="w-[100%] text-base font-normal flex items-center ml-[7px] md:ml-[0px]">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
                           onChange={changeHandler}
@@ -419,7 +419,7 @@ const NewRequestFormStep3 = () => {
                             id="input-group-1"
                             onChange={changeHandler}
                             name="RightToEducationCost"
-                            class="text-right h-[32px] w-[16%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            class="md:w-[100%] text-right h-[32px] w-[16%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
                             />
 
 
@@ -449,7 +449,7 @@ const NewRequestFormStep3 = () => {
                         
                     </div>
                 </div>
-                <div className="flex flex-col w-[43%] 3xl:w-[100%]  mb-11">
+                <div className="flex flex-col w-[100%] md:block 3xl:w-[100%]  mb-11">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">حق ایاب و ذهاب </span>
                     <div class="mt-5 flex-col w-[100%]">
                       <div className="flex items-center w-[100%]">

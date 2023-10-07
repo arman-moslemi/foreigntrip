@@ -20,14 +20,14 @@ const Userlist = () =>{
         var token = cookies.get('token');
         console.log(cookies.get('Role'))
         if (!token) {
-            navigate("/");
+         navigate("/");
         } else {
             if (cookies.get('Role') == "Supervisor") {
                 GetData()
 
             }
             else {
-                navigate("/");
+               navigate("/");
 
             }
         }

@@ -68,7 +68,7 @@ const NewRequestFormStep2 = () => {
 
             }
             else {
-                navigate("/");
+             navigate("/");
 
             }
         }
@@ -178,59 +178,11 @@ const NewRequestFormStep2 = () => {
         <div>
             <p style={{ fontFamily: 'Shabnam' }} className="text-xl xs:text-base xs:font-bold text-mainColor font-normal mt-3.5 mb-8 ">گام 2 - فهرست اسامی و مشخصات ماموران اعزامی</p>
             <div className="flex w-full flex-wrap">
-                <div className="flex flex-col w-[31%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:mr-0 xl:ml-[1%] ml-[1.5%] mb-5">
-                    <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">نام</span>
-                    <div class="mt-2">
-                        <input style={{ fontFamily: 'Shabnam' }}
-                            type="text"
-                            id="input-group-1"
-                            onChange={changeHandler}
-                            name="EmployeeName"
-                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
-                            placeholder="نام" />
-                    </div>
-                </div>
-                <div className="flex flex-col w-[32%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:ml-0 xl:mr-[1%] mx-[1.5%] mb-5">
-                    <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">نام خانوادگی</span>
-                    <div class="mt-2">
-                        <input style={{ fontFamily: 'Shabnam' }}
-                            type="text"
-                            id="input-group-1"
-                            onChange={changeHandler}
-                            name="EmployeeFamily"
-                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
-                            placeholder="نام خانوادگی" />
-                    </div>
-                </div>
-                <div className="flex flex-col w-[31%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:mr-0 xl:ml-[1%] mr-[1.5%] mb-5">
-                    <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">نام پدر</span>
-                    <div class="mt-2">
-                        <input style={{ fontFamily: 'Shabnam' }}
-                            type="text"
-                            onChange={changeHandler}
-                            name="EmployeeFatherName"
-                            id="input-group-1"
-                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
-                            placeholder="نام پدر" />
-                    </div>
-                </div>
-                <div className="flex flex-col w-[31%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:ml-0 xl:mr-[1%] ml-[1.5%] mb-7">
-                    <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">شماره شناسنامه</span>
-                    <div class="mt-2">
-                        <input style={{ fontFamily: 'Shabnam' }}
-                            type="text"
-                            id="input-group-1"
-                            onChange={changeHandler}
-                            name="BirthCertificationNumber"
-                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
-                            placeholder="شماره شناسنامه" />
-                    </div>
-                </div>
-                <div className="flex flex-col w-[32%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:mr-0 xl:ml-[1%] mx-[1.5%] mb-7">
+            <div className="flex flex-col w-[32%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:mr-0 xl:ml-[1%] ml-[1.5%] mb-7">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">کد ملی</span>
                     <div class="mt-2">
                         <input style={{ fontFamily: 'Shabnam' }}
-                            type="text"
+                            type="number"
                             id="input-group-1"
                             onChange={changeHandler}
                             name="NationalCode"
@@ -238,7 +190,7 @@ const NewRequestFormStep2 = () => {
                             placeholder="کد ملی" />
                     </div>
                 </div>
-                <div className="flex flex-col w-[31%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:ml-0 xl:mr-[1%] mr-[1.5%] mb-7">
+                <div className="flex flex-col w-[32%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:ml-0 xl:mr-[1%] ml-[1.5%] mb-7">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">تاریخ تولد</span>
                     <div >
 
@@ -254,6 +206,57 @@ const NewRequestFormStep2 = () => {
                         </div>
                     </div>
                 </div>
+            <div className="flex flex-col w-[31%] xl:w-[50%] xs:w-[100%] xs:mr-[0%]  xl:ml-[0%] mr-[1.5%] mb-7">
+                    <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">شماره شناسنامه</span>
+                    <div class="mt-2">
+                        <input style={{ fontFamily: 'Shabnam' }}
+                            type="number"
+                            id="input-group-1"
+                            onChange={changeHandler}
+                            name="BirthCertificationNumber"
+                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            placeholder="شماره شناسنامه" />
+                    </div>
+                </div>
+                
+             
+                <div className="flex flex-col w-[32%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:mr-0 xl:ml-[1%]  mb-5">
+                    <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">نام</span>
+                    <div class="mt-2">
+                        <input style={{ fontFamily: 'Shabnam' }}
+                            type="text"
+                            id="input-group-1"
+                            onChange={changeHandler}
+                            name="EmployeeName"
+                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            placeholder="نام" />
+                    </div>
+                </div>
+                <div className="flex flex-col w-[32%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:ml-0 xl:mr-[1%] mr-[1.5%] mb-5">
+                    <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">نام خانوادگی</span>
+                    <div class="mt-2">
+                        <input style={{ fontFamily: 'Shabnam' }}
+                            type="text"
+                            id="input-group-1"
+                            onChange={changeHandler}
+                            name="EmployeeFamily"
+                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            placeholder="نام خانوادگی" />
+                    </div>
+                </div>
+                <div className="flex flex-col w-[31%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:mr-0 xl:ml-[1%] mr-[3%] mb-5">
+                    <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">نام پدر</span>
+                    <div class="mt-2">
+                        <input style={{ fontFamily: 'Shabnam' }}
+                            type="text"
+                            onChange={changeHandler}
+                            name="EmployeeFatherName"
+                            id="input-group-1"
+                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            placeholder="نام پدر" />
+                    </div>
+                </div>
+             
                 <div className="flex flex-col w-[25%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:mr-0 xl:ml-[1%] ml-[1.5%] mb-12">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">جنسیت</span>
                     <div class="mt-6 flex items-center">
@@ -388,16 +391,21 @@ const NewRequestFormStep2 = () => {
                     </div>
                 </div>
                 <div className="flex flex-col w-[31%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:mr-0 xl:ml-[1%] ml-[1.5%] mb-10">
-                    <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">سمت</span>
-                    <div class="mt-2">
-                        <input style={{ fontFamily: 'Shabnam' }}
-                            type="text"
-                            id="input-group-1"
-                            onChange={changeHandler}
-                            name="PositionId"
-                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
-                            placeholder="سمت" />
-                    </div>
+                <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal ">سمت</span>
+              
+                      
+              <select style={{fontFamily:'Shabnam'}}
+                  name="position"
+                  id="position"
+                  className="mt-2  text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5">
+                  <option style={{fontFamily:'Shabnam'}} value="choose" className=" ">انتخاب کنید</option>
+                  <option  style={{fontFamily:'Shabnam'}}value="s1" className=" ">مدیرعامل</option>
+                  <option  style={{fontFamily:'Shabnam'}}value="s2" className=" ">دبیر</option>
+                  <option style={{fontFamily:'Shabnam'}} value="s3" className=" ">مدیرداخلی</option>
+                 
+
+              </select>
+     
                 </div>
                 <div className="flex flex-col w-[33%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:ml-0 xl:mr-[1%] mx-[1.5%] mb-10 xl:mb-5">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">وضعیت استخدامی</span>

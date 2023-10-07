@@ -31,13 +31,13 @@ const NewRequestFormStep4 = () => {
             var token = cookies.get('token');
             console.log(token)
             if (!token) {
-                navigate("/");
+        navigate("/");
             } else {
                 if (cookies.get('Role') == "Agent") {
     
                 }
                 else {
-                    navigate("/");
+          navigate("/");
     
                 }
             }
@@ -79,7 +79,7 @@ const NewRequestFormStep4 = () => {
           <p style={{fontFamily: 'Shabnam'}} className="text-xl text-mainColor font-bold mt-3.5 mb-10 ">گام ۴ - توضیحات سفر</p>
             <div className="flex w-full flex-wrap">
             <div className="flex flex-col w-[100%]  mb-7">
-                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">شرح اهمیت موضوع سفر ( حداکثر در ۵ سطر )</span>
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  md:text-sm">شرح اهمیت موضوع سفر ( حداکثر در ۵ سطر )</span>
                     <div class="mt-2">
                     <textarea style={{fontFamily:'Shabnam'}}
                             rows={5}
@@ -92,7 +92,7 @@ const NewRequestFormStep4 = () => {
                     </div>
             </div>
             <div className="flex flex-col w-[100%]  mb-7">
-                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">سوابق دستاوردهای قبلی مرتبط با موضوع این ماموریت (حداکثر در ۵ سطر )</span>
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  md:text-sm">سوابق دستاوردهای قبلی مرتبط با موضوع این ماموریت (حداکثر در ۵ سطر )</span>
                     <div class="mt-2">
                     <textarea style={{fontFamily:'Shabnam'}}
                             rows={5}
@@ -105,7 +105,7 @@ const NewRequestFormStep4 = () => {
                     </div>
             </div>
             <div className="flex flex-col w-[100%]  mb-7">
-                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">خلاصه ترجمه شده دعوتنامه و یا قید هزینه ها و برنامه ریزی زمانبندی شده روزهای ماموریت بر اساس دعوتنامه(حداکثر در ۵ سطر)</span>
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  md:text-sm">خلاصه ترجمه شده دعوتنامه و یا قید هزینه ها و برنامه ریزی زمانبندی شده روزهای ماموریت بر اساس دعوتنامه(حداکثر در ۵ سطر)</span>
                     <div class="mt-2">
                     <textarea style={{fontFamily:'Shabnam'}}
                             rows={5}
@@ -118,7 +118,7 @@ const NewRequestFormStep4 = () => {
                     </div>
             </div>
             <div className="flex flex-col w-[100%]  mb-7">
-                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">خلاصه ترجمه شده دیگر نامه های طرف خارجی (حداکثر در ۱۰ سطر)</span>
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  md:text-sm">خلاصه ترجمه شده دیگر نامه های طرف خارجی (حداکثر در ۱۰ سطر)</span>
                     <div class="mt-2">
                     <textarea style={{fontFamily:'Shabnam'}}
                             rows={10}
@@ -131,8 +131,8 @@ const NewRequestFormStep4 = () => {
                     </div>
             </div>
             <div className="flex flex-col w-[100%]  mb-7">
-                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">آیا سفر مذکور نیاز به موافقت دستگاه های مرجع دیگری در داخل دارد؟ در صورت مثبت بودن پاسخ اصل نامه دعوت نامه ضمیمه شود</span>
-                    <div class="mt-4 flex">
+                    <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  md:text-sm">آیا سفر مذکور نیاز به موافقت دستگاه های مرجع دیگری در داخل دارد؟ در صورت مثبت بودن پاسخ اصل نامه دعوت نامه ضمیمه شود</span>
+                    <div class="mt-4 flex md:block">
                     <div className="flex items-center">
                           <input            value={true}                onChange={changeHandler}
                             name="ReferenceDeviceAgreement" className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor  ml-1" type="radio"  id="confirmationYes" />
@@ -153,9 +153,9 @@ const NewRequestFormStep4 = () => {
                     </div>
                     </div>
             </div>
-            <div className="flex w-[100%] mb-8">
+            <div className="flex w-[100%] mb-8 md:block">
                   <p style={{fontFamily: 'Shabnam'}} className="text-base font-bold">سفر در راستای برنامه اقتصاد مقاومتی می باشد؟</p>
-                  <div className="flex items-center">
+                  <div className="flex items-center md:mt-2">
                           <input          onChange={changeHandler}
                             name="ResistanceEconomyTravel" value={true} className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-7 ml-1" type="radio"  id="EconomyYes" />
                           <label style={{fontFamily: 'Shabnam'}} className="" For="a1">بله</label>
@@ -170,17 +170,17 @@ const NewRequestFormStep4 = () => {
                 
                 
             </div>
-            <div className="flex justify-end">
+            <div className="flex justify-end md:block">
             <Link
             to={'/newRequestStep3/'+id}
                 style={{fontFamily: 'Shabnam'}}
-                className="w-40 h-12 flex justify-center items-center mt-20 bg-midGray shadow-blackShadow   text-white text-xl font-normal rounded-lg hover:bg-lightGray hover:text-darkGray">
+                className="w-40 h-12 flex justify-center items-center mt-20 md:mt-2 bg-midGray shadow-blackShadow   text-white text-xl font-normal rounded-lg hover:bg-lightGray hover:text-darkGray">
                 گام قبلی
             </Link>
             <button
              onClick={() => setShowSuccessModal(true)}
                 style={{fontFamily: 'Shabnam'}}
-                className="w-40 h-12 mt-20 justify-center items-center flex mr-4 bg-mainColor shadow-blueShadow   text-white text-xl font-normal rounded-lg hover:bg-lightBlue hover:text-mainColor">
+                className="w-40 h-12 mt-20 justify-center items-center md:mr-0 md:mt-4 flex mr-4 bg-mainColor shadow-blueShadow   text-white text-xl font-normal rounded-lg hover:bg-lightBlue hover:text-mainColor">
                 ثبت درخواست
             </button>
             </div>
@@ -189,7 +189,7 @@ const NewRequestFormStep4 = () => {
             <div
             className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
           >
-            <div className="relative w-[70%] my-5 mx-auto max-w-3xl">
+            <div className="relative w-[70%] my-5 mx-auto max-w-3xl md:w-[100%]">
              
               <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
            
