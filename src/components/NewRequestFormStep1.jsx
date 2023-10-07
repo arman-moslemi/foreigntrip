@@ -128,7 +128,7 @@ if(e.target)    {
     <div>
       <p style={{ fontFamily: 'Shabnam' }} className="text-xl text-mainColor font-bold mt-3.5 mb-8 ">گام 1 - اطلاعات اولیه</p>
       <div className="flex w-full flex-wrap">
-        <div className="flex flex-col w-[31%] ml-[1.5%] mb-5">
+        <div className="flex flex-col w-[31%] xl-1400:w-[49%] xl-1400:ml-[1%] xl-1400:mr-0 xl-lg:w-[100%] xl-lg:mx-0 ml-[1.5%]  mb-5">
           <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">نام دستگاه اجرایی</span>
           <div class="mt-2">
             <input style={{ fontFamily: 'Shabnam' }}
@@ -140,7 +140,7 @@ if(e.target)    {
               placeholder="نام دستکاه اجرایی" />
           </div>
         </div>
-        <div className="flex flex-col w-[32%] mx-[1.5%] mb-5">
+        <div className="flex flex-col w-[32%] xl-1400:w-[49%] xl-1400:mr-[1%] xl-1400:ml-0 xl-lg:w-[100%] xl-lg:mx-0 mx-[1.5%] mb-5">
           <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">آدرس اینترنتی دستگاه اجرایی</span>
           <div class="mt-2">
             <input style={{ fontFamily: 'Shabnam' }}
@@ -152,7 +152,7 @@ if(e.target)    {
               placeholder="آدرس اینترنتی دستگاه اجرایی" />
           </div>
         </div>
-        <div className="flex flex-col w-[31%] mr-[1.5%] mb-5">
+        <div className="flex flex-col w-[31%] xl-1400:w-[49%] xl-1400:ml-[1%] xl-1400:mr-0  xl-lg:w-[100%] xl-lg:mx-0 mr-[1.5%] mb-5">
           <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">کشور و شهر مقصد</span>
           <div class="mt-2">
             <input style={{ fontFamily: 'Shabnam' }}
@@ -164,7 +164,7 @@ if(e.target)    {
               placeholder="کشور و شهر مقصد" />
           </div>
         </div>
-        <div className="flex flex-col w-[31%] ml-[1.5%] mb-7">
+        <div className="flex flex-col w-[31%] xl-1400:w-[49%] xl-1400:mr-[1%] xl-1400:ml-0 xl-lg:w-[100%] xl-lg:mx-0 ml-[1.5%] mb-7">
           <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">مسیر پروازی</span>
           <div class="mt-2">
             <input style={{ fontFamily: 'Shabnam' }}
@@ -176,9 +176,9 @@ if(e.target)    {
               placeholder="مسیر پروازی" />
           </div>
         </div>
-        <div className="flex w-[32%] mx-[1.5%] mb-7 items-end">
+        <div className="flex w-[32%] xl-1400:w-[49%] xl-1400:ml-[1%] xl-1400:mr-0 xl-lg:w-[100%] xl-lg:mx-0 mx-[1.5%] mb-7 items-end">
           <div className="flex flex-col w-[39%] ">
-            <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">تاریخ و مدت سفر</span>
+            <span style={{ fontFamily: 'Shabnam' }} className="text-base xs:text-sm font-bold font-IRsans">تاریخ و مدت سفر</span>
             <div class="mt-2 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full" id="StartDate">
               <DatePicker style={{ fontFamily: 'Shabnam' }} placeholder="خهاخعل"
                 name="TravelDate"
@@ -206,7 +206,7 @@ if(e.target)    {
                                 placeholder="کد پستی"/> */}
           </div>
         </div>
-        <div className="flex flex-col w-[31%] mr-[1.5%] mb-7">
+        <div className="flex flex-col w-[31%] xl-1400:w-[49%] xl-1400:mr-[1%] xl-1400:ml-0 xl-lg:w-[100%] xl-lg:mx-0 mr-[1.5%] mb-7">
           <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">مدت زمان سفر</span>
           <div class="mt-2">
             <input style={{ fontFamily: 'Shabnam' }}
@@ -232,7 +232,7 @@ if(e.target)    {
         </div>
         <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans mb-4">اهداف سفر</span>
         <div className="flex flex-wrap w-[100%]">
-          <div className="ml-14 mb-4">
+          <div className="ml-14 mb-4 xs:w-[50%] xs:mx-0">
             <label style={{ fontFamily: 'Shabnam' }} className="text-base font-normal flex items-center">
               <input style={{ fontFamily: 'Shabnam' }}
                 type="checkbox"
@@ -243,7 +243,7 @@ if(e.target)    {
               اداری
             </label>
           </div>
-          <div className="ml-14 mb-4">
+          <div className="ml-14 mb-4 xs:w-[50%] xs:mx-0">
             <label style={{ fontFamily: 'Shabnam' }} className="text-base font-normal flex items-center">
               <input 
                   name="TravelGoalId"
@@ -255,7 +255,7 @@ if(e.target)    {
               تجاری
             </label>
           </div>
-          <div className="ml-14 mb-4">
+          <div className="ml-14 mb-4 xs:w-[50%] xs:mx-0">
             <label style={{ fontFamily: 'Shabnam' }} className="text-base font-normal flex items-center">
               <input style={{ fontFamily: 'Shabnam' }}
                   name="TravelGoalId"
@@ -266,7 +266,7 @@ if(e.target)    {
               آموزشی
             </label>
           </div>
-          <div className="ml-14 mb-4">
+          <div className="ml-14 mb-4 xs:w-[50%] xs:mx-0">
             <label style={{ fontFamily: 'Shabnam' }} className="text-base font-normal flex items-center">
               <input style={{ fontFamily: 'Shabnam' }}
                 type="checkbox"
@@ -277,7 +277,7 @@ if(e.target)    {
               فرهنگی
             </label>
           </div>
-          <div className="ml-14 mb-4">
+          <div className="ml-14 mb-4 xs:w-[50%] xs:mx-0">
             <label style={{ fontFamily: 'Shabnam' }} className="text-base font-normal flex items-center">
               <input style={{ fontFamily: 'Shabnam' }}
                 type="checkbox"
@@ -288,7 +288,7 @@ if(e.target)    {
               سیاسی
             </label>
           </div>
-          <div className="ml-14 mb-4">
+          <div className="ml-14 mb-4 xs:w-[50%] xs:mx-0">
             <label style={{ fontFamily: 'Shabnam' }} className="text-base font-normal flex items-center">
               <input style={{ fontFamily: 'Shabnam' }}
                 type="checkbox"
@@ -299,7 +299,7 @@ if(e.target)    {
               اقتصادی
             </label>
           </div>
-          <div className="ml-14 mb-4">
+          <div className="ml-14 mb-4 xs:w-[50%] xs:mx-0">
             <label style={{ fontFamily: 'Shabnam' }} className="text-base font-normal flex items-center">
               <input style={{ fontFamily: 'Shabnam' }}
                 type="checkbox"
@@ -310,7 +310,7 @@ if(e.target)    {
               صنعتی
             </label>
           </div>
-          <div className="ml-14 mb-4">
+          <div className="ml-14 mb-4 xs:w-[50%] xs:mx-0">
             <label style={{ fontFamily: 'Shabnam' }} className="text-base font-normal flex items-center">
               <input style={{ fontFamily: 'Shabnam' }}
                 type="checkbox"
@@ -323,9 +323,9 @@ if(e.target)    {
           </div>
 
         </div>
-        <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans mb-4 mt-9">اهداف شغلی</span>
+        <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans mb-4 mt-9 xl-lg:mt-4">اهداف شغلی</span>
         <div className="flex flex-wrap w-[100%]">
-          <div className="ml-5 mb-4">
+          <div className="ml-5 mb-4 xs:w-[100%] xs:mx-0">
             <label style={{ fontFamily: 'Shabnam' }} className="text-base font-normal flex items-center">
               <input style={{ fontFamily: 'Shabnam' }}
                 type="checkbox"
@@ -336,7 +336,7 @@ if(e.target)    {
               مذاکرات
             </label>
           </div>
-          <div className="ml-5 mb-4">
+          <div className="ml-5 mb-4 xs:w-[100%] xs:mx-0">
             <label style={{ fontFamily: 'Shabnam' }} className="text-base font-normal flex items-center">
               <input style={{ fontFamily: 'Shabnam' }}
                 type="checkbox"
@@ -347,7 +347,7 @@ if(e.target)    {
               تامین تجهیزات
             </label>
           </div>
-          <div className="ml-5 mb-4">
+          <div className="ml-5 mb-4 xs:w-[100%] xs:mx-0">
             <label style={{ fontFamily: 'Shabnam' }} className="text-base font-normal flex items-center">
               <input style={{ fontFamily: 'Shabnam' }}
                 type="checkbox"
@@ -358,7 +358,7 @@ if(e.target)    {
               برگزاری نمایشگاه
             </label>
           </div>
-          <div className="ml-5 mb-4">
+          <div className="ml-5 mb-4 xs:w-[100%] xs:mx-0">
             <label style={{ fontFamily: 'Shabnam' }} className="text-base font-normal flex items-center">
               <input style={{ fontFamily: 'Shabnam' }}
                 type="checkbox"
@@ -369,7 +369,7 @@ if(e.target)    {
               تست کالا و خدمات
             </label>
           </div>
-          <div className="ml-5 mb-4">
+          <div className="ml-5 mb-4 xs:w-[100%] xs:mx-0">
             <label style={{ fontFamily: 'Shabnam' }} className="text-base font-normal flex items-center">
               <input style={{ fontFamily: 'Shabnam' }}
                 type="checkbox"
@@ -380,7 +380,7 @@ if(e.target)    {
               حسابرسی
             </label>
           </div>
-          <div className="ml-5 mb-4">
+          <div className="ml-5 mb-4 xs:w-[100%] xs:mx-0">
             <label style={{ fontFamily: 'Shabnam' }} className="text-base font-normal flex items-center">
               <input style={{ fontFamily: 'Shabnam' }}
                 type="checkbox"
@@ -391,7 +391,7 @@ if(e.target)    {
               صدور خدمات فنی و مهندسی
             </label>
           </div>
-          <div className="ml-5 mb-4">
+          <div className="ml-5 mb-4 xs:w-[100%] xs:mx-0">
             <label style={{ fontFamily: 'Shabnam' }} className="text-base font-normal flex items-center">
               <input style={{ fontFamily: 'Shabnam' }}
                 type="checkbox"
@@ -404,21 +404,21 @@ if(e.target)    {
           </div>
 
         </div>
-        <div className="flex flex-col w-[48.5%] ml-[1.5%] mt-8 mb-12">
+        <div className="flex flex-col w-[48.5%] xl-lg:w-[100%] xl-lg:mx-0 xl-lg:mb-0 ml-[1.5%] mt-8 mb-12">
 
           <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">متولیان / شرکت کنندگان</span>
 
-          <div class="mt-5 flex w-[100%]">
+          <div class="mt-5 flex w-[100%] xs:flex-col xs:items-start">
             <input style={{ fontFamily: 'Shabnam' }}
               type="text"
               id="input-group-1"
               name="DeviceName"
               onChange={changeHandler}
 
-              class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-[28%] p-2.5  "
+              class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-[28%] xs:w-[100%] p-2.5  "
               placeholder="نام دستکاه " />
-            <div className="flex items-center">
-              <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-5 ml-1" type="radio" name="ParticipantID"
+            <div className="flex items-center xs:mt-3">
+              <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-5 xs:mr-0 ml-1" type="radio" name="ParticipantID"
                              onChange={changeHandler}
  id="r1" />
               <label style={{ fontFamily: 'Shabnam' }} className="" For="r1">متولی</label>
@@ -429,7 +429,7 @@ if(e.target)    {
           </div>
 
         </div>
-        <div className="flex flex-col w-[48.5%] mr-[1.5%] mt-8 mb-12">
+        <div className="flex flex-col w-[48.5%] xl-lg:w-[100%] xl-lg:mx-0 mr-[1.5%] mt-8 mb-12">
 
           <span style={{ fontFamily: 'Shabnam' }} 
            
@@ -458,20 +458,20 @@ if(e.target)    {
           </div>
 
         </div>
-        <div className="flex w-[100%] mb-10">
+        <div className="flex w-[100%] mb-10 lg:mb-7 lg:flex-col lg:items-start">
           <p style={{ fontFamily: 'Shabnam' }} 
             className="text-base font-bold">آیا نیاز به یادداشت وزارت امور خارجه برای اخذ ویزا دارد ؟</p>
-          <div className="flex items-center">
-            <input name="GetVisa" onChange={changeHandler} value={true} className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-7 ml-1" type="radio"  id="a1" />
+          <div className="flex items-center lg:mt-4">
+            <input name="GetVisa" onChange={changeHandler} value={true} className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-7 lg:mr-0 ml-1" type="radio"  id="a1" />
             <label style={{ fontFamily: 'Shabnam' }} className="" For="a1">بله</label>
             <input value={false} name="GetVisa" onChange={changeHandler} className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-8 ml-1" type="radio"  id="a2" />
             <label  style={{ fontFamily: 'Shabnam' }} className="" For="a2">خیر</label>
           </div>
         </div>
-        <div className="flex w-[100%] mb-8">
+        <div className="flex w-[100%] mb-8 lg:flex-col lg:items-start">
           <p style={{ fontFamily: 'Shabnam' }}  className="text-base font-bold">آیا سفر مشترک بین چند دستگاه اجرایی است ؟</p>
-          <div className="flex items-center">
-            <input onChange={changeHandler} value={true} name="JointTrip"className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-7 ml-1" type="radio"  id="a3" />
+          <div className="flex items-center lg:mt-4">
+            <input onChange={changeHandler} value={true} name="JointTrip"className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-7 lg:mr-0 ml-1" type="radio"  id="a3" />
             <label style={{ fontFamily: 'Shabnam' }} 
             className="" For="a1" >بله</label>
             <input   onChange={changeHandler} value={false} name="JointTrip"className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-8 ml-1" type="radio" id="a4" />
@@ -486,7 +486,7 @@ if(e.target)    {
               id="input-group-1"
               onChange={changeHandler}
             name="DateLetter"
-              class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-[40%] p-2.5  "
+              class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-[40%] lg-md:w-[70%] xs:w-[100%] p-2.5  "
             />
           </div>
         </div>
@@ -495,7 +495,7 @@ if(e.target)    {
       <div className="flex justify-end">
         <button onClick={insertReq}
           style={{ fontFamily: 'Shabnam' }}
-          className="w-40 h-12 flex justify-center items-center bg-mainColor shadow-blueShadow font-IRsans text-white text-xl font-bold rounded-lg hover:bg-lightBlue hover:text-mainColor">
+          className="w-40 h-12 flex lg-md:mt-6 xs:w-[100%] justify-center items-center bg-mainColor shadow-blueShadow font-IRsans text-white text-xl font-bold rounded-lg hover:bg-lightBlue hover:text-mainColor">
           گام بعدی
         </button>
       </div>
