@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { DatePicker } from "zaman";
 import './components.css';
 import {ReactComponent as User} from "../assets/icon/black/profile.svg"
@@ -15,8 +15,116 @@ import {ReactComponent as Pencil} from "../assets/icon/white/pencil.svg"
 import Captcha from "../assets/img/captcha.png"
 import UserImg from "../assets/img/user.png"
 import {Link} from "react-router-dom";
-const AddAgentForm = () => {
+import Cookies from 'universal-cookie';
+import { axiosReq } from "../commons/axiosReq";
+import { useNavigate } from "react-router-dom";
 
+const AddAgentForm = () => {
+    const [data, setData] = useState();
+    const [sub, setSub] = useState();
+    const [pos, setPos] = useState();
+    const [type, setType] = useState();
+
+    const [reCheck, setRecheck] = useState(false);
+
+    let navigate = useNavigate();
+
+    useEffect(() => {
+
+        auth();
+    }, [reCheck]);
+    const auth = async () => {
+        const cookies = new Cookies();
+        var token = cookies.get('token');
+        console.log(token)
+        if (!token) {
+            // navigate("/");
+        } else {
+            if (cookies.get('Role') == "InternationalAdmin") {
+                GetData()
+
+            }
+            else {
+                navigate("/");
+
+            }
+        }
+    }
+    const [allValues, setAllValues] = useState({
+        Phone: '',
+        Email: '',
+        PostalCode: '',
+        Address: '',
+        SubCategoryId: '',
+        Subset: '',
+        TypeOfEmploymentId: '',
+        PositionId: '',
+
+    });
+    const changeHandler = e => {
+        if (e.target) {
+
+            setAllValues({ ...allValues, [e.target.name]: e.target.value })
+        }
+
+    }
+    const GetData = async () => {
+        console.log(1234)
+        const cookies = new Cookies();
+
+
+
+        const dataUser = await axiosReq("Agents/GetAgent");
+        console.log(dataUser)
+        setData(dataUser)
+        const dataSub = await axiosReq("Agents/GetSubCategories");
+        console.log(dataSub)
+        setSub(dataSub)
+        const dataPos = await axiosReq("Agents/GetPositions");
+        console.log(dataPos)
+        setPos(dataPos)
+        const dataType = await axiosReq("Agents/GetTypeEmployments");
+        console.log(dataType)
+        setType(dataType)
+        setAllValues({
+            Phone: dataUser?.phone,
+            Email: dataUser?.email,
+            PostalCode: dataUser?.postalCode,
+            Address: dataUser?.address,
+            SubCategoryId: dataUser?.subCategoryId,
+            Subset: dataUser?.subset,
+            TypeOfEmploymentId: dataUser?.typeOfEmploymentId,
+            PositionId: dataUser?.positionId,
+        })
+
+    }
+
+    const updateAgent = async () => {
+        console.log("req")
+        console.log(allValues)
+        const cookies = new Cookies();
+        const dataUser = await axiosReq("Agents/UpdateAgnet", {
+            AgentId: cookies?.get("ID"),
+            Phone: allValues?.Phone,
+            Email: allValues?.Email,
+            PostalCode: allValues?.PostalCode,
+            Address: allValues?.Address,
+            SubCategoryId: allValues?.SubCategoryId,
+            Subset: allValues?.Subset,
+            TypeOfEmploymentId: allValues?.TypeOfEmploymentId,
+            PositionId: allValues?.PositionId
+        });
+        console.log(dataUser)
+        if (dataUser?.status == 200 || dataUser?.status == 204 || dataUser?.status == 201) {
+            alert("با موفقیت ویرایش شد")
+
+            setRecheck(!reCheck)
+        }
+        else {
+            alert("اطلاعات ورودی نادرست می باشند")
+        }
+
+    }
     return (
         <div className="w-[80%] xl-lg:w-[95%] lg-md:w-[100%] mx-auto">
             <div className="flex justify-center">
