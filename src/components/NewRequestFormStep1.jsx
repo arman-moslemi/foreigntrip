@@ -27,7 +27,24 @@ const NewRequestFormStep1 = () => {
     DateLetter: '',
     ParticipantID:''
   });
-
+  const [allValuesError, setAllValuesError] = useState({
+    ExecutiveDeviceName: false,
+    InternetAddressOfTheExecutiveDevice: false,
+    DestinationCity: false,
+    FlightPath: false,
+    TravelDate: false,
+    TravelEndDate: false,
+    TravelTime: false,
+    TravelTopic: false,
+    TravelGoalId: false,
+    JobGoalId: false,
+    DeviceName: false,
+    PassportTypeId: false,
+    GetVisa: false,
+    JointTrip: false,
+    DateLetter: false,
+    ParticipantID:false
+  });
   const fixNumbers = function (str)
 {
   var
@@ -60,9 +77,27 @@ const NewRequestFormStep1 = () => {
 }
   const changeHandler = e => {
 if(e.target)    {
+  if(e.target.value!=""){
+
+    setAllValuesError({ ...allValuesError, [e.target.name]: false })
+  }
+  else{
+    setAllValuesError({ ...allValuesError, [e.target.name]: true })
+
+  }
 
   setAllValues({ ...allValues, [e.target.name]: e.target.value })
 }
+  }
+const blurHandler = e => {
+  if(e.target)    {
+    if(e.target.value==""){
+  
+      setAllValuesError({ ...allValuesError, [e.target.name]: true })
+    }
+  
+  
+  }
 
   }
     const [reCheck, setRecheck] = useState(false);
@@ -94,6 +129,8 @@ if(e.target)    {
         console.log("req")
         console.log(allValues)
         const cookies = new Cookies();
+       if(allValuesError.ExecutiveDeviceName==false  )
+       {
        const dataUser = await axiosReq("Request/InsertRequest",{
         AgentId:cookies?.get("ID"),
         ExecutiveDeviceName:allValues?.ExecutiveDeviceName,
@@ -122,6 +159,7 @@ if(e.target)    {
       else {
         alert("اطلاعات ورودی نادرست می باشند")
       }  
+    }
        
        }
   return (
@@ -135,10 +173,20 @@ if(e.target)    {
               type="text"
               id="input-group-1"
               onChange={changeHandler}
+              onBlur={blurHandler}
               name="ExecutiveDeviceName"
-              class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+              class={`font-IRsans text-right right-6 bg-white border ${allValuesError.ExecutiveDeviceName?"border-[#ff0000]":"border-gray-300"}  text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
               placeholder="نام دستکاه اجرایی" />
           </div>
+          {
+allValuesError.ExecutiveDeviceName?
+<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
+        
         </div>
         <div className="flex flex-col w-[32%] xl-1400:w-[49%] xl-1400:mr-[1%] xl-1400:ml-0 xl-lg:w-[100%] xl-lg:mx-0 mx-[1.5%] mb-5">
           <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">آدرس اینترنتی دستگاه اجرایی</span>
@@ -148,58 +196,25 @@ if(e.target)    {
               id="input-group-1"
               name="InternetAddressOfTheExecutiveDevice"
               onChange={changeHandler}
+              onBlur={blurHandler}
               class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
               placeholder="آدرس اینترنتی دستگاه اجرایی" />
           </div>
         </div>
-        <div className="flex flex-col w-[12%]  mb-4  xl:w-[50%] md:w-[100%] md:mx-0 mr-4">
-                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal ">کشور مقصد</span>
-              
-                      
-                        <select style={{fontFamily:'Shabnam'}}
-                            name="country"
-                            id="country"
-                            className="mt-2  text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5">
-                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className=" ">انتخاب کنید</option>
-                            <option  style={{fontFamily:'Shabnam'}}value="waiting" className=" ">عربستان</option>
-                            <option  style={{fontFamily:'Shabnam'}}value="check" className=" ">ایتالیا</option>
-                            <option style={{fontFamily:'Shabnam'}} value="not" className=" ">آمریکا</option>
-                           
-
-                        </select>
-                        {/* <input
-                            type="text"
-                            id="input-group-1"
-                            disabled="true"
-                            class="pr-9   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
-                            placeholder="آرمان"/> */}
-                    
-                </div>
-                <div className="flex flex-col w-[12%]  mb-4 xl:w-[50%]  md:w-[100%] md:mx-0 mr-4">
-                    <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal ">شهر مقصد</span>
-              
-                      
-                        <select style={{fontFamily:'Shabnam'}}
-                            name="city"
-                            id="city"
-                            className="mt-2  text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5">
-                            <option style={{fontFamily:'Shabnam'}} value="newRequest" className=" ">انتخاب کنید</option>
-                            <option  style={{fontFamily:'Shabnam'}}value="waiting" className=" ">عربستان</option>
-                            <option  style={{fontFamily:'Shabnam'}}value="check" className=" ">ایتالیا</option>
-                            <option style={{fontFamily:'Shabnam'}} value="not" className=" ">آمریکا</option>
-                           
-
-                        </select>
-                        {/* <input
-                            type="text"
-                            id="input-group-1"
-                            disabled="true"
-                            class="pr-9   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
-                            placeholder="آرمان"/> */}
-                    
-                </div>
+        <div className="flex flex-col w-[31%] xl-1400:w-[49%] xl-1400:ml-[1%] xl-1400:mr-0 xl-lg:w-[100%] xl-lg:mx-0 mr-[1.5%] mb-5">
+          <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">کشور و شهر مقصد</span>
+          <div class="mt-2">
+            <input style={{ fontFamily: 'Shabnam' }}
+              type="text"
+              id="input-group-1"
+              name="DestinationCity"
+              onChange={changeHandler}
+              class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+              placeholder="کشور و شهر مقصد" />
+          </div>
+        </div>
         <div className="flex flex-col w-[31%] xl-1400:w-[49%] xl-1400:mr-[1%] xl-1400:ml-0 xl-lg:w-[100%] xl-lg:mx-0 ml-[1.5%] mb-7">
-        <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal ">مسیر پروازی</span>
+        <span style={{fontFamily:'Shabnam'}}  className="text-base font-bold ">مسیر پروازی</span>
               
                       
               <select style={{fontFamily:'Shabnam'}}
