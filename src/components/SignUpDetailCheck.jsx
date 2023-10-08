@@ -11,7 +11,7 @@ const [showRejectModal,setShowRejectModal] = React.useState(false);
         <div className=" mt-5 w-full overflow-x-auto whitespace-nowrap ">
        <div className="flex justify-center">
             <div className="relative rounded-full h-[150px] w-[150px] mt-4 mb-4">
-                <img src={User2}/>
+                <img src={User2} alt=""/>
               
             </div>
         </div>

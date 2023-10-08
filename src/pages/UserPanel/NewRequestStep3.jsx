@@ -5,7 +5,7 @@ import {ReactComponent as Add} from "../../assets/icon/blue/add.svg"
 const NewRequestStep3 = () => {
     return (
         <div
-            className="w-full h-full bg-lightGray py-10 px-20 xl:px-0 md:p-0  lg:h-full"
+            className="w-full h-full bg-lightGray py-10 px-20 lg:px-1 md:p-0  lg:h-full xl-1400:p-4"
             style={{
             direction: 'rtl'
         }}>
@@ -13,9 +13,9 @@ const NewRequestStep3 = () => {
             <div className="flex md:block">
                 <AgentRightMenu/>
                 <div
-                    className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl my-10 w-[80%] xl:p-5 md:w-[95%] md:rounded-xl md:mx-auto">
+                    className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl my-10 w-[80%] min-w-[500px] lg:min-w-[450px] md:min-w-[95%]  md:w-[95%] md:rounded-xl md:mx-auto">
                     <div className="border-b border-b-midGray border-dashed">
-                        <div className="flex-col pb-5 px-12 pt-12 ">
+                        <div className="flex-col pb-5 px-12 pt-12 xl-1400:p-2">
                             <div className="flex items-center mb-6">
                                 <Add/>
                                 <span style={{fontFamily:'Shabnam'}} className="  text-mainColor mr-3 font-bold text-base">
@@ -27,7 +27,7 @@ const NewRequestStep3 = () => {
                         </div>
 
                     </div>
-                    <div className="px-12 pb-12 ">
+                    <div className="px-12 pb-12 xl-1400:p-6 xs:p-2">
 
                         <NewRequestFormStep3/>
                     </div>

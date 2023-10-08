@@ -23,7 +23,7 @@ const TicketList = () => {
       var token= cookies.get('token');
       console.log(token)
       if(!token){
-       navigate("/");
+      // navigate("/");
       }else{
    if( cookies.get('Role')=="Agent")
    {
@@ -31,7 +31,7 @@ const TicketList = () => {
   
    }
    else{
-    navigate("/");
+   // navigate("/");
   
    }
       }
@@ -72,7 +72,7 @@ setRecheck(!reCheck)
        
        }
     return(
-        <div className="w-full h-screen bg-lightGray py-10 px-20 lg:px-8 md:p-0  lg:h-full" style={{direction:'rtl'}}>
+        <div className="w-full h-screen bg-lightGray py-10 px-20 lg:px-8 md:p-0  lg:h-screen" style={{direction:'rtl'}}>
         <div className="flex md:block">
                 <AgentRightMenu/>
                 <div className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl p-12 my-10 w-[80%] min-w-[500px] lg:min-w-[450px] xl:p-5 md:w-[95%] md:min-w-[95%] md:rounded-xl md:mx-auto">
@@ -118,6 +118,7 @@ setRecheck(!reCheck)
                       
                        <div className="flex items-center mb-2 justify-endborder-t justify-center border-solid border-slate-200 rounded-b">
                         <button
+                        style={{fontFamily:'Shabnam'}}
                            className="text-mainColor   float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                            type="button"
                            onClick={()=>setShowNewTicket(false)}
@@ -125,6 +126,7 @@ setRecheck(!reCheck)
                           بستن
                          </button>
                          <button
+                         style={{fontFamily:'Shabnam'}}
                            className="text-white bg-mainColor shadow-blueShadow rounded-lg   float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                            onClick={()=>insertTicket()}
                            

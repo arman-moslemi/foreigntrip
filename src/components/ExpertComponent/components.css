@@ -2,6 +2,10 @@
 	font-family: Fanum;
 	src: url('../../assets/fonts/IR.ttf') format('ttf');
 }
+@font-face {
+	font-family: Shabnam;
+	src: url('./Shabnam.ttf') format('ttf');
+}
 
 #test input{
 	/* border:1px solid #000; */
@@ -27,7 +31,7 @@
 	border-radius: 6px;
 }
 .zm-Header{
-	font-family: Shabnam !important;
+	font-family: 'Shabnam' !important;
   }
   .css-15c7cx9{
 	font-family: Shabnam !important;

@@ -166,87 +166,87 @@ const NewRequestFormStep2Table = ({data}) => {
                                 style={{
                                 fontFamily: 'Shabnam'
                             }}
-                                className="text-right text-xs md:px-4 pr-4">نام و نام خانوادگی</th>
+                                className="px-4 text-right text-xs md:px-4 pr-4">نام و نام خانوادگی</th>
                             <th
                                 style={{
                                 fontFamily: 'Shabnam'
                             }}
-                                className="text-center text-xs md:px-4">نام پدر</th>
+                                className="px-4 text-center text-xs md:px-4">نام پدر</th>
                             <th
                                 style={{
                                 fontFamily: 'Shabnam'
                             }}
-                                className="text-center text-xs md:px-4">شماره شناسنامه</th>
+                                className="px-4 text-center text-xs md:px-4">شماره شناسنامه</th>
                             <th
                                 style={{
                                 fontFamily: 'Shabnam'
                             }}
-                                className="text-center text-xs md:px-4">کد ملی</th>
+                                className="px-4 text-center text-xs md:px-4">کد ملی</th>
                             <th
                                 style={{
                                 fontFamily: 'Shabnam'
                             }}
-                                className="text-center text-xs md:px-4">تاریخ تولد</th>
+                                className="px-4 text-center text-xs md:px-4">تاریخ تولد</th>
                             <th
                                 style={{
                                 fontFamily: 'Shabnam'
                             }}
-                                className="text-center text-xs md:px-4">جنسیت</th>
+                                className="px-4 text-center text-xs md:px-4">جنسیت</th>
                             <th
                                 style={{
                                 fontFamily: 'Shabnam'
                             }}
-                                className="text-center text-xs md:px-4">تاهل</th>
+                                className="px-4 text-center text-xs md:px-4">تاهل</th>
                             <th
                                 style={{
                                 fontFamily: 'Shabnam'
                             }}
-                                className="text-center text-xs md:px-4">مدرک/رشته تحصیلی</th>
+                                className="px-4 text-center text-xs md:px-4">مدرک/رشته تحصیلی</th>
                             <th
                                 style={{
                                 fontFamily: 'Shabnam'
                             }}
-                                className="text-center text-xs md:px-4">میزان آشنایی با زبان خارجی</th>
+                                className="px-4 text-center text-xs md:px-4">میزان آشنایی با زبان خارجی</th>
                             <th
                                 style={{
                                 fontFamily: 'Shabnam'
                             }}
-                                className="text-center text-xs md:px-4">سابقه کار</th>
+                                className="px-4 text-center text-xs md:px-4">سابقه کار</th>
                             <th
                                 style={{
                                 fontFamily: 'Shabnam'
                             }}
-                                className="text-center text-xs md:px-4">تلفن همراه</th>
+                                className="px-4 text-center text-xs md:px-4">تلفن همراه</th>
                             <th
                                 style={{
                                 fontFamily: 'Shabnam'
                             }}
-                                className="text-center text-xs md:px-4">تلفن ثابت</th>
+                                className="px-4 text-center text-xs md:px-4">تلفن ثابت</th>
                             <th
                                 style={{
                                 fontFamily: 'Shabnam'
                             }}
-                                className="text-center text-xs md:px-4">نوع گذرنامه</th>
+                                className="px-4 text-center text-xs md:px-4">نوع گذرنامه</th>
                             <th
                                 style={{
                                 fontFamily: 'Shabnam'
                             }}
-                                className="text-center text-xs md:px-4">محل خدمت</th>
+                                className="px-4 text-center text-xs md:px-4">محل خدمت</th>
                             <th
                                 style={{
                                 fontFamily: 'Shabnam'
                             }}
-                                className="text-center text-xs md:px-4">سمت</th>
+                                className="px-4 text-center text-xs md:px-4">سمت</th>
                             <th
                                 style={{
                                 fontFamily: 'Shabnam'
                             }}
-                                className="text-center text-xs md:px-4">وضعیت استخدامی</th>
+                                className="px-4 text-center text-xs md:px-4">وضعیت استخدامی</th>
                             <th
                                 style={{
                                 fontFamily: 'Shabnam'
                             }}
-                                className="text-center text-xs md:px-4 pl-4">عملیات</th>
+                                className="px-4 text-center text-xs md:px-4 pl-4">عملیات</th>
                         </tr>
                     </thead>
                     <tbody>

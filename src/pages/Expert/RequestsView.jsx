@@ -27,14 +27,14 @@ const ExpertRequestsView = () =>{
       var token = cookies.get('token');
       console.log(token)
       if (!token) {
-        navigate("/");
+     navigate("/");
       } else {
         if (cookies.get('Role') == "InternationalExpert") {
           GetData()
   
         }
         else {
-          navigate("/");
+        navigate("/");
   
         }
       }

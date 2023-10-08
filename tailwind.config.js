@@ -35,6 +35,7 @@ module.exports = {
       
     },
     screens:{
+      '3xl':{'max':'1680px'},
       '2xl':{'max':'1536px'},
       'xl-1400':{'max':'1400px'},
       'xl': {'max': '1280px'},
