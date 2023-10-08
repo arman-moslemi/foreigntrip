@@ -78,14 +78,14 @@ if(e.target)    {
       var token= cookies.get('token');
       console.log(token)
       if(!token){
-       navigate("/");
+      //  navigate("/");
       }else{
    if( cookies.get('Role')=="Agent")
    {
   
    }
    else{
-    navigate("/");
+    // navigate("/");
   
    }
       }
