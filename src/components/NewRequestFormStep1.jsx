@@ -197,9 +197,17 @@ null
               name="InternetAddressOfTheExecutiveDevice"
               onChange={changeHandler}
               onBlur={blurHandler}
-              class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+              class={`font-IRsans text-right right-6 bg-white border ${allValuesError.InternetAddressOfTheExecutiveDevice?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
               placeholder="آدرس اینترنتی دستگاه اجرایی" />
           </div>
+          {
+allValuesError.InternetAddressOfTheExecutiveDevice?
+<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
         </div>
         <div className="flex flex-col w-[31%] xl-1400:w-[49%] xl-1400:ml-[1%] xl-1400:mr-0 xl-lg:w-[100%] xl-lg:mx-0 mr-[1.5%] mb-5">
           <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">کشور و شهر مقصد</span>
@@ -209,26 +217,41 @@ null
               id="input-group-1"
               name="DestinationCity"
               onChange={changeHandler}
-              class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+              onBlur={blurHandler}
+              class={`font-IRsans text-right right-6 bg-white border ${allValuesError.DestinationCity?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
               placeholder="کشور و شهر مقصد" />
           </div>
+          {
+allValuesError.DestinationCity?
+<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
         </div>
         <div className="flex flex-col w-[31%] xl-1400:w-[49%] xl-1400:mr-[1%] xl-1400:ml-0 xl-lg:w-[100%] xl-lg:mx-0 ml-[1.5%] mb-7">
         <span style={{fontFamily:'Shabnam'}}  className="text-base font-bold ">مسیر پروازی</span>
               
                       
-              <select style={{fontFamily:'Shabnam'}}
-                  name="airportLine"
-                  id="airportLine"
-                  className="mt-2  text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5">
-                    <option style={{fontFamily:'Shabnam'}} value="newRequest" className=" ">انتخاب کنید</option>
-                  <option style={{fontFamily:'Shabnam'}} value="newRequest" className=" ">ایران-دوحه |دوحه آمریکا</option>
-                  <option  style={{fontFamily:'Shabnam'}}value="waiting" className=" ">ایران-قطر | قطر - آمریکا</option>
-                  <option  style={{fontFamily:'Shabnam'}}value="check" className=" ">ایران-دوبی | دوبی ایتالیا</option>
-               
-                 
-
-              </select>
+        <div class="mt-2">
+            <input style={{ fontFamily: 'Shabnam' }}
+              type="text"
+              id="FlightPath"
+              name="FlightPath"
+              onChange={changeHandler}
+              onBlur={blurHandler}
+              class={`font-IRsans text-right right-6 bg-white border ${allValuesError.FlightPath?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
+              placeholder="مسیر پرواز" />
+          </div>
+          {
+allValuesError.FlightPath?
+<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
               {/* <input
                   type="text"
                   id="input-group-1"
@@ -237,20 +260,19 @@ null
                   placeholder="آرمان"/> */}
           
         </div>
-        <div className="flex w-[32%] xl-1400:w-[49%] xl-1400:ml-[1%] xl-1400:mr-0 xl-lg:w-[100%] xl-lg:mx-0 mx-[1.5%] mb-7 items-end">
+        <div className={`flex w-[32%] xl-1400:w-[49%] xl-1400:ml-[1%] xl-1400:mr-0 xl-lg:w-[100%] xl-lg:mx-0 mx-[1.5%] mb-7 ${allValuesError.FlightPath||allValuesError.TravelTime?"pb-5":"pb-0"} items-end`}>
           <div className="flex flex-col w-[39%] ">
             <span style={{ fontFamily: 'Shabnam' }} className="text-base xs:text-sm font-bold font-IRsans">تاریخ و مدت سفر</span>
             <div class="mt-2 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full" id="StartDate">
               <DatePicker style={{ fontFamily: 'Shabnam' }} placeholder="تاریخ"
                 name="TravelDate"
-                onChange={(e)=>setAllValues({ ...allValues,TravelDate:formatDateTime(e.value)})}
+                onChange={(e)=>
+                  setAllValues({ ...allValues,TravelDate:formatDateTime(e.value)})
+                }
 
               />
-              {/* <input style={{fontFamily: 'Shabnam'}}
-                                type="text"
-                                id="input-group-1"
-                                class="   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
-                                placeholder="کد پستی"/> */}
+                
+
             </div>
           </div>
           <div className="w-[22%] flex justify-center pb-2"><p style={{ fontFamily: 'Shabnam' }} className="text-base font-normal">لغایت</p></div>
@@ -275,10 +297,19 @@ null
               id="input-group-1"
               name="TravelTime"
               onChange={changeHandler}
-              class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+              onBlur={blurHandler}
+              class={`font-IRsans text-right right-6 bg-white border ${allValuesError.TravelTime?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
               placeholder="تعداد روز"
-              disabled="true" />
+               />
           </div>
+          {
+allValuesError.TravelTime?
+<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
         </div>
         <div className="flex flex-col w-[100%]  mb-8">
           <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">موضوع سفر</span>
@@ -288,9 +319,18 @@ null
               id="input-group-1"
               name="TravelTopic"
               onChange={changeHandler}
-              class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+              onBlur={blurHandler}
+              class={`font-IRsans text-right right-6 bg-white border ${allValuesError.TravelTopic?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
               placeholder="موضوع سفر را اینجا بنویسید" />
           </div>
+          {
+allValuesError.TravelTopic?
+<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
         </div>
         <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans mb-4">اهداف سفر</span>
         <div className="flex flex-wrap w-[100%]">
@@ -476,9 +516,18 @@ null
               id="input-group-1"
               name="DeviceName"
               onChange={changeHandler}
-
-              class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-[28%] xs:w-[100%] p-2.5  "
+              onBlur={blurHandler}
+              class={`font-IRsans text-right right-6 bg-white border ${allValuesError.DeviceName?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-[28%] xs:w-[100%] p-2.5 `}
               placeholder="نام دستکاه " />
+               {
+allValuesError.DeviceName?
+<span class=" items-center hidden xs:flex font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
+              
             <div className="flex items-center xs:mt-3">
               <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-5 xs:mr-0 ml-1" type="radio" name="ParticipantID"
                              onChange={changeHandler}
@@ -489,6 +538,14 @@ null
               <label style={{ fontFamily: 'Shabnam' }} className="" For="r2" value={"2"}>شرکت کننده</label>
             </div>
           </div>
+          {
+allValuesError.DeviceName?
+<span class="flex items-center xs:hidden font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
 
         </div>
         <div className="flex flex-col w-[48.5%] xl-lg:w-[100%] xl-lg:mx-0 mr-[1.5%] mt-8 mb-12">
@@ -499,11 +556,12 @@ null
 
           <div class="mt-7 flex w-[100%]">
             <div className="flex items-center">
-              <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1" type="radio" name="pp" id="r3" />
-              <label style={{ fontFamily: 'Shabnam' }} 
+              <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1" type="radio"  id="r3" 
               name="PassportTypeId"
               onChange={changeHandler}
-              value={"1"}
+              value={"1"}/>
+              <label style={{ fontFamily: 'Shabnam' }} 
+              
               className="" For="r3">عادی</label>
               <input
                name="PassportTypeId"
@@ -547,10 +605,19 @@ null
               type="text"
               id="input-group-1"
               onChange={changeHandler}
+              onBlur={blurHandler}
             name="DateLetter"
-              class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-[40%] lg-md:w-[70%] xs:w-[100%] p-2.5  "
+              class={`font-IRsans text-right right-6 bg-white border ${allValuesError.DateLetter?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-[40%] lg-md:w-[70%] xs:w-[100%] p-2.5`}
             />
           </div>
+          {
+allValuesError.DateLetter?
+<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
         </div>
 
       </div>
