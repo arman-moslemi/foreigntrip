@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 import Cookies from 'universal-cookie';
 import {axiosReq} from "../commons/axiosReq";
 import { useNavigate } from "react-router-dom";
+import Select from "react-select";
+
+
 
 const NewRequestFormStep1 = () => {
   const [showSuccessModal,
@@ -45,6 +48,17 @@ const NewRequestFormStep1 = () => {
     DateLetter: false,
     ParticipantID:false
   });
+
+  const [selectedOptions, setSelectedOptions] = useState();
+  const optionList = [
+    { value: "red", label: "Red" },
+    { value: "green", label: "Green" },
+    { value: "yellow", label: "Yellow" },
+    { value: "blue", label: "Blue" },
+    { value: "white", label: "White" }
+  ];
+
+
   const fixNumbers = function (str)
 {
   var
@@ -162,6 +176,23 @@ const blurHandler = e => {
     }
        
        }
+       const colourStyles = {
+        control:  (styles, { data, isDisabled, isFocused, isSelected }) => {
+          return { ...styles, backgroundColor: 'white'}},
+        option: (styles, { data, isDisabled, isFocused, isSelected }) => {
+          return {
+            ...styles,
+            backgroundColor: isDisabled ? 'white' : 'white',
+            backgroundColor: isFocused ? '#BBF3FF' : 'white',
+            
+             
+            color: '#000',
+            cursor: isDisabled ? 'not-allowed' : 'default',
+            
+          };
+        },
+        
+      };
   return (
     <div>
       <p style={{ fontFamily: 'Shabnam' }} className="text-xl text-mainColor font-bold mt-3.5 mb-8 ">گام 1 - اطلاعات اولیه</p>
@@ -234,15 +265,28 @@ null
         <span style={{fontFamily:'Shabnam'}}  className="text-base font-bold ">مسیر پروازی</span>
               
                       
-        <div class="mt-2">
-            <input style={{ fontFamily: 'Shabnam' }}
+        <div class="mt-2" id="FightPathdiv">
+        <Select
+  options={optionList}
+  placeholder="Select color"
+  value={selectedOptions}
+  id="FlightPath"
+ name="FlightPath"
+ onChange={changeHandler}
+ onBlur={blurHandler}
+ styles={colourStyles}
+  class={`font-IRsans text-right right-6 bg-white border ${allValuesError.FlightPath?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
+  // onChange={handleSelect}
+  isSearchable={true}
+/>
+            {/* <input style={{ fontFamily: 'Shabnam' }}
               type="text"
               id="FlightPath"
               name="FlightPath"
               onChange={changeHandler}
               onBlur={blurHandler}
               class={`font-IRsans text-right right-6 bg-white border ${allValuesError.FlightPath?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
-              placeholder="مسیر پرواز" />
+              placeholder="مسیر پرواز" /> */}
           </div>
           {
 allValuesError.FlightPath?
@@ -421,6 +465,17 @@ null
                 value={"8"}
                 class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1.5" />
               علمی
+            </label>
+          </div>
+          <div className="ml-14 mb-4 xs:w-[50%] xs:mx-0">
+            <label style={{ fontFamily: 'Shabnam' }} className="text-base font-normal flex items-center">
+              <input style={{ fontFamily: 'Shabnam' }}
+                type="checkbox"
+                name="TravelGoalId"
+                onChange={changeHandler}
+                value={"8"}
+                class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1.5" />
+              ورزشی
             </label>
           </div>
 

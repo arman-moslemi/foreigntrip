@@ -29,6 +29,22 @@
 	padding-right: 10px;
 	border-radius: 6px;
 }
+#FightPathdiv  .css-v68sna-control{
+	/* border:1px solid #000; */
+border-color: black !important;
+}
+#FightPathdiv  .css-v68sna-control:focus-visible{
+	/* border:1px solid #000; */
+border-color: black !important;
+}
+#FightPathdiv  .css-v68sna-control:hover{
+	/* border:1px solid #000; */
+border-color: black !important;
+}
+#FightPathdiv  .css-blhudp-control:hover{
+	/* border:1px solid #000; */
+border-color: black !important;
+}
 #payam textarea{
 	/* border:1px solid #000; */
 	height: 100% !important;
