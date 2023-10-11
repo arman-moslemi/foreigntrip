@@ -2,6 +2,11 @@
 	font-family: Fanum;
 	src: url('../assets/fonts/IR.ttf') format('ttf');
 }
+@font-face {
+	font-family: Shabnam;
+	src: url('../assets/fonts/Shabnam.ttf') format('ttf');
+}
+
 
 #test input{
 	/* border:1px solid #000; */
@@ -32,18 +37,23 @@
 #FightPathdiv  .css-v68sna-control{
 	/* border:1px solid #000; */
 border-color: black !important;
+height: 42px !important;
+border-radius: 6px;
+font-family: Shabnam !important;
+font-size: 14PX;
+} 
+.css-blhudp-control{
+	
+	border: 2px solid black !important;
+	box-shadow: none !important;
+	height: 42px !important;
+	border-radius: 6px !important;
+	font-family: Shabnam !important;
+	font-size: 14PX;
 }
-#FightPathdiv  .css-v68sna-control:focus-visible{
-	/* border:1px solid #000; */
-border-color: black !important;
-}
-#FightPathdiv  .css-v68sna-control:hover{
-	/* border:1px solid #000; */
-border-color: black !important;
-}
-#FightPathdiv  .css-blhudp-control:hover{
-	/* border:1px solid #000; */
-border-color: black !important;
+.css-1nmdiq5-menu{
+	font-family: Shabnam !important;
+	font-size: 14PX;
 }
 #payam textarea{
 	/* border:1px solid #000; */

@@ -381,7 +381,7 @@ const NewRequestFormStep3 = () => {
                     <div class="mt-5 flex-col w-[100%] md:block">
                       <div className="flex items-center lg:flex-col lg:items-start lg:mb-6   w-[100%]">
                         <div className="flex justify-start  ">
-                          <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[49px] lg:mb-3 sm-xs:ml-0 ">
+                          <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[46px] lg:mb-3 sm-xs:ml-0 ">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
                           onChange={changeHandler}

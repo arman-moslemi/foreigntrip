@@ -51,11 +51,25 @@ const NewRequestFormStep1 = () => {
 
   const [selectedOptions, setSelectedOptions] = useState();
   const optionList = [
-    { value: "red", label: "Red" },
-    { value: "green", label: "Green" },
-    { value: "yellow", label: "Yellow" },
-    { value: "blue", label: "Blue" },
-    { value: "white", label: "White" }
+    { value: "tehran-istanbul", label: "تهران - استانبول" },
+    { value: "tehran-dubai", label: "تهران - دبی" },
+    { value: "tehran-najaf", label: "تهران - نجف" },
+    { value: "tehean-seul", label: "تهران - سئول" },
+    { value: "tehran-frankfort", label: "تهران - فرانکفورت" }
+  ];
+  const countryList = [
+    { value: "turky", label: "ترکیه" },
+    { value: "emarat", label: "امارات" },
+    { value: "aragh", label: "عراق" },
+    { value: "southkorea", label: "کره جنوبی" },
+    { value: "germany", label: "آلمان" }
+  ];
+  const cityList = [
+    { value: "istanbul", label: "استانبول" },
+    { value: "dubai", label: "دبی" },
+    { value: "najaf", label: "نجف" },
+    { value: "seul", label: "سئول" },
+    { value: "frankfort", label: "فرانکفورت" }
   ];
 
 
@@ -183,7 +197,7 @@ const blurHandler = e => {
           return {
             ...styles,
             backgroundColor: isDisabled ? 'white' : 'white',
-            backgroundColor: isFocused ? '#BBF3FF' : 'white',
+            backgroundColor: isFocused ? 'lightBlue' : 'white',
             
              
             color: '#000',
@@ -221,7 +235,7 @@ null
         </div>
         <div className="flex flex-col w-[32%] xl-1400:w-[49%] xl-1400:mr-[1%] xl-1400:ml-0 xl-lg:w-[100%] xl-lg:mx-0 mx-[1.5%] mb-5">
           <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">آدرس اینترنتی دستگاه اجرایی</span>
-          <div class="mt-2">
+          <div class="mt-2 font-IRsans">
             <input style={{ fontFamily: 'Shabnam' }}
               type="text"
               id="input-group-1"
@@ -240,42 +254,19 @@ allValuesError.InternetAddressOfTheExecutiveDevice?
 null
           }
         </div>
-        <div className="flex flex-col w-[31%] xl-1400:w-[49%] xl-1400:ml-[1%] xl-1400:mr-0 xl-lg:w-[100%] xl-lg:mx-0 mr-[1.5%] mb-5">
-          <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">کشور و شهر مقصد</span>
-          <div class="mt-2">
-            <input style={{ fontFamily: 'Shabnam' }}
-              type="text"
-              id="input-group-1"
-              name="DestinationCity"
-              onChange={changeHandler}
-              onBlur={blurHandler}
-              class={`font-IRsans text-right right-6 bg-white border ${allValuesError.DestinationCity?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
-              placeholder="کشور و شهر مقصد" />
-          </div>
-          {
-allValuesError.DestinationCity?
-<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
-لطفا فیلد را وارد نمایید !
-</span>
-:
-null
-          }
-        </div>
-        <div className="flex flex-col w-[31%] xl-1400:w-[49%] xl-1400:mr-[1%] xl-1400:ml-0 xl-lg:w-[100%] xl-lg:mx-0 ml-[1.5%] mb-7">
-        <span style={{fontFamily:'Shabnam'}}  className="text-base font-bold ">مسیر پروازی</span>
-              
-                      
-        <div class="mt-2" id="FightPathdiv">
+        <div className="flex flex-col w-[15%] xl-1400:w-[28%] xl-1400:ml-[2%] xl-1400:mr-0 xl-lg:w-[100%] xl-lg:mx-0 mr-[1.5%] mb-5">
+          <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">کشور مقصد</span>
+          <div class="mt-2" id="FightPathdiv">
         <Select
-  options={optionList}
-  placeholder="Select color"
+  options={countryList}
+  placeholder="انتخاب کنید"
   value={selectedOptions}
   id="FlightPath"
  name="FlightPath"
  onChange={changeHandler}
  onBlur={blurHandler}
  styles={colourStyles}
-  class={`font-IRsans text-right right-6 bg-white border ${allValuesError.FlightPath?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
+  class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  block w-full p-2.5"
   // onChange={handleSelect}
   isSearchable={true}
 />
@@ -288,20 +279,64 @@ null
               class={`font-IRsans text-right right-6 bg-white border ${allValuesError.FlightPath?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
               placeholder="مسیر پرواز" /> */}
           </div>
-          {
-allValuesError.FlightPath?
-<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
-لطفا فیلد را وارد نمایید !
-</span>
-:
-null
-          }
-              {/* <input
-                  type="text"
-                  id="input-group-1"
-                  disabled="true"
-                  class="pr-9   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5  "
-                  placeholder="آرمان"/> */}
+          
+          
+        </div>
+        <div className="flex flex-col w-[15%] xl-1400:w-[28%] xl-1400:ml-[2%] xl-1400:mr-0 xl-lg:w-[100%] xl-lg:mx-0 mr-[1%] mb-5">
+          <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">شهر مقصد</span>
+          <div class="mt-2" id="FightPathdiv">
+        <Select
+  options={cityList}
+  placeholder="انتخاب کنید"
+  value={selectedOptions}
+  id="FlightPath"
+ name="FlightPath"
+ onChange={changeHandler}
+ onBlur={blurHandler}
+ styles={colourStyles}
+  class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  block w-full p-2.5"
+  // onChange={handleSelect}
+  isSearchable={true}
+/>
+            {/* <input style={{ fontFamily: 'Shabnam' }}
+              type="text"
+              id="FlightPath"
+              name="FlightPath"
+              onChange={changeHandler}
+              onBlur={blurHandler}
+              class={`font-IRsans text-right right-6 bg-white border ${allValuesError.FlightPath?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
+              placeholder="مسیر پرواز" /> */}
+          </div>
+          
+          
+        </div>
+        <div className="flex flex-col w-[31%] xl-1400:w-[40%] xl-1400:mr-0 xl-1400:ml-0 xl-lg:w-[100%] xl-lg:mx-0 ml-[1.5%] mb-7">
+        <span style={{fontFamily:'Shabnam'}}  className="text-base font-bold ">مسیر پروازی</span>
+              
+                      
+        <div class="mt-2" id="FightPathdiv">
+        <Select
+  options={optionList}
+  placeholder="انتخاب کنید"
+  value={selectedOptions}
+  id="FlightPath"
+ name="FlightPath"
+ onChange={changeHandler}
+ onBlur={blurHandler}
+ styles={colourStyles}
+  class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  block w-full p-2.5"
+  // onChange={handleSelect}
+  isSearchable={true}
+/>
+            {/* <input style={{ fontFamily: 'Shabnam' }}
+              type="text"
+              id="FlightPath"
+              name="FlightPath"
+              onChange={changeHandler}
+              onBlur={blurHandler}
+              class={`font-IRsans text-right right-6 bg-white border ${allValuesError.FlightPath?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
+              placeholder="مسیر پرواز" /> */}
+          </div>
           
         </div>
         <div className={`flex w-[32%] xl-1400:w-[49%] xl-1400:ml-[1%] xl-1400:mr-0 xl-lg:w-[100%] xl-lg:mx-0 mx-[1.5%] mb-7 ${allValuesError.FlightPath||allValuesError.TravelTime?"pb-5":"pb-0"} items-end`}>
@@ -333,7 +368,7 @@ null
                                 placeholder="کد پستی"/> */}
           </div>
         </div>
-        <div className="flex flex-col w-[31%] xl-1400:w-[49%] xl-1400:mr-[1%] xl-1400:ml-0 xl-lg:w-[100%] xl-lg:mx-0 mr-[1.5%] mb-7">
+        <div className="flex flex-col w-[31%] xl-1400:w-[40%] xl-1400:mr-[10%] xl-1400:ml-0 xl-lg:w-[100%] xl-lg:mx-0 mr-[1.5%] mb-7">
           <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">مدت زمان سفر</span>
           <div class="mt-2">
             <input style={{ fontFamily: 'Shabnam' }}

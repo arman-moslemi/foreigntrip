@@ -4,6 +4,7 @@ import NewRequestStep1 from "../pages/UserPanel/NewRequestStep1";
 import NewRequestStep2 from "../pages/UserPanel/NewRequestStep2";
 import NewRequestStep3 from "../pages/UserPanel/NewRequestStep3";
 import NewRequestStep4 from "../pages/UserPanel/NewRequestStep4";
+import NewRequestStep5 from "../pages/UserPanel/NewRequestStep5";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/Login/SignUp";
 import SignUpDone from "../pages/Login/SignUpDone";
@@ -90,6 +91,9 @@ const MainRoutes = (props) =>{
                 </Routes>
                 <Routes>
                     <Route path="/newRequestStep4/:id" element={<NewRequestStep4/>} />
+                </Routes>
+                <Routes>
+                    <Route path="/newRequestStep5/:id" element={<NewRequestStep5/>} />
                 </Routes>
                 <Routes>
                     <Route path="/" element={<Login/>} />
