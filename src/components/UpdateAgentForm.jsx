@@ -90,14 +90,14 @@ const AddAgentForm = () => {
         console.log(dataType)
         setType(dataType)
         setAllValues({
-            Phone: dataUser?.phone,
-            Email: dataUser?.email,
-            PostalCode: dataUser?.postalCode,
-            Address: dataUser?.address,
-            SubCategoryId: dataUser?.subCategoryId,
-            Subset: dataUser?.subset,
-            TypeOfEmploymentId: dataUser?.typeOfEmploymentId,
-            PositionId: dataUser?.positionId,
+            Phone: dataUser?.data?.phone,
+            Email: dataUser?.data?.email,
+            PostalCode: dataUser?.data?.postalCode,
+            Address: dataUser?.data?.address,
+            SubCategoryId: dataUser?.data?.subCategoryId,
+            Subset:dataUser?.data?.subset,
+            TypeOfEmploymentId: dataUser?.data?.typeOfEmploymentId,
+            PositionId: dataUser?.data?.positionId,
         })
 
     }
