@@ -50,6 +50,44 @@ const NewRequestFormStep2 = () => {
 
         EmployeeStatus: ""
     });
+    const [allValuesError, setAllValuesError] = useState({
+
+        EmployeeName: false,
+
+        EmployeeFamily: false,
+
+        EmployeeFatherName: false,
+
+        BirthCertificationNumber: false,
+
+        NationalCode: false,
+
+        BirthCertificationDate: false,
+
+        GenderId: false,
+
+        MaritalStatusId: false,
+
+        Degree: false,
+
+        FieldOfStudy: false,
+
+        LanguageId: false,
+
+        Mobile: false,
+
+        Phone: false,
+
+        PassPortTypeId: false,
+
+        WorkExperience: false,
+
+        JobLocation: false,
+
+        PositionId: false,
+
+        EmployeeStatus: false
+      });
     let navigate = useNavigate();
 
     useEffect(() => {
@@ -116,11 +154,30 @@ const NewRequestFormStep2 = () => {
     }
     const changeHandler = e => {
         if (e.target) {
+            if(e.target.value!=""){
+
+                setAllValuesError({ ...allValuesError, [e.target.name]: false })
+              }
+              else{
+                setAllValuesError({ ...allValuesError, [e.target.name]: true })
+            
+              }
 
             setAllValues({ ...allValues, [e.target.name]: e.target.value })
         }
 
     }
+    const blurHandler = e => {
+        if(e.target)    {
+          if(e.target.value==""){
+        
+            setAllValuesError({ ...allValuesError, [e.target.name]: true })
+          }
+        
+        
+        }
+      
+        }
     const insertEmployee = async () => {
         console.log("req")
         console.log(allValues)
@@ -185,12 +242,21 @@ const NewRequestFormStep2 = () => {
                             type="number"
                             id="input-group-1"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="NationalCode"
-                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            class={`font-IRsans text-right right-6 bg-white border ${allValuesError.NationalCode?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
                             placeholder="کد ملی" />
                     </div>
+                    {
+allValuesError.NationalCode?
+<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
                 </div>
-                <div className="flex flex-col w-[32%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:ml-0 xl:mr-[1%] ml-[1.5%] mb-7">
+                <div className="flex flex-col w-[31.5%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:ml-0 xl:mr-[1%] mx-[1%] mb-7">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">تاریخ تولد</span>
                     <div >
 
@@ -206,55 +272,91 @@ const NewRequestFormStep2 = () => {
                         </div>
                     </div>
                 </div>
-            <div className="flex flex-col w-[31%] xl:w-[50%] xs:w-[100%] xs:mr-[0%]  xl:ml-[0%] mr-[1.5%] mb-7">
+            <div className="flex flex-col w-[31%] xl:w-[49%] xs:w-[100%] xs:mr-[0%]  xl:mr-[0%] xl:ml-[1%] mr-[1.5%] mb-7">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">شماره شناسنامه</span>
                     <div class="mt-2">
                         <input style={{ fontFamily: 'Shabnam' }}
                             type="number"
                             id="input-group-1"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="BirthCertificationNumber"
-                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            class={`font-IRsans text-right right-6 bg-white border ${allValuesError.BirthCertificationNumber?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
                             placeholder="شماره شناسنامه" />
                     </div>
+                    {
+allValuesError.BirthCertificationNumber?
+<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
                 </div>
                 
              
-                <div className="flex flex-col w-[32%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:mr-0 xl:ml-[1%]  mb-5">
+                <div className="flex flex-col w-[32%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:ml-0 xl:mr-[1%] ml-[1.5%]  mb-5">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">نام</span>
                     <div class="mt-2">
                         <input style={{ fontFamily: 'Shabnam' }}
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="EmployeeName"
-                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            class={`font-IRsans text-right right-6 bg-white border ${allValuesError.EmployeeName?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
                             placeholder="نام" />
                     </div>
+                    {
+allValuesError.EmployeeName?
+<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
                 </div>
-                <div className="flex flex-col w-[32%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:ml-0 xl:mr-[1%] mr-[1.5%] mb-5">
+                <div className="flex flex-col w-[31.5%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:mr-0 xl:ml-[1%] mx-[1%] mb-5">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">نام خانوادگی</span>
                     <div class="mt-2">
                         <input style={{ fontFamily: 'Shabnam' }}
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="EmployeeFamily"
-                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            class={`font-IRsans text-right right-6 bg-white border ${allValuesError.EmployeeFamily?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
                             placeholder="نام خانوادگی" />
                     </div>
+                    {
+allValuesError.EmployeeFamily?
+<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
                 </div>
-                <div className="flex flex-col w-[31%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:mr-0 xl:ml-[1%] mr-[3%] mb-5">
+                <div className="flex flex-col w-[31%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:ml-0 xl:mr-[1%] mr-[1.5%] mb-5">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">نام پدر</span>
                     <div class="mt-2">
                         <input style={{ fontFamily: 'Shabnam' }}
                             type="text"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="EmployeeFatherName"
                             id="input-group-1"
-                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            class={`font-IRsans text-right right-6 bg-white border ${allValuesError.EmployeeFatherName?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
                             placeholder="نام پدر" />
                     </div>
+                    {
+allValuesError.EmployeeFatherName?
+<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
                 </div>
              
                 <div className="flex flex-col w-[25%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:mr-0 xl:ml-[1%] ml-[1.5%] mb-12">
@@ -292,10 +394,19 @@ const NewRequestFormStep2 = () => {
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="Degree"
-                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            class={`font-IRsans text-right right-6 bg-white border ${allValuesError.Degree?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
                             placeholder="مدرک" />
                     </div>
+                    {
+allValuesError.Degree?
+<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
                 </div>
                 <div className="flex flex-col w-[24%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:ml-0 xl:mr-[1%] mr-[1.5%] mb-12">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">رشته تحصیلی</span>
@@ -304,10 +415,19 @@ const NewRequestFormStep2 = () => {
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="FieldOfStudy"
-                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            class={`font-IRsans text-right right-6 bg-white border ${allValuesError.FieldOfStudy?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
                             placeholder="رشته تحصیلی" />
                     </div>
+                    {
+allValuesError.FieldOfStudy?
+<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
                 </div>
                 <div className="flex flex-col w-[17%] xl:w-[29%] xs:w-[100%] xs:mx-0 lg-md:w-[60%] lg-md:mx-0 xl:mr-0 xl:ml-[1%] ml-[5%] xl-1400:ml-[4%] mb-12">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">سابقه کار (سال)</span>
@@ -316,10 +436,19 @@ const NewRequestFormStep2 = () => {
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="WorkExperience"
-                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            class={`font-IRsans text-right right-6 bg-white border ${allValuesError.WorkExperience?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
                             placeholder="سابقه کار به سال" />
                     </div>
+                    {
+allValuesError.WorkExperience?
+<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
                 </div>
                 <div className="flex flex-col w-[43%] xl-1400:w-[45%] xs:w-[100%] xs:mx-0 xl:w-[69%] lg-md:w-[100%] lg-md:mx-0 xl:ml-0 xl:mr-[1%] ml-[1.5%] mb-12">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">میزان آشنایی با زبان خارجی</span>
@@ -346,10 +475,19 @@ const NewRequestFormStep2 = () => {
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="Mobile"
-                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            class={`font-IRsans text-right right-6 bg-white border ${allValuesError.Mobile?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
                             placeholder="شماره تلفن همراه" />
                     </div>
+                    {
+allValuesError.Mobile?
+<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
                 </div>
                 <div className="flex flex-col w-[31%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:ml-0 xl:mr-[1%] ml-[3%] mb-12">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">شماره تلفن ثابت</span>
@@ -358,10 +496,19 @@ const NewRequestFormStep2 = () => {
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="Phone"
-                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            class={`font-IRsans text-right right-6 bg-white border ${allValuesError.Phone?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
                             placeholder="شماره تلفن ثابت" />
                     </div>
+                    {
+allValuesError.Phone?
+<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
                 </div>
                 <div className="flex flex-col w-[31%] xl:w-[49%] xs:w-[100%] xs:mx-0 lg-md:w-[100%] lg-md:mx-0 xl:mr-0 xl:ml-[1%] ml-[1.5%] mb-12">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">نوع گذرنامه</span>
@@ -385,13 +532,22 @@ const NewRequestFormStep2 = () => {
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="JobLocation"
-                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            class={`font-IRsans text-right right-6 bg-white border ${allValuesError.JobLocation?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
                             placeholder="محل خدمت" />
                     </div>
+                    {
+allValuesError.JobLocation?
+<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
                 </div>
                 <div className="flex flex-col w-[31%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:mr-0 xl:ml-[1%] ml-[1.5%] mb-10">
-                <span style={{fontFamily:'Shabnam'}}  className="text-base font-normal ">سمت</span>
+                <span style={{fontFamily:'Shabnam'}}  className="text-base font-bold ">سمت</span>
               
                       
               <select style={{fontFamily:'Shabnam'}}
@@ -414,10 +570,19 @@ const NewRequestFormStep2 = () => {
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="EmployeeStatus"
-                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            class={`font-IRsans text-right right-6 bg-white border ${allValuesError.EmployeeStatus?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
                             placeholder="وضعیت استخدامی" />
                     </div>
+                    {
+allValuesError.EmployeeStatus?
+<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
                 </div>
                 <div className="flex flex-col w-[30%] xs:w-[100%] xs:mx-0 mr-[1.5%] mb-10 xs:mt-6">
                     <div class="flex justify-end xl:justify-start">

@@ -281,23 +281,23 @@ const NewRequestFormStep3 = () => {
                         <div className="flex items-center">
                           <input                          
                              onChange={changeHandler}
-                            name="RightOfMissionId" value={"1"}className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-3" type="radio"  id="InWith" />
+                            name="RightOfMissionId" value={"1"}className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-3" type="checkbox"  id="InWith" />
                           <label style={{fontFamily: 'Shabnam'}} className="" For="a1">با دریافت حق ماموریت از دستگاه داخلی</label>
                         </div>
                         <div className="flex items-center mt-4">
                           <input                   value={"2"}          onChange={changeHandler}
                             name="RightOfMissionId"
-                            className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-3" type="radio"  id="InWithout" />
+                            className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-3" type="checkbox"  id="InWithout" />
                           <label style={{fontFamily: 'Shabnam'}} className="" For="a1">بدون دریافت حق ماموریت از دستگاه داخلی</label>
                         </div>
                         <div className="flex items-center mt-4">
                           <input           value={"3"}                  onChange={changeHandler}
-                            name="RightOfMissionId"className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-3" type="radio"  id="OutWith" />
+                            name="RightOfMissionId"className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-3" type="checkbox"  id="OutWith" />
                           <label style={{fontFamily: 'Shabnam'}} className="" For="a1">با دریافت حق ماموریت از دستگاه خارجی</label>
                         </div>
                         <div className="flex items-center mt-4">
                           <input                   value={"4"}          onChange={changeHandler}
-                            name="RightOfMissionId"className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-3" type="radio" id="OutWithout" />
+                            name="RightOfMissionId"className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-3" type="checkbox" id="OutWithout" />
                           <label style={{fontFamily: 'Shabnam'}} className="" For="a1">بدون دریافت حق ماموریت از دستگاه خارجی</label>
                         </div>
                           
@@ -305,61 +305,61 @@ const NewRequestFormStep3 = () => {
                 </div>
                 <div className="flex flex-col w-[45%] 2xl:w-[49%] 2xl:ml-0 2xl:mr-[1%] xl:w-[100%] xl:mx-0 mr-[2.5%] ml-[15%] mb-16">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">میزان حق ماموریت</span>
-                    <div class="mt-5 flex-col w-[100%]">
-                      <div className="flex items-center w-[100%] md:block">
-                        <div className="flex justify-start">
-                          <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[7px]">
-                          {/* <input style={{fontFamily:'Shabnam'}}
+                    <div class="mt-5 flex-col w-[100%] md:block">
+                      <div className="flex items-center lg:flex-col lg:items-start lg:mb-6   w-[100%]">
+                        <div className="flex justify-start  ">
+                          <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[7px] lg:mb-3 sm-xs:ml-0 ">
+                          <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          value={"1"}         
                           onChange={changeHandler}
-                          name="LevelRightOfMission"
-                          
-                          class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4 mr-8"/> */}
-                           کارشناس : 
+                          name="RightToEducationId"
+                          value={"1"}
+                          class="accent-mainColor w-4   h-4 border-2 border-mainColor outline-mainColor ml-4 "/>
+                           کارشناس :
                           </label>
                         </div>
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
-                            onChange={changeHandler}
-                            name="ExpertRightOfMission"
                             id="input-group-1"
-                            class="md:mt-2 md:w-[100%] text-right h-[32px] w-[52%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            onChange={changeHandler}
+                            name="RightToEducationCost"
+                            
+                            class="text-right h-[32px] w-[46%] xl:w-[28%] lg:w-[44%] lg:mr-7 sm-xs:w-[90%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
                             />
 
 
                       </div>
-                      <div className="flex items-center mt-3 w-[100%] md:block">
-                        <div className="flex justify-start">
-                          <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[37px]">
-                          {/* <input style={{fontFamily:'Shabnam'}}
+                      <div className="flex items-center lg:flex-col lg:items-start mt-3 w-[100%] lg:mb-6">
+                        <div className="flex justify-start md:block">
+                          <label style={{fontFamily:'Shabnam'}} className="w-[100%] text-base font-normal flex items-center ml-[37px] lg:mb-3 sm-xs:ml-0 ">
+                          <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          value={"2"}         
                           onChange={changeHandler}
-                          name=""
-                          class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4 mr-8"/> */}
-                            مدیر :
+                          name="RightToEducationId"
+                          value={"2"}
+                          class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
+                           مدیر :
                           </label>
                         </div>
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
-                            onChange={changeHandler}
-                            name="ManagerRightOfMission"
                             id="input-group-1"
-                            class="md:mt-2 md:w-[100%] text-right h-[32px] w-[52%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            onChange={changeHandler}
+                            name="RightToEducationCost"
+                            class=" text-right h-[32px] w-[46%] xl:w-[28%] lg:w-[44%] lg:mr-7 sm-xs:w-[90%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
                             />
 
 
                       </div>
-                      <div className="flex items-center mt-3 w-[100%] md:block">
+                      <div className="flex items-center lg:flex-col lg:items-start mt-3 w-[100%]">
                         <div className="flex justify-start">
-                          <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[15px]">
-                          {/* <input style={{fontFamily:'Shabnam'}}
+                          <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[14px] lg:mb-3 sm-xs:ml-0">
+                          <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          value={"3"}         
                           onChange={changeHandler}
-                          name="LevelRightOfMission"
-                          class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4 mr-8"/> */}
+                          name="RightToEducationId"
+                          value={"3"}
+                          class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
                             مدیر کل :
                           </label>
                         </div>
@@ -367,8 +367,8 @@ const NewRequestFormStep3 = () => {
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
-                            name="GeneralManagerRightOfMission"
-                            class="md:mt-2 md:w-[100%] text-right h-[32px] w-[52%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            name="RightToEducationCost"
+                            class="text-right h-[32px] w-[46%] xl:w-[28%] lg:w-[44%] lg:mr-7 sm-xs:w-[90%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
                             />
 
 
@@ -381,7 +381,7 @@ const NewRequestFormStep3 = () => {
                     <div class="mt-5 flex-col w-[100%] md:block">
                       <div className="flex items-center lg:flex-col lg:items-start lg:mb-6   w-[100%]">
                         <div className="flex justify-start  ">
-                          <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[49px] lg:mb-3 sm-xs:ml-0 ">
+                          <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[46px] lg:mb-3 sm-xs:ml-0 ">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
                           onChange={changeHandler}
