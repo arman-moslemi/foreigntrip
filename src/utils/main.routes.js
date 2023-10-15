@@ -57,6 +57,7 @@ import SupervisorsList from "../pages/InternationalAdmin/SupervisorList";
 import ExpertList from "../pages/InternationalAdmin/ExpertList";
 import InternationalUserList from "../pages/InternationalAdmin/InternationalUserList";
 import InternationalAddAgent from "../pages/InternationalAdmin/AddAgent";
+import InternationalUpdateAgent from "../pages/InternationalAdmin/UpdateAgent";
 import InternationalMessage from "../pages/InternationalAdmin/Message";
 import InternationalSendMessageList from "../pages/InternationalAdmin/SendMessageList";
 import InternationalRequestsList from "../pages/InternationalAdmin/RequestsList";
@@ -245,6 +246,9 @@ const MainRoutes = (props) =>{
                 </Routes>
                 <Routes>
                     <Route path="/internationalAdmin/addAgent" element={<InternationalAddAgent/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/internationalAdmin/UpdateAgent/:id" element={<InternationalUpdateAgent/>}/>
                 </Routes>
                 <Routes>
                     <Route path="/internationalAdmin/message" element={<InternationalMessage/>}/>

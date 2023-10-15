@@ -90,7 +90,7 @@ else {
         <button className="mx-2" onClick={() => {setId(tableRow?.agentId);setShowBan(true)}}>
           <Ban />
         </button>
-        <Link to={'/internationalAdmin/addAgent'}>
+        <Link to={'/internationalAdmin/updateAgent/'+tableRow?.agentId}>
           <button className="mx-2" >
             <Pencil />
           </button>
