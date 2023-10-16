@@ -15,7 +15,7 @@ const NewRequestFormStep1 = () => {
   const [allValues, setAllValues] = useState({
     ExecutiveDeviceName: '',
     InternetAddressOfTheExecutiveDevice: '',
-    DestinationCity: '',
+    CityId: '',
     FlightPath: '',
     TravelDate: '',
     TravelEndDate: '',
@@ -33,7 +33,7 @@ const NewRequestFormStep1 = () => {
   const [allValuesError, setAllValuesError] = useState({
     ExecutiveDeviceName: false,
     InternetAddressOfTheExecutiveDevice: false,
-    DestinationCity: false,
+    CityId: false,
     FlightPath: false,
     TravelDate: false,
     TravelEndDate: false,
@@ -118,6 +118,20 @@ if(e.target)    {
   setAllValues({ ...allValues, [e.target.name]: e.target.value })
 }
   }
+  const changeHandlerSelect = (e,name) => {
+      if(e.value!=""){
+    
+        setAllValuesError({ ...allValuesError, [name]: false })
+      }
+      else{
+        setAllValuesError({ ...allValuesError, [name]: true })
+    
+      }
+      // setAllValuesError({ ...allValuesError, [""]: false })
+    
+      setAllValues({ ...allValues, [name]: e.value })
+    
+      }
 const blurHandler = e => {
   if(e.target)    {
     if(e.target.value==""){
@@ -167,7 +181,6 @@ const blurHandler = e => {
       var result =true;
       for(var o in obj){
         if(obj[o]==""){
-          console.log(o)
           updatedState[o] = true;
 
 
@@ -292,9 +305,9 @@ null
   options={countryList}
   placeholder="انتخاب کنید"
   value={selectedOptions}
-  id="FlightPath"
- name="FlightPath"
- onChange={changeHandler}
+  id="CountryId"
+ name="CountryId"
+ onChange={(e)=>changeHandlerSelect(e,"CountryId")}
  onBlur={blurHandler}
  styles={colourStyles}
   class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  block w-full p-2.5"
@@ -320,10 +333,9 @@ null
   options={cityList}
   placeholder="انتخاب کنید"
   value={selectedOptions}
-  id="FlightPath"
- name="FlightPath"
- onChange={changeHandler}
- onBlur={blurHandler}
+  id="CityId"
+ name="CityId"
+ onChange={(e)=>changeHandlerSelect(e,"CityId")}
  styles={colourStyles}
   class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  block w-full p-2.5"
   // onChange={handleSelect}
@@ -352,8 +364,7 @@ null
   value={selectedOptions}
   id="FlightPath"
  name="FlightPath"
- onChange={changeHandler}
- onBlur={blurHandler}
+ onChange={(e)=>changeHandlerSelect(e,"FlightPath")}
  styles={colourStyles}
   class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  block w-full p-2.5"
   // onChange={handleSelect}
@@ -377,8 +388,9 @@ null
               <DatePicker style={{ fontFamily: 'Shabnam' }} placeholder="تاریخ"
                 name="TravelDate"
                 onChange={(e)=>
-                  setAllValues({ ...allValues,TravelDate:formatDateTime(e.value)})
-                }
+{                  setAllValues({ ...allValues,TravelDate:formatDateTime(e.value)});
+setAllValuesError({...allValuesError,TravelDate:false})
+}                }
 
               />
                 
@@ -389,7 +401,10 @@ null
           <div className="w-[39%] font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block" id="EndDate">
             <DatePicker style={{ fontFamily: 'Shabnam' }} placeholder="تاریخ"
             name="TravelEndDate"
-            onChange={(e)=>setAllValues({ ...allValues,TravelEndDate:formatDateTime(e.value)})}
+            onChange={(e)=>
+              {                  setAllValues({ ...allValues,TravelEndDate:formatDateTime(e.value)});
+              setAllValuesError({...allValuesError,TravelEndDate:false})
+              }                }
 
             />
             {/* <input style={{fontFamily: 'Shabnam'}}
