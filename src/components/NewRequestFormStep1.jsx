@@ -65,11 +65,9 @@ const NewRequestFormStep1 = () => {
     { value: "germany", label: "آلمان" }
   ];
   const cityList = [
-    { value: "istanbul", label: "استانبول" },
-    { value: "dubai", label: "دبی" },
-    { value: "najaf", label: "نجف" },
-    { value: "seul", label: "سئول" },
-    { value: "frankfort", label: "فرانکفورت" }
+ 
+    { value: "1577", label: "نجف" },
+    { value: "1587", label: "سئول" },
   ];
 
 
@@ -203,7 +201,7 @@ return result
         AgentId:cookies?.get("ID"),
         ExecutiveDeviceName:allValues?.ExecutiveDeviceName,
         InternetAddressOfTheExecutiveDevice: allValues.InternetAddressOfTheExecutiveDevice,
-        DestinationCity: allValues?.DestinationCity,
+        CityId: allValues?.CityId,
         FlightPath:allValues?.FlightPath,
         TravelDateStart: allValues?.TravelDate,
         TravelEndDate: allValues?.TravelEndDate,
@@ -666,12 +664,12 @@ null
               
             <div className="flex items-center xs:mt-3">
               <input className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-5 xs:mr-0 ml-1" type="radio" name="ParticipantID"
-                             onChange={changeHandler}
+                             onChange={changeHandler} value={"1"}
  id="r1" />
               <label style={{ fontFamily: 'Shabnam' }} className="" For="r1">متولی</label>
-              <input               onChange={changeHandler} value={"1"}
+              <input               onChange={changeHandler} value={"2"}
  className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-5 ml-1" type="radio" name="ParticipantID" id="r2" />
-              <label style={{ fontFamily: 'Shabnam' }} className="" For="r2" value={"2"}>شرکت کننده</label>
+              <label style={{ fontFamily: 'Shabnam' }} className="" For="r2" >شرکت کننده</label>
             </div>
           </div>
           {
