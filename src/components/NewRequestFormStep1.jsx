@@ -154,36 +154,37 @@ const blurHandler = e => {
    }
       }
     }
-    function allTrue(obj)
-    {
-      for(var o in obj)
-          if(obj[o]) return false;
+    // function allTrue(obj)
+    // {
+    //   for(var o in obj)
+    //       if(obj[o]) return false;
         
-      return true;
-    }
-    const allFull=async(obj)=>
+    //   return true;
+    // }
+    const allFull=(obj)=>
     {
-      var ss=[];
+      const updatedState = {};
+      var result =true;
       for(var o in obj){
         if(obj[o]==""){
           console.log(o)
-    
+          updatedState[o] = true;
 
-          setAllValuesError({ ...allValuesError, [o.toString()]: true })
 
+          setAllValuesError({ ...allValuesError, ...updatedState})
+result=false;
         }
           
       }
       console.log(allValuesError)
-      allTrue(allValuesError) 
-        
+return result        
     }
     const insertReq=async()=>{
         console.log("req")
         console.log(allValues)
+       var res= allFull(allValues)
         const cookies = new Cookies();
-    await    allFull(allValues)
-       if(allTrue(allValuesError)  )
+       if(res  )
        {
        const dataUser = await axiosReq("Request/InsertRequest",{
         AgentId:cookies?.get("ID"),
