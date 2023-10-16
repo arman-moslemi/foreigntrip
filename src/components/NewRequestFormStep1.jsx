@@ -113,6 +113,7 @@ if(e.target)    {
     setAllValuesError({ ...allValuesError, [e.target.name]: true })
 
   }
+  // setAllValuesError({ ...allValuesError, [""]: false })
 
   setAllValues({ ...allValues, [e.target.name]: e.target.value })
 }
@@ -153,11 +154,36 @@ const blurHandler = e => {
    }
       }
     }
+    function allTrue(obj)
+    {
+      for(var o in obj)
+          if(obj[o]) return false;
+        
+      return true;
+    }
+    const allFull=async(obj)=>
+    {
+      var ss=[];
+      for(var o in obj){
+        if(obj[o]==""){
+          console.log(o)
+    
+
+          setAllValuesError({ ...allValuesError, [o.toString()]: true })
+
+        }
+          
+      }
+      console.log(allValuesError)
+      allTrue(allValuesError) 
+        
+    }
     const insertReq=async()=>{
         console.log("req")
         console.log(allValues)
         const cookies = new Cookies();
-       if(allValuesError.ExecutiveDeviceName==false  )
+    await    allFull(allValues)
+       if(allTrue(allValuesError)  )
        {
        const dataUser = await axiosReq("Request/InsertRequest",{
         AgentId:cookies?.get("ID"),
@@ -188,7 +214,11 @@ const blurHandler = e => {
         alert("اطلاعات ورودی نادرست می باشند")
       }  
     }
-       
+       else{
+        console.log(allValuesError)
+        alert("اطلاعات ورودی را وارد نمایید")
+
+       }
        }
        const colourStyles = {
         control:  (styles, { data, isDisabled, isFocused, isSelected }) => {
