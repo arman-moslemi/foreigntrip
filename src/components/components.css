@@ -34,7 +34,8 @@
 	padding-right: 10px;
 	border-radius: 6px;
 }
-#FightPathdiv  .css-v68sna-control{
+#FightPathdiv 
+ .css-v68sna-control{
 	/* border:1px solid #000; */
 border-color: black !important;
 height: 42px !important;
@@ -42,6 +43,13 @@ border-radius: 6px;
 font-family: Shabnam !important;
 font-size: 14PX;
 } 
+ /* .css-13cymwt-control{
+border-color: black !important;
+height: 42px !important;
+border-radius: 6px;
+font-family: Shabnam !important;
+font-size: 14PX;
+}  */
 .css-blhudp-control{
 	
 	border: 2px solid black !important;

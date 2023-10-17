@@ -249,7 +249,7 @@ const NewRequestFormStep2 = () => {
                     </div>
                     {
 allValuesError.NationalCode?
-<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+<span style={{ fontFamily: 'Shabnam' }} class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
 لطفا فیلد را وارد نمایید !
 </span>
 :
@@ -271,6 +271,7 @@ null
                                 placeholder="کد پستی"/> */}
                         </div>
                     </div>
+                    <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-1 text-xs font-[10px] font-IRsans ${allValuesError.BirthCertificationDate?"flex":"hidden"}`}>لطفا یک مورد را انتخاب نمایید!</p>
                 </div>
             <div className="flex flex-col w-[31%] xl:w-[49%] xs:w-[100%] xs:mr-[0%]  xl:mr-[0%] xl:ml-[1%] mr-[1.5%] mb-7">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">شماره شناسنامه</span>
