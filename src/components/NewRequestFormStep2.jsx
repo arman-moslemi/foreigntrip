@@ -10,6 +10,7 @@ const NewRequestFormStep2 = () => {
     const [showSuccessModal,
         setShowSuccessModal] = useState(false);
     const [data, setData] = useState();
+    const [position, setPosition] = useState();
     const [reCheck, setRecheck] = useState(false);
     const id = useParams().id;
     const [allValues, setAllValues] = useState({
@@ -140,7 +141,6 @@ const NewRequestFormStep2 = () => {
     }
     const GetData = async () => {
         console.log(1234)
-        const cookies = new Cookies();
 
 
 
@@ -148,7 +148,15 @@ const NewRequestFormStep2 = () => {
             RequestId: id
         });
         console.log(dataUser)
-        setData(dataUser?.data)
+        // setData(dataUser?.data)
+
+            const dataPosition = await axiosReq("Agents/GetPositions");
+            setPosition(dataPosition)
+            console.log(dataPosition)
+           
+            
+        
+         
 
 
     }
@@ -178,12 +186,35 @@ const NewRequestFormStep2 = () => {
         }
       
         }
+
+        const 
+    allFull=(obj)=>
+    {
+      const updatedState = {};
+      var result =true;
+      for(var o in obj){
+        if(obj[o]==""){
+          updatedState[o] = true;
+
+
+          setAllValuesError({ ...allValuesError, ...updatedState})
+result=false;
+        }
+          
+      }
+      console.log(allValuesError)
+return result        
+    }
+
     const insertEmployee = async () => {
         console.log("req")
         console.log(allValues)
+       var res= allFull(allValues)
         const cookies = new Cookies();
+        if(res  )
+        {
         const dataUser = await axiosReq("Request/InsertRequestEmployee", {
-
+RequestId:id,
             EmployeeName: allValues?.EmployeeName,
 
             EmployeeFamily: allValues?.EmployeeFamily,
@@ -217,18 +248,25 @@ const NewRequestFormStep2 = () => {
             JobLocation: allValues?.JobLocation,
 
             PositionId: allValues?.PositionId,
+            
 
             EmployeeStatus: allValues?.EmployeeStatus
         });
         console.log(dataUser)
         if (dataUser?.status == 200 || dataUser?.status == 204 || dataUser?.status == 201) {
-
-            navigate("/newRequestStep3/"+id)
+setRecheck(!reCheck)
+            // navigate("/newRequestStep3/"+id)
 
         }
         else {
             alert("اطلاعات ورودی نادرست می باشند")
         }
+    }
+    else{
+        console.log(allValuesError)
+        alert("اطلاعات ورودی را وارد نمایید")
+
+       }
 
     }
     return (
@@ -263,7 +301,10 @@ null
                         <div class="mt-2 font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full" id="StartDate">
                             <DatePicker style={{ fontFamily: 'Shabnam' }} placeholder=""
                                 name="BirthCertificationDate"
-                                onChange={(e) => setAllValues({ ...allValues, BirthCertificationDate: formatDateTime(e.value) })} />
+                                onChange={(e)=>
+                                    {                  setAllValues({ ...allValues,BirthCertificationDate:formatDateTime(e.value)});
+                                    setAllValuesError({...allValuesError,BirthCertificationDate:false})
+                                    }                } />
                             {/* <input style={{fontFamily: 'Shabnam'}}
                                 type="text"
                                 id="input-group-1"
@@ -271,7 +312,7 @@ null
                                 placeholder="کد پستی"/> */}
                         </div>
                     </div>
-                    <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-1 text-xs font-[10px] font-IRsans ${allValuesError.BirthCertificationDate?"flex":"hidden"}`}>لطفا یک مورد را انتخاب نمایید!</p>
+                    <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-1 text-xs font-[10px] font-IRsans ${allValuesError.BirthCertificationDate?"flex":"hidden"}`}>لطفا تاریخ را انتخاب نمایید!</p>
                 </div>
             <div className="flex flex-col w-[31%] xl:w-[49%] xs:w-[100%] xs:mr-[0%]  xl:mr-[0%] xl:ml-[1%] mr-[1.5%] mb-7">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">شماره شناسنامه</span>
@@ -287,7 +328,7 @@ null
                     </div>
                     {
 allValuesError.BirthCertificationNumber?
-<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+<span style={{ fontFamily: 'Shabnam' }} class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
 لطفا فیلد را وارد نمایید !
 </span>
 :
@@ -310,7 +351,7 @@ null
                     </div>
                     {
 allValuesError.EmployeeName?
-<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+<span style={{ fontFamily: 'Shabnam' }} class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
 لطفا فیلد را وارد نمایید !
 </span>
 :
@@ -331,7 +372,7 @@ null
                     </div>
                     {
 allValuesError.EmployeeFamily?
-<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+<span style={{ fontFamily: 'Shabnam' }} class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
 لطفا فیلد را وارد نمایید !
 </span>
 :
@@ -352,7 +393,7 @@ null
                     </div>
                     {
 allValuesError.EmployeeFatherName?
-<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+<span style={{ fontFamily: 'Shabnam' }} class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
 لطفا فیلد را وارد نمایید !
 </span>
 :
@@ -374,6 +415,7 @@ null
                             className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-8 ml-1" type="radio" id="man" />
                         <label style={{ fontFamily: 'Shabnam' }} className="" For="a2">آقا</label>
                     </div>
+                    <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-1 text-xs font-[10px] font-IRsans ${allValuesError.GenderId?"flex":"hidden"}`}>لطفا یک مورد را انتخاب نمایید!</p>
                 </div>
                 <div className="flex flex-col w-[20%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:ml-0 xl:mr-[1%] ml-[1%] mb-12">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">وضعیت تاهل</span>
@@ -387,6 +429,7 @@ null
                             value={"2"} className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-8 ml-1" type="radio" id="married" />
                         <label style={{ fontFamily: 'Shabnam' }} className="" For="a2">متاهل</label>
                     </div>
+                    <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-1 text-xs font-[10px] font-IRsans ${allValuesError.MaritalStatusId?"flex":"hidden"}`}>لطفا یک مورد را انتخاب نمایید!</p>
                 </div>
                 <div className="flex flex-col w-[24%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:mr-0 xl:ml-[1%] mx-[1.5%] mb-12">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">مدرک</span>
@@ -402,7 +445,7 @@ null
                     </div>
                     {
 allValuesError.Degree?
-<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+<span style={{ fontFamily: 'Shabnam' }} class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
 لطفا فیلد را وارد نمایید !
 </span>
 :
@@ -423,7 +466,7 @@ null
                     </div>
                     {
 allValuesError.FieldOfStudy?
-<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+<span style={{ fontFamily: 'Shabnam' }} class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
 لطفا فیلد را وارد نمایید !
 </span>
 :
@@ -434,7 +477,7 @@ null
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">سابقه کار (سال)</span>
                     <div class="mt-2">
                         <input style={{ fontFamily: 'Shabnam' }}
-                            type="text"
+                            type="number"
                             id="input-group-1"
                             onChange={changeHandler}
                             onBlur={blurHandler}
@@ -444,7 +487,7 @@ null
                     </div>
                     {
 allValuesError.WorkExperience?
-<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+<span style={{ fontFamily: 'Shabnam' }} class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
 لطفا فیلد را وارد نمایید !
 </span>
 :
@@ -468,12 +511,13 @@ null
                             name="LanguageId" value={"4"} className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-8 xs:mr-2 ml-1" type="radio" id="acceptable" />
                         <label style={{ fontFamily: 'Shabnam' }} className="" For="a2">قابل قبول</label>
                     </div>
+                    <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-1 text-xs font-[10px] font-IRsans ${allValuesError.LanguageId?"flex":"hidden"}`}>لطفا یک مورد را انتخاب نمایید!</p>
                 </div>
                 <div className="flex flex-col w-[32%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:mr-0 xl:ml-[1%] mr-[1.5%] xl-1400:mr-0 mb-12">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">شماره تلفن همراه</span>
                     <div class="mt-2">
                         <input style={{ fontFamily: 'Shabnam' }}
-                            type="text"
+                            type="number"
                             id="input-group-1"
                             onChange={changeHandler}
                             onBlur={blurHandler}
@@ -483,7 +527,7 @@ null
                     </div>
                     {
 allValuesError.Mobile?
-<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+<span style={{ fontFamily: 'Shabnam' }} class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
 لطفا فیلد را وارد نمایید !
 </span>
 :
@@ -494,7 +538,7 @@ null
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">شماره تلفن ثابت</span>
                     <div class="mt-2">
                         <input style={{ fontFamily: 'Shabnam' }}
-                            type="text"
+                            type="number"
                             id="input-group-1"
                             onChange={changeHandler}
                             onBlur={blurHandler}
@@ -504,7 +548,7 @@ null
                     </div>
                     {
 allValuesError.Phone?
-<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+<span style={{ fontFamily: 'Shabnam' }} class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
 لطفا فیلد را وارد نمایید !
 </span>
 :
@@ -525,6 +569,7 @@ null
                         <label style={{ fontFamily: 'Shabnam' }} className="" For="a2">سیاسی</label>
 
                     </div>
+                    <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-1 text-xs font-[10px] font-IRsans ${allValuesError.PassPortTypeId?"flex":"hidden"}`}>لطفا یک مورد را انتخاب نمایید!</p>
                 </div>
                 <div className="flex flex-col w-[32%] xl:w-[49%] xs:w-[100%] xs:mx-0 lg-md:w-[60%] lg-md:mx-0 xl:ml-0 xl:mr-[1%] mr-[1.5%] mb-12">
                     <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">محل خدمت</span>
@@ -540,7 +585,7 @@ null
                     </div>
                     {
 allValuesError.JobLocation?
-<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+<span style={{ fontFamily: 'Shabnam' }} class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
 لطفا فیلد را وارد نمایید !
 </span>
 :
@@ -552,16 +597,24 @@ null
               
                       
               <select style={{fontFamily:'Shabnam'}}
-                  name="position"
+                  name="PositionId"
                   id="position"
+                  onChange={changeHandler}
                   className="mt-2  text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full pl-10 p-2.5">
                   <option style={{fontFamily:'Shabnam'}} value="choose" className=" ">انتخاب کنید</option>
-                  <option  style={{fontFamily:'Shabnam'}}value="s1" className=" ">مدیرعامل</option>
-                  <option  style={{fontFamily:'Shabnam'}}value="s2" className=" ">دبیر</option>
-                  <option style={{fontFamily:'Shabnam'}} value="s3" className=" ">مدیرداخلی</option>
+                  {
+                    position?.map((item)=>{
+                        return(
+                            <option  style={{fontFamily:'Shabnam'}}value={item?.positionId} className=" ">{item?.positionType}</option>
+
+                        )
+                    })
+                  }
+ 
                  
 
               </select>
+              <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-1 text-xs font-[10px] font-IRsans ${allValuesError.PositionId?"flex":"hidden"}`}>لطفا یک مورد را انتخاب نمایید!</p>
      
                 </div>
                 <div className="flex flex-col w-[33%] xl:w-[49%] xs:w-[100%] xs:mx-0 xl:ml-0 xl:mr-[1%] mx-[1.5%] mb-10 xl:mb-5">
@@ -578,7 +631,7 @@ null
                     </div>
                     {
 allValuesError.EmployeeStatus?
-<span class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+<span style={{ fontFamily: 'Shabnam' }} class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
 لطفا فیلد را وارد نمایید !
 </span>
 :

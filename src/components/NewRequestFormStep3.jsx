@@ -9,6 +9,9 @@ const NewRequestFormStep3 = () => {
     const [showSuccessModal,
         setShowSuccessModal] = React.useState(false);
         const id = useParams().id;
+
+        
+
         const [allValues, setAllValues] = useState({
     
             PayerCitizenShip: "",   
@@ -32,6 +35,29 @@ const NewRequestFormStep3 = () => {
             TollAmountId:  "",
             PaymentFromBank :  "",
         });
+        const [allValuesError, setAllValuesError] = useState({
+    
+          PayerCitizenShip: false,   
+          AmountOfCost :  false,
+          PayerFood:  false,
+          CostOfFood :  false,
+          TickerTypeId :  false,
+          AirlineCompany :  false,
+          TicketCost:  false,
+          TheCostOfTicket :  false,
+          RightOfMissionId :  false,
+          ManagerRightOfMission :  false,
+          GeneralManagerRightOfMission :  false,
+          ExpertRightOfMission:  false,
+          RightToEducationCost :  false,
+          RightToEducationId :  false,
+          RightOfCommutingCost :  false,
+          RightOfCommutingId :  false,
+          VisaCost :  false,
+          TollAmountCost :  false,
+          TollAmountId:  false,
+          PaymentFromBank :  false,
+      });
         let navigate = useNavigate();
     
         useEffect(() => {
@@ -56,11 +82,30 @@ const NewRequestFormStep3 = () => {
         }
         const changeHandler = e => {
           if (e.target) {
+              if(e.target.value!=""){
+  
+                  setAllValuesError({ ...allValuesError, [e.target.name]: false })
+                }
+                else{
+                  setAllValuesError({ ...allValuesError, [e.target.name]: true })
+              
+                }
   
               setAllValues({ ...allValues, [e.target.name]: e.target.value })
           }
   
       }
+      const blurHandler = e => {
+          if(e.target)    {
+            if(e.target.value==""){
+          
+              setAllValuesError({ ...allValuesError, [e.target.name]: true })
+            }
+          
+          
+          }
+        
+          }
       const updateReq= async () => {
           console.log("req")
           console.log(allValues)
@@ -171,10 +216,19 @@ const NewRequestFormStep3 = () => {
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="PayerCitizenShip"
-                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            class={`font-IRsans text-right right-6 bg-white border ${allValuesError.PayerCitizenShip?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5 `}
                             placeholder="هزینه اقامت بر عهده"/>
                     </div>
+                    {
+allValuesError.PayerCitizenShip?
+<span style={{ fontFamily: 'Shabnam' }} class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
                 </div>
                 <div className="flex flex-col w-[30%] 2xl:w-[49%] sm-xs:w-[100%] sm-xs:mx-0 2xl:ml-0 2xl:mr-[1%] mr-[2.5%] ml-[35%] mb-10">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">میزان هزینه</span>
@@ -183,10 +237,19 @@ const NewRequestFormStep3 = () => {
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="AmountOfCost"
-                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            class={`font-IRsans text-right right-6 bg-white border ${allValuesError.AmountOfCost?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
                             placeholder="میزان هزینه"/>
                     </div>
+                    {
+allValuesError.AmountOfCost?
+<span style={{ fontFamily: 'Shabnam' }} class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
                 </div>
                 <div className="flex flex-col w-[30%] 2xl:w-[49%] sm-xs:w-[100%] sm-xs:mx-0 2xl:mr-0 2xl:ml-[1%] ml-[2.5%] mb-12">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">هزینه غذا به عهده</span>
@@ -195,10 +258,19 @@ const NewRequestFormStep3 = () => {
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="PayerFood"
-                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            class={`font-IRsans text-right right-6 bg-white border ${allValuesError.PayerFood?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
                             placeholder="هزینه غذا به عهده"/>
                     </div>
+                    {
+allValuesError.PayerFood?
+<span style={{ fontFamily: 'Shabnam' }} class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
                 </div>
                 <div className="flex flex-col w-[30%] 2xl:w-[49%] sm-xs:w-[100%] sm-xs:mx-0 2xl:ml-0 2xl:mr-[1%] mr-[2.5%] ml-[35%] mb-12">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">میزان هزینه غذا</span>
@@ -207,10 +279,19 @@ const NewRequestFormStep3 = () => {
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="CostOfFood"
-                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            class={`font-IRsans text-right right-6 bg-white border ${allValuesError.CostOfFood?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5`}
                             placeholder="میزان هزینه غذا"/>
                     </div>
+                    {
+allValuesError.CostOfFood?
+<span style={{ fontFamily: 'Shabnam' }} class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
                 </div>
                 <div className="flex flex-col w-[30%] 2xl:w-[49%] lg-md:w-[100%] lg-md:mx-0 2xl:mr-0 2xl:ml-[1%] ml-[2.5%] mb-12">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">نوع بلیط رفت و برگشت</span>
@@ -246,10 +327,19 @@ const NewRequestFormStep3 = () => {
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="AirlineCompany"
-                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            class={`font-IRsans text-right right-6 bg-white border ${allValuesError.AirlineCompany?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5 `}
                             placeholder="نام شرکت هواپیمایی"/>
                     </div>
+                    {
+allValuesError.AirlineCompany?
+<span style={{ fontFamily: 'Shabnam' }} class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
                 </div>
                 <div className="flex flex-col w-[30%] 2xl:w-[49%] sm-xs:w-[100%] sm-xs:mx-0 2xl:mr-0 2xl:ml-[1%] ml-[2.5%] mb-10">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">هزینه بلیط بر عهده</span>
@@ -258,10 +348,19 @@ const NewRequestFormStep3 = () => {
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="TicketCost"
-                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            class={`font-IRsans text-right right-6 bg-white border ${allValuesError.TicketCost?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5 `}
                             placeholder="هزینه بلیط بر عهده"/>
                     </div>
+                    {
+allValuesError.TicketCost?
+<span style={{ fontFamily: 'Shabnam' }} class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
                 </div>
                 <div className="flex flex-col w-[30%] 2xl:w-[49%] sm-xs:w-[100%] sm-xs:mx-0 2xl:ml-0 2xl:mr-[1%] mr-[2.5%] ml-[35%] mb-10">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">میزان هزینه بلیط</span>
@@ -270,10 +369,19 @@ const NewRequestFormStep3 = () => {
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="TheCostOfTicket"
-                            class="font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
+                            class={`font-IRsans text-right right-6 bg-white border ${allValuesError.TheCostOfTicket?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5 `}
                             placeholder="میزان هزینه بلیط"/>
                     </div>
+                    {
+allValuesError.TheCostOfTicket?
+<span style={{ fontFamily: 'Shabnam' }} class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
                 </div>
                 <div className="flex flex-col w-[35%] 2xl:w-[49%] 2xl:mr-0 2xl:ml-[1%] xl:w-[100%] xl:mx-0 ml-[2.5%] mb-16">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">حق ماموریت</span>
@@ -632,12 +740,21 @@ const NewRequestFormStep3 = () => {
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="PaymentFromBank"
-                            class="text-right h-[32px] w-[40%] lg-md:w-[55%] sm-xs:w-[100%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            class={`text-right h-[32px] w-[40%] lg-md:w-[55%] sm-xs:w-[100%] bg-white border ${allValuesError.PaymentFromBank?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5`}
                             />
                       
                         
                     </div>
+                    {
+allValuesError.PaymentFromBank?
+<span style={{ fontFamily: 'Shabnam' }} class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+لطفا فیلد را وارد نمایید !
+</span>
+:
+null
+          }
                 </div>
                 
             </div>
