@@ -13,7 +13,8 @@ const NewRequestFormStep3 = () => {
         
 
         const [allValues, setAllValues] = useState({
-    
+
+            TypeAccommodationId: "",
             PayerCitizenShip: "",   
             AmountOfCost :  "",
             PayerFood:  "",
@@ -36,7 +37,8 @@ const NewRequestFormStep3 = () => {
             PaymentFromBank :  "",
         });
         const [allValuesError, setAllValuesError] = useState({
-    
+
+          TypeAccommodationId: false,
           PayerCitizenShip: false,   
           AmountOfCost :  false,
           PayerFood:  false,
@@ -106,10 +108,31 @@ const NewRequestFormStep3 = () => {
           }
         
           }
+          const 
+          allFull=(obj)=>
+          {
+            const updatedState = {};
+            var result =true;
+            for(var o in obj){
+              if(obj[o]==""){
+                updatedState[o] = true;
+      
+      
+                setAllValuesError({ ...allValuesError, ...updatedState})
+      result=false;
+              }
+                
+            }
+            console.log(allValuesError)
+      return result        
+          }
       const updateReq= async () => {
           console.log("req")
           console.log(allValues)
+          var res= allFull(allValues)
           const cookies = new Cookies();
+          if(res  )
+        {
           const dataUser = await axiosReq("Request/UpdateRequest3", {
             RequestId:id,
             TypeAccommodationId:allValues?.TypeAccommodationId,
@@ -143,6 +166,13 @@ const NewRequestFormStep3 = () => {
           else {
               alert("اطلاعات ورودی نادرست می باشند")
           }
+        }
+        else{
+          console.log(allValuesError)
+          alert("اطلاعات ورودی را وارد نمایید")
+  
+         }
+  
   
       }
     return (
@@ -150,7 +180,7 @@ const NewRequestFormStep3 = () => {
           <p style={{fontFamily: 'Shabnam'}} className="text-xl text-mainColor font-bold mt-3.5 mb-8 ">گام 3 - اطلاعات تکمیلی</p>
             <div className="flex w-full flex-wrap">
             <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold   mb-4">نوع اقامت</span>
-                <div className="flex flex-wrap w-[100%] mb-4">
+                <div className={`flex flex-wrap w-[100%] ${allValuesError.TypeAccommodationId?"mb-0":"mb-4"}  `}>
                   <div className="ml-10 mb-4">
                     <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
                     <input style={{fontFamily:'Shabnam'}}
@@ -209,6 +239,7 @@ const NewRequestFormStep3 = () => {
                   
 
                 </div>
+                <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] w-[100%] tracking-wide mb-4 text-xs font-[10px] font-IRsans ${allValuesError.TypeAccommodationId?"flex":"hidden"}`}>لطفا یک مورد را انتخاب نمایید!</p>
                 <div className="flex flex-col w-[30%] 2xl:w-[49%] sm-xs:w-[100%] sm-xs:mx-0  2xl:mr-0 2xl:ml-[1%] ml-[2.5%] mb-10 ">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">هزینه اقامت بر عهده</span>
                     <div class="mt-2">
@@ -319,6 +350,7 @@ null
                     </label>
                   </div>
                     </div>
+                    <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-1 text-xs font-[10px] font-IRsans ${allValuesError.TickerTypeId?"flex":"hidden"}`}>لطفا یک مورد را انتخاب نمایید!</p>
                 </div>
                 <div className="flex flex-col w-[30%] 2xl:w-[49%] lg-md:w-[100%] lg-md:mx-0 2xl:ml-0 2xl:mr-[1%]  mr-[2.5%] ml-[35%] mb-12">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">شرکت هواپیمایی</span>

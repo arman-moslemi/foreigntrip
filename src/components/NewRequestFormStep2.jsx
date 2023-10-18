@@ -148,7 +148,7 @@ const NewRequestFormStep2 = () => {
             RequestId: id
         });
         console.log(dataUser)
-        // setData(dataUser?.data)
+        setData(dataUser?.data)
 
             const dataPosition = await axiosReq("Agents/GetPositions");
             setPosition(dataPosition)
@@ -646,13 +646,13 @@ null
                     </div>
                 </div>
                 <div className="flex flex-col w-[100%]">
-                    <NewRequestFormStep2Table data={data} />
+                    <NewRequestFormStep2Table data={data} reCheck={reCheck} setRecheck={setRecheck} />
                 </div>
 
 
             </div>
             <div className="flex justify-end">
-                     <button onClick={()=>   navigate("/newRequestStep3/"+id)}
+                     <button onClick={()=> data?.length>0 ? navigate("/newRequestStep3/"+id):alert("لطفا ماموران اعزامی را وارد کنید.")}
                 
                     style={{ fontFamily: 'Shabnam' }}
                     className="w-40 h-12 mt-20 xs:w-[50%] bg-mainColor flex justify-center items-center shadow-blueShadow font-IRsans text-white text-xl font-bold rounded-lg hover:bg-lightBlue hover:text-mainColor">
