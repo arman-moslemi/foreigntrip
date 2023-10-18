@@ -1,12 +1,78 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import InternationalRightMenu from "../../components/InternationalComponent/InternationalRightMenu";
 import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
-
+import Cookies from 'universal-cookie';
+import { axiosReq } from "../../commons/axiosReq";
+import { useNavigate } from "react-router-dom";
 import SupervisorList from "../../components/SupervisorList";
 
 const SupervisorsList = () =>{
     const[showAdd,
             setShowAdd]=useState(false);
+            const [data, setData] = useState();
+            const [reCheck, setRecheck] = useState(false);
+            const [name,setName] = useState();
+            const [family,setFamily] = useState();
+            const [userName,setUserName] = useState();
+            const [pass,setPass] = useState();
+            const [id,setID] = useState();
+            let navigate = useNavigate();
+        
+            useEffect(() => {
+        
+                auth();
+            }, [reCheck]);
+            const auth = async () => {
+                const cookies = new Cookies();
+                var token = cookies.get('token');
+                console.log(cookies.get('Role'))
+                if (!token) {
+                    navigate("/");
+                } else {
+                    if (cookies.get('Role') == "InternationalAdmin") {
+                        GetData()
+        
+                    }
+                    else {
+                        navigate("/");
+        
+                    }
+                }
+            }
+            const GetData = async () => {
+                console.log(1234)
+                const cookies = new Cookies();
+        
+        
+        
+                const dataUser = await axiosReq("InternationalAdmin/GetSupervisor");
+                console.log(dataUser)
+                setData(dataUser)
+        
+        
+        
+            }
+            const addUser=async()=>{
+              console.log(1234)
+           
+           
+             const dataUser = await axiosReq("InternationalAdmin/InsertSupervisor",{
+              SupervisorId:id,
+              SupervisorName:name,
+              SupervisorFamily:family,
+              SupervisorUserName:userName,
+              Password:pass
+             });
+             if (dataUser?.status == 200 || dataUser?.status == 204 || dataUser?.status == 201) {
+          setRecheck(!reCheck)
+          setShowAdd(false)
+          }
+          else {
+              alert("عملیات با خطا روبرو شد.")
+          }
+          
+             
+             }
     return(
         <div className="w-full h-full bg-lightGray py-10 px-10 lg:px-8 md:p-0  lg:h-full" style={{direction:'rtl'}}>
         <div className="flex md:block">
@@ -43,31 +109,32 @@ const SupervisorsList = () =>{
      
       </div>
       
+      
       <div className="flex flex-wrap p-6">
                 <div className="flex flex-col w-[39%] xs:w-[100%] xs:ml-0 xs:mb-6 ml-[2%]">
                   <span style={{fontFamily:'Shabnam'}} className="  text-[#0D296E] font-bold text-sm">
                     نام
                   </span>
-                  <input className="border border-borderGray rounded-md px-2 py-1   mt-2" placeholder="نام"/>
+                  <input value={name} onChange={(e)=>setName(e.target.value)} className="border border-borderGray rounded-md px-2 py-1   mt-2" placeholder="علی"/>
                 </div>
-                <div className="flex flex-col xs:w-[100%] w-[59%]">
+                <div className="flex flex-col w-[59%] xs:w-[100%]">
                   <span style={{fontFamily:'Shabnam'}} className="  text-[#0D296E] font-bold text-sm">
                     نام خانوادگی
                   </span>
-                  <input className="border border-borderGray rounded-md px-2 py-1   mt-2" placeholder="نام خانوادگی"/>
+                  <input value={family}onChange={(e)=>setFamily(e.target.value)}  className="border border-borderGray rounded-md px-2 py-1   mt-2" placeholder="اطهری"/>
                 </div>
                </div>
                <div className="flex flex-col w-[100%] px-6 mb-6">
                   <span style={{fontFamily:'Shabnam'}} className="  text-[#0D296E] font-bold text-sm">
                     نام کاربری
                   </span>
-                  <input className="border border-borderGray rounded-md px-2 py-1   mt-2" placeholder="نام کاربری"/>
+                  <input value={userName}onChange={(e)=>setUserName(e.target.value)}  className="border border-borderGray rounded-md px-2 py-1   mt-2" placeholder="۰۰۲۰۷۶۸۹۷۶"/>
                 </div>
                 <div className="flex flex-col w-[100%] px-6 mb-6">
                   <span style={{fontFamily:'Shabnam'}} className="  text-[#0D296E] font-bold text-sm">
                  رمز عبور
                   </span>
-                  <input className="border border-borderGray rounded-md px-2 py-1   mt-2" placeholder="رمز عبور"/>
+                  <input onChange={(e)=>setPass(e.target.value)}  className="border border-borderGray rounded-md px-2 py-1   mt-2" placeholder="۰۹۱۲۸۷۶۸۷۶۵"/>
                 </div>
      
       <div className="flex items-center justify-center justify-end border-solid border-slate-200 rounded-b">
@@ -82,7 +149,7 @@ const SupervisorsList = () =>{
         style={{fontFamily:'Shabnam'}}
           className="text-white   float-left bg-mainColor shadow-blueShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button"
-          onClick={() => setShowAdd(false)}
+          onClick={() =>addUser() }
         >
          افزودن
         </button>
@@ -97,7 +164,7 @@ const SupervisorsList = () =>{
  : 
  null
 }
-                <SupervisorList/>
+                <SupervisorList data={data} reCheck={reCheck} setRecheck={setRecheck}/>
             </div>
         </div>
       

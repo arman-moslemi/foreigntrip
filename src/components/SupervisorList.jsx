@@ -1,8 +1,10 @@
-import React from "react";
+import React,{useState} from "react";
 import './components.css';
 
 import {ReactComponent as Trash} from "../assets/icon/blue/trash.svg";
 import { ReactComponent as Pencil } from "../assets/icon/blue/pencil.svg";
+import { axiosReq } from "../commons/axiosReq";
+
 export const truncate = (str, len) => {
   // console.log("truncate", str, str.length, len);
   if (str.length > len && str.length > 0) {
@@ -15,111 +17,74 @@ export const truncate = (str, len) => {
   return str;
 };
 
-const SupervisorList = () =>{
-  const [showError,setShowError]= React.useState(false);
-  const [showEditModal,setShowEditModal] = React.useState(false);
-const tableRow =[
-  {
-    id:'1',
-   num:'1',
-   name:'علی اطهری',
-   userName:'Athari42',
-   password:'Aa@123456',
-   edit:
-   <button onClick={()=>setShowEditModal(true)}>
-    <Pencil/>
-   </button>,
-   delete: 
-                <button onClick={()=>setShowError(true)}>
-                <Trash/>
-                </button>
-             
-               
-  },
-  {
-    id:'2',
-    num:'1',
-    name:'علی اطهری',
-    userName:'Athari42',
-    password:'Aa@123456',
-    edit:
-    <button onClick={()=>setShowEditModal(true)}>
-     <Pencil/>
-    </button>,
-    delete: 
-    <button onClick={()=>setShowError(true)}>
-    <Trash/>
-    </button>
-              
-       
-  },
-  {
-    id:'3',
-    num:'1',
-    name:'علی اطهری',
-    userName:'Athari42',
-    password:'Aa@123456',
-    edit:
-    <button onClick={()=>setShowEditModal(true)}>
-     <Pencil/>
-    </button>,
-    delete: 
-    <button onClick={()=>setShowError(true)}>
-    <Trash/>
-    </button>
-              
-       
-  },
-  {
-    id:'4',
-   num:'1',
-   name:'علی اطهری',
-   userName:'Athari42',
-   password:'Aa@123456',
-   edit:
-   <button onClick={()=>setShowEditModal(true)}>
-    <Pencil/>
-   </button>,
-   delete: 
-   <button onClick={()=>setShowError(true)}>
-   <Trash/>
-   </button>
-             
-      
-  },
-  {
-    id:'5',
-    num:'1',
-    name:'علی اطهری',
-    userName:'Athari42',
-    password:'Aa@123456',
-    edit:
-    <button onClick={()=>setShowEditModal(true)}>
-     <Pencil/>
-    </button>,
-    delete: 
-    <button onClick={()=>setShowError(true)}>
-    <Trash/>
-    </button>
-              
-       
-  }
-]
-  const tableBody = tableRow.map((tableRow) =>
+const SupervisorList = ({data,setRecheck,reCheck}) =>{
+  const [showError,setShowError]= useState(false);
+  const [showEditModal,setShowEditModal] = useState(false);
+  const [name,setName] = useState();
+  const [family,setFamily] = useState();
+  const [userName,setUserName] = useState();
+  const [pass,setPass] = useState();
+  const [id,setID] = useState();
+
+  const deleteUser=async()=>{
+    console.log(1234)
+ 
+ 
+   const dataUser = await axiosReq("InternationalAdmin/RemoveSupervisor",{
+    SupervisorId:id
+   });
+   if (dataUser?.status == 200 || dataUser?.status == 204 || dataUser?.status == 201) {
+setRecheck(!reCheck)
+setShowError(false)
+}
+else {
+    alert("عملیات با خطا روبرو شد.")
+}
+
+   
+   }
+
+  const updateUser=async()=>{
+    console.log(1234)
+ 
+ 
+   const dataUser = await axiosReq("InternationalAdmin/InsertSupervisor",{
+    SupervisorName:name,
+    SupervisorFamily:family,
+    SupervisorUserName:userName,
+    Password:pass
+   });
+   if (dataUser?.status == 200 || dataUser?.status == 204 || dataUser?.status == 201) {
+setRecheck(!reCheck)
+setShowEditModal(false)
+}
+else {
+    alert("عملیات با خطا روبرو شد.")
+}
+
+   
+   }
+
+  const tableBody = data?.map((tableRow,index) =>
   <tr key={tableRow.id} className="border-b border-b-borderGray">
-    <td className="py-4 text-sm text-right pr-4   ">{tableRow.num}</td>
+    <td className="py-4 text-sm text-right pr-4   ">{index+1}</td>
     <td className="py-4 text-sm text-right   pr-4" style={{fontFamily:'Shabnam'}}>
       <div className="flex items-center">
         <div>
-        {tableRow.name}
-        </div>
+        {tableRow?.supervisorName} {tableRow?.supervisorFamily}
+                </div>
    
       </div>
     </td>
-    <td className="py-4 text-sm text-right pr-4  " style={{fontFamily:'Shabnam'}}>{tableRow.userName}</td>
-    <td className="py-4 text-sm text-center pr-4  " style={{fontFamily:'Shabnam'}}>{tableRow.password}</td>
-    <td className="py-4 text-sm text-center pr-4  "  style={{fontFamily:'Shabnam'}}>{tableRow.edit}</td>
-    <td className="py-4 text-sm text-center pr-4 pl-4  " style={{fontFamily:'Shabnam'}}>{tableRow.delete}</td>
+    <td className="py-4 text-sm text-right pr-4  " style={{fontFamily:'Shabnam'}}>{tableRow?.supervisorUserName}</td>
+    <td className="py-4 text-sm text-center pr-4  "  style={{fontFamily:'Shabnam'}}>  <button onClick={()=>{setShowEditModal(true);setName(tableRow?.supervisorName);
+    setFamily(tableRow?.supervisorFamily);setUserName(tableRow?.supervisorUserName);setID(tableRow?.supervisorId)
+    }}>
+    <Pencil/>
+   </button></td>
+    <td className="py-4 text-sm text-center pr-4 pl-4  " style={{fontFamily:'Shabnam'}}> <button onClick={()=>{setShowError(true);setID(tableRow?.supervisorId)}}>
+    <Trash/>
+    </button></td>
     </tr> 
   )
     return(
@@ -130,7 +95,6 @@ const tableRow =[
       <th className="text-right pr-4  " style={{fontFamily:'Shabnam'}}>ردیف</th>
       <th className="text-right   pr-4" style={{fontFamily:'Shabnam'}}>نام و نام خانوادگی</th>
       <th className="text-right   pr-4" style={{fontFamily:'Shabnam'}}>نام کاربری</th>
-      <th className="text-center font-IRsan pr-4" style={{fontFamily:'Shabnam'}}>رمز عبور</th>
       <th className="text-center   pr-4" style={{fontFamily:'Shabnam'}}>ویرایش</th>
       <th className="text-center  pl-4 pr-4" style={{fontFamily:'Shabnam'}} >حذف</th>
     </tr>
@@ -176,7 +140,7 @@ const tableRow =[
         style={{fontFamily:'Shabnam'}}
           className="text-white   float-left bg-red shadow-redShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button"
-          onClick={() => setShowError(false)}
+          onClick={() => deleteUser()}
         >
          بله
         </button>
@@ -213,26 +177,26 @@ const tableRow =[
                   <span style={{fontFamily:'Shabnam'}} className="  text-[#0D296E] font-bold text-sm">
                     نام
                   </span>
-                  <input className="border border-borderGray rounded-md px-2 py-1   mt-2" placeholder="علی"/>
+                  <input value={name} onChange={(e)=>setName(e.target.value)} className="border border-borderGray rounded-md px-2 py-1   mt-2" placeholder="علی"/>
                 </div>
                 <div className="flex flex-col w-[59%] xs:w-[100%]">
                   <span style={{fontFamily:'Shabnam'}} className="  text-[#0D296E] font-bold text-sm">
                     نام خانوادگی
                   </span>
-                  <input className="border border-borderGray rounded-md px-2 py-1   mt-2" placeholder="اطهری"/>
+                  <input value={family}onChange={(e)=>setFamily(e.target.value)}  className="border border-borderGray rounded-md px-2 py-1   mt-2" placeholder="اطهری"/>
                 </div>
                </div>
                <div className="flex flex-col w-[100%] px-6 mb-6">
                   <span style={{fontFamily:'Shabnam'}} className="  text-[#0D296E] font-bold text-sm">
                     نام کاربری
                   </span>
-                  <input className="border border-borderGray rounded-md px-2 py-1   mt-2" placeholder="۰۰۲۰۷۶۸۹۷۶"/>
+                  <input value={userName}onChange={(e)=>setUserName(e.target.value)}  className="border border-borderGray rounded-md px-2 py-1   mt-2" placeholder="۰۰۲۰۷۶۸۹۷۶"/>
                 </div>
                 <div className="flex flex-col w-[100%] px-6 mb-6">
                   <span style={{fontFamily:'Shabnam'}} className="  text-[#0D296E] font-bold text-sm">
                  رمز عبور
                   </span>
-                  <input className="border border-borderGray rounded-md px-2 py-1   mt-2" placeholder="۰۹۱۲۸۷۶۸۷۶۵"/>
+                  <input onChange={(e)=>setPass(e.target.value)}  className="border border-borderGray rounded-md px-2 py-1   mt-2" placeholder="۰۹۱۲۸۷۶۸۷۶۵"/>
                 </div>
      
       <div className="flex items-center justify-center justify-end border-solid border-slate-200 rounded-b">
@@ -248,7 +212,7 @@ const tableRow =[
         style={{fontFamily:'Shabnam'}}
           className="text-white   float-left bg-mainColor shadow-blueShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="button"
-          onClick={() => setShowEditModal(false)}
+          onClick={() => updateUser()}
         >
          ویرایش
         </button>
