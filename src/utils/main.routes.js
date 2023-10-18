@@ -98,6 +98,7 @@ const MainRoutes = (props) =>{
                 </Routes>
                 <Routes>
                     <Route path="/" element={<Login/>} />
+                    
                 </Routes>
                 <Routes>
                     <Route path="/signup" element={<SignUp/>} />

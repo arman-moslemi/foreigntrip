@@ -48,7 +48,8 @@ else {
     console.log(1234)
  
  
-   const dataUser = await axiosReq("InternationalAdmin/InsertSupervisor",{
+   const dataUser = await axiosReq("InternationalAdmin/UpdateSupervisor",{
+    SupervisorId:id,
     SupervisorName:name,
     SupervisorFamily:family,
     SupervisorUserName:userName,
