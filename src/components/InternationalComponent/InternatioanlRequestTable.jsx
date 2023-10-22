@@ -1,7 +1,7 @@
 
 
 
-import React from "react";
+import React,{useState,useEffect} from "react";
 
 import { ReactComponent as Eye } from "../../assets/icon/black/eye.svg";
 
@@ -21,10 +21,16 @@ export const truncate = (str, len) => {
     return str;
   };
 
-const InternatioanlRequestTable = () =>{
-  const[showError,setShowError]= React.useState(false);
+const InternatioanlRequestTable =  ({data,reCheck,setRecheck}) =>{
+  const [showError,setShowError]=useState(false);
+  const [showEditModal,setShowEditModal] = useState(false);
+  const [showBan,setShowBan] = useState(false);
+  const [name,setName] = useState();
+  const [family,setFamily] = useState();
+  const [userName,setUserName] = useState();
+  const [pass,setPass] = useState();
+  const [id,setID] = useState();
   const[showLog,setShowLog] = React.useState(false);
-  const [showBan,setShowBan] =React.useState(false);
     const tableRow =[
         {
           id:'1',
@@ -133,25 +139,31 @@ const InternatioanlRequestTable = () =>{
         }, 
       
       ]
-    const tableBody = tableRow.map((tableRow) =>
+    const tableBody = data?.map((tableRow) =>
     <tr key={tableRow.id} className="border-b border-b-borderGray">
     
     
       <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-right  px-4">
         
       
-          {tableRow.name} 
+          {tableRow.agent?.agentName} {tableRow.agent?.agentFamily} 
+ 
         
         
        
       </td>
     
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">{tableRow.subject}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">{tableRow.travelTopic}</td>
       <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">{tableRow.acceptedBy}</td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">{tableRow.date}</td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">{tableRow.tripType}</td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">{tableRow.status}</td>
-      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">{tableRow.action}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">{tableRow.travelDateStart}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">{tableRow?.city?.cityName}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">{tableRow.requestStatus?.requestStatusTitle}</td>
+      <td style={{fontFamily:'shabnam'}}  className="py-4 text-xs text-center px-4 ">  <div className="flex justify-center">
+          <Link to={'/internationalAdmin/requestView/'+tableRow?.requestId} className="mx-2" >
+            <Eye/>
+          </Link>
+       
+         </div>      </td>
       </tr> 
     )
     return(
@@ -166,7 +178,7 @@ const InternatioanlRequestTable = () =>{
      <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsan md:px-4 text-sm">موضوع سفر</th>
       <th style={{fontFamily:'Shabnam'}} className="text-center font-IRsan md:px-4 text-sm">تایید شده توسط</th>
       <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4 text-sm">تاریخ سفر</th>
-      <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4 text-sm" >نوع سفر</th>
+      <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4 text-sm" >مقصد</th>
       <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4 text-sm" >وضعیت</th>
       <th style={{fontFamily:'Shabnam'}} className="text-center   md:px-4 text-sm" >مشاهده</th>
     </tr>

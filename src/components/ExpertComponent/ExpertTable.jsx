@@ -80,9 +80,7 @@ else {
     </td>
     <td className="py-4 text-sm text-right pr-4  " style={{fontFamily:'Shabnam'}}>{tableRow.internationalExpertUserName}</td>
     <td className="py-4 text-sm text-center pr-4 pl-4  "  style={{fontFamily:'Shabnam'}}><div className="flex items-center justify-center">
-     <button onClick={()=>setShowBan(true)} className="mx-2">
-                <Ban/>
-                </button>
+   
     <button onClick={()=>{setName(tableRow?.internationalExpertName);
     setFamily(tableRow?.internationalExpertFamily);setUserName(tableRow?.internationalExpertUserName);setID(tableRow?.internationalExpertId);setShowEditModal(true)}} className="mx-2">
     <Pencil/>
@@ -235,57 +233,7 @@ else {
  : 
  null
 }
-{
-  showBan ?
-  <>
-  <div
-  className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
->
-  <div className="relative w-auto my-5 mx-auto max-w-3xl">
-   
-    <div className="border-0 rounded-lg p-2 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
- 
-      <div className="text-center p-4 border-b border-solid border-b-midGray rounded-t">
-        <span style={{fontFamily:'Shabnam'}} className="text-base font-bold   text-black align-middle text-center">
-         هشدار!
-        </span>
-     
-      </div>
-      
-      <div className="relative p-6 flex-auto">
-        <p style={{fontFamily:'Shabnam'}} className="my-4 text-black text-sm 2xs:text-xs   leading-relaxed">
-    آیا از مسدودسازی کارشناس انتخاب شده مطمئن هستید؟
-        </p>
-      </div>
-     
-      <div className="flex items-center justify-center justify-end border-solid border-slate-200 rounded-b">
-        <button
-        style={{fontFamily:'Shabnam'}}
-          className="text-black   float-left background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-          type="button"
-          onClick={() => setShowBan(false)}
-        >
-          خیر
-        </button>
-        <button
-        style={{fontFamily:'Shabnam'}}
-          className="text-white   float-left bg-red shadow-redShadow rounded-md font-bold uppercase px-10 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-          type="button"
-          onClick={() => setShowBan(false)}
-        >
-         بله
-        </button>
-      
-      </div>
-    </div>
-  </div>
-</div>
-<div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
 
- </>
- : 
- null
-}
         </div>
     )
 }

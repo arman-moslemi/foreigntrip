@@ -261,7 +261,7 @@ const MainRoutes = (props) =>{
                     <Route path="/internationalAdmin/requestList" element={<InternationalRequestsList/>}/>
                 </Routes>
                 <Routes>
-                    <Route path="/internationalAdmin/requestView" element={<InternatioanlRequestsView/>}/>
+                    <Route path="/internationalAdmin/requestView/:id" element={<InternatioanlRequestsView/>}/>
                 </Routes>
                 <Routes>
                     <Route path="/internationalAdmin/uploadSignature" element={<InternationalUploadSignature/>}/>
