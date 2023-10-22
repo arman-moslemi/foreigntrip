@@ -117,6 +117,7 @@ if(e.target)    {
 
   }
   // setAllValuesError({ ...allValuesError, [""]: false })
+  
 
   setAllValues({ ...allValues, [e.target.name]: e.target.value })
 }

@@ -20,6 +20,16 @@ const NewRequestFormStep5 = () => {
           ResistanceEconomyTravel :  "",
          
         });
+        const [allValuesError, setAllValuesError] = useState({
+    
+          ImportantTravel: false,   
+          MissionAchievementRecords :  false,
+          SummaryInvitation:  false,
+          ForeignTravelSummary :  false,
+          ReferenceDeviceAgreement :  false,
+          ResistanceEconomyTravel :  false,
+         
+        });
         let navigate = useNavigate();
     
         useEffect(() => {
@@ -44,17 +54,36 @@ const NewRequestFormStep5 = () => {
         }
         const changeHandler = e => {
           if (e.target) {
+              if(e.target.value!=""){
+  
+                  setAllValuesError({ ...allValuesError, [e.target.name]: false })
+                }
+                else{
+                  setAllValuesError({ ...allValuesError, [e.target.name]: true })
+              
+                }
   
               setAllValues({ ...allValues, [e.target.name]: e.target.value })
           }
   
       }
+      const blurHandler = e => {
+        if(e.target)    {
+          if(e.target.value==""){
+        
+            setAllValuesError({ ...allValuesError, [e.target.name]: true })
+          }
+        
+        
+        }
+      
+        }
       const updateReq= async () => {
           console.log("req")
           console.log(allValues)
           const cookies = new Cookies();
           const dataUser = await axiosReq("Request/UpdateRequest4", {
-            RequestId:id,
+            RequestId: id,
             ImportantTravel: allValues?.ImportantTravel,   
             MissionAchievementRecords :  allValues?.MissionAchievementRecords,
             SummaryInvitation:  allValues?.SummaryInvitation,
@@ -85,11 +114,20 @@ const NewRequestFormStep5 = () => {
                             rows={5}
                             type="text"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="ImportantTravel"
                             id="input-group-1"
-                            class="pr-4   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full  p-2.5  "
+                            class={`pr-4   text-right right-6 bg-white border ${allValuesError.ImportantTravel?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full  p-2.5 `}
                             placeholder="شرح را اینجا بنویسید"></textarea>
                     </div>
+                    {
+            allValuesError.ImportantTravel ?
+              <span style={{ fontFamily: 'Shabnam' }} class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+                لطفا فیلد را وارد نمایید !
+              </span>
+              :
+              null
+          }
             </div>
             <div className="flex flex-col w-[100%]  mb-7">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  md:text-sm">سوابق دستاوردهای قبلی مرتبط با موضوع این ماموریت (حداکثر در ۵ سطر )</span>
@@ -98,6 +136,7 @@ const NewRequestFormStep5 = () => {
                             rows={5}
                             type="text"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="MissionAchievementRecords"
                             id="input-group-1"
                             class="pr-4   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full  p-2.5  "
@@ -111,6 +150,7 @@ const NewRequestFormStep5 = () => {
                             rows={5}
                             type="text"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="SummaryInvitation"
                             id="input-group-1"
                             class="pr-4   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full  p-2.5  "
@@ -124,6 +164,7 @@ const NewRequestFormStep5 = () => {
                             rows={10}
                             type="text"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="ForeignTravelSummary"
                             id="input-group-1"
                             class="pr-4   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full  p-2.5  "
