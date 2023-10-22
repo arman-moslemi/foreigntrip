@@ -83,7 +83,8 @@ else {
      <button onClick={()=>setShowBan(true)} className="mx-2">
                 <Ban/>
                 </button>
-    <button onClick={()=>{setID(tableRow?.internationalExpertId);setShowEditModal(true)}} className="mx-2">
+    <button onClick={()=>{setName(tableRow?.internationalExpertName);
+    setFamily(tableRow?.internationalExpertFamily);setUserName(tableRow?.internationalExpertUserName);setID(tableRow?.internationalExpertId);setShowEditModal(true)}} className="mx-2">
     <Pencil/>
    </button>
    <button onClick={()=>{setID(tableRow?.internationalExpertId);setShowError(true)}} className="mx-2">

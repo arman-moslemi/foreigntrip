@@ -15,49 +15,7 @@ export const truncate = (str, len) => {
 
 const RequestViewStep2 = ({data}) =>{
   
-const tableRow =[
- {
-  id:'1',
-  name:'علی اسد زاده',
-  father:'سید امیرقاسم',
-  idNumber:'0020145869',
-  nationalCode:'0020145869',
-  birthday:'1350/10/28',
-  gender:'آقا',
-  maritalStatus:'متاهل',
-  degree:'دکترا/معماری سیتم های کامپیوتری',
-  foreign:'متوسط',
-  experience:'12 سال',
-  phoneNumber:'09124759846',
-  landLineNumber:'02122698547',
-  passportType:'سیاسی',
-  location:'هولدینگ شستا',
-  position:'مدیر عامل',
-  employmentStatus:'پیمانی',
 
- },
-  {
-    id:'2',
-    name:'علی اسد زاده',
-    father:'سید امیرقاسم',
-    idNumber:'0020145869',
-    nationalCode:'0020145869',
-    birthday:'1350/10/28',
-    gender:'آقا',
-    maritalStatus:'متاهل',
-    degree:'دکترا/معماری سیتم های کامپیوتری',
-    foreign:'متوسط',
-    experience:'12 سال',
-    phoneNumber:'09124759846',
-    landLineNumber:'02122698547',
-    passportType:'سیاسی',
-    location:'هولدینگ شستا',
-    position:'مدیر عامل',
-    employmentStatus:'پیمانی',
-    
-  },
-
-]
 const tableBody = data?.map((tableRow) => <tr key={tableRow.requestId} className="border-b border-b-borderGray">
 <td
     style={{

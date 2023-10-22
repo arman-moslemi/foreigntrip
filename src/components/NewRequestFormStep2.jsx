@@ -148,7 +148,7 @@ const NewRequestFormStep2 = () => {
             RequestId: id
         });
         console.log(dataUser)
-        // setData(dataUser?.data)
+        setData(dataUser?.data)
 
             const dataPosition = await axiosReq("Agents/GetPositions");
             setPosition(dataPosition)
