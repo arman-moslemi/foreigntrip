@@ -1,10 +1,53 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import InternationalRightMenu from "../../components/InternationalComponent/InternationalRightMenu";
 import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
 import InternatioanlRequestTable from "../../components/InternationalComponent/InternatioanlRequestTable";
 import {ReactComponent as Search} from "../../assets/icon/white/search.svg"
-
+import { axiosReq } from "../../commons/axiosReq";
+import { useNavigate } from "react-router-dom";
+import ExpertTable from "../../components/ExpertComponent/ExpertTable";
+import Cookies from 'universal-cookie';
 const InternationalRequestsList = () =>{
+    const [showSuccessModal, setShowSuccessModal] = React.useState(false);
+    const [data, setData] = useState();
+    const [reCheck, setRecheck] = useState(false);
+
+    let navigate = useNavigate();
+  
+    useEffect(() => {
+    
+      auth();
+    }, [reCheck]);
+    const auth=async()=>{
+      const cookies = new Cookies();
+      var token= cookies.get('token');
+      console.log(token)
+      if(!token){
+ navigate("/");
+      }else{
+   if( cookies.get('Role')=="InternationalAdmin")
+   {
+     GetData()
+  
+   }
+   else{
+  navigate("/");
+  
+   }
+      }
+    }
+    const GetData=async()=>{
+        console.log(1234)
+        const cookies = new Cookies();
+     
+     
+     
+       const dataUser = await axiosReq("InternationalAdmin/GetRequests");
+       console.log(dataUser)
+     setData(dataUser)
+  
+       
+       }
     return(
         <div className="w-full h-screen bg-lightGray py-10 px-10 lg:px-8 md:p-0  lg:h-full" style={{direction:'rtl'}}>
         <div className="flex md:block">
@@ -112,7 +155,7 @@ const InternationalRequestsList = () =>{
                 </div>
             </div>
             
-            <InternatioanlRequestTable/>
+            <InternatioanlRequestTable data={data} reCheck={reCheck} setRecheck={setRecheck}/>
               
             </div>
         </div>
