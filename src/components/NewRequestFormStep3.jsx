@@ -28,7 +28,8 @@ const NewRequestFormStep3 = () => {
             ManagerRightOfMission :  "",
             GeneralManagerRightOfMission :  "",
             ExpertRightOfMission:  "",
-            RightToEducationCost :  "",
+            RightToEducationApplicantCost : "",
+            RightToEducationInternalDeviceCost : "",
             RightToEducationId :  "",
             RightOfCommutingCost :  "",
             RightOfCommutingId :  "",
@@ -54,7 +55,8 @@ const NewRequestFormStep3 = () => {
           ManagerRightOfMission :  false,
           GeneralManagerRightOfMission :  false,
           ExpertRightOfMission:  false,
-          RightToEducationCost :  false,
+          RightToEducationApplicantCost : false,
+          RightToEducationInternalDeviceCost : false,
           RightToEducationId :  false,
           RightOfCommutingCost :  false,
           RightOfCommutingId :  false,
@@ -103,17 +105,48 @@ const NewRequestFormStep3 = () => {
       }
       const changeHandlerCheckbox = e => {
         if (e.target) {
-            if(e.target.value!=""){
+          
+var ss=allValues?.[e.target.name];
+console.log(11)
+console.log(ss)
+if(e.target.checked){
+  setAllValuesError({ ...allValuesError, [e.target.name]: false })
 
-                setAllValuesError({ ...allValuesError, [e.target.name]: false })
-              }
-              else{
-                setAllValuesError({ ...allValuesError, [e.target.name]: true })
-            
-              }
+  setAllValues({...allValues,[e.target.name]:ss?ss+","+e.target.value:e.target.value})        
+}
+else{
+  var dd=[];
+  dd=ss?.split(',');
+  dd?.map((item,index)=>{
+if(item==e.target.value)
+{
+  dd.splice(index,1)
+}
 
-            setAllValues({ ...allValues, [e.target.name]: e.target.value })
-        }
+  })
+  var ff="";
+  console.log(55)
+  console.log(dd)
+dd?.map((item2,index2)=>{
+  console.log(item2)
+  if(index2>0)
+  {
+
+    ff+=","+item2
+  }
+  else{
+    ff+=item2;
+  }
+ 
+})
+  setAllValues({...allValues,[e.target.name]:ff})     
+if(dd?.length==0){
+  setAllValuesError({ ...allValuesError, [e.target.name]: true })
+
+}
+}
+
+}
 
     }
       const blurHandler = e => {
@@ -168,7 +201,8 @@ const NewRequestFormStep3 = () => {
             ExpertRightOfMission:  allValues?.ExpertRightOfMission,
             ManagerRightOfMission:  allValues?.ManagerRightOfMission,
             GeneralManagerRightOfMission:allValues?.GeneralManagerRightOfMission,
-            RightToEducationCost :  allValues?.RightToEducationCost,
+            RightToEducationApplicantCost : allValues?.RightToEducationApplicantCost,
+            RightToEducationInternalDeviceCost : allValues?.RightToEducationInternalDeviceCost,
             RightToEducationId : allValues?.RightToEducationId,
             RightOfCommutingCost :  allValues?.RightOfCommutingCost,
             RightOfCommutingId :  allValues?.RightOfCommutingId,
@@ -207,7 +241,7 @@ const NewRequestFormStep3 = () => {
                     <input style={{fontFamily:'Shabnam'}}
                         type="checkbox"
                         value={"1"}          
-                        onChange={changeHandler}
+                        onChange={changeHandlerCheckbox}
                         name="TypeAccommodationId"
                         class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1.5"/>
                       هتل 3 ستاره
@@ -218,7 +252,7 @@ const NewRequestFormStep3 = () => {
                     <input style={{fontFamily:'Shabnam'}}
                         type="checkbox"
                         value={"2"}          
-                        onChange={changeHandler}
+                        onChange={changeHandlerCheckbox}
                         name="TypeAccommodationId"
                         class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1.5"/>
                       هتل 4 ستاره
@@ -229,7 +263,7 @@ const NewRequestFormStep3 = () => {
                     <input style={{fontFamily:'Shabnam'}}
                         type="checkbox"
                         value={"3"}          
-                        onChange={changeHandler}
+                        onChange={changeHandlerCheckbox}
                         name="TypeAccommodationId"
                         class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1.5"/>
                       هتل 5 ستاره 
@@ -240,7 +274,7 @@ const NewRequestFormStep3 = () => {
                     <input style={{fontFamily:'Shabnam'}}
                         type="checkbox"
                         value={"4"}          
-                        onChange={changeHandler}
+                        onChange={changeHandlerCheckbox}
                         name="TypeAccommodationId"
                         class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1.5"/>
                       مکان متعلق به دستگاه خارجی
@@ -251,7 +285,7 @@ const NewRequestFormStep3 = () => {
                     <input style={{fontFamily:'Shabnam'}}
                         type="checkbox"
                         value={"5"}          
-                        onChange={changeHandler}
+                        onChange={changeHandlerCheckbox}
                         name="TypeAccommodationId"
                         class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1.5"/>
                       مکان متعلق به دستگاه داخلی
@@ -352,7 +386,7 @@ null
                     <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
                     <input style={{fontFamily:'Shabnam'}}
                         type="checkbox"
-                        onChange={changeHandler}
+                        onChange={changeHandlerCheckbox}
                         name="TickerTypeId"
                         value={"1"}
                         class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1.5"/>
@@ -363,7 +397,7 @@ null
                     <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
                     <input style={{fontFamily:'Shabnam'}}
                         type="checkbox"
-                        onChange={changeHandler}
+                        onChange={changeHandlerCheckbox}
                         name="TickerTypeId"
                         value={"2"}
                         class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1.5"/>
@@ -441,23 +475,23 @@ null
                     <div class="mt-5 flex-col">
                         <div className="flex items-center">
                           <input                          
-                             onChange={changeHandler}
+                             onChange={changeHandlerCheckbox}
                             name="RightOfMissionId" value={"1"}className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-3" type="checkbox"  id="InWith" />
                           <label style={{fontFamily: 'Shabnam'}} className="" For="a1">با دریافت حق ماموریت از دستگاه داخلی</label>
                         </div>
                         <div className="flex items-center mt-4">
-                          <input                   value={"2"}          onChange={changeHandler}
+                          <input                   value={"2"}          onChange={changeHandlerCheckbox}
                             name="RightOfMissionId"
                             className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-3" type="checkbox"  id="InWithout" />
                           <label style={{fontFamily: 'Shabnam'}} className="" For="a1">بدون دریافت حق ماموریت از دستگاه داخلی</label>
                         </div>
                         <div className="flex items-center mt-4">
-                          <input           value={"3"}                  onChange={changeHandler}
+                          <input           value={"3"}                  onChange={changeHandlerCheckbox}
                             name="RightOfMissionId"className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-3" type="checkbox"  id="OutWith" />
                           <label style={{fontFamily: 'Shabnam'}} className="" For="a1">با دریافت حق ماموریت از دستگاه خارجی</label>
                         </div>
                         <div className="flex items-center mt-4">
-                          <input                   value={"4"}          onChange={changeHandler}
+                          <input                   value={"4"}          onChange={changeHandlerCheckbox}
                             name="RightOfMissionId"className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-3" type="checkbox" id="OutWithout" />
                           <label style={{fontFamily: 'Shabnam'}} className="" For="a1">بدون دریافت حق ماموریت از دستگاه خارجی</label>
                         </div>
@@ -473,7 +507,7 @@ null
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[7px] lg:mb-3 sm-xs:ml-0 ">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          onChange={changeHandler}
+                          onChange={changeHandlerCheckbox}
                           name="RightOfMissionChekbox"
                           value={"1"}
                           class="accent-mainColor w-4   h-4 border-2 border-mainColor outline-mainColor ml-4 "/>
@@ -486,17 +520,19 @@ null
                             onChange={changeHandler}
                             name="ExpertRightOfMission"
                             
-                            class={`text-right h-[32px] w-[46%] xl:w-[28%] lg:w-[44%] lg:mr-7 sm-xs:w-[90%] bg-white border ${allValuesError.ExpertRightOfMission && allValues?.RightOfMissionChekbox==1?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5`}
+                            class={`text-right h-[32px] w-[46%] xl:w-[28%] lg:w-[44%] lg:mr-7 sm-xs:w-[90%] bg-white border ${allValuesError.ExpertRightOfMission && allValues?.RightOfMissionChekbox.split(',').includes("1")?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5`}
                             />
+                            
 
 
                       </div>
+                      <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.ExpertRightOfMission && allValues?.RightOfMissionChekbox.split(',').includes("1")?"flex":"hidden"}`}>لطفا فیلد انتخاب شده را وارد نمایید !</p>
                       <div className="flex items-center lg:flex-col lg:items-start mt-3 w-[100%] lg:mb-6">
                         <div className="flex justify-start md:block">
                           <label style={{fontFamily:'Shabnam'}} className="w-[100%] text-base font-normal flex items-center ml-[37px] lg:mb-3 sm-xs:ml-0 ">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          onChange={changeHandler}
+                          onChange={changeHandlerCheckbox}
                           name="RightOfMissionChekbox"
                           value={"2"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
@@ -508,17 +544,18 @@ null
                             id="input-group-1"
                             onChange={changeHandler}
                             name="ManagerRightOfMission"
-                            class=" text-right h-[32px] w-[46%] xl:w-[28%] lg:w-[44%] lg:mr-7 sm-xs:w-[90%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            class={` text-right h-[32px] w-[46%] xl:w-[28%] lg:w-[44%] lg:mr-7 sm-xs:w-[90%] bg-white border ${allValuesError.ManagerRightOfMission && allValues?.RightOfMissionChekbox.split(',').includes("2")?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5 `}
                             />
 
 
                       </div>
+                      <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.ManagerRightOfMission && allValues?.RightOfMissionChekbox.split(',').includes("2")?"flex":"hidden"}`}>لطفا فیلد انتخاب شده را وارد نمایید !</p>
                       <div className="flex items-center lg:flex-col lg:items-start mt-3 w-[100%]">
                         <div className="flex justify-start">
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[14px] lg:mb-3 sm-xs:ml-0">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          onChange={changeHandler}
+                          onChange={changeHandlerCheckbox}
                           name="RightOfMissionChekbox"
                           value={"3"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
@@ -530,12 +567,12 @@ null
                             id="input-group-1"
                             onChange={changeHandler}
                             name="GeneralManagerRightOfMission"
-                            class="text-right h-[32px] w-[46%] xl:w-[28%] lg:w-[44%] lg:mr-7 sm-xs:w-[90%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            class={`text-right h-[32px] w-[46%] xl:w-[28%] lg:w-[44%] lg:mr-7 sm-xs:w-[90%] bg-white border ${allValuesError.GeneralManagerRightOfMission && allValues?.RightOfMissionChekbox.split(',').includes("3")?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5`}
                             />
 
 
                       </div>
-                        
+                      <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.GeneralManagerRightOfMission && allValues?.RightOfMissionChekbox.split(',').includes("3")?"flex":"hidden"}`}>لطفا فیلد انتخاب شده را وارد نمایید !</p>
                     </div>
                     <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.RightOfMissionChekbox?"flex":"hidden"}`}>لطفا حداقل یک مورد را انتخاب نمایید!</p>
                 </div>
@@ -547,7 +584,7 @@ null
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[46px] lg:mb-3 sm-xs:ml-0 ">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          onChange={changeHandler}
+                          onChange={changeHandlerCheckbox}
                           name="RightToEducationId"
                           value={"1"}
                           class="accent-mainColor w-4   h-4 border-2 border-mainColor outline-mainColor ml-4 "/>
@@ -558,19 +595,19 @@ null
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
-                            name="RightToEducationCost"
+                            name="RightToEducationApplicantCost"
                             
-                            class="text-right h-[32px] w-[16%] xl:w-[28%] lg:w-[44%] lg:mr-7 sm-xs:w-[90%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            class={`text-right h-[32px] w-[16%] xl:w-[28%] lg:w-[44%] lg:mr-7 sm-xs:w-[90%] bg-white border ${allValuesError.RightToEducationApplicantCost && allValues?.RightToEducationId.split(',').includes("1")?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5`}
                             />
-
-
                       </div>
+                      <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.RightToEducationApplicantCost && allValues?.RightToEducationId.split(',').includes("1")?"flex":"hidden"}`}>لطفا فیلد انتخاب شده را وارد نمایید !</p>
+
                       <div className="flex items-center lg:flex-col lg:items-start mt-3 w-[100%] lg:mb-6">
                         <div className="flex justify-start md:block">
                           <label style={{fontFamily:'Shabnam'}} className="w-[100%] text-base font-normal flex items-center ml-[7px] lg:mb-3 sm-xs:ml-0 ">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          onChange={changeHandler}
+                          onChange={changeHandlerCheckbox}
                           name="RightToEducationId"
                           value={"2"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
@@ -581,18 +618,17 @@ null
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
-                            name="RightToEducationCost"
-                            class=" text-right h-[32px] w-[16%] xl:w-[28%] lg:w-[44%] lg:mr-7 sm-xs:w-[90%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            name="RightToEducationInternalDeviceCost"
+                            class={` text-right h-[32px] w-[16%] xl:w-[28%] lg:w-[44%] lg:mr-7 sm-xs:w-[90%] bg-white border ${allValuesError.RightToEducationInternalDeviceCost && allValues?.RightToEducationId.split(',').includes("2")?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5`}
                             />
-
-
                       </div>
+                      <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.RightToEducationInternalDeviceCost && allValues?.RightToEducationId.split(',').includes("2")?"flex":"hidden"}`}>لطفا فیلد انتخاب شده را وارد نمایید !</p>
                       <div className="flex items-center lg:flex-col lg:items-start mt-3 w-[100%]">
                         <div className="flex justify-start">
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[58px] lg:mb-3 sm-xs:ml-0">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          onChange={changeHandler}
+                          onChange={changeHandlerCheckbox}
                           name="RightToEducationId"
                           value={"3"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
@@ -621,7 +657,7 @@ null
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[17px] sm-xs:mb-3 sm-xs:ml-0 ">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          onChange={changeHandler}
+                          onChange={changeHandlerCheckbox}
                           name="RightOfCommutingId"
                           value={"1"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
@@ -641,9 +677,9 @@ null
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[7px] sm-xs:mb-3 sm-xs:ml-0 ">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          onChange={changeHandler}
+                          onChange={changeHandlerCheckbox}
                           name="RightOfCommutingId"
-                          value={"1"}
+                          value={"2"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
                             بر عهده شخص می باشد . میزان هزینه :
                           </label>
@@ -663,9 +699,9 @@ null
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[69px] sm-xs:mb-3 sm-xs:ml-0 ">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          onChange={changeHandler}
+                          onChange={changeHandlerCheckbox}
                           name="RightOfCommutingId"
-                          value={"1"}
+                          value={"3"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
                              بر عهده طرف خارجی می باشد.
                           </label>
@@ -692,7 +728,7 @@ null
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[7px] lg-md:mb-3 sm-xs:ml-0 ">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          onChange={changeHandler}
+                          onChange={changeHandlerCheckbox}
                           name="VisaId"
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
                                 هزینه ویزا توسط دستگاه پرداخت می شود . هزینه اخذ ویزا:
@@ -713,7 +749,7 @@ null
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center sm-xs:ml-0 ">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          onChange={changeHandler}
+                          onChange={changeHandlerCheckbox}
                           name="VisaId"
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
                             هزینه ویزا ندارد.
@@ -735,7 +771,7 @@ null
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center sm-xs:ml-0 ">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          onChange={changeHandler}
+                          onChange={changeHandlerCheckbox}
                           name="TollAmountId"
                           value={"1"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
@@ -751,7 +787,7 @@ null
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[56px] sm-xs:mb-3 sm-xs:ml-0 ">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          onChange={changeHandler}
+                          onChange={changeHandlerCheckbox}
                           name="TollAmountId"
                           value={"2"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
@@ -773,7 +809,7 @@ null
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[7px] sm-xs:mb-3 sm-xs:ml-0 ">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          onChange={changeHandler}
+                          onChange={changeHandlerCheckbox}
                           name="TollAmountId"
                           value={"3"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>

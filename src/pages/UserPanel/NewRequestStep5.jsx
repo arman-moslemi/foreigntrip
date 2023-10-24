@@ -27,7 +27,7 @@ const NewRequestStep5 = () => {
                         </div>
 
                     </div>
-                    <div className="px-12 pb-12 md:p-1">
+                    <div className="px-12 lg-md:px-3 pb-12 md:p-1">
 
                         <NewRequestFormStep5/>
                     </div>
