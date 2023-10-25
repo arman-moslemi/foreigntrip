@@ -14,19 +14,44 @@ const TravelForm = () => {
   const [data, setData] = useState();
   const [emp, setEmp] = useState();
   const [achiv, setAchive] = useState();
+  const [licenceDate,setLicenseDate] = useState();
+  const [licenceNumber,setLicenseNumber] = useState();
 
   let navigate = useNavigate();
   const [allValues, setAllValues] = useState({
-    Phone: '',
-    Email: '',
-    PostalCode: '',
-    Address: '',
-    SubCategoryId: '',
-    Subset: '',
-    TypeOfEmploymentId: '',
-    PositionId: '',
+    licenceDate: '',
+    achiv: '',
+    licenceNumber: '',
+    EmailExternalDevice: '',
+    EmailInternalDevice: '',
+    InternalDevice: '',
+    ExternalDevice: '',
 
   });
+  const [allValuesError, setAllValuesError] = useState({
+    licenceDate: false,
+    achiv: false,
+    licenceNumber: false,
+    EmailExternalDevice: false,
+    EmailInternalDevice: false,
+    InternalDevice: false,
+    ExternalDevice: false,
+  });
+  const changeHandler = e => {
+    if(e.target)    {
+      if(e.target.value!=""){
+    
+        setAllValuesError({ ...allValuesError, [e.target.name]: false })
+      }
+      else{
+        setAllValuesError({ ...allValuesError, [e.target.name]: true })
+    
+      }
+      // setAllValuesError({ ...allValuesError, [""]: false })
+    
+      setAllValues({ ...allValues, [e.target.name]: e.target.value })
+    }
+      }
   useEffect(() => {
 
     auth();
@@ -70,11 +95,16 @@ const TravelForm = () => {
   }
   const insertRep = async () => {
     console.log("rep")
-    console.log(allValues)
     const cookies = new Cookies();
     const dataUser = await axiosReq("Report/InsertReport", {
       RequestId: id,
-      ReportAchievement: achiv,
+      ReportAchievement: allValues?.achiv,
+      LicenseDate:allValues?.licenceDate,
+      LicenseNumber:allValues?.licenceNumber,
+      EmailExternalDevice:allValues?.EmailExternalDevice,
+      EmailInternalDevice:allValues?.EmailInternalDevice,
+     InternalDevice:allValues?.InternalDevice,
+     ExternalDevice:allValues?.ExternalDevice,
 
     });
     console.log(dataUser)
@@ -129,8 +159,9 @@ const TravelForm = () => {
             <input style={{ fontFamily: 'Shabnam' }}
               type="text"
               id="input-group-1"
-              disabled={true}
-              value={data?.dateLetter}
+              onChange={changeHandler}
+              name="licenceDate"
+
               class="  text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
             />
           </div>
@@ -141,8 +172,9 @@ const TravelForm = () => {
             <input style={{ fontFamily: 'Shabnam' }}
               type="text"
               id="input-group-1"
-              disabled={true}
-              value={data?.approvedBy}
+              onChange={changeHandler}
+              name="licenceNumber"
+
               class="  text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
             />
           </div>
@@ -177,9 +209,10 @@ const TravelForm = () => {
           <div class="mt-2">
             <input style={{ fontFamily: 'Shabnam' }}
               type="text"
+              name="EmailInternalDevice"
+
               id="input-group-1"
-              disabled={true}
-              value={data?.internetAddressOfTheExecutiveDevice}
+              onChange={changeHandler}
               class="  text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
             />
           </div>
@@ -189,9 +222,10 @@ const TravelForm = () => {
           <div class="mt-2">
             <input style={{ fontFamily: 'Shabnam' }}
               type="text"
+              name="EmailExternalDevice"
+
               id="input-group-1"
-              disabled={true}
-              value={data?.internetAddressOfTheExecutiveDevice}
+              onChange={changeHandler}
               class="  text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
             />
           </div>
@@ -201,8 +235,9 @@ const TravelForm = () => {
           <div class="mt-2">
             <input style={{ fontFamily: 'Shabnam' }}
               type="text"
-              disabled={true}
-              value={data?.deviceName}
+              name="InternalDevice"
+
+              onChange={changeHandler}
               id="input-group-1"
               class="  text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
             />
@@ -213,8 +248,8 @@ const TravelForm = () => {
           <div class="mt-2">
             <input style={{ fontFamily: 'Shabnam' }}
               type="text"
-              disabled={true}
-              value={data?.executiveDeviceName}
+              name="ExternalDevice"
+              onChange={changeHandler}
               id="input-group-1"
               class="  text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
             />
@@ -227,7 +262,7 @@ const TravelForm = () => {
               type="text"
               id="input-group-1"
               disabled={true}
-              value={data?.destinationCountry}
+              value={data?.city?.country?.countryName}
               class="  text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
             />
           </div>
@@ -237,9 +272,10 @@ const TravelForm = () => {
           <div class="mt-2">
             <input style={{ fontFamily: 'Shabnam' }}
               type="text"
+              name="achiv"
               id="input-group-1"
               disabled={true}
-              value={data?.destinationCity}
+              value={data?.city?.cityName}
               class="  text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
             />
           </div>
@@ -252,7 +288,8 @@ const TravelForm = () => {
           <textarea style={{ fontFamily: 'Shabnam' }}
             rows={4}
             type="text"
-            onChange={(e) => setAchive(e.target.value)}
+            name="achiv"
+            onChange={changeHandler}
             id="input-group-1"
             class="pr-4   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full  p-2.5  "
           ></textarea>

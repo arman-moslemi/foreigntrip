@@ -112,7 +112,8 @@ const ExpertReportsView = () => {
                 شماره و تاریخ درخواست :
                 <span>   </span>
                 <span style={{ fontFamily: 'Shabnam' }} className="text-darkGray 2xs:mt-1 text-sm font-medium">
-                 {data?.request?.dateLetter}
+                 {data?.licenseDate
+}
                 </span>
               </p>
             </div>
@@ -121,7 +122,7 @@ const ExpertReportsView = () => {
                 شماره و تاریخ مجوز :
                 <span>   </span>
                 <span style={{ fontFamily: 'Shabnam' }} className="text-darkGray 2xs:mt-1 text-sm font-medium">
-                {data?.request?.data?.approvedBy} 
+                {data?.licenseNumber} 
                 </span>
               </p>
             </div>
@@ -139,7 +140,7 @@ const ExpertReportsView = () => {
                 آدرس الکترونیکی دستگاه مقصد :
                 <span>   </span>
                 <span style={{ fontFamily: 'Shabnam' }} className="text-darkGray 2xs:mt-1 text-sm font-medium">
-             {data?.request?.internetAddressOfTheExecutiveDevice}
+             {data?.emailExternalDevice}
                 </span>
               </p>
             </div>
@@ -148,7 +149,7 @@ const ExpertReportsView = () => {
                 نام دستگاه داخلی :
                 <span>   </span>
                 <span style={{ fontFamily: 'Shabnam' }} className="text-darkGray 2xs:mt-1 text-sm font-medium">
-                {data?.request?.ExecutiveDeviceName}
+                {data?.internalDevice}
                 </span>
               </p>
             </div>
@@ -157,7 +158,7 @@ const ExpertReportsView = () => {
                 نام دستگاه مقصد :
                 <span>   </span>
                 <span style={{ fontFamily: 'Shabnam' }} className="text-darkGray 2xs:mt-1 text-sm font-medium">
-                {data.request?.executiveDeviceName}
+                {data?.externalDevice}
                 </span>
               </p>
             </div>
@@ -167,7 +168,7 @@ const ExpertReportsView = () => {
                 کشور مقصد :
                 <span>   </span>
                 <span style={{ fontFamily: 'Shabnam' }} className="text-darkGray 2xs:mt-1 text-sm font-medium">
-                  {data?.request?.destinationCountry}
+                  {data?.request?.city?.country?.countryName}
                 </span>
               </p>
             </div>
@@ -176,7 +177,7 @@ const ExpertReportsView = () => {
                 شهر مقصد :
                 <span>   </span>
                 <span style={{ fontFamily: 'Shabnam' }} className="text-darkGray 2xs:mt-1 text-sm font-medium">
-                  {data?.request?.destinationCity}
+                  {data?.request?.city?.cityName}
                 </span>
               </p>
             </div>
