@@ -31,12 +31,15 @@ const NewRequestFormStep3 = () => {
             RightToEducationApplicantCost : "",
             RightToEducationInternalDeviceCost : "",
             RightToEducationId :  "",
-            RightOfCommutingCost :  "",
             RightOfCommutingId :  "",
+            RightOfCommutingPersonCost : "",
+            RightOfCommutingExternalCost : "",
+            RightOfCommutingInternalDeviceCost : "",
             VisaId : "",
             VisaCost :  "",
-            TollAmountCost :  "",
             TollAmountId:  "",
+            TollAmountPersonCost:  "",
+            TollAmountDeviceCost:  "",
             PaymentFromBank :  "",
         });
         const [allValuesError, setAllValuesError] = useState({
@@ -58,12 +61,15 @@ const NewRequestFormStep3 = () => {
           RightToEducationApplicantCost : false,
           RightToEducationInternalDeviceCost : false,
           RightToEducationId :  false,
-          RightOfCommutingCost :  false,
           RightOfCommutingId :  false,
+          RightOfCommutingPersonCost : false,
+          RightOfCommutingExternalCost : false,
+          RightOfCommutingInternalDeviceCost : false,
           VisaId : false,
           VisaCost :  false,
-          TollAmountCost :  false,
           TollAmountId:  false,
+          TollAmountPersonCost:  false,
+          TollAmountDeviceCost:  false,
           PaymentFromBank :  false,
       });
         let navigate = useNavigate();
@@ -204,12 +210,15 @@ if(dd?.length==0){
             RightToEducationApplicantCost : allValues?.RightToEducationApplicantCost,
             RightToEducationInternalDeviceCost : allValues?.RightToEducationInternalDeviceCost,
             RightToEducationId : allValues?.RightToEducationId,
-            RightOfCommutingCost :  allValues?.RightOfCommutingCost,
             RightOfCommutingId :  allValues?.RightOfCommutingId,
+            RightOfCommutingPersonCost : allValues?.RightOfCommutingPersonCost,
+            RightOfCommutingExternalCost : allValues?.RightOfCommutingExternalCost,
+            RightOfCommutingInternalDeviceCost : allValues?.RightOfCommutingInternalDeviceCost,
             VisaId : allValues?.VisaId,
             VisaCost :  allValues?.VisaCost,
-            TollAmountCost :  allValues?.TollAmountCost,
             TollAmountId:  allValues?.TollAmountId,
+            TollAmountPersonCost:  allValues?.TollAmountPersonCost,
+            TollAmountDeviceCost:  allValues?.TollAmountDeviceCost,
             PaymentFromBank :  allValues?.PaymentFromBank,
           });
           console.log(dataUser)
@@ -666,12 +675,13 @@ null
                         </div>
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
+                            name="RightOfCommutingInternalDeviceCost"
+                            onChange={changeHandler}
                             id="input-group-1"
-                            class="text-right h-[32px] w-[36%] sm-xs:w-[90%] sm-xs:mr-7 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            class={`text-right h-[32px] w-[36%] sm-xs:w-[90%] sm-xs:mr-7 bg-white border ${allValuesError.RightOfCommutingInternalDeviceCost && allValues?.RightOfCommutingId.split(',').includes("1")?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5`}
                             />
-
-
                       </div>
+                      <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.RightOfCommutingInternalDeviceCost && allValues?.RightOfCommutingId.split(',').includes("1")?"flex":"hidden"}`}>لطفا فیلد انتخاب شده را وارد نمایید !</p>
                       <div className="flex items-center sm-xs:flex-col sm-xs:items-start mt-3 w-[100%] sm-xs:mb-6">
                         <div className="flex justify-start">
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[7px] sm-xs:mb-3 sm-xs:ml-0 ">
@@ -688,12 +698,11 @@ null
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
-                            name="RightOfCommutingCost"
-                            class="text-right h-[32px] w-[36%] sm-xs:w-[90%] sm-xs:mr-7 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            name="RightOfCommutingPersonCost"
+                            class={`text-right h-[32px] w-[36%] sm-xs:w-[90%] sm-xs:mr-7 bg-white border ${allValuesError.RightOfCommutingPersonCost && allValues?.RightOfCommutingId.split(',').includes("2")?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5`}
                             />
-
-
                       </div>
+                      <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.RightOfCommutingPersonCost && allValues?.RightOfCommutingId.split(',').includes("2")?"flex":"hidden"}`}>لطفا فیلد انتخاب شده را وارد نمایید !</p>
                       <div className="flex items-center sm-xs:flex-col sm-xs:items-start mt-3 w-[100%]">
                         <div className="flex justify-start">
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[69px] sm-xs:mb-3 sm-xs:ml-0 ">
@@ -710,13 +719,11 @@ null
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
-                            name="RightOfCommutingCost"
-                            class="text-right h-[32px] w-[36%] sm-xs:w-[90%] sm-xs:mr-7 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            name="RightOfCommutingExternalCost"
+                            class={`text-right h-[32px] w-[36%] sm-xs:w-[90%] sm-xs:mr-7 bg-white border ${allValuesError.RightOfCommutingExternalCost && allValues?.RightOfCommutingId.split(',').includes("3")?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5`}
                             />
-
-
                       </div>
-                        
+                      <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.RightOfCommutingExternalCost && allValues?.RightOfCommutingId.split(',').includes("3")?"flex":"hidden"}`}>لطفا فیلد انتخاب شده را وارد نمایید !</p> 
                     </div>
                     <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.RightOfCommutingId?"flex":"hidden"}`}>لطفا حداقل یک مورد را انتخاب نمایید!</p>
                 </div>
@@ -730,6 +737,7 @@ null
                           type="checkbox"
                           onChange={changeHandlerCheckbox}
                           name="VisaId"
+                          value={1}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
                                 هزینه ویزا توسط دستگاه پرداخت می شود . هزینه اخذ ویزا:
                           </label>
@@ -739,11 +747,10 @@ null
                             id="input-group-1"
                             onChange={changeHandler}
                             name="VisaCost"
-                            class="text-right h-[32px] w-[22%] lg-md:w-[44%] lg-md:mr-7 sm-xs:w-[90%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            class={`text-right h-[32px] w-[22%] lg-md:w-[44%] lg-md:mr-7 sm-xs:w-[90%] bg-white border ${allValuesError.VisaCost && allValues?.VisaId.split(',').includes("1")?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5`}
                             />
-
-
                       </div>
+                      <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.VisaCost && allValues?.VisaId.split(',').includes("1")?"flex":"hidden"}`}>لطفا فیلد انتخاب شده را وارد نمایید !</p> 
                       <div className="flex items-center mt-3 w-[100%]">
                         <div className="flex justify-start">
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center sm-xs:ml-0 ">
@@ -751,6 +758,7 @@ null
                           type="checkbox"
                           onChange={changeHandlerCheckbox}
                           name="VisaId"
+                          value={2}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
                             هزینه ویزا ندارد.
                           </label>
@@ -798,12 +806,11 @@ null
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
-                            name="TollAmountCost"
-                            class="text-right h-[32px] w-[16%] xl:w-[32%] sm-xs:w-[90%] sm-xs:mr-7 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            name="TollAmountPersonCost"
+                            class={`text-right h-[32px] w-[16%] xl:w-[32%] sm-xs:w-[90%] sm-xs:mr-7 bg-white border ${allValuesError.TollAmountPersonCost && allValues?.TollAmountId.split(',').includes("2")?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5`}
                             />
-
-
                       </div>
+                      <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.TollAmountPersonCost && allValues?.TollAmountId.split(',').includes("2")?"flex":"hidden"}`}>لطفا فیلد انتخاب شده را وارد نمایید !</p> 
                       <div className="flex items-center sm-xs:flex-col sm-xs:items-start mt-3 w-[100%]">
                         <div className="flex justify-start">
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[7px] sm-xs:mb-3 sm-xs:ml-0 ">
@@ -820,13 +827,11 @@ null
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
-                            name="TollAmountCost"
-                            class="text-right h-[32px] w-[16%] xl:w-[32%] sm-xs:w-[90%] sm-xs:mr-7 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            name="TollAmountDeviceCost"
+                            class={`text-right h-[32px] w-[16%] xl:w-[32%] sm-xs:w-[90%] sm-xs:mr-7 bg-white border ${allValuesError.TollAmountDeviceCost && allValues?.TollAmountId.split(',').includes("3")?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5`}
                             />
-
-
                       </div>
-                        
+                      <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.TollAmountDeviceCost && allValues?.TollAmountId.split(',').includes("3")?"flex":"hidden"}`}>لطفا فیلد انتخاب شده را وارد نمایید !</p> 
                     </div>
                     <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.TollAmountId?"flex":"hidden"}`}>لطفا حداقل یک مورد را انتخاب نمایید!</p>
                 </div>
