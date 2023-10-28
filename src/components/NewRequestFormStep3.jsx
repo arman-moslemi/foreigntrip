@@ -24,16 +24,22 @@ const NewRequestFormStep3 = () => {
             TicketCost:  "",
             TheCostOfTicket :  "",
             RightOfMissionId :  "",
+            RightOfMissionChekbox : "",
             ManagerRightOfMission :  "",
             GeneralManagerRightOfMission :  "",
             ExpertRightOfMission:  "",
-            RightToEducationCost :  "",
+            RightToEducationApplicantCost : "",
+            RightToEducationInternalDeviceCost : "",
             RightToEducationId :  "",
-            RightOfCommutingCost :  "",
             RightOfCommutingId :  "",
+            RightOfCommutingPersonCost : "",
+            RightOfCommutingExternalCost : "",
+            RightOfCommutingInternalDeviceCost : "",
+            VisaId : "",
             VisaCost :  "",
-            TollAmountCost :  "",
             TollAmountId:  "",
+            TollAmountPersonCost:  "",
+            TollAmountDeviceCost:  "",
             PaymentFromBank :  "",
         });
         const [allValuesError, setAllValuesError] = useState({
@@ -48,16 +54,22 @@ const NewRequestFormStep3 = () => {
           TicketCost:  false,
           TheCostOfTicket :  false,
           RightOfMissionId :  false,
+          RightOfMissionChekbox : false,
           ManagerRightOfMission :  false,
           GeneralManagerRightOfMission :  false,
           ExpertRightOfMission:  false,
-          RightToEducationCost :  false,
+          RightToEducationApplicantCost : false,
+          RightToEducationInternalDeviceCost : false,
           RightToEducationId :  false,
-          RightOfCommutingCost :  false,
           RightOfCommutingId :  false,
+          RightOfCommutingPersonCost : false,
+          RightOfCommutingExternalCost : false,
+          RightOfCommutingInternalDeviceCost : false,
+          VisaId : false,
           VisaCost :  false,
-          TollAmountCost :  false,
           TollAmountId:  false,
+          TollAmountPersonCost:  false,
+          TollAmountDeviceCost:  false,
           PaymentFromBank :  false,
       });
         let navigate = useNavigate();
@@ -97,6 +109,52 @@ const NewRequestFormStep3 = () => {
           }
   
       }
+      const changeHandlerCheckbox = e => {
+        if (e.target) {
+          
+var ss=allValues?.[e.target.name];
+console.log(11)
+console.log(ss)
+if(e.target.checked){
+  setAllValuesError({ ...allValuesError, [e.target.name]: false })
+
+  setAllValues({...allValues,[e.target.name]:ss?ss+","+e.target.value:e.target.value})        
+}
+else{
+  var dd=[];
+  dd=ss?.split(',');
+  dd?.map((item,index)=>{
+if(item==e.target.value)
+{
+  dd.splice(index,1)
+}
+
+  })
+  var ff="";
+  console.log(55)
+  console.log(dd)
+dd?.map((item2,index2)=>{
+  console.log(item2)
+  if(index2>0)
+  {
+
+    ff+=","+item2
+  }
+  else{
+    ff+=item2;
+  }
+ 
+})
+  setAllValues({...allValues,[e.target.name]:ff})     
+if(dd?.length==0){
+  setAllValuesError({ ...allValuesError, [e.target.name]: true })
+
+}
+}
+
+}
+
+    }
       const blurHandler = e => {
           if(e.target)    {
             if(e.target.value==""){
@@ -145,16 +203,22 @@ const NewRequestFormStep3 = () => {
             TicketCost:  allValues?.TicketCost,
             TheCostOfTicket :  allValues?.TheCostOfTicket,
             RightOfMissionId :  allValues?.RightOfMissionId,
+            RightOfMissionChekbox : allValues?.RightOfMissionChekbox,
             ExpertRightOfMission:  allValues?.ExpertRightOfMission,
             ManagerRightOfMission:  allValues?.ManagerRightOfMission,
             GeneralManagerRightOfMission:allValues?.GeneralManagerRightOfMission,
-            RightToEducationCost :  allValues?.RightToEducationCost,
+            RightToEducationApplicantCost : allValues?.RightToEducationApplicantCost,
+            RightToEducationInternalDeviceCost : allValues?.RightToEducationInternalDeviceCost,
             RightToEducationId : allValues?.RightToEducationId,
-            RightOfCommutingCost :  allValues?.RightOfCommutingCost,
             RightOfCommutingId :  allValues?.RightOfCommutingId,
+            RightOfCommutingPersonCost : allValues?.RightOfCommutingPersonCost,
+            RightOfCommutingExternalCost : allValues?.RightOfCommutingExternalCost,
+            RightOfCommutingInternalDeviceCost : allValues?.RightOfCommutingInternalDeviceCost,
+            VisaId : allValues?.VisaId,
             VisaCost :  allValues?.VisaCost,
-            TollAmountCost :  allValues?.TollAmountCost,
             TollAmountId:  allValues?.TollAmountId,
+            TollAmountPersonCost:  allValues?.TollAmountPersonCost,
+            TollAmountDeviceCost:  allValues?.TollAmountDeviceCost,
             PaymentFromBank :  allValues?.PaymentFromBank,
           });
           console.log(dataUser)
@@ -186,7 +250,7 @@ const NewRequestFormStep3 = () => {
                     <input style={{fontFamily:'Shabnam'}}
                         type="checkbox"
                         value={"1"}          
-                        onChange={changeHandler}
+                        onChange={changeHandlerCheckbox}
                         name="TypeAccommodationId"
                         class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1.5"/>
                       هتل 3 ستاره
@@ -197,7 +261,7 @@ const NewRequestFormStep3 = () => {
                     <input style={{fontFamily:'Shabnam'}}
                         type="checkbox"
                         value={"2"}          
-                        onChange={changeHandler}
+                        onChange={changeHandlerCheckbox}
                         name="TypeAccommodationId"
                         class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1.5"/>
                       هتل 4 ستاره
@@ -208,7 +272,7 @@ const NewRequestFormStep3 = () => {
                     <input style={{fontFamily:'Shabnam'}}
                         type="checkbox"
                         value={"3"}          
-                        onChange={changeHandler}
+                        onChange={changeHandlerCheckbox}
                         name="TypeAccommodationId"
                         class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1.5"/>
                       هتل 5 ستاره 
@@ -219,7 +283,7 @@ const NewRequestFormStep3 = () => {
                     <input style={{fontFamily:'Shabnam'}}
                         type="checkbox"
                         value={"4"}          
-                        onChange={changeHandler}
+                        onChange={changeHandlerCheckbox}
                         name="TypeAccommodationId"
                         class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1.5"/>
                       مکان متعلق به دستگاه خارجی
@@ -230,7 +294,7 @@ const NewRequestFormStep3 = () => {
                     <input style={{fontFamily:'Shabnam'}}
                         type="checkbox"
                         value={"5"}          
-                        onChange={changeHandler}
+                        onChange={changeHandlerCheckbox}
                         name="TypeAccommodationId"
                         class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1.5"/>
                       مکان متعلق به دستگاه داخلی
@@ -239,7 +303,7 @@ const NewRequestFormStep3 = () => {
                   
 
                 </div>
-                <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] w-[100%] tracking-wide mb-4 text-xs font-[10px] font-IRsans ${allValuesError.TypeAccommodationId?"flex":"hidden"}`}>لطفا یک مورد را انتخاب نمایید!</p>
+                <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] w-[100%] tracking-wide mb-4 text-xs font-[10px] font-IRsans ${allValuesError.TypeAccommodationId?"flex":"hidden"}`}>لطفا حداقل یک مورد را انتخاب نمایید!</p>
                 <div className="flex flex-col w-[30%] 2xl:w-[49%] sm-xs:w-[100%] sm-xs:mx-0  2xl:mr-0 2xl:ml-[1%] ml-[2.5%] mb-10 ">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">هزینه اقامت بر عهده</span>
                     <div class="mt-2">
@@ -331,7 +395,7 @@ null
                     <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
                     <input style={{fontFamily:'Shabnam'}}
                         type="checkbox"
-                        onChange={changeHandler}
+                        onChange={changeHandlerCheckbox}
                         name="TickerTypeId"
                         value={"1"}
                         class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1.5"/>
@@ -342,7 +406,7 @@ null
                     <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center">
                     <input style={{fontFamily:'Shabnam'}}
                         type="checkbox"
-                        onChange={changeHandler}
+                        onChange={changeHandlerCheckbox}
                         name="TickerTypeId"
                         value={"2"}
                         class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-1.5"/>
@@ -350,7 +414,7 @@ null
                     </label>
                   </div>
                     </div>
-                    <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-1 text-xs font-[10px] font-IRsans ${allValuesError.TickerTypeId?"flex":"hidden"}`}>لطفا یک مورد را انتخاب نمایید!</p>
+                    <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-1 text-xs font-[10px] font-IRsans ${allValuesError.TickerTypeId?"flex":"hidden"}`}>لطفا حداقل یک مورد را انتخاب نمایید!</p>
                 </div>
                 <div className="flex flex-col w-[30%] 2xl:w-[49%] lg-md:w-[100%] lg-md:mx-0 2xl:ml-0 2xl:mr-[1%]  mr-[2.5%] ml-[35%] mb-12">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">شرکت هواپیمایی</span>
@@ -420,28 +484,29 @@ null
                     <div class="mt-5 flex-col">
                         <div className="flex items-center">
                           <input                          
-                             onChange={changeHandler}
+                             onChange={changeHandlerCheckbox}
                             name="RightOfMissionId" value={"1"}className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-3" type="checkbox"  id="InWith" />
                           <label style={{fontFamily: 'Shabnam'}} className="" For="a1">با دریافت حق ماموریت از دستگاه داخلی</label>
                         </div>
                         <div className="flex items-center mt-4">
-                          <input                   value={"2"}          onChange={changeHandler}
+                          <input                   value={"2"}          onChange={changeHandlerCheckbox}
                             name="RightOfMissionId"
                             className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-3" type="checkbox"  id="InWithout" />
                           <label style={{fontFamily: 'Shabnam'}} className="" For="a1">بدون دریافت حق ماموریت از دستگاه داخلی</label>
                         </div>
                         <div className="flex items-center mt-4">
-                          <input           value={"3"}                  onChange={changeHandler}
+                          <input           value={"3"}                  onChange={changeHandlerCheckbox}
                             name="RightOfMissionId"className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-3" type="checkbox"  id="OutWith" />
                           <label style={{fontFamily: 'Shabnam'}} className="" For="a1">با دریافت حق ماموریت از دستگاه خارجی</label>
                         </div>
                         <div className="flex items-center mt-4">
-                          <input                   value={"4"}          onChange={changeHandler}
+                          <input                   value={"4"}          onChange={changeHandlerCheckbox}
                             name="RightOfMissionId"className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-3" type="checkbox" id="OutWithout" />
                           <label style={{fontFamily: 'Shabnam'}} className="" For="a1">بدون دریافت حق ماموریت از دستگاه خارجی</label>
                         </div>
                           
                     </div>
+                    <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.RightOfMissionId?"flex":"hidden"}`}>لطفا حداقل یک مورد را انتخاب نمایید!</p>
                 </div>
                 <div className="flex flex-col w-[45%] 2xl:w-[49%] 2xl:ml-0 2xl:mr-[1%] xl:w-[100%] xl:mx-0 mr-[2.5%] ml-[15%] mb-16">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">میزان حق ماموریت</span>
@@ -451,8 +516,8 @@ null
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[7px] lg:mb-3 sm-xs:ml-0 ">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          onChange={changeHandler}
-                          name="RightToEducationId"
+                          onChange={changeHandlerCheckbox}
+                          name="RightOfMissionChekbox"
                           value={"1"}
                           class="accent-mainColor w-4   h-4 border-2 border-mainColor outline-mainColor ml-4 "/>
                            کارشناس :
@@ -462,20 +527,22 @@ null
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
-                            name="RightToEducationCost"
+                            name="ExpertRightOfMission"
                             
-                            class="text-right h-[32px] w-[46%] xl:w-[28%] lg:w-[44%] lg:mr-7 sm-xs:w-[90%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            class={`text-right h-[32px] w-[46%] xl:w-[28%] lg:w-[44%] lg:mr-7 sm-xs:w-[90%] bg-white border ${allValuesError.ExpertRightOfMission && allValues?.RightOfMissionChekbox.split(',').includes("1")?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5`}
                             />
+                            
 
 
                       </div>
+                      <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.ExpertRightOfMission && allValues?.RightOfMissionChekbox.split(',').includes("1")?"flex":"hidden"}`}>لطفا فیلد انتخاب شده را وارد نمایید !</p>
                       <div className="flex items-center lg:flex-col lg:items-start mt-3 w-[100%] lg:mb-6">
                         <div className="flex justify-start md:block">
                           <label style={{fontFamily:'Shabnam'}} className="w-[100%] text-base font-normal flex items-center ml-[37px] lg:mb-3 sm-xs:ml-0 ">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          onChange={changeHandler}
-                          name="RightToEducationId"
+                          onChange={changeHandlerCheckbox}
+                          name="RightOfMissionChekbox"
                           value={"2"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
                            مدیر :
@@ -485,19 +552,20 @@ null
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
-                            name="RightToEducationCost"
-                            class=" text-right h-[32px] w-[46%] xl:w-[28%] lg:w-[44%] lg:mr-7 sm-xs:w-[90%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            name="ManagerRightOfMission"
+                            class={` text-right h-[32px] w-[46%] xl:w-[28%] lg:w-[44%] lg:mr-7 sm-xs:w-[90%] bg-white border ${allValuesError.ManagerRightOfMission && allValues?.RightOfMissionChekbox.split(',').includes("2")?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5 `}
                             />
 
 
                       </div>
+                      <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.ManagerRightOfMission && allValues?.RightOfMissionChekbox.split(',').includes("2")?"flex":"hidden"}`}>لطفا فیلد انتخاب شده را وارد نمایید !</p>
                       <div className="flex items-center lg:flex-col lg:items-start mt-3 w-[100%]">
                         <div className="flex justify-start">
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[14px] lg:mb-3 sm-xs:ml-0">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          onChange={changeHandler}
-                          name="RightToEducationId"
+                          onChange={changeHandlerCheckbox}
+                          name="RightOfMissionChekbox"
                           value={"3"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
                             مدیر کل :
@@ -507,14 +575,15 @@ null
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
-                            name="RightToEducationCost"
-                            class="text-right h-[32px] w-[46%] xl:w-[28%] lg:w-[44%] lg:mr-7 sm-xs:w-[90%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            name="GeneralManagerRightOfMission"
+                            class={`text-right h-[32px] w-[46%] xl:w-[28%] lg:w-[44%] lg:mr-7 sm-xs:w-[90%] bg-white border ${allValuesError.GeneralManagerRightOfMission && allValues?.RightOfMissionChekbox.split(',').includes("3")?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5`}
                             />
 
 
                       </div>
-                        
+                      <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.GeneralManagerRightOfMission && allValues?.RightOfMissionChekbox.split(',').includes("3")?"flex":"hidden"}`}>لطفا فیلد انتخاب شده را وارد نمایید !</p>
                     </div>
+                    <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.RightOfMissionChekbox?"flex":"hidden"}`}>لطفا حداقل یک مورد را انتخاب نمایید!</p>
                 </div>
                 <div className="flex flex-col w-[100%]  mb-11 md:block">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">حق آموزش</span>
@@ -524,7 +593,7 @@ null
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[46px] lg:mb-3 sm-xs:ml-0 ">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          onChange={changeHandler}
+                          onChange={changeHandlerCheckbox}
                           name="RightToEducationId"
                           value={"1"}
                           class="accent-mainColor w-4   h-4 border-2 border-mainColor outline-mainColor ml-4 "/>
@@ -535,19 +604,19 @@ null
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
-                            name="RightToEducationCost"
+                            name="RightToEducationApplicantCost"
                             
-                            class="text-right h-[32px] w-[16%] xl:w-[28%] lg:w-[44%] lg:mr-7 sm-xs:w-[90%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            class={`text-right h-[32px] w-[16%] xl:w-[28%] lg:w-[44%] lg:mr-7 sm-xs:w-[90%] bg-white border ${allValuesError.RightToEducationApplicantCost && allValues?.RightToEducationId.split(',').includes("1")?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5`}
                             />
-
-
                       </div>
+                      <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.RightToEducationApplicantCost && allValues?.RightToEducationId.split(',').includes("1")?"flex":"hidden"}`}>لطفا فیلد انتخاب شده را وارد نمایید !</p>
+
                       <div className="flex items-center lg:flex-col lg:items-start mt-3 w-[100%] lg:mb-6">
                         <div className="flex justify-start md:block">
                           <label style={{fontFamily:'Shabnam'}} className="w-[100%] text-base font-normal flex items-center ml-[7px] lg:mb-3 sm-xs:ml-0 ">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          onChange={changeHandler}
+                          onChange={changeHandlerCheckbox}
                           name="RightToEducationId"
                           value={"2"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
@@ -558,36 +627,36 @@ null
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
-                            name="RightToEducationCost"
-                            class=" text-right h-[32px] w-[16%] xl:w-[28%] lg:w-[44%] lg:mr-7 sm-xs:w-[90%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            name="RightToEducationInternalDeviceCost"
+                            class={` text-right h-[32px] w-[16%] xl:w-[28%] lg:w-[44%] lg:mr-7 sm-xs:w-[90%] bg-white border ${allValuesError.RightToEducationInternalDeviceCost && allValues?.RightToEducationId.split(',').includes("2")?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5`}
                             />
-
-
                       </div>
+                      <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.RightToEducationInternalDeviceCost && allValues?.RightToEducationId.split(',').includes("2")?"flex":"hidden"}`}>لطفا فیلد انتخاب شده را وارد نمایید !</p>
                       <div className="flex items-center lg:flex-col lg:items-start mt-3 w-[100%]">
                         <div className="flex justify-start">
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[58px] lg:mb-3 sm-xs:ml-0">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          onChange={changeHandler}
+                          onChange={changeHandlerCheckbox}
                           name="RightToEducationId"
                           value={"3"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
                              با توجه به پرداخت حق عضویت بین المللی هزینه ای ندارد.
                           </label>
                         </div>
-                        <input style={{fontFamily: 'Shabnam'}}
+                        {/* <input style={{fontFamily: 'Shabnam'}}
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
                             name="RightToEducationCost"
                             class="text-right h-[32px] w-[16%] xl:w-[28%] lg:w-[44%] lg:mr-7 sm-xs:w-[90%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
-                            />
+                            /> */}
 
 
                       </div>
                         
                     </div>
+                    <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.RightToEducationId?"flex":"hidden"}`}>لطفا حداقل یک مورد را انتخاب نمایید!</p>
                 </div>
                 <div className="flex flex-col w-[100%] md:block 3xl:w-[100%]  mb-11">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">حق ایاب و ذهاب </span>
@@ -597,7 +666,7 @@ null
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[17px] sm-xs:mb-3 sm-xs:ml-0 ">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          onChange={changeHandler}
+                          onChange={changeHandlerCheckbox}
                           name="RightOfCommutingId"
                           value={"1"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
@@ -606,20 +675,21 @@ null
                         </div>
                         <input style={{fontFamily: 'Shabnam'}}
                             type="text"
+                            name="RightOfCommutingInternalDeviceCost"
+                            onChange={changeHandler}
                             id="input-group-1"
-                            class="text-right h-[32px] w-[36%] sm-xs:w-[90%] sm-xs:mr-7 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            class={`text-right h-[32px] w-[36%] sm-xs:w-[90%] sm-xs:mr-7 bg-white border ${allValuesError.RightOfCommutingInternalDeviceCost && allValues?.RightOfCommutingId.split(',').includes("1")?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5`}
                             />
-
-
                       </div>
+                      <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.RightOfCommutingInternalDeviceCost && allValues?.RightOfCommutingId.split(',').includes("1")?"flex":"hidden"}`}>لطفا فیلد انتخاب شده را وارد نمایید !</p>
                       <div className="flex items-center sm-xs:flex-col sm-xs:items-start mt-3 w-[100%] sm-xs:mb-6">
                         <div className="flex justify-start">
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[7px] sm-xs:mb-3 sm-xs:ml-0 ">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          onChange={changeHandler}
+                          onChange={changeHandlerCheckbox}
                           name="RightOfCommutingId"
-                          value={"1"}
+                          value={"2"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
                             بر عهده شخص می باشد . میزان هزینه :
                           </label>
@@ -628,20 +698,19 @@ null
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
-                            name="RightOfCommutingCost"
-                            class="text-right h-[32px] w-[36%] sm-xs:w-[90%] sm-xs:mr-7 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            name="RightOfCommutingPersonCost"
+                            class={`text-right h-[32px] w-[36%] sm-xs:w-[90%] sm-xs:mr-7 bg-white border ${allValuesError.RightOfCommutingPersonCost && allValues?.RightOfCommutingId.split(',').includes("2")?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5`}
                             />
-
-
                       </div>
+                      <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.RightOfCommutingPersonCost && allValues?.RightOfCommutingId.split(',').includes("2")?"flex":"hidden"}`}>لطفا فیلد انتخاب شده را وارد نمایید !</p>
                       <div className="flex items-center sm-xs:flex-col sm-xs:items-start mt-3 w-[100%]">
                         <div className="flex justify-start">
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[69px] sm-xs:mb-3 sm-xs:ml-0 ">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          onChange={changeHandler}
+                          onChange={changeHandlerCheckbox}
                           name="RightOfCommutingId"
-                          value={"1"}
+                          value={"3"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
                              بر عهده طرف خارجی می باشد.
                           </label>
@@ -650,14 +719,13 @@ null
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
-                            name="RightOfCommutingCost"
-                            class="text-right h-[32px] w-[36%] sm-xs:w-[90%] sm-xs:mr-7 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            name="RightOfCommutingExternalCost"
+                            class={`text-right h-[32px] w-[36%] sm-xs:w-[90%] sm-xs:mr-7 bg-white border ${allValuesError.RightOfCommutingExternalCost && allValues?.RightOfCommutingId.split(',').includes("3")?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5`}
                             />
-
-
                       </div>
-                        
+                      <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.RightOfCommutingExternalCost && allValues?.RightOfCommutingId.split(',').includes("3")?"flex":"hidden"}`}>لطفا فیلد انتخاب شده را وارد نمایید !</p> 
                     </div>
+                    <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.RightOfCommutingId?"flex":"hidden"}`}>لطفا حداقل یک مورد را انتخاب نمایید!</p>
                 </div>
                 <div className="flex flex-col w-[100%] mx-0 mb-11">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">ویزا</span>
@@ -667,6 +735,9 @@ null
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[7px] lg-md:mb-3 sm-xs:ml-0 ">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
+                          onChange={changeHandlerCheckbox}
+                          name="VisaId"
+                          value={1}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
                                 هزینه ویزا توسط دستگاه پرداخت می شود . هزینه اخذ ویزا:
                           </label>
@@ -676,18 +747,18 @@ null
                             id="input-group-1"
                             onChange={changeHandler}
                             name="VisaCost"
-                            class="text-right h-[32px] w-[22%] lg-md:w-[44%] lg-md:mr-7 sm-xs:w-[90%] bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            class={`text-right h-[32px] w-[22%] lg-md:w-[44%] lg-md:mr-7 sm-xs:w-[90%] bg-white border ${allValuesError.VisaCost && allValues?.VisaId.split(',').includes("1")?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5`}
                             />
-
-
                       </div>
+                      <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.VisaCost && allValues?.VisaId.split(',').includes("1")?"flex":"hidden"}`}>لطفا فیلد انتخاب شده را وارد نمایید !</p> 
                       <div className="flex items-center mt-3 w-[100%]">
                         <div className="flex justify-start">
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center sm-xs:ml-0 ">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          onChange={changeHandler}
-                          name="RightOfCommutingCost"
+                          onChange={changeHandlerCheckbox}
+                          name="VisaId"
+                          value={2}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
                             هزینه ویزا ندارد.
                           </label>
@@ -698,6 +769,7 @@ null
                       
                         
                     </div>
+                    <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.VisaId?"flex":"hidden"}`}>لطفا حداقل یک مورد را انتخاب نمایید!</p>
                 </div>
                 <div className="flex flex-col w-[100%]  mb-14">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">عوارض خروج </span>
@@ -707,7 +779,7 @@ null
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center sm-xs:ml-0 ">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          onChange={changeHandler}
+                          onChange={changeHandlerCheckbox}
                           name="TollAmountId"
                           value={"1"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
@@ -723,7 +795,7 @@ null
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[56px] sm-xs:mb-3 sm-xs:ml-0 ">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          onChange={changeHandler}
+                          onChange={changeHandlerCheckbox}
                           name="TollAmountId"
                           value={"2"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
@@ -734,18 +806,17 @@ null
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
-                            name="TollAmountCost"
-                            class="text-right h-[32px] w-[16%] xl:w-[32%] sm-xs:w-[90%] sm-xs:mr-7 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            name="TollAmountPersonCost"
+                            class={`text-right h-[32px] w-[16%] xl:w-[32%] sm-xs:w-[90%] sm-xs:mr-7 bg-white border ${allValuesError.TollAmountPersonCost && allValues?.TollAmountId.split(',').includes("2")?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5`}
                             />
-
-
                       </div>
+                      <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.TollAmountPersonCost && allValues?.TollAmountId.split(',').includes("2")?"flex":"hidden"}`}>لطفا فیلد انتخاب شده را وارد نمایید !</p> 
                       <div className="flex items-center sm-xs:flex-col sm-xs:items-start mt-3 w-[100%]">
                         <div className="flex justify-start">
                           <label style={{fontFamily:'Shabnam'}} className="text-base font-normal flex items-center ml-[7px] sm-xs:mb-3 sm-xs:ml-0 ">
                           <input style={{fontFamily:'Shabnam'}}
                           type="checkbox"
-                          onChange={changeHandler}
+                          onChange={changeHandlerCheckbox}
                           name="TollAmountId"
                           value={"3"}
                           class="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor ml-4"/>
@@ -756,14 +827,13 @@ null
                             type="text"
                             id="input-group-1"
                             onChange={changeHandler}
-                            name="TollAmountCost"
-                            class="text-right h-[32px] w-[16%] xl:w-[32%] sm-xs:w-[90%] sm-xs:mr-7 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5"
+                            name="TollAmountDeviceCost"
+                            class={`text-right h-[32px] w-[16%] xl:w-[32%] sm-xs:w-[90%] sm-xs:mr-7 bg-white border ${allValuesError.TollAmountDeviceCost && allValues?.TollAmountId.split(',').includes("3")?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor px-2.5`}
                             />
-
-
                       </div>
-                        
+                      <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.TollAmountDeviceCost && allValues?.TollAmountId.split(',').includes("3")?"flex":"hidden"}`}>لطفا فیلد انتخاب شده را وارد نمایید !</p> 
                     </div>
+                    <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 text-xs font-[10px] font-IRsans ${allValuesError.TollAmountId?"flex":"hidden"}`}>لطفا حداقل یک مورد را انتخاب نمایید!</p>
                 </div>
                 <div className="flex flex-col w-[100%]  mb-14">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  ">پرداخت از طریق سیستم بانکی</span>

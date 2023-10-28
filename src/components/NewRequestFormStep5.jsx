@@ -20,6 +20,16 @@ const NewRequestFormStep5 = () => {
           ResistanceEconomyTravel :  "",
          
         });
+        const [allValuesError, setAllValuesError] = useState({
+    
+          ImportantTravel: false,   
+          MissionAchievementRecords :  false,
+          SummaryInvitation:  false,
+          ForeignTravelSummary :  false,
+          ReferenceDeviceAgreement :  false,
+          ResistanceEconomyTravel :  false,
+         
+        });
         let navigate = useNavigate();
     
         useEffect(() => {
@@ -44,17 +54,67 @@ const NewRequestFormStep5 = () => {
         }
         const changeHandler = e => {
           if (e.target) {
+              if(e.target.value!=""){
+  
+                  setAllValuesError({ ...allValuesError, [e.target.name]: false })
+                }
+                else{
+                  setAllValuesError({ ...allValuesError, [e.target.name]: true })
+              
+                }
   
               setAllValues({ ...allValues, [e.target.name]: e.target.value })
           }
   
       }
+      const blurHandler = e => {
+        if(e.target)    {
+          if(e.target.value==""){
+        
+            setAllValuesError({ ...allValuesError, [e.target.name]: true })
+          }
+        
+        
+        }
+      
+        }
+        const 
+          allFull=(obj)=>
+          {
+            const updatedState = {};
+            var result =true;
+            for(var o in obj){
+              if(obj[o]==""){
+                updatedState[o] = true;
+      
+      
+                setAllValuesError({ ...allValuesError, ...updatedState})
+      result=false;
+              }
+                
+            }
+            console.log(allValuesError)
+      return result        
+          }
+          const reqErrorCheck= () => {
+            var res= allFull(allValues)
+            if(res  )
+            {
+              setShowSuccessModal(true)
+            }
+            else{
+              console.log(allValuesError)
+              alert("اطلاعات ورودی را وارد نمایید")
+      
+             }
+          }
+        
       const updateReq= async () => {
           console.log("req")
           console.log(allValues)
           const cookies = new Cookies();
-          const dataUser = await axiosReq("Request/UpdateRequest4", {
-            RequestId:id,
+          const dataUser = await axiosReq("Request/UpdateRequest5", {
+            RequestId: id,
             ImportantTravel: allValues?.ImportantTravel,   
             MissionAchievementRecords :  allValues?.MissionAchievementRecords,
             SummaryInvitation:  allValues?.SummaryInvitation,
@@ -71,6 +131,7 @@ const NewRequestFormStep5 = () => {
           }
           else {
               alert("اطلاعات ورودی نادرست می باشند")
+              setShowSuccessModal(false)
           }
   
       }
@@ -85,11 +146,20 @@ const NewRequestFormStep5 = () => {
                             rows={5}
                             type="text"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="ImportantTravel"
                             id="input-group-1"
-                            class="pr-4   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full  p-2.5  "
+                            class={`pr-4   text-right right-6 bg-white border ${allValuesError.ImportantTravel?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full  p-2.5 `}
                             placeholder="شرح را اینجا بنویسید"></textarea>
                     </div>
+                    {
+            allValuesError.ImportantTravel ?
+              <span style={{ fontFamily: 'Shabnam' }} class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+                لطفا فیلد را وارد نمایید !
+              </span>
+              :
+              null
+          }
             </div>
             <div className="flex flex-col w-[100%]  mb-7">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  md:text-sm">سوابق دستاوردهای قبلی مرتبط با موضوع این ماموریت (حداکثر در ۵ سطر )</span>
@@ -98,11 +168,20 @@ const NewRequestFormStep5 = () => {
                             rows={5}
                             type="text"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="MissionAchievementRecords"
                             id="input-group-1"
-                            class="pr-4   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full  p-2.5  "
+                            class={` pr-4   text-right right-6 bg-white border ${allValuesError.MissionAchievementRecords?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full  p-2.5  `}
                             placeholder="شرح را اینجا بنویسید"></textarea>
                     </div>
+                    {
+            allValuesError.MissionAchievementRecords ?
+              <span style={{ fontFamily: 'Shabnam' }} class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+                لطفا فیلد را وارد نمایید !
+              </span>
+              :
+              null
+          }
             </div>
             <div className="flex flex-col w-[100%]  mb-7">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  md:text-sm">خلاصه ترجمه شده دعوتنامه و یا قید هزینه ها و برنامه ریزی زمانبندی شده روزهای ماموریت بر اساس دعوتنامه(حداکثر در ۵ سطر)</span>
@@ -111,11 +190,20 @@ const NewRequestFormStep5 = () => {
                             rows={5}
                             type="text"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="SummaryInvitation"
                             id="input-group-1"
-                            class="pr-4   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full  p-2.5  "
+                            class={` pr-4   text-right right-6 bg-white border ${allValuesError.SummaryInvitation?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full  p-2.5 `}
                             placeholder="شرح را اینجا بنویسید"></textarea>
                     </div>
+                    {
+            allValuesError.SummaryInvitation ?
+              <span style={{ fontFamily: 'Shabnam' }} class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+                لطفا فیلد را وارد نمایید !
+              </span>
+              :
+              null
+          }
             </div>
             <div className="flex flex-col w-[100%]  mb-7">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  md:text-sm">خلاصه ترجمه شده دیگر نامه های طرف خارجی (حداکثر در ۱۰ سطر)</span>
@@ -124,15 +212,25 @@ const NewRequestFormStep5 = () => {
                             rows={10}
                             type="text"
                             onChange={changeHandler}
+                            onBlur={blurHandler}
                             name="ForeignTravelSummary"
                             id="input-group-1"
-                            class="pr-4   text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full  p-2.5  "
+                            class={` pr-4   text-right right-6 bg-white border ${allValuesError.ForeignTravelSummary?"border-[#ff0000]":"border-gray-300"} text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full  p-2.5 `}
                             placeholder="شرح را اینجا بنویسید"></textarea>
                     </div>
+                    {
+            allValuesError.ForeignTravelSummary ?
+              <span style={{ fontFamily: 'Shabnam' }} class="flex items-center font-medium tracking-wide text-[#ff0000] text-xs mt-1 ml-1">
+                لطفا فیلد را وارد نمایید !
+              </span>
+              :
+              null
+          }
             </div>
             <div className="flex flex-col w-[100%]  mb-7">
                     <span style={{fontFamily: 'Shabnam'}} className="text-base font-bold  md:text-sm">آیا سفر مذکور نیاز به موافقت دستگاه های مرجع دیگری در داخل دارد؟ در صورت مثبت بودن پاسخ اصل نامه دعوت نامه ضمیمه شود</span>
-                    <div class="mt-4 flex md:block">
+                    <div class="mt-4 flex xs-510:flex-col xs-510:items-start ">
+                    <div className="flex-col items-start justify-center mt-6 xs-510:mt-0">
                     <div className="flex items-center">
                           <input            value={true}                onChange={changeHandler}
                             name="ReferenceDeviceAgreement" className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor  ml-1" type="radio"  id="confirmationYes" />
@@ -141,8 +239,10 @@ const NewRequestFormStep5 = () => {
                             name="ReferenceDeviceAgreement"className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-8 ml-1" type="radio" id="confirmationNo" />
                           <label style={{fontFamily: 'Shabnam'}} className="" For="a2">خیر</label>
                     </div>
-                    <div className="mr-10">
-                    <label for="dropzone-file" class="mt-2 flex flex-col items-center justify-center w-72 md:w-full h-15 border-2 border-midGray border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
+                    <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3  text-xs font-[10px] font-IRsans ${allValuesError.ReferenceDeviceAgreement?"flex":"hidden"}`}>لطفا  یک مورد را انتخاب نمایید!</p>
+                    </div>
+                    <div className="mr-10 sm-xs:mr-7 xs-510:mr-0 xs-510:mt-2 xs:w-[100%] ">
+                    <label for="dropzone-file" class="mt-2 flex flex-col items-center justify-center w-72 lg-md:w-60 xs:w-[100%]  h-15 border-2 border-midGray border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
             <div class="flex items-center justify-center pt-5 pb-6  ">
                 <svg aria-hidden="true" class="w-5 h-5  text-[#B7B8BB]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
                 <p style={{fontFamily:'Shabnam'}} class="mb-0 text-xs text-gray-500 dark:text-gray-400 mr-2"><span style={{fontFamily:'Shabnam'}} class="font-normal   ">انتخاب فایل</span></p>
@@ -153,34 +253,34 @@ const NewRequestFormStep5 = () => {
                     </div>
                     </div>
             </div>
-            <div className="flex w-[100%] mb-8 md:block">
+            <div className={`flex sm-xs:flex-col sm-xs:items-start w-[100%] ${allValuesError.ResistanceEconomyTravel?"mb-0":"mb-8"} `}>
                   <p style={{fontFamily: 'Shabnam'}} className="text-base font-bold">سفر در راستای برنامه اقتصاد مقاومتی می باشد؟</p>
-                  <div className="flex items-center md:mt-2">
+                  <div className="flex items-center sm-xs:mt-3 ">
                           <input          onChange={changeHandler}
-                            name="ResistanceEconomyTravel" value={true} className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-7 ml-1" type="radio"  id="EconomyYes" />
+                            name="ResistanceEconomyTravel" value={true} className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-7 sm-xs:mr-0 ml-1" type="radio"  id="EconomyYes" />
                           <label style={{fontFamily: 'Shabnam'}} className="" For="a1">بله</label>
                           <input         onChange={changeHandler}
                             name="ResistanceEconomyTravel" value={false} className="accent-mainColor w-4 h-4 border-2 border-mainColor outline-mainColor mr-8 ml-1" type="radio"  id="EconomyNo" />
                           <label style={{fontFamily: 'Shabnam'}} className="" For="a2">خیر</label>
                   </div>
                 </div>
-            
+                <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-3 mb-8 text-xs font-[10px] font-IRsans ${allValuesError.ResistanceEconomyTravel?"flex":"hidden"}`}>لطفا  یک مورد را انتخاب نمایید!</p>
               
                 
                 
                 
             </div>
-            <div className="flex justify-end md:block">
+            <div className="flex justify-end xs:w-[100%] 2xs:flex-col 2xs:items-start ">
             <Link
             to={'/newRequestStep4/'+id}
                 style={{fontFamily: 'Shabnam'}}
-                className="w-40 h-12 flex justify-center items-center mt-20 md:mt-2 bg-midGray shadow-blackShadow   text-white text-xl font-normal rounded-lg hover:bg-lightGray hover:text-darkGray">
+                className="w-40 xs:w-[49%] 2xs:w-[99%] h-12 flex justify-center items-center mt-20 md:mt-10  bg-midGray shadow-blackShadow   text-white text-xl font-normal rounded-lg hover:bg-lightGray hover:text-darkGray">
                 گام قبلی
             </Link>
             <button
-             onClick={() => setShowSuccessModal(true)}
+             onClick={() => reqErrorCheck()}
                 style={{fontFamily: 'Shabnam'}}
-                className="w-40 h-12 mt-20 justify-center items-center md:mr-0 md:mt-4 flex mr-4 bg-mainColor shadow-blueShadow   text-white text-xl font-normal rounded-lg hover:bg-lightBlue hover:text-mainColor">
+                className="w-40 xs:w-[49%] 2xs:w-[99%] h-12 mt-20 md:mt-10 2xs:mt-3 justify-center items-center  flex mr-4 xs:mr-[2%] 2xs:mr-0 bg-mainColor shadow-blueShadow   text-white text-xl font-normal rounded-lg hover:bg-lightBlue hover:text-mainColor">
                 ثبت درخواست
             </button>
             </div>

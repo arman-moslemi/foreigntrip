@@ -15,6 +15,8 @@ const NewRequestFormStep1 = () => {
   const [country,setCountry] = useState([]);
   const [city,setCity] = useState([]);
     const [reCheck, setRecheck] = useState(false);
+    const [startDate, setStartDate] = useState();
+    const [compare, setCompare] = useState();
 
     let navigate = useNavigate();
   const [allValues, setAllValues] = useState({
@@ -74,6 +76,14 @@ const NewRequestFormStep1 = () => {
     { value: "1577", label: "نجف" },
     { value: "1587", label: "سئول" },
   ];
+ 
+
+    const [daysRemaining, setDaysRemaining] = useState(null);
+
+   
+     
+
+       
 
 
   const fixNumbers = function (str)
@@ -117,6 +127,7 @@ if(e.target)    {
 
   }
   // setAllValuesError({ ...allValuesError, [""]: false })
+  
 
   setAllValues({ ...allValues, [e.target.name]: e.target.value })
 }
@@ -274,6 +285,25 @@ return result
         },
         
       };
+      const calculateDaysRemaining = (ss) => {
+        const currentDate = startDate;
+        const examDate = ss; // Replace with your desired exam date
+        const timestamp1 = Date.parse(startDate);
+        const timestamp2 = Date.parse(ss);
+        if (timestamp1 <= timestamp2) {
+        const timeDifference = Math.abs(examDate - currentDate);
+        const daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+        console.log("fasele")
+        console.log(currentDate)
+        console.log(examDate)
+        console.log(timeDifference)
+        console.log(daysRemaining)
+        setAllValues({...allValues,TravelTime:daysRemaining});
+        }
+        else {
+        setCompare("بازه زمانی سفر صحیح نمیباشد")
+        }
+    };
   return (
     <div>
       <p style={{ fontFamily: 'Shabnam' }} className="text-xl text-mainColor font-bold mt-3.5 mb-8 ">گام 1 - اطلاعات اولیه</p>
@@ -420,7 +450,7 @@ null
                 name="TravelDate"
                 onChange={(e)=>
 {                  setAllValues({ ...allValues,TravelDate:formatDateTime(e.value)});
-setAllValuesError({...allValuesError,TravelDate:false})
+setAllValuesError({...allValuesError,TravelDate:false});setStartDate(e.value)
 }                }
 
               />
@@ -429,6 +459,7 @@ setAllValuesError({...allValuesError,TravelDate:false})
             </div>
             <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide mt-1 text-xs font-[10px] font-IRsans ${allValuesError.TravelDate||allValuesError.TravelEndDate?"flex xs:hidden":"hidden"}`}>تاریخ رفت و برگشت را وارد نمایید!</p>
             
+            
           </div>
           <div className={`w-[12%]  xs:mt-2  flex justify-center pb-2 ${allValuesError.TravelDate||allValuesError.TravelEndDate?"mb-[18px] xs:mb-0":"mb-0"} `}><p style={{ fontFamily: 'Shabnam' }} className="text-base font-normal">لغایت</p></div>
           <div className={`w-[43%] xl-lg:w-[41%] xs:w-[60%] font-IRsans text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block ${allValuesError.TravelDate||allValuesError.TravelEndDate?"mb-[19px] xs:mb-0":"mb-0"} `} id="EndDate">
@@ -436,7 +467,7 @@ setAllValuesError({...allValuesError,TravelDate:false})
             name="TravelEndDate"
             onChange={(e)=>
               {                  setAllValues({ ...allValues,TravelEndDate:formatDateTime(e.value)});
-              setAllValuesError({...allValuesError,TravelEndDate:false})
+              setAllValuesError({...allValuesError,TravelEndDate:false});calculateDaysRemaining(e.value)
               }                }
 
             />
@@ -447,7 +478,7 @@ setAllValuesError({...allValuesError,TravelDate:false})
                                 class="  text-right right-6 bg-white border border-gray-300 text-gray-900 text-sm rounded-md  focus:ring-mainColor focus:border-mainColor block w-full p-2.5  "
                                 placeholder="کد پستی"/> */}
           </div>
-
+          <p style={{ fontFamily: 'Shabnam' }} className="text-[#ff0000] tracking-wide mt-1 text-xs font-[10px] font-IRsans">{compare}</p>
           
         </div>
         <p style={{ fontFamily: 'Shabnam' }} className={`text-[#ff0000] tracking-wide text-xs mt-1  font-[10px] font-IRsans ${allValuesError.TravelDate||allValuesError.TravelEndDate?"hidden xs:flex":"hidden"}`}>تاریخ رفت و برگشت را وارد نمایید!</p>
@@ -455,6 +486,8 @@ setAllValuesError({...allValuesError,TravelDate:false})
           <span style={{ fontFamily: 'Shabnam' }} className="text-base font-bold font-IRsans">مدت زمان سفر</span>
           <div class="mt-2">
             <input style={{ fontFamily: 'Shabnam' }}
+              value={allValues.TravelTime+" "+"روز"}
+              disabled={true}
               type="text"
               id="input-group-1"
               name="TravelTime"

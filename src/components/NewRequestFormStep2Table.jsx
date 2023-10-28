@@ -114,7 +114,7 @@ const deleteUser=async()=>{
     console.log(1234)
  
  
-   const dataUser = await axiosReq("Agent/RemoveSupervisor",{
+   const dataUser = await axiosReq("Request/RemoveEmployeeRequest",{
     RequestEmployeeId:id
    });
    if (dataUser?.status == 200 || dataUser?.status == 204 || dataUser?.status == 201) {
