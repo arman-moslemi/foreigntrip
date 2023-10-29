@@ -39,7 +39,7 @@ const AddAgentForm = () => {
         if (!token) {
             // navigate("/");
         } else {
-            if (cookies.get('Role') == "InternationalAdmin") {
+            if (cookies.get('Role') == "InternationalAdmin" || cookies.get('Role') == "MainAdmin" ) {
                 GetData()
 
             }

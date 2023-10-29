@@ -38,9 +38,9 @@ const AddAgentForm = () => {
         var token = cookies.get('token');
         console.log(token)
         if (!token) {
-            // navigate("/");
+            navigate("/");
         } else {
-            if (cookies.get('Role') == "InternationalAdmin") {
+            if (cookies.get('Role') == "InternationalAdmin"||cookies.get('Role') == "MainAdmin") {
                 GetData()
 
             }

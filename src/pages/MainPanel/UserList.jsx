@@ -137,7 +137,7 @@ const UserList = () =>{
                             گزارش گیری
                         </span>
                     </button>
-               <Link className="lg:w-[47%] lg:ml-2" Link to={'/internationalAdmin/addAgent'}>
+               <Link className="lg:w-[47%] lg:ml-2" Link to={'/mainAdmin/addAgent'}>
                <button className="shadow-blueShadow lg:w-[100%] lg:justify-center flex px-2 h-[40px] items-center bg-mainColor text-white rounded-md mr-2">
                        
                        <span className="text-white " style={{fontFamily:'Shabnam'}}>

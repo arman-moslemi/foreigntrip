@@ -1,15 +1,57 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import MainRightMenu from "../../components/MainAdminComponent/MainRightMenu";
 import {ReactComponent as Profile} from "../../assets/icon/blue/profile.svg"
 import {ReactComponent as Doc} from "../../assets/icon/blue/doc.svg"
 import MainAdminRequestList from "../../components/MainAdminComponent/MainAdminRequestList";
 import {ReactComponent as Search} from "../../assets/icon/white/search.svg"
-
+import Cookies from 'universal-cookie';
+import { axiosReq } from "../../commons/axiosReq";
+import { useNavigate } from "react-router-dom";
 const RequestsList = () =>{
+    const [showSuccessModal, setShowSuccessModal] = React.useState(false);
+    const [data, setData] = useState();
+    const [reCheck, setRecheck] = useState(false);
+
+    let navigate = useNavigate();
+  
+    useEffect(() => {
+    
+      auth();
+    }, [reCheck]);
+    const auth=async()=>{
+      const cookies = new Cookies();
+      var token= cookies.get('token');
+      console.log(token)
+      if(!token){
+ navigate("/");
+      }else{
+   if( cookies.get('Role')=="MainAdmin")
+   {
+     GetData()
+  
+   }
+   else{
+  navigate("/");
+  
+   }
+      }
+    }
+    const GetData=async()=>{
+        console.log(1234)
+        const cookies = new Cookies();
+     
+     
+     
+       const dataUser = await axiosReq("MainAdmin/GetRequests");
+       console.log(dataUser)
+     setData(dataUser)
+  
+       
+       }
     return(
         <div className="w-full h-screen bg-lightGray py-10 px-10 lg:px-8 md:p-0  lg:h-full" style={{direction:'rtl'}}>
         <div className="flex md:block">
-            <MainRightMenu/>
+        <MainRightMenu/>
             <div className="bg-white rounded-tr-none rounded-br-none rounded-tl-2xl rounded-bl-2xl p-8 my-10 w-[80%] min-w-[500px] lg:min-w-[450px] md:min-w-[95%] xl:p-5 md:w-[95%] md:rounded-xl md:mx-auto">
            
             <div className="flex items-center">
@@ -113,7 +155,7 @@ const RequestsList = () =>{
                 </div>
             </div>
             
-            <MainAdminRequestList/>
+            <MainAdminRequestList data={data} reCheck={reCheck} setRecheck={setRecheck}/>
               
             </div>
         </div>
@@ -121,6 +163,7 @@ const RequestsList = () =>{
         
     </div>
     )
+    
 }
 export default RequestsList;
 

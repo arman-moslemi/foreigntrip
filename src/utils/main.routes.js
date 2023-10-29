@@ -210,7 +210,7 @@ const MainRoutes = (props) =>{
                     <Route path="/mainAdmin/reportList" element={<ReportsList/>}/>
                 </Routes>
                 <Routes>
-                    <Route path="/mainAdmin/reportView" element={<ReportsView/>}/>
+                    <Route path="/mainAdmin/reportView/:id" element={<ReportsView/>}/>
                 </Routes>
                 <Routes>
                     <Route path="/mainAdmin/ticketShowMain" element={<TicketShowMain/>}/>
@@ -231,7 +231,7 @@ const MainRoutes = (props) =>{
                     <Route path="/mainAdmin/requestsList" element={<RequestsList/>}/>
                 </Routes>
                 <Routes>
-                    <Route path="/mainAdmin/requestView" element={<RequestsView/>}/>
+                    <Route path="/mainAdmin/requestView/:id" element={<RequestsView/>}/>
                 </Routes>
                 <Routes>
                     <Route path="/mainAdmin/uploadSignature" element={<UploadSignature/>}/>
