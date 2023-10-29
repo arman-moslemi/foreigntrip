@@ -17,7 +17,7 @@ const InternationalRightMenu = () => {
                 <div className="bg-mainColor p-9 rounded-2xl w-[20%] min-w-[300px] lg:min-w-[250px] md:hidden">
                     <img src={WhiteLogo} alt="logo" className="w-[170px] mx-auto"/>
                    <p style={{fontFamily:'Shabnam'}} className="text-white  font-bold text-lg text-center mt-4   lg:text-base ">
-                        آقای هاشمی خوش آمدید !
+                       خوش آمدید !
                     </p>
                     <hr className="border-t-lightGray my-5 border-opacity-50"/>
 
@@ -63,14 +63,14 @@ const InternationalRightMenu = () => {
                             </p>
                            </Link>
                         </li>
-                        <li className="my-10">
+                        {/* <li className="my-10">
                            <Link style={{fontFamily:'Shabnam'}}  to={'/internationalAdmin/reportList'} className="flex items-center">
                            <Doc/>
                             <p style={{fontFamily:'Shabnam'}} className="  text-white font-medium mr-4 lg:text-sm">
                             مشاهده گزارشات
                             </p>
                            </Link>
-                        </li>
+                        </li> */}
                    
                         <li className="my-10">
                            <Link style={{fontFamily:'Shabnam'}}  to={'/internationalAdmin/ticketList'} className="flex items-center">
@@ -104,7 +104,7 @@ const InternationalRightMenu = () => {
                         <div className="bg-mainColor w-[290px] h-full z-50 absolute right-0 px-8 py-10">
                         <img src={WhiteLogo} alt="logo" className="w-[170px] mx-auto"/>
                    <p style={{fontFamily:'Shabnam'}} className="text-white  font-bold text-lg text-center mt-4   lg:text-base ">
-                        آقای هاشمی خوش آمدید !
+                         خوش آمدید !
                     </p>
                     <hr className="border-t-lightGray my-5 border-opacity-50"/>
 
@@ -150,14 +150,14 @@ const InternationalRightMenu = () => {
                             </p>
                            </Link>
                         </li>
-                        <li className="my-10">
+                        {/* <li className="my-10">
                            <Link style={{fontFamily:'Shabnam'}}  to={'/internationalAdmin/reportList'} className="flex items-center">
                            <Doc/>
                             <p style={{fontFamily:'Shabnam'}} className="  text-white font-medium mr-4 lg:text-sm">
                             مشاهده گزارشات
                             </p>
                            </Link>
-                        </li>
+                        </li> */}
                    
                         <li className="my-10">
                            <Link style={{fontFamily:'Shabnam'}}  to={'/internationalAdmin/ticketList'} className="flex items-center">

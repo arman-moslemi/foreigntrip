@@ -1,12 +1,54 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import MainRightMenu from "../../components/MainAdminComponent/MainRightMenu";
 import {ReactComponent as Profile} from "../../assets/icon/blue/profile.svg"
 import {ReactComponent as Search} from "../../assets/icon/white/search.svg"
 
 import MainAdminUserList from "../../components/MainAdminComponent/MainAdminUserList";
+import Cookies from 'universal-cookie';
+import { axiosReq } from "../../commons/axiosReq";
+import { useNavigate } from "react-router-dom";
+import InternationalUserTable from "../../components/InternationalComponent/InternationalUserTable";
 import { Link } from "react-router-dom";
 const UserList = () =>{
- 
+    const [data, setData] = useState();
+    const [reCheck, setRecheck] = useState(false);
+
+    let navigate = useNavigate();
+
+    useEffect(() => {
+
+        auth();
+    }, [reCheck]);
+    const auth = async () => {
+        const cookies = new Cookies();
+        var token = cookies.get('token');
+        console.log(cookies.get('Role'))
+        if (!token) {
+            navigate("/");
+        } else {
+            if (cookies.get('Role') == "MainAdmin") {
+                GetData()
+
+            }
+            else {
+                navigate("/");
+
+            }
+        }
+    }
+    const GetData = async () => {
+        console.log(1234)
+        const cookies = new Cookies();
+
+
+
+        const dataUser = await axiosReq("MainAdmin/GetAgents");
+        console.log(dataUser)
+        setData(dataUser)
+
+
+
+    }
     return(
         <div className="w-full h-screen bg-lightGray py-10 px-10 lg:px-8 md:p-0  lg:h-full" style={{direction:'rtl'}}>
         <div className="flex md:block">
@@ -95,7 +137,7 @@ const UserList = () =>{
                             گزارش گیری
                         </span>
                     </button>
-               <Link className="lg:w-[47%] lg:ml-2" to={'/mainAdmin/addAgent'}>
+               <Link className="lg:w-[47%] lg:ml-2" Link to={'/internationalAdmin/addAgent'}>
                <button className="shadow-blueShadow lg:w-[100%] lg:justify-center flex px-2 h-[40px] items-center bg-mainColor text-white rounded-md mr-2">
                        
                        <span className="text-white " style={{fontFamily:'Shabnam'}}>
@@ -108,7 +150,7 @@ const UserList = () =>{
             </div>
             
 
-                <MainAdminUserList/>
+            <MainAdminUserList data={data} reCheck={reCheck} setRecheck={setRecheck}/>
             </div>
         </div>
       
